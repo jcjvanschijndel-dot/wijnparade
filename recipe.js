@@ -56,6 +56,16 @@ function renderRecipe(recipe) {
         };
     }
     
+    // Render gallery if extra photos exist
+    const galleryEl = document.getElementById('recipeGallery');
+    if (galleryEl && recipe.gallery && recipe.gallery.length > 0) {
+        galleryEl.style.display = 'grid';
+        galleryEl.innerHTML = recipe.gallery.map(photo => {
+            const photoUrl = typeof photo === 'string' ? photo : photo.photo || photo;
+            return `<img src="${photoUrl}" alt="${recipe.title}" onerror="this.style.display='none'">`;
+        }).join('');
+    }
+    
     // Update title
     const titleEl = document.getElementById('recipeTitle');
     if (titleEl) titleEl.textContent = recipe.title;

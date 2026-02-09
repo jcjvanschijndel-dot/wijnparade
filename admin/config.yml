@@ -95,7 +95,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Titel", name: "title", widget: "string"}
-      - {label: "Foto", name: "image", widget: "image"}
+      - {label: "Hoofd Foto", name: "image", widget: "image", hint: "Hoofdfoto die op de overzichtspagina wordt getoond"}
+      - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}, hint: "Optionele extra foto's voor in het recept"}
       - {label: "Aanbevolen Wijn", name: "wine", widget: "string"}
       - {label: "Korte Beschrijving", name: "description", widget: "text"}
       - {label: "Ingrediënten", name: "ingredients", widget: "list"}
@@ -108,7 +109,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis"]}
+      - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
       - {label: "Adres", name: "address", widget: "string"}
       - {label: "Latitude", name: "lat", widget: "number", value_type: "float"}
       - {label: "Longitude", name: "lng", widget: "number", value_type: "float"}

@@ -127,6 +127,12 @@ const markerIcons = {
         html: '<div style="background: #1e3a8a; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">🏰</div>',
         iconSize: [30, 30],
         iconAnchor: [15, 15]
+    }),
+    restaurant: L.divIcon({
+        className: 'custom-div-icon',
+        html: '<div style="background: #1e3a8a; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">🍽️</div>',
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
     })
 };
 
