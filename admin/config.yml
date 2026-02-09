@@ -58,6 +58,7 @@ collections:
     folder: "content/toplists"
     create: true
     slug: "{{slug}}"
+    identifier_field: title
     fields:
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Emoji/Icon", name: "icon", widget: "string", default: "🍷"}
@@ -75,6 +76,7 @@ collections:
     folder: "content/favorites"
     create: true
     slug: "{{slug}}"
+    identifier_field: name
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
       - {label: "Producent", name: "producer", widget: "string"}
@@ -93,6 +95,7 @@ collections:
     folder: "content/recipes"
     create: true
     slug: "{{slug}}"
+    identifier_field: title
     fields:
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Hoofd Foto", name: "image", widget: "image", hint: "Hoofdfoto die op de overzichtspagina wordt getoond"}
@@ -107,13 +110,14 @@ collections:
     folder: "content/locations"
     create: true
     slug: "{{slug}}"
+    identifier_field: name
     fields:
       - {label: "Naam", name: "name", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
-      - {label: "Adres", name: "address", widget: "string"}
-      - {label: "Latitude", name: "lat", widget: "number", value_type: "float"}
-      - {label: "Longitude", name: "lng", widget: "number", value_type: "float"}
+      - {label: "Adres", name: "address", widget: "string", hint: "Volledig adres inclusief plaats en land voor beste resultaten"}
+      - {label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld op basis van adres (optioneel handmatig aanpassen)"}
+      - {label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld op basis van adres (optioneel handmatig aanpassen)"}
       - {label: "Beschrijving", name: "description", widget: "text"}
       - {label: "Hoofd Foto", name: "image", widget: "image", hint: "Hoofdfoto"}
       - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}, hint: "Optionele extra foto's"}
-      - {label: "Website", name: "website", widget: "string"}
+      - {label: "Website", name: "website", widget: "string", required: false}

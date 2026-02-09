@@ -14,34 +14,23 @@ document.addEventListener('DOMContentLoaded', async function() {
 async function loadLocation(locationId) {
     try {
         const repoPath = 'jcjvanschijndel-dot/wijnparade';
-        const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/locations`;
+        const fileUrl = `https://api.github.com/repos/${repoPath}/contents/content/locations/${locationId}.md`;
         
-        const response = await fetch(apiUrl);
+        const response = await fetch(fileUrl);
         
         if (!response.ok) {
-            showError('Kon locaties niet laden');
+            showError('Locatie niet gevonden');
             return;
         }
         
-        const files = await response.json();
-        let location = null;
-        let fileIndex = 0;
+        const file = await response.json();
+        const contentResponse = await fetch(file.download_url);
+        const content = await contentResponse.text();
         
-        // Find the location by index (id is the index in the list)
-        for (const file of files) {
-            if (file.name.endsWith('.md')) {
-                if (fileIndex == locationId) {
-                    const contentResponse = await fetch(file.download_url);
-                    const content = await contentResponse.text();
-                    location = parseFrontmatter(content);
-                    break;
-                }
-                fileIndex++;
-            }
-        }
+        const location = parseFrontmatter(content);
         
         if (!location) {
-            showError('Locatie niet gevonden');
+            showError('Kon locatie niet laden');
             return;
         }
         
@@ -163,26 +152,68 @@ function parseFrontmatter(content) {
 
     const frontmatter = match[1];
     const data = {};
+    let currentKey = null;
+    let currentValue = [];
+    let inList = false;
 
     frontmatter.split('\n').forEach(line => {
-        const colonIndex = line.indexOf(':');
-        if (colonIndex > -1) {
-            const key = line.substring(0, colonIndex).trim();
-            let value = line.substring(colonIndex + 1).trim();
-            
-            if (value.startsWith('"') && value.endsWith('"')) {
-                value = value.slice(1, -1);
-            } else if (value.startsWith("'") && value.endsWith("'")) {
-                value = value.slice(1, -1);
+        // Check if this is a list item
+        if (line.trim().startsWith('- ')) {
+            if (currentKey) {
+                currentValue.push(line.trim().substring(2));
+                inList = true;
+            }
+        } else {
+            // Save previous key-value if we were in a list
+            if (inList && currentKey) {
+                data[currentKey] = currentValue;
+                currentValue = [];
+                inList = false;
             }
             
-            if (!isNaN(value) && value !== '') {
-                value = Number(value);
+            const colonIndex = line.indexOf(':');
+            if (colonIndex > -1) {
+                // Save previous key if exists and not in list
+                if (currentKey && !inList && currentValue.length > 0) {
+                    data[currentKey] = currentValue.join('\n');
+                }
+                
+                currentKey = line.substring(0, colonIndex).trim();
+                let value = line.substring(colonIndex + 1).trim();
+                
+                if (value) {
+                    // Remove quotes
+                    if (value.startsWith('"') && value.endsWith('"')) {
+                        value = value.slice(1, -1);
+                    } else if (value.startsWith("'") && value.endsWith("'")) {
+                        value = value.slice(1, -1);
+                    }
+                    
+                    // Convert numbers
+                    if (!isNaN(value) && value !== '') {
+                        value = Number(value);
+                    }
+                    
+                    data[currentKey] = value;
+                    currentKey = null;
+                    currentValue = [];
+                } else {
+                    // Value might be on next lines (list or multiline)
+                    currentValue = [];
+                }
+            } else if (currentKey && line.trim()) {
+                // Continuation of previous value
+                currentValue.push(line.trim());
             }
-            
-            data[key] = value;
         }
     });
+    
+    // Save last key if in list
+    if (inList && currentKey) {
+        data[currentKey] = currentValue;
+    } else if (currentKey && currentValue.length > 0) {
+        data[currentKey] = currentValue.join('\n');
+    }
 
     return data;
 }

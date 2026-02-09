@@ -57,7 +57,7 @@ async function loadLocationsFromCMS() {
                 const parsed = parseFrontmatter(content);
                 if (parsed && parsed.lat && parsed.lng) {
                     wineLocations.push({
-                        id: wineLocations.length + 1,
+                        id: file.name.replace('.md', ''), // Use filename as ID
                         name: parsed.name,
                         type: parsed.type || 'wijnbar',
                         address: parsed.address,
