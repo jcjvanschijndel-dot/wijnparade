@@ -139,16 +139,23 @@ const markerIcons = {
 // Create popup content
 function createPopupContent(location) {
     return `
-        <div style="min-width: 250px; max-width: 300px;">
-            <img src="${location.image}" alt="${location.name}" class="popup-image">
-            <div class="popup-body">
-                <h3 class="popup-title">${location.name}</h3>
-                <p class="popup-address">📍 ${location.address}</p>
-                <p class="popup-description">${location.description}</p>
-                <a href="${location.website}" target="_blank" class="popup-link">Bezoek website →</a>
-            </div>
+        <div style="min-width: 200px; max-width: 250px; padding: 0.5rem;">
+            <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
+            <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
+            <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
+            <a href="location.html?id=${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
         </div>
     `;
+}
+
+function getTypeLabel(type) {
+    const labels = {
+        'wijnbar': '🍾 Wijnbar',
+        'wijnwinkel': '🏪 Wijnwinkel',
+        'wijnhuis': '🏰 Wijnhuis',
+        'restaurant': '🍽️ Restaurant'
+    };
+    return labels[type] || type;
 }
 
 // Add markers to map
