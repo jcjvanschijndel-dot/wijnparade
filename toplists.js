@@ -49,9 +49,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         // Render toplists
         if (toplists.length > 0) {
             container.innerHTML = toplists.map(item => {
-                const link = item.link_type === 'Bestand' && item.file 
-                    ? item.file 
-                    : item.url || item.link || '#';
+                // Prefer file over url, fallback to link
+                const link = item.file || item.url || item.link || '#';
                 
                 return `
                     <a href="${link}" target="_blank" class="list-link">

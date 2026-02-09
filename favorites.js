@@ -43,9 +43,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         if (favorites.length > 0) {
             container.innerHTML = favorites.map(item => {
-                const link = item.link_type === 'Bestand' && item.file 
-                    ? item.file 
-                    : item.url || item.link || '#';
+                // Prefer file over url, fallback to link
+                const link = item.file || item.url || item.link || '#';
                 
                 return `
                     <a href="${link}" target="_blank" class="list-link">
