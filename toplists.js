@@ -1,35 +1,14 @@
-// This file will load toplists from CMS
-// For now, it shows example data
-
+// Load toplists from CMS
 document.addEventListener('DOMContentLoaded', function() {
-    // Example data - will be replaced with CMS content
-    const toplists = [
-        {
-            icon: "🇫🇷",
-            title: "Bordeaux Toplijst 2025",
-            link: "https://docs.google.com/spreadsheets/d/example"
-        },
-        {
-            icon: "🇪🇸",
-            title: "Rioja Koopgids",
-            link: "/rioja2025.pdf"
-        },
-        {
-            icon: "🇮🇹",
-            title: "Piemonte Selectie",
-            link: "https://docs.google.com/spreadsheets/d/example2"
-        }
-    ];
-
     const container = document.getElementById('toplistsContainer');
     
-    if (container) {
-        container.innerHTML = toplists.map(item => `
-            <a href="${item.link}" target="_blank" class="list-link">
-                <span class="link-icon">${item.icon}</span>
-                <span class="link-text">${item.title}</span>
-                <span class="link-arrow">→</span>
-            </a>
-        `).join('');
-    }
+    if (!container) return;
+
+    // Show empty state
+    container.innerHTML = `
+        <div style="padding: 2rem; text-align: center; color: #6b7280;">
+            <p>Nog geen toplijsten toegevoegd.</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Voeg toplijsten toe via het CMS (/admin)</p>
+        </div>
+    `;
 });

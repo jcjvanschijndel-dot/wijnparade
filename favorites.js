@@ -1,34 +1,14 @@
-// This file will load favorites from CMS
-// For now, it shows example data
-
+// This file loads favorites from CMS
 document.addEventListener('DOMContentLoaded', function() {
-    const favorites = [
-        {
-            icon: "💎",
-            title: "Beste Prijs-Kwaliteit €10-20",
-            link: "https://docs.google.com/spreadsheets/d/example"
-        },
-        {
-            icon: "🏆",
-            title: "Top Natuurwijnen",
-            link: "https://docs.google.com/spreadsheets/d/example2"
-        },
-        {
-            icon: "🍾",
-            title: "Feestelijke Wijnen",
-            link: "/favorites.pdf"
-        }
-    ];
-
     const container = document.getElementById('favoritesContainer');
     
-    if (container) {
-        container.innerHTML = favorites.map(item => `
-            <a href="${item.link}" target="_blank" class="list-link">
-                <span class="link-icon">${item.icon}</span>
-                <span class="link-text">${item.title}</span>
-                <span class="link-arrow">→</span>
-            </a>
-        `).join('');
-    }
+    if (!container) return;
+
+    // Show empty state
+    container.innerHTML = `
+        <div style="padding: 2rem; text-align: center; color: #6b7280;">
+            <p>Nog geen favorieten toegevoegd.</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Voeg favorieten toe via het CMS (/admin)</p>
+        </div>
+    `;
 });
