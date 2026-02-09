@@ -1,47 +1,16 @@
-// Wine locations data - Will be managed via CMS
-const wineLocations = [
-    {
-        id: 1,
-        name: "Zoldering",
-        type: "wijnbar",
-        address: "Utrechtsestraat 141H, Amsterdam",
-        lat: 52.3625734,
-        lng: 4.9013456,
-        description: "Restaurant & wijnbar met meer dan 800 referenties. Een uitgebreide wijnkaart met focus op natuurwijnen.",
-        image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop",
-        website: "https://www.zoldering.nl"
-    },
-    {
-        id: 2,
-        name: "Grapedistrict",
-        type: "wijnwinkel",
-        address: "Haarlemmerstraat 65, Amsterdam",
-        lat: 52.3702157,
-        lng: 4.8951679,
-        description: "Gespecialiseerde wijnwinkel met focus op natuurlijke en biologische wijnen van kleine producenten.",
-        image: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=400&h=300&fit=crop",
-        website: "https://www.grapedistrict.nl"
-    },
-    {
-        id: 3,
-        name: "Champagne Bollinger",
-        type: "wijnhuis",
-        address: "16 Rue Jules Lobet, Aÿ, Frankrijk",
-        lat: 49.0567,
-        lng: 4.0058,
-        description: "Iconisch Champagnehuis, bekend om hun krachtige en complexe champagnes sinds 1829.",
-        image: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=400&h=300&fit=crop",
-        website: "https://www.champagne-bollinger.com"
-    }
-];
-
+// Wine locations data - Will be loaded from CMS
+let wineLocations = [];
 let map;
 let markers = [];
 let activeFilter = 'all';
 
 // Initialize map
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     try {
+        // First load locations from CMS
+        await loadLocationsFromCMS();
+        
+        // Then initialize map
         map = L.map('map').setView([52.0, 5.0], 6);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -53,12 +22,91 @@ document.addEventListener('DOMContentLoaded', function() {
             map.invalidateSize();
         }, 100);
 
-        addMarkers(wineLocations);
+        if (wineLocations.length > 0) {
+            addMarkers(wineLocations);
+        }
 
     } catch (error) {
         console.error('Error initializing map:', error);
     }
 });
+
+async function loadLocationsFromCMS() {
+    try {
+        const repoPath = 'jcjvanschijndel-dot/wijnparade';
+        const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/locations`;
+        
+        const response = await fetch(apiUrl);
+        
+        if (!response.ok) {
+            console.log('No locations found in CMS');
+            return;
+        }
+        
+        const files = await response.json();
+        
+        if (!files || files.length === 0) {
+            console.log('No location files found');
+            return;
+        }
+
+        for (const file of files) {
+            if (file.name.endsWith('.md')) {
+                const contentResponse = await fetch(file.download_url);
+                const content = await contentResponse.text();
+                const parsed = parseFrontmatter(content);
+                if (parsed && parsed.lat && parsed.lng) {
+                    wineLocations.push({
+                        id: wineLocations.length + 1,
+                        name: parsed.name,
+                        type: parsed.type || 'wijnbar',
+                        address: parsed.address,
+                        lat: parseFloat(parsed.lat),
+                        lng: parseFloat(parsed.lng),
+                        description: parsed.description,
+                        image: parsed.image || 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop',
+                        website: parsed.website
+                    });
+                }
+            }
+        }
+        
+        console.log(`Loaded ${wineLocations.length} locations from CMS`);
+        
+    } catch (error) {
+        console.error('Error loading locations from CMS:', error);
+    }
+}
+
+function parseFrontmatter(content) {
+    const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
+    if (!match) return null;
+
+    const frontmatter = match[1];
+    const data = {};
+
+    frontmatter.split('\n').forEach(line => {
+        const colonIndex = line.indexOf(':');
+        if (colonIndex > -1) {
+            const key = line.substring(0, colonIndex).trim();
+            let value = line.substring(colonIndex + 1).trim();
+            
+            if (value.startsWith('"') && value.endsWith('"')) {
+                value = value.slice(1, -1);
+            } else if (value.startsWith("'") && value.endsWith("'")) {
+                value = value.slice(1, -1);
+            }
+            
+            if (!isNaN(value) && value !== '') {
+                value = Number(value);
+            }
+            
+            data[key] = value;
+        }
+    });
+
+    return data;
+}
 
 // Custom marker icons
 const markerIcons = {
