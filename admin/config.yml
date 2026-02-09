@@ -22,10 +22,43 @@ collections:
           - {label: "Sectie 4 Tekst", name: "section4", widget: "string", default: "Wijnkaart"}
           - {label: "Sectie 4 Emoji", name: "section4_icon", widget: "string", default: "🗺️"}
 
+  - name: "page_headers"
+    label: "Pagina Headers"
+    files:
+      - label: "Toplijsten Pagina"
+        name: "toplists_header"
+        file: "content/headers/toplists.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string", default: "Toplijsten per gebied"}
+          - {label: "Intro Tekst", name: "intro", widget: "text", default: "Ontdek de beste wijnen per regio"}
+      
+      - label: "Favorieten Pagina"
+        name: "favorites_header"
+        file: "content/headers/favorites.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string", default: "Wijnparade favorieten"}
+          - {label: "Intro Tekst", name: "intro", widget: "text", default: "Onze persoonlijke aanraders"}
+      
+      - label: "Gerechten Pagina"
+        name: "pairings_header"
+        file: "content/headers/pairings.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string", default: "Gerechten & wijn combi's"}
+          - {label: "Intro Tekst", name: "intro", widget: "text", default: "Perfecte combinaties van eten en drinken"}
+      
+      - label: "Wijnkaart Pagina"
+        name: "map_header"
+        file: "content/headers/map.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string", default: "Wijnkaart"}
+          - {label: "Intro Tekst", name: "intro", widget: "text", default: "Wijnbars, winkels en producenten op de kaart"}
+
   - name: "toplists"
     label: "Toplijsten"
     folder: "content/toplists"
     create: true
+    slug: "{{fields.title}}"
+    identifier_field: title
     fields:
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Emoji/Icon", name: "icon", widget: "string", default: "🍷"}
@@ -42,6 +75,8 @@ collections:
     label: "Favorieten (Wijnen)"
     folder: "content/favorites"
     create: true
+    slug: "{{fields.name}}"
+    identifier_field: name
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
       - {label: "Producent", name: "producer", widget: "string"}
@@ -59,6 +94,8 @@ collections:
     label: "Recepten"
     folder: "content/recipes"
     create: true
+    slug: "{{fields.title}}"
+    identifier_field: title
     fields:
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Hoofd Foto", name: "image", widget: "image", hint: "Hoofdfoto die op de overzichtspagina wordt getoond"}
@@ -72,6 +109,8 @@ collections:
     label: "Wijnlocaties"
     folder: "content/locations"
     create: true
+    slug: "{{fields.name}}"
+    identifier_field: name
     fields:
       - {label: "Naam", name: "name", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
