@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#1e3a8a">
-    <title>Wijnparade Favorieten | de_wijnparade</title>
+    <title>Favorieten | de_wijnparade</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="favorites-table.css">
 </head>
 <body>
     <header class="header">
@@ -20,24 +21,72 @@
 
     <main class="main">
         <div class="container">
-            <div class="link-list" id="favoritesContainer">
-                <!-- Content will be dynamically loaded from CMS -->
-                <!-- Example items: -->
-                <a href="https://docs.google.com/spreadsheets/d/example" target="_blank" class="list-link">
-                    <span class="link-icon">💎</span>
-                    <span class="link-text">Beste Prijs-Kwaliteit €10-20</span>
-                    <span class="link-arrow">→</span>
-                </a>
-                <a href="https://docs.google.com/spreadsheets/d/example2" target="_blank" class="list-link">
-                    <span class="link-icon">🏆</span>
-                    <span class="link-text">Top Natuurwijnen</span>
-                    <span class="link-arrow">→</span>
-                </a>
-                <a href="/favorites.pdf" target="_blank" class="list-link">
-                    <span class="link-icon">🍾</span>
-                    <span class="link-text">Feestelijke Wijnen</span>
-                    <span class="link-arrow">→</span>
-                </a>
+            <!-- Filters -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label>Type</label>
+                    <select id="filterType" class="filter-select">
+                        <option value="">Alle</option>
+                        <option value="Wit">Wit</option>
+                        <option value="Rood">Rood</option>
+                        <option value="Rosé">Rosé</option>
+                        <option value="Sparkling">Sparkling</option>
+                        <option value="Alcoholvrij">Alcoholvrij</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Regio</label>
+                    <select id="filterRegion" class="filter-select">
+                        <option value="">Alle</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Max Prijs (€)</label>
+                    <input type="number" id="filterPrice" class="filter-input" placeholder="Bijv. 20">
+                </div>
+
+                <button id="clearFilters" class="clear-btn">Wis filters</button>
+            </div>
+
+            <!-- Sort Controls -->
+            <div class="sort-section">
+                <label>Sorteer op:</label>
+                <select id="sortBy" class="sort-select">
+                    <option value="name">Naam</option>
+                    <option value="producer">Producent</option>
+                    <option value="region">Regio</option>
+                    <option value="type">Type</option>
+                    <option value="price">Prijs</option>
+                </select>
+                <button id="sortOrder" class="sort-btn">↑</button>
+            </div>
+
+            <!-- Wine Cards (Mobile) -->
+            <div class="wines-cards" id="winesCards"></div>
+
+            <!-- Wine Table (Desktop) -->
+            <div class="wines-table-wrapper">
+                <table class="wines-table" id="winesTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="name">Naam</th>
+                            <th data-sort="producer">Producent</th>
+                            <th data-sort="region">Regio</th>
+                            <th data-sort="type">Type</th>
+                            <th data-sort="description">Omschrijving</th>
+                            <th data-sort="price">Prijs</th>
+                            <th data-sort="store">Verkoopadres</th>
+                        </tr>
+                    </thead>
+                    <tbody id="winesTableBody"></tbody>
+                </table>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>Geen wijnen gevonden.</p>
             </div>
         </div>
     </main>
