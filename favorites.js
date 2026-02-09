@@ -210,8 +210,9 @@ function showEmptyState() {
 
 function hideEmptyState() {
     document.getElementById('emptyState').style.display = 'none';
-    document.getElementById('winesCards').style.display = 'grid';
-    document.querySelector('.wines-table-wrapper').style.display = 'block';
+    // Don't override display - let CSS media queries handle it
+    document.getElementById('winesCards').style.display = '';
+    document.querySelector('.wines-table-wrapper').style.display = '';
 }
 
 function parseFrontmatter(content) {
