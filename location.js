@@ -67,6 +67,16 @@ function renderLocation(location) {
         };
     }
     
+    // Render gallery if extra photos exist
+    const galleryEl = document.getElementById('locationGallery');
+    if (galleryEl && location.gallery && location.gallery.length > 0) {
+        galleryEl.style.display = 'grid';
+        galleryEl.innerHTML = location.gallery.map(photo => {
+            const photoUrl = typeof photo === 'string' ? photo : photo.photo || photo;
+            return `<img src="${photoUrl}" alt="${location.name}" onerror="this.style.display='none'">`;
+        }).join('');
+    }
+    
     // Update name
     const nameEl = document.getElementById('locationName');
     if (nameEl) nameEl.textContent = location.name;

@@ -114,5 +114,6 @@ collections:
       - {label: "Latitude", name: "lat", widget: "number", value_type: "float"}
       - {label: "Longitude", name: "lng", widget: "number", value_type: "float"}
       - {label: "Beschrijving", name: "description", widget: "text"}
-      - {label: "Foto", name: "image", widget: "image"}
+      - {label: "Hoofd Foto", name: "image", widget: "image", hint: "Hoofdfoto"}
+      - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}, hint: "Optionele extra foto's"}
       - {label: "Website", name: "website", widget: "string"}
