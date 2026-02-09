@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <title>Gerechten & Wijn | de_wijnparade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pairings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .pairing-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .pairing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.1);
+            border-color: var(--navy);
+        }
+
+        .pairing-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--gray-100);
+        }
+
+        .pairing-content {
+            padding: 1.5rem;
+        }
+
+        .pairing-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .pairing-wine {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pairing-description {
+            font-size: 0.95rem;
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--navy);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .pairings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">de_wijnparade</h1>
+            <a href="index.html" class="instagram-link">← Terug naar home</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h2 class="section-title">🍽️ Gerechten & wijn combi's</h2>
+            <p class="section-intro">Perfecte combinaties van eten en drinken</p>
+
+            <div class="pairings-grid" id="pairingsContainer">
+                <!-- Content will be dynamically loaded from CMS -->
+                <!-- Example items: -->
+                <a href="recipe.html?id=1" class="pairing-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop" alt="Ossobuco" class="pairing-image">
+                    <div class="pairing-content">
+                        <h3 class="pairing-title">Ossobuco</h3>
+                        <p class="pairing-wine">🍷 Barolo of Barbaresco</p>
+                        <p class="pairing-description">Langzaam gestoofd kalfsvlees met saffraanrisotto. De kracht van een Nebbiolo past perfect bij dit rijke gerecht.</p>
+                        <span class="read-more">Ga naar recept →</span>
+                    </div>
+                </a>
+
+                <a href="recipe.html?id=2" class="pairing-card">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop" alt="Coq au Vin" class="pairing-image">
+                    <div class="pairing-content">
+                        <h3 class="pairing-title">Coq au Vin</h3>
+                        <p class="pairing-wine">🍷 Bourgogne Pinot Noir</p>
+                        <p class="pairing-description">Klassiek Franse kip gestoofdin rode wijn. Drink een elegante Pinot Noir uit de Côte de Beaune.</p>
+                        <span class="read-more">Ga naar recept →</span>
+                    </div>
+                </a>
+
+                <a href="recipe.html?id=3" class="pairing-card">
+                    <img src="https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?w=400&h=300&fit=crop" alt="Pasta Carbonara" class="pairing-image">
+                    <div class="pairing-content">
+                        <h3 class="pairing-title">Pasta Carbonara</h3>
+                        <p class="pairing-wine">🍷 Verdicchio of Frascati</p>
+                        <p class="pairing-description">Romige pasta met guanciale. Een frisse Italiaanse witte wijn snijdt door de rijkdom.</p>
+                        <span class="read-more">Ga naar recept →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section class="tips-form-section">
+        <div class="container">
+            <h2 class="form-title">💡 Geef je tips door!</h2>
+            <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
+            <form name="tips" method="POST" data-netlify="true" class="tips-form">
+                <input type="hidden" name="form-name" value="tips">
+                <div class="form-group">
+                    <label for="tip">Jouw tip</label>
+                    <textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" required placeholder="Je naam">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="je@email.nl">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Versturen</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+        </div>
+    </footer>
+
+    <script src="pairings.js"></script>
+</body>
+</html>

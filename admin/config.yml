@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "toplists"
+    label: "Toplijsten"
+    folder: "content/toplists"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Emoji/Icon", name: "icon", widget: "string", default: "🍷"}
+      - {label: "Link (Google Sheets of PDF)", name: "link", widget: "string"}
+      - {label: "Volgorde", name: "order", widget: "number", default: 0}
+
+  - name: "favorites"
+    label: "Favorieten"
+    folder: "content/favorites"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Emoji/Icon", name: "icon", widget: "string", default: "⭐"}
+      - {label: "Link (Google Sheets of PDF)", name: "link", widget: "string"}
+      - {label: "Volgorde", name: "order", widget: "number", default: 0}
+
+  - name: "recipes"
+    label: "Recepten"
+    folder: "content/recipes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Foto", name: "image", widget: "image"}
+      - {label: "Aanbevolen Wijn", name: "wine", widget: "string"}
+      - {label: "Korte Beschrijving", name: "description", widget: "text"}
+      - {label: "Ingrediënten", name: "ingredients", widget: "list"}
+      - {label: "Bereidingswijze", name: "steps", widget: "list"}
+
+  - name: "locations"
+    label: "Wijnlocaties"
+    folder: "content/locations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Naam", name: "name", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis"]}
+      - {label: "Adres", name: "address", widget: "string"}
+      - {label: "Latitude", name: "lat", widget: "number", value_type: "float"}
+      - {label: "Longitude", name: "lng", widget: "number", value_type: "float"}
+      - {label: "Beschrijving", name: "description", widget: "text"}
+      - {label: "Foto", name: "image", widget: "image"}
+      - {label: "Website", name: "website", widget: "string"}

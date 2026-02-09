@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <title>Wijnkaart | de_wijnparade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin="" />
+    <style>
+        .map-container {
+            margin: 2rem 0;
+        }
+
+        #map {
+            height: 600px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            color: var(--gray-900);
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background: var(--gray-100);
+        }
+
+        .filter-btn.active {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .leaflet-popup-content-wrapper {
+            border-radius: 12px;
+            padding: 0;
+        }
+
+        .popup-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .popup-body {
+            padding: 1rem;
+        }
+
+        .popup-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .popup-address {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+        }
+
+        .popup-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .popup-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--navy);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .popup-link:hover {
+            background: var(--navy-dark);
+        }
+
+        @media (max-width: 768px) {
+            #map {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">de_wijnparade</h1>
+            <a href="index.html" class="instagram-link">← Terug naar home</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h2 class="section-title">🗺️ Wijnkaart</h2>
+            <p class="section-intro">Ontdek wijnbars, winkels en producenten in Europa</p>
+
+            <div class="filters">
+                <button class="filter-btn active" data-type="all">Alle locaties</button>
+                <button class="filter-btn" data-type="wijnbar">🍾 Wijnbars</button>
+                <button class="filter-btn" data-type="wijnwinkel">🏪 Wijnwinkels</button>
+                <button class="filter-btn" data-type="wijnhuis">🏰 Wijnhuizen</button>
+            </div>
+
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </main>
+
+    <section class="tips-form-section">
+        <div class="container">
+            <h2 class="form-title">💡 Geef je tips door!</h2>
+            <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
+            <form name="tips" method="POST" data-netlify="true" class="tips-form">
+                <input type="hidden" name="form-name" value="tips">
+                <div class="form-group">
+                    <label for="tip">Jouw tip</label>
+                    <textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" required placeholder="Je naam">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="je@email.nl">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Versturen</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="map.js"></script>
+</body>
+</html>

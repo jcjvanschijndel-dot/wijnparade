@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <title>Recept | de_wijnparade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .recipe-hero {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-header {
+            margin-bottom: 2rem;
+        }
+
+        .recipe-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .recipe-wine {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .recipe-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray-900);
+            margin-bottom: 2rem;
+        }
+
+        .recipe-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .recipe-section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ingredients-list li::before {
+            content: "✓";
+            color: var(--navy);
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .steps-list {
+            list-style: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+
+        .steps-list li {
+            counter-increment: step-counter;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            background: var(--gray-50);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 4rem;
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 1.25rem;
+            top: 1.25rem;
+            width: 2rem;
+            height: 2rem;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--gray-50);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--gray-100);
+        }
+
+        @media (max-width: 768px) {
+            .recipe-title {
+                font-size: 2rem;
+            }
+
+            .recipe-hero {
+                max-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">de_wijnparade</h1>
+            <a href="index.html" class="instagram-link">← Home</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <a href="pairings.html" class="back-button">← Terug naar overzicht</a>
+            
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&h=600&fit=crop" alt="Ossobuco" class="recipe-hero" id="recipeImage">
+            
+            <div class="recipe-header">
+                <h1 class="recipe-title" id="recipeTitle">Ossobuco met Saffraanrisotto</h1>
+                <div class="recipe-wine" id="recipeWine">🍷 Aanbevolen wijn: Barolo of Barbaresco</div>
+                <p class="recipe-description" id="recipeDescription">
+                    Een klassiek Noord-Italiaans gerecht waarbij kalfsvlees met bot langzaam wordt gestoofdin witte wijn, bouillon en groenten. Het merg uit het bot geeft een rijke smaak aan de saus. Geserveerd met saffraanrisotto is dit een feestelijk en hartverwarmend gerecht.
+                </p>
+            </div>
+
+            <div class="recipe-section">
+                <h3>Ingrediënten</h3>
+                <ul class="ingredients-list" id="ingredientsList">
+                    <li>4 ossobuco (kalfskluiven met bot, elk ca. 3-4 cm dik)</li>
+                    <li>Bloem voor het bestuiven</li>
+                    <li>3 el olijfolie</li>
+                    <li>2 uien, fijngesneden</li>
+                    <li>2 wortels, in blokjes</li>
+                    <li>2 stengels bleekselderij, in blokjes</li>
+                    <li>3 tenen knoflook, fijngehakt</li>
+                    <li>250 ml droge witte wijn</li>
+                    <li>400 g tomatenblokjes (blik)</li>
+                    <li>500 ml runderbouillon</li>
+                    <li>2 laurierblaadjes</li>
+                    <li>Zout en peper</li>
+                    <li>Gremolata: peterselie, citroenrasp, knoflook</li>
+                </ul>
+            </div>
+
+            <div class="recipe-section">
+                <h3>Bereiding</h3>
+                <ol class="steps-list" id="stepsList">
+                    <li>Dep de ossobuco droog met keukenpapier en bestrooi met zout en peper. Bestrooi licht met bloem.</li>
+                    <li>Verhit de olijfolie in een grote braadpan en bak de ossobuco rondom goudbruin. Haal uit de pan en zet opzij.</li>
+                    <li>Bak in dezelfde pan de ui, wortel en bleekselderij tot ze zacht zijn. Voeg knoflook toe en bak 1 minuut mee.</li>
+                    <li>Blus af met de witte wijn en laat inkoken tot de helft.</li>
+                    <li>Voeg de tomatenblokjes, bouillon en laurier toe. Leg de ossobuco terug in de pan.</li>
+                    <li>Breng aan de kook, dek af en laat 2-2,5 uur zachtjes sudderen tot het vlees van het bot valt.</li>
+                    <li>Bereid ondertussen de gremolata: meng fijngehakte peterselie, citroenrasp en knoflook.</li>
+                    <li>Serveer de ossobuco met saffraanrisotto en bestrooi met gremolata.</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <section class="tips-form-section">
+        <div class="container">
+            <h2 class="form-title">💡 Geef je tips door!</h2>
+            <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
+            <form name="tips" method="POST" data-netlify="true" class="tips-form">
+                <input type="hidden" name="form-name" value="tips">
+                <div class="form-group">
+                    <label for="tip">Jouw tip</label>
+                    <textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" required placeholder="Je naam">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="je@email.nl">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Versturen</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+        </div>
+    </footer>
+
+    <script src="recipe.js"></script>
+</body>
+</html>
