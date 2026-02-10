@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (!container) return;
 
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
         const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/recipes`;
         
         const response = await fetch(apiUrl);

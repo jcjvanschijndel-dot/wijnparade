@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadLocation(locationId) {
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
         const fileUrl = `https://api.github.com/repos/${repoPath}/contents/content/locations/${locationId}.md`;
         
         const response = await fetch(fileUrl);

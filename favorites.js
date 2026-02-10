@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadWines() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
         const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/favorites`;
         
         const response = await fetch(apiUrl);

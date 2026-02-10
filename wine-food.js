@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadWinesPairings() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
         const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/wines-pairing`;
         
         const response = await fetch(apiUrl);
@@ -47,7 +47,7 @@ async function loadWinesPairings() {
 
 async function loadDishesPairings() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
         const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/dishes-pairing`;
         
         const response = await fetch(apiUrl);
