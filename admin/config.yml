@@ -13,7 +13,7 @@ collections:
         name: "sections"
         file: "content/homepage.json"
         fields:
-          - {label: "Sectie 1 Tekst", name: "section1", widget: "string", default: "Toplijsten per gebied"}
+          - {label: "Sectie 1 Tekst", name: "section1", widget: "string", default: "Koopgidsen"}
           - {label: "Sectie 1 Emoji", name: "section1_icon", widget: "string", default: "📍"}
           - {label: "Sectie 2 Tekst", name: "section2", widget: "string", default: "Wijnparade favorieten"}
           - {label: "Sectie 2 Emoji", name: "section2_icon", widget: "string", default: "⭐"}
@@ -29,7 +29,7 @@ collections:
           - {label: "Intro Tekst", name: "intro", widget: "text", hint: "Uitleg over de value score berekening"}
 
   - name: "toplists"
-    label: "Toplijsten"
+    label: "Koopgidsen"
     folder: "content/toplists"
     create: true
     fields:
