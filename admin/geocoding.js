@@ -26,7 +26,7 @@ CMS.registerEventListener({
 
     try {
       // Use Google Maps Geocoding API
-      const apiKey = 'AIzaSyC143c9QT_ZqozaawjX7WgSptOKUCs3da8';
+      const apiKey = 'AIzaSyDgiuASYiN5pPKX3zNhoaEwuZ1zUxUYty0';
       const response = await fetch(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`
       );
