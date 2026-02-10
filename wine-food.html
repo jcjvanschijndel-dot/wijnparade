@@ -21,19 +21,23 @@
 
     <main class="main">
         <div class="container">
-            <!-- Toggle Buttons -->
-            <div class="toggle-section">
-                <button id="toggleFoodWine" class="toggle-btn active">
-                    🍽️ Welke wijn bij welk gerecht?
-                </button>
-                <button id="toggleWineFood" class="toggle-btn">
-                    🍷 Welk gerecht bij welke wijn?
-                </button>
+            <!-- View Toggle (styled like filters) -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label>Weergave</label>
+                    <select id="viewMode" class="filter-select">
+                        <option value="food-wine">Welke wijn bij welk gerecht?</option>
+                        <option value="wine-food">Welk gerecht bij welke wijn?</option>
+                    </select>
+                </div>
             </div>
 
+            <!-- Pairings Cards (Mobile) -->
+            <div class="wines-cards" id="pairingsCards"></div>
+
             <!-- Pairings Table (Desktop) -->
-            <div class="pairings-table-wrapper">
-                <table class="pairings-table" id="pairingsTable">
+            <div class="wines-table-wrapper">
+                <table class="wines-table" id="pairingsTable">
                     <thead>
                         <tr id="tableHeader">
                             <th>Gerecht/Ingrediënt</th>
@@ -43,9 +47,6 @@
                     <tbody id="pairingsTableBody"></tbody>
                 </table>
             </div>
-
-            <!-- Pairings Cards (Mobile) -->
-            <div class="pairings-cards" id="pairingsCards"></div>
 
             <!-- Empty State -->
             <div id="emptyState" class="empty-state" style="display: none;">
