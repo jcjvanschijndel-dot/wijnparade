@@ -82,12 +82,30 @@ async function loadDishesPairings() {
 }
 
 function setupToggle() {
-    const viewModeSelect = document.getElementById('viewMode');
-    
-    viewModeSelect.addEventListener('change', (e) => {
-        currentMode = e.target.value;
+    document.getElementById('toggleWineFood').addEventListener('click', () => {
+        currentMode = 'wine-food';
+        updateToggleState();
         renderPairings();
     });
+    
+    document.getElementById('toggleFoodWine').addEventListener('click', () => {
+        currentMode = 'food-wine';
+        updateToggleState();
+        renderPairings();
+    });
+}
+
+function updateToggleState() {
+    const wineFoodBtn = document.getElementById('toggleWineFood');
+    const foodWineBtn = document.getElementById('toggleFoodWine');
+    
+    if (currentMode === 'food-wine') {
+        foodWineBtn.classList.add('active');
+        wineFoodBtn.classList.remove('active');
+    } else {
+        wineFoodBtn.classList.add('active');
+        foodWineBtn.classList.remove('active');
+    }
 }
 
 function renderPairings() {

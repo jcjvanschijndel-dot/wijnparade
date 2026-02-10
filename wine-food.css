@@ -245,6 +245,39 @@
     border: 1px solid var(--gray-200);
 }
 
+/* Toggle Buttons */
+.toggle-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.toggle-btn {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem 1.5rem;
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    color: var(--gray-700);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: var(--gray-50);
+    border-color: var(--navy);
+}
+
+.toggle-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+}
+
 /* Star styling for wine-food pairings */
 .match-item .stars {
     color: #fbbf24;
