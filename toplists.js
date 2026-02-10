@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     try {
         // Fetch the list of files from GitHub API
-        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/wijnparade';
         const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/toplists`;
         
         const response = await fetch(apiUrl);

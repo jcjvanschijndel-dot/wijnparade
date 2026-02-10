@@ -28,7 +28,7 @@ function initMap() {
 
 async function loadLocationsFromCMS() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/wijnparade';
         const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/locations`;
         
         const response = await fetch(apiUrl);

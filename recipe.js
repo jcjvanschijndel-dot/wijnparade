@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadRecipe(recipeId) {
     try {
-        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
+        const repoPath = 'jcjvanschijndel-dot/wijnparade';
         const fileUrl = `https://api.github.com/repos/${repoPath}/contents/content/recipes/${recipeId}.md`;
         
         const response = await fetch(fileUrl);
