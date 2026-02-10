@@ -80,7 +80,7 @@
     color: var(--navy);
 }
 
-/* Match Level Styling */
+/* Match Item Styling with Stars */
 .match-items {
     display: flex;
     flex-wrap: wrap;
@@ -88,36 +88,29 @@
 }
 
 .match-item {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
-.match-good {
+.match-item .stars {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+.match-stars-1 {
     color: var(--gray-700);
     font-weight: 400;
 }
 
-.match-very-good {
+.match-stars-2 {
     color: var(--navy);
-    font-weight: 700;
+    font-weight: 600;
 }
 
-.match-sublime {
+.match-stars-3 {
     color: var(--navy);
     font-weight: 700;
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-}
-
-.match-sublime::after {
-    content: '⭐';
-    position: absolute;
-    right: -1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.85rem;
 }
 
 /* Pairings Cards (Mobile) */

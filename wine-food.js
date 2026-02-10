@@ -1,6 +1,6 @@
 let winesPairings = [];
 let dishesPairings = [];
-let currentMode = 'wine-food'; // 'wine-food' or 'food-wine'
+let currentMode = 'food-wine'; // 'wine-food' or 'food-wine'
 
 document.addEventListener('DOMContentLoaded', async function() {
     await loadWinesPairings();
@@ -99,12 +99,12 @@ function updateToggleState() {
     const wineFoodBtn = document.getElementById('toggleWineFood');
     const foodWineBtn = document.getElementById('toggleFoodWine');
     
-    if (currentMode === 'wine-food') {
+    if (currentMode === 'food-wine') {
+        foodWineBtn.classList.add('active');
+        wineFoodBtn.classList.remove('active');
+    } else {
         wineFoodBtn.classList.add('active');
         foodWineBtn.classList.remove('active');
-    } else {
-        wineFoodBtn.classList.remove('active');
-        foodWineBtn.classList.add('active');
     }
 }
 
@@ -120,15 +120,15 @@ function renderPairings() {
     
     // Update table headers
     const tableHeader = document.getElementById('tableHeader');
-    if (currentMode === 'wine-food') {
-        tableHeader.innerHTML = `
-            <th>Wijn</th>
-            <th>Gerechten</th>
-        `;
-    } else {
+    if (currentMode === 'food-wine') {
         tableHeader.innerHTML = `
             <th>Gerecht/Ingrediënt</th>
             <th>Wijnen</th>
+        `;
+    } else {
+        tableHeader.innerHTML = `
+            <th>Wijn</th>
+            <th>Gerechten</th>
         `;
     }
     
@@ -148,11 +148,11 @@ function renderTable(data) {
     const tbody = document.getElementById('pairingsTableBody');
     
     tbody.innerHTML = data.map(item => {
-        const mainItem = currentMode === 'wine-food' ? item.wine : item.dish;
-        const matchItems = currentMode === 'wine-food' ? item.dishes : item.wines;
+        const mainItem = currentMode === 'food-wine' ? item.dish : item.wine;
+        const matchItems = currentMode === 'food-wine' ? item.wines : item.dishes;
         
-        // Sort match items: sublime > very-good > good, then alphabetically
-        const sortedMatches = sortMatches(matchItems || []);
+        // Sort match items (only for food-wine mode which has stars)
+        const sortedMatches = currentMode === 'food-wine' ? sortMatches(matchItems || []) : (matchItems || []).sort();
         
         return `
             <tr>
@@ -160,7 +160,7 @@ function renderTable(data) {
                 <td>
                     <div class="match-items">
                         ${sortedMatches.map((match, idx) => 
-                            renderMatchItem(match, idx < sortedMatches.length - 1)
+                            renderMatchItem(match, idx < sortedMatches.length - 1, currentMode)
                         ).join('')}
                     </div>
                 </td>
@@ -173,17 +173,17 @@ function renderCards(data) {
     const container = document.getElementById('pairingsCards');
     
     container.innerHTML = data.map(item => {
-        const mainItem = currentMode === 'wine-food' ? item.wine : item.dish;
-        const matchItems = currentMode === 'wine-food' ? item.dishes : item.wines;
+        const mainItem = currentMode === 'food-wine' ? item.dish : item.wine;
+        const matchItems = currentMode === 'food-wine' ? item.wines : item.dishes;
         
-        const sortedMatches = sortMatches(matchItems || []);
+        const sortedMatches = currentMode === 'food-wine' ? sortMatches(matchItems || []) : (matchItems || []).sort();
         
         return `
             <div class="pairing-card">
                 <div class="pairing-card-header">${mainItem}</div>
                 <div class="pairing-card-items">
                     ${sortedMatches.map((match, idx) => 
-                        renderMatchItem(match, idx < sortedMatches.length - 1)
+                        renderMatchItem(match, idx < sortedMatches.length - 1, currentMode)
                     ).join('')}
                 </div>
             </div>
@@ -192,19 +192,31 @@ function renderCards(data) {
 }
 
 function sortMatches(matches) {
-    const matchOrder = { 'sublime': 0, 'very-good': 1, 'good': 2 };
     return matches.sort((a, b) => {
-        const matchDiff = (matchOrder[a.match_level] || 3) - (matchOrder[b.match_level] || 3);
-        if (matchDiff !== 0) return matchDiff;
+        // Sort by stars (3 > 2 > 1), then alphabetically
+        const starsA = parseInt(a.stars) || 0;
+        const starsB = parseInt(b.stars) || 0;
+        
+        if (starsB !== starsA) return starsB - starsA; // Descending
         return a.name.localeCompare(b.name, 'nl');
     });
 }
 
-function renderMatchItem(item, showSeparator) {
-    const matchClass = `match-${item.match_level}`;
-    const separator = showSeparator ? '<span style="color: var(--gray-300); margin: 0 0.25rem;">•</span>' : '';
+function renderMatchItem(item, showSeparator, mode) {
+    // For wine-food mode: simple string
+    if (mode === 'wine-food') {
+        const dishName = typeof item === 'string' ? item : item.name || item;
+        const separator = showSeparator ? '<span style="color: var(--gray-300); margin: 0 0.5rem;">•</span>' : '';
+        return `<span class="match-item">${dishName}</span>${separator}`;
+    }
     
-    return `<span class="match-item ${matchClass}">${item.name}</span>${separator}`;
+    // For food-wine mode: object with stars
+    const stars = parseInt(item.stars) || 1;
+    const starsHtml = '★'.repeat(stars);
+    const matchClass = `match-stars-${stars}`;
+    const separator = showSeparator ? '<span style="color: var(--gray-300); margin: 0 0.5rem;">•</span>' : '';
+    
+    return `<span class="match-item ${matchClass}">${item.name} <span class="stars">${starsHtml}</span></span>${separator}`;
 }
 
 function showEmptyState() {
