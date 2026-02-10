@@ -1,10 +1,6 @@
 ---
 dish: Foire Gras
 wines:
-  - name: Pinot Gris (Alsace)
+  - name: Pinot Gris (Elzas)
     match_level: sublime
-  - name: Sauternes
-    match_level: sublime
-  - name: Champagne
-    match_level: very-good
 ---
