@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <title>Wijn & Eten Overzicht | de_wijnparade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wine-food.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="instagram-profile-link">
+                <img src="/profile-photo.jpg" alt="de_wijnparade" class="profile-photo-img">
+                <span>← Terug naar home</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Toggle Buttons -->
+            <div class="toggle-section">
+                <button id="toggleWineFood" class="toggle-btn active">
+                    🍷 Welk gerecht bij welke wijn?
+                </button>
+                <button id="toggleFoodWine" class="toggle-btn">
+                    🍽️ Welke wijn bij welk gerecht?
+                </button>
+            </div>
+
+            <!-- Pairings Table (Desktop) -->
+            <div class="pairings-table-wrapper">
+                <table class="pairings-table" id="pairingsTable">
+                    <thead>
+                        <tr id="tableHeader">
+                            <th>Wijn</th>
+                            <th>Gerechten</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pairingsTableBody"></tbody>
+                </table>
+            </div>
+
+            <!-- Pairings Cards (Mobile) -->
+            <div class="pairings-cards" id="pairingsCards"></div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>Nog geen combinaties toegevoegd.</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Voeg combinaties toe via het CMS (/admin)</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="tips-form-section">
+        <div class="container">
+            <h2 class="form-title">💡 Geef je tips door!</h2>
+            <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
+            <form name="tips" method="POST" data-netlify="true" class="tips-form">
+                <input type="hidden" name="form-name" value="tips">
+                <div class="form-group">
+                    <label for="tip">Jouw tip</label>
+                    <textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" required placeholder="Je naam">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="je@email.nl">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Versturen</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+        </div>
+    </footer>
+
+    <script src="wine-food.js"></script>
+</body>
+</html>

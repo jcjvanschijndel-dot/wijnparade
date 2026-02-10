@@ -105,3 +105,18 @@ collections:
       - {label: "Hoofd Foto", name: "image", widget: "image"}
       - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}}
       - {label: "Website", name: "website", widget: "string", required: false}
+
+  - name: "pairings"
+    label: "Wijn & Eten Combinaties"
+    folder: "content/pairings"
+    create: true
+    fields:
+      - {label: "Wijn", name: "wine", widget: "string", hint: "Bijvoorbeeld: Chardonnay uit Monterrey"}
+      - {label: "Gerecht/Ingrediënt", name: "dish", widget: "string", hint: "Bijvoorbeeld: Kreeft"}
+      - label: "Match Level"
+        name: "match_level"
+        widget: "select"
+        options: 
+          - {label: "Goed", value: "good"}
+          - {label: "Heel Goed", value: "very-good"}
+          - {label: "Subliem", value: "sublime"}

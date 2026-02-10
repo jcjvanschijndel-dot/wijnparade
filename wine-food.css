@@ -1,0 +1,177 @@
+/* Wine-Food Pairing Styles - Based on favorites-table.css */
+
+/* Toggle Buttons */
+.toggle-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.toggle-btn {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem 1.5rem;
+    background: var(--gray-100);
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    color: var(--gray-700);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: var(--gray-200);
+}
+
+.toggle-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+}
+
+/* Pairings Table (Desktop) */
+.pairings-table-wrapper {
+    overflow-x: auto;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    display: none;
+}
+
+.pairings-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pairings-table thead {
+    background: var(--gray-50);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.pairings-table th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pairings-table tbody tr {
+    border-bottom: 1px solid var(--gray-100);
+    transition: background 0.2s ease;
+}
+
+.pairings-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.pairings-table td {
+    padding: 1.25rem 1.5rem;
+    color: var(--gray-900);
+}
+
+.pairings-table td:first-child {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* Match Level Styling */
+.match-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.match-item {
+    display: inline-block;
+}
+
+.match-good {
+    color: var(--gray-700);
+    font-weight: 400;
+}
+
+.match-very-good {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.match-sublime {
+    color: var(--navy);
+    font-weight: 700;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.match-sublime::after {
+    content: '⭐';
+    position: absolute;
+    right: -1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+}
+
+/* Pairings Cards (Mobile) */
+.pairings-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.pairing-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.pairing-card-header {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.pairing-card-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Empty State */
+.empty-state {
+    padding: 3rem;
+    text-align: center;
+    color: var(--gray-600);
+    background: var(--gray-50);
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .pairings-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .pairings-cards {
+        display: none !important;
+    }
+    
+    .pairings-table-wrapper {
+        display: block !important;
+    }
+}
