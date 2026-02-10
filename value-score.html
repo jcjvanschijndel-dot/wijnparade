@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <title>Value Score Overzicht | de_wijnparade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="value-score.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="instagram-profile-link">
+                <img src="/profile-photo.jpg" alt="de_wijnparade" class="profile-photo-img">
+                <span>← Terug naar home</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Intro Text (editable via CMS) -->
+            <div class="page-intro-section" id="pageIntro">
+                <p>Loading...</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label>Kleur</label>
+                    <select id="filterColor" class="filter-select">
+                        <option value="">Alle</option>
+                        <option value="Wit">Wit</option>
+                        <option value="Rood">Rood</option>
+                        <option value="Rosé">Rosé</option>
+                        <option value="Sparkling">Sparkling</option>
+                        <option value="Alcoholvrij">Alcoholvrij</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Gebied</label>
+                    <select id="filterRegion" class="filter-select">
+                        <option value="">Alle</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Land</label>
+                    <select id="filterCountry" class="filter-select">
+                        <option value="">Alle</option>
+                    </select>
+                </div>
+
+                <button id="clearFilters" class="clear-btn">Wis filters</button>
+            </div>
+
+            <!-- Sort Controls -->
+            <div class="sort-section">
+                <label>Sorteer op:</label>
+                <select id="sortBy" class="sort-select">
+                    <option value="value_score">Value Score</option>
+                    <option value="name">Naam</option>
+                    <option value="producer">Producent</option>
+                    <option value="region">Gebied</option>
+                    <option value="country">Land</option>
+                    <option value="price">Prijs</option>
+                    <option value="rating">Rating</option>
+                </select>
+                <button id="sortOrder" class="sort-btn">↓</button>
+            </div>
+
+            <!-- Wine Cards (Mobile) -->
+            <div class="wines-cards" id="winesCards"></div>
+
+            <!-- Wine Table (Desktop) -->
+            <div class="wines-table-wrapper">
+                <table class="wines-table" id="winesTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="name">Naam</th>
+                            <th data-sort="producer">Producent</th>
+                            <th data-sort="region">Gebied</th>
+                            <th data-sort="country">Land</th>
+                            <th data-sort="color">Kleur</th>
+                            <th data-sort="price">Prijs</th>
+                            <th data-sort="rating">Rating</th>
+                            <th data-sort="value_score">Value Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="winesTableBody"></tbody>
+                </table>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>Geen wijnen gevonden.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="tips-form-section">
+        <div class="container">
+            <h2 class="form-title">💡 Geef je tips door!</h2>
+            <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
+            <form name="tips" method="POST" data-netlify="true" class="tips-form">
+                <input type="hidden" name="form-name" value="tips">
+                <div class="form-group">
+                    <label for="tip">Jouw tip</label>
+                    <textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" required placeholder="Je naam">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="je@email.nl">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Versturen</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+        </div>
+    </footer>
+
+    <script src="value-score.js"></script>
+</body>
+</html>

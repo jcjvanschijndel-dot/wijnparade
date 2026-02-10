@@ -21,6 +21,12 @@ collections:
           - {label: "Sectie 3 Emoji", name: "section3_icon", widget: "string", default: "🍽️"}
           - {label: "Sectie 4 Tekst", name: "section4", widget: "string", default: "Wijnkaart"}
           - {label: "Sectie 4 Emoji", name: "section4_icon", widget: "string", default: "🗺️"}
+      
+      - label: "Value Score Intro"
+        name: "value_score_intro"
+        file: "content/value-score-intro.json"
+        fields:
+          - {label: "Intro Tekst", name: "intro", widget: "text", hint: "Uitleg over de value score berekening"}
 
   - name: "toplists"
     label: "Toplijsten"
@@ -54,6 +60,23 @@ collections:
       - {label: "Prijs (€)", name: "price", widget: "number", value_type: "float", step: 0.01}
       - {label: "Verkoopadres", name: "store", widget: "string"}
       - {label: "Volgorde", name: "order", widget: "number", default: 0, required: false}
+
+  - name: "value_scores"
+    label: "Value Score Wijnen"
+    folder: "content/value-scores"
+    create: true
+    fields:
+      - {label: "Wijn Naam", name: "name", widget: "string"}
+      - {label: "Producent", name: "producer", widget: "string"}
+      - {label: "Gebied", name: "region", widget: "string"}
+      - {label: "Land", name: "country", widget: "string"}
+      - label: "Kleur"
+        name: "color"
+        widget: "select"
+        options: ["Wit", "Rood", "Rosé", "Sparkling", "Alcoholvrij"]
+      - {label: "Prijs (€)", name: "price", widget: "number", value_type: "float", step: 0.01}
+      - {label: "Gemiddelde Rating (1-5)", name: "rating", widget: "number", value_type: "float", step: 0.1, min: 1, max: 5}
+      - {label: "Value Score", name: "value_score", widget: "number", value_type: "float", step: 0.1, hint: "Zelf berekende value score"}
 
   - name: "recipes"
     label: "Recepten"
