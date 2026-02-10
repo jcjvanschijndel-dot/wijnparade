@@ -106,17 +106,40 @@ collections:
       - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}}
       - {label: "Website", name: "website", widget: "string", required: false}
 
-  - name: "pairings"
-    label: "Wijn & Eten Combinaties"
-    folder: "content/pairings"
+  - name: "wines_pairing"
+    label: "Wijnen (met gerechten)"
+    folder: "content/wines-pairing"
     create: true
     fields:
-      - {label: "Wijn", name: "wine", widget: "string", hint: "Bijvoorbeeld: Chardonnay uit Monterrey"}
-      - {label: "Gerecht/Ingrediënt", name: "dish", widget: "string", hint: "Bijvoorbeeld: Kreeft"}
-      - label: "Match Level"
-        name: "match_level"
-        widget: "select"
-        options: 
-          - {label: "Goed", value: "good"}
-          - {label: "Heel Goed", value: "very-good"}
-          - {label: "Subliem", value: "sublime"}
+      - {label: "Wijn Naam", name: "wine", widget: "string", hint: "Bijvoorbeeld: Chardonnay uit Monterrey"}
+      - label: "Passende Gerechten"
+        name: "dishes"
+        widget: "list"
+        fields:
+          - {label: "Gerecht/Ingrediënt", name: "name", widget: "string"}
+          - label: "Hoe goed past het?"
+            name: "match_level"
+            widget: "select"
+            options:
+              - {label: "Goed", value: "good"}
+              - {label: "Heel Goed", value: "very-good"}
+              - {label: "Subliem", value: "sublime"}
+
+  - name: "dishes_pairing"
+    label: "Gerechten (met wijnen)"
+    folder: "content/dishes-pairing"
+    create: true
+    fields:
+      - {label: "Gerecht/Ingrediënt Naam", name: "dish", widget: "string", hint: "Bijvoorbeeld: Kreeft"}
+      - label: "Passende Wijnen"
+        name: "wines"
+        widget: "list"
+        fields:
+          - {label: "Wijn", name: "name", widget: "string"}
+          - label: "Hoe goed past het?"
+            name: "match_level"
+            widget: "select"
+            options:
+              - {label: "Goed", value: "good"}
+              - {label: "Heel Goed", value: "very-good"}
+              - {label: "Subliem", value: "sublime"}
