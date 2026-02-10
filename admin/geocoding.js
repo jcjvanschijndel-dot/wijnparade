@@ -25,11 +25,14 @@ CMS.registerEventListener({
     }
 
     try {
-      // Use Google Maps Geocoding API
-      const apiKey = 'AIzaSyDgiuASYiN5pPKX3zNhoaEwuZ1zUxUYty0';
-      const response = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`
-      );
+      // Use Netlify Function for secure geocoding (API key stays server-side)
+      const response = await fetch('/.netlify/functions/geocode', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ address })
+      });
 
       const data = await response.json();
 
