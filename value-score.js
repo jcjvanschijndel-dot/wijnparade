@@ -203,7 +203,7 @@ function renderCards() {
                     <div class="wine-card-name">${wine.name}</div>
                     <div class="wine-card-producer">${wine.producer}</div>
                 </div>
-                <div class="wine-card-price">€${wine.price.toFixed(2)}</div>
+                <div class="wine-card-price">€${parseFloat(wine.price || 0).toFixed(2)}</div>
             </div>
             <div class="wine-card-meta">
                 <span class="wine-card-tag">${wine.color}</span>
@@ -212,10 +212,10 @@ function renderCards() {
             </div>
             <div class="wine-card-value">
                 <div class="wine-card-rating">
-                    <span class="rating-stars">${'★'.repeat(Math.round(wine.rating))}${'☆'.repeat(5 - Math.round(wine.rating))}</span>
-                    <span>${wine.rating}/5</span>
+                    <span class="rating-stars">${'★'.repeat(Math.round(wine.rating || 0))}${'☆'.repeat(5 - Math.round(wine.rating || 0))}</span>
+                    <span>${parseFloat(wine.rating || 0).toFixed(1)}/5</span>
                 </div>
-                <div class="value-score-badge">${wine.value_score}</div>
+                <div class="value-score-badge">${parseFloat(wine.value_score || 0).toFixed(1)}</div>
             </div>
         </div>
     `).join('');
@@ -231,12 +231,12 @@ function renderTable() {
             <td>${wine.region}</td>
             <td>${wine.country}</td>
             <td><span class="wine-type-badge">${wine.color}</span></td>
-            <td class="wine-price">€${wine.price.toFixed(2)}</td>
+            <td class="wine-price">€${parseFloat(wine.price || 0).toFixed(2)}</td>
             <td>
-                <span class="rating-stars">${'★'.repeat(Math.round(wine.rating))}${'☆'.repeat(5 - Math.round(wine.rating))}</span>
-                ${wine.rating}/5
+                <span class="rating-stars">${'★'.repeat(Math.round(wine.rating || 0))}${'☆'.repeat(5 - Math.round(wine.rating || 0))}</span>
+                ${parseFloat(wine.rating || 0).toFixed(1)}/5
             </td>
-            <td><span class="value-score-badge">${wine.value_score}</span></td>
+            <td><span class="value-score-badge">${parseFloat(wine.value_score || 0).toFixed(1)}</span></td>
         </tr>
     `).join('');
 }
