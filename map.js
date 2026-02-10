@@ -3,33 +3,28 @@ let wineLocations = [];
 let map;
 let markers = [];
 let activeFilter = 'all';
+let infoWindow;
 
-// Initialize map
-document.addEventListener('DOMContentLoaded', async function() {
-    try {
-        // First load locations from CMS
-        await loadLocationsFromCMS();
-        
-        // Then initialize map
-        map = L.map('map').setView([52.0, 5.0], 6);
+// Initialize map - called by Google Maps API
+function initMap() {
+    // Default center (Netherlands)
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 52.0, lng: 5.0 },
+        zoom: 7,
+        styles: [
+            {
+                featureType: 'poi',
+                elementType: 'labels',
+                stylers: [{ visibility: 'off' }]
+            }
+        ]
+    });
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap',
-            maxZoom: 19
-        }).addTo(map);
+    infoWindow = new google.maps.InfoWindow();
 
-        setTimeout(() => {
-            map.invalidateSize();
-        }, 100);
-
-        if (wineLocations.length > 0) {
-            addMarkers(wineLocations);
-        }
-
-    } catch (error) {
-        console.error('Error initializing map:', error);
-    }
-});
+    // Load locations from CMS
+    loadLocationsFromCMS();
+}
 
 async function loadLocationsFromCMS() {
     try {
@@ -57,7 +52,7 @@ async function loadLocationsFromCMS() {
                 const parsed = parseFrontmatter(content);
                 if (parsed && parsed.lat && parsed.lng) {
                     wineLocations.push({
-                        id: file.name.replace('.md', ''), // Use filename as ID
+                        id: file.name.replace('.md', ''),
                         name: parsed.name,
                         type: parsed.type || 'wijnbar',
                         address: parsed.address,
@@ -73,10 +68,120 @@ async function loadLocationsFromCMS() {
         
         console.log(`Loaded ${wineLocations.length} locations from CMS`);
         
+        if (wineLocations.length > 0) {
+            addMarkers(wineLocations);
+            fitMapToMarkers();
+        }
+        
     } catch (error) {
         console.error('Error loading locations from CMS:', error);
     }
 }
+
+function addMarkers(locations) {
+    // Clear existing markers
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
+
+    locations.forEach(location => {
+        if (activeFilter !== 'all' && location.type !== activeFilter) {
+            return;
+        }
+
+        const marker = new google.maps.Marker({
+            position: { lat: location.lat, lng: location.lng },
+            map: map,
+            title: location.name,
+            icon: getMarkerIcon(location.type),
+            animation: google.maps.Animation.DROP
+        });
+
+        marker.addListener('click', () => {
+            const content = createInfoWindowContent(location);
+            infoWindow.setContent(content);
+            infoWindow.open(map, marker);
+        });
+
+        markers.push(marker);
+    });
+}
+
+function getMarkerIcon(type) {
+    const icons = {
+        'wijnbar': '🍾',
+        'wijnwinkel': '🏪',
+        'wijnhuis': '🏰',
+        'restaurant': '🍽️'
+    };
+    
+    const emoji = icons[type] || '📍';
+    
+    return {
+        url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <circle cx="20" cy="20" r="18" fill="#1e3a8a" stroke="white" stroke-width="3"/>
+                <text x="20" y="20" text-anchor="middle" dominant-baseline="central" font-size="20">${emoji}</text>
+            </svg>
+        `)}`,
+        scaledSize: new google.maps.Size(40, 40),
+        anchor: new google.maps.Point(20, 20)
+    };
+}
+
+function createInfoWindowContent(location) {
+    return `
+        <div style="max-width: 250px; padding: 0.5rem;">
+            <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
+            <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
+            <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
+            <a href="location.html?id=${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
+        </div>
+    `;
+}
+
+function getTypeLabel(type) {
+    const labels = {
+        'wijnbar': '🍾 Wijnbar',
+        'wijnwinkel': '🏪 Wijnwinkel',
+        'wijnhuis': '🏰 Wijnhuis',
+        'restaurant': '🍽️ Restaurant'
+    };
+    return labels[type] || type;
+}
+
+function fitMapToMarkers() {
+    if (markers.length === 0) return;
+    
+    const bounds = new google.maps.LatLngBounds();
+    markers.forEach(marker => {
+        bounds.extend(marker.getPosition());
+    });
+    map.fitBounds(bounds);
+}
+
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active state
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update filter
+            activeFilter = this.dataset.type;
+            
+            // Re-render markers
+            if (wineLocations.length > 0) {
+                addMarkers(wineLocations);
+                if (activeFilter === 'all') {
+                    fitMapToMarkers();
+                }
+            }
+        });
+    });
+});
 
 function parseFrontmatter(content) {
     const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
@@ -107,92 +212,3 @@ function parseFrontmatter(content) {
 
     return data;
 }
-
-// Custom marker icons
-const markerIcons = {
-    wijnbar: L.divIcon({
-        className: 'custom-div-icon',
-        html: '<div style="background: #1e3a8a; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">🍾</div>',
-        iconSize: [30, 30],
-        iconAnchor: [15, 15]
-    }),
-    wijnwinkel: L.divIcon({
-        className: 'custom-div-icon',
-        html: '<div style="background: #1e3a8a; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">🏪</div>',
-        iconSize: [30, 30],
-        iconAnchor: [15, 15]
-    }),
-    wijnhuis: L.divIcon({
-        className: 'custom-div-icon',
-        html: '<div style="background: #1e3a8a; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">🏰</div>',
-        iconSize: [30, 30],
-        iconAnchor: [15, 15]
-    }),
-    restaurant: L.divIcon({
-        className: 'custom-div-icon',
-        html: '<div style="background: #1e3a8a; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">🍽️</div>',
-        iconSize: [30, 30],
-        iconAnchor: [15, 15]
-    })
-};
-
-// Create popup content
-function createPopupContent(location) {
-    return `
-        <div style="min-width: 200px; max-width: 250px; padding: 0.5rem;">
-            <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
-            <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
-            <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
-            <a href="location.html?id=${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
-        </div>
-    `;
-}
-
-function getTypeLabel(type) {
-    const labels = {
-        'wijnbar': '🍾 Wijnbar',
-        'wijnwinkel': '🏪 Wijnwinkel',
-        'wijnhuis': '🏰 Wijnhuis',
-        'restaurant': '🍽️ Restaurant'
-    };
-    return labels[type] || type;
-}
-
-// Add markers to map
-function addMarkers(locations) {
-    markers.forEach(marker => map.removeLayer(marker));
-    markers = [];
-
-    locations.forEach(location => {
-        const marker = L.marker([location.lat, location.lng], {
-            icon: markerIcons[location.type]
-        }).addTo(map);
-
-        marker.bindPopup(createPopupContent(location), {
-            maxWidth: 300
-        });
-
-        markers.push(marker);
-    });
-
-    if (markers.length > 0) {
-        const group = L.featureGroup(markers);
-        map.fitBounds(group.getBounds().pad(0.1));
-    }
-}
-
-// Filter functionality
-document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeFilter = btn.dataset.type;
-
-        let filtered = wineLocations;
-        if (activeFilter !== 'all') {
-            filtered = wineLocations.filter(loc => loc.type === activeFilter);
-        }
-
-        addMarkers(filtered);
-    });
-});

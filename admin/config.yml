@@ -98,9 +98,9 @@ collections:
     fields:
       - {label: "Naam", name: "name", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
-      - {label: "Adres", name: "address", widget: "string"}
-      - {label: "Latitude", name: "lat", widget: "number", value_type: "float", hint: "Google Maps → rechtsklik op locatie → kopieer eerste getal"}
-      - {label: "Longitude", name: "lng", widget: "number", value_type: "float", hint: "Google Maps → rechtsklik op locatie → kopieer tweede getal"}
+      - {label: "Adres", name: "address", widget: "string", hint: "Volledig adres - coördinaten worden automatisch ingevuld"}
+      - {label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld via Google Maps"}
+      - {label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld via Google Maps"}
       - {label: "Beschrijving", name: "description", widget: "text"}
       - {label: "Hoofd Foto", name: "image", widget: "image"}
       - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}}
