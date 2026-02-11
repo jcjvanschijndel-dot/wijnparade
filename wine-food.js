@@ -1,6 +1,6 @@
 let winesPairings = [];
 let dishesPairings = [];
-let currentMode = 'food-wine'; // 'wine-food' or 'food-wine'
+let currentMode = 'food-wine';
 
 document.addEventListener('DOMContentLoaded', async function() {
     await loadWinesPairings();
@@ -11,34 +11,15 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadWinesPairings() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
-        const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/wines-pairing`;
-        
-        const response = await fetch(apiUrl);
+        const response = await fetch('/content/wines-pairing/_index.json');
         
         if (!response.ok) {
             console.log('No wines pairings found');
             return;
         }
         
-        const files = await response.json();
-        
-        if (!files || files.length === 0) {
-            return;
-        }
-
-        winesPairings = [];
-        
-        for (const file of files) {
-            if (file.name.endsWith('.md')) {
-                const contentResponse = await fetch(file.download_url);
-                const content = await contentResponse.text();
-                const parsed = parseFrontmatter(content);
-                if (parsed && parsed.wine) {
-                    winesPairings.push(parsed);
-                }
-            }
-        }
+        const data = await response.json();
+        winesPairings = data.filter(item => item.wine);
 
     } catch (error) {
         console.error('Error loading wines pairings:', error);
@@ -47,42 +28,15 @@ async function loadWinesPairings() {
 
 async function loadDishesPairings() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
-        
-        // Try new location first
-        let apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/dishes-pairing`;
-        let response = await fetch(apiUrl);
-        
-        // If not found, try old location for backwards compatibility
-        if (!response.ok) {
-            console.log('Trying old pairings location...');
-            apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/pairings`;
-            response = await fetch(apiUrl);
-        }
+        const response = await fetch('/content/dishes-pairing/_index.json');
         
         if (!response.ok) {
             console.log('No dishes pairings found');
             return;
         }
         
-        const files = await response.json();
-        
-        if (!files || files.length === 0) {
-            return;
-        }
-
-        dishesPairings = [];
-        
-        for (const file of files) {
-            if (file.name.endsWith('.md')) {
-                const contentResponse = await fetch(file.download_url);
-                const content = await contentResponse.text();
-                const parsed = parseFrontmatter(content);
-                if (parsed && parsed.dish) {
-                    dishesPairings.push(parsed);
-                }
-            }
-        }
+        const data = await response.json();
+        dishesPairings = data.filter(item => item.dish);
 
     } catch (error) {
         console.error('Error loading dishes pairings:', error);
@@ -126,7 +80,6 @@ function renderPairings() {
     
     hideEmptyState();
     
-    // Update table headers
     const tableHeader = document.getElementById('tableHeader');
     if (currentMode === 'food-wine') {
         tableHeader.innerHTML = `
@@ -140,14 +93,12 @@ function renderPairings() {
         `;
     }
     
-    // Sort alphabetically
     const sorted = [...dataSource].sort((a, b) => {
         const keyA = currentMode === 'food-wine' ? a.dish : a.wine;
         const keyB = currentMode === 'food-wine' ? b.dish : b.wine;
         return keyA.localeCompare(keyB, 'nl');
     });
     
-    // Render
     renderTable(sorted);
     renderCards(sorted);
 }
@@ -159,7 +110,7 @@ function renderTable(data) {
         const mainItem = currentMode === 'food-wine' ? item.dish : item.wine;
         const matchItems = currentMode === 'food-wine' ? item.wines : item.dishes;
         
-        const sortedMatches = currentMode === 'food-wine' ? sortMatches(matchItems || []) : (matchItems || []).sort();
+        const sortedMatches = currentMode === 'food-wine' ? sortMatches(matchItems || []) : sortDishes(matchItems || []);
         
         return `
             <tr>
@@ -181,7 +132,7 @@ function renderCards(data) {
         const mainItem = currentMode === 'food-wine' ? item.dish : item.wine;
         const matchItems = currentMode === 'food-wine' ? item.wines : item.dishes;
         
-        const sortedMatches = currentMode === 'food-wine' ? sortMatches(matchItems || []) : (matchItems || []).sort();
+        const sortedMatches = currentMode === 'food-wine' ? sortMatches(matchItems || []) : sortDishes(matchItems || []);
         
         return `
             <div class="wine-card">
@@ -199,31 +150,40 @@ function renderCards(data) {
 }
 
 function sortMatches(matches) {
-    return matches.sort((a, b) => {
-        // Sort by stars (3 > 2 > 1), then alphabetically
+    if (!Array.isArray(matches)) return [];
+    return [...matches].sort((a, b) => {
         const starsA = parseInt(a.stars) || 0;
         const starsB = parseInt(b.stars) || 0;
-        
-        if (starsB !== starsA) return starsB - starsA; // Descending
-        return a.name.localeCompare(b.name, 'nl');
+        if (starsB !== starsA) return starsB - starsA;
+        const nameA = (typeof a === 'string' ? a : a.name) || '';
+        const nameB = (typeof b === 'string' ? b : b.name) || '';
+        return nameA.localeCompare(nameB, 'nl');
+    });
+}
+
+function sortDishes(dishes) {
+    if (!Array.isArray(dishes)) return [];
+    return [...dishes].sort((a, b) => {
+        const nameA = (typeof a === 'string' ? a : a.dish || a.name) || '';
+        const nameB = (typeof b === 'string' ? b : b.dish || b.name) || '';
+        return nameA.localeCompare(nameB, 'nl');
     });
 }
 
 function renderMatchItem(item, showSeparator, mode) {
-    // For wine-food mode: simple string
     if (mode === 'wine-food') {
-        const dishName = typeof item === 'string' ? item : item.name || item;
+        const dishName = typeof item === 'string' ? item : (item.dish || item.name || item);
         const separator = showSeparator ? ' <span style="color: var(--gray-300);">•</span> ' : '';
         return `<span>${dishName}</span>${separator}`;
     }
     
-    // For food-wine mode: object with stars
+    const name = typeof item === 'string' ? item : (item.name || item);
     const stars = parseInt(item.stars) || 1;
     const starsHtml = '★'.repeat(stars);
     const matchClass = `match-stars-${stars}`;
     const separator = showSeparator ? ' <span style="color: var(--gray-300);">•</span> ' : '';
     
-    return `<span class="${matchClass}">${item.name} <span class="stars">${starsHtml}</span></span>${separator}`;
+    return `<span class="${matchClass}">${name} <span class="stars">${starsHtml}</span></span>${separator}`;
 }
 
 function showEmptyState() {
@@ -236,86 +196,4 @@ function hideEmptyState() {
     document.getElementById('emptyState').style.display = 'none';
     document.getElementById('pairingsCards').style.display = '';
     document.querySelector('.wines-table-wrapper').style.display = '';
-}
-
-function parseFrontmatter(content) {
-    const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
-    if (!match) return null;
-
-    const frontmatter = match[1];
-    const data = {};
-    let currentKey = null;
-    let currentList = [];
-    let currentObject = {};
-    let inList = false;
-
-    frontmatter.split('\n').forEach(line => {
-        const trimmed = line.trim();
-        const indent = line.search(/\S/);
-        
-        // List item start
-        if (trimmed.startsWith('- ')) {
-            if (!inList) {
-                inList = true;
-                currentList = [];
-            }
-            
-            // Check if it's a simple list or object list
-            const afterDash = trimmed.substring(2).trim();
-            if (afterDash.includes(':')) {
-                // Object in list - save previous if exists
-                if (Object.keys(currentObject).length > 0) {
-                    currentList.push({...currentObject});
-                    currentObject = {};
-                }
-                // Start new object
-                const [key, value] = afterDash.split(':').map(s => s.trim());
-                currentObject[key] = value.replace(/^["']|["']$/g, '');
-            } else {
-                // Simple list item
-                currentList.push(afterDash);
-            }
-        }
-        // Object property within list
-        else if (inList && indent > 2 && trimmed.includes(':')) {
-            const [key, value] = trimmed.split(':').map(s => s.trim());
-            currentObject[key] = value.replace(/^["']|["']$/g, '');
-        }
-        // Regular key-value
-        else if (trimmed.includes(':') && !inList) {
-            // Save previous list if exists
-            if (currentKey && currentList.length > 0) {
-                if (Object.keys(currentObject).length > 0) {
-                    currentList.push({...currentObject});
-                }
-                data[currentKey] = currentList;
-                currentList = [];
-                currentObject = {};
-                inList = false;
-            }
-            
-            const colonIndex = trimmed.indexOf(':');
-            currentKey = trimmed.substring(0, colonIndex).trim();
-            let value = trimmed.substring(colonIndex + 1).trim();
-            
-            if (value) {
-                value = value.replace(/^["']|["']$/g, '');
-                if (!isNaN(value) && value !== '') {
-                    value = Number(value);
-                }
-                data[currentKey] = value;
-                currentKey = null;
-            }
-        }
-    });
-    
-    // Save last list if exists
-    if (currentKey && (currentList.length > 0 || Object.keys(currentObject).length > 0)) {
-        if (Object.keys(currentObject).length > 0) {
-            currentList.push({...currentObject});
-        }
-        data[currentKey] = currentList;
-    }
-
-    return data;
 }
