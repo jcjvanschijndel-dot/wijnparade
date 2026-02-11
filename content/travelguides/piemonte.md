@@ -1,5 +1,5 @@
 ---
-name: Piemonte
-file: /uploads/rioja-buying-guide.pdf
+name: Barolo resigids
+file: /uploads/barolo.pdf
 order: 0
 ---
