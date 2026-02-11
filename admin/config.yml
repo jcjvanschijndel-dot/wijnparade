@@ -75,26 +75,13 @@ collections:
         widget: "select"
         options: ["Wit", "Rood", "Rosé", "Sparkling", "Alcoholvrij"]
       - {label: "Prijs (€)", name: "price", widget: "number", value_type: "float", step: 0.01}
-      - {label: "Gemiddelde Rating (1-5)", name: "rating", widget: "number", value_type: "float", step: 0.1, min: 1, max: 5}
-      - {label: "Value Score", name: "value_score", widget: "number", value_type: "float", step: 0.1, hint: "Zelf berekende value score"}
-
-  - name: "recipes"
-    label: "Recepten"
-    folder: "content/recipes"
-    create: true
-    fields:
-      - {label: "Titel", name: "title", widget: "string"}
-      - {label: "Hoofd Foto", name: "image", widget: "image"}
-      - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}}
-      - {label: "Aanbevolen Wijn", name: "wine", widget: "string"}
-      - {label: "Korte Beschrijving", name: "description", widget: "text"}
-      - {label: "Ingrediënten", name: "ingredients", widget: "list"}
-      - {label: "Bereidingswijze", name: "steps", widget: "list"}
+      - {label: "Value Score (0-100)", name: "value_score", widget: "number", value_type: "int", min: 0, max: 100, hint: "Score tussen 0-100"}
 
   - name: "locations"
     label: "Wijnlocaties"
     folder: "content/locations"
     create: true
+    summary: "{{name}} - {{type}}"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
@@ -103,7 +90,12 @@ collections:
       - {label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld via Google Maps"}
       - {label: "Beschrijving", name: "description", widget: "text"}
       - {label: "Hoofd Foto", name: "image", widget: "image"}
-      - {label: "Extra Foto's", name: "gallery", widget: "list", required: false, field: {label: "Foto", name: "photo", widget: "image"}}
+      - label: "Extra Foto's"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Foto", name: "photo", widget: "image"}
       - {label: "Website", name: "website", widget: "string", required: false}
 
   - name: "wines_pairing"

@@ -48,9 +48,17 @@ async function loadWinesPairings() {
 async function loadDishesPairings() {
     try {
         const repoPath = 'jcjvanschijndel-dot/de-wijnparade';
-        const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/dishes-pairing`;
         
-        const response = await fetch(apiUrl);
+        // Try new location first
+        let apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/dishes-pairing`;
+        let response = await fetch(apiUrl);
+        
+        // If not found, try old location for backwards compatibility
+        if (!response.ok) {
+            console.log('Trying old pairings location...');
+            apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/pairings`;
+            response = await fetch(apiUrl);
+        }
         
         if (!response.ok) {
             console.log('No dishes pairings found');

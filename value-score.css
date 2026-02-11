@@ -319,3 +319,17 @@
         flex-wrap: wrap;
     }
 }
+/* Value Score Specific Styling */
+.value-score-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.wine-card-footer {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-200);
+}

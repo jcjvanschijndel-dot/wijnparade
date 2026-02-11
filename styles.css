@@ -633,3 +633,33 @@ textarea {
         margin-bottom: 1rem;
     }
 }
+/* Instagram Follow Section */
+.instagram-follow {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(131, 58, 180, 0.3);
+}
+
+.instagram-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(131, 58, 180, 0.4);
+}
+
+.instagram-link svg {
+    width: 24px;
+    height: 24px;
+}

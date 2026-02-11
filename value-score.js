@@ -210,12 +210,8 @@ function renderCards() {
                 <span class="wine-card-tag">${wine.region}</span>
                 <span class="wine-card-tag">${wine.country}</span>
             </div>
-            <div class="wine-card-value">
-                <div class="wine-card-rating">
-                    <span class="rating-stars">${'★'.repeat(Math.round(wine.rating || 0))}${'☆'.repeat(5 - Math.round(wine.rating || 0))}</span>
-                    <span>${parseFloat(wine.rating || 0).toFixed(1)}/5</span>
-                </div>
-                <div class="value-score-badge">${parseFloat(wine.value_score || 0).toFixed(1)}</div>
+            <div class="wine-card-footer">
+                <div class="value-score-number">${parseInt(wine.value_score || 0)}</div>
             </div>
         </div>
     `).join('');
@@ -232,11 +228,7 @@ function renderTable() {
             <td>${wine.country}</td>
             <td><span class="wine-type-badge">${wine.color}</span></td>
             <td class="wine-price">€${parseFloat(wine.price || 0).toFixed(2)}</td>
-            <td>
-                <span class="rating-stars">${'★'.repeat(Math.round(wine.rating || 0))}${'☆'.repeat(5 - Math.round(wine.rating || 0))}</span>
-                ${parseFloat(wine.rating || 0).toFixed(1)}/5
-            </td>
-            <td><span class="value-score-badge">${parseFloat(wine.value_score || 0).toFixed(1)}</span></td>
+            <td><strong>${parseInt(wine.value_score || 0)}</strong></td>
         </tr>
     `).join('');
 }
