@@ -210,8 +210,9 @@ function renderCards() {
                 <span class="wine-card-tag">${wine.region}</span>
                 <span class="wine-card-tag">${wine.country}</span>
             </div>
-            <div class="wine-card-footer">
-                <div class="value-score-number">${parseInt(wine.value_score || 0)}</div>
+            <div class="wine-card-meta">
+                <span style="color: var(--gray-600); font-size: 0.85rem;">Value Score:</span>
+                <span class="value-score-inline">${parseInt(wine.value_score || 0)}</span>
             </div>
         </div>
     `).join('');

@@ -81,7 +81,7 @@ collections:
     label: "Wijnlocaties"
     folder: "content/locations"
     create: true
-    summary: "{{name}} - {{type}}"
+    summary: "{{name}} - {{type}} ({{address}})"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
@@ -89,13 +89,7 @@ collections:
       - {label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld via Google Maps"}
       - {label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld via Google Maps"}
       - {label: "Beschrijving", name: "description", widget: "text"}
-      - {label: "Hoofd Foto", name: "image", widget: "image"}
-      - label: "Extra Foto's"
-        name: "gallery"
-        widget: "list"
-        required: false
-        fields:
-          - {label: "Foto", name: "photo", widget: "image"}
+      - {label: "Hoofd Foto", name: "image", widget: "image", required: false, hint: "Optioneel - laat leeg als je geen foto hebt"}
       - {label: "Website", name: "website", widget: "string", required: false}
 
   - name: "wines_pairing"

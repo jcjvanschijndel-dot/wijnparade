@@ -320,6 +320,13 @@
     }
 }
 /* Value Score Specific Styling */
+.value-score-inline {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-left: 0.5rem;
+}
+
 .value-score-number {
     font-size: 1.25rem;
     font-weight: 700;
