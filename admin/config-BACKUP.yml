@@ -6,7 +6,6 @@ media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  # Homepage content
   - name: "homepage"
     label: "Homepage Secties"
     files:
@@ -18,7 +17,7 @@ collections:
           - {label: "Sectie 1 Emoji", name: "section1_icon", widget: "string", default: "📍"}
           - {label: "Sectie 2 Tekst", name: "section2", widget: "string", default: "Wijnparade favorieten"}
           - {label: "Sectie 2 Emoji", name: "section2_icon", widget: "string", default: "⭐"}
-          - {label: "Sectie 3 Tekst", name: "section3", widget: "string", default: "Wijn & Eten Overzicht"}
+          - {label: "Sectie 3 Tekst", name: "section3", widget: "string", default: "Gerechten & wijn combi's"}
           - {label: "Sectie 3 Emoji", name: "section3_icon", widget: "string", default: "🍽️"}
           - {label: "Sectie 4 Tekst", name: "section4", widget: "string", default: "Wijnkaart"}
           - {label: "Sectie 4 Emoji", name: "section4_icon", widget: "string", default: "🗺️"}
@@ -27,104 +26,98 @@ collections:
         name: "value_score_intro"
         file: "content/value-score-intro.json"
         fields:
-          - {label: "Intro Tekst", name: "intro", widget: "text"}
+          - {label: "Intro Tekst", name: "intro", widget: "text", hint: "Uitleg over de value score berekening"}
 
-  # Koopgidsen
   - name: "toplists"
     label: "Koopgidsen"
     folder: "content/toplists"
     create: true
-    identifier_field: region
-    summary: "{{region}}"
     fields:
-      - {label: "Regio", name: "region", widget: "string"}
-      - {label: "Header Foto", name: "header_image", widget: "image", required: false}
-      - label: "Wijnen"
-        name: "wines"
-        widget: "list"
-        fields:
-          - {label: "Naam", name: "name", widget: "string"}
-          - {label: "Producent", name: "producer", widget: "string"}
-          - {label: "Prijs", name: "price", widget: "number", value_type: "float"}
-          - {label: "Omschrijving", name: "description", widget: "text"}
-          - {label: "Verkrijgbaar bij", name: "store", widget: "string"}
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Emoji/Icon", name: "icon", widget: "string", default: "🍷"}
+      - label: "Type Link"
+        name: "link_type"
+        widget: "select"
+        options: ["URL", "Bestand"]
+        default: "URL"
+      - {label: "URL (Google Sheets, externe link)", name: "url", widget: "string", required: false}
+      - {label: "Bestand (PDF/Excel)", name: "file", widget: "file", required: false}
+      - {label: "Volgorde", name: "order", widget: "number", default: 0}
 
-  # Favorieten
   - name: "favorites"
     label: "Favorieten (Wijnen)"
     folder: "content/favorites"
     create: true
-    identifier_field: name
-    summary: "{{name}} - {{producer}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
       - {label: "Producent", name: "producer", widget: "string"}
       - {label: "Regio", name: "region", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["Wit", "Rood", "Rosé", "Sparkling", "Alcoholvrij"]}
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Wit", "Rood", "Rosé", "Sparkling", "Alcoholvrij"]
       - {label: "Omschrijving", name: "description", widget: "text"}
       - {label: "Prijs (€)", name: "price", widget: "number", value_type: "float", step: 0.01}
       - {label: "Verkoopadres", name: "store", widget: "string"}
       - {label: "Volgorde", name: "order", widget: "number", default: 0, required: false}
 
-  # Value Scores
   - name: "value_scores"
     label: "Value Score Wijnen"
     folder: "content/value-scores"
     create: true
-    identifier_field: name
-    summary: "{{name}} - Score: {{value_score}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
       - {label: "Producent", name: "producer", widget: "string"}
       - {label: "Gebied", name: "region", widget: "string"}
       - {label: "Land", name: "country", widget: "string"}
-      - {label: "Kleur", name: "color", widget: "select", options: ["Wit", "Rood", "Rosé", "Sparkling", "Alcoholvrij"]}
+      - label: "Kleur"
+        name: "color"
+        widget: "select"
+        options: ["Wit", "Rood", "Rosé", "Sparkling", "Alcoholvrij"]
       - {label: "Prijs (€)", name: "price", widget: "number", value_type: "float", step: 0.01}
-      - {label: "Value Score (0-100)", name: "value_score", widget: "number", value_type: "int", min: 0, max: 100}
+      - {label: "Value Score (0-100)", name: "value_score", widget: "number", value_type: "int", min: 0, max: 100, hint: "Score tussen 0-100"}
 
-  # Locaties
   - name: "locations"
     label: "Wijnlocaties"
     folder: "content/locations"
     create: true
-    identifier_field: name
-    summary: "{{name}} ({{type}})"
+    summary: "{{name}} - {{type}} ({{address}})"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
-      - {label: "Adres", name: "address", widget: "string"}
-      - {label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false}
-      - {label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false}
+      - {label: "Adres", name: "address", widget: "string", hint: "Volledig adres - coördinaten worden automatisch ingevuld"}
+      - {label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld via Google Maps"}
+      - {label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false, hint: "Wordt automatisch ingevuld via Google Maps"}
       - {label: "Beschrijving", name: "description", widget: "text"}
+      - {label: "Hoofd Foto", name: "image", widget: "image", required: false, hint: "Optioneel - laat leeg als je geen foto hebt"}
       - {label: "Website", name: "website", widget: "string", required: false}
 
-  # Gerechten met wijnen
+  - name: "wines_pairing"
+    label: "Wijnen (met gerechten)"
+    folder: "content/wines-pairing"
+    create: true
+    fields:
+      - {label: "Wijn Naam", name: "wine", widget: "string", hint: "Bijvoorbeeld: Chardonnay uit Monterrey"}
+      - label: "Passende Gerechten"
+        name: "dishes"
+        widget: "list"
+        field: {label: "Gerecht/Ingrediënt", name: "dish", widget: "string"}
+
   - name: "dishes_pairing"
     label: "Gerechten (met wijnen)"
     folder: "content/dishes-pairing"
     create: true
-    identifier_field: dish
-    summary: "{{dish}}"
     fields:
-      - {label: "Gerecht Naam", name: "dish", widget: "string"}
+      - {label: "Gerecht/Ingrediënt Naam", name: "dish", widget: "string", hint: "Bijvoorbeeld: Kreeft"}
       - label: "Passende Wijnen"
         name: "wines"
         widget: "list"
         fields:
           - {label: "Wijn", name: "name", widget: "string"}
-          - {label: "Sterren", name: "stars", widget: "select", options: ["1", "2", "3"]}
-
-  # Wijnen met gerechten  
-  - name: "wines_pairing"
-    label: "Wijnen (met gerechten)"
-    folder: "content/wines-pairing"
-    create: true
-    identifier_field: wine
-    summary: "{{wine}}"
-    fields:
-      - {label: "Wijn Naam", name: "wine", widget: "string"}
-      - label: "Passende Gerechten"
-        name: "dishes"
-        widget: "list"
-        fields:
-          - {label: "Gerecht", name: "dish", widget: "string"}
+          - label: "Hoe goed past het?"
+            name: "stars"
+            widget: "select"
+            options:
+              - {label: "★ Goed", value: "1"}
+              - {label: "★★ Heel Goed", value: "2"}
+              - {label: "★★★ Subliem", value: "3"}
