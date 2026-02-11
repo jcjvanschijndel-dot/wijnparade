@@ -34,7 +34,10 @@ collections:
     label: "Koopgidsen"
     folder: "content/toplists"
     create: true
+    extension: json
+    format: json
     identifier_field: region
+    slug: "{{slug}}"
     summary: "{{region}}"
     fields:
       - {label: "Regio", name: "region", widget: "string"}
@@ -54,7 +57,10 @@ collections:
     label: "Favorieten (Wijnen)"
     folder: "content/favorites"
     create: true
+    extension: json
+    format: json
     identifier_field: name
+    slug: "{{slug}}"
     summary: "{{name}} - {{producer}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
@@ -71,7 +77,10 @@ collections:
     label: "Value Score Wijnen"
     folder: "content/value-scores"
     create: true
+    extension: json
+    format: json
     identifier_field: name
+    slug: "{{slug}}"
     summary: "{{name}} - Score: {{value_score}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
@@ -87,7 +96,10 @@ collections:
     label: "Wijnlocaties"
     folder: "content/locations"
     create: true
+    extension: json
+    format: json
     identifier_field: name
+    slug: "{{slug}}"
     summary: "{{name}} ({{type}})"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
@@ -104,7 +116,10 @@ collections:
     label: "Gerechten (met wijnen)"
     folder: "content/dishes-pairing"
     create: true
+    extension: json
+    format: json
     identifier_field: dish
+    slug: "{{slug}}"
     summary: "{{dish}}"
     fields:
       - {label: "Gerecht Naam", name: "dish", widget: "string"}
@@ -120,7 +135,10 @@ collections:
     label: "Wijnen (met gerechten)"
     folder: "content/wines-pairing"
     create: true
+    extension: json
+    format: json
     identifier_field: wine
+    slug: "{{slug}}"
     summary: "{{wine}}"
     fields:
       - {label: "Wijn Naam", name: "wine", widget: "string"}
