@@ -139,8 +139,24 @@ function parseFrontmatter(content) {
                 continue;
             }
             
+            // Check for continuation lines (YAML folded scalars without explicit > marker)
+            // Decap CMS wraps long values like:
+            //   description: first part of text
+            //     continued on next line
+            let fullValue = rawValue;
+            while (i + 1 < lines.length) {
+                const nextLine = lines[i + 1];
+                // Continuation line: starts with spaces but is NOT a list item and NOT a new key
+                if (nextLine.match(/^  \S/) && !nextLine.trim().startsWith('- ') && !nextLine.match(/^[a-zA-Z_][a-zA-Z0-9_]*\s*:/)) {
+                    fullValue += ' ' + nextLine.trim();
+                    i++;
+                } else {
+                    break;
+                }
+            }
+            
             // Plain value - convert numbers, keep strings
-            result[key] = convertValue(rawValue);
+            result[key] = convertValue(fullValue);
             i++;
             continue;
         }
