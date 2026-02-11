@@ -1,7 +1,7 @@
-// Load koopgidsen from local content index
+// Load reisgidsen from local content index
 document.addEventListener('DOMContentLoaded', async function() {
     try {
-        const response = await fetch('/content/toplists/_index.json');
+        const response = await fetch('/content/travelguides/_index.json');
 
         if (!response.ok) {
             showEmptyState();
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         renderTable(guides);
 
     } catch (error) {
-        console.error('Error loading koopgidsen:', error);
+        console.error('Error loading reisgidsen:', error);
         showEmptyState();
     }
 });

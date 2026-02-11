@@ -163,6 +163,10 @@
     line-height: 1.6;
     color: var(--gray-900);
     margin-bottom: 0.75rem;
+    /* Allow full text - no truncation */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
 }
 
 .wine-card-store {
@@ -212,6 +216,9 @@
     padding: 1rem;
     border-bottom: 1px solid var(--gray-200);
     font-size: 0.9rem;
+    /* Allow full description text to wrap */
+    white-space: normal;
+    max-width: none;
 }
 
 .wines-table tr:last-child td {
@@ -233,6 +240,7 @@
 .wine-price {
     font-weight: 600;
     color: var(--navy);
+    white-space: nowrap;
 }
 
 /* Empty State */

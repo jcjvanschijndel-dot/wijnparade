@@ -1,0 +1,140 @@
+/* Guides Table - shared by koopgidsen and reisgidsen */
+
+/* Cards (Mobile) */
+.guides-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.guide-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.guide-card:hover {
+    border-color: var(--navy);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+.guide-card-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.guide-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: var(--navy);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.guide-download-btn:hover {
+    background: var(--navy-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.guide-file-type {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Table (Desktop) */
+.guides-table-wrapper {
+    display: none;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    margin-bottom: 2rem;
+}
+
+.guides-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.guides-table thead {
+    background: var(--gray-50);
+}
+
+.guides-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.guides-table th:last-child {
+    text-align: right;
+    width: 160px;
+}
+
+.guides-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 0.95rem;
+}
+
+.guides-table td:first-child {
+    font-weight: 500;
+    color: var(--gray-900);
+}
+
+.guides-table td:last-child {
+    text-align: right;
+}
+
+.guides-table tr:last-child td {
+    border-bottom: none;
+}
+
+.guides-table tr:hover {
+    background: var(--gray-50);
+}
+
+/* Empty State */
+.empty-state {
+    padding: 3rem;
+    text-align: center;
+    color: var(--gray-600);
+    background: var(--gray-50);
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .guides-cards {
+        display: none;
+    }
+
+    .guides-table-wrapper {
+        display: block;
+    }
+}
