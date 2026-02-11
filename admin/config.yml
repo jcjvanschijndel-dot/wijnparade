@@ -1,4 +1,4 @@
-backend:
+ackend:
   name: git-gateway
   branch: main
 
@@ -15,14 +15,14 @@ collections:
         file: "content/homepage.json"
         fields:
           - {label: "Sectie 1 Tekst", name: "section1", widget: "string", default: "Koopgidsen"}
-          - {label: "Sectie 1 Emoji", name: "section1_icon", widget: "string", default: "📍"}
+          - {label: "Sectie 1 Emoji", name: "section1_icon", widget: "string", default: "📋"}
           - {label: "Sectie 2 Tekst", name: "section2", widget: "string", default: "Wijnparade favorieten"}
           - {label: "Sectie 2 Emoji", name: "section2_icon", widget: "string", default: "⭐"}
           - {label: "Sectie 3 Tekst", name: "section3", widget: "string", default: "Wijn & Eten Overzicht"}
           - {label: "Sectie 3 Emoji", name: "section3_icon", widget: "string", default: "🍽️"}
           - {label: "Sectie 4 Tekst", name: "section4", widget: "string", default: "Wijnkaart"}
           - {label: "Sectie 4 Emoji", name: "section4_icon", widget: "string", default: "🗺️"}
-      
+
       - label: "Value Score Intro"
         name: "value_score_intro"
         file: "content/value-score-intro.json"
@@ -96,6 +96,7 @@ collections:
       - {label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false}
       - {label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false}
       - {label: "Beschrijving", name: "description", widget: "text"}
+      - {label: "Hoofd Foto", name: "image", widget: "image", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
 
   # Gerechten met wijnen
@@ -114,7 +115,7 @@ collections:
           - {label: "Wijn", name: "name", widget: "string"}
           - {label: "Sterren", name: "stars", widget: "select", options: ["1", "2", "3"]}
 
-  # Wijnen met gerechten  
+  # Wijnen met gerechten
   - name: "wines_pairing"
     label: "Wijnen (met gerechten)"
     folder: "content/wines-pairing"
