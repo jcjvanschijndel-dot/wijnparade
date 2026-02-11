@@ -1,6 +1,6 @@
 let allWines = [];
 let filteredWines = [];
-let currentSort = { field: 'value_score', ascending: false }; // Default: highest value score first
+let currentSort = { field: 'value_score', ascending: false };
 
 document.addEventListener('DOMContentLoaded', async function() {
     await loadIntroText();
@@ -20,47 +20,28 @@ async function loadIntroText() {
         }
     } catch (error) {
         console.log('No intro text configured');
-        document.getElementById('pageIntro').style.display = 'none';
+        const el = document.getElementById('pageIntro');
+        if (el) el.style.display = 'none';
     }
 }
 
 async function loadWines() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
-        const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/value-scores`;
-        
-        const response = await fetch(apiUrl);
+        const response = await fetch('/content/value-scores/_index.json');
         
         if (!response.ok) {
             showEmptyState();
             return;
         }
         
-        const files = await response.json();
+        const wines = await response.json();
         
-        if (!files || files.length === 0) {
+        if (!wines || wines.length === 0) {
             showEmptyState();
             return;
         }
 
-        allWines = [];
-        
-        for (const file of files) {
-            if (file.name.endsWith('.md')) {
-                const contentResponse = await fetch(file.download_url);
-                const content = await contentResponse.text();
-                const parsed = parseFrontmatter(content);
-                if (parsed) {
-                    // Value score is now entered manually in CMS
-                    allWines.push(parsed);
-                }
-            }
-        }
-
-        if (allWines.length === 0) {
-            showEmptyState();
-            return;
-        }
+        allWines = wines;
 
         // Populate filters
         populateFilters();
@@ -77,7 +58,6 @@ async function loadWines() {
 }
 
 function populateFilters() {
-    // Populate regions
     const regions = [...new Set(allWines.map(w => w.region))].filter(Boolean).sort();
     const regionSelect = document.getElementById('filterRegion');
     regions.forEach(region => {
@@ -87,7 +67,6 @@ function populateFilters() {
         regionSelect.appendChild(option);
     });
     
-    // Populate countries
     const countries = [...new Set(allWines.map(w => w.country))].filter(Boolean).sort();
     const countrySelect = document.getElementById('filterCountry');
     countries.forEach(country => {
@@ -99,13 +78,11 @@ function populateFilters() {
 }
 
 function setupEventListeners() {
-    // Filters
     document.getElementById('filterColor').addEventListener('change', applyFilters);
     document.getElementById('filterRegion').addEventListener('change', applyFilters);
     document.getElementById('filterCountry').addEventListener('change', applyFilters);
     document.getElementById('clearFilters').addEventListener('click', clearFilters);
     
-    // Sort
     document.getElementById('sortBy').addEventListener('change', (e) => {
         currentSort.field = e.target.value;
         sortWines();
@@ -119,7 +96,6 @@ function setupEventListeners() {
         renderWines();
     });
     
-    // Table header clicks
     document.querySelectorAll('.wines-table th[data-sort]').forEach(th => {
         th.addEventListener('click', () => {
             const field = th.dataset.sort;
@@ -167,7 +143,6 @@ function sortWines() {
         let aVal = a[currentSort.field];
         let bVal = b[currentSort.field];
         
-        // Handle numbers
         if (currentSort.field === 'price' || currentSort.field === 'rating' || currentSort.field === 'value_score') {
             aVal = parseFloat(aVal) || 0;
             bVal = parseFloat(bVal) || 0;
@@ -244,34 +219,4 @@ function hideEmptyState() {
     document.getElementById('emptyState').style.display = 'none';
     document.getElementById('winesCards').style.display = '';
     document.querySelector('.wines-table-wrapper').style.display = '';
-}
-
-function parseFrontmatter(content) {
-    const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
-    if (!match) return null;
-
-    const frontmatter = match[1];
-    const data = {};
-
-    frontmatter.split('\n').forEach(line => {
-        const colonIndex = line.indexOf(':');
-        if (colonIndex > -1) {
-            const key = line.substring(0, colonIndex).trim();
-            let value = line.substring(colonIndex + 1).trim();
-            
-            if (value.startsWith('"') && value.endsWith('"')) {
-                value = value.slice(1, -1);
-            } else if (value.startsWith("'") && value.endsWith("'")) {
-                value = value.slice(1, -1);
-            }
-            
-            if (!isNaN(value) && value !== '') {
-                value = Number(value);
-            }
-            
-            data[key] = value;
-        }
-    });
-
-    return data;
 }

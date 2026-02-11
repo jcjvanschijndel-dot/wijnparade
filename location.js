@@ -1,4 +1,4 @@
-// Load individual location from CMS based on URL parameter
+// Load individual location based on URL parameter
 document.addEventListener('DOMContentLoaded', async function() {
     const urlParams = new URLSearchParams(window.location.search);
     const locationId = urlParams.get('id');
@@ -13,24 +13,18 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadLocation(locationId) {
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
-        const fileUrl = `https://api.github.com/repos/${repoPath}/contents/content/locations/${locationId}.md`;
-        
-        const response = await fetch(fileUrl);
+        const response = await fetch('/content/locations/_index.json');
         
         if (!response.ok) {
-            showError('Locatie niet gevonden');
+            showError('Locaties niet gevonden');
             return;
         }
         
-        const file = await response.json();
-        const contentResponse = await fetch(file.download_url);
-        const content = await contentResponse.text();
-        
-        const location = parseFrontmatter(content);
+        const locations = await response.json();
+        const location = locations.find(l => l._id === locationId);
         
         if (!location) {
-            showError('Kon locatie niet laden');
+            showError('Locatie niet gevonden');
             return;
         }
         
@@ -43,10 +37,8 @@ async function loadLocation(locationId) {
 }
 
 function renderLocation(location) {
-    // Update title
     document.title = `${location.name} | de_wijnparade`;
     
-    // Update image
     const img = document.getElementById('locationImage');
     if (img) {
         img.src = location.image || 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&h=600&fit=crop';
@@ -56,7 +48,6 @@ function renderLocation(location) {
         };
     }
     
-    // Render gallery if extra photos exist
     const galleryEl = document.getElementById('locationGallery');
     if (galleryEl && location.gallery && location.gallery.length > 0) {
         galleryEl.style.display = 'grid';
@@ -66,64 +57,47 @@ function renderLocation(location) {
         }).join('');
     }
     
-    // Update name
     const nameEl = document.getElementById('locationName');
     if (nameEl) nameEl.textContent = location.name;
     
-    // Update type
     const typeEl = document.getElementById('locationType');
     if (typeEl) typeEl.textContent = getTypeLabel(location.type);
     
-    // Update address
     const addressEl = document.getElementById('locationAddress');
     if (addressEl) addressEl.textContent = location.address;
     
-    // Update description
     const descEl = document.getElementById('locationDescription');
     if (descEl) descEl.textContent = location.description;
     
-    // Update website
     const websiteEl = document.getElementById('locationWebsite');
     if (websiteEl && location.website) {
         websiteEl.innerHTML = `<a href="${location.website}" target="_blank" class="website-btn">Bezoek website →</a>`;
     }
     
-    // Initialize map
     if (location.lat && location.lng) {
-        const map = L.map('locationMap').setView([location.lat, location.lng], 15);
+        const lat = parseFloat(location.lat);
+        const lng = parseFloat(location.lng);
+        const map = L.map('locationMap').setView([lat, lng], 15);
         
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap',
             maxZoom: 19
         }).addTo(map);
         
-        // Add marker
         const icon = getMarkerIcon(location.type);
-        L.marker([location.lat, location.lng], { icon }).addTo(map);
+        L.marker([lat, lng], { icon }).addTo(map);
         
-        setTimeout(() => {
-            map.invalidateSize();
-        }, 100);
+        setTimeout(() => map.invalidateSize(), 100);
     }
 }
 
 function getTypeLabel(type) {
-    const labels = {
-        'wijnbar': '🍾 Wijnbar',
-        'wijnwinkel': '🏪 Wijnwinkel',
-        'wijnhuis': '🏰 Wijnhuis',
-        'restaurant': '🍽️ Restaurant'
-    };
+    const labels = { 'wijnbar': '🍾 Wijnbar', 'wijnwinkel': '🏪 Wijnwinkel', 'wijnhuis': '🏰 Wijnhuis', 'restaurant': '🍽️ Restaurant' };
     return labels[type] || type;
 }
 
 function getMarkerIcon(type) {
-    const icons = {
-        'wijnbar': '🍾',
-        'wijnwinkel': '🏪',
-        'wijnhuis': '🏰',
-        'restaurant': '🍽️'
-    };
+    const icons = { 'wijnbar': '🍾', 'wijnwinkel': '🏪', 'wijnhuis': '🏰', 'restaurant': '🍽️' };
     const emoji = icons[type] || '📍';
     
     return L.divIcon({
@@ -144,76 +118,4 @@ function showError(message) {
             </div>
         `;
     }
-}
-
-function parseFrontmatter(content) {
-    const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
-    if (!match) return null;
-
-    const frontmatter = match[1];
-    const data = {};
-    let currentKey = null;
-    let currentValue = [];
-    let inList = false;
-
-    frontmatter.split('\n').forEach(line => {
-        // Check if this is a list item
-        if (line.trim().startsWith('- ')) {
-            if (currentKey) {
-                currentValue.push(line.trim().substring(2));
-                inList = true;
-            }
-        } else {
-            // Save previous key-value if we were in a list
-            if (inList && currentKey) {
-                data[currentKey] = currentValue;
-                currentValue = [];
-                inList = false;
-            }
-            
-            const colonIndex = line.indexOf(':');
-            if (colonIndex > -1) {
-                // Save previous key if exists and not in list
-                if (currentKey && !inList && currentValue.length > 0) {
-                    data[currentKey] = currentValue.join('\n');
-                }
-                
-                currentKey = line.substring(0, colonIndex).trim();
-                let value = line.substring(colonIndex + 1).trim();
-                
-                if (value) {
-                    // Remove quotes
-                    if (value.startsWith('"') && value.endsWith('"')) {
-                        value = value.slice(1, -1);
-                    } else if (value.startsWith("'") && value.endsWith("'")) {
-                        value = value.slice(1, -1);
-                    }
-                    
-                    // Convert numbers
-                    if (!isNaN(value) && value !== '') {
-                        value = Number(value);
-                    }
-                    
-                    data[currentKey] = value;
-                    currentKey = null;
-                    currentValue = [];
-                } else {
-                    // Value might be on next lines (list or multiline)
-                    currentValue = [];
-                }
-            } else if (currentKey && line.trim()) {
-                // Continuation of previous value
-                currentValue.push(line.trim());
-            }
-        }
-    });
-    
-    // Save last key if in list
-    if (inList && currentKey) {
-        data[currentKey] = currentValue;
-    } else if (currentKey && currentValue.length > 0) {
-        data[currentKey] = currentValue.join('\n');
-    }
-
-    return data;
 }

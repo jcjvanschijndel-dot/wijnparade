@@ -9,39 +9,21 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadWines() {
     try {
-        const repoPath = 'jcjvanschijndel-dot/wijnparade';
-        const apiUrl = `https://api.github.com/repos/${repoPath}/contents/content/favorites`;
-        
-        const response = await fetch(apiUrl);
+        const response = await fetch('/content/favorites/_index.json');
         
         if (!response.ok) {
-            throw new Error('Could not fetch favorites');
+            showEmptyState();
+            return;
         }
         
-        const files = await response.json();
+        const wines = await response.json();
         
-        if (!files || files.length === 0) {
+        if (!wines || wines.length === 0) {
             showEmptyState();
             return;
         }
 
-        allWines = [];
-        
-        for (const file of files) {
-            if (file.name.endsWith('.md')) {
-                const contentResponse = await fetch(file.download_url);
-                const content = await contentResponse.text();
-                const parsed = parseFrontmatter(content);
-                if (parsed) {
-                    allWines.push(parsed);
-                }
-            }
-        }
-
-        if (allWines.length === 0) {
-            showEmptyState();
-            return;
-        }
+        allWines = wines;
 
         // Populate region filter
         populateRegionFilter();
@@ -138,7 +120,6 @@ function sortWines() {
         let aVal = a[currentSort.field];
         let bVal = b[currentSort.field];
         
-        // Handle price as number
         if (currentSort.field === 'price') {
             aVal = parseFloat(aVal) || 0;
             bVal = parseFloat(bVal) || 0;
@@ -174,7 +155,7 @@ function renderCards() {
                     <div class="wine-card-name">${wine.name}</div>
                     <div class="wine-card-producer">${wine.producer}</div>
                 </div>
-                <div class="wine-card-price">€${wine.price.toFixed(2)}</div>
+                <div class="wine-card-price">€${parseFloat(wine.price || 0).toFixed(2)}</div>
             </div>
             <div class="wine-card-meta">
                 <span class="wine-card-tag">${wine.type}</span>
@@ -196,7 +177,7 @@ function renderTable() {
             <td>${wine.region}</td>
             <td><span class="wine-type-badge">${wine.type}</span></td>
             <td>${wine.description}</td>
-            <td class="wine-price">€${wine.price.toFixed(2)}</td>
+            <td class="wine-price">€${parseFloat(wine.price || 0).toFixed(2)}</td>
             <td>${wine.store}</td>
         </tr>
     `).join('');
@@ -210,37 +191,6 @@ function showEmptyState() {
 
 function hideEmptyState() {
     document.getElementById('emptyState').style.display = 'none';
-    // Don't override display - let CSS media queries handle it
     document.getElementById('winesCards').style.display = '';
     document.querySelector('.wines-table-wrapper').style.display = '';
-}
-
-function parseFrontmatter(content) {
-    const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
-    if (!match) return null;
-
-    const frontmatter = match[1];
-    const data = {};
-
-    frontmatter.split('\n').forEach(line => {
-        const colonIndex = line.indexOf(':');
-        if (colonIndex > -1) {
-            const key = line.substring(0, colonIndex).trim();
-            let value = line.substring(colonIndex + 1).trim();
-            
-            if (value.startsWith('"') && value.endsWith('"')) {
-                value = value.slice(1, -1);
-            } else if (value.startsWith("'") && value.endsWith("'")) {
-                value = value.slice(1, -1);
-            }
-            
-            if (!isNaN(value) && value !== '') {
-                value = Number(value);
-            }
-            
-            data[key] = value;
-        }
-    });
-
-    return data;
 }
