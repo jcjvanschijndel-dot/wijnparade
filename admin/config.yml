@@ -34,21 +34,26 @@ collections:
     label: "Koopgidsen"
     folder: "content/toplists"
     create: true
-    identifier_field: region
+    identifier_field: name
     slug: "{{slug}}"
-    summary: "{{region}}"
+    summary: "{{name}}"
     fields:
-      - {label: "Regio", name: "region", widget: "string"}
-      - {label: "Header Foto", name: "header_image", widget: "image", required: false}
-      - label: "Wijnen"
-        name: "wines"
-        widget: "list"
-        fields:
-          - {label: "Naam", name: "name", widget: "string"}
-          - {label: "Producent", name: "producer", widget: "string"}
-          - {label: "Prijs", name: "price", widget: "number", value_type: "float"}
-          - {label: "Omschrijving", name: "description", widget: "text"}
-          - {label: "Verkrijgbaar bij", name: "store", widget: "string"}
+      - {label: "Naam", name: "name", widget: "string"}
+      - {label: "Bestand (PDF/Excel)", name: "file", widget: "file"}
+      - {label: "Volgorde", name: "order", widget: "number", default: 0, required: false}
+
+  # Reisgidsen
+  - name: "travelguides"
+    label: "Reisgidsen"
+    folder: "content/travelguides"
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    summary: "{{name}}"
+    fields:
+      - {label: "Naam", name: "name", widget: "string"}
+      - {label: "Bestand (PDF/Excel)", name: "file", widget: "file"}
+      - {label: "Volgorde", name: "order", widget: "number", default: 0, required: false}
 
   # Favorieten
   - name: "favorites"
