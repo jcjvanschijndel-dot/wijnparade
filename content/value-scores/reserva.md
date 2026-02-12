@@ -1,9 +1,9 @@
 ---
 name: Reserva
-producer: Remelluri
+producer: Marqués de Murrieta
 region: Rioja
 country: Spanje
 color: Rood
 price: 24.95
-value_score: 92
+value_score: 20
 ---
