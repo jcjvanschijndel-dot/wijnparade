@@ -1,5 +1,5 @@
 ---
-name: Barolo shortlist restaurants, hotels en wijnmakers
+name: Barolo shortlist restaurants, hotels en wijn tasting.
 file: /uploads/barolo.pdf
 order: 0
 ---
