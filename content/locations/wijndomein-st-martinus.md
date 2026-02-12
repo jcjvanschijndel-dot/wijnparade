@@ -2,8 +2,8 @@
 name: Wijndomein St. Martinus
 type: wijnhuis
 address: Rott 21a, Vijlen
-lat: 50.7888
-lng: 5.9633
+lat: 50.788636
+lng: 5.9501877
 description: Leuk wijnhuis in zuid-Limburg. Leuk om te bezoeken voor
   rondleidingen, proeverijen en je kan er zelfs eten en overnachten. En wil je
   de echte wijn ervaring dan kan je ook helpen plukken!
