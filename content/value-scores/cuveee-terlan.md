@@ -1,5 +1,5 @@
 ---
-name: Cuveee Terlan
+name: Cuvee Terlan
 producer: Cantina Terlan
 region: Alto Adige
 country: Italië
