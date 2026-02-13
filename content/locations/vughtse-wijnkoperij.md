@@ -7,5 +7,6 @@ lng: 5.2965009
 description: Mooie winkel met origineel assortiment. Van betaalbare tot
   topwijnen. Ze organiseren ook thema avonden zoals bijvoorbeeld kaas-wijn
   avonden. Alles onder de enthousiaste bezieling van eigenaar Peer.
+image: /uploads/vughtse.webp
 website: https://www.vughtsewijnkoperij.nl/
 ---
