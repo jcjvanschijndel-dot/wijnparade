@@ -8,5 +8,6 @@ description: Traditioneel familie restaurant in een boerderij midden in
   Menetou-Salon. De tijd heeft hier stilgestaan in positieve zin! Hier bestel je
   klassiekers als snoek in roomsaus of kip met dragon. Dit alles geserveerd op
   zilveren schalen en met de topwijnen uit de regio.
+image: /uploads/cheu.webp
 website: https://www.cheulzib.com/
 ---
