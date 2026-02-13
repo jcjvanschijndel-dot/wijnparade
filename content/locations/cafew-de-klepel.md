@@ -1,5 +1,5 @@
 ---
-name: Cafew de Klepel
+name: Café de Klepel
 type: restaurant
 address: Prinsenstraat 22, 1015 DD Amsterdam
 lat: 52.37798799999999
