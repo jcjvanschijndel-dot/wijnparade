@@ -41,9 +41,18 @@ function renderLocation(location) {
     
     const img = document.getElementById('locationImage');
     if (img) {
-        img.src = location.image || 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&h=600&fit=crop';
+        const imageSrc = location.image || '';
+        console.log('[DEBUG] Image veld uit JSON:', JSON.stringify(location.image));
+        console.log('[DEBUG] Image pad dat geladen wordt:', imageSrc || '(leeg — fallback wordt gebruikt)');
+        
+        if (imageSrc) {
+            img.src = imageSrc;
+        } else {
+            img.src = 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&h=600&fit=crop';
+        }
         img.alt = location.name;
         img.onerror = function() {
+            console.warn('[DEBUG] Afbeelding kon niet geladen worden:', imageSrc, '— fallback wordt getoond');
             this.src = 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&h=600&fit=crop';
         };
     }

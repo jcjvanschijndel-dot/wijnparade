@@ -107,12 +107,16 @@ function getMarkerIcon(type) {
 }
 
 function createInfoWindowContent(location) {
+    const imgSrc = location.image || 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop';
     return `
-        <div style="max-width: 250px; padding: 0.5rem;">
-            <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
-            <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
-            <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
-            <a href="location.html?id=${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
+        <div style="max-width: 280px; padding: 0; overflow: hidden;">
+            <img src="${imgSrc}" alt="${location.name}" style="width: 100%; height: 140px; object-fit: cover; display: block;" onerror="this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop'">
+            <div style="padding: 0.75rem;">
+                <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
+                <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
+                <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
+                <a href="location.html?id=${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
+            </div>
         </div>
     `;
 }
