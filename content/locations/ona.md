@@ -1,5 +1,5 @@
 ---
-name: ONA
+name: Ona
 type: wijnbar
 address: België, Nederkouter 71, 9000 Gent, België
 lat: 51.047322
