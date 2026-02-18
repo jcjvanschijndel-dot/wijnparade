@@ -6,7 +6,7 @@ lat: 39.4767133
 lng: -0.377082
 description: Mooie wijnbar in het oude centrum van Valencia. Leuke plek om
   verschillende mooie wijnen te kunnen proberen als je in Valencia bent. Hier
-  kan je diverse spaanse wijnen proberen van betaalbaar tot topwijnen. Ze hebben
+  kan je diverse Spaanse wijnen proberen van betaalbaar tot topwijnen. Ze hebben
   ook een menukaart met sublieme tapas en gerechtjes. Dit is dus een must visit
   in Valencia voor de wijnliefhebber!
 image: /uploads/borgia.webp
