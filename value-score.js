@@ -9,7 +9,7 @@
 // Je sheet moet deze kolommen hebben (eerste rij = headers):
 // Naam | Producent | Gebied | Land | Kleur | Prijs | Value Score | Gem. Rating
 // ============================================================
-const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5ziJ3ptZfbFPUis8UEFoKwEzqLFau3JaJlIS17Zg4UlFDdCXkFOIFWgjKGU7fjs7DCUfWdU40eLpQ/pub?output=csv';
+const GOOGLE_SHEET_CSV_URL = 'PLAK_HIER_JE_GOOGLE_SHEETS_CSV_URL';
 // ============================================================
 
 let allWines = [];
@@ -84,12 +84,13 @@ async function loadWines() {
             const row = rows[i];
             if (!row || row.length === 0 || row.every(cell => cell.trim() === '')) continue;
             
+            const rawColor = getCell(row, colMap.color);
             const wine = {
                 name: getCell(row, colMap.name),
                 producer: getCell(row, colMap.producer),
                 region: getCell(row, colMap.region),
                 country: getCell(row, colMap.country),
-                color: getCell(row, colMap.color),
+                color: rawColor ? rawColor.charAt(0).toUpperCase() + rawColor.slice(1).toLowerCase() : '',
                 price: parseNumber(getCell(row, colMap.price)),
                 value_score: parseNumber(getCell(row, colMap.value_score)),
                 rating: parseNumber(getCell(row, colMap.rating))
