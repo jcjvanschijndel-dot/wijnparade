@@ -9,7 +9,7 @@
 // Je sheet moet deze kolommen hebben (eerste rij = headers):
 // Naam | Producent | Gebied | Land | Kleur | Prijs | Value Score | Gem. Rating
 // ============================================================
-const GOOGLE_SHEET_CSV_URL = 'PLAK_HIER_JE_GOOGLE_SHEETS_CSV_URL';
+const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5ziJ3ptZfbFPUis8UEFoKwEzqLFau3JaJlIS17Zg4UlFDdCXkFOIFWgjKGU7fjs7DCUfWdU40eLpQ/pub?output=csv';
 // ============================================================
 
 let allWines = [];
@@ -65,6 +65,8 @@ async function loadWines() {
 
         // First row = headers
         const headers = rows[0].map(h => h.trim().toLowerCase());
+        console.log('Sheet headers:', headers);
+        console.log('Total rows:', rows.length);
         
         // Map headers to our fields
         const colMap = {
@@ -77,6 +79,7 @@ async function loadWines() {
             value_score: findCol(headers, ['value score', 'valuescore', 'value_score', 'score']),
             rating: findCol(headers, ['gem. rating', 'gem rating', 'gemiddelde rating', 'rating', 'avg rating'])
         };
+        console.log('Column mapping:', colMap);
 
         allWines = [];
         
@@ -101,6 +104,9 @@ async function loadWines() {
                 allWines.push(wine);
             }
         }
+
+        console.log('Wines loaded:', allWines.length);
+        if (allWines.length > 0) console.log('First wine:', allWines[0]);
 
         if (allWines.length === 0) {
             showEmptyState();
@@ -144,8 +150,16 @@ async function loadWinesFromCMS() {
     }
 }
 
-// Simple CSV parser that handles quoted fields
+// CSV parser that auto-detects delimiter (comma or semicolon)
 function parseCSV(text) {
+    // Auto-detect delimiter: check first line for semicolons vs commas
+    const firstLine = text.split('\n')[0];
+    const semicolons = (firstLine.match(/;/g) || []).length;
+    const commas = (firstLine.match(/,/g) || []).length;
+    const delimiter = semicolons > commas ? ';' : ',';
+    
+    console.log(`CSV delimiter detected: "${delimiter}"`);
+    
     const rows = [];
     let currentRow = [];
     let currentField = '';
@@ -167,7 +181,7 @@ function parseCSV(text) {
         } else {
             if (char === '"') {
                 inQuotes = true;
-            } else if (char === ',') {
+            } else if (char === delimiter) {
                 currentRow.push(currentField);
                 currentField = '';
             } else if (char === '\n' || (char === '\r' && nextChar === '\n')) {
