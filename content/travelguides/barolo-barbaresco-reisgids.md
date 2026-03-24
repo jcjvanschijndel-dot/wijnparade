@@ -1,5 +1,5 @@
 ---
 name: Barolo & Barbaresco reisgids
-file: /uploads/barolo_reisgids.pdf
+file: /uploads/barolo.pdf
 order: 0
 ---
