@@ -9,4 +9,5 @@ description: Leuke nieuwe wijnbar op het Frederiksplein in Amsterdam. De
   veel mooie mogelijkheden per glas! En de eet kaart, die is ook helemaal in
   orde.
 image: /uploads/oocker.webp
+website: https://www.oockeramsterdam.nl/
 ---
