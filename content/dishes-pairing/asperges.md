@@ -17,4 +17,6 @@ wines:
     stars: "2"
   - name: Chardonnay (unoaked)
     stars: "2"
+  - name: Sauvignon Blanc
+    stars: "2"
 ---
