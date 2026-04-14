@@ -1,5 +1,5 @@
 ---
-name: De Tros
+name: Buurtcafé de Tros
 type: restaurant
 address: Linnaeusstraat 63H, 1093 Amsterdam
 lat: 52.3604309
