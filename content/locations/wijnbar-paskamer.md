@@ -10,7 +10,7 @@ description: Een paar jaar geleden uitgeroepen tot wijnbar van het jaar, dus dan
   Verder draait het hier echt om wijn. Helemaal top is dat je hier al vanaf 4
   personen een proeverij kunt boeken! Een High Wine wordt ook aangeboden, dan
   krijg je 4 wijnen met bijpassende hapjes. Op de website staat alle informatie
-  die je nodgi hebt! En dan hebben we het nog niet eens over de wijnkaart gehad.
+  die je nodig hebt! En dan hebben we het nog niet eens over de wijnkaart gehad.
   De Paskamer is gelieerd aan de Amsterdam Wine Academy. Het kennisniveau is
   daarmee heel hoog. En dat is terug te zien in de uitgebreide aanbod van
   wijnen. Dit is wat ons betreft dé wijnspot in de Pijp!
