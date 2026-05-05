@@ -2,7 +2,7 @@
 // CONFIGURATIE - Plak hier je Google Sheets CSV-link
 // ============================================================
 // Je sheet moet deze kolommen hebben (eerste rij = headers):
-// Naam | Producent | Land | Gebied | Kleur | Rating | Beschikbaar | Prijs
+// Naam | Producent | Land | Gebied | Kleur | Omschrijving | Beschikbaar | Prijs
 // ============================================================
 const SHOP_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRiNczSnAUOxSJ6YUCy5wocv8CI7Ic5MWei2KZoEaBJk8iAfiixA04RnvxMPr6n8stYFpqELKELYBW5/pub?output=csv';
 // ============================================================
@@ -41,7 +41,7 @@ async function loadWines() {
             country: findCol(headers, ['land', 'country']),
             region: findCol(headers, ['gebied', 'region', 'regio']),
             color: findCol(headers, ['kleur', 'color', 'type']),
-            rating: findCol(headers, ['rating', 'ratings', 'gem. rating', 'score']),
+            rating: findCol(headers, ['omschrijving', 'description', 'beschrijving']),
             available: findCol(headers, ['beschikbaar', 'available', 'aantal', 'flessen', 'voorraad']),
             price: findCol(headers, ['prijs', 'price'])
         };
@@ -59,7 +59,7 @@ async function loadWines() {
                 country: getCell(row, colMap.country),
                 region: getCell(row, colMap.region),
                 color: rawColor ? rawColor.charAt(0).toUpperCase() + rawColor.slice(1).toLowerCase() : '',
-                rating: parseNumber(getCell(row, colMap.rating)),
+                rating: getCell(row, colMap.rating),
                 available: parseInt(getCell(row, colMap.available)) || 0,
                 price: parseNumber(getCell(row, colMap.price))
             };
@@ -169,7 +169,7 @@ function setupEventListeners() {
                 currentSort.ascending = !currentSort.ascending;
             } else {
                 currentSort.field = field;
-                currentSort.ascending = ['price', 'rating', 'available'].includes(field) ? false : true;
+                currentSort.ascending = ['price', 'available'].includes(field) ? false : true;
             }
             document.getElementById('sortBy').value = field;
             document.getElementById('sortOrder').textContent = currentSort.ascending ? '↑' : '↓';
@@ -203,7 +203,7 @@ function sortWines() {
         let aVal = a[currentSort.field];
         let bVal = b[currentSort.field];
         
-        if (['price', 'rating', 'available'].includes(currentSort.field)) {
+        if (['price', 'available'].includes(currentSort.field)) {
             aVal = parseFloat(aVal) || 0;
             bVal = parseFloat(bVal) || 0;
         } else {
@@ -253,7 +253,9 @@ function renderCards() {
                 ${wine.region ? `<span class="shop-card-tag">${wine.region}</span>` : ''}
             </div>
             <div class="shop-card-details">
-                ${wine.rating ? `<span>Rating: <span class="shop-card-rating">${wine.rating}</span></span>` : '<span></span>'}
+                ${wine.rating ? `<span class="shop-card-description">${wine.rating}</span>` : ''}
+            </div>
+            <div class="shop-card-stock-row">
                 <span class="shop-card-stock ${getStockClass(wine.available)}">${getStockText(wine.available)}</span>
             </div>
             <div class="shop-card-footer">
@@ -275,7 +277,7 @@ function renderTable() {
             <td>${wine.producer}</td>
             <td>${wine.country}</td>
             <td>${wine.region}</td>
-            <td class="wine-rating-cell">${wine.rating || '—'}</td>
+            <td class="wine-description-cell">${wine.rating || '—'}</td>
             <td><span class="${getStockClass(wine.available)}">${getStockText(wine.available)}</span></td>
             <td class="wine-price-cell">€${wine.price.toFixed(2)}</td>
             <td>

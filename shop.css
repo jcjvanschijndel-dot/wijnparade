@@ -81,17 +81,20 @@
 }
 
 .shop-card-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-    font-size: 0.85rem;
-    color: var(--gray-600);
+    margin-bottom: 0.5rem;
 }
 
-.shop-card-rating {
-    font-weight: 600;
-    color: var(--gray-800);
+.shop-card-description {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+}
+
+.shop-card-stock-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .shop-card-stock {
@@ -215,8 +218,11 @@
     white-space: nowrap;
 }
 
-.wine-rating-cell {
-    font-weight: 600;
+.wine-description-cell {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    max-width: 250px;
+    white-space: normal;
 }
 
 /* Modal */
