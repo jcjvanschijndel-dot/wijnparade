@@ -1,0 +1,406 @@
+/* Wine Shop Styles */
+
+.shop-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.shop-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+}
+
+.shop-subtitle {
+    color: var(--gray-600);
+    font-size: 1rem;
+}
+
+/* Cards (Mobile) */
+.shop-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.shop-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.shop-card:hover {
+    border-color: var(--navy);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+.shop-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.shop-card-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.shop-card-producer {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-top: 0.15rem;
+}
+
+.shop-card-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    white-space: nowrap;
+}
+
+.shop-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.shop-card-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: var(--gray-100);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: var(--gray-700);
+}
+
+.shop-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+}
+
+.shop-card-rating {
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.shop-card-stock {
+    font-size: 0.85rem;
+}
+
+.stock-available {
+    color: #166534;
+}
+
+.stock-low {
+    color: #b45309;
+}
+
+.stock-out {
+    color: #991b1b;
+}
+
+.shop-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-100);
+}
+
+/* Order Button */
+.order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.2rem;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+    background: var(--navy-dark, #152e6e);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.order-btn:disabled {
+    background: var(--gray-400);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Table (Desktop) */
+.shop-table-wrapper {
+    display: none;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    margin-bottom: 2rem;
+}
+
+.shop-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.shop-table thead {
+    background: var(--gray-50);
+}
+
+.shop-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 0.85rem;
+    border-bottom: 2px solid var(--gray-200);
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.shop-table th:hover {
+    background: var(--gray-100);
+}
+
+.shop-table th:last-child {
+    cursor: default;
+    text-align: right;
+}
+
+.shop-table th:last-child:hover {
+    background: var(--gray-50);
+}
+
+.shop-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 0.9rem;
+}
+
+.shop-table tr:last-child td {
+    border-bottom: none;
+}
+
+.shop-table tr:hover {
+    background: var(--gray-50);
+}
+
+.shop-table td:last-child {
+    text-align: right;
+}
+
+.wine-price-cell {
+    font-weight: 600;
+    color: var(--navy);
+    white-space: nowrap;
+}
+
+.wine-rating-cell {
+    font-weight: 600;
+}
+
+/* Modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--gray-500);
+    line-height: 1;
+    padding: 0.25rem;
+}
+
+.modal-close:hover {
+    color: var(--gray-800);
+}
+
+.modal-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.modal-wine-info {
+    background: var(--gray-50);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-wine-name {
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 1.05rem;
+}
+
+.modal-wine-detail {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-top: 0.25rem;
+}
+
+.modal-wine-price {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Order Form in Modal */
+.order-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.order-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    margin-bottom: 0.3rem;
+}
+
+.order-form input,
+.order-form textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.order-form input:focus,
+.order-form textarea:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.order-total {
+    background: var(--gray-50);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.order-submit-btn {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Success State */
+.order-success {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background: #166534;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+}
+
+.order-success h3 {
+    color: var(--navy);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.order-success p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+}
+
+/* Empty State */
+.empty-state {
+    padding: 3rem;
+    text-align: center;
+    color: var(--gray-600);
+    background: var(--gray-50);
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .shop-cards {
+        display: none;
+    }
+
+    .shop-table-wrapper {
+        display: block;
+    }
+
+    .shop-title {
+        font-size: 2.2rem;
+    }
+}
