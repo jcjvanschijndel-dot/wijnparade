@@ -1,10 +1,10 @@
 // ============================================================
-// CONFIGURATIE - Plak hier je Google Sheets CSV-link
+// CONFIGURATIE - https://docs.google.com/spreadsheets/d/1S4MUXlWv6Ycuam2YTFluzHCmIvdkovmXrTDwS1C3kAE/edit?gid=0#gid=0
 // ============================================================
 // Je sheet moet deze kolommen hebben (eerste rij = headers):
 // Naam | Producent | Land | Gebied | Kleur | Rating | Beschikbaar | Prijs
 // ============================================================
-const SHOP_SHEET_CSV_URL = 'PLAK_HIER_JE_GOOGLE_SHEETS_CSV_URL';
+const SHOP_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1S4MUXlWv6Ycuam2YTFluzHCmIvdkovmXrTDwS1C3kAE/edit?gid=0#gid=0';
 // ============================================================
 
 let allWines = [];
