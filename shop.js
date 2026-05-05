@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function loadWines() {
     try {
-        if (!SHOP_SHEET_CSV_URL || SHOP_SHEET_CSV_URL === 'PLAK_HIER_JE_GOOGLE_SHEETS_CSV_URL') {
+        if (!SHOP_SHEET_CSV_URL || SHOP_SHEET_CSV_URL === 'https://docs.google.com/spreadsheets/d/1S4MUXlWv6Ycuam2YTFluzHCmIvdkovmXrTDwS1C3kAE/edit?gid=0#gid=0') {
             console.warn('Google Sheets URL niet ingesteld in shop.js');
             showEmptyState();
             return;
