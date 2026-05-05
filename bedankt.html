@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <title>Bedankt! | de_wijnparade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <style>
+        .bedankt-container {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bedankt-card {
+            text-align: center;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            max-width: 480px;
+            width: 100%;
+        }
+        .bedankt-icon {
+            width: 72px;
+            height: 72px;
+            background: #166534;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 1.5rem;
+        }
+        .bedankt-card h1 {
+            font-size: 1.6rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+        .bedankt-card p {
+            color: var(--gray-600);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .bedankt-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--navy);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .bedankt-btn:hover {
+            background: var(--navy-dark, #152e6e);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="instagram-profile-link">
+                <img src="/profile-photo.jpg" alt="de_wijnparade" class="profile-photo-img">
+                <span>← Terug naar home</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="bedankt-container">
+                <div class="bedankt-card">
+                    <div class="bedankt-icon">✓</div>
+                    <h1>Bedankt voor je tip! 🍷</h1>
+                    <p>We bekijken je tip zo snel mogelijk. Heb je nog meer tips? Je bent altijd welkom!</p>
+                    <a href="index.html" class="bedankt-btn">Terug naar home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+        </div>
+    </footer>
+</body>
+</html>
