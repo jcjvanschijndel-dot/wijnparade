@@ -4,7 +4,7 @@ type: restaurant
 address: Morsstraat 25, 2312 BK Leiden
 lat: 52.1620345
 lng: 4.4834076
-description: Is dit nou een wijn bar of restaurant? Laten we het gezien de
+description: Is dit nou een wijnbar of restaurant? Laten we het gezien de
   kwaliteit van het Italiaanse gerechten en de uitgebreide diner kaart een
   wijnrestaurant noemen. De sommelier is al 3X vinoloog van het jaar geweest,
   dus dat zit ook zeker goed. Naast veel mooie wijnen uit Italië zijn er zeker
