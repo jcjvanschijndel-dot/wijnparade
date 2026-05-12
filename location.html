@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1e3a8a">
+    <title>Locatie | de_wijnparade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin="" />
+    <style>
+        .location-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .location-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .location-gallery img:hover {
+            transform: scale(1.02);
+        }
+        
+        .location-hero {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .location-map {
+            height: 350px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            margin: 2rem 0;
+        }
+        
+        .location-info {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-section {
+            padding: 1.5rem;
+            background: var(--gray-50);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .info-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-value {
+            font-size: 1rem;
+            color: var(--gray-900);
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+        
+        .website-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--navy);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 1rem 0;
+        }
+        
+        .website-btn:hover {
+            background: var(--navy-dark);
+            transform: translateY(-1px);
+        }
+        
+        @media (max-width: 768px) {
+            .location-hero {
+                height: 250px;
+            }
+            
+            .location-gallery img {
+                height: 150px;
+            }
+            
+            .location-map {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="map.html" class="instagram-profile-link">
+                <img src="/profile-photo.jpg" alt="de_wijnparade" class="profile-photo-img">
+                <span>← Terug</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <a href="map.html" class="back-button">← Terug naar kaart</a>
+            
+            <img src="" alt="" class="location-hero" id="locationImage">
+            
+            <!-- Photo Gallery (if multiple photos) -->
+            <div class="location-gallery" id="locationGallery" style="display: none;"></div>
+            
+            <div class="recipe-header">
+                <h1 class="recipe-title" id="locationName">Loading...</h1>
+                <div class="recipe-wine" id="locationType"></div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">📍 Adres</div>
+                <div class="info-value" id="locationAddress"></div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">ℹ️ Over deze locatie</div>
+                <div class="info-value" id="locationDescription"></div>
+            </div>
+
+            <div id="locationWebsite"></div>
+
+            <div class="location-map" id="locationMap"></div>
+        </div>
+    </main>
+
+    <section class="tips-form-section">
+        <div class="container">
+            <h2 class="form-title">💡 Geef je tips door!</h2>
+            <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
+            <form name="tips" method="POST" data-netlify="true" class="tips-form">
+                <input type="hidden" name="form-name" value="tips">
+                <div class="form-group">
+                    <label for="tip">Jouw tip</label>
+                    <textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" name="name" required placeholder="Je naam">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="je@email.nl">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Versturen</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="location.js"></script>
+</body>
+</html>
