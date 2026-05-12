@@ -191,12 +191,13 @@ function parseFrontmatter(content) {
                     
                     // Convert numbers
                     if (!isNaN(value) && value !== '') {
-                        value = Number(value);
+                        data[currentKey] = Number(value);
+                        currentKey = null;
+                        currentValue = [];
+                    } else {
+                        // Keep currentKey active so continuation lines get appended
+                        currentValue = [value];
                     }
-                    
-                    data[currentKey] = value;
-                    currentKey = null;
-                    currentValue = [];
                 } else {
                     // Value might be on next lines (list or multiline)
                     currentValue = [];
