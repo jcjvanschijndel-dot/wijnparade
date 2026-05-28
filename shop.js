@@ -9,7 +9,7 @@ const SHOP_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRiN
 
 let allWines = [];
 let filteredWines = [];
-let currentSort = { field: 'name', ascending: true };
+let currentSort = { field: 'originalIndex', ascending: true };
 
 document.addEventListener('DOMContentLoaded', async function() {
     await loadWines();
@@ -53,6 +53,8 @@ async function loadWines() {
             if (!row || row.length === 0 || row.every(cell => cell.trim() === '')) continue;
             
             const rawColor = getCell(row, colMap.color);
+            const rawAvailable = getCell(row, colMap.available);
+            const isComingSoon = rawAvailable.toLowerCase().replace(/\s/g, '') === 'comingsoon';
             const wine = {
                 name: getCell(row, colMap.name),
                 producer: getCell(row, colMap.producer),
@@ -60,8 +62,9 @@ async function loadWines() {
                 region: getCell(row, colMap.region),
                 color: rawColor ? rawColor.charAt(0).toUpperCase() + rawColor.slice(1).toLowerCase() : '',
                 rating: getCell(row, colMap.rating),
-                available: parseInt(getCell(row, colMap.available)) || 0,
-                price: parseNumber(getCell(row, colMap.price))
+                available: isComingSoon ? 'coming-soon' : (parseInt(rawAvailable) || 0),
+                price: parseNumber(getCell(row, colMap.price)),
+                originalIndex: i - 1
             };
             
             if (wine.name) allWines.push(wine);
@@ -203,7 +206,7 @@ function sortWines() {
         let aVal = a[currentSort.field];
         let bVal = b[currentSort.field];
         
-        if (['price', 'available'].includes(currentSort.field)) {
+        if (['price', 'available', 'originalIndex'].includes(currentSort.field)) {
             aVal = parseFloat(aVal) || 0;
             bVal = parseFloat(bVal) || 0;
         } else {
@@ -225,12 +228,14 @@ function renderWines() {
 }
 
 function getStockClass(available) {
+    if (available === 'coming-soon') return 'stock-soon';
     if (available <= 0) return 'stock-out';
     if (available <= 3) return 'stock-low';
     return 'stock-available';
 }
 
 function getStockText(available) {
+    if (available === 'coming-soon') return 'Coming soon';
     if (available <= 0) return 'Uitverkocht';
     return `${available} flessen`;
 }
@@ -260,8 +265,8 @@ function renderCards() {
             </div>
             <div class="shop-card-footer">
                 <span></span>
-                <button class="order-btn" onclick="openOrder(${idx})" ${wine.available <= 0 ? 'disabled' : ''}>
-                    ${wine.available <= 0 ? 'Uitverkocht' : 'Aanvragen'}
+                <button class="order-btn" onclick="openOrder(${idx})" ${wine.available <= 0 || wine.available === 'coming-soon' ? 'disabled' : ''}>
+                    ${wine.available === 'coming-soon' ? 'Coming soon' : wine.available <= 0 ? 'Uitverkocht' : 'Aanvragen'}
                 </button>
             </div>
         </div>
@@ -281,8 +286,8 @@ function renderTable() {
             <td><span class="${getStockClass(wine.available)}">${getStockText(wine.available)}</span></td>
             <td class="wine-price-cell">€${wine.price.toFixed(2)}</td>
             <td>
-                <button class="order-btn" onclick="openOrder(${idx})" ${wine.available <= 0 ? 'disabled' : ''}>
-                    ${wine.available <= 0 ? 'Uitverkocht' : 'Aanvragen'}
+                <button class="order-btn" onclick="openOrder(${idx})" ${wine.available <= 0 || wine.available === 'coming-soon' ? 'disabled' : ''}>
+                    ${wine.available === 'coming-soon' ? 'Coming soon' : wine.available <= 0 ? 'Uitverkocht' : 'Aanvragen'}
                 </button>
             </td>
         </tr>
@@ -310,7 +315,7 @@ function setupModal() {
 
 function openOrder(index) {
     selectedWine = filteredWines[index];
-    if (!selectedWine || selectedWine.available <= 0) return;
+    if (!selectedWine || selectedWine.available <= 0 || selectedWine.available === 'coming-soon') return;
     
     // Fill modal info
     document.getElementById('modalWineInfo').innerHTML = `
