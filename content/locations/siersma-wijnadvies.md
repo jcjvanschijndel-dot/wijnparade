@@ -8,6 +8,6 @@ description: Mooie wijnzaak in Huizen, met ook een vestiging in Baarn. Wordt
   gerund door Rutger, een echte ondernemer. Zo verkoopt hij zijn eigen Skaap
   wijnen uit Zuid-Afrika en is hij mede eigenaar van een wijndomein in Twente.
   Dat maakt het toch extra leuk!
-image: /uploads/a-torre.webp
+image: ""
 website: wijnadvies.nl
 ---
