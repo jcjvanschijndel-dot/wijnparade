@@ -42,7 +42,7 @@ async function loadLocationsFromCMS() {
             if (parsed.lat && parsed.lng) {
                 wineLocations.push({
                     id: parsed._id,
-                    name: parsed.name,
+                    name: parsed.title || parsed.name,
                     type: parsed.type || 'wijnbar',
                     address: parsed.address,
                     lat: parseFloat(parsed.lat),
