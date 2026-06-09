@@ -1,5 +1,5 @@
 ---
-name: Rust Wat by sidney Schutte
+name: Rust Wat by Sidney Schutte
 type: restaurant
 address: Schapendrift 79, 1261 HP Blaricum
 lat: 52.2635006
