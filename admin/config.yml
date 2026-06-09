@@ -96,10 +96,11 @@ collections:
     label: "Wijnlocaties"
     folder: "content/locations"
     create: true
-    slug: "{{title}}"
-    summary: "{{title}} ({{type}})"
+    identifier_field: name
+    slug: "{{name}}"
+    summary: "{{name}} ({{type}})"
     fields:
-      - {label: "Naam", name: "title", widget: "string"}
+      - {label: "Naam", name: "name", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["wijnbar", "wijnwinkel", "wijnhuis", "restaurant"]}
       - {label: "Adres", name: "address", widget: "string"}
       - {label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false}
