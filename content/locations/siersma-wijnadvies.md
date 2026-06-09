@@ -1,5 +1,5 @@
 ---
-title: Siersma Wijnadvies
+name: Siersma Wijnadvies
 type: wijnwinkel
 address: Havenstraat 30, 1271 AE Huizen
 lat: 52.2993774
