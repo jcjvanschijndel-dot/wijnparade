@@ -1,5 +1,5 @@
 ---
-title: Wexxs
+name: Wexxs
 type: wijnwinkel
 address: Torenlaan 2-A, 1261 GD Blaricum
 lat: 52.2728945
