@@ -36,7 +36,7 @@ collections:
     folder: "content/toplists"
     create: true
     identifier_field: name
-    slug: "{{slug}}"
+    slug: "{{name}}"
     summary: "{{name}}"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
@@ -49,7 +49,7 @@ collections:
     folder: "content/travelguides"
     create: true
     identifier_field: name
-    slug: "{{slug}}"
+    slug: "{{name}}"
     summary: "{{name}}"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
@@ -62,7 +62,7 @@ collections:
     folder: "content/favorites"
     create: true
     identifier_field: name
-    slug: "{{slug}}"
+    slug: "{{name}}"
     summary: "{{name}} - {{producer}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
@@ -80,7 +80,7 @@ collections:
     folder: "content/value-scores"
     create: true
     identifier_field: name
-    slug: "{{slug}}"
+    slug: "{{name}}"
     summary: "{{name}} - Score: {{value_score}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
@@ -97,7 +97,7 @@ collections:
     folder: "content/locations"
     create: true
     identifier_field: name
-    slug: "{{slug}}"
+    slug: "{{name}}"
     summary: "{{name}} ({{type}})"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
@@ -115,7 +115,7 @@ collections:
     folder: "content/dishes-pairing"
     create: true
     identifier_field: dish
-    slug: "{{slug}}"
+    slug: "{{dish}}"
     summary: "{{dish}}"
     fields:
       - {label: "Gerecht Naam", name: "dish", widget: "string"}
@@ -132,7 +132,7 @@ collections:
     folder: "content/wines-pairing"
     create: true
     identifier_field: wine
-    slug: "{{slug}}"
+    slug: "{{wine}}"
     summary: "{{wine}}"
     fields:
       - {label: "Wijn Naam", name: "wine", widget: "string"}
