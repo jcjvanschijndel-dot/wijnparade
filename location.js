@@ -44,7 +44,7 @@ async function loadLocation(locationId) {
 
 function renderLocation(location) {
     // Update title
-    document.title = `${location.name} | de_wijnparade`;
+    document.title = `${location.title || location.name} | de_wijnparade`;
     
     // Update image
     const img = document.getElementById('locationImage');
@@ -66,9 +66,9 @@ function renderLocation(location) {
         }).join('');
     }
     
-    // Update name
+    // Update name (support both 'title' (new) and 'name' (legacy) frontmatter field)
     const nameEl = document.getElementById('locationName');
-    if (nameEl) nameEl.textContent = location.name;
+    if (nameEl) nameEl.textContent = location.title || location.name;
     
     // Update type
     const typeEl = document.getElementById('locationType');
@@ -191,13 +191,12 @@ function parseFrontmatter(content) {
                     
                     // Convert numbers
                     if (!isNaN(value) && value !== '') {
-                        data[currentKey] = Number(value);
-                        currentKey = null;
-                        currentValue = [];
-                    } else {
-                        // Keep currentKey active so continuation lines get appended
-                        currentValue = [value];
+                        value = Number(value);
                     }
+                    
+                    data[currentKey] = value;
+                    currentKey = null;
+                    currentValue = [];
                 } else {
                     // Value might be on next lines (list or multiline)
                     currentValue = [];
