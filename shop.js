@@ -323,7 +323,7 @@ function openOrder(index) {
     document.getElementById('modalWineInfo').innerHTML = `
         <div class="modal-wine-name">${selectedWine.name}</div>
         <div class="modal-wine-detail">${selectedWine.producer} · ${selectedWine.region}, ${selectedWine.country}</div>
-        <div class="modal-wine-price">€${selectedWine.price.toFixed(2)} per fles</div>
+        <div class="modal-wine-price">€${selectedWine.price.toFixed(2)} per ${selectedWine.unit === "dozen" ? "doos" : "fles"}</div>
     `;
     
     // Set hidden fields
