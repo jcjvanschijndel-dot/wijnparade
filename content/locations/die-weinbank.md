@@ -1,16 +1,16 @@
 ---
-name: Die Weinbank
-type: wijnbar
-address: Hauptstraße 44, 8461 Ehrenhausen, Oostenrijk
-lat: 46.7243038
-lng: 15.5858032
+name: Sansibar
+type: restaurant
+address: Strandabschnitt, Hörnumer Str. 80, 25980 Sylt, Duitsland
+lat: 54.8145404
+lng: 8.2852158
 description: >-
-  In het kleine dorp Ehrenhausen, midden in de Zuid-Stiermarkse wijnstreek,
-  hebben kok Gerhard Fuchs en sommelier Christian Zach iets bijzonders
-  neergezet. De Weinbank combineert een traditioneel Wirtshaus, een restaurant
-  met vier Gault Millau-toques en een uitzonderlijke wijnbar onder één dak. 
+  Opgericht als een bescheiden kiosk in de duinen, uitgegroeid tot het meest
+  beroemde strandrestaurant van Duitsland — velen noemen het 'de meest
+  noordelijke skihut van Duitsland'. Het is een gastronomisch monument van hout
+  en glas, gebouwd op zand, met 160 stoelen binnen en 250 op het terras. 
 
-  De Vinothek is waar wijnliefhebbers echt stil van worden. Verkozen tot de beste wijnbar van Oostenrijk (Falstaff Bar Guide 2026, 97/100) en met een van de beste wijnkaarten van het land (Star Wine List), telt de Weinbank meer dan 5.100 wijnposities. Sommelier Christian Zach — ook wel 'de Zachinator' — won de Falstaff Sommelier of the Year 2017, de Gault Millau Sommelier of the Year 2021, én de Michelin Sommelier Award 2026. Hij sleept flessen naar tafel die buiten zijn eigen kelder nauwelijks te vinden zijn. 
-image: /uploads/weinbank.webp
-website: https://dieweinbank.at/
+  Onder het restaurant bevindt zich een legendarische wijnkelder, uitgegraven door specialisten uit het zandige duinzand. Via een smalle trap daalt men af naar een lange tafel in het halfduister van een gewelf, waar de eigenaar af en toe gasten uitnodigt voor een proeverij. Naast de 30.000 flessen in de kelder bevindt zich nog eens een geheim depot elders op het eiland — naar verluidt nog eens 60.000 flessen. Daar staan de duurste rode wijnen ter wereld dicht op elkaar: Pétrus, Romanée-Conti en alles wat daarna komt. 
+image: /uploads/sansibar.webp
+website: https://www.sansibar.de/sansibar/de/
 ---
