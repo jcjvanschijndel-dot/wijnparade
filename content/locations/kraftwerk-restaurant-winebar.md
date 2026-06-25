@@ -1,15 +1,17 @@
 ---
-name: Kraftwerk Restaurant & Winebar
-type: wijnbar
-address: Schmittenstraße 12a, 5700 Zell am See, Oostenrijk
-lat: 47.3242037
-lng: 12.7940178
+name: Toc al Mar
+type: restaurant
+address: Carrer Platja d'Aiguablava, 8, 17255 Begur, Girona, Spanje
+lat: 41.9337333
+lng: 3.2163528
 description: >-
-  De voormalige elektriciteitscentrale van Zell am See uit 1934 is omgebouwd tot
-  een restaurant en wijnbar in industrial chic-stijl. Warme houten elementen en
-  bakstenen muren vormen de decor — authentiek en tegelijk modern. 
+  Toc al Mar is een voormalige vissershut op het zand van Aiguablava, een van de
+  meest gefotografeerde baaien van de Costa Brava. 
 
-  Meer dan 800 wijnen uit de hele wereld staan op de kaart, aangevuld met topwijnen per glas aan de wijnbar. Het personeel is goed onderlegd en helpt bij keuze en spijscombinaties. Bezoekers roemen met name de wijnadviezen — met een opvallend goed aanbod Oostenrijkse producenten naast internationale namen. 
-image: /uploads/kraftwerk.webp
-website: https://www.kraftwerk-restaurant.at/
+  Authentieke Mediterrane keuken: vis en zeevruchten gegrild op eikenhout, rijstgerechten afgemaakt in een houtgestookte oven. De verse vis wordt vóór het bereiden aan tafel gebracht.
+
+
+  Vraag naar de 'geheime' wijnkaart!
+image: /uploads/toc-al-mar.webp
+website: https://www.tocalmar.cat/
 ---
