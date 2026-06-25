@@ -1,16 +1,19 @@
 ---
-name: Sardinales
+name: La Sardina
 type: restaurant
-address: Urbanizacion Alicate Playa s/n, Av. del Gaviero, 29604 Marbella, Málaga, Spanje
-lat: 36.5005753
-lng: -4.818999
+address: P.º Andrés Segovia, 0, 18697 La Herradura, Granada, Spanje
+lat: 36.7383187
+lng: -3.7497754
 description: >-
-  Los Sardinales heeft het karakter van een klassieke chiringuito, maar dan met
-  dak en tafelkleed: verse vis van de Middellandse Zee, espetos op de grill,
-  rijstgerechten en zeevruchten.
+  De baai krult zich in een perfecte boog om het strand, en La Sardina ligt er
+  midden op. Heerlijke Chiringuito op het strand maar dan wel keurig met
+  tafelkleden.
 
 
-  Wie het liefst een glas koude albariño drinkt met verse tong, arroz caldoso of gambas al ajillo, met zand onder de stoelpoten en de Middellandse Zee voor zijn neus, vindt hier precies dat.
-image: /uploads/sardinales.webp
-website: https://www.lossardinales.com/
+  Sardinas op de kolen, quisquillas de Motril, arroz caldoso met kreeft, pimientos, migas — de klassieke keuken van de Costa Tropical, bereid met de dagvangst. De regionale specialiteit zijn sardines op spiesen, gegrild op smeulende kooltjes.
+
+
+  De wijnkaart is op zich niet bijzonder, maar staat vol met leuke, zeer betaalbare wijnen uit alle streken van Spanje.
+image: /uploads/la-herradura.webp
+website: https://discoveralmunecar.com/es/restaurante-chiringuito-la-sardina/
 ---
