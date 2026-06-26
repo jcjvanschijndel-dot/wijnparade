@@ -1,19 +1,16 @@
 ---
-name: Bodegas Calvente
+name: "Château Troplong-Mondot "
 type: wijnhuis
-address: C. Viñilla, 8, 18699 Jete, Granada, Spanje
-lat: 36.7970123
-lng: -3.6677673
+address: Château Troplong-Mondot, 33330 Saint-Émilion, Frankrijk
+lat: 44.888576
+lng: -0.141231
 description: >-
-  De wijngaarden liggen hoog in de Sierra del Chaparral, tussen 700 en 1000
-  meter hoogte. Hier groeien oude Moscatel de Alejandría-wijnstokken — sommige
-  meer dan 90 jaar oud — op steile, kalkachtige hellingen die lage opbrengsten
-  geven maar intense kwaliteit. 
+  Op het hoogste punt van Saint-Émilion, ingegraven in de stenen architectuur
+  van Château Troplong Mondot, ligt een van de meest complete restaurant-en-wijn
+  ervaringen van de hele Bordeaux-regio. Niet het meest bekende adres van het
+  dorp — maar voor wie het weet te vinden, vaak het beste.
 
 
-  Bezoeken zijn persoonlijk en intiem — de winery is relatief klein en rondleidingen worden vaak verzorgd door leden van de familie zelf. Het hoogtepunt is regelmatig de setting: proeverijen vinden plaats op een terras met uitzicht over het dal en het dramatische berglandschap van de Sierra de Lújar.
-
-  De rondleiding duurt circa twee uur en omvat een wijngaardbezoek, een kelderrondleiding en een proeverij van vijf wijnen met lokale tapas voor €25 per persoon. Kinderen zijn welkom met een eigen proeverijprogramma voor €10. Rondleidingen zijn beschikbaar in het Spaans en Engels.
-image: /uploads/calvente.webp
-website: https://bodegascalvente.com/
+  Je kunt hier ook overnachten en bij het chateau zit een top restaurant: Les Belles Perdrix. En het terras, 
+website:  troplong-mondot.com
 ---
