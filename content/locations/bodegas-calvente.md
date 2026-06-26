@@ -11,6 +11,6 @@ description: >-
   dorp — maar voor wie het weet te vinden, vaak het beste.
 
 
-  Je kunt hier ook overnachten en bij het chateau zit een top restaurant: Les Belles Perdrix. En het terras, 
+  Je kunt hier ook overnachten en bij het chateau zit een top restaurant: Les Belles Perdrix. En het terras...buitencategorie!
 website:  troplong-mondot.com
 ---
