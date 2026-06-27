@@ -1,7 +1,7 @@
 ---
 name: Brugarol
 type: wijnhuis
-address: 17230 Palamós, Girona, Spanje
+address: Camí de Bell-lloc, 63, 17230 Palamós, Girona, Spanje
 lat: 41.8503998
 lng: 3.1297006
 description: >-
