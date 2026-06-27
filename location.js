@@ -150,69 +150,80 @@ function parseFrontmatter(content) {
     const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
     if (!match) return null;
 
-    const frontmatter = match[1];
+    const yaml = match[1];
+    const lines = yaml.split('\n');
     const data = {};
-    let currentKey = null;
-    let currentValue = [];
-    let inList = false;
+    let i = 0;
 
-    frontmatter.split('\n').forEach(line => {
-        // Check if this is a list item
-        if (line.trim().startsWith('- ')) {
-            if (currentKey) {
-                currentValue.push(line.trim().substring(2));
-                inList = true;
+    while (i < lines.length) {
+        const line = lines[i];
+        if (line.trim() === '') { i++; continue; }
+
+        const topMatch = line.match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*:\s*(.*)/);
+        if (!topMatch) { i++; continue; }
+
+        const key = topMatch[1];
+        const rawValue = topMatch[2].trim();
+
+        // Block scalars: >- > | |-
+        if (['>', '>-', '|', '|-'].includes(rawValue)) {
+            const fold = rawValue.startsWith('>');
+            i++;
+            const blockLines = [];
+            while (i < lines.length && (lines[i].startsWith('  ') || lines[i].trim() === '')) {
+                blockLines.push(lines[i].replace(/^  /, ''));
+                i++;
             }
-        } else {
-            // Save previous key-value if we were in a list
-            if (inList && currentKey) {
-                data[currentKey] = currentValue;
-                currentValue = [];
-                inList = false;
+            let text = fold
+                ? blockLines.join(' ').replace(/\s+/g, ' ').trim()
+                : blockLines.join('\n');
+            data[key] = text.replace(/\s+$/, '');
+            continue;
+        }
+
+        // Empty value — could be a list on next lines
+        if (rawValue === '') {
+            i++;
+            if (i < lines.length && lines[i].trim().startsWith('- ')) {
+                const list = [];
+                while (i < lines.length && lines[i].trim().startsWith('- ')) {
+                    list.push(lines[i].trim().substring(2));
+                    i++;
+                }
+                data[key] = list;
+            } else {
+                data[key] = '';
             }
-            
-            const colonIndex = line.indexOf(':');
-            if (colonIndex > -1) {
-                // Save previous key if exists and not in list
-                if (currentKey && !inList && currentValue.length > 0) {
-                    data[currentKey] = currentValue.join('\n');
-                }
-                
-                currentKey = line.substring(0, colonIndex).trim();
-                let value = line.substring(colonIndex + 1).trim();
-                
-                if (value) {
-                    // Remove quotes
-                    if (value.startsWith('"') && value.endsWith('"')) {
-                        value = value.slice(1, -1);
-                    } else if (value.startsWith("'") && value.endsWith("'")) {
-                        value = value.slice(1, -1);
-                    }
-                    
-                    // Convert numbers
-                    if (!isNaN(value) && value !== '') {
-                        value = Number(value);
-                    }
-                    
-                    data[currentKey] = value;
-                    currentKey = null;
-                    currentValue = [];
-                } else {
-                    // Value might be on next lines (list or multiline)
-                    currentValue = [];
-                }
-            } else if (currentKey && line.trim()) {
-                // Continuation of previous value
-                currentValue.push(line.trim());
+            continue;
+        }
+
+        // Quoted string
+        if ((rawValue.startsWith('"') && rawValue.endsWith('"')) ||
+            (rawValue.startsWith("'") && rawValue.endsWith("'"))) {
+            data[key] = rawValue.slice(1, -1);
+            i++;
+            continue;
+        }
+
+        // Plain value with possible continuation lines
+        let fullValue = rawValue;
+        i++;
+        while (i < lines.length) {
+            const next = lines[i];
+            if (next.match(/^  \S/) && !next.trim().startsWith('- ') && !next.match(/^[a-zA-Z_][a-zA-Z0-9_]*\s*:/)) {
+                fullValue += ' ' + next.trim();
+                i++;
+            } else {
+                break;
             }
         }
-    });
-    
-    // Save last key if in list
-    if (inList && currentKey) {
-        data[currentKey] = currentValue;
-    } else if (currentKey && currentValue.length > 0) {
-        data[currentKey] = currentValue.join('\n');
+
+        // Convert numbers, keep strings
+        if (!isNaN(fullValue) && fullValue.trim() !== '') {
+            data[key] = Number(fullValue);
+        } else {
+            data[key] = fullValue;
+        }
     }
 
     return data;
