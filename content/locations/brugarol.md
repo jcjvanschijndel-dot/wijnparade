@@ -2,8 +2,8 @@
 name: Brugarol
 type: wijnhuis
 address: V4J5+HP, 17230 Vall-llobrega, Girona, Spain
-lat: 41.8503998
-lng: 3.1297006
+lat: 41.879167
+lng: 3.110556
 description: >-
   Dit is het meest bijzondere wijnadres van de hele regio. De kelder van Bodega
   Brugarol bevindt zich ondergronds in het landgoed Finca Bell-Lloc. De
