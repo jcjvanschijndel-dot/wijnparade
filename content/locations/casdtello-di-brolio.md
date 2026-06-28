@@ -1,5 +1,5 @@
 ---
-name: Casdtello di Brolio
+name: Castello di Brolio
 type: wijnhuis
 address: Località Madonna a Brolio, 53013 Gaiole In Chianti SI, Italië
 lat: 43.413341
