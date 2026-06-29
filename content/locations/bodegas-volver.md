@@ -5,7 +5,7 @@ address: Diseminado Pascualetes, 6 03659, 03659, Alicante, Spanje
 lat: 38.35118000000001
 lng: -1.05141
 description: >-
-  n het binnenland van Alicante, op de grens met Murcia, op 660 meter hoogte
+  In het binnenland van Alicante, op de grens met Murcia, op 660 meter hoogte
   tussen de sierras Salinas, Umbría en La Sima, liggen de wijngaarden die de
   wereld kennis lieten maken met de Monastrell van het Spaanse Levante. Wine
   Spectator plaatste hun Tarima Hill in de top 10 wijnen van de wereld —
