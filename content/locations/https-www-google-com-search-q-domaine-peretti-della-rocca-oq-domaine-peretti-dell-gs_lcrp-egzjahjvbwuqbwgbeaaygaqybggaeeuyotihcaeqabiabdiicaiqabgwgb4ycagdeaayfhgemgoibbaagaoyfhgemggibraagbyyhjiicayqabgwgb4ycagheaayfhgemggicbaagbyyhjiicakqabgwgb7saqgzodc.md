@@ -1,5 +1,5 @@
 ---
-name: https://www.google.com/search?q=domaine+peretti+della+rocca&oq=domaine+peretti+dell&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIICAIQABgWGB4yCAgDEAAYFhgeMgoIBBAAGAoYFhgeMggIBRAAGBYYHjIICAYQABgWGB4yCAgHEAAYFhgeMggICBAAGBYYHjIICAkQABgWGB7SAQgzODc1ajBqOagCBrACAfEF5GJkV7lTZVg&sourceid=chrome&ie=UTF-8#:~:text=Foto%27s-,Domaine%20de%20Peretti%20della%20Rocca,-4%2C6
+name: Peretti della Rocca
 type: wijnhuis
 address: Pruno, 20114 Figari, Frankrijk
 lat: 41.5295268
