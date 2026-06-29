@@ -1,5 +1,5 @@
 ---
-name: La Côte Saint Jacques & Spa
+name: La Côte Saint Jacques
 type: restaurant
 address: 14 Fbg de Paris, 89300 Joigny, Frankrijk
 lat: 47.9836331
