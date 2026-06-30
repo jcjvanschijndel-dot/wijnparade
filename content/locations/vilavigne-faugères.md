@@ -1,5 +1,5 @@
 ---
-name: Vilavigne Faugères
+name: Villavigne Faugères
 type: wijnwinkel
 address: RTE DE BEDARIEUX, 34600 Faugères, Frankrijk
 lat: 43.610054
