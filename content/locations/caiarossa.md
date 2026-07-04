@@ -1,5 +1,5 @@
 ---
-name: Weingut Dr. Lossen
+name: Weingut Dr. Loosen
 type: wijnhuis
 address: St. Johannishof, B53, 54470 Bernkastel-Kues, Duitsland
 lat: 49.9435492
