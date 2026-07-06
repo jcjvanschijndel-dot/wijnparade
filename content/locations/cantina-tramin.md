@@ -6,9 +6,9 @@ lat: 46.3451307
 lng: 11.2516537
 description: >-
   Het opvallende gebouw tussen de glooiende heuvels doet denken aan een moderne
-  tempel gewijd aan de Romeinse wijngod. Het wijnhuis is een coöperatie van zo'n
-  190 wijnmakersfamilies, gevestigd in Tramin/Termeno — het geboortedorp van de
-  Gewürztraminer, een druif die vernoemd is naar dit dorp. 
+  tempel. Het wijnhuis is een coöperatie van zo'n 190 wijnmakersfamilies,
+  gevestigd in Tramin/Termeno — het geboortedorp van de Gewürztraminer, een
+  druif die vernoemd is naar dit dorp. 
 
 
   Twee rondleidingen met proeverij (april t/m oktober, op reservering via visit.cantinatramin.it)
