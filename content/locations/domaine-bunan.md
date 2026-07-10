@@ -17,7 +17,7 @@ description: >-
   Alle druiven worden met de hand geoogst. Geen chemisch onkruidbeheer, geen synthetische behandelingsproducten — alles wordt met de hand bewerkt.
 
 
-  Via de website kun je verschillende tours en tastings boeken. En je hoeft je auto hier niet vol te laden, want je kan de wijnen bij de Sligro krijgen!
+  Via de website kun je verschillende tours en tastings boeken. 
 image: /uploads/bunan.webp
 website: https://bunan.com/en/home-page/
 ---
