@@ -13,7 +13,7 @@ description: >-
   Het domein maakt wijnen van de kenmerkende Provençaalse druiven: Mourvèdre, Rolle, Cinsault, Tibouren, Grenache en Syrah. 80% van de productie is rosé — fris en aromatisch. De 2026-jaargang wordt gecertificeerd als 100% biologisch. De wijnen zijn terug te vinden in talloze restaurants, strandclubs en hotels van Saint-Tropez.
 
 
-  De MCCCXL rosé is mijn persoonlijke favoriet. En niet in NL verkrijgbaar, dus de moeite waard om een doos ter scoren.
+  De MCCCXL rosé is mijn persoonlijke favoriet. En niet in NL verkrijgbaar, dus de moeite waard om een doos te scoren.
 image: /uploads/belieu.webp
 website: https://www.bertaud-belieu.com/fr/
 ---
