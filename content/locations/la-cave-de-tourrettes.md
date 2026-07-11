@@ -12,5 +12,6 @@ description: >-
 
 
   Het interieur is klein en sfeervol, met de muren letterlijk bekleed met flessen wijn die je ook gewoon kunt kopen — meer dan 250 wijnen, van grote namen tot kleine, lokale producties met een duidelijke nadruk op biologische wijn. Het hoogtepunt is het balkon: een tafeltje hier geboekt geeft je een spectaculair uitzicht over de vallei en de Côte d'Azur. Reserveren is sterk aanbevolen, want de plek is klein en populair, zeker in het hoogseizoen.
-image: /uploads/cave-tourettes.webp
+image: /uploads/tourrettes.webp
+website: https://www.instagram.com/lacavedetourrettes/
 ---
