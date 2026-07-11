@@ -15,6 +15,9 @@ description: >-
 
 
   Klein, intiem en met een open keuken waar je Irene zelf ziet koken — na afloop komt ze regelmatig zelf langs de tafels. De kaart is compact maar wisselt voortdurend per seizoen en creativiteit. Regelmatig "saraos": spontane feestjes met livemuziek, gewoon omdat het leven het verdient. Reserveren sterk aanbevolen.
+
+
+  De wijnkaart is uitgebreid met een goede focus op Mallorcaanse wijnen. 
 image: /uploads/nus.webp
 website: nuspalma.com
 ---
