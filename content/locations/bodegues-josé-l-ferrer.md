@@ -9,7 +9,7 @@ description: >-
   de bekendste en meest gewaardeerde namen van het eiland.
 
 
-  Uitgebreide proeverijen en rondleidingen door de kelders, met een kijkje in het productieproces. De winkel en proefruimte zijn niet per se heel sfeervol, maar prima voor een regenachtige dag. Je krijgt een A4'tje met uitleg terwijl de wijnen worden ingeschonken. Standaard proeverijen met drie of vier glazen, maar losse proefglaasjes van een specifieke wijn kunnen ook. Het Veritas-label is een aanrader. Wijnen kunnen ook naar Nederland worden opgestuurd als je zonder auto bent.
+  Uitgebreide proeverijen en rondleidingen door de kelders, met een kijkje in het productieproces. De winkel en proefruimte zijn niet per se heel sfeervol, maar prima voor een regenachtige dag. Je krijgt een A4'tje met uitleg terwijl de wijnen worden ingeschonken. Standaard proeverijen met drie of vier glazen, maar losse proefglaasjes van een specifieke wijn kunnen ook. Het Veritas-label is een aanrader. Wijnen kunnen ook naar Nederland worden opgestuurd.
 image: /uploads/ferrer.webp
 website: https://vinosferrer.com/
 ---
