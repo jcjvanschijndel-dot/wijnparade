@@ -1,5 +1,5 @@
 ---
-name: fratelli alessandria
+name: Fratelli Alessandria
 type: wijnhuis
 address: Via Beato Valfré 59, 12060 Verduno
 lat: 44.6690936
@@ -11,6 +11,9 @@ description: >-
 
 
   Recht in het hart van het oude dorp, in een prachtig oud stenen wijnhuis, ontvangen Alessandro en Vittore bezoekers in een gezellige, intieme cantina-stijl. Proeverijen op afspraak.
+
+
+  Je kunt hier overigens ook overnachten in het zogenoemde Wine Resort. 
 image: /uploads/alessandria.webp
 website: fratellialessandria.it
 ---
