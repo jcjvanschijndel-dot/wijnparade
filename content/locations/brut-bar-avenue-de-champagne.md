@@ -1,5 +1,5 @@
 ---
-name: "#Brut - Bar Avenue de Champagne"
+name: Brut - Bar Avenue de Champagne
 type: wijnbar
 address: 25T Av. de Champagne, 51200 Épernay, Frankrijk
 lat: 49.0424539
