@@ -1,19 +1,16 @@
 ---
-name: Enoteca Alessi
-type: wijnwinkel
-address: Via dell'Oche, 27/red, 50122 Firenze FI, Italië
-lat: 43.772147
-lng: 11.2558063
+name: Circus
+type: restaurant
+address: 43 Rue de Faramand, 39600 Arbois, Frankrijk
+lat: 46.9013419
+lng: 5.7722165
 description: >-
-  Enoteca Alessi bevindt zich in het hart van de Florentijnse oude stad, op een
-  steenworp van de Duomo. Geopend in 1952 en sindsdien altijd gerund door de
-  familie Alessi.
+  Een jong koppel uit de regio — Nino aan de hartige kant, Salomé voor desserts
+  en de zaal — wekt een wijnbistrosfeer in dit voormalige crêperie, een
+  vanzelfsprekende keuze voor dit wijnstadje.
 
 
-  Meer dan tweeduizend nationale en internationale wijnetiketten zijn beschikbaar voor proeverij op de benedenverdieping, terwijl de bovenverdieping de wijnkelder herbergt die doet denken aan oude kelders.
-
-
-  In de unieke proefruimte, omgeven door oude gewelven en houten balken, is het mogelijk te zitten, ontspannen en kletsen bij een heerlijk glas wijn en een bordje vleeswaren en Toscaanse kaas. Verticale proeverijen van lokale wijnhuizen zoals Mormoreto zijn regelmatig te boeken. Ook chocolade, zoetwaren, koffie, grappa, whisky, gin, extra vergine olijfolie en balsamicoazijn zijn te koop.
-image: /uploads/alessi.webp
-website: https://www.enotecaalessi.it/
+  Seizoensgebonden, creatief en eerlijk — gerookte oesters met vin jaune, geblakerde sperziebonen met vijgen, tripes met chipotle. Wijnkaart puur Jura: vin jaune van Stéphane Tissot, Poulsard van Domaine des Cavarodes, biodynamische en natuurwijnen van lokale producenten die je nergens anders tegenkomt.
+image: /uploads/circus.webp
+website: https://restaurantcircus.fr/
 ---
