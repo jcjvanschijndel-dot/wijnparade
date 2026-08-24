@@ -8,39 +8,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .map-container {
-            margin: 2rem 0;
+        /* ── Map controls bar ── */
+        .map-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
         }
 
-        #map {
-            height: 600px;
-            border-radius: 12px;
+        /* Search */
+        .map-search-wrapper {
+            position: relative;
+        }
+
+        .map-search-wrapper svg {
+            position: absolute;
+            left: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            pointer-events: none;
+        }
+
+        #mapSearch {
+            width: 100%;
+            padding: 0.7rem 1rem 0.7rem 2.5rem;
             border: 1px solid var(--gray-200);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
         }
 
+        #mapSearch:focus {
+            outline: none;
+            border-color: var(--navy);
+            box-shadow: 0 0 0 3px rgba(30,58,138,0.08);
+            background: #fff;
+        }
+
+        #mapSearch::placeholder { color: #9ca3af; }
+
+        /* Filters */
         .filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
+            gap: 0.5rem;
         }
 
         .filter-btn {
-            padding: 0.6rem 1.2rem;
+            padding: 0.5rem 1rem;
             background: var(--gray-50);
             border: 1px solid var(--gray-200);
             color: var(--gray-900);
             border-radius: 50px;
             cursor: pointer;
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
         .filter-btn:hover {
             background: var(--gray-100);
+            border-color: var(--gray-300);
         }
 
         .filter-btn.active {
@@ -49,61 +84,36 @@
             border-color: var(--navy);
         }
 
-        .leaflet-popup-content-wrapper {
+        /* Map */
+        .map-container { margin: 0; }
+
+        #map {
+            height: 580px;
             border-radius: 12px;
-            padding: 0;
+            border: 1px solid var(--gray-200);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
 
-        .popup-image {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 12px 12px 0 0;
+        /* Autocomplete dropdown styling */
+        .pac-container {
+            border-radius: 10px !important;
+            border: 1px solid var(--gray-200) !important;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
+            font-family: inherit !important;
+            margin-top: 4px !important;
         }
 
-        .popup-body {
-            padding: 1rem;
+        .pac-item {
+            padding: 0.5rem 1rem !important;
+            font-size: 0.9rem !important;
+            cursor: pointer;
         }
 
-        .popup-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
-        }
-
-        .popup-address {
-            font-size: 0.85rem;
-            color: var(--gray-600);
-            margin-bottom: 0.75rem;
-        }
-
-        .popup-description {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 0.75rem;
-        }
-
-        .popup-link {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--navy);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .popup-link:hover {
-            background: var(--navy-dark);
-        }
+        .pac-item:hover { background: var(--gray-50) !important; }
+        .pac-item-selected { background: var(--gray-100) !important; }
 
         @media (max-width: 768px) {
-            #map {
-                height: 400px;
-            }
+            #map { height: 420px; }
         }
     </style>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -131,12 +141,23 @@
 
     <main class="main">
         <div class="container">
-            <div class="filters">
-                <button class="filter-btn active" data-type="all">Alle locaties</button>
-                <button class="filter-btn" data-type="wijnbar">🍾 Wijnbars</button>
-                <button class="filter-btn" data-type="wijnwinkel">🏪 Wijnwinkels</button>
-                <button class="filter-btn" data-type="wijnhuis">🏰 Wijnhuizen</button>
-                <button class="filter-btn" data-type="restaurant">🍽️ Restaurants</button>
+            <div class="map-controls">
+                <!-- Zoekbalk -->
+                <div class="map-search-wrapper">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    <input type="text" id="mapSearch" placeholder="Zoek een stad, buurt of adres…" autocomplete="off">
+                </div>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <button class="filter-btn active" data-type="all">Alle locaties</button>
+                    <button class="filter-btn" data-type="wijnbar">🍾 Wijnbars</button>
+                    <button class="filter-btn" data-type="wijnwinkel">🏪 Wijnwinkels</button>
+                    <button class="filter-btn" data-type="wijnhuis">🏰 Wijnhuizen</button>
+                    <button class="filter-btn" data-type="restaurant">🍽️ Restaurants</button>
+                </div>
             </div>
 
             <div class="map-container">
@@ -187,6 +208,6 @@
     </footer>
 
     <script src="map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7XhwbjOwiUGzJ_qpCFhhWHdNRogD1Vgo&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7XhwbjOwiUGzJ_qpCFhhWHdNRogD1Vgo&libraries=places&callback=initMap" async defer></script>
 </body>
 </html>

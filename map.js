@@ -20,6 +20,7 @@ function initMap() {
 
     infoWindow = new google.maps.InfoWindow();
     loadLocationsFromCMS();
+    initSearch();
 }
 
 async function loadLocationsFromCMS() {
@@ -131,6 +132,32 @@ function fitMapToMarkers() {
     const bounds = new google.maps.LatLngBounds();
     markers.forEach(marker => bounds.extend(marker.getPosition()));
     map.fitBounds(bounds);
+}
+
+function initSearch() {
+    const input = document.getElementById('mapSearch');
+    if (!input) return;
+
+    const autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ['geocode', 'establishment'],
+        componentRestrictions: { country: [] }, // worldwide
+        fields: ['geometry', 'name']
+    });
+
+    autocomplete.addListener('place_changed', () => {
+        const place = autocomplete.getPlace();
+        if (!place.geometry || !place.geometry.location) return;
+
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(14);
+        }
+
+        // Clear input after short delay so dropdown closes cleanly
+        setTimeout(() => { input.value = ''; }, 300);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
