@@ -29,7 +29,28 @@ async function loadIntroText() {
             const data = await response.json();
             const introEl = document.getElementById('pageIntro');
             if (introEl && data.intro) {
-                introEl.innerHTML = `<p>${data.intro}</p>`;
+                const text = data.intro;
+                // Split into first 2 sentences and remainder
+                const sentenceEnd = text.indexOf('. ', text.indexOf('. ') + 1);
+                const preview = sentenceEnd > 0 ? text.substring(0, sentenceEnd + 1) : text;
+                const rest = sentenceEnd > 0 ? text.substring(sentenceEnd + 1).trim() : '';
+
+                if (rest) {
+                    introEl.innerHTML = `
+                        <p id="introPreview">${preview}</p>
+                        <span id="introMore" style="display:none;"><p>${rest}</p></span>
+                        <button id="introToggle" class="intro-toggle">Lees meer ↓</button>
+                    `;
+                    document.getElementById('introToggle').addEventListener('click', () => {
+                        const more = document.getElementById('introMore');
+                        const btn = document.getElementById('introToggle');
+                        const expanded = more.style.display === 'none';
+                        more.style.display = expanded ? 'block' : 'none';
+                        btn.textContent = expanded ? 'Lees minder ↑' : 'Lees meer ↓';
+                    });
+                } else {
+                    introEl.innerHTML = `<p>${text}</p>`;
+                }
             }
         }
     } catch (error) {
