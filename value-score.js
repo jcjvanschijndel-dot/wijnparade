@@ -98,7 +98,8 @@ async function loadWines() {
             color: findCol(headers, ['kleur', 'color', 'type']),
             price: findCol(headers, ['prijs', 'price']),
             value_score: findCol(headers, ['value score', 'valuescore', 'value_score', 'score']),
-            rating: findCol(headers, ['gem. rating', 'gem rating', 'gemiddelde rating', 'rating', 'avg rating'])
+            rating: findCol(headers, ['gem. rating', 'gem rating', 'gemiddelde rating', 'rating', 'avg rating']),
+            url: findCol(headers, ['url', 'link', 'affiliate', 'bestellink', 'bestel link'])
         };
         console.log('Column mapping:', colMap);
 
@@ -117,7 +118,8 @@ async function loadWines() {
                 color: rawColor ? rawColor.charAt(0).toUpperCase() + rawColor.slice(1).toLowerCase() : '',
                 price: parseNumber(getCell(row, colMap.price)),
                 value_score: parseNumber(getCell(row, colMap.value_score)),
-                rating: parseNumber(getCell(row, colMap.rating))
+                rating: parseNumber(getCell(row, colMap.rating)),
+                url: getCell(row, colMap.url)
             };
             
             // Skip rows without a name
@@ -158,7 +160,8 @@ async function loadWinesFromCMS() {
             ...w,
             price: parseFloat(w.price) || 0,
             value_score: parseFloat(w.value_score) || 0,
-            rating: parseFloat(w.rating) || 0
+            rating: parseFloat(w.rating) || 0,
+            url: w.url || ''
         }));
 
         populateFilters();
@@ -378,10 +381,12 @@ function renderCards() {
                 <span class="wine-card-tag">${wine.region}</span>
                 <span class="wine-card-tag">${wine.country}</span>
             </div>
-            <div class="wine-card-meta" style="margin-top: 0.5rem;">
-                ${wine.rating ? `<span style="color: var(--gray-600); font-size: 0.85rem;">Gem. Rating: <strong>${wine.rating}</strong></span>` : ''}
-                <span style="color: var(--gray-600); font-size: 0.85rem;">Value Score:</span>
-                <span class="value-score-inline">${wine.value_score}</span>
+            <div class="wine-card-footer">
+                <div>
+                    ${wine.rating ? `<span style="color: var(--gray-600); font-size: 0.85rem;">Gem. Rating: <strong>${wine.rating}</strong></span>` : ''}
+                    <span style="color: var(--gray-600); font-size: 0.85rem; margin-left: 0.5rem;">Value Score: <strong>${wine.value_score}</strong></span>
+                </div>
+                ${wine.url ? `<a href="${wine.url}" target="_blank" rel="noopener noreferrer" class="buy-btn">Bestellen →</a>` : ''}
             </div>
         </div>
     `).join('');
@@ -400,6 +405,7 @@ function renderTable() {
             <td>${wine.rating || '—'}</td>
             <td class="wine-price">€${wine.price.toFixed(2)}</td>
             <td><strong>${wine.value_score}</strong></td>
+            <td>${wine.url ? `<a href="${wine.url}" target="_blank" rel="noopener noreferrer" class="buy-btn">Bestellen →</a>` : ''}</td>
         </tr>
     `).join('');
 }
