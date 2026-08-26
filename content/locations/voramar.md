@@ -16,5 +16,5 @@ description: >-
 
   Alles draait om twee unieke tasting menu's — Petit Voramar en Gran Voramar — gebaseerd op een eigentijdse versie van de traditionele keuken, beide beginnen met een amuse-sectie genaamd Vora. De keuken, in handen van jonge chefs Guillem Gavilán en Pau Jamàs, toont enthousiasme, technische expertise en creativiteit — met seizoensgebonden producten en gerechten die vlees en vis/zeevruchten combineren, zoals Cap i Pota kalfsvlees met Mediterrane rode tonijn. De wijnkaart telt meer dan 250 referenties, zorgvuldig samengesteld om elk gerecht optimaal te begeleiden.
 image: /uploads/voramar.webp
-website: estaurantvoramar.com
+website: https://www.voramarportbou.com/
 ---
