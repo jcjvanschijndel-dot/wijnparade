@@ -251,104 +251,40 @@ function convertValue(val) {
 }
 
 // ============================================================
-// REGIO PAGINA'S GENEREREN
+// REGIO PAGINA'S GENEREREN (gelezen uit content/regions/*.md)
 // ============================================================
 
-const REGIONS = [
-  { id: 'rioja', name: 'Rioja', country: 'Spanje', emoji: '🍷',
-    description: 'La Rioja is het bekendste wijngebied van Spanje, thuisbasis van de grote Reserva- en Gran Reserva-wijnen van Tempranillo. Het gebied strekt zich uit langs de Ebro-rivier en herbergt iconische bodegas als Marqués de Murrieta, Muga, Marqués de Riscal en Bodegas Ysios. De hoofdstad Logroño is een must voor tapas en wijn. Het nabijgelegen Laguardia is een van de mooiste ommuurde steden van Spanje.',
-    centerLat: 42.50, centerLng: -2.65, zoom: 11,
-    bounds: { minLat: 42.3, maxLat: 42.7, minLng: -3.2, maxLng: -2.0 } },
+// Lees regio-definities uit CMS markdown bestanden
+const regionsContentPath = path.join(CONTENT_DIR, 'regions');
+let REGIONS = [];
+if (fs.existsSync(regionsContentPath)) {
+  const regionFiles = fs.readdirSync(regionsContentPath).filter(f => f.endsWith('.md'));
+  for (const file of regionFiles) {
+    const raw = fs.readFileSync(path.join(regionsContentPath, file), 'utf8');
+    const parsed = parseFrontmatter(raw);
+    if (!parsed || !parsed.name) continue;
+    REGIONS.push({
+      id: file.replace('.md', ''),
+      name: parsed.name,
+      country: parsed.country || '',
+      emoji: parsed.emoji || '🍷',
+      description: parsed.description || '',
+      centerLat: parseFloat(parsed.centerLat) || 0,
+      centerLng: parseFloat(parsed.centerLng) || 0,
+      zoom: parseInt(parsed.zoom) || 10,
+      bounds: {
+        minLat: parseFloat(parsed.minLat) || 0,
+        maxLat: parseFloat(parsed.maxLat) || 0,
+        minLng: parseFloat(parsed.minLng) || 0,
+        maxLng: parseFloat(parsed.maxLng) || 0,
+      }
+    });
+  }
+  console.log(`  📖 ${REGIONS.length} regio-definities gelezen uit CMS`);
+} else {
+  console.log('  ⚠️  content/regions/ map niet gevonden, geen regiogidsen gegenereerd');
+}
 
-  { id: 'ribera-del-duero', name: 'Ribera del Duero', country: 'Spanje', emoji: '🏰',
-    description: 'Ribera del Duero is een van de meest opwindende wijngebieden van Spanje, op 850 meter hoogte langs de Duero-rivier. Krachtige rode wijnen van Tempranillo (hier Tinto Fino) met als absolute topnamen Vega Sicilia en Pago de Carraovejas. Combineer een bezoek met het middeleeuwse Peñafiel en de historische stad Segovia.',
-    centerLat: 41.62, centerLng: -4.20, zoom: 10,
-    bounds: { minLat: 41.3, maxLat: 41.9, minLng: -4.6, maxLng: -3.7 } },
-
-  { id: 'costa-brava', name: 'Costa Brava & Empordà', country: 'Spanje', emoji: '🌊',
-    description: 'De Costa Brava combineert dramatische rotsige kustlijn, middeleeuwse dorpjes en de DO Empordà — een van de meest opwindende wijnregio\'s van Catalonië. Avantgardistische wijnmakers werken hier met inheemse druivenrassen als Garnacha en Cariñena. Girona, Pals en Begur zijn ideale uitvalsbases. De regio heeft ook enkele van Spanje\'s beste Michelin-sterrenrestaurants.',
-    centerLat: 41.95, centerLng: 3.00, zoom: 10,
-    bounds: { minLat: 41.7, maxLat: 42.5, minLng: 2.6, maxLng: 3.4 } },
-
-  { id: 'mallorca', name: 'Mallorca', country: 'Spanje', emoji: '🏝️',
-    description: 'Mallorca heeft een bloeiende wijntraditie met lokale druivenrassen als Callet, Mantonegro en Prensal. De bodegas in de vallei van Binissalem en op de hellingen van de Tramuntana produceren wijnen die steeds meer internationaal erkenning krijgen. Combineer wijnbezoeken met de prachtige dorpjes van het binnenland en de verstilde baaien van de westkust.',
-    centerLat: 39.65, centerLng: 2.85, zoom: 10,
-    bounds: { minLat: 39.2, maxLat: 40.1, minLng: 2.4, maxLng: 3.5 } },
-
-  { id: 'malaga', name: 'Málaga & Costa del Sol', country: 'Spanje', emoji: '☀️',
-    description: 'Málaga heeft een verrassend rijke wijncultuur: van zoete Moscatel tot frisse bergwijnen van Ronda en de Axarquía. De stad zelf bruist van wijnbars die ver uitstijgen boven het toeristenniveau. Combineer een bezoek aan de historische binnenstad met uitstapjes naar de bodegas in het achterland en de pittoreske witte dorpen van Andalusië.',
-    centerLat: 36.72, centerLng: -4.70, zoom: 10,
-    bounds: { minLat: 36.3, maxLat: 37.0, minLng: -5.3, maxLng: -3.8 } },
-
-  { id: 'bordeaux', name: 'Bordeaux', country: 'Frankrijk', emoji: '🏯',
-    description: 'Bordeaux is de wijnhoofdstad van de wereld, thuisbasis van de legendarische châteaux van Médoc, Saint-Émilion en Pomerol. Naast de iconic grands crus zijn er de zoete dessertwijnen van Sauternes en onontdekte parels vlak bij de stad. De Route des Châteaux langs de D2 is een bedevaart voor elke wijnliefhebber.',
-    centerLat: 44.85, centerLng: -0.50, zoom: 10,
-    bounds: { minLat: 44.4, maxLat: 45.3, minLng: -1.0, maxLng: -0.1 } },
-
-  { id: 'bourgogne', name: 'Bourgogne', country: 'Frankrijk', emoji: '🍇',
-    description: 'Bourgogne is het Mekka voor wijnliefhebbers: delicate Pinot Noirs van Gevrey-Chambertin, minerale Chardonnays van Meursault, grote wijnbars van Beaune. De Route des Grands Crus door de Côte d\'Or is een bedevaart waard. Vertrek vanuit Beaune en rij langs de meest waardevolle stukjes grond ter wereld.',
-    centerLat: 47.05, centerLng: 4.85, zoom: 10,
-    bounds: { minLat: 46.7, maxLat: 47.9, minLng: 3.7, maxLng: 5.3 } },
-
-  { id: 'champagne', name: 'Champagne', country: 'Frankrijk', emoji: '🥂',
-    description: 'De Champagnestreek rond Reims en Épernay is het enige gebied ter wereld dat echte Champagne produceert. Van de grote huizen op de Avenue de Champagne tot de kleine growers die hun terroir in de fles stoppen — een bezoek aan Champagne is onvergetelijk. Hautvillers, waar Dom Pérignon werkte, is een korte fietstocht van Épernay.',
-    centerLat: 49.08, centerLng: 3.97, zoom: 11,
-    bounds: { minLat: 48.9, maxLat: 49.4, minLng: 3.6, maxLng: 4.3 } },
-
-  { id: 'rhone-noord', name: 'Noordelijke Rhône', country: 'Frankrijk', emoji: '⛰️',
-    description: 'De Noordelijke Rhône is het koninkrijk van Syrah en Viognier. Op steile graniethellingen boven de rivier groeien de druiven voor Hermitage, Côte-Rôtie en Condrieu. Tain-l\'Hermitage is het wijncentrum; M. Chapoutier en E. Guigal zijn de grootste namen. De omgeving combineert prachtig met een tussenstop in Lyon.',
-    centerLat: 45.10, centerLng: 4.84, zoom: 11,
-    bounds: { minLat: 44.9, maxLat: 45.7, minLng: 4.6, maxLng: 5.0 } },
-
-  { id: 'douro', name: 'Douro & Porto', country: 'Portugal', emoji: '🚢',
-    description: 'De Douro-vallei is een van de meest spectaculaire wijnlandschappen ter wereld, met terrassen als treden in de steile rivieroever. Thuisbasis van port én van droge tafelwijnen die steeds meer internationaal worden gewaardeerd. Porto aan de monding is het perfecte startpunt: lively, betaalbaar en vol port lodges in Vila Nova de Gaia.',
-    centerLat: 41.18, centerLng: -7.65, zoom: 10,
-    bounds: { minLat: 40.9, maxLat: 41.4, minLng: -8.8, maxLng: -7.3 } },
-
-  { id: 'toscane', name: 'Toscane', country: 'Italië', emoji: '🌿',
-    description: 'Toscane is het schilderachtigste wijngebied van Italië: ronde heuvels, cipressenlanen en middeleeuwse burchten als decor voor Chianti Classico, Brunello di Montalcino en Bolgheri. Een wijnreis door Toscane is tegelijk een cultuurtrip van formaat. Florence, Siena en de kleine borghetti zijn allemaal op rijafstand.',
-    centerLat: 43.30, centerLng: 11.30, zoom: 9,
-    bounds: { minLat: 42.6, maxLat: 44.0, minLng: 10.5, maxLng: 12.3 } },
-
-  { id: 'piemonte', name: 'Piemonte & Langhe', country: 'Italië', emoji: '🍄',
-    description: 'Piemonte is de Bourgogne van Italië: gefragmenteerde wijngaarden, Nebbiolo als koningsdruf en wijnen die pas na jaren rijpen. De heuvels van de Langhe rond Alba zijn doordrenkt van truffel en tannine. Barolo, Barbaresco, Barbera en Dolcetto — combineer een wijnreis met truffelmarkt en Piemontese keuken.',
-    centerLat: 44.68, centerLng: 8.00, zoom: 11,
-    bounds: { minLat: 44.3, maxLat: 45.1, minLng: 7.6, maxLng: 8.5 } },
-
-  { id: 'alto-adige', name: 'Alto Adige / Südtirol', country: 'Italië', emoji: '🏔️',
-    description: 'Alto Adige is Italië\'s meest noordelijke wijnstreek, ingeklemd tussen de Dolomieten. De combinatie van Alpenklimaat en mediterrane zon geeft aromatische witte wijnen van Pinot Grigio, Gewürztraminer en de inheemse Lagrein. Merano en Bolzano zijn de perfecte uitvalsbases voor wijnbezoeken gecombineerd met bergwandelingen.',
-    centerLat: 46.50, centerLng: 11.25, zoom: 10,
-    bounds: { minLat: 46.2, maxLat: 46.9, minLng: 10.8, maxLng: 11.9 } },
-
-  { id: 'mosel', name: 'Moezel', country: 'Duitsland', emoji: '🏞️',
-    description: 'De Moezel slingert door een van de meest spectaculaire wijnlandschappen van Europa. Op steile leistenen hellingen aan beide zijden van de rivier groeit de werelds beste Riesling — elegant, laag in alcohol en met een levensduur van decennia. Bernkastel-Kues is het kloppende hart; de Rotweinwanderweg in de Ahr loopt er vlakbij.',
-    centerLat: 49.92, centerLng: 7.06, zoom: 10,
-    bounds: { minLat: 49.6, maxLat: 50.2, minLng: 6.5, maxLng: 7.3 } },
-  { id: 'ahr', name: 'Ahr', country: 'Duitsland', emoji: '🍷',
-    description: 'De Ahr is de meest noordelijke rode wijnregio ter wereld, een smal dal ingeklemd tussen de Eifel en de Westerwald. De steile leistenen hellingen produceren uitzonderlijke Spätburgunders die in klasse concurreren met Bourgognes van drie keer de prijs. De streek is hard getroffen door de overstromingen van 2021 maar veerkrachtig herboren — een bezoek voelt als een ontdekking.',
-    centerLat: 50.53, centerLng: 7.08, zoom: 11,
-    bounds: { minLat: 50.45, maxLat: 50.60, minLng: 6.90, maxLng: 7.20 } },
-
-  { id: 'provence', name: 'Provence & Côte d\'Azur', country: 'Frankrijk', emoji: '🌿',
-    description: 'De Provence is de thuisbasis van de wereldberoemde Provençaalse rosé, maar biedt zoveel meer: de krachtige rode wijnen van Bandol, de frisse witte Cassis en de spectaculaire wijndomeinen van de Luberon. Combineer met de schilderachtige baaien van de Côte d\'Azur, de markten van Aix en de lavendelvelden van het achterland.',
-    centerLat: 43.45, centerLng: 5.80, zoom: 9,
-    bounds: { minLat: 43.0, maxLat: 43.9, minLng: 5.0, maxLng: 7.2 } },
-
-  { id: 'loire', name: 'Loire', country: 'Frankrijk', emoji: '🏰',
-    description: 'De Loire-vallei is het langste wijngebied van Frankrijk en één van de meest diverse: van droge Muscadet aan de monding tot zoete Vouvray en krachtige Saumur-Champigny in het midden, en de mineralige Sancerre en Pouilly-Fumé in het oosten. De rivier stroomt langs een eindeloze rij kastelen en middeleeuwse dorpjes.',
-    centerLat: 47.30, centerLng: -0.50, zoom: 9,
-    bounds: { minLat: 47.0, maxLat: 47.6, minLng: -2.0, maxLng: 1.0 } },
-
-  { id: 'baskenland', name: 'Baskenland', country: 'Spanje', emoji: '🦑',
-    description: 'Het Baskenland is Spanje\'s culinaire hoofdstad, thuisbasis van de pintxo-cultuur en de beste restaurantscene per hoofd van de bevolking ter wereld. San Sebastián heeft meer Michelin-sterren per km² dan welke stad ook. De lokale Txakoli — licht mousserend, fris en laag in alcohol — is het perfecte aperitief bij verse zeevruchten uit de Golf van Biskaje.',
-    centerLat: 43.31, centerLng: -2.00, zoom: 10,
-    bounds: { minLat: 43.0, maxLat: 43.5, minLng: -2.5, maxLng: -1.5 } },
-
-  { id: 'griekenland', name: 'Griekenland', country: 'Griekenland', emoji: '🏛️',
-    description: 'Griekenland heeft een van de oudste wijntraditities ter wereld, maar de moderne Griekse wijnrenaissance is pas recent ontdekt door de rest van Europa. Santorini met zijn vulkanische Assyrtiko, Kreta met zijn Kotsifali en Vidiano, en Athene als levendige hoofdstad met een groeiende wijnbarscene — Griekenland verrast elke wijnliefhebber.',
-    centerLat: 37.80, centerLng: 23.80, zoom: 7,
-    bounds: { minLat: 34.0, maxLat: 42.0, minLng: 19.0, maxLng: 28.5 } },
-];
 
 const SITE_URL_REGIONS = 'https://wijn-parade.nl';
 const regioDir = path.join(__dirname, 'regio');
