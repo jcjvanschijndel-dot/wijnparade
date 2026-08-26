@@ -36,7 +36,7 @@ collections:
     folder: "content/toplists"
     create: true
     identifier_field: name
-    slug: "{{name}}"
+    slug: "{{slug}}"
     summary: "{{name}}"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
@@ -49,7 +49,7 @@ collections:
     folder: "content/travelguides"
     create: true
     identifier_field: name
-    slug: "{{name}}"
+    slug: "{{slug}}"
     summary: "{{name}}"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
@@ -62,7 +62,7 @@ collections:
     folder: "content/favorites"
     create: true
     identifier_field: name
-    slug: "{{name}}"
+    slug: "{{slug}}"
     summary: "{{name}} - {{producer}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
@@ -80,7 +80,7 @@ collections:
     folder: "content/value-scores"
     create: true
     identifier_field: name
-    slug: "{{name}}"
+    slug: "{{slug}}"
     summary: "{{name}} - Score: {{value_score}}"
     fields:
       - {label: "Wijn Naam", name: "name", widget: "string"}
@@ -97,7 +97,7 @@ collections:
     folder: "content/locations"
     create: true
     identifier_field: name
-    slug: "{{name}}"
+    slug: "{{slug}}"
     summary: "{{name}} ({{type}})"
     fields:
       - {label: "Naam", name: "name", widget: "string"}
@@ -115,7 +115,7 @@ collections:
     folder: "content/dishes-pairing"
     create: true
     identifier_field: dish
-    slug: "{{dish}}"
+    slug: "{{slug}}"
     summary: "{{dish}}"
     fields:
       - {label: "Gerecht Naam", name: "dish", widget: "string"}
@@ -132,7 +132,7 @@ collections:
     folder: "content/wines-pairing"
     create: true
     identifier_field: wine
-    slug: "{{wine}}"
+    slug: "{{slug}}"
     summary: "{{wine}}"
     fields:
       - {label: "Wijn Naam", name: "wine", widget: "string"}
@@ -141,3 +141,24 @@ collections:
         widget: "list"
         fields:
           - {label: "Gerecht", name: "dish", widget: "string"}
+
+  # Regiogidsen
+  - name: "regions"
+    label: "Regiogidsen"
+    folder: "content/regions"
+    create: true
+    identifier_field: name
+    slug: "{{name}}"
+    summary: "{{emoji}} {{name}} ({{country}})"
+    fields:
+      - {label: "Naam", name: "name", widget: "string"}
+      - {label: "Land", name: "country", widget: "string"}
+      - {label: "Emoji", name: "emoji", widget: "string", default: "🍷"}
+      - {label: "Omschrijving", name: "description", widget: "text"}
+      - {label: "Center Breedtegraad", name: "centerLat", widget: "number", value_type: "float"}
+      - {label: "Center Lengtegraad", name: "centerLng", widget: "number", value_type: "float"}
+      - {label: "Kaart Zoom", name: "zoom", widget: "number", default: 10, value_type: "int"}
+      - {label: "Grens Min. Breedtegraad", name: "minLat", widget: "number", value_type: "float"}
+      - {label: "Grens Max. Breedtegraad", name: "maxLat", widget: "number", value_type: "float"}
+      - {label: "Grens Min. Lengtegraad", name: "minLng", widget: "number", value_type: "float"}
+      - {label: "Grens Max. Lengtegraad", name: "maxLng", widget: "number", value_type: "float"}
