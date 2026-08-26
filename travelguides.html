@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#1e3a8a">
     <title>Wijnreisgidsen | de_wijnparade</title>
-    <meta name="description" content="Ontdek de beste wijnregio's van Europa. Regiogidsen met wijnhuizen, restaurants en wijnbars per bestemming.">
+    <meta name="description" content="Ontdek de beste wijnregio's van Europa per land, gesorteerd op afstand vanuit Utrecht.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -13,121 +13,87 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <style>
-        .page-header {
-            margin-bottom: 2rem;
-        }
-        .page-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
-        }
-        .page-subtitle {
-            color: var(--gray-600);
-            font-size: 1rem;
-        }
-        .regions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.25rem;
-            margin-bottom: 3rem;
-        }
-        .region-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: 14px;
-            padding: 1.5rem;
-            text-decoration: none;
-            color: inherit;
+        .page-title { font-size: 1.75rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+        .page-subtitle { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+        .filters-bar {
             display: flex;
-            flex-direction: column;
             gap: 0.75rem;
-            transition: all 0.25s ease;
-            position: relative;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding: 1rem 1.25rem;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            align-items: flex-end;
         }
-        .region-card:hover {
-            border-color: var(--navy);
-            box-shadow: 0 6px 20px rgba(30,58,138,0.1);
-            transform: translateY(-2px);
+        .filter-item { display: flex; flex-direction: column; gap: 0.3rem; flex: 1; min-width: 140px; }
+        .filter-item label { font-size: 0.8rem; font-weight: 500; color: var(--gray-900); }
+        .filter-item select {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.875rem;
+            background: var(--white);
+            color: var(--gray-900);
         }
-        .region-card-top {
+        .filter-item select:focus { outline: none; border-color: var(--navy); }
+
+        .country-group { margin-bottom: 2.5rem; }
+        .country-heading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-600);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .country-regions { display: flex; flex-direction: column; }
+
+        .region-row {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 1rem;
+            gap: 1.5rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--gray-200);
         }
-        .region-emoji {
-            font-size: 2rem;
-            line-height: 1;
+        .region-row-left { flex: 1; min-width: 0; }
+        .region-row-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.4rem; }
+        .region-row-emoji { font-size: 1.4rem; flex-shrink: 0; }
+        .region-row-name { font-weight: 600; font-size: 1rem; color: var(--navy); }
+        .region-row-meta { font-size: 0.78rem; color: var(--gray-600); margin-top: 0.1rem; }
+        .region-row-intro { font-size: 0.875rem; line-height: 1.65; color: var(--gray-900); margin: 0; }
+
+        .region-row-actions { display: flex; flex-direction: column; gap: 0.5rem; flex-shrink: 0; }
+        .region-btn-primary {
+            display: block; padding: 0.45rem 1rem;
+            background: var(--navy); color: #fff;
+            border-radius: 7px; font-size: 0.83rem; font-weight: 500;
+            text-decoration: none; text-align: center; white-space: nowrap;
+            transition: background 0.2s;
         }
-        .region-count {
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--gray-600);
-            background: var(--gray-100);
-            padding: 0.2rem 0.6rem;
-            border-radius: 50px;
-            white-space: nowrap;
-        }
-        .region-name {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--navy);
-        }
-        .region-country {
-            font-size: 0.85rem;
-            color: var(--gray-600);
-            margin-top: -0.25rem;
-        }
-        .region-desc {
-            font-size: 0.88rem;
-            line-height: 1.65;
-            color: var(--gray-900);
-            flex: 1;
-        }
-        .region-card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.5rem;
-            margin-top: 0.25rem;
-        }
-        .region-card-link {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--navy);
-        }
-        .region-map-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            font-size: 0.82rem;
-            color: var(--gray-600);
-            text-decoration: none;
-            padding: 0.3rem 0.7rem;
-            border: 1px solid var(--gray-200);
-            border-radius: 6px;
+        .region-btn-primary:hover { background: #1e40af; }
+        .region-btn-map {
+            display: block; padding: 0.45rem 1rem;
+            background: var(--gray-50); color: var(--gray-900);
+            border: 1px solid var(--gray-200); border-radius: 7px;
+            font-size: 0.83rem; font-weight: 500;
+            text-decoration: none; text-align: center; white-space: nowrap;
             transition: all 0.2s;
         }
-        .region-map-link:hover {
-            background: var(--gray-50);
-            border-color: var(--navy);
-            color: var(--navy);
-        }
-        .empty-state {
-            padding: 3rem;
-            text-align: center;
-            color: var(--gray-600);
-            background: var(--gray-50);
-            border-radius: 12px;
-            border: 1px solid var(--gray-200);
-        }
+        .region-btn-map:hover { background: var(--gray-100); }
+
         @media (max-width: 600px) {
-            .regions-grid { grid-template-columns: 1fr; }
+            .region-row { flex-direction: column; gap: 0.75rem; }
+            .region-row-actions { flex-direction: row; }
+            .filters-bar { gap: 0.5rem; }
         }
     </style>
 </head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -147,16 +113,29 @@
 
     <main class="main">
         <div class="container">
-            <div class="page-header">
-                <h1 class="page-title">🌍 Wijnreisgidsen</h1>
-                <p class="page-subtitle">Ontdek de beste wijnhuizen, restaurants en wijnbars per regio.</p>
+            <h1 class="page-title">🌍 Wijnreisgidsen</h1>
+            <p class="page-subtitle">De beste wijnhuizen, restaurants en wijnbars per regio.</p>
+
+            <div class="filters-bar">
+                <div class="filter-item">
+                    <label for="filterCountry">Land</label>
+                    <select id="filterCountry">
+                        <option value="">Alle landen</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="filterDistance">Max. afstand vanuit Utrecht</label>
+                    <select id="filterDistance">
+                        <option value="">Alle afstanden</option>
+                        <option value="500">≤ 500 km</option>
+                        <option value="1000">≤ 1.000 km</option>
+                        <option value="1500">≤ 1.500 km</option>
+                        <option value="2000">≤ 2.000 km</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="regions-grid" id="regionsGrid"></div>
-
-            <div id="emptyState" class="empty-state" style="display:none;">
-                <p>Regiogidsen worden geladen tijdens de volgende deploy.</p>
-            </div>
+            <div id="regionsList"></div>
         </div>
     </main>
 

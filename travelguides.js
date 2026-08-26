@@ -1,37 +1,105 @@
+const UTRECHT = { lat: 52.0907, lng: 5.1214 };
+
+function haversineKm(lat1, lng1, lat2, lng2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLng/2)**2;
+    return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)) / 50) * 50;
+}
+
+let allRegions = [];
+
 document.addEventListener('DOMContentLoaded', async function() {
     try {
         const response = await fetch('/content/regions/_index.json');
         if (!response.ok) { showEmpty(); return; }
-        const regions = await response.json();
-        if (!regions || regions.length === 0) { showEmpty(); return; }
-        renderRegions(regions);
-    } catch(e) {
-        showEmpty();
-    }
+        allRegions = await response.json();
+        allRegions = allRegions
+            .filter(r => r.locationCount > 0)
+            .map(r => ({ ...r, km: haversineKm(UTRECHT.lat, UTRECHT.lng, r.centerLat, r.centerLng) }));
+
+        if (!allRegions.length) { showEmpty(); return; }
+
+        populateFilters();
+        setupFilters();
+        render();
+    } catch(e) { showEmpty(); }
 });
 
-function renderRegions(regions) {
-    const grid = document.getElementById('regionsGrid');
-    grid.innerHTML = regions
-        .filter(r => r.locationCount > 0)
-        .sort((a, b) => b.locationCount - a.locationCount)
-        .map(r => `
-        <a href="${r.url}" class="region-card">
-            <div class="region-card-top">
-                <span class="region-emoji">${r.emoji}</span>
-                <span class="region-count">${r.locationCount} locaties</span>
+function populateFilters() {
+    const countries = [...new Set(allRegions.map(r => r.country))].sort();
+    const sel = document.getElementById('filterCountry');
+    countries.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        sel.appendChild(opt);
+    });
+}
+
+function setupFilters() {
+    document.getElementById('filterCountry').addEventListener('change', render);
+    document.getElementById('filterDistance').addEventListener('change', render);
+}
+
+function getFiltered() {
+    const country = document.getElementById('filterCountry').value;
+    const maxKm = parseInt(document.getElementById('filterDistance').value) || Infinity;
+    return allRegions.filter(r =>
+        (!country || r.country === country) && r.km <= maxKm
+    );
+}
+
+function render() {
+    const filtered = getFiltered();
+    const container = document.getElementById('regionsList');
+
+    if (!filtered.length) {
+        container.innerHTML = '<p style="color:var(--text-secondary);padding:2rem 0;text-align:center;">Geen regio\'s gevonden voor deze filters.</p>';
+        return;
+    }
+
+    // Group by country, sort countries by nearest region
+    const byCountry = {};
+    filtered.forEach(r => {
+        if (!byCountry[r.country]) byCountry[r.country] = [];
+        byCountry[r.country].push(r);
+    });
+
+    // Sort each country's regions by distance
+    Object.values(byCountry).forEach(list => list.sort((a,b) => a.km - b.km));
+
+    // Sort countries by their nearest region
+    const sortedCountries = Object.keys(byCountry).sort((a,b) =>
+        byCountry[a][0].km - byCountry[b][0].km
+    );
+
+    container.innerHTML = sortedCountries.map(country => `
+        <div class="country-group">
+            <h2 class="country-heading">${country}</h2>
+            <div class="country-regions">
+                ${byCountry[country].map(r => `
+                <div class="region-row">
+                    <div class="region-row-left">
+                        <div class="region-row-header">
+                            <span class="region-row-emoji">${r.emoji}</span>
+                            <div>
+                                <div class="region-row-name">${r.name}</div>
+                                <div class="region-row-meta">±${r.km} km van Utrecht &middot; ${r.locationCount} locaties</div>
+                            </div>
+                        </div>
+                        <p class="region-row-intro">${r.description.split('.').slice(0,2).join('.')}.</p>
+                    </div>
+                    <div class="region-row-actions">
+                        <a href="${r.url}" class="region-btn-primary">Bekijk gids →</a>
+                        <a href="${r.mapUrl}" class="region-btn-map">🗺️ Kaart</a>
+                    </div>
+                </div>`).join('')}
             </div>
-            <div class="region-name">${r.name}</div>
-            <div class="region-country">${r.country}</div>
-            <div class="region-desc">${r.description.substring(0, 140)}…</div>
-            <div class="region-card-footer">
-                <span class="region-card-link">Bekijk regiogids →</span>
-                <a href="${r.mapUrl}" class="region-map-link" onclick="event.stopPropagation()">🗺️ Op kaart</a>
-            </div>
-        </a>`).join('');
+        </div>`).join('');
 }
 
 function showEmpty() {
-    document.getElementById('regionsGrid').style.display = 'none';
-    document.getElementById('emptyState').style.display = 'block';
+    document.getElementById('regionsList').innerHTML =
+        '<p style="color:var(--text-secondary);padding:2rem 0;text-align:center;">Regiogidsen worden geladen tijdens de volgende deploy.</p>';
 }
