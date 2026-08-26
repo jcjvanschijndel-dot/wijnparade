@@ -4,21 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#1e3a8a">
-    <title>Reisgidsen | de_wijnparade</title>
+    <title>Wijnreisgidsen | de_wijnparade</title>
+    <meta name="description" content="Ontdek de beste wijnregio's van Europa. Regiogidsen met wijnhuizen, restaurants en wijnbars per bestemming.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="guides-table.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></head>
-    <!-- Google tag (gtag.js) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <style>
+        .page-header {
+            margin-bottom: 2rem;
+        }
+        .page-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .page-subtitle {
+            color: var(--gray-600);
+            font-size: 1rem;
+        }
+        .regions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 3rem;
+        }
+        .region-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 14px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+        .region-card:hover {
+            border-color: var(--navy);
+            box-shadow: 0 6px 20px rgba(30,58,138,0.1);
+            transform: translateY(-2px);
+        }
+        .region-card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .region-emoji {
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .region-count {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            background: var(--gray-100);
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+        .region-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .region-country {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin-top: -0.25rem;
+        }
+        .region-desc {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--gray-900);
+            flex: 1;
+        }
+        .region-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            margin-top: 0.25rem;
+        }
+        .region-card-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .region-map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.82rem;
+            color: var(--gray-600);
+            text-decoration: none;
+            padding: 0.3rem 0.7rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .region-map-link:hover {
+            background: var(--gray-50);
+            border-color: var(--navy);
+            color: var(--navy);
+        }
+        .empty-state {
+            padding: 3rem;
+            text-align: center;
+            color: var(--gray-600);
+            background: var(--gray-50);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+        }
+        @media (max-width: 600px) {
+            .regions-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-57CJ2STYT6');
 </script>
 <body>
@@ -33,26 +147,15 @@
 
     <main class="main">
         <div class="container">
-            <!-- Cards (Mobile) -->
-            <div class="guides-cards" id="guidesCards"></div>
-
-            <!-- Table (Desktop) -->
-            <div class="guides-table-wrapper">
-                <table class="guides-table" id="guidesTable">
-                    <thead>
-                        <tr>
-                            <th>Reisgids</th>
-                            <th>Download</th>
-                        </tr>
-                    </thead>
-                    <tbody id="guidesTableBody"></tbody>
-                </table>
+            <div class="page-header">
+                <h1 class="page-title">🌍 Wijnreisgidsen</h1>
+                <p class="page-subtitle">Ontdek de beste wijnhuizen, restaurants en wijnbars per regio.</p>
             </div>
 
-            <!-- Empty State -->
-            <div id="emptyState" class="empty-state" style="display: none;">
-                <p>Nog geen reisgidsen toegevoegd.</p>
-                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Voeg reisgidsen toe via het CMS (/admin)</p>
+            <div class="regions-grid" id="regionsGrid"></div>
+
+            <div id="emptyState" class="empty-state" style="display:none;">
+                <p>Regiogidsen worden geladen tijdens de volgende deploy.</p>
             </div>
         </div>
     </main>
@@ -67,7 +170,6 @@
                     <span>Volg de_wijnparade op Instagram</span>
                 </a>
             </div>
-
             <h2 class="form-title">💡 Geef je tips door!</h2>
             <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
             <form name="tips" method="POST" data-netlify="true" class="tips-form" action="/bedankt.html">

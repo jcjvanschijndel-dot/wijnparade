@@ -1,83 +1,37 @@
-// Load reisgidsen from local content index
 document.addEventListener('DOMContentLoaded', async function() {
     try {
-        const response = await fetch('/content/travelguides/_index.json');
-
-        if (!response.ok) {
-            showEmptyState();
-            return;
-        }
-
-        const guides = await response.json();
-
-        if (!guides || guides.length === 0) {
-            showEmptyState();
-            return;
-        }
-
-        // Sort by order, then name
-        guides.sort((a, b) => (a.order || 0) - (b.order || 0) || (a.name || '').localeCompare(b.name || '', 'nl'));
-
-        renderCards(guides);
-        renderTable(guides);
-
-    } catch (error) {
-        console.error('Error loading reisgidsen:', error);
-        showEmptyState();
+        const response = await fetch('/content/regions/_index.json');
+        if (!response.ok) { showEmpty(); return; }
+        const regions = await response.json();
+        if (!regions || regions.length === 0) { showEmpty(); return; }
+        renderRegions(regions);
+    } catch(e) {
+        showEmpty();
     }
 });
 
-function getFileType(filepath) {
-    if (!filepath) return '';
-    const ext = filepath.split('.').pop().toLowerCase();
-    if (ext === 'pdf') return 'PDF';
-    if (['xls', 'xlsx'].includes(ext)) return 'Excel';
-    return ext.toUpperCase();
-}
-
-function renderCards(guides) {
-    const container = document.getElementById('guidesCards');
-
-    container.innerHTML = guides.map(guide => {
-        const fileType = getFileType(guide.file);
-        const typeLabel = fileType ? `<span class="guide-file-type">${fileType}</span>` : '';
-
-        return `
-            <div class="guide-card">
-                <div class="guide-card-name">${guide.name}</div>
-                ${guide.file
-                    ? `<a href="${guide.file}" target="_blank" download class="guide-download-btn">Download ${typeLabel}</a>`
-                    : '<span style="color: var(--gray-600); font-size: 0.85rem;">Geen bestand</span>'
-                }
+function renderRegions(regions) {
+    const grid = document.getElementById('regionsGrid');
+    grid.innerHTML = regions
+        .filter(r => r.locationCount > 0)
+        .sort((a, b) => b.locationCount - a.locationCount)
+        .map(r => `
+        <a href="${r.url}" class="region-card">
+            <div class="region-card-top">
+                <span class="region-emoji">${r.emoji}</span>
+                <span class="region-count">${r.locationCount} locaties</span>
             </div>
-        `;
-    }).join('');
+            <div class="region-name">${r.name}</div>
+            <div class="region-country">${r.country}</div>
+            <div class="region-desc">${r.description.substring(0, 140)}…</div>
+            <div class="region-card-footer">
+                <span class="region-card-link">Bekijk regiogids →</span>
+                <a href="${r.mapUrl}" class="region-map-link" onclick="event.stopPropagation()">🗺️ Op kaart</a>
+            </div>
+        </a>`).join('');
 }
 
-function renderTable(guides) {
-    const tbody = document.getElementById('guidesTableBody');
-
-    tbody.innerHTML = guides.map(guide => {
-        const fileType = getFileType(guide.file);
-        const typeLabel = fileType ? `<span class="guide-file-type">${fileType}</span>` : '';
-
-        return `
-            <tr>
-                <td>${guide.name}</td>
-                <td>
-                    ${guide.file
-                        ? `<a href="${guide.file}" target="_blank" download class="guide-download-btn">Download ${typeLabel}</a>`
-                        : '<span style="color: var(--gray-600);">—</span>'
-                    }
-                </td>
-            </tr>
-        `;
-    }).join('');
-}
-
-function showEmptyState() {
+function showEmpty() {
+    document.getElementById('regionsGrid').style.display = 'none';
     document.getElementById('emptyState').style.display = 'block';
-    document.getElementById('guidesCards').style.display = 'none';
-    const tableWrapper = document.querySelector('.guides-table-wrapper');
-    if (tableWrapper) tableWrapper.style.display = 'none';
 }

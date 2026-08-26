@@ -6,9 +6,16 @@ let activeFilter = 'all';
 let infoWindow;
 
 function initMap() {
+    // Support URL params for region zoom: ?lat=X&lng=Y&zoom=Z
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramLat = parseFloat(urlParams.get('lat'));
+    const paramLng = parseFloat(urlParams.get('lng'));
+    const paramZoom = parseInt(urlParams.get('zoom')) || 10;
+    const hasParams = !isNaN(paramLat) && !isNaN(paramLng);
+
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 52.0, lng: 5.0 },
-        zoom: 7,
+        center: hasParams ? { lat: paramLat, lng: paramLng } : { lat: 52.0, lng: 5.0 },
+        zoom: hasParams ? paramZoom : 7,
         styles: [
             {
                 featureType: 'poi',
@@ -19,10 +26,10 @@ function initMap() {
     });
 
     infoWindow = new google.maps.InfoWindow();
-    loadLocationsFromCMS();
+    loadLocationsFromCMS(hasParams);
 }
 
-async function loadLocationsFromCMS() {
+async function loadLocationsFromCMS(skipFit = false) {
     try {
         const response = await fetch('/content/locations/_index.json');
         
@@ -58,7 +65,7 @@ async function loadLocationsFromCMS() {
         
         if (wineLocations.length > 0) {
             addMarkers(wineLocations);
-            fitMapToMarkers();
+            if (!skipFit) fitMapToMarkers();
         }
         
     } catch (error) {
@@ -115,7 +122,7 @@ function createInfoWindowContent(location) {
                 <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
                 <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
                 <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
-                <a href="/locations/${location.id}.html" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
+                <a href="location.html?id=${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
             </div>
         </div>
     `;
