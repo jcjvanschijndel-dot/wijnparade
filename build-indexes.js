@@ -324,6 +324,30 @@ const REGIONS = [
     description: 'De Moezel slingert door een van de meest spectaculaire wijnlandschappen van Europa. Op steile leistenen hellingen aan beide zijden van de rivier groeit de werelds beste Riesling — elegant, laag in alcohol en met een levensduur van decennia. Bernkastel-Kues is het kloppende hart; de Rotweinwanderweg in de Ahr loopt er vlakbij.',
     centerLat: 49.92, centerLng: 7.06, zoom: 10,
     bounds: { minLat: 49.6, maxLat: 50.2, minLng: 6.5, maxLng: 7.3 } },
+  { id: 'ahr', name: 'Ahr', country: 'Duitsland', emoji: '🍷',
+    description: 'De Ahr is de meest noordelijke rode wijnregio ter wereld, een smal dal ingeklemd tussen de Eifel en de Westerwald. De steile leistenen hellingen produceren uitzonderlijke Spätburgunders die in klasse concurreren met Bourgognes van drie keer de prijs. De streek is hard getroffen door de overstromingen van 2021 maar veerkrachtig herboren — een bezoek voelt als een ontdekking.',
+    centerLat: 50.53, centerLng: 7.08, zoom: 11,
+    bounds: { minLat: 50.45, maxLat: 50.60, minLng: 6.90, maxLng: 7.20 } },
+
+  { id: 'provence', name: 'Provence & Côte d\'Azur', country: 'Frankrijk', emoji: '🌿',
+    description: 'De Provence is de thuisbasis van de wereldberoemde Provençaalse rosé, maar biedt zoveel meer: de krachtige rode wijnen van Bandol, de frisse witte Cassis en de spectaculaire wijndomeinen van de Luberon. Combineer met de schilderachtige baaien van de Côte d\'Azur, de markten van Aix en de lavendelvelden van het achterland.',
+    centerLat: 43.45, centerLng: 5.80, zoom: 9,
+    bounds: { minLat: 43.0, maxLat: 43.9, minLng: 5.0, maxLng: 7.2 } },
+
+  { id: 'loire', name: 'Loire', country: 'Frankrijk', emoji: '🏰',
+    description: 'De Loire-vallei is het langste wijngebied van Frankrijk en één van de meest diverse: van droge Muscadet aan de monding tot zoete Vouvray en krachtige Saumur-Champigny in het midden, en de mineralige Sancerre en Pouilly-Fumé in het oosten. De rivier stroomt langs een eindeloze rij kastelen en middeleeuwse dorpjes.',
+    centerLat: 47.30, centerLng: -0.50, zoom: 9,
+    bounds: { minLat: 47.0, maxLat: 47.6, minLng: -2.0, maxLng: 1.0 } },
+
+  { id: 'baskenland', name: 'Baskenland', country: 'Spanje', emoji: '🦑',
+    description: 'Het Baskenland is Spanje\'s culinaire hoofdstad, thuisbasis van de pintxo-cultuur en de beste restaurantscene per hoofd van de bevolking ter wereld. San Sebastián heeft meer Michelin-sterren per km² dan welke stad ook. De lokale Txakoli — licht mousserend, fris en laag in alcohol — is het perfecte aperitief bij verse zeevruchten uit de Golf van Biskaje.',
+    centerLat: 43.31, centerLng: -2.00, zoom: 10,
+    bounds: { minLat: 43.0, maxLat: 43.5, minLng: -2.5, maxLng: -1.5 } },
+
+  { id: 'griekenland', name: 'Griekenland', country: 'Griekenland', emoji: '🏛️',
+    description: 'Griekenland heeft een van de oudste wijntraditities ter wereld, maar de moderne Griekse wijnrenaissance is pas recent ontdekt door de rest van Europa. Santorini met zijn vulkanische Assyrtiko, Kreta met zijn Kotsifali en Vidiano, en Athene als levendige hoofdstad met een groeiende wijnbarscene — Griekenland verrast elke wijnliefhebber.',
+    centerLat: 37.80, centerLng: 23.80, zoom: 7,
+    bounds: { minLat: 34.0, maxLat: 42.0, minLng: 19.0, maxLng: 28.5 } },
 ];
 
 const SITE_URL_REGIONS = 'https://wijn-parade.nl';
