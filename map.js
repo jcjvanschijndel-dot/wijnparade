@@ -20,7 +20,6 @@ function initMap() {
 
     infoWindow = new google.maps.InfoWindow();
     loadLocationsFromCMS();
-    initSearch();
 }
 
 async function loadLocationsFromCMS() {
@@ -116,7 +115,7 @@ function createInfoWindowContent(location) {
                 <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
                 <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
                 <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
-                <a href="location.html?id=${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
+                <a href="/locations/${location.id}.html" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
             </div>
         </div>
     `;
@@ -132,32 +131,6 @@ function fitMapToMarkers() {
     const bounds = new google.maps.LatLngBounds();
     markers.forEach(marker => bounds.extend(marker.getPosition()));
     map.fitBounds(bounds);
-}
-
-function initSearch() {
-    const input = document.getElementById('mapSearch');
-    if (!input) return;
-
-    const autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ['geocode', 'establishment'],
-        componentRestrictions: { country: [] }, // worldwide
-        fields: ['geometry', 'name']
-    });
-
-    autocomplete.addListener('place_changed', () => {
-        const place = autocomplete.getPlace();
-        if (!place.geometry || !place.geometry.location) return;
-
-        if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
-        } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(14);
-        }
-
-        // Clear input after short delay so dropdown closes cleanly
-        setTimeout(() => { input.value = ''; }, 300);
-    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
