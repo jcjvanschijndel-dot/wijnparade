@@ -14,7 +14,7 @@ description: >-
   kwaliteit van de wijn.
 
 
-  Proeverijen en rondleidingen op het domein. Jaarlijks gastheer voor het populaire "Wijnrestaurant op het Land" — het pop-uprestaurant van Mes Amis dat elk jaar slechts een paar weken opereert. Een pittoresk terrasje bij de karakteristieke hoeve, Franse chansons uit een speakertje, wijnen te koop in de wijnwinkel.
+  Proeverijen en rondleidingen op het domein. Een pittoresk terrasje bij de karakteristieke hoeve, Franse chansons uit een speakertje, wijnen te koop in de wijnwinkel.
 
 
   Wijnwinkel en terras op het domein. Proeverijen en rondleidingen op reservering. Reserveer ruim vooraf voor het Wijnrestaurant op het Land.
