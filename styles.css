@@ -47,7 +47,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.65rem 1rem;
+    padding: 0.65rem 0;
+}
+
+.header-back {
+    color: rgba(255,255,255,0.75);
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.header-back:hover {
+    color: white;
 }
 
 .header-logo {
