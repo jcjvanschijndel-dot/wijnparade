@@ -827,16 +827,16 @@ textarea {
 
 /* Homepage H1 */
 .page-hero-title {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--navy);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     line-height: 1.35;
 }
 
 @media (min-width: 768px) {
     .page-hero-title {
-        font-size: 1.6rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.15rem;
+        margin-bottom: 1.25rem;
     }
 }
