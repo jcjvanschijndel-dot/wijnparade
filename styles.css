@@ -47,19 +47,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.65rem 0;
-}
-
-.header-back {
-    color: rgba(255,255,255,0.75);
-    font-size: 13px;
-    font-weight: 400;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.header-back:hover {
-    color: white;
+    padding: 0.65rem 1rem;
 }
 
 .header-logo {
@@ -835,4 +823,20 @@ textarea {
 .instagram-link svg {
     width: 24px;
     height: 24px;
+}
+
+/* Homepage H1 */
+.page-hero-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    line-height: 1.35;
+}
+
+@media (min-width: 768px) {
+    .page-hero-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
 }
