@@ -129,9 +129,13 @@ for (const file of locationFiles) {
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
 <body>
   <header class="header"><div class="container">
-    <a href="/map.html" class="instagram-profile-link">
-      <img src="/profile-photo.jpg" alt="de_wijnparade" class="profile-photo-img"><span>← Terug</span>
-    </a>
+    <div class="header-inner">
+      <a href="/map.html" class="header-logo">
+        <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
+        <span class="header-logo-name">de_wijnparade</span>
+      </a>
+      <a href="/map.html" style="color:white;font-size:13px;font-weight:500;text-decoration:none;opacity:0.85;">← Terug</a>
+    </div>
   </div></header>
   <main class="main"><div class="container">
     <a href="/map.html" class="back-button">← Terug naar kaart</a>
@@ -535,10 +539,13 @@ for (const region of REGIONS) {
 <body>
   <header class="header">
     <div class="container">
-      <a href="/travelguides.html" class="instagram-profile-link">
-        <img src="/profile-photo.jpg" alt="de_wijnparade" class="profile-photo-img">
-        <span>← Reisgidsen</span>
-      </a>
+      <div class="header-inner">
+        <a href="/travelguides.html" class="header-logo">
+          <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
+          <span class="header-logo-name">de_wijnparade</span>
+        </a>
+        <a href="/travelguides.html" style="color:white;font-size:13px;font-weight:500;text-decoration:none;opacity:0.85;">← Reisgidsen</a>
+      </div>
     </div>
   </header>
 
