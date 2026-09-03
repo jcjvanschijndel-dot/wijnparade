@@ -496,9 +496,9 @@ for (const region of REGIONS) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#1e3a8a">
-  <title>Wijnreis ${region.name} — wijnhuizen, restaurants en wijnbars | de_wijnparade</title>
+  <title>Wijn hotspots ${region.name} — wijnhuizen, restaurants en wijnbars | de_wijnparade</title>
   <meta name="description" content="${metaDesc.replace(/"/g,'&quot;')}">
-  <meta property="og:title" content="Wijnreis ${region.name} — de beste wijnhotspots | de_wijnparade">
+  <meta property="og:title" content="Wijn hotspots ${region.name} | de_wijnparade">
   <meta property="og:description" content="${metaDesc.replace(/"/g,'&quot;')}">
   <meta property="og:url" content="${pageUrl}">
   <meta property="og:type" content="article">
@@ -552,7 +552,7 @@ for (const region of REGIONS) {
   <div class="region-hero">
     <div class="container">
       <div class="region-hero-emoji">${region.emoji}</div>
-      <h1>Wijnreis ${region.name} — de beste wijnhotspots</h1>
+      <h1>Wijn hotspots ${region.name}</h1>
       <div class="region-hero-country">${region.country}</div>
       <p class="region-hero-desc">${region.description}</p>
       <a href="/map.html?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}" class="region-map-btn">
