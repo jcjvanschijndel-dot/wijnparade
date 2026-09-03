@@ -82,7 +82,7 @@ function render() {
                 <div class="region-row">
                     <div class="region-row-left">
                         <div class="region-row-header">
-                            <span class="region-row-emoji">${r.emoji}</span>
+                            <span class="region-row-emoji" style="display:flex;align-items:center;justify-content:center;line-height:1;vertical-align:middle;">${r.emoji}</span>
                             <div>
                                 <div class="region-row-name">${r.name}</div>
                                 <div class="region-row-meta">±${r.km} km van Utrecht &middot; ${r.locationCount} locaties</div>
