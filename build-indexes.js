@@ -137,7 +137,7 @@ for (const file of locationFiles) {
     <a href="/map.html" class="back-button">← Terug naar kaart</a>
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <div class="recipe-header">
-      <h1 class="recipe-title">${name}</h1>
+      <h1 class="recipe-title">${name} — ${typeLabel} in ${(loc.address || "").split(",").slice(-2).join(",").trim()}</h1>
       <div class="recipe-wine">${typeLabel}</div>
     </div>
     <div class="info-section"><div class="info-label">📍 Adres</div><div class="info-value">${loc.address || ''}</div></div>
@@ -459,7 +459,8 @@ for (const region of REGIONS) {
   });
 
   const pageUrl = `${SITE_URL_REGIONS}/regio/${region.id}.html`;
-  const metaDesc = region.description.substring(0, 160);
+  const locNames = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
+  const metaDesc = `Ontdek de beste wijnhuizen, restaurants en wijnbars in ${region.name}. Waaronder ${locNames} — geselecteerd door de_wijnparade.`.substring(0, 160);
 
   // Group by type
   const byType = { wijnhuis: [], wijnbar: [], restaurant: [], wijnwinkel: [] };
@@ -468,13 +469,13 @@ for (const region of REGIONS) {
   const renderSection = (type, items) => {
     if (!items.length) return '';
     return `<div class="region-section">
-      <h2 class="region-section-title">${typeLabelsReg[type]}</h2>
+      <h2 class="region-section-title">${typeLabelsReg[type].replace(/^\S+\s/, '')} in ${region.name}</h2>
       <div class="region-locs">
         ${items.map(l => `
           <div class="region-loc-card">
             ${l.image ? `<img src="${l.image}" alt="${l.title || l.name}" class="region-loc-img" loading="lazy">` : ''}
             <div class="region-loc-body">
-              <div class="region-loc-name">${l.title || l.name}</div>
+              <h3 class="region-loc-name">${l.title || l.name}</h3>
               <div class="region-loc-address">📍 ${l.address || ''}</div>
               ${l.description ? `<div class="region-loc-desc">${l.description.substring(0, 200)}${l.description.length > 200 ? '…' : ''}</div>` : ''}
               <a href="/locations/${l._id}.html" class="region-loc-link">Lees meer →</a>
@@ -491,9 +492,9 @@ for (const region of REGIONS) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#1e3a8a">
-  <title>${region.name} Wijnreis | de_wijnparade</title>
+  <title>Wijnreis ${region.name} — wijnhuizen, restaurants en wijnbars | de_wijnparade</title>
   <meta name="description" content="${metaDesc.replace(/"/g,'&quot;')}">
-  <meta property="og:title" content="${region.name} Wijnreis | de_wijnparade">
+  <meta property="og:title" content="Wijnreis ${region.name} — de beste wijnhotspots | de_wijnparade">
   <meta property="og:description" content="${metaDesc.replace(/"/g,'&quot;')}">
   <meta property="og:url" content="${pageUrl}">
   <meta property="og:type" content="article">
@@ -544,7 +545,7 @@ for (const region of REGIONS) {
   <div class="region-hero">
     <div class="container">
       <div class="region-hero-emoji">${region.emoji}</div>
-      <h1>${region.name}</h1>
+      <h1>Wijnreis ${region.name} — de beste wijnhotspots</h1>
       <div class="region-hero-country">${region.country}</div>
       <p class="region-hero-desc">${region.description}</p>
       <a href="/map.html?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}" class="region-map-btn">
