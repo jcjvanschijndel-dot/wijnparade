@@ -10,5 +10,6 @@ description: Het enige wijndomein in ‘t Gooi, hoe leuk! De eerste wijnen kwame
   maand “afternoon roast” , elke eerste vrijdag een “pizza & wijn” avond.
   Daarnaast nog veel meer events, dus kijk op de agenda en ga er vooral een keer
   heen!
+image: /uploads/zonnestraal.webp
 website: https://wijngaard-zonnestraal.nl/
 ---
