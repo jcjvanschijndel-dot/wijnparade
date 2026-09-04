@@ -442,17 +442,34 @@ if (fs.existsSync(regionsContentPath)) {
 const SITE_URL_REGIONS = 'https://wijn-parade.nl';
 
 const REGION_ICON_MAP = {
-  'parijs': 'ti-building-arch', 'rotterdam': 'ti-anchor', 'amsterdam': 'ti-bike',
-  't-gooi': 'ti-trees', 'limburg': 'ti-mountain', 'rioja': 'ti-wine',
-  'ribera-del-duero': 'ti-building-castle', 'bordeaux': 'ti-building-castle',
-  'bourgogne': 'ti-wine', 'champagne': 'ti-glass-full', 'rhone-noord': 'ti-mountain-2',
-  'provence': 'ti-sun', 'loire': 'ti-crown', 'douro': 'ti-waves',
-  'toscane': 'ti-building-church', 'piemonte': 'ti-leaf', 'alto-adige': 'ti-snowflake',
-  'mosel': 'ti-droplets', 'ahr': 'ti-bottle', 'baskenland': 'ti-fish',
-  'mallorca': 'ti-beach', 'costa-brava': 'ti-wave-sine', 'malaga': 'ti-sun-high',
-  'griekenland': 'ti-building-columns',
+  'parijs': 'ti-building-arch',
+  'rotterdam': 'ti-anchor',
+  'amsterdam': 'ti-building-bridge-2',
+  't-gooi': 'ti-trees',
+  'limburg': 'ti-mountain',
+  'rioja': 'ti-building-castle',
+  'ribera-del-duero': 'ti-building-castle',
+  'bordeaux': 'ti-building-castle',
+  'bourgogne': 'ti-bottle',
+  'champagne': 'ti-star',
+  'rhone-noord': 'ti-mountain',
+  'provence': 'ti-sun',
+  'loire': 'ti-crown',
+  'douro': 'ti-ship',
+  'toscane': 'ti-sun',
+  'piemonte': 'ti-mountain',
+  'alto-adige': 'ti-pine-tree',
+  'mosel': 'ti-mountain',
+  'ahr': 'ti-mountain',
+  'baskenland': 'ti-fish',
+  'mallorca': 'ti-sun',
+  'costa-brava': 'ti-sun',
+  'malaga': 'ti-sun',
+  'griekenland': 'ti-building-arch',
 };
-function getRegionIconClass(id) { return REGION_ICON_MAP[id] || 'ti-map-pin'; }
+function getRegionIconClass(id) {
+  return REGION_ICON_MAP[id] || 'ti-map-pin';
+}
 
 const regioDir = path.join(__dirname, 'regio');
 if (!fs.existsSync(regioDir)) fs.mkdirSync(regioDir);
