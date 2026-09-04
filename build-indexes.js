@@ -440,6 +440,20 @@ if (fs.existsSync(regionsContentPath)) {
 
 
 const SITE_URL_REGIONS = 'https://wijn-parade.nl';
+
+const REGION_ICON_MAP = {
+  'parijs': 'ti-building-arch', 'rotterdam': 'ti-anchor', 'amsterdam': 'ti-bike',
+  't-gooi': 'ti-trees', 'limburg': 'ti-mountain', 'rioja': 'ti-wine',
+  'ribera-del-duero': 'ti-building-castle', 'bordeaux': 'ti-building-castle',
+  'bourgogne': 'ti-wine', 'champagne': 'ti-glass-full', 'rhone-noord': 'ti-mountain-2',
+  'provence': 'ti-sun', 'loire': 'ti-crown', 'douro': 'ti-waves',
+  'toscane': 'ti-building-church', 'piemonte': 'ti-leaf', 'alto-adige': 'ti-snowflake',
+  'mosel': 'ti-droplets', 'ahr': 'ti-bottle', 'baskenland': 'ti-fish',
+  'mallorca': 'ti-beach', 'costa-brava': 'ti-wave-sine', 'malaga': 'ti-sun-high',
+  'griekenland': 'ti-building-columns',
+};
+function getRegionIconClass(id) { return REGION_ICON_MAP[id] || 'ti-map-pin'; }
+
 const regioDir = path.join(__dirname, 'regio');
 if (!fs.existsSync(regioDir)) fs.mkdirSync(regioDir);
 
@@ -514,7 +528,7 @@ for (const region of REGIONS) {
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
     .region-hero{background:var(--navy);color:#fff;padding:3rem 0 2rem;text-align:center}
-    .region-hero-emoji{font-size:3rem;margin-bottom:0.5rem}
+    .region-hero-icon{width:56px;height:56px;background:rgba(255,255,255,0.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;font-size:1.5rem;color:white;}
     .region-hero h1{font-size:2rem;font-weight:700;margin-bottom:0.5rem}
     .region-hero-country{opacity:0.8;font-size:1rem;margin-bottom:1.5rem}
     .region-hero-desc{max-width:680px;margin:0 auto 2rem;line-height:1.8;opacity:0.9;font-size:1rem}
@@ -556,12 +570,12 @@ for (const region of REGIONS) {
 
   <div class="region-hero">
     <div class="container">
-      <div class="region-hero-emoji">${region.emoji}</div>
+      <div class="region-hero-icon"><i class="ti ${getRegionIconClass(region.id)}" style="font-size:1.75rem;"></i></div>
       <h1>Wijn hotspots ${region.name}</h1>
       <div class="region-hero-country">${region.country}</div>
       <p class="region-hero-desc">${region.description}</p>
       <a href="/map.html?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}" class="region-map-btn">
-        🗺️ Bekijk op de kaart
+        <i class="ti ti-map-2"></i> Bekijk op de kaart
       </a>
     </div>
   </div>
