@@ -1,5 +1,37 @@
 const UTRECHT = { lat: 52.0907, lng: 5.1214 };
 
+const REGION_ICONS = {
+  'parijs': 'ti-building-arch',
+  'rotterdam': 'ti-anchor',
+  'amsterdam': 'ti-bike',
+  't-gooi': 'ti-trees',
+  'limburg': 'ti-mountain',
+  'rioja': 'ti-wine',
+  'ribera-del-duero': 'ti-building-castle',
+  'bordeaux': 'ti-building-castle',
+  'bourgogne': 'ti-wine',
+  'champagne': 'ti-glass-full',
+  'rhone-noord': 'ti-mountain-2',
+  'provence': 'ti-sun',
+  'loire': 'ti-crown',
+  'douro': 'ti-waves',
+  'toscane': 'ti-building-church',
+  'piemonte': 'ti-leaf',
+  'alto-adige': 'ti-snowflake',
+  'mosel': 'ti-droplets',
+  'ahr': 'ti-bottle',
+  'baskenland': 'ti-fish',
+  'mallorca': 'ti-umbrella-beach',
+  'costa-brava': 'ti-wave-sine',
+  'malaga': 'ti-sun-high',
+  'griekenland': 'ti-building-columns',
+};
+
+function getRegionIcon(id) {
+  return REGION_ICONS[id] || 'ti-map-pin';
+}
+
+
 function haversineKm(lat1, lng1, lat2, lng2) {
     const R = 6371;
     const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -82,7 +114,7 @@ function render() {
                 <div class="region-row">
                     <div class="region-row-left">
                         <div class="region-row-header">
-                            <span class="region-row-emoji" style="display:flex;align-items:center;justify-content:center;line-height:1;vertical-align:middle;">${r.emoji}</span>
+                            <span class="region-row-emoji">${r.emoji}</span>
                             <div>
                                 <div class="region-row-name">${r.name}</div>
                                 <div class="region-row-meta">±${r.km} km van Utrecht &middot; ${r.locationCount} locaties</div>

@@ -113,6 +113,7 @@ for (const file of locationFiles) {
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
@@ -473,7 +474,10 @@ for (const region of REGIONS) {
   const renderSection = (type, items) => {
     if (!items.length) return '';
     return `<div class="region-section">
-      <h2 class="region-section-title">${typeLabelsReg[type].replace(/^\S+\s/, '')} in ${region.name}</h2>
+      <h2 class="region-section-title">
+        ${type === 'wijnhuis' ? '<i class="ti ti-building-castle"></i>' : type === 'restaurant' ? '<i class="ti ti-tools-kitchen-2"></i>' : type === 'wijnbar' ? '<i class="ti ti-glass-full"></i>' : '<i class="ti ti-shopping-bag"></i>'}
+        ${typeLabelsReg[type].replace(/^\S+\s/, '')} in ${region.name}
+      </h2>
       <div class="region-locs">
         ${items.map(l => `
           <div class="region-loc-card">
@@ -506,6 +510,7 @@ for (const region of REGIONS) {
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"${region.name}","description":"${region.description.replace(/"/g,'\\"')}","url":"${pageUrl}"}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
     .region-hero{background:var(--navy);color:#fff;padding:3rem 0 2rem;text-align:center}
@@ -520,7 +525,7 @@ for (const region of REGIONS) {
     .region-stat-num{font-size:1.5rem;font-weight:700;color:var(--navy)}
     .region-stat-label{font-size:0.8rem;color:var(--gray-600)}
     .region-section{margin-bottom:3rem}
-    .region-section-title{font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gray-200)}
+    .region-section-title{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gray-200);display:flex;align-items:center;gap:0.5rem;}
     .region-locs{display:grid;gap:1.25rem}
     .region-loc-card{display:grid;grid-template-columns:120px 1fr;gap:1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s}
     .region-loc-card:hover{box-shadow:0 4px 12px rgba(30,58,138,0.1)}
