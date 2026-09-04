@@ -443,7 +443,7 @@ const SITE_URL_REGIONS = 'https://wijn-parade.nl';
 const regioDir = path.join(__dirname, 'regio');
 if (!fs.existsSync(regioDir)) fs.mkdirSync(regioDir);
 
-const typeLabelsReg = { wijnbar: '🍾 Wijnbar', wijnwinkel: '🏪 Wijnwinkel', wijnhuis: '🏰 Wijnhuis', restaurant: '🍽️ Restaurant' };
+const typeLabelsReg = { wijnbar: 'Wijnbar', wijnwinkel: 'Wijnwinkel', wijnhuis: 'Wijnhuis', restaurant: 'Restaurant' };
 
 // Read all location items from the already-generated _index.json
 let allLocations = [];
@@ -476,7 +476,7 @@ for (const region of REGIONS) {
     return `<div class="region-section">
       <h2 class="region-section-title">
         ${type === 'wijnhuis' ? '<i class="ti ti-building-castle"></i>' : type === 'restaurant' ? '<i class="ti ti-tools-kitchen-2"></i>' : type === 'wijnbar' ? '<i class="ti ti-glass-full"></i>' : '<i class="ti ti-shopping-bag"></i>'}
-        ${typeLabelsReg[type].replace(/^\S+\s/, '')} in ${region.name}
+        ${typeLabelsReg[type]} in ${region.name}
       </h2>
       <div class="region-locs">
         ${items.map(l => `
@@ -572,7 +572,7 @@ for (const region of REGIONS) {
         ${Object.entries(byType).filter(([,v])=>v.length).map(([t,v])=>`
           <div class="region-stat">
             <div class="region-stat-num">${v.length}</div>
-            <div class="region-stat-label">${typeLabelsReg[t]}</div>
+            <div class="region-stat-label">${t === 'wijnhuis' ? '<i class="ti ti-building-castle"></i> ' : t === 'restaurant' ? '<i class="ti ti-tools-kitchen-2"></i> ' : t === 'wijnbar' ? '<i class="ti ti-glass-full"></i> ' : '<i class="ti ti-shopping-bag"></i> '}${typeLabelsReg[t]}</div>
           </div>`).join('')}
       </div>
       ${renderSection('wijnhuis', byType.wijnhuis)}
