@@ -42,8 +42,7 @@ async function loadWines() {
             region: findCol(headers, ['gebied', 'region', 'regio']),
             color: findCol(headers, ['kleur', 'color', 'type']),
             rating: findCol(headers, ['omschrijving', 'description', 'beschrijving']),
-            available: findCol(headers, ['beschikbaar', 'available', 'aantal', 'voorraad']),
-            unit: findCol(headers, ['eenheid', 'unit']),
+            available: findCol(headers, ['beschikbaar', 'available', 'aantal', 'flessen', 'voorraad']),
             price: findCol(headers, ['prijs', 'price'])
         };
 
@@ -64,7 +63,6 @@ async function loadWines() {
                 color: rawColor ? rawColor.charAt(0).toUpperCase() + rawColor.slice(1).toLowerCase() : '',
                 rating: getCell(row, colMap.rating),
                 available: isComingSoon ? 'coming-soon' : (parseInt(rawAvailable) || 0),
-                unit: getCell(row, colMap.unit).toLowerCase() === 'dozen' ? 'dozen' : 'flessen',
                 price: parseNumber(getCell(row, colMap.price)),
                 originalIndex: i - 1
             };
@@ -236,10 +234,10 @@ function getStockClass(available) {
     return 'stock-available';
 }
 
-function getStockText(available, unit) {
+function getStockText(available) {
     if (available === 'coming-soon') return 'Coming soon';
     if (available <= 0) return 'Uitverkocht';
-    return `${available} ${unit || 'flessen'}`;
+    return `${available} flessen`;
 }
 
 function renderCards() {
@@ -263,7 +261,7 @@ function renderCards() {
                 ${wine.rating ? `<span class="shop-card-description">${wine.rating}</span>` : ''}
             </div>
             <div class="shop-card-stock-row">
-                <span class="shop-card-stock ${getStockClass(wine.available)}">${getStockText(wine.available, wine.unit)}</span>
+                <span class="shop-card-stock ${getStockClass(wine.available)}">${getStockText(wine.available)}</span>
             </div>
             <div class="shop-card-footer">
                 <span></span>
@@ -285,7 +283,7 @@ function renderTable() {
             <td>${wine.country}</td>
             <td>${wine.region}</td>
             <td class="wine-description-cell">${wine.rating || '—'}</td>
-            <td><span class="${getStockClass(wine.available)}">${getStockText(wine.available, wine.unit)}</span></td>
+            <td><span class="${getStockClass(wine.available)}">${getStockText(wine.available)}</span></td>
             <td class="wine-price-cell">€${wine.price.toFixed(2)}</td>
             <td>
                 <button class="order-btn" onclick="openOrder(${idx})" ${wine.available <= 0 || wine.available === 'coming-soon' ? 'disabled' : ''}>
@@ -323,20 +321,17 @@ function openOrder(index) {
     document.getElementById('modalWineInfo').innerHTML = `
         <div class="modal-wine-name">${selectedWine.name}</div>
         <div class="modal-wine-detail">${selectedWine.producer} · ${selectedWine.region}, ${selectedWine.country}</div>
-        <div class="modal-wine-price">€${selectedWine.price.toFixed(2)} per ${selectedWine.unit === "dozen" ? "doos" : "fles"}</div>
+        <div class="modal-wine-price">€${selectedWine.price.toFixed(2)} per fles</div>
     `;
     
     // Set hidden fields
     document.getElementById('formWine').value = selectedWine.name;
     document.getElementById('formPrice').value = `€${selectedWine.price.toFixed(2)}`;
     
-    // Set max quantity and unit label
+    // Set max quantity
     const qtyInput = document.getElementById('orderQuantity');
     qtyInput.max = selectedWine.available;
     qtyInput.value = 1;
-    const unitLabel = selectedWine.unit || 'flessen';
-    document.querySelector('label[for="orderQuantity"]').textContent = `Aantal ${unitLabel} *`;
-    document.getElementById('formWine').value = selectedWine.name + ` (per ${unitLabel.slice(0,-1)})`;
     
     updateTotal();
     
