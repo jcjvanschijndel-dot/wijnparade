@@ -326,10 +326,7 @@ function openOrder(index) {
     
     // Set hidden fields
     document.getElementById('formWine').value = selectedWine.name;
-    const orderNum = (parseInt(localStorage.getItem('wpOrderNum') || '0') + 1);
-    localStorage.setItem('wpOrderNum', orderNum);
-    const orderNumStr = String(orderNum).padStart(3, '0');
-    document.getElementById('formSubject').value = `Wijnparade aanvraag #${orderNumStr}: ${selectedWine.name}`;
+
     document.getElementById('formPrice').value = `€${selectedWine.price.toFixed(2)}`;
     
     // Set max quantity
@@ -358,6 +355,14 @@ async function handleSubmit(e) {
     e.preventDefault();
     
     const form = e.target;
+    // Set unique subject per email address just before sending
+    const emailVal = document.getElementById('orderEmail')?.value || '';
+    const storageKey = `wpOrderNum_${emailVal}`;
+    const orderNum = (parseInt(localStorage.getItem(storageKey) || '0') + 1);
+    localStorage.setItem(storageKey, orderNum);
+    const orderNumStr = String(orderNum).padStart(3, '0');
+    const wineName = document.getElementById('formWine')?.value || '';
+    document.getElementById('formSubject').value = `Wijnparade aanvraag ${emailVal} #${orderNumStr}: ${wineName}`;
     const formData = new FormData(form);
     
     // Add total to form
