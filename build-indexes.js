@@ -88,7 +88,7 @@ for (const file of locationFiles) {
     const metaDesc = description.replace(/\s+/g, ' ').trim().substring(0, 160);
     const typeLabel = typeLabels[loc.type] || loc.type || '';
     const image = loc.image ? `${SITE_URL}${loc.image}` : `${SITE_URL}/profile-photo.jpg`;
-    const pageUrl = `${SITE_URL}/locations/${id}.html`;
+    const pageUrl = `${SITE_URL}/locations/${id}`;
 
     const schema = {
         '@context': 'https://schema.org', '@type': 'LocalBusiness',
@@ -178,7 +178,7 @@ for (const file of locationFiles) {
 </body></html>`;
 
     fs.writeFileSync(path.join(staticLocationsDir, `${id}.html`), html);
-    sitemapUrls.push(pageUrl);
+    sitemapUrls.push(pageUrl.replace(".html", ""));
 }
 
 console.log(`  📍 locations: ${locationFiles.length} statische pagina's gegenereerd`);
@@ -517,7 +517,7 @@ for (const region of REGIONS) {
               <h3 class="region-loc-name">${l.title || l.name}</h3>
               <div class="region-loc-address">📍 ${l.address || ''}</div>
               ${l.description ? `<div class="region-loc-desc">${l.description.substring(0, 200)}${l.description.length > 200 ? '…' : ''}</div>` : ''}
-              <a href="/locations/${l._id}.html" class="region-loc-link">Lees meer →</a>
+              <a href="/locations/${l._id}" class="region-loc-link">Lees meer →</a>
               ${l.website ? `<a href="${l.website.startsWith('http') ? l.website : 'https://' + l.website}" target="_blank" rel="noopener" class="region-loc-link region-loc-web">Website →</a>` : ''}
             </div>
           </div>`).join('')}
