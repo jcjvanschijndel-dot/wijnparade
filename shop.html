@@ -168,8 +168,16 @@
                     <textarea id="orderAddress" name="adres" rows="2" required placeholder="Straat, huisnummer, postcode, plaats" autocomplete="street-address"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="orderQuantity">Aantal flessen *</label>
-                    <input type="number" id="orderQuantity" name="aantal" min="1" required placeholder="Aantal flessen" value="1">
+                    <label for="orderQuantity" id="orderQuantityLabel">Aantal *</label>
+                    <input type="number" id="orderQuantity" name="aantal" min="1" required placeholder="Aantal" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="orderDelivery">Ophalen of bezorgen *</label>
+                    <select id="orderDelivery" name="levering" required>
+                        <option value="Ophalen in Naarden (gratis - heeft voorrang)">🏠 Ophalen in Naarden — gratis, heeft voorrang</option>
+                        <option value="Bezorgen (+€10)">🚚 Bezorgen — +€10</option>
+                    </select>
+                    <div class="delivery-note">Ophalen heeft voorrang als een wijn meerdere keren is aangevraagd.</div>
                 </div>
                 <div class="form-group">
                     <label for="orderNotes">Opmerkingen</label>
