@@ -326,6 +326,10 @@ function openOrder(index) {
     
     // Set hidden fields
     document.getElementById('formWine').value = selectedWine.name;
+    const orderNum = (parseInt(localStorage.getItem('wpOrderNum') || '0') + 1);
+    localStorage.setItem('wpOrderNum', orderNum);
+    const orderNumStr = String(orderNum).padStart(3, '0');
+    document.getElementById('formSubject').value = `Wijnparade aanvraag #${orderNumStr}: ${selectedWine.name}`;
     document.getElementById('formPrice').value = `€${selectedWine.price.toFixed(2)}`;
     
     // Set max quantity
