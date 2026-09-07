@@ -362,7 +362,8 @@ async function handleSubmit(e) {
     localStorage.setItem(storageKey, orderNum);
     const orderNumStr = String(orderNum).padStart(3, '0');
     const wineName = document.getElementById('formWine')?.value || '';
-    document.getElementById('formSubject').value = `Wijnparade aanvraag ${emailVal} #${orderNumStr}: ${wineName}`;
+    const subjectEl = document.getElementById('formSubject');
+    if (subjectEl) subjectEl.value = `Wijnparade aanvraag ${emailVal} #${orderNumStr}: ${wineName}`;
     const formData = new FormData(form);
     
     // Add total to form
