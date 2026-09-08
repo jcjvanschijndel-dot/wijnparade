@@ -9,5 +9,5 @@ zoom: 12
 minLat: 52.28
 maxLat: 52.43
 minLng: 4.77
-maxLng: 5.07
+maxLng: 4.96
 ---
