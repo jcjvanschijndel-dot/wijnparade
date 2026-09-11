@@ -1,17 +1,24 @@
 ---
-name: Toscanini
+name: ANT
 type: restaurant
-address: Lindengracht 75, 1015 KD Amsterdam
-lat: 52.3801403
-lng: 4.8853784
+address: Via Ferrero, 8, 12060 Novello CN, Italië
+lat: 44.5865105
+lng: 7.926821899999999
 description: >-
-  Toscanini is een van die Amsterdamse restaurants die je echt een instituut
-  kunt noemen — niet vanwege sterren of rankings, maar vanwege een onwankelbare
-  trouw aan wat er toe doet. Reserveren kan precies één maand vooruit — en de
-  tafels zijn snel weg.
+  Novello is een van de elf gemeenten waarvan de wijngaarden Barolo mogen
+  produceren — maar toeristisch gezien is het nog steeds de stilste, meest
+  authentieke van allemaal. In het gerestaureerde historische centrum van dit
+  dorp opende ANT: een restaurant in een Piemontese boerderij met unieke
+  architectuur van onderling verbonden gewelfde ruimtes. Je voelt je al bij
+  binnenkomst alsof je bij vrienden thuis eet — niet in een restaurant. Twee
+  mannen draaien de zaak met passie en precisie: de sfeer is warm, de muziek
+  goed, het concept eigenzinnig en memorabel.
 
 
-  Recepten uit verschillende Italiaanse regio's, soms klassiek uitgevoerd, soms met een eigen twist. De wijnkaart is, op champagnes na, volledig Italiaans — met veel verborgen pareltjes van kleine producenten. De kaart bevat geen bekende supermarktnamen maar juist de kleine, minder bekende producenten die je elders in Amsterdam nauwelijks tegenkomt: autochtone druivenrassen van kleine wijnboeren uit alle hoeken van Italië — van het noorden (Alto Adige, Friuli) tot het diepe zuiden (Calabrië, Sicilië). De sommelier zorgt ervoor voor dat het de gasten aan niets ontbreekt. De kaart wisselt voortdurend en volgt het seizoen: antipasti, primi, secondi, contorni en dolci. Groenten van biologische boerderijen, dagverse vis, vlees van een biologische slager. 
-image: /uploads/toscanini.webp
-website: https://restauranttoscanini.nl/
+  De meest bijzondere ervaring is de wijnkeuze: je wandelt door de spectaculaire keldergewelven en kiest je fles zelf — niet van een lijst maar letterlijk van de schappen, begeleid door iemand die elke fles kent. Na het diner kun je overnachten in een van de appartementen in hetzelfde gebouw.
+
+
+  Eén vast menu van 8 tot 9 gangen — geen keuze, geen kaart, behalve voor intoleranties. Het menu wisselt elke één à twee maanden. Eclectische, internationale keuken met verrassende combinaties: onrijpe perzik met misosalade en maldon-zout, varkensoor-frietjes, verfijnde pasta. De wijnkaart is origineel en onverwacht voor de Langhe — niet alleen de klassieke namen maar ook minder bekende producers met een eigen verhaal.
+image: /uploads/ant.webp
+website: https://www.antnovello.com/
 ---
