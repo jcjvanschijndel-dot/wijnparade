@@ -349,11 +349,11 @@ function openOrder(index) {
     } else if (levering === 'bezorging495') {
         deliveryGroup.style.display = 'block';
         deliverySelect.setAttribute('required', '');
-        deliverySelect.innerHTML = '<option value="Ophalen (gratis, heeft voorrang)">Ophalen in Naarden - gratis, heeft voorrang</option><option value="Bezorgen (+4,95)">Bezorgen - +4,95</option>';
+        deliverySelect.innerHTML = '<option value="Ophalen (gratis)">Ophalen in Naarden - gratis</option><option value="Bezorgen (+4,95)">Bezorgen - +4,95</option>';
     } else {
         deliveryGroup.style.display = 'block';
         deliverySelect.setAttribute('required', '');
-        deliverySelect.innerHTML = '<option value="Ophalen (gratis, heeft voorrang)">Ophalen in Naarden - gratis, heeft voorrang</option><option value="Bezorgen (+10,-)">Bezorgen - +10,-</option>';
+        deliverySelect.innerHTML = '<option value="Ophalen (gratis)">Ophalen in Naarden - gratis</option><option value="Bezorgen (+10,-)">Bezorgen - +10,-</option>';
     }
 
     // Show form, hide success
