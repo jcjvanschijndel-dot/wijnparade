@@ -43,7 +43,8 @@ async function loadWines() {
             color: findCol(headers, ['kleur', 'color', 'type']),
             rating: findCol(headers, ['omschrijving', 'description', 'beschrijving']),
             available: findCol(headers, ['beschikbaar', 'available', 'aantal', 'flessen', 'voorraad']),
-            price: findCol(headers, ['prijs', 'price'])
+            price: findCol(headers, ['prijs', 'price']),
+            levering: findCol(headers, ['levering', 'delivery', 'bezorging'])
         };
 
         allWines = [];
@@ -64,7 +65,8 @@ async function loadWines() {
                 rating: getCell(row, colMap.rating),
                 available: isComingSoon ? 'coming-soon' : (parseInt(rawAvailable) || 0),
                 price: parseNumber(getCell(row, colMap.price)),
-                originalIndex: i - 1
+                originalIndex: i - 1,
+                levering: (getCell(row, colMap.levering) || 'beide').toLowerCase().replace(/\s/g,'')
             };
             
             if (wine.name) allWines.push(wine);
@@ -335,7 +337,25 @@ function openOrder(index) {
     qtyInput.value = 1;
     
     updateTotal();
-    
+
+    // Delivery options based on wine.levering setting
+    const deliveryGroup = document.getElementById('deliveryGroup');
+    const deliverySelect = document.getElementById('orderDelivery');
+    const levering = (selectedWine.levering || 'beide');
+
+    if (levering === 'geen') {
+        deliveryGroup.style.display = 'none';
+        deliverySelect.removeAttribute('required');
+    } else if (levering === 'bezorging495') {
+        deliveryGroup.style.display = 'block';
+        deliverySelect.setAttribute('required', '');
+        deliverySelect.innerHTML = '<option value="Ophalen (gratis, heeft voorrang)">Ophalen in Naarden - gratis, heeft voorrang</option><option value="Bezorgen (+4,95)">Bezorgen - +4,95</option>';
+    } else {
+        deliveryGroup.style.display = 'block';
+        deliverySelect.setAttribute('required', '');
+        deliverySelect.innerHTML = '<option value="Ophalen (gratis, heeft voorrang)">Ophalen in Naarden - gratis, heeft voorrang</option><option value="Bezorgen (+10,-)">Bezorgen - +10,-</option>';
+    }
+
     // Show form, hide success
     document.getElementById('orderForm').style.display = '';
     document.getElementById('orderSuccess').style.display = 'none';
