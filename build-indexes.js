@@ -654,3 +654,322 @@ if (fs.existsSync(sitemapPath)) {
 
 console.log(`  🌍 regio: ${regionsIndex.length} regio-pagina's gegenereerd`);
 console.log('✅ Regio build klaar!');
+
+// ============================================================
+// PRODUCT PAGINA'S GENEREREN (uit Google Sheet)
+// ============================================================
+
+const https = require('https');
+const http = require('http');
+
+function fetchCSV(url) {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https') ? https : http;
+    client.get(url, (res) => {
+      // Follow redirects
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return fetchCSV(res.headers.location).then(resolve).catch(reject);
+      }
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+    }).on('error', reject);
+  });
+}
+
+function parseCSVRow(row) {
+  const result = [];
+  let current = '';
+  let inQuotes = false;
+  for (let i = 0; i < row.length; i++) {
+    if (row[i] === '"') { inQuotes = !inQuotes; }
+    else if (row[i] === ',' && !inQuotes) { result.push(current.trim()); current = ''; }
+    else { current += row[i]; }
+  }
+  result.push(current.trim());
+  return result;
+}
+
+function slugify(str) {
+  return str.toLowerCase()
+    .replace(/[àáâäã]/g,'a').replace(/[èéêë]/g,'e').replace(/[ìíîï]/g,'i')
+    .replace(/[òóôöõ]/g,'o').replace(/[ùúûü]/g,'u').replace(/[ñ]/g,'n')
+    .replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-').trim();
+}
+
+const SHOP_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRiNczSnAUOxSJ6YUCy5wocv8CI7Ic5MWei2KZoEaBJk8iAfiixA04RnvxMPr6n8stYFpqELKELYBW5/pub?output=csv';
+const productsDir = path.join(__dirname, 'products');
+if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
+
+(async () => {
+  try {
+    const csv = await fetchCSV(SHOP_CSV_URL);
+    const rows = csv.split('\n').filter(r => r.trim());
+    const headers = parseCSVRow(rows[0]).map(h => h.toLowerCase().trim());
+
+    const findCol = (names) => {
+      for (const n of names) { const i = headers.indexOf(n); if (i >= 0) return i; }
+      return -1;
+    };
+
+    const cols = {
+      name:        findCol(['naam', 'name', 'wijn']),
+      producer:    findCol(['producent', 'producer', 'domaine']),
+      country:     findCol(['land', 'country']),
+      region:      findCol(['regio', 'region']),
+      price:       findCol(['prijs', 'price']),
+      available:   findCol(['beschikbaar', 'available', 'aantal', 'voorraad']),
+      unit:        findCol(['eenheid', 'unit']),
+      image:       findCol(['afbeelding', 'image', 'foto', 'photo']),
+      productpage: findCol(['productpagina', 'productpage', 'product pagina']),
+      description: findCol(['omschrijving', 'description', 'notities', 'notes']),
+    };
+
+    let count = 0;
+    const productUrls = [];
+
+    for (let i = 1; i < rows.length; i++) {
+      const row = parseCSVRow(rows[i]);
+      const get = (col) => col >= 0 ? (row[col] || '').trim() : '';
+
+      if (get(cols.productpage).toLowerCase() !== 'ja') continue;
+
+      const name = get(cols.name);
+      if (!name) continue;
+
+      const slug = slugify(name);
+      const producer = get(cols.producer);
+      const country = get(cols.country);
+      const region = get(cols.region);
+      const price = get(cols.price);
+      const image = get(cols.image);
+      const unit = get(cols.unit) || 'fles';
+      const description = get(cols.description);
+      const available = get(cols.available);
+      const isComingSoon = available.toLowerCase().replace(/\s/g,'') === 'comingsoon';
+      const isSoldOut = !isComingSoon && (parseInt(available) || 0) <= 0;
+      const pageUrl = `https://wijn-parade.nl/products/${slug}`;
+
+      const schema = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": name,
+        "description": description,
+        "image": image || 'https://wijn-parade.nl/logo.svg',
+        "brand": { "@type": "Brand", "name": producer },
+        "offers": {
+          "@type": "Offer",
+          "price": price.replace(/[^0-9,.]/g,'').replace(',','.'),
+          "priceCurrency": "EUR",
+          "availability": isSoldOut ? "https://schema.org/SoldOut" : "https://schema.org/InStock"
+        }
+      });
+
+      const html = `<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#1e3a8a">
+  <title>${name} | de_wijnparade shop</title>
+  <meta name="description" content="${producer ? producer + ' — ' : ''}${name}${region ? ', ' + region : ''}${country ? ', ' + country : ''}. Bestel via de_wijnparade.">
+  <meta property="og:title" content="${name} | de_wijnparade">
+  <meta property="og:description" content="${producer ? producer + ' — ' : ''}${name}${region ? ', ' + region : ''}.">
+  ${image ? `<meta property="og:image" content="${image.startsWith('http') ? image : 'https://wijn-parade.nl' + image}">` : ''}
+  <meta property="og:url" content="${pageUrl}">
+  <link rel="canonical" href="${pageUrl}">
+  <script type="application/ld+json">${schema}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <style>
+    .product-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 0; }
+    .product-img { width: 100%; border-radius: 12px; object-fit: cover; max-height: 480px; }
+    .product-img-placeholder { width: 100%; border-radius: 12px; background: var(--gray-100); height: 300px; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+    .product-info { display: flex; flex-direction: column; gap: 1rem; }
+    .product-producer { font-size: 0.9rem; color: var(--gray-600); font-weight: 500; }
+    .product-title { font-size: 1.75rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+    .product-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .product-tag { font-size: 0.8rem; padding: 0.25rem 0.6rem; background: var(--gray-100); border-radius: 50px; color: var(--gray-700); }
+    .product-price { font-size: 1.5rem; font-weight: 700; color: var(--navy); }
+    .product-price-unit { font-size: 0.85rem; font-weight: 400; color: var(--gray-600); }
+    .product-desc { font-size: 0.95rem; line-height: 1.7; color: var(--gray-900); }
+    .product-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: var(--navy); color: white; border: none; border-radius: 10px; font-family: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s; width: fit-content; }
+    .product-btn:hover { background: #1e40af; }
+    .product-btn:disabled, .product-btn.sold-out { background: var(--gray-300); cursor: not-allowed; color: var(--gray-600); }
+    .sold-out-badge { background: #fee2e2; color: #991b1b; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
+    .coming-soon-badge { background: #ede9fe; color: #6d28d9; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
+
+    /* Order modal - same as shop */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+    .modal-overlay.active { display: flex; }
+    .modal { background: white; border-radius: 16px; padding: 2rem; width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; position: relative; }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--gray-500); }
+    .modal-wine-name { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
+    .modal-wine-detail { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 0.5rem; }
+    .modal-wine-price { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.35rem; color: var(--gray-900); }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit; font-size: 0.9rem; box-sizing: border-box; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--navy); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .submit-btn { width: 100%; padding: 0.85rem; background: var(--navy); color: white; border: none; border-radius: 8px; font-family: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .submit-btn:hover { background: #1e40af; }
+    .success-message { text-align: center; padding: 2rem 0; }
+    .delivery-note { font-size: 0.78rem; color: var(--gray-600); margin-top: 0.35rem; font-style: italic; }
+    #orderDelivery { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit; font-size: 0.9rem; }
+
+    @media (max-width: 640px) {
+      .product-hero { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/shop.html" class="header-logo">
+          <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
+          <span class="header-logo-name">de_wijnparade</span>
+        </a>
+        <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:#4a0e2e;font-size:11px;font-weight:600;">Volgen</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="product-hero">
+        <div>
+          ${image ? `<img src="${image.startsWith('http') ? image : 'https://wijn-parade.nl' + image}" alt="${name}" class="product-img">` : `<div class="product-img-placeholder">🍷</div>`}
+        </div>
+        <div class="product-info">
+          ${producer ? `<div class="product-producer">${producer}</div>` : ''}
+          <h1 class="product-title">${name}</h1>
+          <div class="product-meta">
+            ${country ? `<span class="product-tag">${country}</span>` : ''}
+            ${region ? `<span class="product-tag">${region}</span>` : ''}
+          </div>
+          ${price ? `<div class="product-price">€${price} <span class="product-price-unit">per ${unit}</span></div>` : ''}
+          ${description ? `<div class="product-desc">${description}</div>` : ''}
+          ${isComingSoon ? `<span class="coming-soon-badge">Coming soon</span>` :
+            isSoldOut ? `<span class="sold-out-badge">Uitverkocht</span>` :
+            `<button class="product-btn" onclick="openOrderModal()"><i class="ti ti-shopping-bag"></i> Aanvragen</button>`}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Order Modal -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal">
+      <button class="modal-close" onclick="document.getElementById('orderModal').classList.remove('active')">&times;</button>
+      <div class="modal-wine-name">${name}</div>
+      <div class="modal-wine-detail">${[producer, region, country].filter(Boolean).join(' · ')}</div>
+      ${price ? `<div class="modal-wine-price">€${price} per ${unit}</div>` : ''}
+      <div id="orderForm">
+        <form name="wijnbestelling" method="POST" data-netlify="true" action="/" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="form-name" value="wijnbestelling">
+          <input type="hidden" name="wijn" value="${name}">
+          <input type="hidden" name="subject" id="formSubject">
+          <div class="form-group">
+            <label for="orderQty">Aantal ${unit}s *</label>
+            <input type="number" id="orderQty" name="aantal" min="1" value="1" required>
+          </div>
+          <div class="form-group" id="deliveryGroup">
+            <label for="orderDelivery">Ophalen of bezorgen *</label>
+            <select id="orderDelivery" name="levering" required>
+              <option value="Ophalen in Naarden (gratis)">Ophalen in Naarden — gratis</option>
+              <option value="Bezorgen (+€10)">Bezorgen — +€10</option>
+            </select>
+            <div class="delivery-note">Ophalen heeft voorrang als een wijn meerdere keren is aangevraagd.</div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderName">Naam *</label>
+              <input type="text" id="orderName" name="naam" required placeholder="Je naam">
+            </div>
+            <div class="form-group">
+              <label for="orderEmail">E-mail *</label>
+              <input type="email" id="orderEmail" name="email" required placeholder="je@email.nl">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="orderPhone">Telefoon</label>
+            <input type="tel" id="orderPhone" name="telefoon" placeholder="06-...">
+          </div>
+          <div class="form-group">
+            <label for="orderNotes">Opmerkingen</label>
+            <textarea id="orderNotes" name="opmerkingen" rows="2" placeholder="Optioneel"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Aanvragen</button>
+        </form>
+      </div>
+      <div id="orderSuccess" class="success-message" style="display:none;">
+        <div style="font-size:2rem;margin-bottom:1rem;">✅</div>
+        <h3>Aanvraag ontvangen!</h3>
+        <p>We nemen zo snel mogelijk contact met je op.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function openOrderModal() {
+      document.getElementById('orderModal').classList.add('active');
+    }
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const emailVal = document.getElementById('orderEmail').value || '';
+      const storageKey = 'wpOrderNum_' + emailVal;
+      const orderNum = (parseInt(localStorage.getItem(storageKey) || '0') + 1);
+      localStorage.setItem(storageKey, orderNum);
+      const orderNumStr = String(orderNum).padStart(3, '0');
+      const subjectEl = document.getElementById('formSubject');
+      if (subjectEl) subjectEl.value = 'Wijnparade aanvraag ' + emailVal + ' #' + orderNumStr + ': ${name}';
+      const formData = new FormData(form);
+      try {
+        await fetch('/', { method: 'POST', headers: {'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(formData).toString() });
+        document.getElementById('orderForm').style.display = 'none';
+        document.getElementById('orderSuccess').style.display = 'block';
+      } catch(err) {
+        alert('Er ging iets mis. Probeer het opnieuw.');
+      }
+    }
+    window.addEventListener('click', e => { if (e.target === document.getElementById('orderModal')) document.getElementById('orderModal').classList.remove('active'); });
+  </script>
+</body>
+</html>`;
+
+      fs.writeFileSync(path.join(productsDir, `${slug}.html`), html);
+      productUrls.push(pageUrl);
+      count++;
+    }
+
+    console.log(`  🛍️  products: ${count} productpagina's gegenereerd`);
+    
+    // Add to sitemap if it exists
+    const sitemapPath2 = path.join(__dirname, 'sitemap.xml');
+    if (fs.existsSync(sitemapPath2) && productUrls.length > 0) {
+      let sitemap = fs.readFileSync(sitemapPath2, 'utf8');
+      const today = new Date().toISOString().split('T')[0];
+      const newUrls = productUrls.map(url => `  <url><loc>${url}</loc><lastmod>${today}</lastmod><priority>0.9</priority></url>`).join('\n');
+      sitemap = sitemap.replace('</urlset>', newUrls + '\n</urlset>');
+      fs.writeFileSync(sitemapPath2, sitemap);
+    }
+
+  } catch(err) {
+    console.log('  ⚠️  products: kon Google Sheet niet ophalen:', err.message);
+  }
+})();
