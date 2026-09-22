@@ -743,7 +743,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       const producer = get(cols.producer);
       const country = get(cols.country);
       const region = get(cols.region);
-      const price = get(cols.price);
+      const price = get(cols.price).replace(/€/g, '').trim();
       const image = get(cols.image);
       const unit = get(cols.unit) || 'fles';
       const description = get(cols.description);
