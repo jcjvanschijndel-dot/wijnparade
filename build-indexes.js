@@ -712,6 +712,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       return -1;
     };
 
+    console.log('  📋 Shop headers:', headers.join(', '));
     const cols = {
       name:        findCol(['naam', 'name', 'wijn']),
       producer:    findCol(['producent', 'producer', 'domaine']),
@@ -725,6 +726,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       description: findCol(['omschrijving', 'description', 'notities', 'notes']),
     };
 
+    console.log('  🔍 Productpagina kolom index:', cols.productpage);
     let count = 0;
     const productUrls = [];
 
