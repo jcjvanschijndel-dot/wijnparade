@@ -47,17 +47,6 @@ for (const dir of dirs) {
         }
     }
     
-    // Sort locations by country → region → name
-    if (dir === 'locations') {
-        items.sort((a, b) => {
-            const country = (a.country || 'zzz').localeCompare(b.country || 'zzz', 'nl');
-            if (country !== 0) return country;
-            const region = (a.region || 'zzz').localeCompare(b.region || 'zzz', 'nl');
-            if (region !== 0) return region;
-            return (a.name || '').localeCompare(b.name || '', 'nl');
-        });
-    }
-
     fs.writeFileSync(path.join(dirPath, '_index.json'), JSON.stringify(items, null, 2));
     console.log(`  📁 ${dir}: ${items.length} entries`);
 }
@@ -193,183 +182,6 @@ for (const file of locationFiles) {
 }
 
 console.log(`  📍 locations: ${locationFiles.length} statische pagina's gegenereerd`);
-
-// ============================================================
-// LOCATIES OVERZICHTSPAGINA GENEREREN (gegroepeerd per land → regio)
-// ============================================================
-
-const typeEmojis = { wijnhuis: '🏰', wijnbar: '🍾', restaurant: '🍽️', wijnwinkel: '🏪' };
-
-// Read all locations from the sorted _index.json
-let allLocs = [];
-try {
-    const idxPath = path.join(CONTENT_DIR, 'locations', '_index.json');
-    if (fs.existsSync(idxPath)) allLocs = JSON.parse(fs.readFileSync(idxPath, 'utf8'));
-} catch(e) {}
-
-// Group by country → region
-const byCountry = {};
-for (const loc of allLocs) {
-    const country = loc.country || 'Overig';
-    const region = loc.region || '';
-    if (!byCountry[country]) byCountry[country] = {};
-    if (!byCountry[country][region]) byCountry[country][region] = [];
-    byCountry[country][region].push(loc);
-}
-
-const countriesHtml = Object.keys(byCountry).sort((a,b) => a.localeCompare(b, 'nl')).map(country => {
-    const regionsHtml = Object.keys(byCountry[country]).sort((a,b) => a.localeCompare(b, 'nl')).map(region => {
-        const locs = byCountry[country][region];
-        const locsHtml = locs.map(l => `
-            <a href="/locations/${l._id}" class="loc-item">
-                <span class="loc-emoji">${typeEmojis[l.type] || '📍'}</span>
-                <span class="loc-name">${l.title || l.name}</span>
-                <span class="loc-type">${l.type || ''}</span>
-            </a>`).join('');
-        return region
-            ? `<div class="region-group"><h3 class="region-name">${region}</h3><div class="loc-list">${locsHtml}</div></div>`
-            : `<div class="region-group"><div class="loc-list">${locsHtml}</div></div>`;
-    }).join('');
-    return `<div class="country-group">
-        <h2 class="country-name">${country} <span class="country-count">${Object.values(byCountry[country]).flat().length}</span></h2>
-        ${regionsHtml}
-    </div>`;
-}).join('');
-
-const locatiesHtml = `<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="theme-color" content="#1e3a8a">
-  <title>Alle wijnlocaties | de_wijnparade</title>
-  <meta name="description" content="Ontdek alle wijnhuizen, restaurants, wijnbars en wijnwinkels op de_wijnparade — gesorteerd per land en regio.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <style>
-    .locaties-header { background: var(--navy); color: #fff; padding: 2.5rem 0 2rem; text-align: center; }
-    .locaties-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .locaties-header p { opacity: 0.85; font-size: 1rem; }
-    .locaties-search { max-width: 480px; margin: 1.5rem auto 0; }
-    .locaties-search input { width: 100%; padding: 0.7rem 1rem; border: none; border-radius: 50px; font-size: 0.95rem; font-family: inherit; box-sizing: border-box; }
-    .locaties-search input:focus { outline: 2px solid rgba(255,255,255,0.5); }
-    .locaties-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin: 1rem 0 0; }
-    .locaties-filters button { padding: 0.3rem 0.8rem; border: 1px solid rgba(255,255,255,0.4); background: transparent; color: #fff; border-radius: 50px; font-size: 0.8rem; cursor: pointer; font-family: inherit; transition: all 0.2s; }
-    .locaties-filters button.active, .locaties-filters button:hover { background: #fff; color: var(--navy); }
-    .locaties-content { padding: 2rem 0; }
-    .country-group { margin-bottom: 2.5rem; }
-    .country-name { font-size: 1.25rem; font-weight: 700; color: var(--navy); border-bottom: 2px solid var(--navy); padding-bottom: 0.4rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
-    .country-count { font-size: 0.8rem; font-weight: 500; background: var(--navy); color: #fff; border-radius: 50px; padding: 0.1rem 0.55rem; }
-    .region-group { margin-bottom: 1.25rem; padding-left: 0.5rem; }
-    .region-name { font-size: 0.95rem; font-weight: 600; color: var(--gray-600); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem; }
-    .loc-list { display: flex; flex-direction: column; gap: 0.25rem; }
-    .loc-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0.75rem; border-radius: 8px; text-decoration: none; color: var(--gray-900); transition: background 0.15s; font-size: 0.9rem; }
-    .loc-item:hover { background: var(--gray-100); }
-    .loc-emoji { font-size: 1rem; flex-shrink: 0; }
-    .loc-name { flex: 1; font-weight: 500; }
-    .loc-type { font-size: 0.75rem; color: var(--gray-500); flex-shrink: 0; }
-    .no-results { text-align: center; padding: 3rem; color: var(--gray-500); }
-    @media (max-width: 640px) { .country-name { font-size: 1.1rem; } }
-  </style>
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="/index.html" class="header-logo">
-          <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
-          <span class="header-logo-name">de_wijnparade</span>
-        </a>
-        <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:white;font-size:11px;font-weight:600;">Volgen</span></a>
-      </div>
-    </div>
-  </header>
-
-  <div class="locaties-header">
-    <div class="container">
-      <h1>🍷 Alle wijnlocaties</h1>
-      <p>${allLocs.length} adressen in ${Object.keys(byCountry).length} landen — wijnhuizen, restaurants, wijnbars en wijnwinkels</p>
-      <div class="locaties-search">
-        <input type="text" id="locSearch" placeholder="Zoek een naam, stad of regio…" autocomplete="off">
-      </div>
-      <div class="locaties-filters">
-        <button class="active" data-filter="all">Alles</button>
-        <button data-filter="wijnhuis">🏰 Wijnhuizen</button>
-        <button data-filter="restaurant">🍽️ Restaurants</button>
-        <button data-filter="wijnbar">🍾 Wijnbars</button>
-        <button data-filter="wijnwinkel">🏪 Wijnwinkels</button>
-      </div>
-    </div>
-  </div>
-
-  <main class="main locaties-content">
-    <div class="container">
-      <div id="locatiesContent">
-        ${countriesHtml}
-      </div>
-      <div class="no-results" id="noResults" style="display:none;">Geen locaties gevonden.</div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
-    </div>
-  </footer>
-
-  <script>
-    const searchInput = document.getElementById('locSearch');
-    const filterBtns = document.querySelectorAll('.locaties-filters button');
-    let activeFilter = 'all';
-    let searchTerm = '';
-
-    function applyFilters() {
-      const items = document.querySelectorAll('.loc-item');
-      let visible = 0;
-      items.forEach(item => {
-        const name = item.querySelector('.loc-name').textContent.toLowerCase();
-        const type = item.querySelector('.loc-type').textContent.toLowerCase();
-        const address = item.dataset.address ? item.dataset.address.toLowerCase() : '';
-        const matchSearch = !searchTerm || name.includes(searchTerm) || address.includes(searchTerm);
-        const matchFilter = activeFilter === 'all' || type.includes(activeFilter);
-        const show = matchSearch && matchFilter;
-        item.style.display = show ? '' : 'none';
-        if (show) visible++;
-      });
-      // Hide empty country/region groups
-      document.querySelectorAll('.region-group').forEach(rg => {
-        const hasVisible = [...rg.querySelectorAll('.loc-item')].some(i => i.style.display !== 'none');
-        rg.style.display = hasVisible ? '' : 'none';
-      });
-      document.querySelectorAll('.country-group').forEach(cg => {
-        const hasVisible = [...cg.querySelectorAll('.loc-item')].some(i => i.style.display !== 'none');
-        cg.style.display = hasVisible ? '' : 'none';
-      });
-      document.getElementById('noResults').style.display = visible === 0 ? '' : 'none';
-    }
-
-    searchInput.addEventListener('input', e => {
-      searchTerm = e.target.value.toLowerCase().trim();
-      applyFilters();
-    });
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeFilter = btn.dataset.filter;
-        applyFilters();
-      });
-    });
-  </script>
-</body>
-</html>`;
-
-fs.writeFileSync(path.join(__dirname, 'locaties.html'), locatiesHtml);
-console.log(`  📋 locaties.html: ${allLocs.length} locaties, ${Object.keys(byCountry).length} landen`);
 
 // sitemap.xml
 const today = new Date().toISOString().split('T')[0];
@@ -910,14 +722,14 @@ const outside = allLocations.filter(l => l.name && !REGIONS.some(r => inBounds(l
 console.log(`  ℹ️  ${outside.length} locaties vallen buiten een regio (wel bereikbaar via /locaties)`);
 
 // --- 2. Vaste regiolijst op /travelguides en /map ---
-const byCountry = {};
-for (const r of regionsIndex) (byCountry[r.country || 'Overig'] ||= []).push(r);
+const regionsByCountry = {};
+for (const r of regionsIndex) (regionsByCountry[r.country || 'Overig'] ||= []).push(r);
 const regionListHtml = `<!-- REGIO-LINKS -->
 <section class="region-link-list"><div class="container">
   <h2 style="font-size:1.2rem;color:var(--navy);margin:2rem 0 1rem">Alle regiogidsen</h2>
-  ${Object.keys(byCountry).sort((a, b) => a.localeCompare(b, 'nl')).map(c => `<div style="margin-bottom:1rem">
+  ${Object.keys(regionsByCountry).sort((a, b) => a.localeCompare(b, 'nl')).map(c => `<div style="margin-bottom:1rem">
     <strong>${escHtml(c)}</strong><br>
-    ${byCountry[c].sort((a, b) => a.name.localeCompare(b.name, 'nl')).map(r =>
+    ${regionsByCountry[c].sort((a, b) => a.name.localeCompare(b.name, 'nl')).map(r =>
       `<a href="${r.url}" style="color:var(--navy);margin-right:1rem;display:inline-block">${escHtml(r.name)} (${r.locationCount})</a>`).join('\n    ')}
   </div>`).join('\n  ')}
   <p style="margin:0 0 2rem"><a href="/locaties" style="color:var(--navy);font-weight:600">Of bekijk alle ${allLocations.filter(l => l.name).length} locaties op een rij →</a></p>
@@ -943,10 +755,85 @@ for (const f of ['travelguides.html', 'map.html']) {
 {
   const all = allLocations.filter(l => l.name && l._id &&
     fs.existsSync(path.join(staticLocationsDir, `${l._id}.html`)));
-  const countryOf = l => (l.country || String(l.address || '').split(',').pop().trim() || 'Overig');
+  // Landnamen herkennen in het adres (Nederlands, Engels en lokale spelling)
+  const COUNTRY_ALIASES = {
+    'Nederland': ['nederland', 'netherlands', 'the netherlands', 'holland', 'nl'],
+    'België': ['belgië', 'belgie', 'belgium', 'belgique', 'belgien'],
+    'Luxemburg': ['luxemburg', 'luxembourg'],
+    'Frankrijk': ['frankrijk', 'france', 'francia', 'frankreich'],
+    'Italië': ['italië', 'italie', 'italy', 'italia', 'italien'],
+    'Spanje': ['spanje', 'spain', 'españa', 'espana', 'espanya', 'spanien'],
+    'Portugal': ['portugal'],
+    'Duitsland': ['duitsland', 'germany', 'deutschland', 'allemagne'],
+    'Oostenrijk': ['oostenrijk', 'austria', 'österreich', 'osterreich', 'autriche'],
+    'Zwitserland': ['zwitserland', 'switzerland', 'schweiz', 'suisse', 'svizzera'],
+    'Verenigd Koninkrijk': ['verenigd koninkrijk', 'united kingdom', 'uk', 'engeland', 'england', 'great britain', 'scotland', 'schotland', 'wales'],
+    'Ierland': ['ierland', 'ireland', 'éire'],
+    'Griekenland': ['griekenland', 'greece', 'ελλάδα', 'ellada', 'hellas'],
+    'Hongarije': ['hongarije', 'hungary', 'magyarország', 'magyarorszag'],
+    'Slovenië': ['slovenië', 'slovenie', 'slovenia', 'slovenija'],
+    'Kroatië': ['kroatië', 'kroatie', 'croatia', 'hrvatska'],
+    'Tsjechië': ['tsjechië', 'tsjechie', 'czechia', 'czech republic', 'česko', 'cesko'],
+    'Slowakije': ['slowakije', 'slovakia', 'slovensko'],
+    'Denemarken': ['denemarken', 'denmark', 'danmark'],
+    'Zweden': ['zweden', 'sweden', 'sverige'],
+    'Noorwegen': ['noorwegen', 'norway', 'norge'],
+    'Polen': ['polen', 'poland', 'polska'],
+    'Roemenië': ['roemenië', 'roemenie', 'romania', 'românia'],
+    'Bulgarije': ['bulgarije', 'bulgaria', 'българия'],
+    'Georgië': ['georgië', 'georgie', 'georgia', 'sakartvelo'],
+    'Cyprus': ['cyprus', 'κύπρος'],
+    'Malta': ['malta'],
+    'Monaco': ['monaco'],
+    'Liechtenstein': ['liechtenstein'],
+    'Servië': ['servië', 'servie', 'serbia', 'srbija'],
+    'Turkije': ['turkije', 'turkey', 'türkiye', 'turkiye'],
+    'Marokko': ['marokko', 'morocco', 'maroc'],
+  };
+  // Eilanden en streken die als "land" in adressen staan
+  const PLACE_ALIASES = { 'mallorca': 'Spanje', 'ibiza': 'Spanje', 'menorca': 'Spanje',
+    'samos': 'Griekenland', 'santorini': 'Griekenland', 'kreta': 'Griekenland', 'crete': 'Griekenland',
+    'corsica': 'Frankrijk', 'corse': 'Frankrijk', 'sicilia': 'Italië', 'sicily': 'Italië',
+    'sardegna': 'Italië', 'rheinland-pfalz': 'Duitsland', 'la rioja': 'Spanje' };
+  const aliasToCountry = { ...PLACE_ALIASES };
+  for (const [c, list] of Object.entries(COUNTRY_ALIASES)) list.forEach(a => aliasToCountry[a] = c);
+  const norm = s => String(s || '').toLowerCase().trim();
+  const unknown = [];
+  const fromAddress = l => {
+    // 0. het CMS-veld "Land", als dat is ingevuld
+    if (l.country && String(l.country).trim()) return aliasToCountry[norm(l.country)] || String(l.country).trim();
+    const parts = String(l.address || '').split(/[,|]/).map(norm).reverse();
+    // 1. een los adresdeel dat precies een landnaam is (van achter naar voor)
+    for (const p of parts) if (aliasToCountry[p]) return aliasToCountry[p];
+    // 2. een landnaam die ergens als los woord in het adres staat
+    const addr = ' ' + norm(l.address).replace(/[,.|()\d]/g, ' ') + ' ';
+    for (const [alias, c] of Object.entries(aliasToCountry))
+      if (alias.length > 2 && addr.includes(' ' + alias + ' ')) return c;
+    // 3. Nederlandse postcode (1234 AB)
+    if (/\b[1-9]\d{3}\s?[A-Z]{2}\b/.test(String(l.address || ''))) return 'Nederland';
+    // 4. het land van de regio waar de locatie in valt
+    const r = REGIONS.filter(r => inBounds(l, r)).sort((a, b) => boxSize(a) - boxSize(b))[0];
+    if (r && r.country && aliasToCountry[norm(r.country)]) return aliasToCountry[norm(r.country)];
+    return null;
+  };
+  // Eerste ronde: wat uit CMS-veld of adres te halen is
+  const known = new Map();
+  for (const l of all) { const c = fromAddress(l); if (c) known.set(l._id, c); }
+  // Tweede ronde: land van de dichtstbijzijnde locatie met bekend land (binnen ~150 km)
+  const knownGeo = all.filter(l => known.has(l._id) && hasGeo(l));
+  const countryOf = l => {
+    if (known.has(l._id)) return known.get(l._id);
+    if (hasGeo(l) && knownGeo.length) {
+      const nearest = knownGeo.reduce((best, k) => dist2(l, k) < dist2(l, best) ? k : best);
+      if (dist2(l, nearest) < 1.8) return known.get(nearest._id);   // ~1,35° ≈ 150 km
+    }
+    unknown.push(`${l._id} → "${l.address || ''}"`);
+    return 'Overig';
+  };
   const groups = {};
   for (const l of all) (groups[countryOf(l)] ||= []).push(l);
-  const countries = Object.keys(groups).sort((a, b) => a.localeCompare(b, 'nl'));
+  const countries = Object.keys(groups).sort((a, b) =>
+    a === 'Overig' ? 1 : b === 'Overig' ? -1 : a.localeCompare(b, 'nl'));
 
   const html = `<!DOCTYPE html>
 <html lang="nl">
@@ -966,6 +853,7 @@ for (const f of ['travelguides.html', 'map.html']) {
     .loc-list a{color:var(--navy);text-decoration:none}
     .loc-list a:hover{text-decoration:underline}
     .loc-type{color:var(--gray-600);font-size:.85em}
+    .loc-region{margin:1.2rem 0 .5rem;font-size:1rem;color:var(--gray-600)}
   </style>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
@@ -981,11 +869,19 @@ for (const f of ['travelguides.html', 'map.html']) {
     <a href="/map" class="back-button">← Naar de kaart</a> &nbsp; <a href="/travelguides" class="back-button">Regiogidsen</a>
     <h1 style="color:var(--navy);margin-top:1rem">Alle wijnlocaties</h1>
     <p>${all.length} wijnhuizen, wijnbars, restaurants en wijnwinkels in ${countries.length} landen.</p>
-    ${countries.map(c => `<h2 class="loc-country">${escHtml(c)} (${groups[c].length})</h2>
-    <ul class="loc-list">
-      ${groups[c].sort((a, b) => String(a.title || a.name).localeCompare(String(b.title || b.name), 'nl'))
-        .map(l => `<li><a href="/locations/${escHtml(l._id)}">${escHtml(l.title || l.name)}</a> <span class="loc-type">${escHtml(typeLabelsReg[l.type] || '')}</span></li>`).join('\n      ')}
-    </ul>`).join('\n    ')}
+    ${countries.map(c => {
+      const byName = (a, b) => String(a.title || a.name).localeCompare(String(b.title || b.name), 'nl');
+      const li = l => `<li><a href="/locations/${escHtml(l._id)}">${escHtml(l.title || l.name)}</a> <span class="loc-type">${escHtml(typeLabelsReg[l.type] || '')}</span></li>`;
+      // Binnen een land: groeperen op het CMS-veld "Regio" als dat bij locaties is ingevuld
+      const regs = {};
+      for (const l of groups[c]) (regs[String(l.region || '').trim()] ||= []).push(l);
+      const names = Object.keys(regs).sort((a, b) => !a ? 1 : !b ? -1 : a.localeCompare(b, 'nl'));
+      const body = names.length === 1
+        ? `<ul class="loc-list">\n      ${regs[names[0]].sort(byName).map(li).join('\n      ')}\n    </ul>`
+        : names.map(r => `<h3 class="loc-region">${escHtml(r || 'Overige plekken')}</h3>
+    <ul class="loc-list">\n      ${regs[r].sort(byName).map(li).join('\n      ')}\n    </ul>`).join('\n    ');
+      return `<h2 class="loc-country">${escHtml(c)} (${groups[c].length})</h2>\n    ${body}`;
+    }).join('\n    ')}
   </div></main>
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
@@ -1003,6 +899,10 @@ for (const f of ['travelguides.html', 'map.html']) {
     }
   }
   console.log(`  📋 locaties.html: ${all.length} locaties in ${countries.length} landen`);
+  if (unknown.length) {
+    console.log(`  ⚠️  ${unknown.length} locaties zonder herkenbaar land (staan onder "Overig"):`);
+    unknown.slice(0, 40).forEach(u => console.log('     - ' + u));
+  }
 }
 
 console.log(`  🌍 regio: ${regionsIndex.length} regio-pagina's gegenereerd`);
