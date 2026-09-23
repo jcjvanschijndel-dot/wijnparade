@@ -73,8 +73,8 @@ const typeLabels = {
 };
 
 const sitemapUrls = [
-    `${SITE_URL}/`, `${SITE_URL}/map.html`, `${SITE_URL}/value-score.html`,
-    `${SITE_URL}/travelguides.html`, `${SITE_URL}/shop.html`,
+    `${SITE_URL}/`, `${SITE_URL}/map`, `${SITE_URL}/value-score`,
+    `${SITE_URL}/travelguides`, `${SITE_URL}/shop`,
 ];
 
 for (const file of locationFiles) {
@@ -494,7 +494,7 @@ for (const region of REGIONS) {
            lng >= region.bounds.minLng && lng <= region.bounds.maxLng;
   });
 
-  const pageUrl = `${SITE_URL_REGIONS}/regio/${region.id}.html`;
+  const pageUrl = `${SITE_URL_REGIONS}/regio/${region.id}`;
   const locNames = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
   const metaDesc = `Ontdek de beste wijnhuizen, restaurants en wijnbars in ${region.name}. Waaronder ${locNames} — geselecteerd door de_wijnparade.`.substring(0, 160);
 
@@ -633,7 +633,7 @@ for (const region of REGIONS) {
     centerLng: region.centerLng,
     zoom: region.zoom,
     locationCount: locs.length,
-    url: `/regio/${region.id}.html`,
+    url: `/regio/${region.id}`,
     mapUrl: `/map.html?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}`
   });
 }
@@ -650,6 +650,171 @@ if (fs.existsSync(sitemapPath)) {
   const regionUrls = regionsIndex.map(r => `  <url>\n    <loc>${SITE_URL_REGIONS}${r.url}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`).join('\n');
   sitemap = sitemap.replace('</urlset>', regionUrls + '\n</urlset>');
   fs.writeFileSync(sitemapPath, sitemap);
+}
+
+// ============================================================
+// INTERNE LINKS (SEO): zodat Google alle pagina's via links kan vinden
+//   1. Elke locatiepagina krijgt "Meer in <regio>" met links naar
+//      de regiogids en naar locaties in de buurt
+//   2. /travelguides en /map krijgen een vaste lijst met links
+//      naar alle regiogidsen (naast de bestaande JavaScript-weergave)
+// ============================================================
+
+const escHtml = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+const inBounds = (l, r) => {
+  const lat = parseFloat(l.lat), lng = parseFloat(l.lng);
+  if (isNaN(lat) || isNaN(lng)) return false;
+  return lat >= r.bounds.minLat && lat <= r.bounds.maxLat &&
+         lng >= r.bounds.minLng && lng <= r.bounds.maxLng;
+};
+const boxSize = r => (r.bounds.maxLat - r.bounds.minLat) * (r.bounds.maxLng - r.bounds.minLng);
+const dist2 = (a, b) => {
+  const dLat = parseFloat(a.lat) - parseFloat(b.lat);
+  const dLng = (parseFloat(a.lng) - parseFloat(b.lng)) * Math.cos(parseFloat(a.lat) * Math.PI / 180);
+  return dLat * dLat + dLng * dLng;
+};
+const hasGeo = l => !isNaN(parseFloat(l.lat)) && !isNaN(parseFloat(l.lng));
+
+// --- 1. "Meer in deze regio" op locatiepagina's ---
+const LINK_MARKER = '<!-- interne-links -->';
+let linkedCount = 0;
+const geoLocs = allLocations.filter(l => l.name && hasGeo(l));
+
+for (const loc of allLocations) {
+  if (!loc.name || !loc._id) continue;
+  const pagePath = path.join(staticLocationsDir, `${loc._id}.html`);
+  if (!fs.existsSync(pagePath)) continue;
+  let page = fs.readFileSync(pagePath, 'utf8');
+  if (page.includes(LINK_MARKER)) continue;
+
+  // Meest specifieke regio (kleinste kader) waar deze locatie in valt
+  const region = REGIONS.filter(r => inBounds(loc, r)).sort((a, b) => boxSize(a) - boxSize(b))[0];
+
+  // Dichtstbijzijnde andere locaties (binnen de regio als die er is)
+  const pool = (region ? geoLocs.filter(l => inBounds(l, region)) : geoLocs)
+    .filter(l => l._id !== loc._id);
+  const nearby = hasGeo(loc)
+    ? pool.sort((a, b) => dist2(loc, a) - dist2(loc, b)).slice(0, 6)
+    : [];
+
+  const title = region ? `Meer in ${escHtml(region.name)}` : 'Meer in de buurt';
+  const block = `${LINK_MARKER}
+  <section class="more-links"><div class="container">
+    <h2 style="font-size:1.2rem;color:var(--navy);margin:2rem 0 1rem">${title}</h2>
+    ${nearby.length ? `<ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.5rem 1.5rem;margin:0 0 1rem">
+      ${nearby.map(l => `<li><a href="/locations/${escHtml(l._id)}" style="color:var(--navy)">${escHtml(l.title || l.name)}</a> <span style="color:var(--gray-600);font-size:.85em">${escHtml(typeLabelsReg[l.type] || '')}</span></li>`).join('\n      ')}
+    </ul>` : ''}
+    <p style="margin:0 0 2rem">
+      ${region ? `<a href="/regio/${escHtml(region.id)}" style="color:var(--navy);font-weight:600">Alle wijn hotspots in ${escHtml(region.name)} →</a> &nbsp;·&nbsp; ` : ''}<a href="/travelguides" style="color:var(--navy)">Alle regiogidsen</a> &nbsp;·&nbsp; <a href="/locaties" style="color:var(--navy)">Alle locaties</a>
+    </p>
+  </div></section>
+`;
+  const anchor = '<section class="tips-form-section">';
+  page = page.includes(anchor) ? page.replace(anchor, block + '  ' + anchor)
+                               : page.replace('<footer', block + '<footer');
+  fs.writeFileSync(pagePath, page);
+  linkedCount++;
+}
+console.log(`  🔗 interne links toegevoegd aan ${linkedCount} locatiepagina's`);
+const outside = allLocations.filter(l => l.name && !REGIONS.some(r => inBounds(l, r)));
+console.log(`  ℹ️  ${outside.length} locaties vallen buiten een regio (wel bereikbaar via /locaties)`);
+
+// --- 2. Vaste regiolijst op /travelguides en /map ---
+const byCountry = {};
+for (const r of regionsIndex) (byCountry[r.country || 'Overig'] ||= []).push(r);
+const regionListHtml = `<!-- REGIO-LINKS -->
+<section class="region-link-list"><div class="container">
+  <h2 style="font-size:1.2rem;color:var(--navy);margin:2rem 0 1rem">Alle regiogidsen</h2>
+  ${Object.keys(byCountry).sort((a, b) => a.localeCompare(b, 'nl')).map(c => `<div style="margin-bottom:1rem">
+    <strong>${escHtml(c)}</strong><br>
+    ${byCountry[c].sort((a, b) => a.name.localeCompare(b.name, 'nl')).map(r =>
+      `<a href="${r.url}" style="color:var(--navy);margin-right:1rem;display:inline-block">${escHtml(r.name)} (${r.locationCount})</a>`).join('\n    ')}
+  </div>`).join('\n  ')}
+  <p style="margin:0 0 2rem"><a href="/locaties" style="color:var(--navy);font-weight:600">Of bekijk alle ${allLocations.filter(l => l.name).length} locaties op een rij →</a></p>
+</div></section>
+<!-- /REGIO-LINKS -->`;
+
+for (const f of ['travelguides.html', 'map.html']) {
+  const fp = path.join(__dirname, f);
+  if (!fs.existsSync(fp) || !regionsIndex.length) continue;
+  let page = fs.readFileSync(fp, 'utf8');
+  if (/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/.test(page)) {
+    page = page.replace(/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/, regionListHtml);
+  } else if (page.includes('<footer')) {
+    page = page.replace('<footer', regionListHtml + '\n<footer');
+  } else {
+    page = page.replace('</body>', regionListHtml + '\n</body>');
+  }
+  fs.writeFileSync(fp, page);
+  console.log(`  🔗 regiolijst toegevoegd aan ${f}`);
+}
+
+// --- 3. Overzichtspagina /locaties met ALLE locaties (per land) ---
+{
+  const all = allLocations.filter(l => l.name && l._id &&
+    fs.existsSync(path.join(staticLocationsDir, `${l._id}.html`)));
+  const countryOf = l => (l.country || String(l.address || '').split(',').pop().trim() || 'Overig');
+  const groups = {};
+  for (const l of all) (groups[countryOf(l)] ||= []).push(l);
+  const countries = Object.keys(groups).sort((a, b) => a.localeCompare(b, 'nl'));
+
+  const html = `<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#1e3a8a">
+  <title>Alle wijnlocaties in Europa — wijnhuizen, wijnbars en restaurants | de_wijnparade</title>
+  <meta name="description" content="Overzicht van alle ${all.length} wijnhuizen, wijnbars, restaurants en wijnwinkels van de_wijnparade, per land.">
+  <link rel="canonical" href="${SITE_URL}/locaties">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <style>
+    .loc-country{margin:2rem 0 .75rem;color:var(--navy);font-size:1.2rem;border-bottom:2px solid var(--gray-200);padding-bottom:.4rem}
+    .loc-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.4rem 1.5rem}
+    .loc-list a{color:var(--navy);text-decoration:none}
+    .loc-list a:hover{text-decoration:underline}
+    .loc-type{color:var(--gray-600);font-size:.85em}
+  </style>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
+<body>
+  <header class="header"><div class="container"><div class="header-inner">
+    <a href="/" class="header-logo">
+      <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
+      <span class="header-logo-name">de_wijnparade</span>
+    </a>
+  </div></div></header>
+  <main class="main"><div class="container">
+    <a href="/map" class="back-button">← Naar de kaart</a> &nbsp; <a href="/travelguides" class="back-button">Regiogidsen</a>
+    <h1 style="color:var(--navy);margin-top:1rem">Alle wijnlocaties</h1>
+    <p>${all.length} wijnhuizen, wijnbars, restaurants en wijnwinkels in ${countries.length} landen.</p>
+    ${countries.map(c => `<h2 class="loc-country">${escHtml(c)} (${groups[c].length})</h2>
+    <ul class="loc-list">
+      ${groups[c].sort((a, b) => String(a.title || a.name).localeCompare(String(b.title || b.name), 'nl'))
+        .map(l => `<li><a href="/locations/${escHtml(l._id)}">${escHtml(l.title || l.name)}</a> <span class="loc-type">${escHtml(typeLabelsReg[l.type] || '')}</span></li>`).join('\n      ')}
+    </ul>`).join('\n    ')}
+  </div></main>
+  <footer class="footer"><div class="container">
+    <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+  </div></footer>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(__dirname, 'locaties.html'), html);
+
+  const smPath = path.join(__dirname, 'sitemap.xml');
+  if (fs.existsSync(smPath)) {
+    let sm = fs.readFileSync(smPath, 'utf8');
+    if (!sm.includes(`${SITE_URL}/locaties<`)) {
+      sm = sm.replace('</urlset>', `  <url><loc>${SITE_URL}/locaties</loc><lastmod>${new Date().toISOString().split('T')[0]}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n</urlset>`);
+      fs.writeFileSync(smPath, sm);
+    }
+  }
+  console.log(`  📋 locaties.html: ${all.length} locaties in ${countries.length} landen`);
 }
 
 console.log(`  🌍 regio: ${regionsIndex.length} regio-pagina's gegenereerd`);
