@@ -4,6 +4,29 @@ let map;
 let markers = [];
 let activeFilter = 'all';
 let infoWindow;
+let clusterer = null;
+
+// Clusters: blauwe cirkels met het aantal locaties, in de huisstijl
+const clusterRenderer = {
+    render({ count, position }) {
+        const size = count < 10 ? 40 : count < 50 ? 48 : 56;
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}">
+            <circle cx="${size / 2}" cy="${size / 2}" r="${size / 2 - 3}" fill="#1e3a8a" fill-opacity="0.92" stroke="white" stroke-width="3"/>
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" fill="white"
+                  font-family="Inter, Arial, sans-serif" font-size="${size < 48 ? 14 : 16}" font-weight="700">${count}</text>
+        </svg>`;
+        return new google.maps.Marker({
+            position,
+            icon: {
+                url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
+                scaledSize: new google.maps.Size(size, size),
+                anchor: new google.maps.Point(size / 2, size / 2)
+            },
+            title: `${count} locaties`,
+            zIndex: 1000 + count
+        });
+    }
+};
 
 function initMap() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -25,6 +48,17 @@ function initMap() {
     });
 
     infoWindow = new google.maps.InfoWindow();
+
+    // Clustering (werkt alleen als de clusterbibliotheek is geladen; anders losse markers)
+    if (window.markerClusterer) {
+        clusterer = new markerClusterer.MarkerClusterer({
+            map,
+            markers: [],
+            renderer: clusterRenderer,
+            algorithm: new markerClusterer.SuperClusterAlgorithm({ radius: 70, maxZoom: 14 })
+        });
+    }
+
     initSearch();
     loadLocationsFromCMS(hasParams);
 }
@@ -96,6 +130,7 @@ async function loadLocationsFromCMS(skipFit = false) {
 }
 
 function addMarkers(locations) {
+    if (clusterer) clusterer.clearMarkers();
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
@@ -104,10 +139,9 @@ function addMarkers(locations) {
 
         const marker = new google.maps.Marker({
             position: { lat: location.lat, lng: location.lng },
-            map: map,
+            map: clusterer ? null : map,
             title: location.name,
-            icon: getMarkerIcon(location.type),
-            animation: google.maps.Animation.DROP
+            icon: getMarkerIcon(location.type)
         });
 
         marker.addListener('click', () => {
@@ -117,6 +151,8 @@ function addMarkers(locations) {
 
         markers.push(marker);
     });
+
+    if (clusterer) clusterer.addMarkers(markers);
 }
 
 function getMarkerIcon(type) {
