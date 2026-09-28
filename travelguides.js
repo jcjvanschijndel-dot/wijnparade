@@ -25,6 +25,11 @@ const REGION_ICONS = {
   'costa-brava': 'ti-sun',
   'malaga': 'ti-sun',
   'griekenland': 'ti-building-arch',
+  'dordogne-lot': 'ti-building-castle',
+  'savoie': 'ti-mountain',
+  'costa-blanca': 'ti-sun',
+  'rhone-zuid': 'ti-sun',
+  'languedoc-roussillon': 'ti-sun',
 };
 function getRegionIcon(id) {
   return REGION_ICONS[id] || 'ti-map-pin';
