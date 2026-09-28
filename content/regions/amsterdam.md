@@ -1,8 +1,12 @@
 ---
-name: Amsterdam & omgeving
+name: Amsterdam
 country: Nederland
-emoji: "🚲"
-description: "Amsterdam is een verrassend rijke wijnstad met een groeiende scène van serieuze wijnbars en restaurants. Van de gezellige Pijp tot Amsterdam Oost en de grachten — overal vind je adressen waar wijn serieus wordt genomen. Combineer een wijnronde met de iconische grachten, de beste eetstraten en de levendige buurten van de stad."
+emoji: 🚲
+description: Amsterdam is een verrassend rijke wijnstad met een groeiende scène
+  van serieuze wijnbars en restaurants. Van de gezellige Pijp tot Amsterdam Oost
+  en de grachten — overal vind je adressen waar wijn serieus wordt genomen.
+  Combineer een wijnronde met de iconische grachten, de beste eetstraten en de
+  levendige buurten van de stad.
 centerLat: 52.3676
 centerLng: 4.9041
 zoom: 12
