@@ -12,5 +12,6 @@ description: >-
 
 
   Je kunt hier ook overnachten en bij het chateau zit een top restaurant: Les Belles Perdrix. En het terras...buitencategorie!
+image: /uploads/troplong-mondot.webp
 website:  troplong-mondot.com
 ---
