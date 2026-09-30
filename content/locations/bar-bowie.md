@@ -1,17 +1,20 @@
 ---
-name: Bar Bowie
+name: La Passione
 type: restaurant
-address: Regentesselaan 24A, 2562 CS Den Haag
-lat: 52.07946279999999
-lng: 4.2827606
+address: Noordeinde 196, 2514 GS Den Haag
+lat: 52.08347209999999
+lng: 4.3043362
 description: >-
-  De sfeer doet denken aan een Parijse bistro: messing details, houten
-  elementen, een aantrekkelijk terras dat ook in de winter in gebruik is, en een
-  open bar waar je even makkelijk aan kunt schuiven voor een solo-glas als voor
-  een volledig diner.
+  Op het Noordeinde — de mooiste en kunstzinnigste straat van Den Haag, vol
+  galeries, antiquariaten en chique winkels — draait La Passione al jaren op
+  oprechte Italiaanse gastvrijheid. Chefs Paolo Tabaku (Albanees) en Nicolò
+  Sammarro (Siciliaans) koken met producten uit hun eigen geboortestreek: vers,
+  seizoensgebonden en zoveel mogelijk biologisch, deels zelf geïmporteerd. De
+  pasta wordt dagelijks met de hand gemaakt. Gastheren Tim en Tellis ontvangen
+  gasten zoals familie — warm, persoonlijk en zonder afstand.
 
 
-  Frans-Mediterraanse bistrokeuken, van ontbijt tot laat in de nacht: umami-rijke vegetarische gerechten, langoustines, houtduif, steak tartaar op zijn eigen manier. Seizoensgebonden en eenvoudig in zijn eerlijkheid. De wijnkaart heeft een uitgesproken focus op Frans — Bourgogne, Loire, Rhône — maar ook Oostenrijkse en Zuid-Afrikaanse etiketten krijgen hier een podium. Per glas een wisselende, zorgvuldig samengestelde selectie.
-image: /uploads/bar-bowie.webp
-website: https://www.barbowie.nl/
+  Elke avond een wisselend verrassingsmenu van meerdere gangen — geen vaste kaart, maar wat de chef die dag het mooiste vindt. Pappardelle met wilde paddestoelen, risotto met truffel en burrata, Siciliaanse zeebaars, chocoladesoufflé als afsluiter. Alles ademend van Italiaanse traditie. De wijnkaart is exclusief Italiaans — van Noord naar Zuid, van Piemonte en Alto Adige tot Sicilië en Campania. Kleine, weinig bekende producenten staan naast gevestigde namen. Tim en Tellis begeleiden je graag bij de keuze. La Passione heeft ook een eigen wineclub voor vaste gasten.
+image: /uploads/la-passione.webp
+website: https://www.restaurantlapassione.nl/
 ---
