@@ -7,8 +7,10 @@
     <meta name="description" content="Wijntips en de beste wijn hotspots in Europa — wijnkaart, regiogidsen en value scores van de_wijnparade.">
     <title>Wijntips en de beste wijn hotspots in Europa | de_wijnparade</title>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"de_wijnparade","url":"https://wijn-parade.nl","description":"Wijntips en de beste wijn hotspots in Europa"}</script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"></noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/logo.svg">
@@ -17,12 +19,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-57CJ2STYT6');
+  // Google Analytics pas laden nadat de pagina zichtbaar is, zodat het de eerste weergave niet vertraagt
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6';
+    document.head.appendChild(s);
+  });
 </script>
 <body>
     <header class="header">
@@ -30,7 +38,7 @@
             <div class="header-inner">
                 <a href="/" class="header-logo">
                     <div class="header-logo-box">
-                        <img src="/logo.svg" alt="de_wijnparade">
+                        <img src="/logo.svg" alt="de_wijnparade" width="28" height="28">
                     </div>
                     <span class="header-logo-name">de_wijnparade</span>
                 </a>
@@ -49,29 +57,29 @@
             <h1 class="page-hero-title">Wijntips en de beste wijn hotspots in Europa</h1>
             <div class="nav-grid">
                 <a href="map.html" class="nav-card">
-                    <div class="nav-icon-box"><i class="ti ti-map-pin"></i></div>
+                    <div class="nav-icon-box"><svg class="ti-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/></svg></div>
                     <span class="link-text">Wijnkaart</span>
-                    <i class="ti ti-chevron-right link-arrow"></i>
+                    <svg class="ti-svg link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
                 </a>
                 <a href="travelguides.html" class="nav-card">
-                    <div class="nav-icon-box"><i class="ti ti-world"></i></div>
+                    <div class="nav-icon-box"><svg class="ti-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></svg></div>
                     <span class="link-text">Reisgidsen</span>
-                    <i class="ti ti-chevron-right link-arrow"></i>
+                    <svg class="ti-svg link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
                 </a>
                 <a href="value-score.html" class="nav-card">
-                    <div class="nav-icon-box"><i class="ti ti-award"></i></div>
+                    <div class="nav-icon-box"><svg class="ti-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 1 0 12 0a6 6 0 1 0 -12 0"/><path d="M12 15l3.4 5.89l1.598 -3.233l3.598 .232l-3.4 -5.889"/><path d="M6.802 12l-3.4 5.89l3.598 -.233l1.598 3.232l3.4 -5.889"/></svg></div>
                     <span class="link-text">Value Score Top 100</span>
-                    <i class="ti ti-chevron-right link-arrow"></i>
+                    <svg class="ti-svg link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
                 </a>
                 <a href="shop.html" class="nav-card">
-                    <div class="nav-icon-box" style="background:#14532d;color:white;"><i class="ti ti-shopping-bag"></i></div>
+                    <div class="nav-icon-box" style="background:#14532d;color:white;"><svg class="ti-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304"/><path d="M9 11v-5a3 3 0 0 1 6 0v5"/></svg></div>
                     <span class="link-text" style="color:#14532d;">Wijnparade shop</span>
-                    <i class="ti ti-chevron-right link-arrow"></i>
+                    <svg class="ti-svg link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
                 </a>
                 <a href="install.html" class="nav-card">
-                    <div class="nav-icon-box" style="background:#eff3ff;color:#1e3a8a;"><i class="ti ti-device-mobile"></i></div>
+                    <div class="nav-icon-box" style="background:#eff3ff;color:#1e3a8a;"><svg class="ti-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14"/><path d="M11 4h2"/><path d="M12 17v.01"/></svg></div>
                     <span class="link-text" style="color:#1e3a8a;">Voeg toe als app</span>
-                    <i class="ti ti-chevron-right link-arrow"></i>
+                    <svg class="ti-svg link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>
                 </a>
             </div>
         </div>
