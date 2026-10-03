@@ -840,3 +840,10 @@ textarea {
         margin-bottom: 1.25rem;
     }
 }
+
+/* Inline SVG-iconen (vervangen de Tabler-icoonfont op de homepage) */
+.ti-svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+}
