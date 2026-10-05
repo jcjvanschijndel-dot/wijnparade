@@ -11,7 +11,13 @@ description: >-
   Noordelijke Rhône.
 
 
-  Bezoeken en proeverijen zijn mogelijk van maandag tot vrijdag en zaterdagochtend, uitsluitend op afspraak.
+  Bezoeken en proeverijen zijn mogelijk van maandag tot vrijdag en
+  zaterdagochtend, uitsluitend op afspraak.
+
+
+  Domaine Combier ligt in Pont-de-l'Isère, in de noordelijke Rhône. Een aanrader
+  voor liefhebbers van syrah uit Crozes-Hermitage tijdens een wijnreis door de
+  Rhône.
 image: /uploads/combier.webp
 website: https://www.domaine-combier.com/fr/
 ---

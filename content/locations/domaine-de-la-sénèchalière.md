@@ -10,7 +10,12 @@ description: >-
   werkkledij met een brede glimlach.
 
 
-  Bezoeken zijn uitsluitend op afspraak — soms wordt er een lunch bereid door zijn Japanse medewerker Ryusuke
+  Bezoeken zijn uitsluitend op afspraak — soms wordt er een lunch bereid door
+  zijn Japanse medewerker Ryusuke
+
+
+  Domaine de la Sénèchalière ligt in Saint-Julien-de-Concelles, in de
+  Muscadet-streek bij Nantes, in de Loire.
 image: /uploads/senechaliere.webp
 website: https://www.lasenechaliere.com/
 ---
