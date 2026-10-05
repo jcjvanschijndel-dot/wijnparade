@@ -9,7 +9,7 @@ description: "Klein, gezellig en meteen vertrouwd — zo voelt Bar Babar aan de
   samen met Amsterdamse specialisten: brood van Mater, kaas van Zuivelhoeve,
   wijnen van Pieksman en Vleck. Naturelwijnen, Franse bistrosfeer, kaarslicht.
   Bijna alle wijnen per glas beschikbaar — zo kun je lekker veel verschillende
-  dingen uitproberen. De sfeer doet denken aan een klein Parijs bistroatje:
+  dingen uitproberen. De sfeer doet denken aan een kleine Parijse bistro:
   wijnkleurige kaarsen, muren in warme tinten, kleine tafeltjes en barkrukken.
   Het is altijd gezellig druk, dus een plekje bemachtigen voelt als een
   cadeautje. Walk-in only — geen reserveringen."
