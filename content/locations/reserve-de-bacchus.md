@@ -9,9 +9,7 @@ description: >-
   moet lukken dus!
 
 
-  Réserve de Bacchus ligt in Ladoix-Serrigny, aan de voet van de heuvel van
-  Corton in de Côte de Beaune. Een handige wijnwinkel in Bourgogne om je
-  wijnreis te beginnen of af te sluiten, en om zonder van domein naar domein te
-  rijden een mooie selectie flessen mee naar huis te nemen.
+  Réserve de Bacchus ligt in Ladoix-Serrigny, aan de voet van de heuvel van Corton in de Côte de Beaune. Een handige wijnwinkel in Bourgogne om je wijnreis te beginnen of af te sluiten, en om zonder van domein naar domein te rijden een mooie selectie flessen mee naar huis te nemen.
+image: /uploads/reserve-de-bacchus.webp
 website: https://www.reservedebacchus.fr/
 ---
