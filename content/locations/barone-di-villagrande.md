@@ -11,7 +11,13 @@ description: >-
   Wijnproeverijen en wijn-spijs combi's verkrijgbaar.
 
 
-  Slapen kan in een oud landhuis met vier kamers, een infinity pool met uitzicht over de wijngaarden, en een eigen restaurant.
+  Slapen kan in een oud landhuis met vier kamers, een infinity pool met uitzicht
+  over de wijngaarden, en een eigen restaurant.
+
+
+  Barone di Villagrande is een wijnhuis in Milo, op de oostflank van de Etna op
+  Sicilië. Een mooie plek om de vulkanische Etna-wijnen te leren kennen, goed te
+  combineren met een bezoek aan Taormina.
 image: /uploads/barone.webp
 website: https://www.villagrande.it/en/barone_di_villagrande_en/
 ---

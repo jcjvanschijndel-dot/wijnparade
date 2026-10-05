@@ -8,7 +8,15 @@ description: >-
   Heerlijk terras!
 
 
-  Geopend in 1982 door de familie Bagnai, net buiten de oude stadsmuren van San Gimignano. Gerechten nog steeds bereid volgens de recepten van nonna Fiorella — klassiekers als ribollita en konijn met witte wijn staan al sinds het begin op de kaart.
+  Geopend in 1982 door de familie Bagnai, net buiten de oude stadsmuren van San
+  Gimignano. Gerechten nog steeds bereid volgens de recepten van nonna Fiorella
+  — klassiekers als ribollita en konijn met witte wijn staan al sinds het begin
+  op de kaart.
+
+
+  Le Vecchie Mura is een restaurant in San Gimignano, het torenstadje in
+  Toscane. Een fijne plek om na een dag sightseeing echte Toscaanse gerechten te
+  eten met een glas Toscaanse wijn.
 image: /uploads/mura.webp
 website: https://www.vecchiemura.it/
 ---

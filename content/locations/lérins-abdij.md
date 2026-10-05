@@ -7,10 +7,14 @@ lng: 7.0438355
 description: >-
   Een seizoensgebonden boottrip (april t/m oktober) naar de benedictijnse
   monniken van Lérins Abbey voor een wijnproeverij — een van de meest bijzondere
-  wijnbelevingen aan de hele Côte d'Azur. 
+  wijnbelevingen aan de hele Côte d'Azur.
 
 
-  De proeverij kan je boeken via restaurant La Tonnelle. Het is overigens geen straf om daar ook te eten!
+  De proeverij kan je boeken via restaurant La Tonnelle. Het is overigens geen
+  straf om daar ook te eten!
+
+
+  De Abdij van Lérins ligt op het eiland Saint-Honorat, voor de kust van Cannes.
 image: /uploads/lerins-abbey.webp
 website: https://www.abbayedelerins.com/
 ---
