@@ -1233,3 +1233,24 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     console.log('  ⚠️  products: kon Google Sheet niet ophalen:', err.message);
   }
 })();
+
+// ============================================================
+// HOMEPAGE: styles.css inline zetten (scheelt een render-blocking verzoek)
+// ============================================================
+try {
+  const indexPath = path.join(__dirname, 'index.html');
+  const cssLink = '<link rel="stylesheet" href="styles.css">';
+  let indexHtml = fs.readFileSync(indexPath, 'utf8');
+  if (indexHtml.includes(cssLink)) {
+    const css = fs.readFileSync(path.join(__dirname, 'styles.css'), 'utf8')
+      .replace(/\/\*[\s\S]*?\*\//g, '')
+      .replace(/\s+/g, ' ')
+      .replace(/\s*([{};:,>])\s*/g, '$1')
+      .trim();
+    indexHtml = indexHtml.replace(cssLink, () => `<style>${css}</style>`);
+    fs.writeFileSync(indexPath, indexHtml);
+    console.log(`  🎨 styles.css inline gezet in index.html (${css.length} tekens)`);
+  }
+} catch (e) {
+  console.log('  ⚠️  kon styles.css niet inline zetten:', e.message);
+}

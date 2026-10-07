@@ -24,13 +24,22 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-57CJ2STYT6');
-  // Google Analytics pas laden nadat de pagina zichtbaar is, zodat het de eerste weergave niet vertraagt
-  window.addEventListener('load', function() {
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6';
-    document.head.appendChild(s);
-  });
+  // Google Analytics pas laden bij de eerste interactie (of na 6 seconden), zodat het het laden van de pagina niet vertraagt
+  (function() {
+    var loaded = false;
+    var events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+    function loadGA() {
+      if (loaded) return;
+      loaded = true;
+      events.forEach(function(e) { window.removeEventListener(e, loadGA); });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6';
+      document.head.appendChild(s);
+    }
+    events.forEach(function(e) { window.addEventListener(e, loadGA, { once: true, passive: true }); });
+    window.addEventListener('load', function() { setTimeout(loadGA, 6000); });
+  })();
 </script>
 <body>
     <header class="header">
