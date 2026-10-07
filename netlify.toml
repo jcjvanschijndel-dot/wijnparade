@@ -24,3 +24,75 @@
   for = "/content/*/_index.json"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Oude (hernoemde) locatie-URL's permanent doorsturen naar de juiste pagina,
+# zodat Google ze niet als dubbele pagina ziet
+[[redirects]]
+  from = "/locations/bar-bowie-1"
+  to = "/locations/bar-bowie"
+  status = 301
+
+[[redirects]]
+  from = "/locations/bar-bowie-1.html"
+  to = "/locations/bar-bowie"
+  status = 301
+
+[[redirects]]
+  from = "/locations/ca-del-baio-1"
+  to = "/locations/ca-del-baio"
+  status = 301
+
+[[redirects]]
+  from = "/locations/ca-del-baio-1.html"
+  to = "/locations/ca-del-baio"
+  status = 301
+
+[[redirects]]
+  from = "/locations/cafew-de-klepel"
+  to = "/locations/cafe-de-klepel"
+  status = 301
+
+[[redirects]]
+  from = "/locations/cafew-de-klepel.html"
+  to = "/locations/cafe-de-klepel"
+  status = 301
+
+[[redirects]]
+  from = "/locations/rijssel"
+  to = "/locations/rijsel"
+  status = 301
+
+[[redirects]]
+  from = "/locations/rijssel.html"
+  to = "/locations/rijsel"
+  status = 301
+
+[[redirects]]
+  from = "/locations/siersma-wijnadvies-1"
+  to = "/locations/siersma-wijnadvies"
+  status = 301
+
+[[redirects]]
+  from = "/locations/siersma-wijnadvies-1.html"
+  to = "/locations/siersma-wijnadvies"
+  status = 301
+
+[[redirects]]
+  from = "/locations/weingut-zähringer-1"
+  to = "/locations/schloss-johannisberg"
+  status = 301
+
+[[redirects]]
+  from = "/locations/weingut-zähringer-1.html"
+  to = "/locations/schloss-johannisberg"
+  status = 301
+
+[[redirects]]
+  from = "/locations/weingut-z%C3%A4hringer-1"
+  to = "/locations/schloss-johannisberg"
+  status = 301
+
+[[redirects]]
+  from = "/locations/weingut-z%C3%A4hringer-1.html"
+  to = "/locations/schloss-johannisberg"
+  status = 301
