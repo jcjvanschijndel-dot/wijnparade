@@ -1,40 +1,5 @@
 const UTRECHT = { lat: 52.0907, lng: 5.1214 };
 
-const REGION_ICONS = {
-  'parijs': 'ti-building-arch',
-  'rotterdam': 'ti-anchor',
-  'amsterdam': 'ti-building-bridge-2',
-  't-gooi': 'ti-trees',
-  'limburg': 'ti-mountain',
-  'rioja': 'ti-building-castle',
-  'ribera-del-duero': 'ti-building-castle',
-  'bordeaux': 'ti-building-castle',
-  'bourgogne': 'ti-bottle',
-  'champagne': 'ti-star',
-  'rhone-noord': 'ti-mountain',
-  'provence': 'ti-sun',
-  'loire': 'ti-crown',
-  'douro': 'ti-ship',
-  'toscane': 'ti-sun',
-  'piemonte': 'ti-mountain',
-  'alto-adige': 'ti-pine-tree',
-  'mosel': 'ti-mountain',
-  'ahr': 'ti-mountain',
-  'baskenland': 'ti-fish',
-  'mallorca': 'ti-sun',
-  'costa-brava': 'ti-sun',
-  'malaga': 'ti-sun',
-  'griekenland': 'ti-building-arch',
-  'dordogne-lot': 'ti-building-castle',
-  'savoie': 'ti-mountain',
-  'costa-blanca': 'ti-sun',
-  'rhone-zuid': 'ti-sun',
-  'languedoc-roussillon': 'ti-sun',
-};
-function getRegionIcon(id) {
-  return REGION_ICONS[id] || 'ti-map-pin';
-}
-
 function haversineKm(lat1, lng1, lat2, lng2) {
   const R = 6371;
   const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -107,9 +72,6 @@ function render() {
         <div class="region-row">
           <div class="region-row-left">
             <div class="region-row-header">
-              <div class="region-icon-box">
-                <i class="ti ${getRegionIcon(r.id)}"></i>
-              </div>
               <div>
                 <div class="region-row-name">${r.name}</div>
                 <div class="region-row-meta">±${r.km} km van Utrecht &middot; ${r.locationCount} locaties</div>
@@ -119,7 +81,7 @@ function render() {
           </div>
           <div class="region-row-actions">
             <a href="${r.url}" class="region-btn-primary">Bekijk gids →</a>
-            <a href="${r.mapUrl}" class="region-btn-map"><i class="ti ti-map-2" style="font-size:13px;vertical-align:-2px;"></i> Kaart</a>
+            <a href="${r.mapUrl}" class="region-btn-map">Kaart</a>
           </div>
         </div>`).join('')}
       </div>
