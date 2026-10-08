@@ -103,8 +103,8 @@ const typeLabels = {
 };
 
 const sitemapUrls = [
-    `${SITE_URL}/`, `${SITE_URL}/map`, `${SITE_URL}/value-score`,
-    `${SITE_URL}/travelguides`, `${SITE_URL}/shop`,
+    `${SITE_URL}/`, `${SITE_URL}/wijnkaart`, `${SITE_URL}/value-score`,
+    `${SITE_URL}/wijnreizen`, `${SITE_URL}/shop`,
 ];
 
 for (const file of locationFiles) {
@@ -164,7 +164,7 @@ for (const file of locationFiles) {
 <body>
   <header class="header"><div class="container">
     <div class="header-inner">
-      <a href="/map.html" class="header-logo">
+      <a href="/wijnkaart" class="header-logo">
         <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
         <span class="header-logo-name">de_wijnparade</span>
       </a>
@@ -172,7 +172,7 @@ for (const file of locationFiles) {
     </div>
   </div></header>
   <main class="main"><div class="container">
-    <a href="/map.html" class="back-button">← Terug naar kaart</a>
+    <a href="/wijnkaart" class="back-button">← Terug naar kaart</a>
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <div class="recipe-header">
       <h1 class="recipe-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
@@ -509,13 +509,17 @@ function getRegionIconClass(id) {
   return REGION_ICON_MAP[id] || 'ti-map-pin';
 }
 
-const regioDir = path.join(__dirname, 'regio');
-if (!fs.existsSync(regioDir)) fs.mkdirSync(regioDir);
+for (const dir of ['wijnreis', 'wijntips']) {
+  if (!fs.existsSync(path.join(__dirname, dir))) fs.mkdirSync(path.join(__dirname, dir));
+}
 
 const typeLabelsReg = { wijnbar: 'Wijnbar', wijnwinkel: 'Wijnwinkel', wijnhuis: 'Wijnhuis', restaurant: 'Restaurant' };
 const typeLabelsPlural = { wijnbar: 'Wijnbars', wijnwinkel: 'Wijnwinkels', wijnhuis: 'Wijnhuizen', restaurant: 'Restaurants' };
 // Stedelijke regio's krijgen "Wijntips <stad>" in plaats van "Wijnreis <regio>"
 const CITY_REGIONS = new Set(['amsterdam', 'rotterdam', 'parijs', 't-gooi']);
+function regionPath(id) {
+  return `/${CITY_REGIONS.has(id) ? 'wijntips' : 'wijnreis'}/${id}`;
+}
 function regionSeo(region) {
   return CITY_REGIONS.has(region.id)
     ? { h1: `Wijntips ${region.name}`, title: `Wijntips ${region.name}: de beste wijnbars, wijnwinkels en restaurants`, link: `Wijntips ${region.name}` }
@@ -540,7 +544,7 @@ for (const region of REGIONS) {
            lng >= region.bounds.minLng && lng <= region.bounds.maxLng;
   });
 
-  const pageUrl = `${SITE_URL_REGIONS}/regio/${region.id}`;
+  const pageUrl = `${SITE_URL_REGIONS}${regionPath(region.id)}`;
   const locNames = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
   const seo = regionSeo(region);
   const metaDesc = (CITY_REGIONS.has(region.id)
@@ -625,7 +629,7 @@ for (const region of REGIONS) {
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="/travelguides.html" class="header-logo">
+        <a href="/wijnreizen" class="header-logo">
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
@@ -640,7 +644,7 @@ for (const region of REGIONS) {
       <h1>${seo.h1}</h1>
       <div class="region-hero-country">${region.country}</div>
       <p class="region-hero-desc">${region.description}</p>
-      <a href="/map.html?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}" class="region-map-btn">
+      <a href="/wijnkaart?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}" class="region-map-btn">
         <i class="ti ti-map-2"></i> Bekijk op de kaart
       </a>
     </div>
@@ -670,7 +674,7 @@ for (const region of REGIONS) {
 </body>
 </html>`;
 
-  fs.writeFileSync(path.join(regioDir, `${region.id}.html`), html);
+  fs.writeFileSync(path.join(__dirname, regionPath(region.id).slice(1) + '.html'), html);
 
   regionsIndex.push({
     id: region.id,
@@ -682,9 +686,9 @@ for (const region of REGIONS) {
     centerLng: region.centerLng,
     zoom: region.zoom,
     locationCount: locs.length,
-    url: `/regio/${region.id}`,
+    url: regionPath(region.id),
     linkText: seo.link,
-    mapUrl: `/map.html?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}`
+    mapUrl: `/wijnkaart?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}`
   });
 }
 
@@ -706,7 +710,7 @@ if (fs.existsSync(sitemapPath)) {
 // INTERNE LINKS (SEO): zodat Google alle pagina's via links kan vinden
 //   1. Elke locatiepagina krijgt "Meer in <regio>" met links naar
 //      de regiogids en naar locaties in de buurt
-//   2. /travelguides en /map krijgen een vaste lijst met links
+//   2. /wijnreizen en /wijnkaart krijgen een vaste lijst met links
 //      naar alle regiogidsen (naast de bestaande JavaScript-weergave)
 // ============================================================
 
@@ -757,7 +761,7 @@ for (const loc of allLocations) {
       ${nearby.map(l => `<li><a href="/locations/${escHtml(l._id)}" style="color:var(--navy)">${escHtml(l.title || l.name)}</a> <span style="color:var(--gray-600);font-size:.85em">${escHtml(typeLabelsReg[l.type] || '')}</span></li>`).join('\n      ')}
     </ul>` : ''}
     <p style="margin:0 0 2rem">
-      ${region ? `<a href="/regio/${escHtml(region.id)}" style="color:var(--navy);font-weight:600">Alle wijn hotspots in ${escHtml(region.name)} →</a> &nbsp;·&nbsp; ` : ''}<a href="/travelguides" style="color:var(--navy)">Alle regiogidsen</a> &nbsp;·&nbsp; <a href="/locaties" style="color:var(--navy)">Alle locaties</a>
+      ${region ? `<a href="${regionPath(region.id)}" style="color:var(--navy);font-weight:600">${escHtml(regionSeo(region).link)}: alle tips →</a> &nbsp;·&nbsp; ` : ''}<a href="/wijnreizen" style="color:var(--navy)">Alle wijnreisgidsen</a> &nbsp;·&nbsp; <a href="/locaties" style="color:var(--navy)">Alle locaties</a>
     </p>
   </div></section>
 `;
@@ -771,7 +775,7 @@ console.log(`  🔗 interne links toegevoegd aan ${linkedCount} locatiepagina's`
 const outside = allLocations.filter(l => l.name && !REGIONS.some(r => inBounds(l, r)));
 console.log(`  ℹ️  ${outside.length} locaties vallen buiten een regio (wel bereikbaar via /locaties)`);
 
-// --- 2. Vaste regiolijst op /travelguides en /map ---
+// --- 2. Vaste regiolijst op /wijnreizen en /wijnkaart ---
 const regionsByCountry = {};
 for (const r of regionsIndex) (regionsByCountry[r.country || 'Overig'] ||= []).push(r);
 const regionListHtml = `<!-- REGIO-LINKS -->
@@ -786,7 +790,7 @@ const regionListHtml = `<!-- REGIO-LINKS -->
 </div></section>
 <!-- /REGIO-LINKS -->`;
 
-for (const f of ['travelguides.html', 'map.html']) {
+for (const f of ['wijnreizen.html', 'wijnkaart.html']) {
   const fp = path.join(__dirname, f);
   if (!fs.existsSync(fp) || !regionsIndex.length) continue;
   let page = fs.readFileSync(fp, 'utf8');
@@ -916,7 +920,7 @@ for (const f of ['travelguides.html', 'map.html']) {
     </a>
   </div></div></header>
   <main class="main"><div class="container">
-    <a href="/map" class="back-button">← Naar de kaart</a> &nbsp; <a href="/travelguides" class="back-button">Regiogidsen</a>
+    <a href="/wijnkaart" class="back-button">← Naar de kaart</a> &nbsp; <a href="/wijnreizen" class="back-button">Regiogidsen</a>
     <h1 style="color:var(--navy);margin-top:1rem">Alle wijnlocaties</h1>
     <p>${all.length} wijnhuizen, wijnbars, restaurants en wijnwinkels in ${countries.length} landen.</p>
     ${countries.map(c => {
@@ -1138,7 +1142,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="/shop.html" class="header-logo">
+        <a href="/shop" class="header-logo">
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
@@ -1308,7 +1312,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   const dishByName = new Map(dishes.map(d => [norm(d.dish), d]));
   const wineName = w => String(typeof w === 'string' ? w : (w && w.name) || '').trim();
   const dishName = d => String(typeof d === 'string' ? d : (d && d.dish) || '').trim();
-  const urlEsc = id => encodeURIComponent(id);
+  // URL zonder accenten: grüner-veltliner -> gruner-veltliner
+  const slugOf = id => String(id).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   const pairingPage = ({ title, description, canonical, h1, body }) => `<!DOCTYPE html>
 <html lang="nl">
@@ -1351,8 +1356,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <span class="header-logo-name">de_wijnparade</span>
     </a>
     <nav class="header-nav">
-      <a href="/map.html">Wijnkaart</a>
-      <a href="/travelguides.html">Reisgidsen</a>
+      <a href="/wijnkaart">Wijnkaart</a>
+      <a href="/wijnreizen">Reisgidsen</a>
       <a href="/wijn-spijs">Wijn &amp; spijs</a>
     </nav>
   </div></div></header>
@@ -1391,11 +1396,11 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   ];
   const wineLink = name => {
     const w = wineByName.get(norm(name));
-    return w ? `<a href="/eten-bij/${urlEsc(w._id)}">${escHtml(name)}</a>` : `<strong>${escHtml(name)}</strong>`;
+    return w ? `<a href="/eten-bij/${slugOf(w._id)}">${escHtml(name)}</a>` : `<strong>${escHtml(name)}</strong>`;
   };
   const dishLink = name => {
     const d = dishByName.get(norm(name));
-    return d ? `<a href="/wijn-bij/${urlEsc(d._id)}">${escHtml(name)}</a>` : `<strong>${escHtml(name)}</strong>`;
+    return d ? `<a href="/wijn-bij/${slugOf(d._id)}">${escHtml(name)}</a>` : `<strong>${escHtml(name)}</strong>`;
   };
   const crumbs = current => `<div class="ws-crumbs"><a href="/">Home</a> › <a href="/wijn-spijs">Wijn &amp; spijs</a> › ${escHtml(current)}</div>`;
   const pairingUrls = [];
@@ -1420,7 +1425,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       </ul></section>`;
     }).join('\n    ');
     const others = dishes.filter(o => o._id !== d._id);
-    const canonical = `${SITE_URL}/wijn-bij/${urlEsc(d._id)}`;
+    const canonical = `${SITE_URL}/wijn-bij/${slugOf(d._id)}`;
     const faq = {
       '@context': 'https://schema.org', '@type': 'FAQPage',
       mainEntity: [{ '@type': 'Question', name: `Welke wijn past bij ${d.dish}?`,
@@ -1434,11 +1439,11 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       body: `<p class="ws-intro">${escHtml(intro)}</p>
     ${sections}
     <section class="ws-section"><h2>Meer wijn-spijscombinaties</h2><div class="ws-links">
-      ${others.map(o => `<a href="/wijn-bij/${urlEsc(o._id)}">Wijn bij ${escHtml(o.dish)}</a>`).join('\n      ')}
+      ${others.map(o => `<a href="/wijn-bij/${slugOf(o._id)}">Wijn bij ${escHtml(o.dish)}</a>`).join('\n      ')}
     </div></section>
     <script type="application/ld+json">${JSON.stringify(faq).replace(/</g, '\\u003c')}</script>`
     });
-    fs.writeFileSync(path.join(dishDir, `${d._id}.html`), html);
+    fs.writeFileSync(path.join(dishDir, `${slugOf(d._id)}.html`), html);
     pairingUrls.push(canonical);
   }
 
@@ -1459,7 +1464,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       ? String(w.intro).trim()
       : `Wat eet je bij ${w.wine}? Deze gerechten passen er goed bij, zoals ${leadText}. Handig voor als je al een fles ${w.wine} in huis hebt en nog moet bedenken wat je gaat koken.`;
     const otherWines = wines.filter(o => o._id !== w._id);
-    const canonical = `${SITE_URL}/eten-bij/${urlEsc(w._id)}`;
+    const canonical = `${SITE_URL}/eten-bij/${slugOf(w._id)}`;
     const html = pairingPage({
       title: `Wat eet je bij ${w.wine}? Gerechten bij ${w.wine} | de_wijnparade`,
       description: `Welk eten past bij ${w.wine}? Bijvoorbeeld ${leadText}. Bekijk alle gerechten die goed combineren met ${w.wine}.`.substring(0, 160),
@@ -1473,10 +1478,10 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       ${reverse.map(r => `<li>${dishLink(r.dish)}${r.stars ? `<span class="ws-stars" aria-label="${r.stars} van 3 sterren">${'★'.repeat(r.stars)}</span>` : ''}</li>`).join('\n      ')}
     </ul></section>` : ''}
     <section class="ws-section"><h2>Andere wijnen</h2><div class="ws-links">
-      ${otherWines.map(o => `<a href="/eten-bij/${urlEsc(o._id)}">Eten bij ${escHtml(o.wine)}</a>`).join('\n      ')}
+      ${otherWines.map(o => `<a href="/eten-bij/${slugOf(o._id)}">Eten bij ${escHtml(o.wine)}</a>`).join('\n      ')}
     </div></section>`
     });
-    fs.writeFileSync(path.join(wineDir, `${w._id}.html`), html);
+    fs.writeFileSync(path.join(wineDir, `${slugOf(w._id)}.html`), html);
     pairingUrls.push(canonical);
   }
 
@@ -1489,10 +1494,10 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     h1: `<div class="ws-crumbs"><a href="/">Home</a> › Wijn &amp; spijs</div><h1 class="ws-h1">Welke wijn bij welk gerecht?</h1>`,
     body: `<p class="ws-intro">De juiste wijn maakt een gerecht nog beter, en andersom. Kies hieronder je gerecht en ontdek welke wijnen er het best bij passen. Heb je al een fles in huis? Kies dan je wijn en zie welke gerechten erbij passen.</p>
     <section class="ws-section"><h2>Welke wijn bij…</h2><div class="ws-links">
-      ${dishes.filter(d => d.wines.length).map(d => `<a href="/wijn-bij/${urlEsc(d._id)}">${escHtml(d.dish)}</a>`).join('\n      ')}
+      ${dishes.filter(d => d.wines.length).map(d => `<a href="/wijn-bij/${slugOf(d._id)}">${escHtml(d.dish)}</a>`).join('\n      ')}
     </div></section>
     <section class="ws-section"><h2>Wat eet je bij…</h2><div class="ws-links">
-      ${wines.map(w => `<a href="/eten-bij/${urlEsc(w._id)}">${escHtml(w.wine)}</a>`).join('\n      ')}
+      ${wines.map(w => `<a href="/eten-bij/${slugOf(w._id)}">${escHtml(w.wine)}</a>`).join('\n      ')}
     </div></section>`
   });
   fs.writeFileSync(path.join(__dirname, 'wijn-spijs.html'), overview);
@@ -1506,6 +1511,20 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     if (add) fs.writeFileSync(smPathWs, sm.replace('</urlset>', add + '\n</urlset>'));
   }
   console.log(`  🍷 wijn-spijs: ${pairingUrls.length} pagina's gegenereerd (overzicht, gerechten en wijnen)`);
+
+  // --- _redirects: oude adressen permanent doorsturen (Netlify leest dit bestand naast netlify.toml) ---
+  const redirectLines = [];
+  const addRedirect = (from, to) => {
+    for (const f of new Set([from, encodeURI(from)])) {
+      redirectLines.push(`${f} ${to} 301`, `${f}.html ${to} 301`);
+    }
+  };
+  for (const r of regionsIndex) addRedirect(`/regio/${r.id}`, r.url);
+  for (const d of dishes) if (slugOf(d._id) !== d._id) addRedirect(`/wijn-bij/${d._id}`, `/wijn-bij/${slugOf(d._id)}`);
+  for (const w of wines) if (slugOf(w._id) !== w._id) addRedirect(`/eten-bij/${w._id}`, `/eten-bij/${slugOf(w._id)}`);
+  fs.writeFileSync(path.join(__dirname, '_redirects'),
+    '# Automatisch gegenereerd door build-indexes.js — niet met de hand aanpassen\n' + redirectLines.join('\n') + '\n');
+  console.log(`  ↪️  _redirects: ${redirectLines.length} doorverwijzingen`);
 }
 
 // ============================================================

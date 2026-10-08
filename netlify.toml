@@ -107,3 +107,24 @@
   from = "/pairings"
   to = "/wijn-spijs"
   status = 301
+
+# Nederlandse URL's voor de wijnkaart en de reisgidsen (query-parameters zoals ?lat= gaan mee)
+[[redirects]]
+  from = "/map.html"
+  to = "/wijnkaart"
+  status = 301
+
+[[redirects]]
+  from = "/map"
+  to = "/wijnkaart"
+  status = 301
+
+[[redirects]]
+  from = "/travelguides.html"
+  to = "/wijnreizen"
+  status = 301
+
+[[redirects]]
+  from = "/travelguides"
+  to = "/wijnreizen"
+  status = 301
