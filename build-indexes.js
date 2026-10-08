@@ -146,7 +146,6 @@ for (const file of locationFiles) {
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
@@ -474,40 +473,6 @@ if (fs.existsSync(regionsContentPath)) {
 
 const SITE_URL_REGIONS = 'https://wijn-parade.nl';
 
-const REGION_ICON_MAP = {
-  'parijs': 'ti-building-arch',
-  'rotterdam': 'ti-anchor',
-  'amsterdam': 'ti-building-bridge-2',
-  't-gooi': 'ti-trees',
-  'limburg': 'ti-mountain',
-  'rioja': 'ti-building-castle',
-  'ribera-del-duero': 'ti-building-castle',
-  'bordeaux': 'ti-building-castle',
-  'bourgogne': 'ti-bottle',
-  'champagne': 'ti-star',
-  'rhone-noord': 'ti-mountain',
-  'provence': 'ti-sun',
-  'loire': 'ti-crown',
-  'douro': 'ti-ship',
-  'toscane': 'ti-sun',
-  'piemonte': 'ti-mountain',
-  'alto-adige': 'ti-pine-tree',
-  'mosel': 'ti-mountain',
-  'ahr': 'ti-mountain',
-  'baskenland': 'ti-fish',
-  'mallorca': 'ti-sun',
-  'costa-brava': 'ti-sun',
-  'malaga': 'ti-sun',
-  'griekenland': 'ti-building-arch',
-  'dordogne-lot': 'ti-building-castle',
-  'savoie': 'ti-mountain',
-  'costa-blanca': 'ti-sun',
-  'rhone-zuid': 'ti-sun',
-  'languedoc-roussillon': 'ti-sun',
-};
-function getRegionIconClass(id) {
-  return REGION_ICON_MAP[id] || 'ti-map-pin';
-}
 
 for (const dir of ['wijnreis', 'wijntips']) {
   if (!fs.existsSync(path.join(__dirname, dir))) fs.mkdirSync(path.join(__dirname, dir));
@@ -559,7 +524,6 @@ for (const region of REGIONS) {
     if (!items.length) return '';
     return `<div class="region-section">
       <h2 class="region-section-title">
-        ${type === 'wijnhuis' ? '<i class="ti ti-building-castle"></i>' : type === 'restaurant' ? '<i class="ti ti-tools-kitchen-2"></i>' : type === 'wijnbar' ? '<i class="ti ti-glass-full"></i>' : '<i class="ti ti-shopping-bag"></i>'}
         ${typeLabelsPlural[type]} in ${region.name}
       </h2>
       <div class="region-locs">
@@ -594,11 +558,9 @@ for (const region of REGIONS) {
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"${region.name}","description":"${region.description.replace(/"/g,'\\"')}","url":"${pageUrl}"}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
     .region-hero{background:var(--navy);color:#fff;padding:3rem 0 2rem;text-align:center}
-    .region-hero-icon{width:56px;height:56px;background:rgba(255,255,255,0.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;font-size:1.5rem;color:white;}
     .region-hero h1{font-size:2rem;font-weight:700;margin-bottom:0.5rem}
     .region-hero-country{opacity:0.8;font-size:1rem;margin-bottom:1.5rem}
     .region-hero-desc{max-width:680px;margin:0 auto 2rem;line-height:1.8;opacity:0.9;font-size:1rem}
@@ -640,12 +602,11 @@ for (const region of REGIONS) {
 
   <div class="region-hero">
     <div class="container">
-      <div class="region-hero-icon"><i class="ti ${getRegionIconClass(region.id)}" style="font-size:1.75rem;"></i></div>
       <h1>${seo.h1}</h1>
       <div class="region-hero-country">${region.country}</div>
       <p class="region-hero-desc">${region.description}</p>
       <a href="/wijnkaart?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}" class="region-map-btn">
-        <i class="ti ti-map-2"></i> Bekijk op de kaart
+        Bekijk op de kaart
       </a>
     </div>
   </div>
@@ -656,7 +617,7 @@ for (const region of REGIONS) {
         ${Object.entries(byType).filter(([,v])=>v.length).map(([t,v])=>`
           <div class="region-stat">
             <div class="region-stat-num">${v.length}</div>
-            <div class="region-stat-label">${t === 'wijnhuis' ? '<i class="ti ti-building-castle"></i> ' : t === 'restaurant' ? '<i class="ti ti-tools-kitchen-2"></i> ' : t === 'wijnbar' ? '<i class="ti ti-glass-full"></i> ' : '<i class="ti ti-shopping-bag"></i> '}${typeLabelsReg[t]}</div>
+            <div class="region-stat-label">${typeLabelsReg[t]}</div>
           </div>`).join('')}
       </div>
       ${renderSection('wijnhuis', byType.wijnhuis)}
@@ -1089,7 +1050,6 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   <link rel="canonical" href="${pageUrl}">
   <script type="application/ld+json">${schema}</script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   <link rel="stylesheet" href="/styles.css">
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -1168,7 +1128,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
           ${description ? `<div class="product-desc">${description}</div>` : ''}
           ${isComingSoon ? `<span class="coming-soon-badge">Coming soon</span>` :
             isSoldOut ? `<span class="sold-out-badge">Uitverkocht</span>` :
-            `<button class="product-btn" onclick="openOrderModal()"><i class="ti ti-shopping-bag"></i> Aanvragen</button>`}
+            `<button class="product-btn" onclick="openOrderModal()">Aanvragen</button>`}
         </div>
       </div>
     </div>
