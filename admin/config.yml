@@ -119,6 +119,7 @@ collections:
     summary: "{{dish}}"
     fields:
       - {label: "Gerecht Naam", name: "dish", widget: "string"}
+      - {label: "Toelichting (optioneel, verschijnt bovenaan de pagina /wijn-bij/...)", name: "intro", widget: "text", required: false}
       - label: "Passende Wijnen"
         name: "wines"
         widget: "list"
@@ -136,6 +137,7 @@ collections:
     summary: "{{wine}}"
     fields:
       - {label: "Wijn Naam", name: "wine", widget: "string"}
+      - {label: "Toelichting (optioneel, verschijnt bovenaan de pagina /eten-bij/...)", name: "intro", widget: "text", required: false}
       - label: "Passende Gerechten"
         name: "dishes"
         widget: "list"

@@ -96,3 +96,14 @@
   from = "/locations/weingut-z%C3%A4hringer-1.html"
   to = "/locations/schloss-johannisberg"
   status = 301
+
+# Oude, alleen-JavaScript wijn-spijspagina vervangen door de statische overzichtspagina
+[[redirects]]
+  from = "/pairings.html"
+  to = "/wijn-spijs"
+  status = 301
+
+[[redirects]]
+  from = "/pairings"
+  to = "/wijn-spijs"
+  status = 301
