@@ -9,6 +9,25 @@ const path = require('path');
 
 const CONTENT_DIR = path.join(__dirname, 'content');
 
+// ============================================================
+// INSTAGRAM: volgknop in de header en volgblok onderaan elke pagina
+//   (zelfde HTML staat ook in de vaste pagina's zoals index.html)
+// ============================================================
+const IG_URL = 'https://www.instagram.com/de_wijnparade/';
+const IG_GLYPH = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>';
+const igFollowBtn = (lang = 'nl') =>
+  `<a href="${IG_URL}" target="_blank" rel="noopener" class="ig-follow-btn">${IG_GLYPH}<span>${lang === 'en' ? 'Follow' : 'Volgen'}</span></a>`;
+const igFollowCard = (lang = 'nl') => `<section class="ig-card-section"><div class="container">
+    <a href="${IG_URL}" target="_blank" rel="noopener" class="ig-card">
+      <span class="ig-avatar"><img src="/logo.svg" alt="" width="56" height="56" loading="lazy"></span>
+      <span class="ig-info">
+        <span class="ig-handle">de_wijnparade ${IG_GLYPH}</span>
+        <span class="ig-bio">${lang === 'en' ? 'Wine tips and the best wine hotspots in Europe' : 'Wijntips en de beste wijn hotspots in Europa'}</span>
+      </span>
+      <span class="ig-btn">${lang === 'en' ? 'Follow' : 'Volgen'}</span>
+    </a>
+  </div></section>`;
+
 console.log('🔨 Generating content indexes...');
 
 // Get all subdirectories in content/
@@ -167,7 +186,7 @@ for (const file of locationFiles) {
         <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
         <span class="header-logo-name">de_wijnparade</span>
       </a>
-      <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:white;font-size:11px;font-weight:600;">Volgen</span></a>
+      ${igFollowBtn()}
     </div>
   </div></header>
   <main class="main"><div class="container">
@@ -182,19 +201,7 @@ for (const file of locationFiles) {
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">Bezoek website →</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
   </div></main>
-  <section class="tips-form-section"><div class="container">
-    <h2 class="form-title">Geef je tips door!</h2>
-    <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
-    <form name="tips" method="POST" data-netlify="true" class="tips-form" action="/bedankt.html">
-      <input type="hidden" name="form-name" value="tips">
-      <div class="form-group"><label for="tip">Jouw tip</label><textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea></div>
-      <div class="form-row">
-        <div class="form-group"><label for="tipname">Naam</label><input type="text" id="tipname" name="name" required placeholder="Je naam"></div>
-        <div class="form-group"><label for="tipemail">E-mail</label><input type="email" id="tipemail" name="email" required placeholder="je@email.nl"></div>
-      </div>
-      <button type="submit" class="submit-btn">Versturen</button>
-    </form>
-  </div></section>
+  ${igFollowCard()}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
   </div></footer>
@@ -610,7 +617,7 @@ for (const region of REGIONS) {
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
-        <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:white;font-size:11px;font-weight:600;">Volgen</span></a>
+        ${igFollowBtn()}
       </div>
     </div>
   </header>
@@ -642,6 +649,7 @@ for (const region of REGIONS) {
     </div>
   </main>
 
+  ${igFollowCard()}
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
@@ -741,7 +749,7 @@ for (const loc of allLocations) {
     </p>
   </div></section>
 `;
-  const anchor = '<section class="tips-form-section">';
+  const anchor = '<section class="ig-card-section">';
   page = page.includes(anchor) ? page.replace(anchor, block + '  ' + anchor)
                                : page.replace('<footer', block + '<footer');
   fs.writeFileSync(pagePath, page);
@@ -772,6 +780,8 @@ for (const f of ['wijnreizen.html', 'wijnkaart.html']) {
   let page = fs.readFileSync(fp, 'utf8');
   if (/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/.test(page)) {
     page = page.replace(/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/, regionListHtml);
+  } else if (page.includes('<section class="ig-card-section">')) {
+    page = page.replace('<section class="ig-card-section">', regionListHtml + '\n    <section class="ig-card-section">');
   } else if (page.includes('<footer')) {
     page = page.replace('<footer', regionListHtml + '\n<footer');
   } else {
@@ -898,6 +908,7 @@ const COUNTRY_BY_ID = new Map();
       <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
       <span class="header-logo-name">de_wijnparade</span>
     </a>
+    ${igFollowBtn()}
   </div></div></header>
   <main class="main"><div class="container">
     <a href="/wijnkaart" class="back-button">← Naar de kaart</a> &nbsp; <a href="/wijnreizen" class="back-button">Regiogidsen</a>
@@ -917,6 +928,7 @@ const COUNTRY_BY_ID = new Map();
       return `<h2 class="loc-country">${escHtml(c)} (${groups[c].length})</h2>\n    ${body}`;
     }).join('\n    ')}
   </div></main>
+  ${igFollowCard()}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
   </div></footer>
@@ -1125,7 +1137,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
-        <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:#4a0e2e;font-size:11px;font-weight:600;">Volgen</span></a>
+        ${igFollowBtn()}
       </div>
     </div>
   </header>
@@ -1206,6 +1218,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     </div>
   </div>
 
+  ${igFollowCard()}
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
@@ -1374,9 +1387,11 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <a href="/en/">Wine guides</a>
       <a href="/en/all-locations">All locations</a>
     </nav>
+    ${igFollowBtn('en')}
     ${langMenu('en', nlPath, enPath)}
   </div></div></header>
   ${body}
+  ${igFollowCard('en')}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener">@de_wijnparade</a></p>
   </div></footer>
@@ -1562,7 +1577,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     let html = fs.readFileSync(home, 'utf8');
     if (!html.includes('class="lang-menu"')) {
       html = html.replace(/\s*<a href="\/en\/" hreflang="en" lang="en">English<\/a>/, '')
-        .replace(/(<\/nav>)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n                ${langMenu('nl', '/', '/en/')}$2`);
+        .replace(/(<header[\s\S]*?)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n                ${langMenu('nl', '/', '/en/')}$2`);
       fs.writeFileSync(home, html);
     }
   }
@@ -1654,11 +1669,13 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <a href="/wijnreizen">Reisgidsen</a>
       <a href="/wijn-spijs">Wijn &amp; spijs</a>
     </nav>
+    ${igFollowBtn()}
   </div></div></header>
   <main class="main"><div class="container">
     ${h1}
     ${body}
   </div></main>
+  ${igFollowCard()}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener">@de_wijnparade</a></p>
   </div></footer>

@@ -133,6 +133,23 @@ body {
 .lang-flags a.is-current { border-color: var(--navy); }
 .lang-flags .flag { width: 30px; height: 20px; }
 
+/* Instagram: volgknop in de header en volgblok onderaan elke pagina */
+.ig-follow-btn { display: inline-flex; align-items: center; gap: 6px; margin-left: 0.75rem; padding: 0.35rem 0.8rem; background: #0095F6; color: white !important; border-radius: 8px; font-size: 13px; font-weight: 600 !important; text-decoration: none; white-space: nowrap; }
+.ig-follow-btn:hover { background: #1877F2; }
+.ig-follow-btn svg { width: 14px; height: 14px; }
+.ig-card-section { padding: 2.5rem 0; margin-top: 2rem; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+.ig-card { display: flex; align-items: center; gap: 1rem; max-width: 520px; margin: 0 auto; padding: 1rem 1.25rem; background: white; border: 1px solid #dbdbdb; border-radius: 12px; text-decoration: none; color: #262626; }
+.ig-card:hover { border-color: #c7c7c7; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+.ig-avatar { flex-shrink: 0; width: 64px; height: 64px; padding: 3px; border-radius: 50%; background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); }
+.ig-avatar img { display: block; width: 100%; height: 100%; border-radius: 50%; border: 3px solid white; background: var(--navy); object-fit: cover; }
+.ig-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.ig-handle { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 1rem; color: #262626; }
+.ig-handle svg { width: 16px; height: 16px; color: #262626; }
+.ig-bio { font-size: 0.875rem; color: #737373; line-height: 1.4; }
+.ig-btn { flex-shrink: 0; padding: 0.5rem 1.1rem; background: #0095F6; color: white; border-radius: 8px; font-size: 0.875rem; font-weight: 600; }
+.ig-card:hover .ig-btn { background: #1877F2; }
+@media (max-width: 480px) { .ig-card { gap: 0.75rem; padding: 0.85rem; } .ig-avatar { width: 54px; height: 54px; } .ig-btn { padding: 0.45rem 0.85rem; } }
+
 .instagram-profile-link {
     display: inline-flex;
     align-items: center;
@@ -336,36 +353,6 @@ body {
 .page-intro {
     color: var(--gray-600);
     font-size: 1rem;
-}
-
-/* Tips Form Section */
-.tips-form-section {
-    background: var(--gray-50);
-    padding: 3rem 0;
-    margin-top: 2rem;
-}
-
-.form-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.form-intro {
-    text-align: center;
-    color: var(--gray-600);
-    margin-bottom: 2rem;
-}
-
-.tips-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--gray-200);
 }
 
 .form-group {
@@ -766,10 +753,6 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .tips-form {
-        padding: 1.5rem;
-    }
-
     .list-link {
         padding: 1rem;
     }
@@ -812,37 +795,6 @@ textarea {
         margin-bottom: 1rem;
     }
 }
-/* Instagram Follow Section */
-.instagram-follow {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.instagram-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 12px rgba(131, 58, 180, 0.3);
-}
-
-.instagram-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(131, 58, 180, 0.4);
-}
-
-.instagram-link svg {
-    width: 24px;
-    height: 24px;
-}
-
 /* Homepage H1 */
 .page-hero-title {
     font-size: 1rem;
