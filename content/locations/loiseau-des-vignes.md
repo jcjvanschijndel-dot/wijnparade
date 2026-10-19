@@ -16,4 +16,15 @@ description: >-
   Klassieke Bourgondische keuken met een eigentijds tintje: oeufs en meurette, pâté en croûte, joue de boeuf charolaise, tartaar van kalfsvlees met gerookte paling.
 image: /uploads/loiseau.webp
 website: https://www.bernard-loiseau.com/fr/loiseaudesvignes.html
+description_en: >-
+  The first restaurant in Europe to serve its entire wine list by the glass.
+  Founded in 2007 by Dominique Loiseau in the heart of Beaune, close to the
+  Hospices. Since converted into a chic bistro, with oak panelling, natural
+  stone walls and velvet-upholstered banquettes. The wine library, four
+  climate-controlled oak cabinets, holds 32 wines by the glass, selected by Éric
+  Goettelmann, Meilleur Ouvrier de France 2019.
+
+
+  Classic Burgundian cuisine with a contemporary twist: oeufs en meurette, pâté
+  en croûte, joue de boeuf charolaise, veal tartare with smoked eel.
 ---

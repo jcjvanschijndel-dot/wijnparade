@@ -16,4 +16,14 @@ description: >-
   Bourgogne wil drinken.
 image: /uploads/la-dilletante.webp
 website: https://www.instagram.com/ladilettantebeaune/
+description_en: >-
+  If you're in Beaune for a wine trip or just passing through, you really have
+  to pay a visit to La Dilettante! A really cosy wine bar where you can also
+  order all kinds of delicious small dishes. Lunch, dinner or late in the
+  evening? It's all possible!
+
+
+  La Dilettante is a wine bar in Beaune, the wine capital of Burgundy.
+  Recommended for anyone who wants one more glass of Burgundy after a day of
+  wine tasting in the Côte d'Or.
 ---

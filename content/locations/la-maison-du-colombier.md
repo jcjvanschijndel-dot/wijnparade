@@ -15,4 +15,13 @@ description: >-
   overnachtingsmogelijkheid ook een handige uitvalsbasis voor een wijnreis.
 image: /uploads/colombier.webp
 website: https://www.maisonducolombier.com/
+description_en: >-
+  A gastro bar in Beaune. An extensive wine and tapas list and a small number of
+  main courses. You can also stay the night here if you like.
+
+
+  La Maison du Colombier is in the historic centre of Beaune, the wine capital
+  of Burgundy. A cosy wine bar for one more glass of Burgundy and a bite to eat
+  after a day of tasting in the Côte d'Or. With rooms to stay in, it is also a
+  handy base for a wine trip.
 ---

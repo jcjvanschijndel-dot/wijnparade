@@ -16,4 +16,14 @@ description: >-
   Bourgogne mee naar huis te nemen.
 image: /uploads/larche-des-vins.webp
 website: https://www.larchedesvins.fr/
+description_en: >-
+  Wine bar and wine shop. Set in a medieval lane, this wine bar feels like a
+  hidden gem. Atmospheric, with a French menu, an even better wine list and a
+  really pleasant terrace.
+
+
+  l'Arche des Vins is right in the middle of Beaune, within walking distance of
+  the Hospices de Beaune. Recommended if you're looking for a nice wine bar for
+  lunch or dinner during a wine trip through Burgundy, and want to take a good
+  bottle of Burgundy home afterwards.
 ---

@@ -14,4 +14,14 @@ description: >
   Wijnbar, restaurant en wijnwinkel in één, met een traditionele Franse bistrosfeer en gebruik van lokale biologische producten. Je kunt ook gewoon binnenwandelen voor een glas en een plank kaas of charcuterie.
 image: /uploads/tontons.webp
 website: http://www.lecomptoirdestontons.com/
+description_en: >-
+  On the south-east side of Beaune, unmistakable with its bright red façade, is
+  one of the cosiest wine-and-food spots in town. No fancy interior, no Michelin
+  plaques on the wall, just a good bistro with a wine list that puts much bigger
+  names to shame.
+
+
+  Wine bar, restaurant and wine shop in one, with a traditional French bistro
+  atmosphere and local organic produce. You can also just walk in for a glass
+  and a board of cheese or charcuterie.
 ---

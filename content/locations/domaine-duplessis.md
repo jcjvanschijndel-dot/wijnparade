@@ -15,4 +15,15 @@ description: >-
   Duplessis bouwde onlangs een nieuwe proefruimte — een teken dat het domein zich bewust meer openstelt voor bezoekers. Bezoeken zijn op afspraak; Lilian ontvangt zelf als hij niet in de wijngaard staat. 
 image: /uploads/duplesis.jpeg
 website: https://www.chablis-duplessis.com/
+description_en: >-
+  Almost 10 hectares, spread over plots built up over five generations: the
+  premier crus Montmains, Vaillons, Mont de Milieu and Fourchaume, and the
+  absolute top, grand cru Les Clos. On many plots the vines are 75 years old or
+  more. The soil is Kimmeridgian, a limestone full of tiny fossilised oyster
+  shells that gives Chablis its famous minerality.
+
+
+  Duplessis recently built a new tasting room, a sign that the domaine is
+  deliberately opening up more to visitors. Visits are by appointment; Lilian
+  receives you himself when he isn't out in the vineyard.
 ---

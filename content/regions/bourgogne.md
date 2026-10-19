@@ -10,4 +10,12 @@ minLat: 46.7
 maxLat: 47.9
 minLng: 3.7
 maxLng: 5.3
+name_en: Burgundy
+slug_en: burgundy
+country_en: France
+description_en: >-
+  Burgundy is the Mecca for wine lovers: delicate Pinot Noirs from
+  Gevrey-Chambertin, mineral Chardonnays from Meursault. The Route des Grands
+  Crus through the Côte d'Or is worth a pilgrimage. Set off from Beaune and
+  drive past the most valuable plots of land in the world.
 ---

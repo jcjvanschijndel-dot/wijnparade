@@ -16,4 +16,14 @@ description: >-
   ontspannen sfeer.
 image: /uploads/enstase.webp
 website: https://www.enstase.fr/
+description_en: >-
+  Wine and bao... why not? Enstase is a small, stylish, modern wine bar. Besides
+  several kinds of bao, they also serve tapas. All very tasty and still pretty
+  affordable too!
+
+
+  Enstase is in the centre of Beaune, the wine capital of Burgundy. A surprising
+  wine bar for when, after a day of tasting Burgundy, you fancy something other
+  than classic French cuisine, with a glass of wine in a modern, relaxed
+  setting.
 ---
