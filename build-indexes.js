@@ -98,8 +98,8 @@ const locationFiles = fs.existsSync(locationsDir)
     : [];
 
 const typeLabels = {
-    wijnbar: '🍾 Wijnbar', wijnwinkel: '🏪 Wijnwinkel',
-    wijnhuis: '🏰 Wijnhuis', restaurant: '🍽️ Restaurant'
+    wijnbar: 'Wijnbar', wijnwinkel: 'Wijnwinkel',
+    wijnhuis: 'Wijnhuis', restaurant: 'Restaurant'
 };
 
 const sitemapUrls = [
@@ -177,13 +177,13 @@ for (const file of locationFiles) {
       <h1 class="recipe-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
       <div class="recipe-wine">${typeLabel}</div>
     </div>
-    <div class="info-section"><div class="info-label">📍 Adres</div><div class="info-value">${loc.address || ''}</div></div>
+    <div class="info-section"><div class="info-label">Adres</div><div class="info-value">${loc.address || ''}</div></div>
     <div class="info-section"><div class="info-label">ℹ️ Over deze locatie</div><div class="info-value">${description}</div></div>
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">Bezoek website →</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
   </div></main>
   <section class="tips-form-section"><div class="container">
-    <h2 class="form-title">💡 Geef je tips door!</h2>
+    <h2 class="form-title">Geef je tips door!</h2>
     <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
     <form name="tips" method="POST" data-netlify="true" class="tips-form" action="/bedankt.html">
       <input type="hidden" name="form-name" value="tips">
@@ -547,7 +547,7 @@ for (const region of REGIONS) {
             ${l.image ? `<img src="${l.image}" alt="${l.title || l.name}" class="region-loc-img" loading="lazy">` : ''}
             <div class="region-loc-body">
               <h3 class="region-loc-name">${l.title || l.name}</h3>
-              <div class="region-loc-address">📍 ${l.address || ''}</div>
+              <div class="region-loc-address">${l.address || ''}</div>
               ${l.description ? `<div class="region-loc-desc">${l.description.substring(0, 200)}${l.description.length > 200 ? '…' : ''}</div>` : ''}
               <a href="/locations/${l._id}" class="region-loc-link">Lees meer →</a>
               ${l.website ? `<a href="${l.website.startsWith('http') ? l.website : 'https://' + l.website}" target="_blank" rel="noopener" class="region-loc-link region-loc-web">Website →</a>` : ''}
@@ -1468,7 +1468,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       ${l.image ? `<img src="${escHtml(l.image)}" alt="${escHtml(name)}" class="en-hero-img">` : ''}
       <h1 class="en-h1">${escHtml(name)}</h1>
       <div class="en-sub">${escHtml(cap(type))}${city ? ` in ${escHtml(city)}` : ''}</div>
-      <div class="en-box"><h2>📍 Address</h2><div>${escHtml(l.address || '')}</div></div>
+      <div class="en-box"><h2>Address</h2><div>${escHtml(l.address || '')}</div></div>
       <div class="en-box"><h2>ℹ️ About</h2><div class="en-text">${escHtml(String(l.description_en).trim())}</div></div>
       ${l.website ? `<a class="en-btn" href="${escHtml(websiteUrl(l.website))}" target="_blank" rel="noopener">Visit website →</a>` : ''}
       ${l.lat && l.lng ? '<div class="en-map" id="locationMap"></div>' : ''}
