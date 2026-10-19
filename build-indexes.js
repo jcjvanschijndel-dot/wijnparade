@@ -19,6 +19,19 @@ const IG_LOGO = '<svg class="ig-logo" viewBox="0 0 24 24" aria-hidden="true"><de
 const IG_LOGO_ROUND = '<svg class="ig-logo-round" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig-grad)"/><rect x="6" y="6" width="12" height="12" rx="3.5" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="15.6" cy="8.4" r="0.9" fill="#fff"/></svg>';
 const igFollowBtn = (lang = 'nl') =>
   `<a href="${IG_URL}" target="_blank" rel="noopener" class="ig-follow-btn" aria-label="${lang === 'en' ? 'Follow us on Instagram' : 'Volg ons op Instagram'}" title="Instagram">${IG_LOGO}</a>`;
+// Kruimelpad onder de header, plus BreadcrumbList voor Google.
+//   items: [{ name, path }]; het laatste item is de huidige pagina (zonder link).
+const breadcrumb = (items, lang = 'nl') => {
+  const esc = t => String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: String(it.name),
+      ...(it.path ? { item: SITE_URL + it.path } : {}) })) };
+  const li = items.map((it, i) => i < items.length - 1 && it.path
+    ? `<li><a href="${esc(it.path)}">${esc(it.name)}</a></li>`
+    : `<li aria-current="page">${esc(it.name)}</li>`).join('');
+  return `<nav class="breadcrumb" aria-label="${lang === 'en' ? 'Breadcrumb' : 'Kruimelpad'}"><div class="container"><ol>${li}</ol></div></nav>
+  <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
+};
 const igFollowCard = (lang = 'nl') => `<section class="ig-card-section"><div class="container">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap&text=Instagram" media="print" onload="this.media='all'">
     <a href="${IG_URL}" target="_blank" rel="noopener" class="ig-promo">
@@ -192,7 +205,6 @@ for (const file of locationFiles) {
     </div>
   </div></header>
   <main class="main"><div class="container">
-    <a href="/wijnkaart" class="back-button">← Terug naar kaart</a>
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <div class="recipe-header">
       <h1 class="recipe-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
@@ -623,6 +635,7 @@ for (const region of REGIONS) {
       </div>
     </div>
   </header>
+  ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name }])}
 
   <div class="region-hero">
     <div class="container">
@@ -731,6 +744,9 @@ for (const loc of allLocations) {
 
   // Meest specifieke regio (kleinste kader) waar deze locatie in valt
   const region = REGIONS.filter(r => inBounds(loc, r)).sort((a, b) => boxSize(a) - boxSize(b))[0];
+  page = page.replace('</header>', '</header>\n  ' + breadcrumb(region
+    ? [{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name, path: regionPath(region.id) }, { name: loc.title || loc.name }]
+    : [{ name: 'Home', path: '/' }, { name: 'Alle locaties', path: '/locaties' }, { name: loc.title || loc.name }]));
 
   // Dichtstbijzijnde andere locaties (binnen de regio als die er is)
   const pool = (region ? geoLocs.filter(l => inBounds(l, region)) : geoLocs)
@@ -912,8 +928,8 @@ const COUNTRY_BY_ID = new Map();
     </a>
     ${igFollowBtn()}
   </div></div></header>
+  ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Alle locaties' }])}
   <main class="main"><div class="container">
-    <a href="/wijnkaart" class="back-button">← Naar de kaart</a> &nbsp; <a href="/wijnreizen" class="back-button">Regiogidsen</a>
     <h1 style="color:var(--navy);margin-top:1rem">Alle wijnlocaties</h1>
     <p>${all.length} wijnhuizen, wijnbars, restaurants en wijnwinkels in ${countries.length} landen.</p>
     ${countries.map(c => {
@@ -1143,6 +1159,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       </div>
     </div>
   </header>
+  ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Shop', path: '/shop' }, { name }])}
 
   <main class="main">
     <div class="container">
@@ -1332,7 +1349,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       `${FLAG[lang]}<span>${LANG_NAME[lang]}</span>`)).join('')}</div></details>` +
     `<script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})})</script>`;
 
-  const enPage = ({ title, description, enPath, nlPath, body, extraHead = '', extraBody = '' }) => `<!DOCTYPE html>
+  const enPage = ({ title, description, enPath, nlPath, body, crumbs = null, extraHead = '', extraBody = '' }) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1392,6 +1409,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     ${igFollowBtn('en')}
     ${langMenu('en', nlPath, enPath)}
   </div></div></header>
+  ${crumbs ? breadcrumb(crumbs, 'en') : ''}
   ${body}
   ${igFollowCard('en')}
   <footer class="footer"><div class="container">
@@ -1460,7 +1478,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     </div></main>`;
     const file = path.join(__dirname, r.enPath.slice(1) + '.html');
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, enPage({ title, description, enPath: r.enPath, nlPath: regionPath(r.id), body }));
+    fs.writeFileSync(file, enPage({ title, description, enPath: r.enPath, nlPath: regionPath(r.id), body,
+      crumbs: [{ name: 'Home', path: '/en/' }, { name: r.nameEn }] }));
     enUrls.push(r.enPath);
   }
 
@@ -1481,7 +1500,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       ...(l.lat && l.lng ? { geo: { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lng } } : {})
     };
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', `/locations/${escHtml(l._id)}`, enLocPath(l))}${r ? `<a href="${r.enPath}">← ${escHtml(r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`)}</a>` : ''}</p>
+      <p class="lang-switch">${langFlags('en', `/locations/${escHtml(l._id)}`, enLocPath(l))}</p>
       ${l.image ? `<img src="${escHtml(l.image)}" alt="${escHtml(name)}" class="en-hero-img">` : ''}
       <h1 class="en-h1">${escHtml(name)}</h1>
       <div class="en-sub">${escHtml(cap(type))}${city ? ` in ${escHtml(city)}` : ''}</div>
@@ -1500,7 +1519,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     L.marker([${Number(l.lat)}, ${Number(l.lng)}]).addTo(map);
   </script>` : '';
     fs.writeFileSync(path.join(__dirname, 'en', 'locations', `${l._id}.html`),
-      enPage({ title, description, enPath, nlPath: `/locations/${l._id}`, body, extraHead: mapHead, extraBody: mapBody }));
+      enPage({ title, description, enPath, nlPath: `/locations/${l._id}`, body, extraHead: mapHead, extraBody: mapBody,
+        crumbs: [{ name: 'Home', path: '/en/' }, r ? { name: r.nameEn, path: r.enPath } : { name: 'All locations', path: '/en/all-locations' }, { name }] }));
     enUrls.push(enPath);
   }
 
@@ -1543,7 +1563,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const groups = {};
     for (const l of enLocs) (groups[enCountry(COUNTRY_BY_ID.get(l._id))] ||= []).push(l);
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', '/locaties', '/en/all-locations')}<a href="/en/">← Wine guides by region</a></p>
+      <p class="lang-switch">${langFlags('en', '/locaties', '/en/all-locations')}</p>
       <h1 class="en-h1">All wine locations</h1>
       <p class="en-sub">All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.</p>
       ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)} (${groups[c].length})</h2>
@@ -1554,7 +1574,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     fs.writeFileSync(path.join(__dirname, 'en', 'all-locations.html'), enPage({
       title: 'All wine locations in Europe: wineries, wine bars and restaurants | de_wijnparade',
       description: `All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.`,
-      enPath: '/en/all-locations', nlPath: '/locaties', body }));
+      enPath: '/en/all-locations', nlPath: '/locaties', body,
+      crumbs: [{ name: 'Home', path: '/en/' }, { name: 'All locations' }] }));
     enUrls.splice(1, 0, '/en/all-locations');
   }
 
@@ -1626,7 +1647,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   // URL zonder accenten: grüner-veltliner -> gruner-veltliner
   const slugOf = id => String(id).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-  const pairingPage = ({ title, description, canonical, h1, body }) => `<!DOCTYPE html>
+  const pairingPage = ({ title, description, canonical, h1, body, crumbs }) => `<!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1645,8 +1666,6 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
-    .ws-crumbs{font-size:.85rem;color:var(--gray-600);margin:1rem 0}
-    .ws-crumbs a{color:var(--navy)}
     .ws-h1{font-size:1.6rem;color:var(--navy);margin:.5rem 0 1rem;line-height:1.3}
     .ws-intro{line-height:1.8;margin-bottom:2rem;color:var(--gray-900);white-space:pre-line}
     .ws-section{margin-bottom:2rem}
@@ -1673,6 +1692,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     </nav>
     ${igFollowBtn()}
   </div></div></header>
+  ${breadcrumb(crumbs)}
   <main class="main"><div class="container">
     ${h1}
     ${body}
@@ -1715,7 +1735,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const d = dishByName.get(norm(name));
     return d ? `<a href="/wijn-bij/${slugOf(d._id)}">${escHtml(name)}</a>` : `<strong>${escHtml(name)}</strong>`;
   };
-  const crumbs = current => `<div class="ws-crumbs"><a href="/">Home</a> › <a href="/wijn-spijs">Wijn &amp; spijs</a> › ${escHtml(current)}</div>`;
+  const crumbs = current => [{ name: 'Home', path: '/' }, { name: 'Wijn & spijs', path: '/wijn-spijs' }, { name: current }];
   const pairingUrls = [];
 
   // --- /wijn-bij/<gerecht> ---
@@ -1748,7 +1768,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       title: `Welke wijn bij ${d.dish}? Wijntips | de_wijnparade`,
       description: `Welke wijn drink je bij ${d.dish}? Onze topkeuzes: ${leadText}. Plus goede alternatieven, met sterren per combinatie.`.substring(0, 160),
       canonical,
-      h1: `${crumbs(d.dish)}<h1 class="ws-h1">Welke wijn bij ${escHtml(d.dish)}?</h1>`,
+      crumbs: crumbs(d.dish),
+      h1: `<h1 class="ws-h1">Welke wijn bij ${escHtml(d.dish)}?</h1>`,
       body: `<p class="ws-intro">${escHtml(intro)}</p>
     ${sections}
     <section class="ws-section"><h2>Meer wijn-spijscombinaties</h2><div class="ws-links">
@@ -1782,7 +1803,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       title: `Wat eet je bij ${w.wine}? Gerechten bij ${w.wine} | de_wijnparade`,
       description: `Welk eten past bij ${w.wine}? Bijvoorbeeld ${leadText}. Bekijk alle gerechten die goed combineren met ${w.wine}.`.substring(0, 160),
       canonical,
-      h1: `${crumbs(w.wine)}<h1 class="ws-h1">Wat eet je bij ${escHtml(w.wine)}?</h1>`,
+      crumbs: crumbs(w.wine),
+      h1: `<h1 class="ws-h1">Wat eet je bij ${escHtml(w.wine)}?</h1>`,
       body: `<p class="ws-intro">${escHtml(intro)}</p>
     ${own.length ? `<section class="ws-section"><h2>Gerechten bij ${escHtml(w.wine)}</h2><ul class="ws-list">
       ${own.map(n => `<li>${dishLink(n)}</li>`).join('\n      ')}
@@ -1804,7 +1826,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     title: 'Wijn-spijscombinaties: welke wijn bij welk gerecht? | de_wijnparade',
     description: `Welke wijn drink je bij asperges, kaas of wild? En wat eet je bij een Riesling of Barolo? Wijn-spijstips voor ${dishes.length} gerechten en ${wines.length} wijnen.`.substring(0, 160),
     canonical: overviewUrl,
-    h1: `<div class="ws-crumbs"><a href="/">Home</a> › Wijn &amp; spijs</div><h1 class="ws-h1">Welke wijn bij welk gerecht?</h1>`,
+    crumbs: [{ name: 'Home', path: '/' }, { name: 'Wijn & spijs' }],
+    h1: `<h1 class="ws-h1">Welke wijn bij welk gerecht?</h1>`,
     body: `<p class="ws-intro">De juiste wijn maakt een gerecht nog beter, en andersom. Kies hieronder je gerecht en ontdek welke wijnen er het best bij passen. Heb je al een fles in huis? Kies dan je wijn en zie welke gerechten erbij passen.</p>
     <section class="ws-section"><h2>Welke wijn bij…</h2><div class="ws-links">
       ${dishes.filter(d => d.wines.length).map(d => `<a href="/wijn-bij/${slugOf(d._id)}">${escHtml(d.dish)}</a>`).join('\n      ')}

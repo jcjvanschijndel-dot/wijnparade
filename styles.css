@@ -814,3 +814,12 @@ textarea {
     height: 1em;
     flex-shrink: 0;
 }
+
+/* Kruimelpad onder de header */
+.breadcrumb { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); font-size: 0.8rem; }
+.breadcrumb ol { list-style: none; margin: 0; padding: 0.6rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; color: var(--gray-600); }
+.breadcrumb li { display: inline-flex; align-items: center; min-width: 0; }
+.breadcrumb li + li::before { content: "›"; margin: 0 0.5rem; color: #9ca3af; }
+.breadcrumb a { color: var(--navy); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb li[aria-current] { color: var(--gray-900); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60vw; }
