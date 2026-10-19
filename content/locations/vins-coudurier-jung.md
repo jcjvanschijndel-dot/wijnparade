@@ -17,4 +17,16 @@ description: >-
   Wat je hier proeft is verbluffend. Dit is, fles voor fles, een van de beste prijs-kwaliteitverhoudingen van heel Beaune.
 image: /uploads/jung.webp
 website: https://www.coudurierjung.com/
+description_en: >-
+  From the outside you'd walk straight past this urban winery: a door that opens
+  onto what is no more than a simple living room. But below it, in a small
+  cellar with just a handful of barrels, real wine is made here, vinified on
+  site, unfiltered, with little sulphite and following the rhythm of gravity as
+  much as possible; the cellar even follows the lunar cycle. Christine receives
+  you personally for a tasting of four wines, always chosen to suit the season.
+  From Meursault to the Hautes-Côtes de Nuits.
+
+
+  What you taste here is astonishing. Bottle for bottle, this is one of the best
+  values in all of Beaune.
 ---

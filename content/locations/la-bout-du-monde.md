@@ -15,4 +15,13 @@ description: >-
   ontspannen glas Bourgogne na een dag proeven in de Côte d'Or.
 image: /uploads/bout-monde.webp
 website: https://www.bdm-beaune.com/
+description_en: >-
+  A really cosy wine bar on the edge of the centre with a lovely wine cellar.
+  They have a huge range of Burgundy. And when the sun is out you can enjoy it
+  on the terrace after a long day. Add a sharing board and you won't want to
+  leave any time soon.
+
+
+  Le Bout du Monde is a wine bar in Beaune, in Burgundy. Recommended for a
+  relaxed glass of Burgundy after a day of tasting in the Côte d'Or.
 ---

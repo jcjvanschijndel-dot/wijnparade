@@ -13,4 +13,13 @@ description: >-
   Chablis Wine Not is restaurant, wijnbar, bistro en ontmoetingsplek voor de wijnmakers van Chablis tegelijk. Voor wijnliefhebbers is het een must visit — met talloze bijzondere en zeldzame flessen die nergens anders te vinden zijn. 
 image: /uploads/wine-not.webp
 website: https://www.chabliswinenot.com/
+description_en: >-
+  In the centre of Chablis, in a corner building that used to be a pharmacy,
+  Fabien España has built something the town never had before: a place where
+  winemakers go to drink themselves.
+
+
+  Chablis Wine Not is a restaurant, wine bar, bistro and meeting place for the
+  winemakers of Chablis all at once. For wine lovers it is a must-visit, with
+  countless special and rare bottles you won't find anywhere else.
 ---
