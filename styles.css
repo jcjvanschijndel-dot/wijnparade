@@ -134,9 +134,11 @@ body {
 .lang-flags .flag { width: 30px; height: 20px; }
 
 /* Instagram: volgknop in de header en volgblok onderaan elke pagina */
-.ig-follow-btn { display: inline-flex; align-items: center; gap: 6px; margin-left: 0.75rem; padding: 0.35rem 0.8rem; background: #0095F6; color: white !important; border-radius: 8px; font-size: 13px; font-weight: 600 !important; text-decoration: none; white-space: nowrap; }
-.ig-follow-btn:hover { background: #1877F2; }
-.ig-follow-btn svg { width: 14px; height: 14px; }
+.ig-follow-btn, .ig-btn { display: inline-flex; align-items: center; gap: 8px; padding: 0 0.9rem 0 0; background: white; color: #111 !important; border: 2px solid #222; border-radius: 999px; font-size: 13px; font-weight: 700 !important; text-decoration: none; white-space: nowrap; line-height: 1; }
+.ig-follow-btn { margin-left: 0.75rem; }
+.ig-logo-ring { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; margin: -2px 0 -2px -2px; background: white; border: 2px solid #222; border-radius: 50%; }
+.ig-logo { width: 18px; height: 18px; }
+.ig-follow-btn:hover, .ig-card:hover .ig-btn { box-shadow: 0 2px 8px rgba(0,0,0,.25); }
 .ig-card-section { padding: 2.5rem 0; margin-top: 2rem; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
 .ig-card { display: flex; align-items: center; gap: 1rem; max-width: 520px; margin: 0 auto; padding: 1rem 1.25rem; background: white; border: 1px solid #dbdbdb; border-radius: 12px; text-decoration: none; color: #262626; }
 .ig-card:hover { border-color: #c7c7c7; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
@@ -146,10 +148,11 @@ body {
 .ig-handle { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 1rem; color: #262626; }
 .ig-handle svg { width: 16px; height: 16px; color: #262626; }
 .ig-bio { font-size: 0.875rem; color: #737373; line-height: 1.4; }
-.ig-btn { flex-shrink: 0; padding: 0.5rem 1.1rem; background: #0095F6; color: white; border-radius: 8px; font-size: 0.875rem; font-weight: 600; }
-.ig-card:hover .ig-btn { background: #1877F2; }
+.ig-btn { flex-shrink: 0; font-size: 0.9rem; }
+.ig-btn .ig-logo-ring { width: 36px; height: 36px; }
+.ig-btn .ig-logo { width: 22px; height: 22px; }
 .ig-card-section + .footer, .ig-card-section ~ .footer { margin-top: 0; }
-@media (max-width: 480px) { .ig-card { gap: 0.75rem; padding: 0.85rem; } .ig-avatar { width: 54px; height: 54px; } .ig-btn { padding: 0.45rem 0.85rem; } }
+@media (max-width: 480px) { .ig-card { gap: 0.75rem; padding: 0.85rem; } .ig-avatar { width: 54px; height: 54px; } }
 
 .instagram-profile-link {
     display: inline-flex;
