@@ -1299,6 +1299,24 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   const altLinks = (nlPath, enPath) =>
     `<link rel="alternate" hreflang="nl" href="${SITE_URL}${nlPath}">\n  <link rel="alternate" hreflang="en" href="${SITE_URL}${enPath}">\n  <link rel="alternate" hreflang="x-default" href="${SITE_URL}${nlPath}">`;
 
+  // Taalkeuze: vlaggetjes in de pagina en een dropdown bovenin de header
+  const FLAG = {
+    nl: '<svg class="flag" viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg>',
+    en: '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="uk-t"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>',
+  };
+  const LANG_NAME = { nl: 'Nederlands', en: 'English' };
+  const langLink = (lang, cur, href, inner) => lang === cur
+    ? `<a href="${href}" hreflang="${lang}" lang="${lang}" aria-current="page" class="is-current">${inner}</a>`
+    : `<a href="${href}" hreflang="${lang}" lang="${lang}">${inner}</a>`;
+  const langFlags = (cur, nlPath, enPath) =>
+    `<span class="lang-flags">${['nl', 'en'].map(lang => langLink(lang, cur, lang === 'nl' ? nlPath : enPath,
+      `${FLAG[lang]}<span>${LANG_NAME[lang]}</span>`)).join('')}</span>`;
+  const langMenu = (cur, nlPath, enPath) =>
+    `<details class="lang-menu"><summary aria-label="${cur === 'nl' ? 'Taal kiezen' : 'Choose language'}">${FLAG[cur]}<span>${cur.toUpperCase()}</span></summary>` +
+    `<div class="lang-menu-list">${['nl', 'en'].map(lang => langLink(lang, cur, lang === 'nl' ? nlPath : enPath,
+      `${FLAG[lang]}<span>${LANG_NAME[lang]}</span>`)).join('')}</div></details>` +
+    `<script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})})</script>`;
+
   const enPage = ({ title, description, enPath, nlPath, body, extraHead = '', extraBody = '' }) => `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1319,8 +1337,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
-    .lang-switch{font-size:.85rem;margin:1rem 0}
-    .lang-switch a{color:var(--navy)}
+    .lang-switch{font-size:.85rem;margin:1rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
+    .lang-switch>a{color:var(--navy)}
     .en-hero{background:var(--navy);color:#fff;padding:2.5rem 0 2rem;text-align:center}
     .en-hero h1{font-size:2rem;font-weight:700;margin-bottom:.5rem}
     .en-hero-sub{opacity:.8;margin-bottom:1.25rem}
@@ -1356,6 +1374,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <a href="/en/">Wine guides</a>
       <a href="/en/all-locations">All locations</a>
     </nav>
+    ${langMenu('en', nlPath, enPath)}
   </div></div></header>
   ${body}
   <footer class="footer"><div class="container">
@@ -1415,7 +1434,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <p class="en-hero-desc">${escHtml(r.descriptionEn)}</p>
     </div></div>
     <main class="main"><div class="container">
-      <p class="lang-switch"><a href="${regionPath(r.id)}" hreflang="nl" lang="nl">🇳🇱 Lees in het Nederlands</a></p>
+      <p class="lang-switch">${langFlags('en', regionPath(r.id), r.enPath)}</p>
       ${Object.entries(byType).filter(([, v]) => v.length).map(([t, v]) => `<section class="en-section">
         <h2>${EN_TYPE_PLURAL[t]} in ${escHtml(r.nameEn)}</h2>
         <div class="en-cards">${v.map(card).join('')}</div>
@@ -1445,7 +1464,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       ...(l.lat && l.lng ? { geo: { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lng } } : {})
     };
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch"><a href="/locations/${escHtml(l._id)}" hreflang="nl" lang="nl">🇳🇱 Lees in het Nederlands</a>${r ? ` &nbsp;·&nbsp; <a href="${r.enPath}">← ${escHtml(r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`)}</a>` : ''}</p>
+      <p class="lang-switch">${langFlags('en', `/locations/${escHtml(l._id)}`, enLocPath(l))}${r ? `<a href="${r.enPath}">← ${escHtml(r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`)}</a>` : ''}</p>
       ${l.image ? `<img src="${escHtml(l.image)}" alt="${escHtml(name)}" class="en-hero-img">` : ''}
       <h1 class="en-h1">${escHtml(name)}</h1>
       <div class="en-sub">${escHtml(cap(type))}${city ? ` in ${escHtml(city)}` : ''}</div>
@@ -1485,7 +1504,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const groups = {};
     for (const r of enRegions) (groups[r.countryEn] ||= []).push(r);
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch"><a href="/wijnreizen" hreflang="nl" lang="nl">🇳🇱 Lees in het Nederlands</a></p>
+      <p class="lang-switch">${langFlags('en', '/wijnreizen', '/en/')}</p>
       <h1 class="en-h1">Wine travel in Europe: guides by wine region</h1>
       <p class="en-sub" style="line-height:1.8">Planning a wine trip to Burgundy, Tuscany, the Douro or the Mosel? For each wine region you'll find the wineries worth visiting, the best wine bars and the finest restaurants, all personally selected by de_wijnparade. Or browse <a href="/en/all-locations" style="color:var(--navy)">all ${enLocs.length} locations</a> by country.</p>
       ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)}</h2><div class="en-cards">
@@ -1507,7 +1526,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const groups = {};
     for (const l of enLocs) (groups[enCountry(COUNTRY_BY_ID.get(l._id))] ||= []).push(l);
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch"><a href="/locaties" hreflang="nl" lang="nl">🇳🇱 Lees in het Nederlands</a> &nbsp;·&nbsp; <a href="/en/">← Wine guides by region</a></p>
+      <p class="lang-switch">${langFlags('en', '/locaties', '/en/all-locations')}<a href="/en/">← Wine guides by region</a></p>
       <h1 class="en-h1">All wine locations</h1>
       <p class="en-sub">All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.</p>
       ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)} (${groups[c].length})</h2>
@@ -1528,14 +1547,25 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     let html = fs.readFileSync(file, 'utf8');
     if (html.includes('hreflang="en"')) return;
     html = html.replace('</head>', `  ${altLinks(nlPath, enPath)}\n</head>`);
-    const sw = `<p class="lang-switch" style="font-size:.85rem;margin:1rem 0"><a href="${enPath}" hreflang="en" lang="en" style="color:var(--navy)">🇬🇧 Read in English</a></p>`;
+    const sw = `<p class="lang-switch" style="font-size:.85rem;margin:1rem 0">${langFlags('nl', nlPath, enPath)}</p>`;
     html = html.replace(/(<main class="main">\s*<div class="container">)/, `$1\n    ${sw}`);
+    html = html.replace(/(<header[\s\S]*?)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n      ${langMenu('nl', nlPath, enPath)}$2`);
     fs.writeFileSync(file, html);
   };
   for (const r of enRegions) addAlternate(path.join(__dirname, regionPath(r.id).slice(1) + '.html'), regionPath(r.id), r.enPath);
   for (const l of enLocs) addAlternate(path.join(staticLocationsDir, `${l._id}.html`), `/locations/${l._id}`, enLocPath(l));
   addAlternate(path.join(__dirname, 'wijnreizen.html'), '/wijnreizen', '/en/');
   addAlternate(path.join(__dirname, 'locaties.html'), '/locaties', '/en/all-locations');
+  // Homepage: taalmenu bovenin (naar het Engelse reisgidsenoverzicht)
+  {
+    const home = path.join(__dirname, 'index.html');
+    let html = fs.readFileSync(home, 'utf8');
+    if (!html.includes('class="lang-menu"')) {
+      html = html.replace(/\s*<a href="\/en\/" hreflang="en" lang="en">English<\/a>/, '')
+        .replace(/(<\/nav>)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n                ${langMenu('nl', '/', '/en/')}$2`);
+      fs.writeFileSync(home, html);
+    }
+  }
 
   // --- sitemap ---
   const smPathEn = path.join(__dirname, 'sitemap.xml');
