@@ -128,9 +128,10 @@ body {
 .lang-menu-list a:hover { background: #f3f4f6; }
 .lang-menu-list a.is-current { font-weight: 600; background: #eef2ff; }
 .lang-flags { display: inline-flex; gap: 0.5rem; vertical-align: middle; }
-.lang-flags a { display: inline-flex; align-items: center; gap: 6px; padding: 0.3rem 0.65rem; border: 1px solid #e5e7eb; border-radius: 999px; color: var(--navy); text-decoration: none; font-size: 0.85rem; background: white; }
-.lang-flags a:hover { border-color: var(--navy); }
-.lang-flags a.is-current { background: var(--navy); border-color: var(--navy); color: white; }
+.lang-flags a { display: inline-flex; padding: 4px; border: 2px solid transparent; border-radius: 6px; line-height: 0; }
+.lang-flags a:hover { border-color: #d1d5db; }
+.lang-flags a.is-current { border-color: var(--navy); }
+.lang-flags .flag { width: 30px; height: 20px; }
 
 .instagram-profile-link {
     display: inline-flex;

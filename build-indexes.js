@@ -1310,7 +1310,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     : `<a href="${href}" hreflang="${lang}" lang="${lang}">${inner}</a>`;
   const langFlags = (cur, nlPath, enPath) =>
     `<span class="lang-flags">${['nl', 'en'].map(lang => langLink(lang, cur, lang === 'nl' ? nlPath : enPath,
-      `${FLAG[lang]}<span>${LANG_NAME[lang]}</span>`)).join('')}</span>`;
+      FLAG[lang]).replace('<a ', `<a title="${LANG_NAME[lang]}" aria-label="${LANG_NAME[lang]}" `)).join('')}</span>`;
   const langMenu = (cur, nlPath, enPath) =>
     `<details class="lang-menu"><summary aria-label="${cur === 'nl' ? 'Taal kiezen' : 'Choose language'}">${FLAG[cur]}<span>${cur.toUpperCase()}</span></summary>` +
     `<div class="lang-menu-list">${['nl', 'en'].map(lang => langLink(lang, cur, lang === 'nl' ? nlPath : enPath,
