@@ -115,6 +115,24 @@ body {
     }
 }
 
+/* Taalkeuze: dropdown in de header en vlaggetjes in de pagina */
+.header-logo { margin-right: auto; }
+.flag { width: 20px; height: 13px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); flex-shrink: 0; }
+.lang-menu { position: relative; margin-left: 0.75rem; font-size: 13px; }
+.lang-menu summary { display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; color: white; padding: 0.3rem 0.55rem; border: 1px solid rgba(255,255,255,.3); border-radius: 6px; user-select: none; }
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); margin-left: 2px; }
+.lang-menu[open] summary::after { transform: translateY(1px) rotate(225deg); }
+.lang-menu-list { position: absolute; right: 0; top: calc(100% + 6px); background: white; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,.18); padding: 0.35rem; min-width: 150px; z-index: 1000; }
+.lang-menu-list a { display: flex; align-items: center; gap: 8px; padding: 0.5rem 0.65rem; border-radius: 6px; color: #1f2937 !important; text-decoration: none; font-size: 14px; }
+.lang-menu-list a:hover { background: #f3f4f6; }
+.lang-menu-list a.is-current { font-weight: 600; background: #eef2ff; }
+.lang-flags { display: inline-flex; gap: 0.5rem; vertical-align: middle; }
+.lang-flags a { display: inline-flex; padding: 4px; border: 2px solid transparent; border-radius: 6px; line-height: 0; }
+.lang-flags a:hover { border-color: #d1d5db; }
+.lang-flags a.is-current { border-color: var(--navy); }
+.lang-flags .flag { width: 30px; height: 20px; }
+
 .instagram-profile-link {
     display: inline-flex;
     align-items: center;
