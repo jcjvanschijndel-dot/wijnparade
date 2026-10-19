@@ -15,4 +15,13 @@ description: Voor kenners is de naam Egly-Ouriet een klok. Eater noemde het "the
   Vrigny.
 image: /uploads/egly.webp
 website: https://www.instagram.com/eglyouriet/
+description_en: >-
+  For connoisseurs, the name Egly-Ouriet rings a bell. Eater called it "the
+  wine-geekiest grower Champagne of all." Francis Egly is the fourth generation,
+  but it's his radical approach that made the domaine world-famous. Biodynamic,
+  spontaneous fermentation, 3 to 4 years of ageing in wooden barrels: three to
+  four times longer than most champagne makers. The wines are now served in
+  Singapore Airlines business class. Three stars from La Revue du Vin de France.
+  One of Andrew Jefford's top 5 champagne producers in The New France. Grand Cru
+  vineyards in Ambonnay, Verzenay and Bouzy, and Pinot Meunier plots in Vrigny.
 ---

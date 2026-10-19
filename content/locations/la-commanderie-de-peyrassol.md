@@ -28,4 +28,18 @@ description: >-
   Twee restaurants: Chez Jeannette (1 Michelinster, 2 toques Gault&Millau — gastronomisch, open donderdag t/m maandag voor lunch, donderdag t/m zaterdag voor diner) en Le Bistrot de Lou (dagelijks open, grillades, producten van de eigen biologische boerderij en moestuin). Beide werken uitsluitend met seizoensproducten van het domein.
 image: /uploads/peyrassol.webp
 website: https://www.peyrassol.com/en/
+description_en: >-
+  The estate covers almost 850 hectares of oak, olive trees and garrigue, with
+  the centuries-old Château Peyrassol vineyard at its heart. The options for
+  visitors are exceptionally varied: a guided tour of the wine cellar, a tour of
+  the art collection, a carriage ride through the vineyards, a guided walk
+  through the certified "Jardin Remarquable", and a visit to the Sculpture Park
+  spread across the estate (monumental works by international names in 20th- and
+  21st-century art), plus temporary exhibitions and artists' residencies
+  throughout the year. Every Thursday evening in July and August there's a
+  Soirée Sunset with live music on the village square. Two restaurants: Chez
+  Jeannette (1 Michelin star, 2 Gault&Millau toques; gastronomic, open Thursday
+  to Monday for lunch and Thursday to Saturday for dinner) and Le Bistrot de Lou
+  (open daily, with grills and produce from the estate's own organic farm and
+  kitchen garden). Both work exclusively with seasonal produce from the estate.
 ---

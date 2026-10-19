@@ -13,4 +13,11 @@ description: "In dit neo-Baskisch hotel uit de jaren 1930, diep in het
   restaurant heeft twee Michelinsterren en een groene ster. "
 image: /uploads/skiff.webp
 website: https://haaitza.com/les-restaurants-cafe-bar-brasserie-restaurant-etoile-arcachon/
+description_en: >-
+  In this 1930s neo-Basque hotel deep in the pine forest, redesigned by Philippe
+  Starck, chef Stéphane Carrade serves his "progressive terroir" cooking: a
+  tribute to the Aquitaine region. The sommelier has carefully assembled a wine
+  list of more than 1,200 references, with an emphasis on food pairing. A
+  special detail: the list includes 17 different vintages of Château d'Yquem.
+  The restaurant has two Michelin stars and a Green Star.
 ---

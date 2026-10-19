@@ -15,4 +15,13 @@ description: >-
   aan de Côte d'Azur voor wie de wijn belangrijker vindt dan het etiket.
 image: /uploads/gencel.webp
 website: https://www.gencel.fr/
+description_en: >-
+  Previously known mainly for organising events and supplying wine to boats,
+  which is why this address is in the old town close to the harbour of Cannes.
+  And now it's a wine bar too. For wine lovers, a breath of fresh air among all
+  the luxury and label drinkers!
+
+
+  Gencel is in Le Suquet, the old town of Cannes. A wine bar and wine shop on
+  the Côte d'Azur for those who care more about the wine than the label.
 ---

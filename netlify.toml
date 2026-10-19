@@ -128,3 +128,14 @@
   from = "/travelguides"
   to = "/wijnreizen"
   status = 301
+
+# Bestandsnaam met spatie hernoemd ("la passione" -> "la-passione")
+[[redirects]]
+  from = "/locations/la%20passione"
+  to = "/locations/la-passione"
+  status = 301
+
+[[redirects]]
+  from = "/locations/la passione"
+  to = "/locations/la-passione"
+  status = 301

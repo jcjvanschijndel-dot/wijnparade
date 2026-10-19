@@ -25,4 +25,31 @@ description: >-
   De lijn: Dolcetto d'Alba Bricco Lago (van 1 hectare, straks 2,5 hectare — een toegankelijke, fruitige ingang tot de Langhe), Langhe Nebbiolo Bricco Lago (koude maceratie gevolgd door whole berry fermentatie, 8-12 maanden vat — fris en elegant), Barbera d'Alba, Timorasso Derthona E.P. (van 15 jaar oude stokken in Berzano di Tortona op oostgerichte hellingen, 93 punten Vinous), en de meest verwachte release: de eerste Barolo's komen in 2027 — twee single-vineyard-wijnen plus een blend, van percelen in Monforte d'Alba. Jeremy Seysses van Domaine Dujac (Bourgogne), een naaste vriend van Elena en Luca, omschreef het als "a thrilling addition to the firmament of star producers."
 image: /uploads/penna-currado.webp
 website: https://cascinapennacurrado.com/
+description_en: >-
+  After 35 years at the head of Vietti, one of the most acclaimed wineries in
+  Piedmont, Elena Penna and Luca Currado Vietti said goodbye in January 2023
+  when the family sold the estate to American businessman Kyle Krause. But Luca
+  and Elena didn't stop. They went back to their roots and started a new,
+  entirely family project, Cascina Penna-Currado, together with their children
+  Michele and Giulia. It's based in the renovated Cascina Lazzarito, a historic
+  building from 1554 that once served as a hospital for the local community, on
+  a ridge in Serralunga d'Alba with a 360° view over the villages of the Langa
+  del Barolo. The labels feature original work by artist Giuseppe Stampone, made
+  with BIC pens, one of Elena and Luca's favourite artists. The winery is open
+  to visitors Monday to Saturday from 10.00 to 18.30 and Sunday from 10.00 to
+  16.00, both for individual visitors and for guided tastings by appointment.
+  Besides the wines there's also Elena Spirits, a range of Piedmontese gin and
+  vermouth inspired by the traditions of the Langhe, to taste in the tasting
+  room. 20+ hectares spread over carefully chosen plots in the Langhe and the
+  Derthona area: Luca deliberately chose cooler sites with high biodiversity, a
+  response to the rapid climate change in the region. The range: Dolcetto d'Alba
+  Bricco Lago (from 1 hectare, soon 2.5, an accessible, fruity way into the
+  Langhe), Langhe Nebbiolo Bricco Lago (cold maceration followed by whole-berry
+  fermentation, 8-12 months in cask, fresh and elegant), Barbera d'Alba,
+  Timorasso Derthona E.P. (from 15-year-old vines in Berzano di Tortona on
+  east-facing slopes, 93 points from Vinous), and the most eagerly awaited
+  release: the first Barolos arrive in 2027, two single-vineyard wines plus a
+  blend, from plots in Monforte d'Alba. Jeremy Seysses of Domaine Dujac
+  (Burgundy), a close friend of Elena and Luca, described it as "a thrilling
+  addition to the firmament of star producers."
 ---

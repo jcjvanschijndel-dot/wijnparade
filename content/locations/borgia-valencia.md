@@ -11,4 +11,9 @@ description: Mooie wijnbar in het oude centrum van Valencia. Leuke plek om
   in Valencia voor de wijnliefhebber!
 image: /uploads/borgia.webp
 website: https://www.borgiawinebar.com/
+description_en: >-
+  A lovely wine bar in the old centre of Valencia. A nice place to try lots of
+  good wines when you're in Valencia. You can taste a range of Spanish wines
+  here, from affordable to top wines. They also have a menu with sublime tapas
+  and small dishes. So this is a must-visit in Valencia for wine lovers!
 ---

@@ -16,4 +16,12 @@ description: >-
   Bezoeken op afspraak in Weißenkirchen. Proeverij in de historische kelder of op het terras met uitzicht op de Donau.
 image: /uploads/prager.webp
 website: https://weingutprager.at/
+description_en: >-
+  Toni Bodenstein, grandson of Franz Prager, makes the clearest, most tensile
+  Rieslings and Grüner Veltliners in the whole Wachau in Weißenkirchen. Prager
+  is a member of the Vinea Wachau, the organisation that defined the region's
+  three quality levels (Steinfeder, Federspiel, Smaragd). The vineyards lie on
+  steep, terraced gneiss and granite slopes above the Danube. Visits by
+  appointment in Weißenkirchen, with a tasting in the historic cellar or on the
+  terrace overlooking the Danube.
 ---

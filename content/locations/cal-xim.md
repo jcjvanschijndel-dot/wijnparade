@@ -20,4 +20,16 @@ description: >-
   Bijzonder: een van de meest complete cava-kaarten van Catalonië.
 image: /uploads/cal-xim.webp
 website: restaurantcalxim.com
+description_en: >-
+  Cal Xim is an institution that has been grilling lamb chops for more than 51
+  years in Sant Pau d'Ordal, in the middle of the Penedès wine region. The soul
+  of the place is Santi Amigó Castellví, who has been there from the start. From
+  the outside it looks like an ordinary village bar on the Plaça de Subirats;
+  inside there are stone walls, a sturdy oak-fired brasa, signed sports shirts
+  on the walls and photos of celebrities. Downstairs is a private room with an
+  elliptical table surrounded by an impressive wine collection. Santi learned
+  from Jordi Peronella, the right-hand man in wine of Josep Roca at El Celler de
+  Can Roca. The result: a restaurant that has drawn winemakers, sommeliers and
+  Barcelona gourmets to this small village for generations. A special touch: one
+  of the most complete cava lists in Catalonia.
 ---

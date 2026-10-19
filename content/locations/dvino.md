@@ -15,4 +15,13 @@ description: >-
   Meer dan 100 wijnen, met de nadruk op Kroatische variëteiten (denk aan Plavac Mali, de belangrijkste rode druif van Dalmatië, en Grašević/Graševina voor wit). Bij de wijn horen kaas- en vleesplankjes, lokale dips en zeevruchtenplateaus — allemaal gemaakt om de wijnselectie aan te vullen.
 image: /uploads/dvino.webp
 website: https://dvino.net/
+description_en: >-
+  D'vino Wine Bar has been tucked away since 2008 in a side street of
+  Dubrovnik's Old Town, the third street on the left from the Pile Gate. It
+  specialises in Croatian wines, with special attention to small, family
+  vineyards from the region around Dubrovnik (Pelješac, Konavle and
+  surroundings). More than 100 wines, with the emphasis on Croatian varieties
+  (think Plavac Mali, the main red grape of Dalmatia, and Graševina for white).
+  With the wine come cheese and meat boards, local dips and seafood platters,
+  all designed to complement the wine selection.
 ---

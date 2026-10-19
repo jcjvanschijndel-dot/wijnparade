@@ -16,4 +16,13 @@ description: >-
   Italiaanse wijn.
 image: /uploads/casera.webp
 website: https://www.la-casera.nl/
+description_en: >-
+  An Italian wine bar in Eindhoven. Besides lovely Italian wines they serve
+  delicious cheese boards. And by appointment you can go down into the wine
+  cellar, where the more exclusive wines are kept.
+
+
+  La Casera is on the Keizersgracht in the centre of Eindhoven. An atmospheric
+  Italian wine bar for drinks, a glass with a cheese board or an evening of
+  tasting, and a nice address in Brabant for lovers of Italian wine.
 ---

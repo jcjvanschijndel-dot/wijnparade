@@ -18,4 +18,12 @@ description: >-
   Rondleidingen met proeverij op reservering. 
 image: /uploads/ysios.webp
 website: https://bodegasysios.com/
+description_en: >-
+  Bodegas Ysios is in Laguardia, the fully walled medieval town regarded as the
+  capital of Rioja Alavesa, surrounded by endless vineyards and sheltered by the
+  Sierra de Cantabria. The building was designed by Santiago Calatrava, one of
+  the best-known architects in the world, and opened in 2001. The name "Ysios"
+  refers to the Egyptian goddess Isis. The undulating aluminium roof mirrors the
+  mountain range of the Sierra de Cantabria behind it, while the structure
+  itself recalls stacked wooden wine barrels. Tours with tasting by reservation.
 ---

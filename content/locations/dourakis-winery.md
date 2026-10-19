@@ -16,4 +16,14 @@ description: >-
   tijdens een vakantie op Kreta.
 image: /uploads/dourakis.webp
 website: https://dourakiswinery.gr/
+description_en: >-
+  An award-winning, sustainable boutique winery in the beautiful mountain
+  village of Alikampos, open all year round for tours and tastings. Stroll
+  through the botanical garden full of Cretan herbs, and visit the cellars
+  carved into the mountainside, the barrel room and the small viticulture and
+  folk museum. A tasting of five wines with starters costs €15.
+
+
+  Dourakis Winery is near Chania, on Crete. Recommended for a wine tasting
+  during a holiday on Crete.
 ---

@@ -23,4 +23,17 @@ description: >-
   Zonder reservering — de wijnwinkel is dagelijks open (behalve zondag) en je kunt er de volledige range proeven zonder afspraak. Vanuit de winkel en het proeflokaal heb je een panoramisch uitzicht over de wijngaarden en het Kalterer Meer — al voor velen reden genoeg om even te stoppen.
 image: /uploads/tramin.webp
 website: https://cantinatramin.it/
+description_en: >-
+  The striking building among the rolling hills is reminiscent of a modern
+  temple. The winery is a cooperative of around 190 winegrowing families, based
+  in Tramin/Termeno, the birthplace of Gewürztraminer, a grape named after this
+  village. Two tours with tasting (April to October, by reservation via
+  visit.cantinatramin.it): I Classici di Cantina Tramin, a tour of the cantina
+  with a look at the underground production area, followed by a tasting of five
+  classic wines; and Le Eccellenze di Cantina Tramin, the same tour but ending
+  with seven of the house's best wines, including the top selections from the
+  Eccellenze range. For the true enthusiast. Without a reservation, the wine
+  shop is open daily (except Sunday) and you can taste the full range without an
+  appointment. From the shop and tasting room you have a panoramic view over the
+  vineyards and Lake Kaltern, which for many is reason enough to stop.
 ---

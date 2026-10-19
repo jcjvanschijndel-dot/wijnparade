@@ -14,4 +14,9 @@ description: >-
   Een mooie wijnkaart — met aandacht voor de lokale Cahors en de wijngaard.
 image: /uploads/tandem.webp
 website: https://tandem-restaurant-cahors.fr/
+description_en: >-
+  Cooking that respects the seasons, tasty and made with fresh, local produce.
+  Every day there are 3 starters, 3 mains and 3 desserts, plus a lunch menu. A
+  vegetarian starter and a vegetarian main are available at lunch and dinner. A
+  nice wine list, with attention to local Cahors and the vineyard.
 ---

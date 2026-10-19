@@ -15,4 +15,10 @@ description: >-
   La Table de Terrebrune is een charmant, verfijnd en elegant restaurant op het domein, open voor lunch én diner het hele jaar door
 image: /uploads/terrebrune.webp
 website: https://www.terrebrune.fr/
+description_en: >-
+  On the back of the hills overlooking the bay of Bandol lie the 30 hectares of
+  Terrebrune's vineyards, surrounded by forest. The winery is open Monday to
+  Saturday for tastings. A guided cellar tour with tasting costs €20 per person,
+  by appointment. La Table de Terrebrune is a charming, refined and elegant
+  restaurant on the estate, open for lunch and dinner all year round.
 ---

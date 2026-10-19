@@ -13,4 +13,10 @@ description: >-
   De wijnbar is dagelijks open — je kunt er terecht voor een glas met huisgemaakte kazen en vleeswaren van eigen productie. Rondleidingen op afspraak.
 image: /uploads/vinyeta.webp
 website: http://www.lavinyeta.es/ca/celler
+description_en: >-
+  One of the most innovative wineries in the DO Empordà and a pioneer in
+  sustainable viticulture, with organic certification. In summer it hosts
+  evenings of poetry, music and astronomy in the vineyards. The wine bar is open
+  daily: you can drop in for a glass with home-made cheeses and charcuterie of
+  their own production. Tours by appointment.
 ---

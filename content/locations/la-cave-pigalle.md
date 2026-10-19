@@ -17,4 +17,12 @@ description: >-
   Meer dan 2.000 referenties, sterk in grower Champagne en naturelwijn. Eigenaar Pierre Renauld selecteerde de wijnkaart persoonlijk — dezelfde ijzeren hand als bij 228 Litres. Prijzen zijn eerlijk, het personeel kent de selectie van binnen en buiten.
 image: /uploads/pigalle.webp
 website: https://lacavepigalle.fr/
+description_en: >-
+  The wine shop of the same owners as 228 Litres, the popular wine bar round the
+  corner on the Rue Victor Massé. La Cave Pigalle is the logical complement: if
+  you've tasted something lovely at the bar, you can take it home from here. Or
+  the other way round: buy a bottle and take it to 228 Litres to drink on the
+  spot. More than 2,000 wines, strong in grower Champagne and natural wine.
+  Owner Pierre Renauld personally selected the range, with the same firm hand as
+  at 228 Litres. Prices are fair, and the staff know the selection inside out.
 ---

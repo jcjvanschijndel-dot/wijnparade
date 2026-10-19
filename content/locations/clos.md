@@ -14,4 +14,13 @@ description: "Veel meer dan een wijnbar, dit is een ware wijnhemel in Amsterdam
   gerechtje. Snel reserveren dus!"
 image: /uploads/clos.webp
 website: https://closamsterdam.nl/
+description_en: >-
+  Much more than a wine bar: this is a true wine heaven in Amsterdam East, close
+  to the OLVG hospital. The food is excellent, with an extensive menu of bites
+  and lovely dishes. The wine list is truly one for enthusiasts too: plenty of
+  choice by the glass and lots of affordable options, but also fine top wines in
+  the higher price range. And for real wine lovers there's a cleverly designed
+  High Wine in the late afternoon: you choose 3, 4 or 5 courses and get special
+  wines from smaller producers, each with a matching small dish. So book
+  quickly!
 ---

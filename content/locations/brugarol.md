@@ -16,4 +16,15 @@ description: >-
   Samen met Mas Geli en Clos d'Agon biedt Brugarol een gecureerde 48-uur ervaring "Wine, Sea & Territory" — een rondtocht langs drie domeinen voor wie de regio langzamer en dieper wil ontdekken. De overnachting is op Finca Bell-Lloc zelf, omgeven door wijngaarden en olijfbomen. 
 image: /uploads/brugarol.webp
 website: https://brugarol.com/
+description_en: >-
+  This is the most remarkable wine address in the whole region. The cellar of
+  Bodega Brugarol lies underground on the Finca Bell-Lloc estate. The
+  combination of wines, olive trees, home-made bread and cheese on the estate
+  and architecture built into the hillside makes this an experience far beyond
+  an average tasting. You can book tastings, tours, dinner and overnight stays
+  through the website. Together with Mas Geli and Clos d'Agon, Brugarol offers a
+  curated 48-hour "Wine, Sea & Territory" experience: a tour of three estates
+  for those who want to discover the region more slowly and in more depth. You
+  stay overnight at Finca Bell-Lloc itself, surrounded by vineyards and olive
+  trees.
 ---

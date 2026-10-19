@@ -14,4 +14,9 @@ description: >-
   De eigenaar serveert rosé, wit, rood en mousserende wijnen van het eigen familiebedrijf: Château Salettes Bandol.
 image: /uploads/la-chipote.webp
 website: https://hotel-pleinlarge.com/fr/restaurant-vue-mer-bandol.html
+description_en: >-
+  In the bay of Renécros, the quietest corner of Bandol, lies La Chipote. Part
+  of Hôtel Plein Large, but fully open to anyone who wants breakfast, brunch,
+  lunch or dinner overlooking the Mediterranean. The owner serves rosé, white,
+  red and sparkling wines from the family business: Château Salettes Bandol.
 ---

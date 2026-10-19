@@ -15,4 +15,18 @@ description: >-
   Direct naast de winery en vlakbij de Moezeloever heeft Dr. Loosen een gastenverblijf met zeven kamers, elk vernoemd naar een van de Grosse Lagen van het domein. Vanuit de kamers en het terras heb je uitzicht over de wijngaarden en de rivier. 
 image: /uploads/weingut-dr-loosen.jpg
 website: https://drloosen.de/
+description_en: >-
+  Dr. Loosen is number 16 in the 2025 World's 50 Best Vineyards list. The estate
+  has been in the family for more than 200 years. Owner Ernst Loosen took over
+  in 1988 with a mission to radically improve the quality and international
+  reputation of Mosel Riesling. He succeeded: he's regarded worldwide as one of
+  the most influential ambassadors for the grape. The estate owns some of
+  Germany's most respected vineyards, including historic Grand Cru sites such as
+  Erdener Prälat, Ürziger Würzgarten and Wehlener Sonnenuhr, partly with
+  ungrafted vines up to 130 years old. The vinothek is open from April to
+  October, Monday to Saturday from 10.00 to 16.00. Booking is required: the
+  estate isn't open to drop-in visitors. Right next to the winery and close to
+  the Mosel bank, Dr. Loosen has a guest house with seven rooms, each named
+  after one of the estate's Grosse Lagen. From the rooms and terrace you look
+  out over the vineyards and the river.
 ---

@@ -14,4 +14,5 @@ description: "Een bezoek aan Schloss Gobelsburg is een duik in de Oostenrijkse
   top 100 van de World's Best Vineyards 2024."
 image: /uploads/gobelsburg.webp
 website: https://www.gobelsburg.at/
+description_en: A visit to Schloss Gobelsburg is a dive into Austrian wine history.
 ---

@@ -16,4 +16,13 @@ description: >-
   Rijke, genereuze lokale keuken bij champagnes aan tafel tegen redelijke prijzen. Het restaurant verdedigt regionale producten en champagnes van kleine producenten: potée champenoise, oesters met champagne, foie gras met ratafia.
 image: /uploads/cave.webp
 website: https://www.cave-champagne.fr/
+description_en: >-
+  This is my favourite restaurant in Épernay. Make sure you book in time, and
+  ask to sit in the main room; there's an extra room too, but it's much less
+  cosy. A family bistro in the heart of Épernay, close to the Avenue de
+  Champagne, the town hall and the big champagne houses Mercier, Moët & Chandon
+  and Perrier-Jouët. Listed by Gault&Millau. Rich, generous local cooking with
+  champagnes at the table at reasonable prices. The restaurant is a passionate
+  defender of regional products and champagnes from small producers: potée
+  champenoise, oysters with champagne, foie gras with ratafia.
 ---

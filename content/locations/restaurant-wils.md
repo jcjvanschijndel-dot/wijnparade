@@ -16,4 +16,11 @@ description: >-
   21 wijnen per glas, waaronder exclusieve selecties via Coravin.
 image: /uploads/wils.webp
 website: https://www.restaurantwils.nl/
+description_en: >-
+  On the third floor of the building architect Jan Wils designed for the 1928
+  Olympic Games, overlooking the Olympic Stadium he also designed, the fire of
+  chef Joris Bijdendijk and chef de cuisine Thomas Val has been burning for
+  years. A culinary ode to fire, the primal force of every kitchen: fire pits,
+  wood-fired ovens and hanging grills in the open kitchen. One Michelin star. 21
+  wines by the glass, including exclusive selections via Coravin.
 ---

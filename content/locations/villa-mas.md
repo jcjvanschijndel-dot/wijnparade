@@ -18,4 +18,16 @@ description: >-
   De wijnkaart is uitgebreid en heeft een opvallende voorkeur voor Bourgogne — een onverwachte keuze voor een restaurant aan de Spaanse Costa, maar gewaardeerd door bezoekers die iets anders zoeken dan de doorsnee lokale selectie. 
 image: /uploads/villa-mas.webp
 website: villamasrestaurant.com
+description_en: >-
+  Villa Más is housed in a beautiful early-20th-century Modernista villa right
+  on the beach of Sant Pol, in Sant Feliu de Guíxols on the Costa Brava. The
+  building alone is worth a visit: the villa looks out over the beach and the
+  Mediterranean, and on warm evenings the terrace is one of the busiest and most
+  convivial spots on the Costa Brava. Lunch or dinner with a view of Sant Pol
+  beach, with an especially atmospheric terrace in the evening. The restaurant
+  draws a loyal mix of locals and tourists who both know what they want: fresh
+  fish, rice dishes and seafood pasta in a setting you won't find anywhere else.
+  The wine list is extensive and has a striking preference for Burgundy: an
+  unexpected choice for a restaurant on the Spanish coast, but appreciated by
+  visitors looking for something other than the usual local selection.
 ---

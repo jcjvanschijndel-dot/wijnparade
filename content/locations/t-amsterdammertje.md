@@ -16,4 +16,13 @@ description: >-
   diner.
 image: /uploads/amsterdammertje.webp
 website: https://www.restaurantamsterdammertje.nl/
+description_en: >-
+  A restaurant with 1 Michelin star in a monumental farmhouse. The selection
+  consists exclusively of organic wines, with a clear preference for Germany,
+  Austria and northern Italy. Also for when you have something to celebrate!
+
+
+  Restaurant 't Amsterdammertje is on the Rijksstraatweg in Loenen aan de Vecht,
+  in the beautiful Vecht area between Amsterdam and Utrecht. A Michelin-starred
+  restaurant for lovers of organic wine and a special dinner.
 ---

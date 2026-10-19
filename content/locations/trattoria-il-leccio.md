@@ -16,4 +16,14 @@ description: >-
   wijnhuizen bezoeken in de Brunello-streek af te sluiten.
 image: /uploads/leccio.webp
 website: https://www.trattoriaillecciotuscany.com/
+description_en: >-
+  Dine on a medieval village square with a belvedere terrace, where the
+  terracotta walls turn red at sunset. Seasonal cooking: pici with wild boar
+  ragù, ribollita, bistecca alla Fiorentina, paired with local Rosso di
+  Montalcino and Brunello.
+
+
+  Trattoria il Leccio is in Sant'Angelo in Colle, a medieval village close to
+  Montalcino in southern Tuscany. A lovely restaurant to end a day of winery
+  visits in the Brunello area.
 ---

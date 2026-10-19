@@ -23,4 +23,24 @@ description: >-
   25 kamers, suites en villa's met houten balken, handgemaakte meubels en Egyptisch katoen. Twee buitenzwembaden, een verwarmd binnenzwembad, spa met sauna, fitnesszaal en een tuin vol mediterrane kruiden. Wat wil je nog meer?
 image: /uploads/meneghetti.webp
 website: https://meneghetti.hr/
+description_en: >-
+  What began as the estate of a 19th-century nobleman has grown into a stylish
+  retreat for travellers who love nature, gastronomy and refined simplicity.
+  Meneghetti has been a member of the prestigious Relais & Châteaux collection
+  since 2013 and is tucked away among vineyards and centuries-old olive trees in
+  the heart of Istria, 20 km from Rovinj and 33 km from Pula airport. Meneghetti
+  is one of the best and most beautiful wineries in the region. Tastings are
+  beautifully presented and an essential part of every visit. Cooking and
+  sommelier courses can be arranged on request. The estate is perfect for
+  jogging, bike rides, long walks or doing nothing by the pool, and there's a
+  free shuttle at regular times to the Meneghetti Beach. In the restaurant you
+  taste Istrian dishes at their best: seasonal, pure and with great respect for
+  local traditions. From truffle pasta to fresh oysters, everything is served
+  with finesse in an elegant but relaxed setting. The award-winning wines,
+  especially Malvazija and Teran, are produced on the estate, as is the
+  home-made olive oil, and the in-house sommelier is happy to advise on food and
+  wine pairings. 25 rooms, suites and villas with wooden beams, handmade
+  furniture and Egyptian cotton. Two outdoor pools, a heated indoor pool, a spa
+  with sauna, a gym and a garden full of Mediterranean herbs. What more could
+  you want?
 ---

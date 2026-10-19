@@ -20,4 +20,22 @@ description: >-
   Open maandag t/m zaterdag, gesloten op feestdagen. Rondleiding duurt 90 minuten. Reserveren vooraf verplicht. Mooi te combineren met een lunch in het beroemde restaurant Elkano in Getaria — gespecialiseerd in gegrilde vis op houtskool, een begrip in heel Spanje.
 image: /uploads/txomin.webp
 website: https://www.txominetxaniz.com/
+description_en: >-
+  As early as 1649, Domingo de Etxaniz is recorded in the archives of Gipuzkoa
+  as a winegrower in Getaria. Since then the Txueka Etxaniz family has grown
+  vines without interruption on the steep slopes above the fishing village of
+  Getaria, overlooking the Bay of Biscay. The vineyards sit on the edge of a
+  ridge and drop steeply towards the bay: one of the most spectacular wine
+  landscapes in all of Spain. Guided tours last 90 minutes and include the
+  vineyards and winery, followed by a tasting of different txakoli styles with
+  anchovies and white tuna from Getaria, the classic Basque combination. Booking
+  by email is easy and usually answered quickly. More than 50 hectares of steep
+  terraced vineyards, harvested by hand into small 20 kg crates. Two native
+  grape varieties: Hondarrabi Zuri (90%) and Hondarrabi Beltza (10%). Txakoli is
+  lightly sparkling, dry, fresh and low in alcohol: the perfect wine with
+  seafood, pintxos and grilled fish. Three labels: the classic Txomin Etxaniz,
+  the sparkling Eugenia and the late-harvest Uydi. Open Monday to Saturday,
+  closed on public holidays. Booking in advance is required. Easy to combine
+  with lunch at the famous restaurant Elkano in Getaria, specialists in fish
+  grilled over charcoal and a household name throughout Spain.
 ---

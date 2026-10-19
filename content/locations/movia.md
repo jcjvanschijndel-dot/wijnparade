@@ -17,4 +17,13 @@ description: >-
   Bezoeken op afspraak. Aleš ontvangt bezoekers graag in zijn historische kelder.
 image: /uploads/movia.webp
 website: Bezoeken op afspraak. Aleš ontvangt graag in zijn historische kelder.
+description_en: >-
+  Aleš Kristančič is the most radical and outspoken winemaker of the Slovenian
+  Collio. His estate is in Dobrovo, in the Brda region close to the Italian
+  border, a stone's throw from Radikon and Gravner. Movia makes wine without any
+  intervention: no sulphites, no filters, spontaneous fermentation, years of
+  maceration. His most spectacular wine is Puro, a sparkling wine that ferments
+  in the bottle and is held upside down before serving while the sediment is
+  removed, live at the table. Visits by appointment. Aleš is happy to welcome
+  visitors to his historic cellar.
 ---

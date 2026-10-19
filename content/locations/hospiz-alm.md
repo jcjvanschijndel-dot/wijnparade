@@ -12,4 +12,11 @@ description: Unieke plek in de Alpen/Oostenrijk voor de wijnliefhebber. Dit
   kelder mag zien!
 image: /uploads/hospiz.jpg
 website: https://www.arlberghospiz-alm.at/
+description_en: >-
+  A unique place in the Alps for wine lovers. This restaurant is a true wine
+  paradise with one of the most beautiful wine cellars in Europe. It's in the
+  St. Anton ski area, so make sure you book here if you're going skiing there.
+  You can do après-ski, have lunch, eat oysters on the terrace and dine in
+  style. The wine collection is truly incredible, so make sure you get to see
+  that cellar!
 ---

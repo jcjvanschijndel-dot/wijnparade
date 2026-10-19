@@ -12,4 +12,11 @@ description: Een sfeervolle ervaring — anders dan al het andere in Palma. Chef
   geen walk-ins.
 image: /uploads/clandesti.webp
 website: https://clandesti.es/
+description_en: >-
+  An atmospheric experience, unlike anything else in Palma. Chef Pau Navarro
+  (who specialises in Champagne) makes traditional neighbourhood dishes in a
+  modern way, with loud music in the background. A huge selection of champagne,
+  sherry and natural wine, mostly from small producers. You choose your own
+  bottle from the cellar, or go for the wine pairing. Reservations only, no
+  walk-ins.
 ---

@@ -18,4 +18,15 @@ description: >-
   De sfeer escaleert naarmate de avond vordert: overdag rustig terras met families en wijnmakers, 's avonds een levendig jazz-getint boudoir.
 image: /uploads/leclos.webp
 website: https://www.facebook.com/LeClos.Reims
+description_en: >-
+  Hidden in a courtyard garden on the Rue du Temple, right next to the covered
+  market hall of Reims, Le Clos is a secret the locals would love to keep to
+  themselves. Founded in 2013 and now a household name in the city, it has three
+  faces in one: a wine bar with a burlesque boudoir interior full of bric-à-brac
+  furniture, a covered private terrace that's heated in winter, and a large
+  summer terrace with string lights, olive trees, orange trees and a pétanque
+  court. Each week a different champagne producer from the 30+ partner houses
+  takes centre stage. The atmosphere builds as the evening goes on: a quiet
+  terrace with families and winemakers during the day, a lively jazz-tinged
+  boudoir at night.
 ---

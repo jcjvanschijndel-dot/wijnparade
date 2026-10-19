@@ -20,4 +20,19 @@ description: >-
   Klassieke Piemontese keuken met een lichte eigentijdse touch: vitello tonnato, tajarin al ragù di salsiccia, agnolotti del plin, brasato al Barolo, panna cotta. 
 image: /uploads/la-piola.webp
 website: https://www.lapiola-alba.it/
+description_en: >-
+  La Piola is the Ceretto family's everyday restaurant, the same family that
+  runs the three-Michelin-star Piazza Duomo on the floor above. The same
+  suppliers and the same dedication, but in a relaxed bistronomy setting with a
+  glass terrace on the Piazza Risorgimento opposite Alba cathedral. Chef Dennis
+  Panzeri works under the supervision of Enrico Crippa; sommelier Andrea
+  Canaparo runs the wine list. Star Wine List Red Star; 3,901 reviews on
+  Restaurant Guru with a score of 4.8/5. One of the strongest wine lists in
+  Alba: the Ceretto collection in particular is impressive, with all of the
+  house's crus (Brunate, Bricco Rocche, Bricco Asili) available, including older
+  vintages, plus a broad selection of other Barolo and Barbaresco producers.
+  Those in the know describe La Piola as one of the best places to drink serious
+  Piedmontese wine without the formality of a top restaurant. Classic
+  Piedmontese cooking with a light contemporary touch: vitello tonnato, tajarin
+  al ragù di salsiccia, agnolotti del plin, brasato al Barolo, panna cotta.
 ---

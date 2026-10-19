@@ -10,4 +10,13 @@ minLat: 36.3
 maxLat: 37.0
 minLng: -5.3
 maxLng: -3.8
+name_en: Málaga & Costa del Sol
+slug_en: malaga
+country_en: Spain
+description_en: >-
+  Málaga has a surprisingly rich wine culture: from sweet Moscatel to fresh
+  mountain wines from Ronda and the Axarquía. The city itself is buzzing with
+  wine bars that rise far above tourist level. Combine a visit to the historic
+  centre with trips to the bodegas in the hinterland and the picturesque white
+  villages of Andalusia.
 ---

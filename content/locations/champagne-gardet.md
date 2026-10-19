@@ -16,4 +16,14 @@ description: >-
   huis wil bezoeken in plaats van een van de grote merken.
 image: /uploads/gardet.webp
 website: https://www.champagne-gardet.com/
+description_en: >-
+  A very charming Champagne house, if not the most charming. Located between
+  Reims and Épernay. If you're visiting Champagne, this is one of those original
+  houses to visit. There are several tasting options, clearly laid out on the
+  website.
+
+
+  Champagne Gardet is in Chigny-les-Roses, on the Montagne de Reims. Recommended
+  if, during a wine trip through Champagne, you'd like to visit a smaller,
+  charming house instead of one of the big brands.
 ---

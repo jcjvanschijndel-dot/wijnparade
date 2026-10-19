@@ -15,4 +15,13 @@ description: >-
   Alentejo in Portugal. Een aanrader tijdens een wijnreis door de Alentejo.
 image: /uploads/joaqim.webp
 website: https://restaurantedomjoaquim.pt/
+description_en: >-
+  If you ever visit beautiful Évora, this is the best place in town for food. A
+  cosy, busy place with staff who are friendlier and more helpful than we're
+  used to at home. And all the top wines from the Alentejo are simply on the
+  list.
+
+
+  Dom Joaquim is a restaurant in Évora, the historic capital of the Alentejo in
+  Portugal. Recommended during a wine trip through the Alentejo.
 ---

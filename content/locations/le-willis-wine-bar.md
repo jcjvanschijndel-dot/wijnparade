@@ -10,4 +10,9 @@ description: Hippe en gezellige wijnbar in hartje Parijs. De focus is op franse
   en verkopen allerlei leuke wijn posters. Leuk kado voor de liefhebbers!
 image: /uploads/willi-s.webp
 website: https://www.williswinebar.com/
+description_en: >-
+  A stylish, cosy wine bar in the heart of Paris. The focus is on French wines,
+  and in particular wines from the Rhône. There's also a bistro where you can
+  eat very well, though you'll need to book. And a fun extra: they design and
+  sell all kinds of great wine posters. A nice gift for wine lovers!
 ---

@@ -13,4 +13,11 @@ description: "Direct aan de Quai Albert Baillet, langs de Loire, heeft wijnmaker
   kaas. "
 image: /uploads/insolite.webp
 website: https://francois-chidaine.com/
+description_en: >-
+  Right on the Quai Albert Baillet, along the Loire, winemaker François Chidaine
+  has set up his own wine shop, and it's just as special as his wines. As well
+  as the complete Domaine Chidaine portfolio, you'll find a broad selection of
+  Loire wines and wines from elsewhere, plus ciders and poirés from Eric
+  Bordelet, all from producers who share a love of terroir. And every season
+  there are themed events with wine, charcuterie and cheese.
 ---

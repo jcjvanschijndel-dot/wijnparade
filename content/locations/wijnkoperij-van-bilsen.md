@@ -11,4 +11,9 @@ description: Mooie zaak aan de Korvelseweg in Tilburg. Ze zijn aangesloten bij
   proeverijen die de moeite waard zijn.
 image: /uploads/bilsen.webp
 website: https://www.wijnkoperijvanbilsen.nl/
+description_en: >-
+  A lovely shop on the Korvelseweg in Tilburg. They're part of Les Généreux, so
+  the core range is in good shape. On top of that, the range of grands crus from
+  Bordeaux and Burgundy is impressive (Rothschild, Margaux, Haut-Brion...). And
+  every month there are fun tastings that are well worth it.
 ---

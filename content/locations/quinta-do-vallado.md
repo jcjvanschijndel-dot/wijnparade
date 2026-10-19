@@ -21,4 +21,19 @@ description: >-
   Het wijnhotel, ontworpen door Pritzker-winnaar Álvaro Siza Vieira, heeft 13 kamers. Het infinity pool is spectaculair. Wandelroutes over het landgoed zijn uitgezet.
 image: /uploads/vallado.webp
 website: https://www.quintadovallado.com/pt/
+description_en: >-
+  One of the oldest quintas in the Douro, with roots going back to 1716. The
+  estate was once home to the legendary Antónia Adelaide Ferreira, the "Rainha
+  do Douro" (Queen of the Douro), the most influential wine figure of the
+  19th-century Douro. Today the house combines a rich port tradition with
+  modern, dry table wines that are making waves internationally. The wine hotel
+  was designed by the Porto architecture practice Menos é Mais, known for its
+  clean, site-sensitive designs, and won the Douro Architecture Prize in 2011.
+  Tastings take place in the modern pavilion with a panoramic terrace over the
+  Douro. Tours of the beautiful vineyards and historic buildings are offered
+  daily, explaining both the centuries-old history and the latest developments
+  in winemaking. Booking recommended, especially in high season. The estate also
+  occasionally hosts small concerts in the courtyard. The wine hotel, designed
+  by Pritzker Prize winner Álvaro Siza Vieira, has 13 rooms, and the infinity
+  pool is spectacular. Walking routes have been marked out across the estate.
 ---

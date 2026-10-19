@@ -19,4 +19,20 @@ description: >-
 
   Geen klassieke kaart, maar uitsluitend pintxos — bedacht en gemaakt door Vivien Durand, wereldkampioen pintxos in San Sebastián en sterrenchef. Denk aan ham twist, charcuterieplank met droge Txirula-worst, carpaccio van varkensvoeten, garnalen van de plancha met piquillos, ballotin van gekonfijte lamsschouder en aubergine, en bananencake met chocolade en vanillesaus. De wijnkaart telt 300 wijnen — Frankrijk en de beste internationale wijnen zijn uitgenodigd aan tafel, en het resultaat is schitterend.
 image: /uploads/contrebarieres.webp
+description_en: >-
+  Since 2014 Les Contrebandiers has been a cave à manger and cave à vins in the
+  centre of Biarritz, one of those places you find on every list of the best
+  tapas and wine bars in the Basque Country. The name refers to the smugglers
+  who crossed the border between France and Spain for centuries, fitting for a
+  place that combines both culinary cultures. The wine bottles are stacked along
+  the walls on large black-and-white shelving, identical to the ceiling: the
+  décor says it all, wine comes first here. 50 seats, a lively terrace on the
+  Avenue Victor Hugo and enthusiastic, friendly service. The kind of place
+  visitors drop into twice on a single trip to Biarritz. No classic menu, just
+  pintxos, created by Vivien Durand, world pintxo champion in San Sebastián and
+  a Michelin-starred chef. Think ham twist, a charcuterie board with dry Txirula
+  sausage, pig's trotter carpaccio, plancha prawns with piquillos, a ballotine
+  of confit lamb shoulder and aubergine, and banana cake with chocolate and
+  vanilla sauce. The wine list has 300 wines: France and the best international
+  wines are invited to the table, and the result is superb.
 ---

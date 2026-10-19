@@ -15,4 +15,13 @@ description: >-
   gelegenheid of een lange zomeravond.
 image: /uploads/rust-wat.webp
 website: restaurantrustwat.nl
+description_en: >-
+  A French brasserie with a changing seasonal menu of fresh fish, aged meat and
+  classic dishes given a contemporary twist. The wine list is about quality over
+  quantity. And what a location...
+
+
+  Rust Wat is on the Schapendrift in Blaricum, in green Het Gooi. A restaurant
+  for a special dinner with good wines, ideal for a special occasion or a long
+  summer evening.
 ---

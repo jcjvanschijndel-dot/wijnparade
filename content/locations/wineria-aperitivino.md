@@ -14,4 +14,13 @@ description: >-
   wijnbar om even te pauzeren tijdens een rondrit door Toscane en de wijnen uit
   de streek in een ontspannen sfeer te leren kennen.
 image: /uploads/wineria.webp
+description_en: >-
+  An informal wine bar and restaurant, a good place to start comparing different
+  local wines before deciding what to take home.
+
+
+  Wineria Aperitivino is in Cerreto Guidi, a quiet Tuscan village between
+  Florence and Pisa, in the Chianti Montalbano wine area. A nice wine bar for a
+  break during a drive through Tuscany, and for getting to know the region's
+  wines in a relaxed atmosphere.
 ---

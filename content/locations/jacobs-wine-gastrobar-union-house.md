@@ -11,4 +11,9 @@ description: Jacob’s Wine & Gastrobar is onder deel van Union House. Je hebt
   originele opties!
 image: /uploads/jacob-s.webp
 website: https://www.unionhouse.nl/jacobs-bar/
+description_en: >-
+  Jacob's Wine & Gastrobar is part of Union House, with a view of the former
+  Tivoli music venue on the Oudegracht. In this stylish, cosy setting there's a
+  wide choice of bites and small dishes. The wine list has some well-known
+  names, but certainly some original options too!
 ---

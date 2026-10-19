@@ -20,4 +20,13 @@ description: >-
   Rhône.
 image: /uploads/combier.webp
 website: https://www.domaine-combier.com/fr/
+description_en: >-
+  A stone's throw from Tain-l'Hermitage, in the southern part of the
+  Crozes-Hermitage appellation, Laurent Combier makes wines that are described
+  time and again as the best value in the Northern Rhône. Visits and tastings
+  are possible Monday to Friday and Saturday morning, by appointment only.
+
+
+  Domaine Combier is in Pont-de-l'Isère, in the Northern Rhône. Recommended for
+  lovers of Crozes-Hermitage Syrah during a wine trip through the Rhône.
 ---

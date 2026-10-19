@@ -16,4 +16,12 @@ description: >-
   het weekend.
 image: /uploads/siersma.webp
 website: wijnadvies.nl
+description_en: >-
+  A lovely wine shop in Huizen, with a second branch in Baarn. It's run by
+  Rutger, a real entrepreneur: he sells his own Skaap wines from South Africa
+  and is co-owner of a wine estate in Twente. That makes it all the more fun!
+
+
+  Siersma Wijnadvies is on the Havenstraat in Huizen, in Het Gooi. A nice wine
+  shop for personal wine advice, a wine gift or a lovely bottle for the weekend.
 ---

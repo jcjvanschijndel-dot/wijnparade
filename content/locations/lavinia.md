@@ -16,4 +16,14 @@ description: "Meer dan 6.500 wijnen, champagnes, spirits en accessoires uit ruim
   zonder kurkengeld — alleen de winkelprijs betalen."
 image: /uploads/lavinia.webp
 website: https://www.lavinia.com/fr-fr/
+description_en: >-
+  More than 6,500 wines, champagnes, spirits and accessories from over 30
+  countries: the largest wine shop in Paris. About a third of the range is
+  non-French: Italy, Spain, South Africa, Australia, Hungary, Switzerland and
+  more. On the ground floor there are wine dispensers (2-3 cl per taste, with a
+  top-up card) that let you taste anything from inexpensive house wines to rare
+  Grands Crus, including extremely rare bottles such as Mouton Rothschild. In
+  the cellar is a sanctuary of the most expensive bottles, behind glass: you can
+  look, but access is only with a sommelier. There's a wine bar where you can
+  open any bottle from the shop without corkage, paying just the shop price.
 ---

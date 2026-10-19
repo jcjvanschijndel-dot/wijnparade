@@ -17,4 +17,12 @@ description: >-
   Le Foch heeft een Michelinster.
 image: /uploads/foch.webp
 website: https://www.lefoch.com/?lang=en
+description_en: >-
+  The kitchen revolves around fish and seafood: marinated oysters and scallops
+  with cucumber granita, roast monkfish with Paimpol beans and sage siphon, blue
+  lobster with mozzarella, heirloom tomatoes and basil-lemon ice cream, sea bass
+  baked in Vallauris clay. Everything is precise and clean, without unnecessary
+  frills. The wine list is remarkably interesting for a restaurant of this size
+  in Reims: a good selection of champagnes supplemented with Burgundy and other
+  classic regions. Le Foch has a Michelin star.
 ---

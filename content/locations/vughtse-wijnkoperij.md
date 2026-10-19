@@ -16,4 +16,14 @@ description: >-
   je eigen kelder.
 image: /uploads/vughtse.webp
 website: https://www.vughtsewijnkoperij.nl/
+description_en: >-
+  A lovely shop with an original range, from affordable to top wines. They also
+  organise themed evenings, such as cheese and wine evenings, all inspired by
+  enthusiastic owner Peer.
+
+
+  The Vughtse Wijnkoperij is on the Koestraat in the centre of Vught, close to
+  's-Hertogenbosch. A nice wine shop in Brabant for personal advice, whether
+  you're looking for a gift, a bottle for dinner or a special wine for your own
+  cellar.
 ---

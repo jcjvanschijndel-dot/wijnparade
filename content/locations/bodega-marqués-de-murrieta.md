@@ -20,4 +20,14 @@ description: >-
   Standaard rondleiding met proeverij van drie wijnen gepaard met tapasper persoon. Uitgebreide gastronomische ervaring met meergangenmenu beschikbaar.
 image: /uploads/murrieta.webp
 website: https://marquesdemurrieta.com/
+description_en: >-
+  300 hectares of vineyards, entirely enclosed within the estate: a rarity in
+  Rioja, where most houses buy grapes from outside growers. The style is
+  distinctly traditional: long ageing in oak, with a strong emphasis on Gran
+  Reservas. Top wines: Castillo Ygay Gran Reserva Especial Tinto (named best
+  wine in the world more than once), Castillo Ygay Blanco Gran Reserva Especial
+  (one of the rarest white Riojas), and the more accessible Dalmau (100%
+  Tempranillo, Gran Reserva). Tours by appointment only; book online. The
+  standard tour includes a tasting of three wines paired with tapas. An extended
+  gastronomic experience with a multi-course menu is also available.
 ---

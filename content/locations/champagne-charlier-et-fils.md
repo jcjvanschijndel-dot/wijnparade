@@ -14,4 +14,12 @@ description: >-
   Marne. Een aanrader voor een wijnreis door de Champagne.
 image: /uploads/charlier.webp
 website: https://www.champagne-charlier.com/en/index
+description_en: >-
+  An authentic Champagne house where all the Champagne is aged in wooden
+  barrels. It's about 17 km from Épernay. Booking a tasting through the website
+  is easy, and it makes a nice change from the established names.
+
+
+  Champagne Charlier et Fils is in Châtillon-sur-Marne, in the Vallée de la
+  Marne. Recommended for a wine trip through Champagne.
 ---

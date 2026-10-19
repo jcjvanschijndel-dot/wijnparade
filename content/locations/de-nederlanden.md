@@ -10,4 +10,9 @@ description: Behoort tot de top restaurants in ‘t Gooi met 1 Michelin ster. Ma
   top plek om buiten  te lunchen...ga hier heen!
 image: /uploads/nederlanden.webp
 website: https://www.nederlanden.nl/
+description_en: >-
+  One of the top restaurants in Het Gooi, with 1 Michelin star. But the wine
+  list is also a reason to go, from classic favourites to original finds from
+  all over the world. If you really have something to celebrate, or you're
+  looking for a top spot to have lunch outside... go here!
 ---

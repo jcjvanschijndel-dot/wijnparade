@@ -12,4 +12,11 @@ description: Van de maker van Gitane en Massalia — twee van de meest geliefde
   in een klein, karaktervol pand.
 image: /uploads/fou.webp
 website: https://www.vinfou.nl/
+description_en: >-
+  From the maker of Gitane and Massalia, two of the best-loved neighbourhood
+  spots in Amsterdam Oud-West. French at heart, with a compact menu and a daily
+  changing dish of the day for every budget, open every day. The name refers to
+  a sparkling wine from the Jura, a nod to the owner's idiosyncratic approach.
+  No endless menu, no pretensions: just good food and drink in a small,
+  characterful building.
 ---

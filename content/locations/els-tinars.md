@@ -15,4 +15,13 @@ description: >-
   Witte bonen met zeevruchten, gegrilde vis van de dagmarkt, het beroemde suckling pig — klassiekers die hier decennialang dezelfde toewijding krijgen. De sommelier begeleidt je graag door de beste Empordà-producenten op de kaart.
 image: /uploads/els-tinars.webp
 website: elstinars.com
+description_en: >-
+  For decades one of the most consistent and respected restaurants on the Costa
+  Brava. Chef Marc Gascons cooks classic Catalan food with the region's top
+  produce: no gimmicks, just perfection. The wine list is one of the richest in
+  the area, with more than 800 labels and an impressive Catalan and Spanish
+  selection. White beans with seafood, grilled fish from the daily market, the
+  famous suckling pig: classics that have received the same dedication here for
+  decades. The sommelier is happy to guide you through the best Empordà
+  producers on the list.
 ---

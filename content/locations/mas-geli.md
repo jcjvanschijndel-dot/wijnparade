@@ -17,4 +17,14 @@ description: >-
   De Mas Geli wijnbar is open van vrijdag tot zondag op reservering — met uitzicht op het Montgrí-massief en de wijngaarden als achtergrond. In de zomer zijn er livemuziekavonden bij zonsondergang en proeverijen met chocolade-combinaties.
 image: /uploads/geli.webp
 website: masgeli.cat
+description_en: >-
+  Mas Geli is probably the most emotional and distinctive wine experience in the
+  whole Baix Empordà. Anna Pérez Cansell and her brother Lluís, who provides the
+  musical accompaniment at the tastings, created a wine project that combines
+  wine, nature and sunsets in a 360° experience. 15 hectares of organic vineyard
+  with native Empordà grapes, white Garnacha, red Garnacha, Garnacha tinta,
+  Samsó and Subirat Parent, all harvested by hand. The Mas Geli wine bar is open
+  Friday to Sunday by reservation, with the Montgrí massif and the vineyards as
+  a backdrop. In summer there are live music evenings at sunset and tastings
+  with chocolate pairings.
 ---

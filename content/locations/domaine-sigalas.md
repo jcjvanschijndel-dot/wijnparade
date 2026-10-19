@@ -16,4 +16,11 @@ description: >-
   Proeverijen op het domein in Oia of bij de wijnmakerij in Akrotiri. Reserveren aanbevolen.
 image: /uploads/sigalas.webp
 website: https://sigalas-wine.com/
+description_en: >-
+  Paris Sigalas built the most respected Assyrtiko producer on Santorini from
+  nothing. A winegrower by nature (and a mathematics professor by training),
+  with deep respect for the unique kouloura vineyards on the volcanic island.
+  Sigalas makes both dry and sweet Assyrtiko, as well as the rare Mavrotragano,
+  an almost extinct red grape that grows only on Santorini. Tastings at the
+  estate in Oia or at the winery in Akrotiri. Booking recommended.
 ---

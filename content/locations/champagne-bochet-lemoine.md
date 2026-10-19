@@ -18,4 +18,17 @@ description: >-
   Rondleiding door de wijngaard en de kelder, gevolgd door een proeverij van de eigen champagnes in een intieme, familiale sfeer. Naast de proeverij ook een gîte (vakantieverblijf) op het domein — ideaal voor wie langer wil blijven. Direct aansluitend een bezoek aan Hautvillers met de abdij van Dom Pérignon en de Vinaigrerie d'Hautvillers.
 image: /uploads/bochet.webp
 website: https://champagne-bochet-lemoine.com/
+description_en: >-
+  In Cormoyeux, a village of barely 200 inhabitants in a side valley of the
+  Marne, five minutes from Hautvillers, the Bochet-Lemoine family has made
+  champagne with a deep connection to the terroir for generations. The village
+  sits like a natural amphitheatre: rolling slopes all around, full of Pinot
+  Noir, Chardonnay and Meunier, in the middle of a protected regional nature
+  park. You feel the calm and authenticity as soon as you drive into the lanes:
+  this isn't the tourist circuit but the real Champagne story. A tour of the
+  vineyard and cellar, followed by a tasting of their own champagnes in an
+  intimate, family atmosphere. Besides the tasting there's also a gîte (holiday
+  home) on the estate, ideal if you want to stay longer. Easy to follow with a
+  visit to Hautvillers, with the abbey of Dom Pérignon and the Vinaigrerie
+  d'Hautvillers.
 ---

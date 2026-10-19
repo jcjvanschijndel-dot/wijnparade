@@ -20,4 +20,17 @@ description: >-
   De wijnkaart is uitgebreid met een goede focus op Mallorcaanse wijnen. 
 image: /uploads/nus.webp
 website: nuspalma.com
+description_en: >-
+  Nus is the Japanese-Andalusian taberna of chef Irene Martínez, born and raised
+  in Palma but with roots in Jaén. She learned to cook from her Andalusian
+  grandmother, then ran the kitchen of DINS Santi Taura for five years, did a
+  season at David Muñoz's three-star DiverXO in Madrid, and worked with Tomeu
+  Martí at Arume. With Nus she made her own thing: a restaurant in the lively
+  barrio of Santa Catalina where Japanese precision and southern Spanish soul go
+  hand in hand. Small and intimate, with an open kitchen where you can watch
+  Irene cook; afterwards she often comes round the tables herself. The menu is
+  compact but changes constantly with the seasons and her creativity. There are
+  regular "saraos": spontaneous parties with live music, just because life
+  deserves it. Booking strongly recommended. The wine list is extensive, with a
+  good focus on Mallorcan wines.
 ---

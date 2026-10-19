@@ -14,4 +14,11 @@ description: >-
   Chai Banban onderscheidt zich door een novateur concept: 80% van de wijnen en spiritueux die te koop zijn, zijn ook beschikbaar voor proeven ter plaatse. Dat maakt het meer dan een wijnwinkel.
 image: /uploads/banban.webp
 website: https://chai-banban-limoges.fr/
+description_en: >-
+  In the shadow of the Halles Centrales of Limoges, right behind the market
+  hall, Alban opened a wine shop that quickly became a fixture in the city. No
+  big chain, no showroom: just a place where you walk in as a stranger and leave
+  as a friend. Chai Banban stands out for an innovative concept: 80% of the
+  wines and spirits for sale are also available to taste on the spot. That makes
+  it more than a wine shop.
 ---

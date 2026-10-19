@@ -19,4 +19,16 @@ description: >-
   Het Wine Resort telt 21 kamers, suites en appartementen verspreid over de historische gebouwen van het middeleeuwse gehucht, ontworpen door Agnese Mazzei in een landelijk-elegante stijl. Kamers variëren van 20 tot 60 m². Overnachtende gasten krijgen 10% korting op alle Mazzei-wijnen. 
 image: /uploads/fonteruli.webp
 website: https://eu.mazzei.it/pages/wine-resort?shpxid=f4e09c6d-1a88-4209-83b8-83a12a46eae9
+description_en: >-
+  The Marchesi Mazzei have been winemakers in Fonterutoli since 1435: almost six
+  centuries of uninterrupted family history. The winery was designed by Agnese
+  Mazzei herself, an innovative three-level project that uses gravity: the
+  grapes "descend" from top to bottom through every stage of production. 114
+  separate plots are vinified individually. The Osteria di Fonterutoli serves
+  traditional Tuscan cooking with game, freshwater fish and vegetables from its
+  own kitchen garden, paired with the estate's wines. Both à la carte and a
+  tasting menu are available. Terrace overlooking the vineyards. The Wine Resort
+  has 21 rooms, suites and apartments spread across the historic buildings of
+  the medieval hamlet, designed by Agnese Mazzei in a rustic-elegant style.
+  Rooms range from 20 to 60 m². Overnight guests get 10% off all Mazzei wines.
 ---

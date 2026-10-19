@@ -18,4 +18,21 @@ description: >-
   Restaurant Terraçu's — chef André Carvalho werkt nauw samen met wijnmaker Jorge Alves voor een fine dining-menu dat de beste seizoensgebonden producten van de Douro viert. De beste tafel is ongetwijfeld op het terras, onder de eeuwenoude kronkelende druivenrank, met een ongelooflijk uitzicht over de vallei. Aanbevolen gerechten: vrije-uitloopkip gevuld met pistache, truffel en paddenstoelen, en confit kabeljauw met getruffelde puree.
 image: /uploads/quinta-nova.webp
 website: https://www.quintanova.com/en/
+description_en: >-
+  Quinta Nova de Nossa Senhora do Carmo was devoted to port for centuries, but
+  only in 2005 did a new project for classic Douro wines begin, exploring the
+  different micro-terroirs of the estate's 41 plots. The manor house dates from
+  1764 and is the only Douro estate with the Relais & Châteaux label. Quinta
+  Nova was the first wine estate in the Douro to open wine tourism facilities
+  and is now the most awarded wine tourism address in Portugal. Activities
+  include walking routes through the vineyards and historic spots on the estate,
+  a riverside picnic, a boat trip on the Douro with a wine tasting on board, and
+  a helicopter flight over the valley. Visitors can also arrive by boat or
+  train: the estate offers free transfers to and from the Ferrão pier and the
+  train station. At restaurant Terraçu's, chef André Carvalho works closely with
+  winemaker Jorge Alves on a fine dining menu that celebrates the best seasonal
+  produce of the Douro. The best table is undoubtedly on the terrace, under the
+  centuries-old twisting vine, with an incredible view over the valley.
+  Recommended dishes: free-range chicken stuffed with pistachio, truffle and
+  mushrooms, and confit cod with truffled purée.
 ---

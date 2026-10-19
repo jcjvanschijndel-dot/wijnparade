@@ -16,4 +16,15 @@ description: >-
   Doordeweeks kun je er ook gewoon lunchen — verse producten, royale borden en eerlijke prijzen. Planken met lokale producten, oesters en charcuterie.
 image: /uploads/muscadetterie.webp
 website: https://lamuscadetterie.fr/
+description_en: >-
+  In the east of Nantes, Hedi Abdelkafi has opened something that exists nowhere
+  else in the world: a place entirely devoted to Muscadet. Wine shop, wine bar
+  and restaurant in one. You can book an "experience" of an hour and a half to
+  two hours: touching stones, smelling wine aromas, hearing sounds, tasting and
+  observing. A guide tells the story of the Vignoble Nantais. Step by step you
+  get to know the history, terroir and diversity of Muscadet, accessible to
+  beginners and connoisseurs alike. The experience ends with a tasting of five
+  Muscadet cuvées. On weekdays you can also simply have lunch here: fresh
+  produce, generous plates and fair prices. Boards of local produce, oysters and
+  charcuterie.
 ---

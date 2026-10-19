@@ -23,4 +23,21 @@ description: >-
   27 suites en tweepersoonskamers verspreid over meerdere gebouwen, allemaal met prachtig uitzicht over wijngaarden en olijfgaarden. Twee panoramische zwembaden met uitzicht over de wijngaarden, een bar en een kinderspeeltuin.
 image: /uploads/dievole.webp
 website: https://dievole.it/wine-resort/
+description_en: >-
+  The estate has a 20 km "parcours naturel" that can be done on foot, by bike or
+  on horseback, with routes of different difficulty and length, so you can fully
+  appreciate the varied scenery within the estate too. Nature lovers can explore
+  the grounds on horseback or by buggy, stop for a picnic brunch by the river,
+  or join a foraging tour and cooking class. The Dievole Grand Tour is aimed at
+  wine connoisseurs: an exploration of the best Tuscan appellations, with a
+  visit to the vineyards and elegant cellar, followed by a tasting of the most
+  exclusive wines: Gran Selezione Chianti Classico DOCG, Brunello di Montalcino
+  DOCG Riserva and Bolgheri DOC Superiore. Chef Monika Filipinska treats guests
+  at restaurant Novecento to elegantly reinterpreted traditional Tuscan food;
+  the terrace by the historic villa, overlooking the vineyards and the Chianti
+  Classico hills, is the perfect setting. Sommeliers guide guests on the terrace
+  through a tasting of the estate's products: Chianti Classico, Vin Santo and
+  olive oil. 27 suites and double rooms spread across several buildings, all
+  with beautiful views over vineyards and olive groves. Two panoramic pools
+  overlooking the vineyards, a bar and a children's playground.
 ---

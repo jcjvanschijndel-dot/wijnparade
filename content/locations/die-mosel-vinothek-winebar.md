@@ -15,4 +15,13 @@ description: >-
   te kopen.
 image: /uploads/die-mosel.webp
 website: https://shop-diemosel-wine.myshopify.com/
+description_en: >-
+  A top address in the Mosel for wine lovers. You can come here for everything:
+  buying wine, tasting wine, eating. You can even stay the night. Everything is
+  of good quality, and the location on the Mosel promenade is excellent.
+
+
+  Die Mosel Vinothek & Winebar is in Traben-Trarbach, in the middle of the Mosel
+  valley. The ideal place to taste and buy Riesling during a wine trip along the
+  Mosel.
 ---

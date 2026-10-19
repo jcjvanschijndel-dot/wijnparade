@@ -15,4 +15,13 @@ description: >-
   Er zijn twee formules: een klassieke kelderproeverij, of een uitgebreide versie met een plank lokale charcuterie en kaas erbij — royaal en ongedwongen. Maximaal 15 personen per ervaring; reserveren is aanbevolen.
 image: /uploads/galevan.webp
 website: https://domaine-galevan.com/
+description_en: >-
+  Galévan is the opposite of a large, streamlined winery. Visitors are welcomed
+  by Coralie or her son for a personal tour of the cellar, explaining the
+  winemaking process from harvest to bottling, followed by a tasting of the
+  wines. The tone is warm, curious and unpretentious: questions are answered as
+  if you're visiting people at home. There are two options: a classic cellar
+  tasting, or an extended version with a board of local charcuterie and cheese,
+  generous and relaxed. A maximum of 15 people per experience; booking is
+  recommended.
 ---

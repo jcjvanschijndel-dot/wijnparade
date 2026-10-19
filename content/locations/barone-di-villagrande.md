@@ -20,4 +20,14 @@ description: >-
   combineren met een bezoek aan Taormina.
 image: /uploads/barone.webp
 website: https://www.villagrande.it/en/barone_di_villagrande_en/
+description_en: >-
+  Breathtaking views of Taormina and the glittering Ionian Sea. Wine tastings
+  and food and wine pairings available. You can stay in an old manor house with
+  four rooms, an infinity pool overlooking the vineyards, and its own
+  restaurant.
+
+
+  Barone di Villagrande is a winery in Milo, on the eastern flank of Etna in
+  Sicily. A lovely place to get to know the volcanic Etna wines, and easy to
+  combine with a visit to Taormina.
 ---

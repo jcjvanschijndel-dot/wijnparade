@@ -17,4 +17,15 @@ description: >-
   Vis is de absolute hoofdrol: verse oesters, kreeftcocktail met avocado en jalapeñoschuim, bisque van Hollandse garnalen, makreel gegrild op houtskool, zeeduivel Rossini met foie gras en dashi-Albufera-saus, piepkuiken gevuld met gerookte paling. De gerechten combineren klassieke Franse techniek met Japanse invloeden. De wijnkaart is klassiek en doordacht met veel bekende topwijnen.
 image: /uploads/lamer.webp
 website: https://www.bistrodelamer.com/
+description_en: >-
+  A narrow, long café in French 1920s style with wood, vintage Royal Albert
+  china, empty caviar tins hidden in the interior, wine lists from legendary
+  French brasseries on the walls, and a long wooden bar where you sit side by
+  side with other guests. The best spot: at the bar, looking straight into the
+  open kitchen where the dishes are plated. Fish plays the lead role: fresh
+  oysters, lobster cocktail with avocado and jalapeño foam, bisque of Dutch
+  shrimps, mackerel grilled over charcoal, monkfish Rossini with foie gras and a
+  dashi-Albufera sauce, poussin stuffed with smoked eel. The dishes combine
+  classic French technique with Japanese influences. The wine list is classic
+  and well thought out, with many well-known top wines.
 ---

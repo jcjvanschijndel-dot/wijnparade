@@ -20,4 +20,17 @@ description: >-
   Elk maand wordt er een nieuwe Maison uitgenodigd voor een food pairing-avond met hun beste wijnen. De wijnkaart is diep geworteld in de Champagne: exclusieve flesjes van kleine growers die je elders in Reims nauwelijks vindt, plus toegang tot de oenotheek van de Caserne Chanzy.
 image: /uploads/grandegeorgette.webp
 website: https://www.lacasernechanzy.com/fr/restaurant-et-bar.html
+description_en: >-
+  In Reims's former 1926 fire station, an Art Deco monument directly opposite
+  Notre-Dame cathedral, La Grande Georgette opened as the restaurant of La
+  Caserne Chanzy Hotel & Spa. The name refers to a 1920s tradition in which the
+  fire station's big ladder bore the first name of the captain's wife; the
+  original 1920 Delahaye fire engine can still be admired in the Reims car
+  museum. Chef Julien Raphanel runs the kitchen; alongside La Grande Georgette
+  there's also its more informal neighbour, Little Georgette, a bistronomy spot
+  for lunch or dinner without the formality of the gastronomic restaurant. Every
+  month a different Champagne house is invited for a food pairing evening with
+  its best wines. The wine list is deeply rooted in Champagne: exclusive bottles
+  from small growers you'll hardly find elsewhere in Reims, plus access to the
+  oenotheque of the Caserne Chanzy.
 ---

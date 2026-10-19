@@ -11,4 +11,10 @@ description: "Nr. 3 winebar of the year 2025. Meer dan 30 wijnen per glas — va
   nieuws: binnenkort komt er ook een vestiging in Naarden-Vesting."
 image: /uploads/ottovino.webp
 website: https://ottovino.nl/
+description_en: >-
+  No. 3 wine bar of the year 2025. More than 30 wines by the glass, from
+  classics to surprising gems. Owner Otto collects his wines directly from the
+  wineries, with a preference for smaller producers. You can buy your favourite
+  bottles straight away and take them home. And good news: a branch in
+  Naarden-Vesting is coming soon.
 ---

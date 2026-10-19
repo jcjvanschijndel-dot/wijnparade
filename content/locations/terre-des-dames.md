@@ -17,4 +17,14 @@ description: >-
   De proeverij vindt plaats op het terras met uitzicht over de wijngaarden. Daarna zijn de wijnen direct bij het domein te koop.
 image: /uploads/terre-des-dames.webp
 website: http://terredesdames.com/en/home-page/
+description_en: >-
+  The owner of this domaine is Dutch, and it's fascinating to hear her story:
+  she took over the domaine, studied oenology and went entirely her own way,
+  and... was declared crazy for it. But the domaine is lovely to visit, and the
+  wines are of a high level and among the better ones in the region. In the
+  summer months (April to September) the domaine holds a free reception with a
+  tour, tasting and aperitif twice a week: on Tuesdays at 16.00 in French or
+  English, and on Thursdays at 16.00 in Dutch. The tasting takes place on the
+  terrace overlooking the vineyards, and afterwards you can buy the wines
+  directly at the domaine.
 ---

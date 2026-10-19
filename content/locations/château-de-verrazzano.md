@@ -17,4 +17,13 @@ description: >-
   Het kasteel is op maandag t/m vrijdag te bezoeken tussen 11.00-13.00 en 15.00-17.00 uur. Reserveren sterk aanbevolen, zeker in het hoogseizoen. 
 image: /uploads/verrazzano.webp
 website: https://www.verrazzano.com/
+description_en: >-
+  A winding road takes you further and further up the hill, through a cool
+  forest and past countless rows of vines, until you see the majestic castle
+  proudly crowning a hilltop. Besides Chianti Classico, the estate produces
+  olive oil, balsamic vinegar and grappa. The nice thing about this winery is
+  that it doesn't feel commercial: leaving the dining room you pass a small
+  sales counter rather than a big commercial shop, which makes the wine tasting
+  very relaxed. The castle can be visited Monday to Friday between 11.00-13.00
+  and 15.00-17.00. Booking is strongly recommended, especially in high season.
 ---

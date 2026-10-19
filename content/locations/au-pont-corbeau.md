@@ -17,4 +17,14 @@ description: >-
   Op het bord: een "hot corbeau" — gerookte, komijnkruidige worst met zuurkool — varkensschenkel met mosterdvinaigrette, en een romige Elzasser kersttaart. Eerlijke, herkenbare keuken van Coralie, gemaakt met producten van lokale boeren. 
 image: /uploads/corbeau.webp
 website: http://www.aupontcorbeau.fr/
+description_en: >-
+  One of the last real winstubs in Strasbourg. The wine list is one of the best
+  of any restaurant of this type in the region: not just an excellent selection
+  of local Alsace wines, but also fine reds from the Languedoc and the Rhône
+  Valley. All at very reasonable prices! Next to the Alsatian Museum of folk
+  art, Au Pont Corbeau serves regional specialities in a traditional setting
+  with Renaissance details and posters. Michelin Bib Gourmand. On the menu: a
+  "hot corbeau" (smoked, cumin-spiced sausage with sauerkraut), pork knuckle
+  with mustard vinaigrette, and a creamy Alsatian cherry tart. Honest,
+  recognisable cooking by Coralie, made with produce from local farmers.
 ---

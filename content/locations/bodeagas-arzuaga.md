@@ -27,4 +27,20 @@ description: >-
   Beide zijn open voor hotelgasten én dagbezoekers. Check vooral de website voor alle mogelijkheden.
 image: /uploads/arzuaga.webp
 website: https://www.arzuaganavarro.com/
+description_en: >-
+  The bodega, hotel, restaurant and spa lie together in the heart of 65 hectares
+  of vineyards (and close to the legendary Vega Sicilia!). Tours of the wine
+  cellars and vineyards explain the production process from harvest to bottling.
+  A special feature is Finca La Planta, the 1,400-hectare estate at more than
+  900 metres altitude, where deer, mouflon and wild boar roam freely: an unusual
+  combination of wine estate and game reserve. You can walk through the estate
+  among the vineyards, with a chance of spotting wildlife. It's an ideal place
+  for lunch or dinner too, with two options. Restaurant Taller by Amaya Arzuaga
+  is the main restaurant, run by Amaya Arzuaga (the founder's daughter), with
+  one Michelin star and one Repsol Sun. El Viejo Nogal is the more informal
+  place to eat on the estate, named after the centuries-old walnut tree on the
+  property: traditional Castilian cooking with suckling lamb (lechazo), grilled
+  meat, local cheeses and sausages. A more accessible alternative if you don't
+  want the full tasting menu but still want to eat on the estate. Both are open
+  to hotel guests and day visitors. Do check the website for all the options.
 ---

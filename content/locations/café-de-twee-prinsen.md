@@ -14,4 +14,13 @@ description: "Van de makers van Café Binnenvisser en Restaurant Cornerstore —
   gezien-gevoel maakt dit een adres waar je steeds terugkomt."
 image: /uploads/tweeprinsen.webp
 website: tweeprinsen.nl
+description_en: >-
+  From the makers of Café Binnenvisser and Restaurant Cornerstore, each an
+  Amsterdam favourite that sticks to its approach. A typical Amsterdam café on
+  the lovely Prinsenstraat in the Jordaan, open seven days a week from breakfast
+  until late. The interior is beautiful and the wine cabinet catches your eye
+  straight away: full of interesting wines, with special attention to orange
+  wine. You can also come for lunch, and for brunch at the weekend. The
+  combination of good wine, good food and a friendly, been-here-before feeling
+  makes this a place you keep coming back to.
 ---

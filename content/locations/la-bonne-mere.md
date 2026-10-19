@@ -13,4 +13,10 @@ description: >-
   Geen grote wijnkaart, maar een selectie lokale Cassis-wijnen die perfect bij de pizza passen — een glas witte Cassis bij een anchois-pizza is een van de simpelste maar meest overtuigende combinaties van de Provence.
 image: /uploads/bonne-mere.webp
 website: https://www.instagram.com/labonnemerecassis/
+description_en: >-
+  In a narrow lane of the historic centre of Cassis, close to the church of
+  Saint-Michel, this small place serves pizzas that bring people from far away.
+  Not a big wine list, but a selection of local Cassis wines that go perfectly
+  with the pizza: a glass of white Cassis with an anchovy pizza is one of the
+  simplest but most convincing pairings in Provence.
 ---

@@ -20,4 +20,20 @@ description: >-
   Eric en Isabelle verwelkomen bezoekers persoonlijk voor een rondleiding door de kelders, de pers en de wijnbar — gevolgd door een proeverij inclusief de iconische Esprit de Vrigny en de Réserve de l'Hommée. Wie langer wil blijven: het gastenverblijf Clos des Terres Soudées, waar antiek meubilair en acht generaties geschiedenis de wanden vullen. In het seizoen zijn ook wijngaardbezoeken, thematische workshops en oogstdagen mogelijk.
 image: /uploads/roger-coulon.webp
 website: https://www.champagne-coulon.com/
+description_en: >-
+  The Coulon family's winegrowing began in 1806 in Vrigny, a Premier Cru village
+  in the north-west corner of the Montagne de Reims. Now the 8th and 9th
+  generations, Eric, Isabelle, daughter Louise and son Edgar, work together
+  towards the same goal: making champagne that reflects nature and terroir. No
+  herbicides, insecticides or pesticides; certified organic since 2019. No
+  filtration, no fining. Spontaneous fermentation with native yeasts, with all
+  109 plots kept separate. Agroforestry as a philosophy: deliberately combining
+  different plants and tree species in one ecosystem. The family works with
+  like-minded growers such as Egly-Ouriet, Selosse, Agrapart and Jacquesson, who
+  call themselves the Trait d'Union. Eric and Isabelle personally welcome
+  visitors for a tour of the cellars, the press and the wine bar, followed by a
+  tasting including the iconic Esprit de Vrigny and the Réserve de l'Hommée. If
+  you want to stay longer, there's the Clos des Terres Soudées guest house,
+  where antique furniture and eight generations of history fill the walls. In
+  season, vineyard visits, themed workshops and harvest days are also possible.
 ---

@@ -17,4 +17,17 @@ description: >-
   Het château heeft drie kamers en twee suites, volledig gerenoveerd en ingericht door de eigenaarsfamilie. De gele salon is ideaal om te ontspannen met een glas wijn; de eetkamer met zijn prachtige wandtapijten heeft een buitengewone charme; de boudoir is intiemer en gezellig. Een vers, seizoensgebonden ontbijt wordt elke ochtend geserveerd in de eetkamer, op de kamer of op het terras. 
 image: /uploads/senejac.webp
 website: https://www.senejac.com/
+description_en: >-
+  Between Margaux and Bordeaux, half an hour's drive from the city, stands a
+  16th-century château you don't expect. Classic tour + tasting: a cellar visit
+  followed by two Sénéjac wines. Extended tour: discover the history of the
+  estate, the vineyards, cellar and vat room, followed by a tasting of two
+  Sénéjac wines, one from Château Talbot and one from Domaine Saint-Andrieu. A
+  unique chance to taste three completely different terroirs side by side in one
+  visit: Haut-Médoc, Saint-Julien and Provence. The château has three rooms and
+  two suites, fully renovated and furnished by the owning family. The yellow
+  salon is ideal for relaxing with a glass of wine; the dining room with its
+  beautiful tapestries has extraordinary charm; the boudoir is more intimate and
+  cosy. A fresh, seasonal breakfast is served every morning in the dining room,
+  in your room or on the terrace.
 ---

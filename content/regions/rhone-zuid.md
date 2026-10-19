@@ -10,4 +10,13 @@ minLat: 43.9
 maxLat: 44.4
 minLng: 4.3
 maxLng: 5.6
+name_en: Southern Rhône
+slug_en: southern-rhone
+country_en: France
+description_en: >-
+  In the sunny south of the Rhône Valley everything revolves around Grenache and
+  blends: from the legendary Châteauneuf-du-Pape with its pebbles to Gigondas,
+  Cairanne and the wines of Mont Ventoux. Avignon, with its Palace of the Popes
+  and lively wine bars, is the ideal base among lavender fields and olive
+  groves.
 ---

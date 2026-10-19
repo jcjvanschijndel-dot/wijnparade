@@ -18,4 +18,15 @@ description: >-
   Bezoeken uitsluitend op afspraak — contacteer het wijnhuis per e-mail of telefoon vooraf. Miguel en Erika reageren snel per e-mail. 
 image: /uploads/merino.webp
 website: https://www.miguelmerino.com/
+description_en: >-
+  No guides here: family members themselves show you around. You see the sorting
+  table, the winery, the barrel cellar and the small experimental vineyard, and
+  then taste a selection of wines together with the family. Visitors praise the
+  personal contact: Miguel, Erika and the rest of the family guide visitors with
+  knowledge, humour and genuine passion, without sales pressure. After the
+  visit, a walk through Briones itself is recommended: the village has been
+  declared a historic-artistic monument and is one of the most beautiful
+  villages in La Rioja. The winery borders the village wall. Visits by
+  appointment only: contact the winery by email or phone in advance. Miguel and
+  Erika reply quickly by email.
 ---

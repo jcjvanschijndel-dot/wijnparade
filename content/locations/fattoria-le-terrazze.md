@@ -10,4 +10,9 @@ description: Behoort tot de betere wijnhuizen in de Marken. Mocht je hier in de
   natuurlijk een paas doosjes extra mee voor thuis. Vooral de Conero Riserva is
   een aanrader.
 image: /uploads/terazze.webp
+description_en: >-
+  One of the better wineries in the Marche. If you're on holiday nearby, I'd
+  always drop by. They have an extensive shop where you can stock up for your
+  holiday, and of course pick up a few extra boxes to take home. The Conero
+  Riserva in particular is recommended.
 ---

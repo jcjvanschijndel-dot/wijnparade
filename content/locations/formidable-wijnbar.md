@@ -15,4 +15,13 @@ description: >-
   Brabant voor liefhebbers van Bourgogne.
 image: /uploads/formidable.webp
 website: https://www.formidablewijnbar.nl/
+description_en: >-
+  A wine bar, but really a restaurant too, in the Ginneken district. The owner
+  is a big Burgundy fan himself, so if you are too, you should definitely go.
+  You can join their WhatsApp group straight away to order the wines for home as
+  well.
+
+
+  Formidable is in the Ginneken in Breda. A nice wine bar and restaurant in
+  Brabant for Burgundy lovers.
 ---

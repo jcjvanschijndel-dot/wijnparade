@@ -10,4 +10,12 @@ minLat: 43.0
 maxLat: 43.5
 minLng: -2.5
 maxLng: -1.5
+name_en: Basque Country
+slug_en: basque-country
+country_en: Spain
+description_en: >-
+  The Basque Country is Spain's culinary capital, home of pintxo culture and the
+  best restaurant scene per head of population in the world. San Sebastián has
+  more Michelin stars per km² than any other city. The local Txakoli is the
+  perfect aperitif with fresh seafood from the Bay of Biscay.
 ---

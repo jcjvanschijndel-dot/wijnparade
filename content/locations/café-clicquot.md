@@ -18,4 +18,18 @@ description: >-
   Alle champagnes zijn beschikbaar à la carte, van Yellow Label en Rosé tot La Grande Dame. Per glas te bestellen.
 image: /uploads/clicquot.webp
 website: https://www.veuveclicquot.com/fr-fr/cafeclicquot.html
+description_en: >-
+  This is not a wine bar in the classic sense: it's the terrace of Veuve
+  Clicquot itself, right on the estate on the edge of Reims, and the only
+  permanent Café Clicquot in the world. Opened in 2023 on the grounds of the
+  Veuve Clicquot Visit Center. Under parasols in the house colours, an
+  atmosphere has been created that feels like a French bistro, open to everyone,
+  even without a cellar visit. The kitchen revolves around the seasons, artisans
+  and local producers, and a fresh take on the champagne-and-burger combination
+  is the signature dish. The Sunny Burger, on a pumpkin brioche bun with double
+  beef, smoked raclette and vegetables from Veuve Clicquot's own kitchen garden,
+  is according to visitors one of the best burgers in the region. The cheese
+  board and charcuterie are excellent too. All the champagnes are available à la
+  carte, from Yellow Label and Rosé to La Grande Dame, and can be ordered by the
+  glass.
 ---

@@ -15,4 +15,14 @@ description: "Op 20 minuten per trein vanuit Palma — stap uit in Santa Maria d
   tussen de wijnstokken op een warme julinacht."
 image: /uploads/batle.webp
 website: https://www.maciabatle.com/
+description_en: >-
+  20 minutes by train from Palma: get off at Santa Maria del Camí and walk 3
+  minutes to the bodega. The guided tour takes you past the fermentation and
+  bottling sections, the oak barrel cellar and the ageing areas, so you see the
+  complete winemaking process from grape to bottle. A special touch: you can
+  also wander through the great hall yourself, glass in hand, and look at the
+  winery up close. Afterwards there's a tasting on the outdoor terrace
+  overlooking the vineyards and the Serra de Tramuntana. Every year there's the
+  Concert de la Lluna a les Vinyes, an open-air classical music concert among
+  the vines on a warm July night.
 ---

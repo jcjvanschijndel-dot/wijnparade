@@ -13,4 +13,12 @@ description: "Wijnbar in Oud-West aan de Wilhelminastraat, bekend om zijn
   buitenplekken van Oud-West."
 image: /uploads/barrica.webp
 website: https://barrica.nl/
+description_en: >-
+  A wine bar in Oud-West on the Wilhelminastraat, known for its well-kept
+  terrace and Spanish influences. Tapas and small dishes are deliberately
+  designed to go with the wine, not the other way round. The wine list combines
+  Spanish and international wines with a character of their own. A firm
+  neighbourhood favourite with locals who know what they want: a good glass
+  outside with something tasty alongside, without any fuss. In summer the
+  terrace is one of the nicest outdoor spots in Oud-West.
 ---

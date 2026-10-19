@@ -13,4 +13,10 @@ description: >-
   Sommelier Hugues La Guerche samengestelde wijnkaart met lokale wijnen — zorgvuldig uitgekozen voor diversiteit en prijs-kwaliteitsverhouding, met de nadruk op biologische en milieuvriendelijke producenten uit de omgeving. 
 image: /uploads/ateliers.webp
 website: https://ateliernco.com/
+description_en: >-
+  You drive in through an oyster-processing workshop, walk past the machines and
+  containers, and then, suddenly, there is a waterside terrace with a panoramic
+  view over the Bassin de Thau. Sommelier Hugues La Guerche has put together a
+  wine list of local wines, carefully chosen for diversity and value, with an
+  emphasis on organic and environmentally friendly producers from the area.
 ---

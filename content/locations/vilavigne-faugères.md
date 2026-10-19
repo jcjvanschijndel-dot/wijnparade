@@ -13,4 +13,11 @@ description: >-
   Dit is een echte auto vol laden voordat je weer terug gaat naar NL wijnwinkel! Zeker als je van Faugères wijn houdt!
 image: /uploads/villavigne.webp
 website: https://www.les-crus-faugeres.fr/
+description_en: >-
+  Not the most romantic wine shop I've ever been to, but one with a large
+  (local) range and always some good deals. And on the way there you cruise
+  through beautiful vineyards and can stop at every winery along the way
+  (Domaine L'Arjolle, for example, is recommended). This is a real
+  fill-up-the-car-before-heading-home wine shop! Especially if you love Faugères
+  wine!
 ---

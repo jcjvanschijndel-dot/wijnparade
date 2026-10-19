@@ -15,4 +15,14 @@ description: >-
   voor echte liefhebbers van Rhône en Bourgogne, en een perfecte stop als je
   tijdens een stedentrip naar Lyon een bijzondere fles zoekt.
 image: /uploads/antic.webp
+description_en: >-
+  A small, chaotic wine shop in the old town where you'll find exceptionally
+  good bottles from the Rhône and Burgundy, including magnums and hard-to-find
+  gems. Owner Georges dos Santos is headstrong, energetic and obsessed with
+  wine.
+
+
+  Antic Wine is in Vieux Lyon, the old town of Lyon. A wine shop for true lovers
+  of the Rhône and Burgundy, and a perfect stop if you're looking for a special
+  bottle during a city break in Lyon.
 ---

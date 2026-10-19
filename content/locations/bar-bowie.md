@@ -14,4 +14,14 @@ description: >-
   Frans-Mediterraanse bistrokeuken, van ontbijt tot laat in de nacht: umami-rijke vegetarische gerechten, langoustines, houtduif, steak tartaar op zijn eigen manier. Seizoensgebonden en eenvoudig in zijn eerlijkheid. De wijnkaart heeft een uitgesproken focus op Frans — Bourgogne, Loire, Rhône — maar ook Oostenrijkse en Zuid-Afrikaanse etiketten krijgen hier een podium. Per glas een wisselende, zorgvuldig samengestelde selectie.
 image: /uploads/bar-bowie.webp
 website: https://www.barbowie.nl/
+description_en: >-
+  The atmosphere is reminiscent of a Parisian bistro: brass details, wooden
+  elements, an inviting terrace that is also used in winter, and an open bar
+  where you can just as easily drop in for a solo glass as for a full dinner.
+  French-Mediterranean bistro cooking from breakfast until late at night:
+  umami-rich vegetarian dishes, langoustines, wood pigeon, steak tartare done
+  their own way. Seasonal and simple in its honesty. The wine list has a clear
+  focus on France (Burgundy, Loire, Rhône), but Austrian and South African
+  labels get a stage here too. A changing, carefully chosen selection by the
+  glass.
 ---

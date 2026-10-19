@@ -19,4 +19,19 @@ description: >-
   Klein, intiem en wat duister van sfeer, met een eigenzinnig meubilair (geen twee stukken hetzelfde), een fresco uit de Renaissance aan het plafond, en muren vol met meer dan 300-400 verschillende wijnflessen — een van de grootste collecties van de stad. Op een krijtbord staat de wisselende kaart met wijnen per glas (zo'n 40 stuks, wisselend per maand), variërend van onbekende natuurwijn uit Sicilië tot bubbels uit Veneto. 
 image: /uploads/goccetto.webp
 website: https://www.instagram.com/thereal_ilgoccetto
+description_en: >-
+  One of the oldest and most celebrated wine bars in Rome, founded in 1983 by
+  Anna and Sergio in an 18th-century building on the Via dei Banchi Vecchi, in
+  the Regola district: a street that has sat on the edge of Rome's commercial
+  and ecclesiastical life for centuries, close to Campo de' Fiori. The old "Vino
+  e Olio" sign still hangs there, even though the neighbourhood around it has
+  changed many times over the years. It has become a true Roman institution,
+  visited by a strikingly diverse crowd, from Russian baronesses to museum
+  directors, artists, writers, politicians and tourists, all at the same dark
+  wooden counter. Small, intimate and somewhat dim, with idiosyncratic furniture
+  (no two pieces alike), a Renaissance fresco on the ceiling and walls lined
+  with 300-400 different wine bottles, one of the largest collections in the
+  city. A chalkboard shows the changing list of wines by the glass (around 40,
+  changing monthly), ranging from little-known natural wine from Sicily to
+  sparkling wine from the Veneto.
 ---

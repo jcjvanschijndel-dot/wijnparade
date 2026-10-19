@@ -13,4 +13,12 @@ description: >-
   Le Caffe Cuisine ligt aan de markt van Branne, aan de Dordogne in de
   Entre-Deux-Mers, vlak bij Saint-Émilion.
 image: /uploads/c-cuisine.png
+description_en: >-
+  Near Saint-Émilion? Grab a bike and cycle through the vineyards to this great
+  spot. You'd ride straight past it, but it's one of the nicer places in the
+  area. A really cosy atmosphere and a relaxed terrace.
+
+
+  Le Caffe Cuisine is on the market square of Branne, on the Dordogne in the
+  Entre-Deux-Mers, close to Saint-Émilion.
 ---

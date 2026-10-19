@@ -17,4 +17,16 @@ description: >-
   Clos d'Agon onderscheidt zich door de verfijning en originaliteit van zijn wijntoeristische ervaringen — ze gaan ver voorbij de standaard rondleiding, met een gecureerd aanbod dat het wijnhuis tot een bestemming op zich maakt. Bijzonder populair zijn de nacht-ervaringen in de zomer. Reserveer weken vooruit in het hoogseizoen.
 image: /uploads/d-agon.webp
 website: closdagon.com
+description_en: >-
+  Clos d'Agon, under the family name Mas Gil in Calonge, has grown grapes on
+  this estate since the 15th century. The new bodega was built in 2005, fully
+  integrated into the landscape and inspired by the work of Piet Mondrian. The
+  winery is part of the Grandes Pagos de España, the elite of Spanish terroir
+  wineries. 42 hectares in total, 16 of them vineyard and the rest Mediterranean
+  forest, surrounded by the Les Gavarres Natural Park: a natural amphitheatre
+  with sea views. Clos d'Agon stands out for the refinement and originality of
+  its wine tourism experiences, which go far beyond the standard tour, with a
+  curated programme that makes the winery a destination in itself. The
+  night-time experiences in summer are especially popular. Book weeks ahead in
+  high season.
 ---

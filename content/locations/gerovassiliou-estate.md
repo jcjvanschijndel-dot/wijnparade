@@ -15,4 +15,12 @@ description: >-
   Wijnmuseum en proeflokaal op het domein, dagelijks open. Rondleidingen met proeverij op afspraak. Het museum is een bezoek op zichzelf waard.
 image: /uploads/gerovassiliou.webp
 website: https://www.gerovassiliou.gr/
+description_en: >-
+  Vangelis Gerovassiliou is the architect of modern Greek winemaking. He learned
+  the trade as oenologist at Château Carras, but his own estate in Epanomi, near
+  Thessaloniki, made him one of the most respected producers in the Balkans. The
+  estate is also home to the Gerovassiliou Wine Museum, with the largest private
+  collection of corkscrews in the world, more than 4,000 of them. The wine
+  museum and tasting room on the estate are open daily. Tours with tasting by
+  appointment. The museum is worth a visit in its own right.
 ---

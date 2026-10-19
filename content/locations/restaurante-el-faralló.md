@@ -17,4 +17,16 @@ description: >-
   Het absolute pronkstuk is de gamba roja de Dénia — Javier volgt 's ochtends via een app welke boten varen en waar, selecteert de percelen die hij het best kent, en "vecht" 's middags op de visafslag voor de beste exemplaren. Naast garnalen: pulpo seco, sepionets, clams, lever van zeeduivel, arroces en stoof­gerechten.
 image: /uploads/farallo.webp
 website: elfarallo.com
+description_en: >-
+  For more than twenty years Javier Alguacil and Julia Lozano have run El
+  Faralló at the end of the Paseo Marítimo of Dénia, in the Las Rotas district.
+  Javier previously worked at the renowned El Pegolí and found his freedom in
+  this former campsite bar close to the water. Now the whole family is involved:
+  his eldest son Javier helps with the arroces at weekends, middle son Alejandro
+  runs the dining room, and youngest son Sergio, who trained at El Celler de Can
+  Roca, introduces little surprises on the menu. The absolute showpiece is the
+  gamba roja de Dénia (red prawn): in the morning Javier follows on an app which
+  boats are out and where, selects the fishing grounds he knows best, and in the
+  afternoon "fights" at the fish auction for the best specimens. Besides prawns:
+  pulpo seco, sepionets, clams, monkfish liver, arroces and stews.
 ---

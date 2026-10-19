@@ -15,4 +15,14 @@ description: >-
   proeft en daarna pas koopt.
 image: /uploads/gastrovino-mijn-hemel_gijsbrecht-van-amstelstraat_nieuw-logo_web.jpg
 website: https://www.gastrovino.nl/winkels/gastrovino-mijn-hemel
+description_en: >-
+  A wine shop that recently added a wine café. Here you can taste the broad
+  Gastrovino range by the glass and take a newly found favourite straight home
+  from the shop. That's great if you don't quite know what you're looking for
+  yet.
+
+
+  Gastrovino Mijn Hemel is on the Gijsbrecht van Amstelstraat in Hilversum, in
+  Het Gooi. A nice combination of wine shop and wine café, where you taste first
+  and buy afterwards.
 ---

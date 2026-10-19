@@ -16,4 +16,13 @@ description: >-
   willen eten met een bijzonder glas wijn erbij.
 image: /uploads/klepel.webp
 website: https://www.cafedeklepel.nl/
+description_en: >-
+  This really is my favourite restaurant in Amsterdam. Cosy, snug and delicious
+  dishes. And besides the extensive wine list with special wines, the lovely
+  sommelier always has "something nice" tucked away. That's what we love!
+
+
+  Café de Klepel is on the Prinsenstraat in the Jordaan, in the centre of
+  Amsterdam. Highly recommended for wine lovers who want a cosy meal in
+  Amsterdam with a special glass of wine.
 ---

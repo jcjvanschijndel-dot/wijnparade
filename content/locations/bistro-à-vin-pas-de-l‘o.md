@@ -18,4 +18,20 @@ description: >-
   De kaart telt een groeiende selectie van meer dan 100 wijnen. Bijzonder sterk in wijnen die je elders in Maastricht moeilijk vindt — kleine producenten, verrassende regio's, eerlijke prijzen. De wijnkaart wordt voortdurend aangevuld naarmate Marc nieuwe ontdekkingen doet. Per glas een ruime keuze, per fles een brede selectie van hoge kwaliteit.
 image: /uploads/pas-de-l-o.webp
 website: https://www.pasdelo.nl/
+description_en: >-
+  In autumn 2025, well-known Maastricht sommelier Marc Teuben opened his
+  long-cherished dream: a wine bar on the Rechtstraat in Wyck, at the site of
+  the former fish restaurant 'O'. The name is a subtle play on words on that
+  predecessor. Marc was previously head sommelier at Hoeve de Bies, and before
+  that spent several years at other top restaurants in the region. A small,
+  intimate space in lively Wyck, the buzzing right bank of the Maas where most
+  of Maastricht's gastronomic restaurants are found. That's deliberate: Marc
+  sees Pas de l'O as part of the neighbourhood's gastronomic ecosystem, for a
+  drink before or after dinner elsewhere, or an evening in its own right. The
+  wine bar has since grown into a bistro: besides bites there are now proper
+  dishes, sometimes cooked by guest chefs. The list has a growing selection of
+  more than 100 wines and is particularly strong in wines that are hard to find
+  elsewhere in Maastricht: small producers, surprising regions, fair prices. The
+  list is constantly added to as Marc makes new discoveries. A wide choice by
+  the glass, and a broad, high-quality selection by the bottle.
 ---

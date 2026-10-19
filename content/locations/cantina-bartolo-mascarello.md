@@ -13,4 +13,12 @@ description: Een heiligdom. Bartolo Mascarello (1927-2005) was de meest
   De kleine kelder in het hart van het dorp Barolo is vrijwel onveranderd since
   de 18e eeuw.
 image: /uploads/cantina-mascarello-bartolo.webp
+description_en: >-
+  A sanctuary. Bartolo Mascarello (1927-2005) was the most outspoken
+  traditionalist in all of Barolo: a man who wrote his political convictions on
+  his labels (famous cuvées such as "No Barrique No Berlusconi") and who made
+  his wine the way his father and grandfather did. After his death his daughter
+  Maria Teresa took over. She makes the wine in exactly the same way: no
+  technology, no compromises, no website. The small cellar in the heart of the
+  village of Barolo has barely changed since the 18th century.
 ---

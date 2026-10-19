@@ -18,4 +18,18 @@ description: >-
   Huisverkoop op zaterdag 10.00-17.00 uur, geen reservering nodig.
 image: /uploads/nekum.webp
 website: hoevenekum.nl
+description_en: >-
+  Hoeve Nekum is the second-oldest winemaker in the Netherlands. The farm was
+  first mentioned in a border description of 1304, but the typically Limburg,
+  castle-like square farmhouse was largely built around 1600. The Bollen family
+  has lived on the farm since 1934; Math Bollen is the proud owner of the wine
+  estate, the third generation of Bollens to work the land here. Vines have only
+  stood here since 1988, but the story goes back centuries, and a royal boost
+  helped: at the wedding of Willem-Alexander and Máxima in 2002, 60 bottles of
+  Hoeve Nekum's 1999 Riesling were served. In 2003 the estate was voted the best
+  in Limburg. A tour of the demonstration vineyard and the wine cellar is
+  followed by a tasting of five different wines with Limburg rye bread and
+  cheese or ham. The slopes have gradients of up to 42%, so walking through the
+  vineyard is literally climbing. Shop sales on Saturdays 10.00-17.00, no
+  reservation needed.
 ---

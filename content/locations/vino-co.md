@@ -16,4 +16,14 @@ description: >-
   Het hele jaar open. Vrijdagavonden in het winterseizoen zijn bijzonder populair — op tijd zijn is een must.
 image: /uploads/vino.webp
 website: vinoyco.com
+description_en: >-
+  Wine shop, wine bar and bistro in one: shopping and tasting by day, dinner or
+  drinks in the evening. In the winter months the Vino & Co wine shop turns into
+  a cosy wine party every Friday evening: with home-made tapas you can choose
+  from 25 wines by the glass, or open any bottle from the 300-wine collection
+  for the shop price plus corkage. That idea of Dutchman Jeroen Hamersma grew
+  from 2009 into one of the best-loved wine destinations on the island. Jeroen
+  is the brother of Harold Hamersma, author of the best-known international wine
+  guide in the Netherlands. Open all year round. Friday evenings in the winter
+  season are especially popular, so arriving early is a must.
 ---

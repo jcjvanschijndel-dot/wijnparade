@@ -10,4 +10,13 @@ minLat: 39.2
 maxLat: 40.1
 minLng: 2.4
 maxLng: 3.5
+name_en: Mallorca
+slug_en: mallorca
+country_en: Spain
+description_en: >-
+  Mallorca has a flourishing wine tradition with local grapes such as Callet,
+  Mantonegro and Prensal. The bodegas in the Binissalem valley and on the slopes
+  of the Tramuntana produce wines that are gaining more and more international
+  recognition. Combine winery visits with the beautiful villages of the interior
+  and the quiet coves of the west coast.
 ---

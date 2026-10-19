@@ -29,4 +29,8 @@ description: >+
 
 image: /uploads/oustalet.webp
 website: https://www.loustalet-gigondas.fr/
+description_en: >-
+  On the village square of Gigondas, under centuries-old plane trees, stands a
+  Provençal stone house that represents everything that makes this village so
+  special.
 ---

@@ -17,4 +17,12 @@ description: >-
   Via de website kun je diverse tastings en rondleidingen boeken. 
 image: /uploads/menade.webp
 website: https://www.menade.es/
+description_en: >-
+  The building is striking straight away: a modern structure with vertical
+  planting that stands like a green screen among the vines. On the terrace you
+  can look out over the estate with a glass of Verdejo and a tapa of local
+  cheese while you wait for the tour. The garden around the estate is a small
+  petting farm, with donkeys, chickens, geese and an insect hotel, all part of
+  the house's biodiversity philosophy. You can book various tastings and tours
+  through the website.
 ---

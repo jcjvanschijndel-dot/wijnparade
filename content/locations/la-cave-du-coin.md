@@ -16,4 +16,14 @@ description: >-
   Een aanrader voor wie Savoie-wijnen wil ontdekken.
 image: /uploads/du-coin.webp
 website: https://www.caveducoin.vin/
+description_en: >-
+  A wine cellar and bar between lake and mountains in the village of
+  Veyrier-du-Lac, on the eastern shore of Lake Annecy. Wines, champagnes and
+  local produce: cheese, terrines, snails. Regular themed evenings with
+  winemakers and tastings of Savoie wines. Ideal for an aperitif after a walk or
+  a boat trip on the lake.
+
+
+  La Cave du Coin is in Veyrier-du-Lac, on Lake Annecy in Savoie. Recommended if
+  you want to discover Savoie wines.
 ---

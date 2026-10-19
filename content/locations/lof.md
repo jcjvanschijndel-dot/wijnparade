@@ -12,4 +12,11 @@ description: Zoldering is wat mij betreft één van de betere (wijn)restaurants 
   namen houdt, maar van originele met zorg uitgekozen kwaliteitswijnen.
 image: /uploads/lof.webp
 website: https://lofwijn.nl/
+description_en: >-
+  As far as I'm concerned, Zoldering is one of the better (wine) restaurants in
+  Amsterdam, and it happens to have its own wine shop too, called Lof. It's
+  great, of course, that you can buy the special wines from Zoldering's list
+  here, but the shop is worth a visit in its own right, especially if you don't
+  like the well-known commercial names but prefer original, carefully chosen
+  quality wines.
 ---

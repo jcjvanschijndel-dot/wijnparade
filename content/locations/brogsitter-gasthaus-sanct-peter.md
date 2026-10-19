@@ -18,4 +18,16 @@ description: >-
   De keuken werkt met regionale, seizoensgebonden en internationale invloeden. Klassiekers zijn de gestoofde ossenbiefstuk in Ahr-Bourgogne-saus en de tarbot in Ahr Blanc de Noir-saus. 
 image: /uploads/sanct-peter.webp
 website: https://www.sanct-peter.de/
+description_en: >-
+  Gasthaus Sanct Peter has an impressive history: after 800 years in the hands
+  of the Frankish kings it was given to the Benedictine monastery of Prüm, then
+  passed to the counts of Are-Hochstaden, and in 1246 was donated to the
+  cathedral chapter of Cologne. Since the 16th century it has been owned by the
+  Brogsitter winemaking family from the Ahr valley. After the devastating floods
+  of 2021 the restaurant was thoroughly renovated, with its classic, elegant
+  character fully preserved. The terrace behind the house looks out over
+  greenery. On the grounds there is also a well-stocked vinotheque where you can
+  buy wines from the family's own Weingut Brogsitter. The kitchen works with
+  regional, seasonal and international influences. Classics are the braised beef
+  in an Ahr Pinot Noir sauce and the turbot in an Ahr Blanc de Noir sauce.
 ---

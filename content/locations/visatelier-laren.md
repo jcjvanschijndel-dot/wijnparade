@@ -15,4 +15,13 @@ description: >-
   alleen in de wijnbar een glas bubbels of witte wijn drinken.
 image: /uploads/visatelier.webp
 website: https://www.visatelier.nl/
+description_en: >-
+  A fishmonger, restaurant and wine bar under one roof. For wine lovers there's
+  a dedicated wine bar with an extensive range of wines and bubbles, which you
+  can also visit separately from the restaurant.
+
+
+  Visatelier is in the centre of Laren, in Het Gooi. A nice address for lovers
+  of fish and wine: you can have lunch or dinner with fresh fish, or just drink
+  a glass of bubbles or white wine in the wine bar.
 ---

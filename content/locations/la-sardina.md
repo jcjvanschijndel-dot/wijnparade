@@ -16,4 +16,12 @@ description: >-
   De wijnkaart is op zich niet bijzonder, maar staat vol met leuke, zeer betaalbare wijnen uit alle streken van Spanje.
 image: /uploads/la-herradura.webp
 website: https://discoveralmunecar.com/es/restaurante-chiringuito-la-sardina/
+description_en: >-
+  The bay curves in a perfect arc around the beach, and La Sardina sits right in
+  the middle of it. A lovely beach chiringuito, but a proper one with
+  tablecloths. Sardines on the coals, quisquillas de Motril, arroz caldoso with
+  lobster, pimientos, migas: the classic cooking of the Costa Tropical, made
+  with the day's catch. The regional speciality is sardines on skewers, grilled
+  over smouldering embers. The wine list isn't remarkable as such, but it's full
+  of fun, very affordable wines from all over Spain.
 ---

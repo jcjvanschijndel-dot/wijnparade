@@ -13,4 +13,10 @@ description: >-
   Bezoeken en rondleidingen op afspraak, inclusief proeverij van de Ribeiro-wijnen met uitleg over de druiven en het terroir. De bodega ligt in Castrelo de Miño, vlak bij de Miño-rivier — een mooie uitvalsbasis voor wie ook de omgeving wil verkennen. 
 image: /uploads/casar.webp
 website: https://ramondocasar.es/en/
+description_en: >-
+  The house speciality is Treixadura, the symbol of Ribeiro: a white grape that
+  thrives nowhere better than here on the granite soils by the Miño. Visits and
+  tours by appointment, including a tasting of the Ribeiro wines with an
+  explanation of the grapes and the terroir. The bodega is in Castrelo de Miño,
+  close to the Miño river: a lovely base if you want to explore the area too.
 ---

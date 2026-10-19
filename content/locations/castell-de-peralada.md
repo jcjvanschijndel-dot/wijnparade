@@ -15,4 +15,11 @@ description: >-
   Je hebt meerdere opties voor proeverijen en rondleidingen. Dus kijk vooral even op de website.
 image: /uploads/peralada.webp
 website: https://www.castellperalada.com/
+description_en: >-
+  Seven kilometres from Figueres and less than an hour from the most beautiful
+  coves of the Costa Brava stands one of the most complete wine tourism
+  destinations in Spain. A 14th-century castle, a new world-class winery, a
+  five-star hotel, a wine spa and a Michelin-starred restaurant, all on the same
+  estate. You have several options for tastings and tours, so do take a look at
+  the website.
 ---

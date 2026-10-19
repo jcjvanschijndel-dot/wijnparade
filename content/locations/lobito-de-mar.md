@@ -18,4 +18,13 @@ description: >-
   Voor wie Marbella associeert met show: hier gaat het om het bord. Met een mooie fles wijn!
 image: /uploads/lobito.webp
 website: https://lobitorestaurants.com/es/marbella/?utm_source=GBUSINESS
+description_en: >-
+  As you walk in, fresh fish and seafood greet you straight away, and bluefin
+  tuna takes a special place of honour: a whole section of the menu is devoted
+  to it, in no fewer than 17 preparations. The grilled octopus, the ensaladilla
+  rusa with smoked eel and the rice dishes that honestly celebrate the sea are
+  convincing too. The wine list scores 20 out of 20 from Falstaff, a strikingly
+  high score that underlines how serious the selection is. For anyone who
+  associates Marbella with show: here it's all about the plate. With a fine
+  bottle of wine!
 ---

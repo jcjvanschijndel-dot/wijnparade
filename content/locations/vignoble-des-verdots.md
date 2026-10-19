@@ -20,4 +20,19 @@ description: >-
   Het restaurant Maison Wessman par Thierry Marx is een eigentijds bistrot dat seizoensgebonden keuken van het terroir serveert — een gedurfde keuze voor een Bergerac-domein en meteen een van de gastronomisch sterkste adressen van de streek.
 image: /uploads/verdots.webp
 website: https://www.maisonwessman.is/fr/verdots
+description_en: >-
+  For four generations the domaine has been one of the most respected wineries
+  in Bergerac, built up by the Fourtout family into a household name in the
+  region. In 2021 Icelandic businessman Robert Wessman took it over through his
+  Maison Wessman, already owner of the nearby Château de Saint-Cernin. He bought
+  the domaine with the explicit promise to keep the existing team and respect
+  the style, and brought in Michelin-starred chef Thierry Marx for the
+  restaurant. The domaine, 10 km south of Bergerac in Conne-de-Labarde, combines
+  a modern reception pavilion with an impressive underground cellar and a
+  vinification chai. Open daily from 10.00 to 20.00 for tastings, with a bar à
+  vins and a boutique. Guided tours and tailor-made tastings are possible,
+  including food and wine pairings in collaboration with the restaurant. The
+  restaurant, Maison Wessman par Thierry Marx, is a contemporary bistro serving
+  seasonal terroir cooking: a bold choice for a Bergerac domaine, and straight
+  away one of the gastronomically strongest addresses in the area.
 ---

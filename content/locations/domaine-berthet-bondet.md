@@ -17,4 +17,11 @@ description: >-
   Het caveau is maandag tot vrijdag open op afspraak, zaterdag van 10.00 tot 12.00 en van 14.00 tot 18.00 uur. 
 image: /uploads/berthet-bondet.webp
 website: https://berthet-bondet.com/
+description_en: >-
+  In one of the most beautiful medieval villages in France, Château-Chalon, high
+  above the Seille valley, the Berthet-Bondet family makes the most remarkable
+  wine of the Jura. This is the place to go if you want to understand vin jaune.
+  The vin jaune ages in a 16th-century cellar in the village, one of the most
+  historic ageing cellars in the region. The caveau is open Monday to Friday by
+  appointment, and Saturday from 10.00 to 12.00 and from 14.00 to 18.00.
 ---
