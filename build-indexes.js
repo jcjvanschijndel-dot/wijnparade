@@ -199,7 +199,7 @@ for (const file of locationFiles) {
       <div class="recipe-wine">${typeLabel}</div>
     </div>
     <div class="info-section"><div class="info-label">Adres</div><div class="info-value">${loc.address || ''}</div></div>
-    <div class="info-section"><div class="info-label">ℹ️ Over deze locatie</div><div class="info-value">${description}</div></div>
+    <div class="info-section"><div class="info-label">Over deze locatie</div><div class="info-value">${description}</div></div>
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">Bezoek website →</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
   </div></main>
@@ -1486,7 +1486,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <h1 class="en-h1">${escHtml(name)}</h1>
       <div class="en-sub">${escHtml(cap(type))}${city ? ` in ${escHtml(city)}` : ''}</div>
       <div class="en-box"><h2>Address</h2><div>${escHtml(l.address || '')}</div></div>
-      <div class="en-box"><h2>ℹ️ About</h2><div class="en-text">${escHtml(String(l.description_en).trim())}</div></div>
+      <div class="en-box"><h2>About</h2><div class="en-text">${escHtml(String(l.description_en).trim())}</div></div>
       ${l.website ? `<a class="en-btn" href="${escHtml(websiteUrl(l.website))}" target="_blank" rel="noopener">Visit website →</a>` : ''}
       ${l.lat && l.lng ? '<div class="en-map" id="locationMap"></div>' : ''}
       ${r ? `<p><a href="${r.enPath}" style="color:var(--navy);font-weight:600">More in ${escHtml(r.nameEn)} →</a></p>` : ''}
