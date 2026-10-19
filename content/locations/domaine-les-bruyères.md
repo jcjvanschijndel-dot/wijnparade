@@ -5,7 +5,7 @@ address: 12 Chem. du Stade, 26600 Beaumont-Monteux, Frankrijk
 lat: 45.0270428
 lng: 4.9282982
 description: >-
-  p de oevers van de Isère, in Beaumont-Monteux, heeft David Reynaud in twintig
+  Op de oevers van de Isère, in Beaumont-Monteux, heeft David Reynaud in twintig
   jaar tijd iets opmerkelijks gedaan: van coöperatieboer uitgegroeid tot een van
   de vijf beste wijnmakers van de hele Crozes-Hermitage appellation.
 

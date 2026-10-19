@@ -8,7 +8,7 @@ description: >-
   Antoine, Valentin, Alexandre en Adrien verwelkomen je van dinsdag tot zaterdag
   in hun atypische, warme etablissement net naast de Place Nationale. De
   wijnkelder telt 300 referenties — wit, rood en rosé — zorgvuldig opgegraven
-  door heel Frankrijk, met nadruk op de Zuidwest. Guide Tarn Aveyron
+  door heel Frankrijk, met nadruk op de Zuidwest.
 
   224 Litres werkt uitsluitend met Franse wijnen en plaatst de wijnen van de Zuidwest centraal. De aanpak is biodynamisch en natural wine-georiënteerd. Adrien — opgeleid als sommelier in de Rhônevallei — en Antoine — kok — combineren hun expertise in dit concept. 's Avonds is de winkel een bar met tapas en grillgerechten bereid in de keuken van het aangrenzende restaurant Antoine-Omnivore. 
 image: /uploads/montauban-224.webp

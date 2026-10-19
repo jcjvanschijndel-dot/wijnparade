@@ -26,5 +26,6 @@ description_en: >-
   beginner level to extended vertical tastings and even wine and truffle
   pairings for the seasoned collector. A special experience: a tasting in which
   certain senses are deliberately switched off so you approach wine from a
-  different angle. The tour ends in the boutique.
+  different angle. The tour ends in the boutique "Les Clés du Vin", furnished
+  with racks and furniture from an old pharmacy.
 ---

@@ -17,5 +17,8 @@ website: https://www.chateauducedre.com/en/
 description_en: >-
   This is the reference point for the entire Cahors appellation. Pascal
   Verhaeghe, together with his brother Jean-Marc, has built Château du Cèdre
-  into the absolute benchmark of Cahors.
+  into the absolute benchmark of Cahors. Visits include a tour of the organic
+  vineyard and an explanation of every stage of production, finishing with a
+  guided tasting, by reservation. Pascal welcomes visitors personally when he is
+  there.
 ---

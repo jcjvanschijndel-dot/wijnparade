@@ -13,9 +13,7 @@ description: >
   Het grootste biologische en biodynamische wijngoed van Cahors — 65 hectare, met een geschiedenis die teruggaat tot 1690.
 
 
-  Holodeck
-
-  Het restaurant heeft een open keuken, een prachtig terras met uitzicht op de wijngaard en een sommelier die behoort tot de meest exclusieve kring ter wereld: Lin Liu is Master of Wine — slechts 414 mensen wereldwijd dragen die titel — en haar eindscriptie gingover de AOC Cahors.
+  Het restaurant, Holodeck, heeft een open keuken, een prachtig terras met uitzicht op de wijngaard en een sommelier die behoort tot de meest exclusieve kring ter wereld: Lin Liu is Master of Wine — slechts 414 mensen wereldwijd dragen die titel — en haar eindscriptie gingover de AOC Cahors.
 
 
   Gratis proeverij dagelijks. Begeleide tours door het domein met tot 6 wijnen.
