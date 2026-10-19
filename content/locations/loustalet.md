@@ -32,5 +32,24 @@ website: https://www.loustalet-gigondas.fr/
 description_en: >-
   On the village square of Gigondas, under centuries-old plane trees, stands a
   Provençal stone house that represents everything that makes this village so
-  special.
+  special. L'Oustalet is a Maison born from the meeting of the Perrin family,
+  winemakers of Château Beaucastel, and chef Thomas Boirel. The Perrins are one
+  of the leading families of the southern Rhône, and they chose Gigondas as the
+  home for this project, where their passion for wine and gastronomy comes
+  together. More than 4,000 wines in the cellar, representing every appellation.
+  25 wines by the glass, including top Châteauneuf-du-Pape and even Volnay
+  Premier Cru. As you'd expect from the Perrin family, the wine list here is a
+  treasure trove of surprises. Visits to the kitchen garden, the cellar, the
+  truffle fields, the estate and walking trails in the area. In January there's
+  a Menu Truffe: a whole menu built around local black truffles. L'Oustalet is
+  the Michelin-starred restaurant: fresh seasonal ingredients celebrating
+  Provence, skilfully turned into thoughtful dishes such as Mediterranean sea
+  bream, grilled aubergine and girolles; Aveyron veal, chard and marjoram; fig,
+  rosemary and balsamic. Le Bistrot de l'Oustalet is in the old village bakery,
+  with a lovely courtyard as its terrace and the stone wood-fired oven as its
+  centrepiece. A concise menu of Mediterranean dishes made from fresh market
+  produce, and a fine selection of wines by the glass. We are in Gigondas, after
+  all. Les Chambres is a guesthouse in the heart of the village, with air
+  conditioning, wifi, a minibar and a continental breakfast with homemade jam
+  included. Within walking distance of the Dentelles de Montmirail for hikers.
 ---

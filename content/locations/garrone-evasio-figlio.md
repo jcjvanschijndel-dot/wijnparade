@@ -10,7 +10,7 @@ description: >-
   wijngaard op de zachte heuvels van het Monferrato Astigiano, verspreid over de
   gemeenten Grana, Montemagno en Castagnole Monferrato. 
 
-  De rondleiding wordt gemaakt in gezelschap van de producent zelf — vanaf de familiegeschiedenis tot de rijpingstechnieken, via de wijnmakingspraktijken, afgesloten met een proeverij. Bij aankomst ontvangt elke bezoeker een bijzondere kaart met aan één kant de Pantone-kleuren van de wijnen en aan de andere kant geurverwijzingen — een origineel hulpmiddel om grafische suggesties te vergelijken met het echte glas. Tripadvisor
+  De rondleiding wordt gemaakt in gezelschap van de producent zelf — vanaf de familiegeschiedenis tot de rijpingstechnieken, via de wijnmakingspraktijken, afgesloten met een proeverij. Bij aankomst ontvangt elke bezoeker een bijzondere kaart met aan één kant de Pantone-kleuren van de wijnen en aan de andere kant geurverwijzingen — een origineel hulpmiddel om grafische suggesties te vergelijken met het echte glas.
 
   Er zijn drie formules: een basisrondleiding met proeverij van 3 wijnen, een uitgebreidere versie met 5 wijnen inclusief vergelijkende Ruchè-proeverij, en een speelse-didactische rondleiding speciaal gericht op Ruchè met een klein kruiswoordraadsel over het karakter van het ras.
 image: /uploads/garrone.webp

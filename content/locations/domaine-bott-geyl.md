@@ -20,5 +20,12 @@ website: https://www.bott-geyl.com/
 description_en: >-
   The vineyards (20 hectares spread over 80 plots in seven villages, with six
   grand cru sites) are farmed entirely organically and biodynamically. Harvested
-  by hand, with as little intervention as possible in the cellar.
+  by hand, with as little intervention as possible in the cellar. You can simply
+  walk in for a tasting: open Monday to Saturday from 9.00 to 11.30 and from
+  14.00 to 17.30. You'll be well looked after, as the staff take the time to
+  explain each wine, tailored to your taste. And this is the best part: on the
+  cellar level of the winery there is a 250 m² loft with a large south-facing
+  terrace, three bedrooms and room for up to 10 guests. You literally sleep
+  above the wines, with a view of the vineyards. Ideal for a group of friends or
+  a family weekend.
 ---

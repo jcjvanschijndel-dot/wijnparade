@@ -2,7 +2,7 @@
 name: Bourgogne
 country: Frankrijk
 emoji: "🍇"
-description: "Bourgogne is het Mekka voor wijnliefhebbers: delicate Pinot Noirs van Gevrey-Chambertin, minerale Chardonnays van Meursault. De Route des Grands Crus door de Côte d Ors is een bedevaart waard. Vertrek vanuit Beaune en rij langs de meest waardevolle stukjes grond ter wereld."
+description: "Bourgogne is het Mekka voor wijnliefhebbers: delicate Pinot Noirs van Gevrey-Chambertin, minerale Chardonnays van Meursault. De Route des Grands Crus door de Côte d'Or is een bedevaart waard. Vertrek vanuit Beaune en rij langs de meest waardevolle stukjes grond ter wereld."
 centerLat: 47.05
 centerLng: 4.85
 zoom: 10

@@ -265,9 +265,10 @@ function parseFrontmatter(content) {
             let rawValue = topMatch[2].trim();
             
             // Check if value is empty (next lines are a list or block scalar)
-            if (rawValue === '' || rawValue === '>-' || rawValue === '>' || rawValue === '|' || rawValue === '|-') {
-                // Check if it's a block scalar
-                if (rawValue === '>-' || rawValue === '>' || rawValue === '|' || rawValue === '|-') {
+            const isBlockScalar = /^[>|][+-]?[1-9]?$/.test(rawValue);
+            if (rawValue === '' || isBlockScalar) {
+                // Check if it's a block scalar (>, >-, >+, |, |-, |+)
+                if (isBlockScalar) {
                     const fold = rawValue.startsWith('>');
                     const strip = rawValue.endsWith('-');
                     i++;
@@ -299,28 +300,42 @@ function parseFrontmatter(content) {
                 continue;
             }
             
-            // Quoted string - handle properly (may contain colons, special chars)
-            if ((rawValue.startsWith('"') && rawValue.endsWith('"')) ||
-                (rawValue.startsWith("'") && rawValue.endsWith("'"))) {
-                result[key] = rawValue.slice(1, -1);
-                i++;
-                continue;
-            }
-            
-            // Quoted string that might span... actually in frontmatter it shouldn't
-            // but let's handle unclosed quotes
-            if (rawValue.startsWith('"') && !rawValue.endsWith('"')) {
-                let fullValue = rawValue.substring(1);
-                i++;
-                while (i < lines.length && !lines[i].includes('"')) {
-                    fullValue += '\n' + lines[i];
-                    i++;
+            // Quoted string ("..." of '...'), ook verdeeld over meerdere regels en met \" erin
+            if (rawValue.startsWith('"') || rawValue.startsWith("'")) {
+                const q = rawValue[0];
+                // Positie van het afsluitende aanhalingsteken in een stuk tekst, of -1
+                const closeAt = (str, from) => {
+                    for (let p = from; p < str.length; p++) {
+                        if (q === '"' && str[p] === '\\') { p++; continue; }
+                        if (str[p] === q) {
+                            if (q === "'" && str[p + 1] === "'") { p++; continue; }
+                            return p;
+                        }
+                    }
+                    return -1;
+                };
+                let raw = rawValue.slice(1);
+                let end = closeAt(raw, 0);
+                let parts = [];
+                if (end === -1) {
+                    parts.push(raw);
+                    while (++i < lines.length) {
+                        const ln = lines[i].trim();
+                        end = closeAt(ln, 0);
+                        if (end === -1) { parts.push(ln); continue; }
+                        parts.push(ln.slice(0, end));
+                        break;
+                    }
+                } else {
+                    parts.push(raw.slice(0, end));
                 }
-                if (i < lines.length) {
-                    fullValue += '\n' + lines[i].replace(/".*$/, '').replace(/"$/, '');
-                    i++;
-                }
-                result[key] = fullValue;
+                // Regels samenvoegen zoals YAML dat doet: enkele regelovergang = spatie, lege regel = nieuwe regel
+                let text = parts.map((x, n) => x === '' ? '\n' : (n ? ' ' : '') + x).join('').replace(/ ?\n ?/g, '\n');
+                text = q === '"'
+                    ? text.replace(/\\(["\\\/nt])/g, (m, c) => c === 'n' ? '\n' : c === 't' ? '\t' : c)
+                    : text.replace(/''/g, "'");
+                result[key] = text.trim();
+                i++;
                 continue;
             }
             

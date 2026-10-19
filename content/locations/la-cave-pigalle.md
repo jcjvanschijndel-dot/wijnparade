@@ -11,7 +11,6 @@ description: >-
   andersom: een fles kopen en meenemen naar 228 Litres om ter plekke te drinken.
 
 
-  Eten en wijn
 
 
   Meer dan 2.000 referenties, sterk in grower Champagne en naturelwijn. Eigenaar Pierre Renauld selecteerde de wijnkaart persoonlijk — dezelfde ijzeren hand als bij 228 Litres. Prijzen zijn eerlijk, het personeel kent de selectie van binnen en buiten.
