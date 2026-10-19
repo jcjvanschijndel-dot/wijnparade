@@ -17,4 +17,15 @@ description: >-
   De wijnkelder telt meer dan 200 wijnen, van lokale Costa Brava-producenten tot moeilijk te vinden internationale pareltjes. Ook te koop als wijnwinkel en online via de UainClub. 
 image: /uploads/uain.webp
 website: https://www.uain.es/
+description_en: >-
+  Uain bar&store is the project of sommelier Rafel Sabadí and chef Helena Juher,
+  in L'Escala on the Costa Brava. Not a run-of-the-mill tapas bar, but a
+  distinctly wine-driven concept where everything revolves around combining wine
+  and food. Small, intimate and warmly furnished: at most 6 people per table, no
+  large groups, no terrace, everything indoors. Rafel is often there himself and
+  is known for his personal wine advice and his ability to make the sometimes
+  overwhelming wine list accessible. The dishes are served one by one, each with
+  a matching glass. The wine cellar holds more than 200 wines, from local Costa
+  Brava producers to hard-to-find international gems, also for sale in the shop
+  and online through the UainClub.
 ---

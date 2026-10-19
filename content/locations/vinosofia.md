@@ -16,4 +16,14 @@ description: "Een intieme wijnbar annex wijnwinkel met meer dan 100 opties,
   of wijnkelder."
 image: /uploads/vinosofia.webp
 website: https://www.vinosofia.wine/
+description_en: >-
+  An intimate wine bar and wine shop with more than 100 options, mainly organic
+  European (and largely Italian) wines from small producers. Every month a
+  different Italian region is in the spotlight: visitors have tasted spectacular
+  Sicilian wines here alongside bottles from nearby Montefalco, for example.
+  Between 15.00 and 17.00 they offer a simple Umbrian wine tasting. The space
+  itself is atmospheric: vaulted ceilings and walls of the pink natural stone
+  typical of Umbria, soft jazz and guitar music in the background, and walls
+  full of wine and cookery books plus small gifts for the kitchen or wine
+  cellar.
 ---

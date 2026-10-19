@@ -10,4 +10,12 @@ minLat: 50.45
 maxLat: 50.6
 minLng: 6.9
 maxLng: 7.2
+name_en: Ahr
+slug_en: ahr
+country_en: Germany
+description_en: >-
+  The Ahr is the northernmost red wine region in the world, a narrow valley
+  wedged between the Eifel and the Westerwald. Its steep slate slopes produce
+  exceptional Spätburgunders that rival Burgundies at three times the price. The
+  region has made a resilient comeback after the floods of 2021.
 ---

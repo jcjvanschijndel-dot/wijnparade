@@ -14,4 +14,13 @@ description: >-
 
   Focus op Portugese wijnen van alle regio's, met een bijzondere aandacht voor natuurwijn en kleine onafhankelijke producenten. Internationale etiketten ook aanwezig. Per glas voor elk budget. Petiscos bij de wijn: regionale kaas en gerookt vlees. 
 image: /uploads/prova.webp
+description_en: >-
+  Every wine on the shelves can be ordered by the glass, with no obligation to
+  buy a whole bottle. Owner Diogo helps you in several ways, from a quick
+  recommendation as you come in to a full guided tasting of several regions. He
+  explains the nuances of Portuguese wine in this chic bar with stone walls. The
+  focus is on Portuguese wines from every region, with special attention to
+  natural wine and small independent producers. International labels too. By the
+  glass for every budget. Petiscos with the wine: regional cheese and smoked
+  meats.
 ---

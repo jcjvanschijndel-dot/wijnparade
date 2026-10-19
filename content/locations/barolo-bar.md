@@ -13,4 +13,12 @@ description: >-
   Barolo Bar ligt in Monforte d'Alba, een van de bekende Barolo-dorpen in de
   Langhe in Piemonte. Een aanrader tijdens een wijnreis door Piemonte.
 image: /uploads/barolo-bar.webp
+description_en: >-
+  A local favourite on the market square, with a few chairs out front and a roof
+  terrace opposite. On a sunny day it's one of the most beautiful spots to look
+  out over Monforte with a glass of Barolo and some antipasti.
+
+
+  Barolo Bar is in Monforte d'Alba, one of the well-known Barolo villages in the
+  Langhe in Piedmont. Recommended during a wine trip through Piedmont.
 ---

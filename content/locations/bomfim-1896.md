@@ -16,4 +16,14 @@ description: >-
   portproeverij op de quinta.
 image: /uploads/bomfim-1896.webp
 website: https://pt.symington.com/bomfim1896
+description_en: >-
+  The home of Symington since 1896. Michelin-starred chef Pedro Lemos cooks
+  seasonally with respect for local tradition, often from the wood-fired oven.
+  Open kitchen, a romantic atmosphere with views of the river: book a table by
+  the window.
+
+
+  Bomfim 1896 is at Quinta do Bomfim in Pinhão, the heart of the Douro Valley.
+  Recommended during a wine trip through the Douro, and easy to combine with a
+  port tasting at the quinta.
 ---

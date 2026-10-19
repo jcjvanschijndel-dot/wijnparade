@@ -26,4 +26,22 @@ description: >-
   Het domein is het hele jaar open — maandag van 10.00 tot 12.00 uur en van 13.30 tot 17.00 uur; dinsdag en donderdag van 8.30 tot 12.00 uur en van 13.30 tot 17.00 uur; woensdag en vrijdag van 8.30 tot 12.00 uur. Proeverij is mogelijk zonder afspraak — gewoon binnenlopen.
 image: /uploads/faury.webp
 website: https://vins-lionel-faury.fr/
+description_en: >-
+  In the hamlet of La Ribaudy in Chavanay, on the northern edge of the
+  Saint-Joseph appellation, the third generation of Faurys makes wines whose
+  style and character fit exactly what the Northern Rhône does best: elegant,
+  honest and steeped in granite. Condrieu La Berne, named after the previous
+  owners of the plot where Lionel's father first planted vines: beautifully
+  elegant and linear, with richness in the texture, from Viognier more than 45
+  years old. Saint-Joseph La Gloriette, from 45- to 65-year-old vines on
+  north-facing slopes, where the wind gives a longer ripening period, resulting
+  in an intense, characterful wine that benefits from cellaring. Saint-Joseph
+  Les Ribaudes, from 10- to 35-year-old vines, bottled without filtration:
+  intensely fruity, fresh, with a touch of minerality and spice. Côte-Rôtie Les
+  3 Brunes, from three plots on the lieux-dits Fourvier, Le Plomb and l'Arsélie:
+  Syrah with 6% Viognier, drinkable young but with the potential to age for 10
+  to 15 years. The domaine is open all year round: Monday from 10.00 to 12.00
+  and from 13.30 to 17.00; Tuesday and Thursday from 8.30 to 12.00 and from
+  13.30 to 17.00; Wednesday and Friday from 8.30 to 12.00. Tastings are possible
+  without an appointment, so just walk in.
 ---

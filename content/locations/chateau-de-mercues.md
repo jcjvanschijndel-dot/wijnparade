@@ -19,4 +19,16 @@ description: >-
   Het château biedt 24 kamers en 6 suites, verdeeld over verschillende categorieën, allemaal met uitzicht op de wijngaard, de vallei of de tuin. Sommige kamers bevinden zich in de historische torens met gewelven van vier à vijf meter hoog en enorme ramen met panoramisch uitzicht over de Lot-vallei. Er is een buitenzwembad, tennisbaan en wifi.
 image: /uploads/mercues.webp
 website: https://chateaudemercues.com/
+description_en: >-
+  On a rocky spur high above the Lot valley, overlooking the vineyards of Cahors
+  and the river below, stands a 13th-century medieval castle that carries eight
+  centuries of history. Beneath the château's gardens lies a monumental winery
+  and ageing cellar carved into the rock, a grand achievement often compared to
+  the cellar of Château Lafite. The restaurant has a Michelin star and works
+  with local, seasonal produce. Enjoying the panoramic views over the Lot from
+  the dining room is an unforgettable experience for many visitors. The château
+  has 24 rooms and 6 suites in various categories, all overlooking the vineyard,
+  the valley or the garden. Some rooms are in the historic towers, with vaulted
+  ceilings four to five metres high and huge windows with panoramic views over
+  the Lot valley. There's an outdoor pool, a tennis court and wifi.
 ---

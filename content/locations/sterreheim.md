@@ -20,4 +20,14 @@ description: >-
   Wijnwinkel en terras op het domein. Proeverijen en rondleidingen op reservering. Reserveer ruim vooraf voor het Wijnrestaurant op het Land.
 image: /uploads/sterreheim.webp
 website: https://sterreheim.com/
+description_en: >-
+  What began as a dream of Iris and Gerjan Schijlen grew into an ambitious wine
+  estate around a stately nineteenth-century manor farm. Inspired by the great
+  wine traditions of France and driven by quality over quantity, they planted a
+  vineyard with classic grape varieties in a short time. A special detail: the
+  vineyard uses alpaca manure as a natural fertiliser, so the alpacas contribute
+  to healthy soil and the quality of the wine. Tastings and tours on the estate.
+  A picturesque little terrace by the characteristic farmhouse, French chansons
+  from a small speaker, and wines for sale in the wine shop. Tastings and tours
+  by reservation. Book well in advance for the Wijnrestaurant op het Land.
 ---

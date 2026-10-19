@@ -14,4 +14,10 @@ description: >
   stad bestempelen.
 image: /uploads/garde-robe.webp
 website: https://www.legarderobe.net/
+description_en: >-
+  One of the original natural wine hangouts in Paris, open since 2006 a stone's
+  throw from the Louvre and the Rue de Rivoli. The name literally means "the
+  wardrobe", a fitting reference to the modest size of the place. It has since
+  become a fixture of the Parisian natural wine scene, with a loyal following of
+  regulars who often rank it among the best wine bars in the city.
 ---

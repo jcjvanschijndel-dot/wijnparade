@@ -20,4 +20,17 @@ description: >-
   Er is overnachtingsmogelijkheid direct bij de wijngaard
 image: /uploads/bentomiz.webp
 website: https://bodegasbentomiz.com/
+description_en: >-
+  Bodegas Bentomiz was founded by a Dutch couple, Clara Verheij and André Both,
+  who moved to the Axarquía in Málaga in 1995 simply looking for a life in
+  southern Spain. The house they bought turned out to be surrounded by overgrown
+  vineyards 80 to 100 years old. What began as making wine for their own use
+  (without any measuring, just the way the neighbours did it) grew into a
+  serious bodega: in 2003 they professionalised their approach, and in 2004
+  their first wine came onto the market. The vineyard is spectacularly located,
+  between 500 and 800 metres up on steep slate slopes with quartz veins,
+  overlooking the Mediterranean. There are tours of the bodega and vineyard,
+  with workshops and food and wine pairings available. In summer the bodega also
+  hosts "Mountain Wine & Music" evenings. You can stay the night right next to
+  the vineyard.
 ---

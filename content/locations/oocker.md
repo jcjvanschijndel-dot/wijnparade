@@ -15,4 +15,13 @@ description: >-
   met vrienden.
 image: /uploads/oocker.webp
 website: https://www.oockeramsterdam.nl/
+description_en: >-
+  A nice wine bar on the Frederiksplein in Amsterdam. The wine list is a lovely
+  mix of original wines and well-known favourites, with lots of good options by
+  the glass! And the food menu is spot on too.
+
+
+  Oocker is on the Frederiksplein in Amsterdam, close to the Utrechtsestraat. A
+  nice wine bar for drinks after work or a whole evening of wine and food with
+  friends.
 ---

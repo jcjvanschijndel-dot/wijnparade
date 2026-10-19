@@ -16,4 +16,13 @@ description: >-
   bedrijfsuitje met wijnproeverij.
 image: /uploads/quille.webp
 website: https://www.quillecannes.fr/
+description_en: >-
+  The best wine bar in Cannes: excellent food, a big wine list, and group
+  bookings for eight or more people including a guided tasting.
+
+
+  Quille is in the centre of Cannes, within walking distance of the Croisette.
+  Ideal if you're looking for a wine bar on the Côte d'Azur where it's about the
+  wine rather than seeing and being seen. Also great for dinner with friends or
+  a company outing with a wine tasting.
 ---

@@ -12,4 +12,11 @@ description: "Wijnbar / restaurant waar je alle kanten op kunt: sherry,
   bestellen. Wat dacht je van Vega Sicilia Unico uit 1996 van €200,-?! L"
 image: /uploads/2024-05-29.webp
 website: https://www.anywaywinebar.com/
+description_en: >-
+  A wine bar and restaurant where you can go in any direction: sherry,
+  sparkling, rosé, alcohol-free and the very best whites and reds from Spain.
+  There are also some wines from France and Italy, but personally I'd skip
+  those. And of course a choice of several kinds of Ibérico ham. Not a huge
+  list, but you can order every wine by the glass and by the bottle. How about a
+  1996 Vega Sicilia Unico for €200?!
 ---

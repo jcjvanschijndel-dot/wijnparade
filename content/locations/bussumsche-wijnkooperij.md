@@ -16,4 +16,14 @@ description: >-
   een oudere jaargang of persoonlijk wijnadvies.
 image: /uploads/bow.webp
 website: www.bestofwines.nl
+description_en: >-
+  In terms of range, one of the better shops in the Netherlands. Besides a wide
+  selection of wines, speciality beers and gin, they also have lots of vintage
+  top wines available through their website (Best of Wines). And if you want
+  food and wine advice, ask for Howard!
+
+
+  The Bussumsche Wijnkooperij is on the Spiegelstraat in Bussum, in Het Gooi. A
+  top address for wine lovers looking for a special bottle, an older vintage or
+  personal wine advice.
 ---

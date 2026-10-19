@@ -14,4 +14,13 @@ description: >-
   Chef Marco Helsloot combineert pittige smaken met subtiele Aziatische accenten en werkt met premium lokale ingrediënten zoals Waddenzeegarnalen en Texels lam. De wijnkaart is het absolute geheim van Merlet: maar liefst 60 wijnen per glas, waarvan vele via Coravin — waaronder oudere jaargangen voor opmerkelijk schappelijke prijzen voor Nederland.
 image: /uploads/merlet.webp
 website: https://merlet.nl/
+description_en: >-
+  Since 1984 the Van Bourgonje family has cherished Restaurant Hotel Merlet,
+  which has become a household name for its regulars. In 2023 Merlet received
+  its 25th Michelin star in a row, an impressive track record for a restaurant
+  in a dune village in North Holland. Chef Marco Helsloot combines spicy
+  flavours with subtle Asian accents and works with premium local ingredients
+  such as Wadden Sea shrimps and Texel lamb. The wine list is Merlet's real
+  secret: no fewer than 60 wines by the glass, many of them via Coravin,
+  including older vintages at remarkably reasonable prices for the Netherlands.
 ---

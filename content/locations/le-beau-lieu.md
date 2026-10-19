@@ -13,4 +13,10 @@ description: >-
 
   Mooie bistrot in het dorp waar Dom Perignon zijn experimenten uitvoerde.
 image: /uploads/beau-lieu.webp
+description_en: >-
+  A short menu, but set against it an encyclopaedia of wine choices. The list
+  focuses on local champagne producers and local winegrowers, supplemented with
+  French wines from outside the region. You can choose a bottle at normal shop
+  prices and pay a modest corkage fee. A lovely bistro in the village where Dom
+  Pérignon carried out his experiments.
 ---

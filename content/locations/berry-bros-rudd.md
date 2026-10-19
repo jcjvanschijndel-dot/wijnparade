@@ -14,4 +14,12 @@ description: Bezoek de originele winkel op St. James's Street, met ruwe houten
   glas verkrijgbaar vanaf £1.
 image: /uploads/berry.webp
 website: https://www.bbr.com/
+description_en: >-
+  Visit the original shop on St James's Street, with rough wooden floorboards
+  and leaded windows that have remained virtually unchanged. The original coffee
+  scales are still there. The exiled Napoleon III once stayed in the Napoleon
+  Cellar, built in the cellars beneath the building. More than 9.9 million
+  bottles are stored in the climate-controlled cellars in Basingstoke, for
+  customers all over the world. In the newer shop on Pall Mall (opened in 2017),
+  24 wines are available by the glass from £1.
 ---

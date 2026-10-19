@@ -19,4 +19,19 @@ description: >-
   Kelderrondleidingen en begeleide proeverijen, inclusief een uitgebreide en vriendelijke introductie in de wijnmaaktechnieken van het huis. Het wijnhuis beschikt ook over het bijbehorende restaurant La Tavernetta, waar de wijnen van het huis worden geserveerd naast traditionele Valtellinese gerechten — bresaola, pizzoccheri en sciatt zijn de regionale klassiekers. De ligging boven Sondrio geeft een adembenemend uitzicht over de vallei en de Alpen.
 image: /uploads/menegola.webp
 website: https://www.cantinamenegola.it/
+description_en: >-
+  The family has grown grapes on the steep terraces of the Valtellina, high
+  above Lake Como in the Alps of Lombardy, since 1850. Only in 2006 did they set
+  up their own cantina, and since then they have made wine in what winemakers
+  call "heroic" viticulture: vineyards so steep and inaccessible that all the
+  work can only be done by hand, with no room for a tractor or machine. The
+  estate lies above Sondrio and has 2 hectares of vineyards with vines more than
+  a hundred years old. The Valtellina is the second-largest Nebbiolo region in
+  the world (800 hectares), after Piedmont, but much less well known and
+  therefore all the more interesting. Cellar tours and guided tastings,
+  including an extensive and friendly introduction to the house's winemaking
+  techniques. The winery also has its own restaurant, La Tavernetta, where the
+  house wines are served alongside traditional Valtellina dishes: bresaola,
+  pizzoccheri and sciatt are the regional classics. The location above Sondrio
+  gives a breathtaking view over the valley and the Alps.
 ---

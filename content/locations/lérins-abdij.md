@@ -17,4 +17,13 @@ description: >-
   De Abdij van Lérins ligt op het eiland Saint-Honorat, voor de kust van Cannes.
 image: /uploads/lerins-abbey.webp
 website: https://www.abbayedelerins.com/
+description_en: >-
+  A seasonal boat trip (April to October) to the Benedictine monks of Lérins
+  Abbey for a wine tasting: one of the most remarkable wine experiences on the
+  whole Côte d'Azur. You can book the tasting through restaurant La Tonnelle,
+  and it's no hardship to eat there too!
+
+
+  The Abbey of Lérins is on the island of Saint-Honorat, off the coast of
+  Cannes.
 ---

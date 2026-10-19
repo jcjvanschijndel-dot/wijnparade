@@ -15,4 +15,13 @@ description: >-
   kennismaking met Nederlandse wijn.
 image: /uploads/st-martinus.webp
 website: www.wijngaardmartinus.nl/
+description_en: >-
+  A nice winery in a stunning location in Vijlen in South Limburg. Great to
+  visit for tours and tastings, and you can even eat and stay the night. And if
+  you want the real wine experience, come and help with the harvest!
+
+
+  Wijndomein St. Martinus is in Vijlen, in the rolling Heuvelland of South
+  Limburg. Recommended for a wine weekend in Limburg and a lovely introduction
+  to Dutch wine.
 ---

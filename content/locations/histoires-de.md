@@ -16,4 +16,14 @@ description: >-
   tijdens een vakantie aan de Atlantische kust.
 image: /uploads/biscarosse.webp
 website: https://www.histoiresde.com/
+description_en: >-
+  On top of the dunes of the Lac de Maguide, with a panoramic view of the
+  marina. Fish dishes, magrets, tapas and house desserts, accompanied by a
+  curated wine list. In summer there's a tropical terrace on stilts with palm
+  trees.
+
+
+  Histoires de... is on the lake of Maguide near Biscarrosse, in the Landes
+  south of Bordeaux. A lovely restaurant for a summer evening by the water
+  during a holiday on the Atlantic coast.
 ---

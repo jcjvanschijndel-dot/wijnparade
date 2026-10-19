@@ -16,4 +16,14 @@ description: >-
   Seizoensgebonden, creatief, met verfijnd samengestelde wijn-spijscombinaties als hart van de belevenis. De wijnkaart bevat een uitgebreide selectie Catalaanse en internationale wijnen, met bijzondere aandacht voor kleinere producenten die Laura persoonlijk kent.
 image: /uploads/divinum.webp
 website: divinum.cat
+description_en: >-
+  In the vaulted cellar of the Girona casino, one of the finest dining rooms in
+  the city. Divinum is unique because sommelier Laura Tejero plays the leading
+  role here: she is the driving force behind both the wine list and the
+  restaurant's concept, together with maître Joan Morillo. Both trained in top
+  kitchens such as El Racó de Can Fabes. Wine isn't an afterthought here; it's
+  the starting point. Seasonal and creative, with finely tuned food and wine
+  pairings at the heart of the experience. The wine list has an extensive
+  selection of Catalan and international wines, with special attention to
+  smaller producers Laura knows personally.
 ---

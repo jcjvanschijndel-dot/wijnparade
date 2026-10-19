@@ -14,4 +14,13 @@ description: >-
   Bezoek en proeverij mogelijk; vooraf reserveren aanbevolen, zeker in het hoogseizoen.
 image: /uploads/de-jacques.webp
 website: https://www.chateau-des-jacques.fr/en/
+description_en: >-
+  Owned since 1996 by Louis Jadot, the first Burgundy house to acquire a large
+  Beaujolais estate. The domaine is known as the most prestigious estate in
+  Beaujolais, with vineyards in Moulin-à-Vent, Morgon and Fleurie. The approach
+  is distinctly Burgundian: destemming, long macerations, ageing in oak barrels
+  and plot-by-plot vinification. Methods that were once traditional in the
+  region but were lost with the arrival of Beaujolais Nouveau. Visits and
+  tastings are possible; booking in advance is recommended, especially in high
+  season.
 ---

@@ -15,4 +15,13 @@ description: >-
   Zuid-Frankrijk, en een mooie kennismaking met de wijnen van de Languedoc.
 image: /uploads/st-georges.webp
 website: www.saintgeorgesdibry.com
+description_en: >-
+  One of the better wineries in this area (Côtes de Thongue). They have a wide
+  choice of white, rosé and red wines, with the cuvée 1860 as the showpiece. A
+  nice place to stop by, and it pays to buy wine directly here!
+
+
+  Domaine Saint-Georges d'Ibry is in Abeilhan, close to Béziers in the
+  Languedoc. A nice winery to visit during a holiday in the south of France, and
+  a lovely introduction to the wines of the Languedoc.
 ---

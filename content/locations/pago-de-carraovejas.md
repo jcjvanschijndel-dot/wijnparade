@@ -16,4 +16,14 @@ description: >-
   del Duero.
 image: /uploads/pdc.webp
 website: https://www.pagodecarraovejas.com/en/home/
+description_en: >-
+  Ribera del Duero is a great place to visit. If you're heading that way, don't
+  miss Pago de Carraovejas! Besides tours and tastings, they also have a
+  Michelin-starred restaurant here. Be nice and ask whether you can see the
+  "wine cellar"!
+
+
+  Pago de Carraovejas is near Peñafiel, in the Ribera del Duero in Spain. One of
+  the wineries you shouldn't miss during a wine trip through the Ribera del
+  Duero.
 ---

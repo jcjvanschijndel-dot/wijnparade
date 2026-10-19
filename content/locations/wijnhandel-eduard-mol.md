@@ -11,4 +11,9 @@ description: Al lang een begrip in Bussum, sinds een aantal jaar gevestigd aan
   proeven!
 image: /uploads/e-mol.webp
 website: https://www.eduardmol.nl/
+description_en: >-
+  A household name in Bussum for a long time, and for a few years now on the
+  Huizerweg. It's a bit of a jumble, but that's part of the charm. The core
+  range comes from Les Généreux (always good), and alongside it there's a fine
+  range of top wines. And there's always something open to taste!
 ---

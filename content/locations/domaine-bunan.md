@@ -20,4 +20,17 @@ description: >-
   Via de website kun je verschillende tours en tastings boeken. 
 image: /uploads/bunan.webp
 website: https://bunan.com/en/home-page/
+description_en: >-
+  As far as I'm concerned, Bandol produces the best rosés in the world. The area
+  is stunning and well worth a visit. Domaine Bunan itself is worth visiting
+  too, and the nice thing about Domaine Bunan is that the wines are very
+  affordable, certainly compared with the well-known names in the area. The
+  three terroirs, Moulin des Costes, Château la Rouvière and Bélouvé, each offer
+  a unique setting. Moulin des Costes produces powerful, balanced wines from old
+  Mourvèdre and Grenache vines. Château la Rouvière, with its narrow terraces
+  and sun-facing slopes, gives sturdy reds with exceptional ageing potential.
+  Bélouvé, in a calmer microclimate, produces elegant, fresh Côtes de Provence
+  wines. All the grapes are harvested by hand. No chemical weed control, no
+  synthetic treatments: everything is worked by hand. You can book various tours
+  and tastings through the website.
 ---

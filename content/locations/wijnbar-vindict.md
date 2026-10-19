@@ -14,4 +14,12 @@ description: Vindict behoort al jaren tot de betere wijnwinkels in Amsterdam. En
   uit Corsica. Leuk toch?
 image: /uploads/vindict.webp
 website: wijnbarvindict.nl
+description_en: >-
+  Vindict has been one of the better wine shops in Amsterdam for years, and
+  since 2022 they've also had a branch in Amsterdam Noord. As a wine lover you
+  really should go at least once. More than 50 wines to taste by the glass and
+  more than 800 by the bottle. And since it's also a shop, you can take your
+  favourites straight home! They also organise all kinds of tastings, so it's
+  worth keeping an eye on their calendar: think Bring Your Own Bottle events on
+  Sundays or a tasting of only Corsican wines. Fun, right?
 ---

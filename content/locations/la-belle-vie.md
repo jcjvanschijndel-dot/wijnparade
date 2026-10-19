@@ -16,4 +16,12 @@ description: >-
   Negen kamers en suites, ontworpen als rustige havens, met directe toegang tot de twee zwembaden, het terras of de tuin. 
 image: /uploads/belle-vie.webp
 website: https://www.labellevie-hotel.com/en
+description_en: >-
+  A 19th-century mas surrounded by a leafy park, a stone's throw from the
+  two-thousand-year-old Pont du Gard and medieval Uzès, in the heart of the
+  Provence Gardoise. The passionate sommelière orchestrates refined food and
+  wine pairings with a list focused on domaines from the Gard, supplemented with
+  more discreet organic and natural wine gems. Nine rooms and suites, designed
+  as peaceful havens, with direct access to the two pools, the terrace or the
+  garden.
 ---

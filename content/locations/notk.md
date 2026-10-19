@@ -16,4 +16,14 @@ description: >-
   wijnadressen van Rotterdam.
 image: /uploads/notk.jpg
 website: https://www.notk-rotterdam.nl/
+description_en: >-
+  Restaurant, wine bar and shop in one, and all three at the highest level. Best
+  sommelier in the Netherlands in 2024, 13.5 points from Gault Millau, and the
+  White Star category on Star Wine List. For wine lovers this is one of the best
+  addresses in the Netherlands. And nicely located in Katendrecht, which has
+  become a lively neighbourhood these days!
+
+
+  NOTK is on the Delistraat in Katendrecht, Rotterdam. One of the best wine
+  addresses in Rotterdam.
 ---

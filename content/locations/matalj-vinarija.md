@@ -18,4 +18,13 @@ description: >-
   Reserveren vooraf verplicht. Open dagelijks 10.00-22.00 uur. Restaurant aanwezig.
 image: /uploads/kremen.webp
 website: https://www.mataljvinarija.rs/
+description_en: >-
+  From the vineyards there's a breathtaking view over the Danube, with Romania
+  and Bulgaria on the other side. The new winery is technically advanced, with a
+  modern tasting room for visitors. Easy to combine with a visit to the Rajačke
+  Pivnice, a collection of more than 270 old stone wine cellars from the 18th
+  and early 20th centuries on the Belo Brdo hill. Five special hectares near the
+  village of Tamnič are reserved for the absolute top wine, "Kremen Kamen",
+  which enjoys an excellent reputation outside Serbia. Booking in advance is
+  required. Open daily 10.00-22.00, with a restaurant.
 ---

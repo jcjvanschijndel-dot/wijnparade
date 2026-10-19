@@ -15,4 +15,13 @@ description: >-
   eten en wijn proeven.
 image: /uploads/somm.webp
 website: sommbistroavin.com
+description_en: >-
+  More than 250 wines, from accessible to exclusive. The fresh dishes complement
+  the wines rather than the other way round. The restaurant has two Gault&Millau
+  toques and is in the historic centre of Weesp.
+
+
+  Somm is on the Nieuwstad in the centre of Weesp, close to Amsterdam. One of
+  the best wine restaurants in the area, ideal for an evening of extensive
+  dining and wine tasting.
 ---

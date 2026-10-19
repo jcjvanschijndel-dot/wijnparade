@@ -22,4 +22,16 @@ description: >-
   Restaurant is zeer de moeite waard!
 image: /uploads/malhadinha.webp
 website: https://www.malhadinhanova.pt/pt/
+description_en: >-
+  Herdade da Malhadinha Nova is the life's work of the Soares family (João,
+  Paulo, Rita and Pedro), who in 1998 bought an abandoned, overgrown estate in
+  the Alentejo and turned it into one of the most acclaimed wineries and luxury
+  farms in Portugal. The estate is near Albernoa in the municipality of Beja, on
+  schist soils in the heart of the Alentejo. The first harvest was in 2003, and
+  the first bottles reached the market in early 2005. Today the estate has 80
+  hectares of vineyards, a stud farm, organic kitchen gardens, olive groves,
+  greenhouses and its own cattle, all woven into a carefully maintained
+  ecosystem. Winery visits and tastings are available by appointment in several
+  formats, from a basic tour of the winery to extensive themed tastings with
+  lunch or dinner. The restaurant is very much worth it!
 ---

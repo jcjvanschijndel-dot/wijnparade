@@ -10,4 +10,12 @@ minLat: 44.3
 maxLat: 45.1
 minLng: 7.6
 maxLng: 8.5
+name_en: Piedmont & Langhe
+slug_en: piedmont
+country_en: Italy
+description_en: >-
+  Piedmont is the Burgundy of Italy: fragmented vineyards, Nebbiolo as the king
+  of grapes and wines that only come into their own after years of ageing. The
+  hills of the Langhe around Alba are steeped in truffle and tannin. Barolo,
+  Barbaresco, Barbera and Dolcetto are waiting to be discovered.
 ---

@@ -20,4 +20,17 @@ description: >-
   Uitgebreide tapaskaart die voortdurend wisselt — traditionele Mediterrane tapas naast internationaal geïnspireerde gerechten: octopus, tortilla, lasagne, huisgemaakte gehaktballen, tikka masala, vegetarische opties.
 image: /uploads/can-tixedo.webp
 website: https://cantixedo.com/
+description_en: >-
+  Can Tixedo stands at the Forada-Buscastell crossroads, on the picturesque road
+  between Sant Antoni, Sant Rafael and Santa Agnès: in the middle of the
+  countryside, far from the tourist strips. The building was once a botiga
+  payesa, a classic Ibizan farm shop. More than 25 years ago it was turned into
+  an Art Café, and it has since become a legendary meeting place for locals,
+  artists and wine lovers. On Saturdays there is a local farmers' market in the
+  car park next to the restaurant. In the evenings there are regular DJ sets and
+  live music. Sa Botiga Can Tixedo, the small gourmet shop in the same building,
+  sells fresh organic and local produce, handmade accessories and island
+  specialities. An extensive, constantly changing tapas menu: traditional
+  Mediterranean tapas alongside internationally inspired dishes such as octopus,
+  tortilla, lasagne, home-made meatballs, tikka masala and vegetarian options.
 ---

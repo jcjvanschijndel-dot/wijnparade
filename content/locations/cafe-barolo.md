@@ -15,4 +15,13 @@ description: >-
   een bijzondere fles met vrienden.
 image: /uploads/cafe-barolo.webp
 website: https://cafebarolo.nl/
+description_en: >-
+  Contrary to what the name suggests, this wine bar has a superb and extensive
+  wine list with top wines mainly from France, Spain and Italy. The snack menu
+  is extensive too, with something for everyone.
+
+
+  Cafe Barolo is on the Keizersgracht in the centre of Eindhoven, next to La
+  Casera. A nice wine bar in Brabant for drinks, an evening of tasting or a
+  special bottle with friends.
 ---

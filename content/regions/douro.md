@@ -10,4 +10,12 @@ minLat: 40.9
 maxLat: 41.4
 minLng: -8.8
 maxLng: -7.3
+name_en: Douro & Porto
+slug_en: douro
+country_en: Portugal
+description_en: >-
+  The Douro Valley is one of the most spectacular wine landscapes in the world,
+  with terraces like steps cut into the steep riverbanks. Home to port as well
+  as dry table wines that are increasingly appreciated internationally. Porto,
+  at the mouth of the river, is the perfect starting point.
 ---

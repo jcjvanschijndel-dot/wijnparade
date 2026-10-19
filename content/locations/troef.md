@@ -12,4 +12,11 @@ description: "À la carte, nooit een vast menu — de chef bepaalt dagelijks op
   de bar zitten met zicht op de open keuken is de beste plek in het restaurant."
 image: /uploads/troef.webp
 website: https://troefamsterdam.nl/
+description_en: >-
+  À la carte, never a fixed menu: the chef decides every day based on what's
+  good. Refined but never stiff: white asparagus with smoked egg yolk, dried
+  chicken skin and coppa, vanilla oil and a fresh hollandaise espuma. The wine
+  list rewards both the connoisseur and the open-minded drinker: a broad
+  selection by the glass, good temperatures and decent glassware. Sitting at the
+  bar looking into the open kitchen is the best spot in the restaurant.
 ---

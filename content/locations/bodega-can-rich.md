@@ -17,4 +17,13 @@ description: >-
   De rondleiding en proeverij kun je via de website regelen.
 image: /uploads/can-rich.webp
 website: bodegascanrich.com
+description_en: >-
+  Can Rich started in 1997 by planting 17 hectares of vineyards and 300 olive
+  trees in the countryside outside Sant Antoni. It has since grown into a
+  leading producer of organic wines on the island. A visit consists of a walk
+  through the vineyards, a tour of the winery and a tasting, rounded off with
+  local produce: pan payés (farmhouse bread), extra virgin olive oil and Hierbas
+  Ibicencas. The estate's own organic olive oil and balsamic vinegar aged in
+  French oak barrels are popular things to take home. You can arrange the tour
+  and tasting through the website.
 ---

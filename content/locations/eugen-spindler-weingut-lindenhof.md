@@ -18,4 +18,12 @@ description: >-
   Proeverijen in een indrukwekkend, familiaal sfeer. 
 image: /uploads/lindenhof-spindler.webp
 website: https://www.spindler-lindenhof.de/index.html
+description_en: >-
+  Three generations ago, a large family property was split into three wineries.
+  In 1902 and 1904 Eugen Spindler planted two linden trees in the winery's
+  courtyard to mark the births of his two sons, hence the name Lindenhof. The
+  family, whose ancestors came from Burgundy, has made wine in the Mittelhaardt
+  since 1620. The vineyards cover 11 hectares in the sunny sites of the
+  Mittelhaardt, sheltered by the Palatinate Forest. The diverse soils give a
+  great variety of flavours. Tastings in an impressive, family atmosphere.
 ---

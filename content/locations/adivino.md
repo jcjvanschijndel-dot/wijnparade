@@ -14,4 +14,13 @@ description: >-
   Begeleide proeverijen (thematisch of blind), private events, wijnadvies op maat en culinaire tastings. Emilio is vaak zelf aanwezig en staat bekend als een van de best geïnformeerde sommeliers aan de hele Costa del Sol. 
 image: /uploads/adivino.webp
 website: adivinowine.com
+description_en: >-
+  Adivino is the project of Emilio Javier Campos Alami, a Malagueño with a long
+  track record as head sommelier in Michelin-starred restaurants and in wine
+  importing. He describes his wine bar as "an amusement park for adults", and
+  that feels about right. Adivino combines a wine bar, gastrobar, wine shop and
+  art gallery in one space in Nueva Andalucía, near Marbella. Guided tastings
+  (themed or blind), private events, tailored wine advice and culinary tastings.
+  Emilio is often there himself and is known as one of the best-informed
+  sommeliers on the whole Costa del Sol.
 ---

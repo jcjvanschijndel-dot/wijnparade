@@ -13,4 +13,11 @@ description: Verscholen in een binnenplaats van de oude stad, weg van de
   aanbevolen.
 image: /uploads/la-cave.webp
 website: https://www.barlacave.fr/
+description_en: >-
+  Tucked away in a courtyard of the old town, away from the tourist crowds.
+  Small shared plates, an impressive wine list and staff who know what they're
+  talking about. Visitors describe the wine list as "La Bible": a monumental
+  selection of wines from all over France, with a particular focus on local
+  Savoie wines. In summer La Cave feels calmer and more local than the rest of
+  the old town. Open from 17.00. Booking recommended.
 ---

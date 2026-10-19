@@ -766,6 +766,9 @@ for (const f of ['wijnreizen.html', 'wijnkaart.html']) {
   console.log(`  🔗 regiolijst toegevoegd aan ${f}`);
 }
 
+// Land per locatie (ook gebruikt door de Engelse versie)
+const COUNTRY_BY_ID = new Map();
+
 // --- 3. Overzichtspagina /locaties met ALLE locaties (per land) ---
 {
   const all = allLocations.filter(l => l.name && l._id &&
@@ -847,6 +850,7 @@ for (const f of ['wijnreizen.html', 'wijnkaart.html']) {
   };
   const groups = {};
   for (const l of all) (groups[countryOf(l)] ||= []).push(l);
+  for (const [c, ls] of Object.entries(groups)) for (const l of ls) COUNTRY_BY_ID.set(l._id, c);
   const countries = Object.keys(groups).sort((a, b) =>
     a === 'Overig' ? 1 : b === 'Overig' ? -1 : a.localeCompare(b, 'nl'));
 
@@ -1329,10 +1333,14 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
 </head>
 <body>
   <header class="header"><div class="container"><div class="header-inner">
-    <a href="/" class="header-logo">
+    <a href="/en/" class="header-logo">
       <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade" width="28" height="28"></div>
       <span class="header-logo-name">de_wijnparade</span>
     </a>
+    <nav class="header-nav">
+      <a href="/en/">Wine guides</a>
+      <a href="/en/all-locations">All locations</a>
+    </nav>
   </div></div></header>
   ${body}
   <footer class="footer"><div class="container">
@@ -1445,6 +1453,60 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     enUrls.push(enPath);
   }
 
+  // --- /en/ (overzicht regiogidsen) en /en/locations (alle locaties) ---
+  const EN_COUNTRY = { 'Nederland': 'Netherlands', 'België': 'Belgium', 'Luxemburg': 'Luxembourg', 'Frankrijk': 'France',
+    'Italië': 'Italy', 'Spanje': 'Spain', 'Portugal': 'Portugal', 'Duitsland': 'Germany', 'Oostenrijk': 'Austria',
+    'Zwitserland': 'Switzerland', 'Verenigd Koninkrijk': 'United Kingdom', 'Ierland': 'Ireland', 'Griekenland': 'Greece',
+    'Hongarije': 'Hungary', 'Slovenië': 'Slovenia', 'Kroatië': 'Croatia', 'Tsjechië': 'Czechia', 'Slowakije': 'Slovakia',
+    'Denemarken': 'Denmark', 'Zweden': 'Sweden', 'Noorwegen': 'Norway', 'Polen': 'Poland', 'Roemenië': 'Romania',
+    'Bulgarije': 'Bulgaria', 'Georgië': 'Georgia', 'Cyprus': 'Cyprus', 'Malta': 'Malta', 'Monaco': 'Monaco',
+    'Liechtenstein': 'Liechtenstein', 'Servië': 'Serbia', 'Turkije': 'Turkey', 'Marokko': 'Morocco', 'Overig': 'Other' };
+  const enCountry = c => EN_COUNTRY[c] || c || 'Other';
+  const byCountrySort = (a, b) => a === 'Other' ? 1 : b === 'Other' ? -1 : a.localeCompare(b, 'en');
+  const firstSentences = (s, n) => { const parts = String(s).replace(/\s+/g, ' ').trim().split(/(?<=[.!?])\s+/); return parts.slice(0, n).join(' '); };
+
+  // /en/
+  {
+    const groups = {};
+    for (const r of enRegions) (groups[r.countryEn] ||= []).push(r);
+    const body = `<main class="main"><div class="container">
+      <p class="lang-switch"><a href="/wijnreizen" hreflang="nl" lang="nl">🇳🇱 Lees in het Nederlands</a></p>
+      <h1 class="en-h1">Wine travel in Europe: guides by wine region</h1>
+      <p class="en-sub" style="line-height:1.8">Planning a wine trip to Burgundy, Tuscany, the Douro or the Mosel? For each wine region you'll find the wineries worth visiting, the best wine bars and the finest restaurants, all personally selected by de_wijnparade. Or browse <a href="/en/all-locations" style="color:var(--navy)">all ${enLocs.length} locations</a> by country.</p>
+      ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)}</h2><div class="en-cards">
+        ${groups[c].sort((a, b) => a.nameEn.localeCompare(b.nameEn, 'en')).map(r => `<div class="en-card" style="grid-template-columns:1fr"><div class="en-card-body" style="padding:.9rem 1rem">
+          <h3><a href="${r.enPath}" style="font-size:1rem">${escHtml(r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`)}</a></h3>
+          <p>${escHtml(firstSentences(r.descriptionEn, 2))}</p>
+        </div></div>`).join('')}
+      </div></section>`).join('\n      ')}
+    </div></main>`;
+    fs.writeFileSync(path.join(__dirname, 'en', 'index.html'), enPage({
+      title: 'Wine travel in Europe: guides by wine region | de_wijnparade',
+      description: 'Planning a wine trip? Guides to the most beautiful wine regions in Europe, with the best wineries, wine bars and restaurants in each region.',
+      enPath: '/en/', nlPath: '/wijnreizen', body }));
+    enUrls.unshift('/en/');
+  }
+
+  // /en/locations
+  {
+    const groups = {};
+    for (const l of enLocs) (groups[enCountry(COUNTRY_BY_ID.get(l._id))] ||= []).push(l);
+    const body = `<main class="main"><div class="container">
+      <p class="lang-switch"><a href="/locaties" hreflang="nl" lang="nl">🇳🇱 Lees in het Nederlands</a> &nbsp;·&nbsp; <a href="/en/">← Wine guides by region</a></p>
+      <h1 class="en-h1">All wine locations</h1>
+      <p class="en-sub">All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.</p>
+      ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)} (${groups[c].length})</h2>
+        <ul style="list-style:none;padding:0;margin:0;columns:2 220px;column-gap:2rem">
+          ${groups[c].sort((a, b) => String(a.title || a.name).localeCompare(String(b.title || b.name), 'en')).map(l => `<li style="margin-bottom:.4rem;break-inside:avoid"><a href="${enLocPath(l)}" style="color:var(--navy)">${escHtml(l.title || l.name)}</a> <span style="color:var(--gray-600);font-size:.85em">${escHtml(EN_TYPE[l.type] || '')}</span></li>`).join('')}
+        </ul></section>`).join('\n      ')}
+    </div></main>`;
+    fs.writeFileSync(path.join(__dirname, 'en', 'all-locations.html'), enPage({
+      title: 'All wine locations in Europe: wineries, wine bars and restaurants | de_wijnparade',
+      description: `All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.`,
+      enPath: '/en/all-locations', nlPath: '/locaties', body }));
+    enUrls.splice(1, 0, '/en/all-locations');
+  }
+
   // --- NL-pagina's: hreflang en een taalknop toevoegen ---
   const addAlternate = (file, nlPath, enPath) => {
     if (!fs.existsSync(file)) return;
@@ -1457,6 +1519,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   };
   for (const r of enRegions) addAlternate(path.join(__dirname, regionPath(r.id).slice(1) + '.html'), regionPath(r.id), r.enPath);
   for (const l of enLocs) addAlternate(path.join(staticLocationsDir, `${l._id}.html`), `/locations/${l._id}`, enLocPath(l));
+  addAlternate(path.join(__dirname, 'wijnreizen.html'), '/wijnreizen', '/en/');
+  addAlternate(path.join(__dirname, 'locaties.html'), '/locaties', '/en/all-locations');
 
   // --- sitemap ---
   const smPathEn = path.join(__dirname, 'sitemap.xml');

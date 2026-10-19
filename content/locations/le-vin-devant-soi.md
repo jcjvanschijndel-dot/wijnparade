@@ -16,4 +16,14 @@ description: >-
   Provence voor te bereiden.
 image: /uploads/devant-soi.webp
 website: https://www.levindevantsoi.com/
+description_en: >-
+  A small but tightly packed shop in a side street in the centre of Avignon,
+  with dispensing machines so you can taste wines on the spot. Strong in rare
+  cuvées and Provence appellations such as Cassis and Palette.
+
+
+  Le Vin devant soi is in the centre of Avignon, the city of the Palace of the
+  Popes and the gateway to the Southern Rhône. A nice wine shop for tasting
+  wines before you buy them, and for preparing your wine trip through the Rhône
+  and Provence.
 ---

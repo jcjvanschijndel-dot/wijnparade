@@ -22,4 +22,25 @@ description: >-
   Twee restaurants: één met een Michelinster (Poggio Rosso), één met een rustieke, charmante sfeer (Il Palmento). De absolute topwijn is de Poggio Rosso Chianti Classico Gran Selezione — een single-vineyard wijn die zijn plek heeft verdiend onder Italië's beste. San Felice heeft drie domeinen: San Felice in Chianti Classico (600 hectare), Campogiovanni in Montalcino en Bell'Aja in Bolgheri.
 image: /uploads/san-felice.webp
 website: https://www.borgosanfelice.com/
+description_en: >-
+  In 1968 San Felice gave birth to the first Super Tuscan in Chianti Classico,
+  Vigorello, and then launched an important research project into native Tuscan
+  grapes with the universities of Florence and Pisa. That led to the rediscovery
+  of Pugnitello, a variety of great value that is now the symbol of one of the
+  house's iconic labels. The medieval village is today an extraordinary hotel, a
+  Relais & Châteaux in Chianti Classico since 1992, its centuries-old charm and
+  history intact in the medieval lanes, loggias and courtyards overlooking the
+  surrounding vineyards. A special tasting in the kitchen garden, under the
+  pergola, surrounded by 150 hectares of Chianti Classico vineyards, with
+  delicious bites by chef Juan Quintero to go with the wines. Fresh air, the
+  scent of roses, birdsong and the taste of wine touch all the senses at once.
+  Bike rides through the Chianti hills, walks along cypress avenues and olive
+  groves, a botanical spa and cellar visits. In the cellars beneath the borgo
+  you can taste the three most celebrated Tuscan denominations: Chianti
+  Classico, Montalcino and Bolgheri. Two restaurants: one with a Michelin star
+  (Poggio Rosso), and one with a rustic, charming atmosphere (Il Palmento). The
+  absolute top wine is the Poggio Rosso Chianti Classico Gran Selezione, a
+  single-vineyard wine that has earned its place among Italy's best. San Felice
+  has three estates: San Felice in Chianti Classico (600 hectares),
+  Campogiovanni in Montalcino and Bell'Aja in Bolgheri.
 ---

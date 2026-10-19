@@ -17,4 +17,13 @@ description: >-
   Loop vrij door het domein en bekijk de bonbonnes — grote glazen bollen — die rustig in de zon staan te rijpen. Ontdek de majestueuze eeuwenoude foudres in de kelder en proef vrijelijk uit het aanbod van 25 cuvées. 
 image: /uploads/amiel.webp
 website: https://www.masamiel.fr/
+description_en: >-
+  The story begins with a card game. In 1816 the Bishop of Perpignan lost his
+  wine estate in a game of cards to an engineer of the Ponts et Chaussées named
+  Raymond Etienne Amiel. The name has stuck ever since, and the estate has grown
+  into one of the most remarkable wine experiences in Languedoc-Roussillon. It's
+  one of the grandest and most accessible domaine visits in the whole region.
+  Wander freely around the estate and look at the bonbonnes, large glass globes
+  quietly ageing in the sun. Discover the majestic century-old foudres in the
+  cellar and taste freely from the range of 25 cuvées.
 ---

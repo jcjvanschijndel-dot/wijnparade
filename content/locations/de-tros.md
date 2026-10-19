@@ -15,4 +15,13 @@ description: Ze noemen zichzelf een buurtcafé, dat geeft wel aan dat het vooral
   is dit de place to be in Watergraafsmeer!
 image: /uploads/de-tros.webp
 website: https://www.detrosamsterdam.nl/
+description_en: >-
+  They call themselves a neighbourhood café, which tells you the main idea is
+  that you have a fun evening. But De Tros definitely belongs on our map as a
+  wine restaurant too! It's loved in Watergraafsmeer and the reviews speak for
+  themselves. A nice atmosphere, good music and a lovely, clear menu. The wines
+  focus on natural wine, but there are plenty of good alternatives too. If it's
+  full you can try Turbo (same owner) on the corner, and a few doors down you'll
+  find their wine shop, de Kaaf. For wine lovers, this is the place to be in
+  Watergraafsmeer!
 ---

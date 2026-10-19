@@ -16,4 +16,14 @@ description: >-
   de Rhône en Bourgogne.
 image: /uploads/terroir.webp
 website: https://www.cafeterroir.fr/la-cave-caf%C3%A9-terroir
+description_en: >-
+  A wine bar with 700 different labels in a casual atmosphere, with a wall full
+  of wine bottles as decoration. You'll meet local Lyonnais alongside wine
+  professionals from all over the world: an address every wine lover should
+  know. Open Tuesday to Saturday, lunch and dinner.
+
+
+  La Cave Café Terroir is in the centre of Lyon, the culinary capital of France.
+  A nice wine bar during a city break in Lyon or on the way to the Rhône and
+  Burgundy.
 ---

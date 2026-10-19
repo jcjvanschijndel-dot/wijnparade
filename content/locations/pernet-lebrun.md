@@ -19,4 +19,18 @@ description: >-
   Bezoek je de côte des Blancs, dan is het zeer de moeite waard om dit huis te bezoeken. In een hoekje van het kleine dorp, ga je over een klein stenen bruggetje door de poort naar binnen. Dan merk je meteen dat je bij een gastvrij familie bedrijf op bezoek bent. Geen poespas, maar een warme ontvangst, uitleg en alles kan geproefd worden. En wat een mooie Champagnes zeg...
 image: /uploads/pernet.jpg
 website: https://www.champagne-pernetlebrun.com/
+description_en: >-
+  The story of Pernet-Lebrun began back in 1850 in Mancy, five kilometres south
+  of Épernay on the Côteaux Sud: a quiet, authentic winegrowing village far from
+  the bustle of the big houses. For five generations two families, Pernet and
+  Lebrun, have cultivated their vineyards on these slopes. In 1930 Xavier Lebrun
+  and Mireille Courty bought the Moulin de Mancy, the old mill that is still the
+  heart of the estate. In 1959 the marriage of Jackie Pernet and Joëlle Lebrun
+  gave birth to the Pernet-Lebrun name. Today Janick and Florence Pernet run the
+  house as the fourth generation, and the fifth is ready to follow. If you're
+  visiting the Côte des Blancs, this house is well worth a visit. In a corner of
+  the small village you cross a little stone bridge and go through the gate, and
+  you immediately notice you're visiting a welcoming family business. No fuss,
+  but a warm welcome, explanation, and everything can be tasted. And what
+  beautiful Champagnes...
 ---

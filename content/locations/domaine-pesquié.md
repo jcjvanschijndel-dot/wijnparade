@@ -29,4 +29,22 @@ description: >-
   Een dag met de wijnmaker — in september en oktober kun je de oogst meemaken met Paul Chaudière.
 image: /uploads/pesquie.webp
 website: https://chateaupesquie.com/en/welcome/
+description_en: >-
+  You drive onto the estate along a monumental avenue of three-hundred-year-old
+  plane trees, and you immediately understand why the Chaudière family has
+  stayed here for fifty years. In a green, quiet valley at the foot of the
+  southern slopes of Mont Ventoux, surrounded by views you won't soon forget.
+  Robert Parker and Jeb Dunnuck consistently give 90+ points. AOC Ventoux was
+  long underrated; Château Pesquié has been proving for years that the region
+  punches above its weight. A wine trail through the vineyards is freely
+  accessible: a walk of about 45 minutes past 14 information points with views
+  of Mont Ventoux. Cellar tour + tasting: a self-guided outdoor walk followed by
+  a guided tour of the cellar and fermentation room, and then a tasting of 5 to
+  7 wines. Picnic in the château garden: a picnic basket full of regional
+  produce and Pesquié wine, eaten outside in the garden with the family château
+  as a backdrop. Children can play in the garden while the adults rest in the
+  shade of the plane trees: a real family experience. Truffle meal: by
+  reservation in season, a lunch with truffles from the region and wines from
+  the estate. A day with the winemaker: in September and October you can
+  experience the harvest with Paul Chaudière.
 ---

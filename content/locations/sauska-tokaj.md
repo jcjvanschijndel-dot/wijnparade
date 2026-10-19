@@ -21,4 +21,20 @@ description: >-
   Bij de Elite Tasting in Villány proef je een vijfgangenmenu van chef Attila Bicsár met premium wijnen uit beide regio's.
 image: /uploads/suaska.webp
 website: https://sauska.hu/
+description_en: >-
+  Krisztián Sauska, an architectural lighting engineer, and his wife Andrea, an
+  economist and wine tourism specialist, decided in the late 1990s to start
+  making their own wine. Sauska is a family business with vineyards in both
+  Tokaj (north-east Hungary) and Villány (south-west), growing native and
+  international grapes, vinified exclusively by gravity and with wild yeasts. A
+  special location combining a restaurant, bar, bistro, wine shop and wine
+  cellar in a futuristic building, with panoramic views over the Tokaj wine
+  region and the Great Hungarian Plain. The restaurant menu, in an elegant light
+  bistro style, is a collaboration with the best suppliers in the region.
+  Tastings are available Wednesday to Sunday (other days by appointment). The
+  basic tasting covers the full breadth of Tokaj, from dry to sweet including
+  sparkling wines, while the premium tasting spans more than twenty years of
+  Sauska style, from bubbles via white Tokaj and red Villány to dessert wines,
+  accompanied by gastronomic bites. At the Elite Tasting in Villány you enjoy a
+  five-course menu by chef Attila Bicsár with premium wines from both regions.
 ---

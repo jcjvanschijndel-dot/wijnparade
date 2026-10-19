@@ -22,4 +22,20 @@ description: >-
   Rondleiding + maaltijd — proeverij van de wijnen gevolgd door een maaltijd op het domein.
 image: /uploads/begude.webp
 website: https://domainedelabegude.fr/en/home/
+description_en: >-
+  The name says it all. "Béguda" means "the drink" or "the place where you
+  drink" in Provençal: the old road between Marseille and Toulon passed by here,
+  and travellers stopped for the night and a glass for centuries. Domaine de la
+  Bégude lies at 410 metres, the highest point of the Bandol appellation, like a
+  balcony above the Mediterranean. Guillaume Tari, a seventh-generation
+  winemaker who grew up at Château Giscours in Margaux, creates wines here that
+  combine the elegance of Bordeaux with the power of Provence. Classic tour +
+  tasting: a visit to the cellar and historic buildings, followed by a tasting
+  of three Bandol wines. Guides such as Mathilde and Nicholas speak excellent
+  English and are particularly good at explaining the wines and the history of
+  the estate. Jeep tour + picnic: a tour of the vineyard and cellar, followed by
+  a 4x4 ride through the vineyards and a picnic overlooking the Mediterranean,
+  with a basket of local charcuterie, cheeses and spreads plus a bottle of wine,
+  for €49 per person. Visitors unanimously name this as the highlight. Tour +
+  meal: a tasting of the wines followed by a meal on the estate.
 ---

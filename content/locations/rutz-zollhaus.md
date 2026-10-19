@@ -16,4 +16,13 @@ description: >-
   stedentrip naar Berlijn voor liefhebbers van goed eten en Duitse wijnen.
 image: /uploads/zollhaus.webp
 website: https://rutz-zollhaus.de/
+description_en: >-
+  A half-timbered house on the canal with more than 30 years of history, now
+  taken over by the Rutz team. Classic Berlin dishes (tartare, pike-perch,
+  meatballs) in a rustic garden. And an exceptional wine list!
+
+
+  Rutz Zollhaus is on the Landwehrkanal in Berlin-Kreuzberg, and is the relaxed
+  sister of the famous Rutz. Recommended during a city break in Berlin for
+  lovers of good food and German wines.
 ---

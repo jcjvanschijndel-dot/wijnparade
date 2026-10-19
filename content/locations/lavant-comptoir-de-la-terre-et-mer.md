@@ -21,4 +21,25 @@ description: >-
   Bij Terre: eendenleverspiesjes met piquillo-pepers, ossenstaartcroquettes met rode wijn en mierikswortel, knapperige Béarnse boudinrolletjes. Bij Mer: oesters van bevriende kwekers (Joël Dupuch, Cadoret), wulken met wasabimayo, mesheften marinière met rode ui en tijm, schelpdierenplateau. De wijnkaart is uitsluitend naturel — een mooie lijst met gevestigde namen én ruimte voor een nieuwe generatie wijnmakers. Sommelier Sylvain Orel van Terre staat al meer dan zeven jaar achter de bar en staat bekend om zijn persoonlijke wijnadvies.
 image: /uploads/avant-comptoir.webp
 website: https://camdeborde.com/les-restaurants/avant-comptoir-de-la-mer
+description_en: >-
+  In 2010 chef Yves Camdeborde opened a small standing-room wine bar next to his
+  celebrated bistro Le Comptoir du Relais on the Carrefour de l'Odéon, a place
+  where guests could have a glass and a bite while waiting for a table. That was
+  the start of one of the most fun wine bar concepts in Paris. Anthony Bourdain
+  once called Le Comptoir the hardest restaurant in Paris to get a table at.
+  There are now three Avant Comptoirs side by side: Terre (land: charcuterie and
+  meat), Mer (sea: oysters, shellfish, fish) and Marché (market: vegetables and
+  seasonal produce). No tables, no reservations, no menu: you stand at a long
+  zinc counter and choose from 60 to 70 small dishes, shown as photos with names
+  and prices hanging from the ceiling. The atmosphere is jovial: bartenders
+  shout to each other, Latin pop blares through the room, and tourists and
+  Parisian artists stand shoulder to shoulder. Close to the Odéon theatre and
+  the Saint-Germain market. At Terre: duck liver skewers with piquillo peppers,
+  oxtail croquettes with red wine and horseradish, crispy Béarnaise boudin
+  rolls. At Mer: oysters from friendly farmers (Joël Dupuch, Cadoret), whelks
+  with wasabi mayo, razor clams marinière with red onion and thyme, and a
+  shellfish platter. The wine list is exclusively natural: a fine list with
+  established names and room for a new generation of winemakers. Sommelier
+  Sylvain Orel has been behind the bar at Terre for more than seven years and is
+  known for his personal wine advice.
 ---

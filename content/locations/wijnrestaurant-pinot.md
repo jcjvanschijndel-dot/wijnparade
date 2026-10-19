@@ -15,4 +15,13 @@ description: >-
   high wine met vrienden.
 image: /uploads/pinot.webp
 website: wijnrestaurantpinot.nl
+description_en: >-
+  I wouldn't actually call this a wine bar: it's more wine and fine dining. And
+  a really nice touch is that at weekends they also offer a High Wine, with 6
+  wines and small dishes. What a great idea!
+
+
+  Wijnrestaurant Pinot is on the Grote Markt in the centre of Breda. A nice
+  address in Brabant for a special dinner with wine, or an afternoon of High
+  Wine with friends.
 ---

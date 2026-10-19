@@ -15,4 +15,13 @@ description: >-
   een wijncursus kunt volgen.
 image: /uploads/barrel.webp
 website: https://www.barrel-wijn.nl/nl/
+description_en: >-
+  Wine bar, wine shop and course venue in one. This is the place to be in the
+  far north of the Netherlands if you take wine seriously. They have a wide
+  range of wines and plenty of snacks too.
+
+
+  Barrel Wijnlokaal is on the Haddingestraat in the centre of Groningen. A wine
+  bar and wine shop where you can have a glass, buy a bottle or take a wine
+  course.
 ---

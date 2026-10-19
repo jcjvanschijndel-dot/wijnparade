@@ -18,4 +18,17 @@ description: >-
   Eén seizoensgebonden tasting menu, 18 gangen — uitsluitend producten van lokale producenten binnen een straal van 30 km van Rotterdam. Fermentaties, garums, rijpingen: elk product wordt volledig benut. Voorbeelden: Limburgse vlaai van zeewier met dashi-custard en kaviaar, tortellini van inktvis gevuld met fudge van zwarte bessentakken, dry-aged tarbot geglazuurd met gist met ingelegde wasabi en mierikswortelgarum.
 image: /uploads/tres.webp
 website: https://www.tresrotterdam.com/
+description_en: >-
+  In a former jazz cellar beneath the Entrepot building on the Handelsplein,
+  chef Michael van der Kroft descends into his own world. Tres is raw, pure,
+  vintage and warm, and small: just 16 seats at a dark wooden bar with
+  half-height stools. Hostess and head sommelier Emy Koster guides the evening
+  from start to finish. Michelin awarded the restaurant a star, and Gault&Millau
+  named it Discovery of the Year 2022. Michael is self-taught, and you can see
+  that in an unconventional precision that surprises big culinary names. One
+  seasonal tasting menu of 18 courses, using only produce from local producers
+  within 30 km of Rotterdam. Fermentations, garums, ageing: every product is
+  used in full. Examples: a Limburg-style seaweed vlaai with dashi custard and
+  caviar, squid tortellini filled with blackcurrant-twig fudge, and dry-aged
+  turbot glazed with yeast, with pickled wasabi and horseradish garum.
 ---

@@ -19,4 +19,24 @@ description: >-
   Het restaurant op het landgoed is open voor lunch (met terras onder de bomen), en in de wijnwinkel kun je naast de eigen coöperatieve wijnen ook een selectie van andere lokale producenten proeven en kopen.
 image: /uploads/monbazillac.webp
 website: https://chateau-monbazillac.com/
+description_en: >-
+  Château de Monbazillac is one of the most photogenic castles in the Dordogne:
+  a 16th-century building that rises above the vineyards like a monumental
+  sentinel over the valley. The visit takes you through twenty furnished rooms,
+  including a wine cellar full of honey-coloured bottles (7,000 of them), a
+  museum on local Protestant history (the Wars of Religion played a big part in
+  the region's wine trade), a bedroom of the 18th-century de Bacalan family, and
+  a large salon decorated with original drawings by the well-known cartoonist
+  Georges Goursat ("Sem"), who illustrated the menus of Maxim's in Paris. The
+  new visitor route (2023) is interactive and immersive: videos, audio clips,
+  light shows, puzzles and even a projection-mapping installation make the visit
+  accessible for children too, and there's a treasure hunt in which children
+  decipher the "lost recipe for grape juice". Outside is a 5-hectare park with
+  shady trees, deckchairs and one of the most beautiful views over the Bergerac
+  valley you'll find in the region, over the vineyards of Monbazillac,
+  Pécharmant and Montravel all the way to Bergerac itself. The visit is followed
+  by a free tasting of three Monbazillac wines from the cooperative. The
+  restaurant on the estate is open for lunch (with a terrace under the trees),
+  and in the wine shop you can taste and buy a selection from other local
+  producers as well as the cooperative's own wines.
 ---

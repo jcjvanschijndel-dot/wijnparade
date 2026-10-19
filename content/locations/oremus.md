@@ -15,4 +15,12 @@ description: >-
   Rondleidingen en proeverijen op afspraak in Tolcsva. Het historische dorp, de kelders en de wijngaarden zijn samen een unieke belevenis.
 image: /uploads/oremus.webp
 website: oremus.hu
+description_en: >-
+  The Spanish house of Vega Sicilia bought Oremus in 1993, the first foreign
+  investor in post-communist Tokaj. A historic symbol: Oremus is the estate
+  where the first Tokaji Aszú was made in 1630, by Szepsi Laczkó Máté. The
+  combination of Spanish precision and Hungarian terroir has produced one of the
+  most consistent Tokaji labels. Tours and tastings by appointment in Tolcsva.
+  The historic village, the cellars and the vineyards together make a unique
+  experience.
 ---

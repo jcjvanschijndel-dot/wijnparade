@@ -16,4 +16,13 @@ description: >-
   wijnmakers uit de Languedoc te leren kennen.
 image: /uploads/glouglou.webp
 website: https://www.glouglou-montpellier.fr/
+description_en: >-
+  A wine bar that has won the hearts of local wine lovers: shared small plates,
+  tables full of locals, and a focus on natural and organic wines from small
+  producers. Praised by Decanter as one of the promising new addresses.
+
+
+  Glouglou is in the centre of Montpellier, the lively capital of the Languedoc.
+  Recommended for a night out, and for getting to know the new generation of
+  winemakers from the Languedoc.
 ---

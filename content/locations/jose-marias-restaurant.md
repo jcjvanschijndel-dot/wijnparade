@@ -12,4 +12,10 @@ description: Eén van de mooiste plaatsen en de oude hoofdstad van Spanje. Leuk
   Ossian!).
 image: /uploads/j-maria.webp
 website: https://www.restaurantejosemaria.com/
+description_en: >-
+  One of the most beautiful places in Spain, and its old capital. Nice to
+  combine with a visit to Rueda and Ribera del Duero. You won't regret it,
+  because this is a stunning place with a magnificent cathedral and Alcázar. And
+  this is where you eat: at José María, who also happens to own several
+  well-known wineries in the area (including Pago de Carraovejas and Ossian!).
 ---

@@ -16,4 +16,15 @@ description: >-
   Meerdere formules beschikbaar, waaronder "The Volcano" (4 gerechten + 4 wijnen) en "The Anhydrous Masterclass" (120 minuten, 6 wijnen inclusief wit, rosé, rood, mousserend en zoet, met wijngaard- en kelderbezoek). De Afoura Assyrtiko scoorde 94/100 bij Decanter, de Dolphins 93/100 bij Wine & Spirits — meer dan 50 internationale onderscheidingen.
 image: /uploads/anhydrous.webp
 website: anhydrouswinery.com
+description_en: >-
+  The Anhydrous Cellar Door, a 10-minute walk from the centre of Fira, offers
+  tours, wine tastings, lunches and cooking classes from April to October. The
+  tastings are interactive: visitors learn step by step about the elements that
+  define Santorini wine: volcano, sun, air, water, earth, ash and salt. There is
+  also an exclusive spa with grape-based cosmetics, including facial and body
+  treatments. Several formats are available, including "The Volcano" (4 dishes +
+  4 wines) and "The Anhydrous Masterclass" (120 minutes, 6 wines including
+  white, rosé, red, sparkling and sweet, with a vineyard and cellar visit). The
+  Afoura Assyrtiko scored 94/100 from Decanter and the Dolphins 93/100 from Wine
+  & Spirits, among more than 50 international awards.
 ---

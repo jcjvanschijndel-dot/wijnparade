@@ -17,4 +17,13 @@ description: >-
   Na het diner is een bezoek aan de kelder in de voormalige kluisgewelven van de Banque de France mogelijk. 
 image: /uploads/carre-palais.webp
 website: https://www.carredupalais.fr/
+description_en: >-
+  There are wine bars with a lovely cellar. And then there's Le Carré du Palais,
+  with a cellar in the former vault of the Banque de France, a terrace directly
+  opposite the Palais des Papes and the widest selection of Rhône wines you can
+  find in Avignon. Le Carré du Palais has established itself as the absolute
+  reference point for AOC Côtes du Rhône and Rhône Valley wines in the heart of
+  Avignon: a gastronomic home for AOC wines, with a 10,000-bottle cellar in the
+  former vaults of the Banque de France. After dinner you can visit the cellar
+  in the old vaults.
 ---

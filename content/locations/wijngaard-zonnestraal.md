@@ -12,4 +12,10 @@ description: Het enige wijndomein in ‘t Gooi, hoe leuk! De eerste wijnen kwame
   heen!
 image: /uploads/zonnestraal.webp
 website: https://wijngaard-zonnestraal.nl/
+description_en: >-
+  The only wine estate in Het Gooi, how nice! The first wines came off the vines
+  here in 2016, and they're now of very acceptable quality, which will only get
+  better in the coming years. An "afternoon roast" on the last Sunday of every
+  month and a "pizza & wine" evening on the first Friday. Plus lots of other
+  events, so check the calendar and do go at least once!
 ---

@@ -19,4 +19,17 @@ description: >-
 
   Angelos adviseert lokale wijnen zoals de Eremitis, afkomstig van Samos — een fijne combinatie met het eten dat hier wordt geserveerd. Verrassend betaalbaar voor de kwaliteit.
 image: /uploads/orizontas.webp
+description_en: >-
+  In the mountain village of Platanos, on a hill high above the west coast of
+  Samos, is a restaurant known among Greeks as the best on the whole island. A
+  family business run by chef Vasilis and his wife Katerina, with a passion and
+  inventiveness behind the Greek classics that you won't find like this anywhere
+  else. Angelos guides guests through the wine list like a seasoned connoisseur,
+  helping you choose a lovely local wine that goes perfectly with your dish,
+  such as the Eremitis from Samos. The terrace has large windows with an
+  unobstructed view over two sides of the island and the sunset, from
+  Votsoulakia in the south over the Kerkis mountains to Karlovassi in the north:
+  one of the most beautiful panoramas of the Aegean. After dinner, a walk to the
+  nearby market square of Platanos is recommended. Surprisingly affordable for
+  the quality.
 ---

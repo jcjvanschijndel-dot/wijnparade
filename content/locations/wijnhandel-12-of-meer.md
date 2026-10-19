@@ -18,4 +18,16 @@ description: >-
   Vaste klanten weten de klimaatkast in de achterkamer te vinden, waar allerlei lekkers op de juiste temperatuur klaarligt. Naast wijn ook een klein maar fijn assortiment delicatessen: olijfolie, azijnen en visconserven. 
 image: /uploads/12-pct.jpg
 website: twaalfprocentofmeer.nl
+description_en: >-
+  For more than twenty years, Wijnhandel 12% of meer ("12% or more") has been a
+  favourite with wine fanatics and bon vivants. The shop is in a monumental
+  building on the Houtkaai in Middelburg. Owner Monique Vreeke built it into an
+  idiosyncratic wine merchant, far from the big players. She grew from
+  specialist wine shop into importer: she sells wine she imports herself to
+  specialist wine merchants and restaurants, with an increasing focus on
+  sustainability, meaning wine from smaller producers who work as naturally as
+  possible. Regulars know to look in the climate cabinet in the back room, where
+  all kinds of good things are ready at the right temperature. Besides wine
+  there's a small but fine range of delicacies: olive oil, vinegars and tinned
+  fish.
 ---

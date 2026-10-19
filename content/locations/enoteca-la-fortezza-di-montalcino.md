@@ -16,4 +16,14 @@ description: >-
   voordat je zelf een domein gaat bezoeken.
 image: /uploads/fortezza.webp
 website: https://www.enotecalafortezza.com/
+description_en: >-
+  A walled 13th-century fortress overlooking the Brunello vineyards. You can
+  walk along the castle walls, and in the cellars there's an enoteca where you
+  can taste different Brunellos from the area side by side.
+
+
+  Enoteca la Fortezza is in the fortress of Montalcino, in southern Tuscany. A
+  must if you're on a wine trip in Montalcino: here you can compare the Brunello
+  di Montalcino and Rosso di Montalcino of different wineries before visiting an
+  estate yourself.
 ---

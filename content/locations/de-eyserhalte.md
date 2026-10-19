@@ -17,4 +17,15 @@ description: >-
   Schuif aan op het terras of in de winkel voor de lunch en proef de producten ter plekke — van kaas tot Italiaanse hammen, noten, olijfolie, huisgemaakte chutneys, pasta en mooie wijnen.En er is een eerste Limburgse truffelgaarde aangelegd in 2020 — met oogst in zicht.
 image: /uploads/eyserhalte.webp
 website: https://www.eyserhalte.nl/
+description_en: >-
+  De Eyserhalte is a delicatessen, a paradise of regional products and treats
+  from Italy, and has been a household name in South Limburg for over 30 years.
+  Not just any shop: every product is selected with care and attention and has
+  its own story, through its region of origin, its supplier or its special
+  character. Special about Eys: close to the shop is the Route des Vins
+  Wahlwiller-Eys, a 10 km walk past five vineyards with views over the
+  Heuvelland. Take a seat on the terrace or in the shop for lunch and taste the
+  products on the spot, from cheese to Italian hams, nuts, olive oil, home-made
+  chutneys, pasta and fine wines. And the first truffle orchard in Limburg was
+  planted in 2020, with a harvest in sight.
 ---

@@ -19,4 +19,18 @@ description: >-
   Traditionele Franse keuken met regionale producten: foie gras-terrine met Ratafia de Champagne en vijgenconfituur, sint-jakobsschelpen met rivierkreeftjes en champagne, kalfszwezerik met pleurotes. Menu's van €31 tot €38. De champagnekaart is de ster van de avond: een brede selectie van producenten uit de Marne-vallei, gedronken aan de bar of bij het diner in de panoramische eetzaal met uitzicht op de Marne en de wijngaarden.
 image: /uploads/bateau.jpg
 website: https://www.le-bateau-lavoir.fr/
+description_en: >-
+  On the banks of the Marne in the charming village of Damery, 7 km from Épernay
+  and 20 km from Reims, lies Au Bateau Lavoir. The restaurant owes its name to
+  the laundry boat that used to be moored outside. Béatrice runs the dining room
+  with her team, and chef Alexandre Christophe is in the kitchen. An address
+  that perfectly combines the Champagne region with the Marne valley. If you're
+  on a bike ride nearby, it's an ideal lunch spot. Time has stood still here,
+  but don't let that put you off, because the prices have too. Traditional
+  French cooking with regional produce: foie gras terrine with Ratafia de
+  Champagne and fig jam, scallops with crayfish and champagne, veal sweetbreads
+  with oyster mushrooms. Menus from €31 to €38. The champagne list is the star
+  of the evening: a broad selection of producers from the Marne valley, drunk at
+  the bar or with dinner in the panoramic dining room overlooking the Marne and
+  the vineyards.
 ---

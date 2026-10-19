@@ -16,4 +16,12 @@ description: >-
   Bezoeken op afspraak in Chardakhi, 40 km van Tbilisi. Iago ontvangt enthousiaste wijnliefhebbers graag.
 image: /uploads/lago.webp
 website: https://www.instagram.com/iagos_winery/
+description_en: >-
+  Iago Bitarishvili is one of the few producers who make Chinuri, an almost
+  extinct native Georgian grape, exclusively in amphora (qvevri). His winery in
+  the village of Chardakhi, in the Kartli region south of Tbilisi, is the
+  epitome of what "natural" wine really means when you take it completely
+  seriously. No electricity in the cellar, no additives, no filters. Visits by
+  appointment in Chardakhi, 40 km from Tbilisi. Iago is happy to welcome
+  enthusiastic wine lovers.
 ---

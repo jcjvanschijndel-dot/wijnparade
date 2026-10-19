@@ -15,4 +15,12 @@ description: >-
   Bezoeken mogelijk dinsdag t/m zaterdag van 11.00 tot 13.30 uur, inclusief wijngaardbezoek, kelderrondleiding, proeverij en gastronomische tasting met lokale producten. Ook oogstactiviteiten in het seizoen.
 image: /uploads/volver.webp
 website: https://bodegasvolver.com/
+description_en: >-
+  In inland Alicante, on the border with Murcia, at 660 metres between the
+  Salinas, Umbría and La Sima sierras, lie the vineyards that introduced the
+  world to the Monastrell of the Spanish Levante. Wine Spectator placed their
+  Tarima Hill in its top 10 wines of the world: Monastrell vines 40 to 75 years
+  old, no irrigation, pure rainwater. Visits are possible Tuesday to Saturday
+  from 11.00 to 13.30, including a vineyard visit, cellar tour, tasting and a
+  gastronomic tasting with local produce. Harvest activities in season too.
 ---

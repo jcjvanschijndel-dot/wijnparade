@@ -14,4 +14,13 @@ description: >-
   Planken vol lokale wijnen: Barbaresco van alle producenten uit de omgeving, aangevuld met Barolo, Dolcetto, Barbera en Moscato d'Asti. Sparkling, white, red en sweet wine per glas vanaf lage prijzen. Lokale voedingsproducten — kaas, salami, typische Langhe-producten — te koop naast de wijn.
 image: /uploads/al-nido-della-cinciallegra.webp
 website: https://www.alnidodellacinciallegra.com/it/
+description_en: >-
+  In a 19th-century building on the village square of Neive, one of the most
+  beautiful historic villages of the Langhe and the heart of the Barbaresco
+  appellation, is the oldest enoteca in the village. Luca and Michela took over
+  in 2011 and run it with the same calm, personal approach. Shelves full of
+  local wines: Barbaresco from every producer in the area, along with Barolo,
+  Dolcetto, Barbera and Moscato d'Asti. Sparkling, white, red and sweet wine by
+  the glass at low prices. Local produce (cheese, salami, typical Langhe
+  products) for sale alongside the wine.
 ---

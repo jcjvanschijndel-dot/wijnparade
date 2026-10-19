@@ -16,4 +16,14 @@ description: >-
   De MCCCXL rosé is mijn persoonlijke favoriet. En niet in NL verkrijgbaar, dus de moeite waard om een doos te scoren.
 image: /uploads/belieu.webp
 website: https://www.bertaud-belieu.com/fr/
+description_en: >-
+  Just before you drive into Saint-Tropez, take the road to the right towards
+  Ramatuelle. That's where you'll find the wineries of Saint-Tropez, and this is
+  one of my personal favourites. The estate makes wines from the signature
+  Provençal grapes: Mourvèdre, Rolle, Cinsault, Tibouren, Grenache and Syrah.
+  80% of production is rosé, fresh and aromatic. The 2026 vintage is being
+  certified as 100% organic. You'll find the wines in countless restaurants,
+  beach clubs and hotels in Saint-Tropez. The MCCCXL rosé is my personal
+  favourite, and it isn't available in the Netherlands, so it's worth picking up
+  a case.
 ---

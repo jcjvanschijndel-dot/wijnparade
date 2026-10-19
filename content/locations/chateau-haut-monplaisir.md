@@ -15,4 +15,12 @@ description: >-
   Het domein verwelkomt bezoekers het hele jaar in de winkel voor proeverijen. Groepen van meer dan vier personen: vooraf melden. Op zaterdag, zondag en feestdagen uitsluitend op afspraak. Een volledige proeverij duurt 45 minuten.
 image: /uploads/plaisir.webp
 website: https://chateauhautmonplaisir.com/en/home/
+description_en: >-
+  One of the warmest welcomes in all of Cahors. Cathy Fournié inherited the
+  estate in 1998 from her father, who until then had sold all his grapes to
+  négociants. She and her husband Daniel decided to aim for top quality and
+  bottle their wine themselves at the château. The estate welcomes visitors all
+  year round in the shop for tastings. Groups of more than four people should
+  let them know in advance. On Saturdays, Sundays and public holidays by
+  appointment only. A full tasting takes 45 minutes.
 ---

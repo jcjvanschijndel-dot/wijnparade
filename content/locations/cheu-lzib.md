@@ -16,4 +16,14 @@ description: >-
   Franse keuken wil proeven, met wijnen uit Menetou-Salon en Sancerre.
 image: /uploads/cheu.webp
 website: https://www.cheulzib.com/
+description_en: >-
+  A traditional family restaurant in a farmhouse in the middle of Menetou-Salon.
+  Time has stood still here, in a good way! This is where you order classics
+  like pike in cream sauce or chicken with tarragon, all served on silver
+  platters and with the top wines of the region.
+
+
+  C'heu l'Zib is in Menetou-Salon, in the Centre-Loire close to Sancerre. An
+  authentic restaurant for anyone who wants to taste real French cooking during
+  a wine trip through the Loire, with wines from Menetou-Salon and Sancerre.
 ---

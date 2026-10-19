@@ -12,4 +12,10 @@ description: Gigantische winkel aan de costa Brava. Hier kan een liefhebber van
   verzenden het tegen acceptabele kosten voor je naar Nederland.
 image: /uploads/grau.jpg
 website: https://www.grauonline.eu/
+description_en: >-
+  A gigantic shop on the Costa Brava. A lover of Spanish wine can browse here
+  for hours! There's also a separate room with some of the most exclusive wines
+  in the world, which is fun to have a look at too. If you're in the area, as a
+  wine lover you could make a day out of visiting this shop. And if you came by
+  plane? No worries, they'll ship to the Netherlands for a reasonable price.
 ---

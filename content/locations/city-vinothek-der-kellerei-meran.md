@@ -19,4 +19,15 @@ description: >-
   Je kunt hier diverse tastings en rondleidingen boeken via de website.
 image: /uploads/meran.webp
 website: https://www.kellereimeran.it/de/treffpunkte/cityvinothek-meran
+description_en: >-
+  Where Kellerei Meran's Panorama Enoteca in Marlengo offers the view and the
+  architecture, the City.Vinothek is the urban face of the same cooperative,
+  right in the historic heart of Merano. The building, the former seat of
+  Kellerei Algund, dates from the 19th century and sits strategically between
+  the famous Meraner Lauben (the arcades) and Via Galileo Galilei. Two levels: a
+  fully glazed ground floor with room to discover, taste and buy, and an
+  impressive cellar with restored stone walls and the original floor, returned
+  to its 19th-century look but enriched with a stylishly lit steel rack for
+  sparkling wine bottles and a barrel rack for port. You can book various
+  tastings and tours here through the website.
 ---

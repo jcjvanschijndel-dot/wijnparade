@@ -11,4 +11,10 @@ description: Op de Place du Forum, in het hart van de historische binnenstad van
   regio nauwelijks vindt.
 image: /uploads/winebarreims.webp
 website: https://winebar-reims.com/
+description_en: >-
+  On the Place du Forum, in the heart of the historic centre of Reims: the most
+  strategic wine bar location in the city. In 2026 it won the award for the best
+  sparkling wine list in all of France. More than 500 wines and 200 champagnes,
+  from grower champagnes to vintage bottles you'll hardly find elsewhere in the
+  region.
 ---

@@ -18,4 +18,14 @@ description: >-
   Pilar Tejera, een gerenommeerde wijnmaakster die in meerdere prestigieuze wijnhuizen heeft gewerkt, stelt een levende en voortdurend evoluerende wijnkaart samen vol pareltjes, curiositeiten en nieuwigheden van over de hele wereld. 
 image: /uploads/garras.webp
 website: casagarras.com
+description_en: >-
+  Casa Garras is in the Valle de Carranza, a picturesque valley in the province
+  of Biscay, close to the Cantabrian coast. It is now a third-generation family
+  business offering updated traditional cooking with a gastronomic touch, with
+  meat from nearby Karrantza, fish from the Cantabrian Sea and Txakoli from
+  their own vineyard. The most special thing is that the wine list is literally
+  the wine cellar: you walk in yourself and choose the bottle that appeals to
+  you most, with advice from Pilar. Pilar Tejera, a renowned winemaker who has
+  worked at several prestigious wineries, curates a living, constantly evolving
+  wine list full of gems, curiosities and novelties from all over the world.
 ---

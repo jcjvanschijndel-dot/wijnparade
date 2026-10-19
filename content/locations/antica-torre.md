@@ -15,4 +15,13 @@ description: >-
   aanrader tijdens een wijnreis door de Barolo- en Barbaresco-streek.
 image: /uploads/a-torre.webp
 website: https://www.anticatorrebarbaresco.it/
+description_en: >-
+  A lovely Italian family restaurant. You should visit Barbaresco anyway if
+  you're in the area, and this is the perfect place for lunch or dinner. Real
+  Piedmontese dishes: think rabbit, truffle and delicious pasta. And after the
+  meal, grandma comes round with a gigantic bottle of grappa.
+
+
+  Antica Torre is in the village of Barbaresco, in the Langhe in Piedmont.
+  Recommended during a wine trip through the Barolo and Barbaresco area.
 ---

@@ -14,4 +14,12 @@ description: >-
   fijne wijnbar voor een borrel of een avondje uit.
 image: /uploads/winebar.webp
 website: https://thewinebar.nl/
+description_en: >-
+  A new addition in the centre of Bussum. From the same owner as A-Fusion, so
+  the food is in good hands! A basic wine list for a wine bar, but you can ask
+  for the notebook listing a number of absolute top wines.
+
+
+  The Winebar is on the Kerkstraat in the centre of Bussum, in Het Gooi. A nice
+  wine bar for drinks or a night out.
 ---

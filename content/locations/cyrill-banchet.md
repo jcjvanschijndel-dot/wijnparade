@@ -19,4 +19,15 @@ description: >-
   Het is aan te raden om je bezoek van te voren aan te kondigen. De rondleiding is totaal iets anders dan je bij de bekende maisons gewend bent. Een kleine ruimte met tanks en een wat rommelige kelder, maar daardoor veel beter zichtbaar hoe Champagne echt gemaakt wordt. Een soort kijkje behind the scenes!
 image: /uploads/banchet.jpg
 website: https://champagne-cyrillbanchet.fr/fr/
+description_en: >-
+  Of the more than 300 wine-producing villages in Champagne, only 17 hold Grand
+  Cru status, and Chouilly, a small village in the Côte des Blancs south of
+  Épernay, is one of them. Champagne Cyrill Banchet is a small family domaine
+  based in this Grand Cru village, specialising in Chardonnay from the chalky
+  slopes that make the Côte des Blancs so special. Although this modest domaine
+  is little known, the quality of the Champagne is no less for it. It's
+  advisable to let them know you're coming in advance. The tour is completely
+  different from what you're used to at the well-known maisons: a small room
+  with tanks and a somewhat untidy cellar, which makes it much easier to see how
+  Champagne is really made. A kind of behind-the-scenes look!
 ---

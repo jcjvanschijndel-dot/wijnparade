@@ -19,4 +19,15 @@ description: >-
   Wijngasterij open donderdag t/m zondag 13.00-18.00 uur. Rondleiding elke zaterdag om 11.30 uur op reservering.
 image: /uploads/fromberg.webp
 website: https://www.fromberg.nl/
+description_en: >-
+  Artisan winegrowers who have been making fine, honest wines since 1994 that
+  easily stand up to criticism: a consistent product of consistently high
+  quality. The soil is mineral-rich limestone on a perfectly south-facing slope
+  215 metres high. In 1996 Fromberg released its first Dutch sparkling wine,
+  making it the oldest producer of Dutch sparkling wine. Taste on the terrace
+  with a view, take a tour of the wine cellar, or do the popular wine walk of 8
+  or 13 km past several vineyards, with Limburg vlaai beforehand and a tasting
+  with a sharing board afterwards. Also special: a tour with sparkling wines
+  paired with handmade chocolate from Geruba. The wine tavern is open Thursday
+  to Sunday 13.00-18.00. Tours every Saturday at 11.30 by reservation.
 ---

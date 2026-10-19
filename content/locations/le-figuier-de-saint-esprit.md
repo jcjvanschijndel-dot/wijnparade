@@ -15,4 +15,13 @@ description: >-
   Verse producten van de dagmarkt, mediterrane keuken met fijne details: cannelloni van inktvis en schelpen in inktjus, lam uit de Alpilles gebakken in klei, truffelgnocchi. De wijnkaart is uitgebreid — met de beste wijnen van de regio.
 image: /uploads/figuier.webp
 website: https://le-figuier-de-saint-esprit.com/
+description_en: >-
+  Le Figuier de Saint-Esprit is the restaurant of chef Christian Morisset,
+  tucked inside the ramparts of the old town of Antibes, close to the Picasso
+  Museum and the market. The heart of the restaurant is a patio under a
+  centuries-old fig tree. A real family business: Christian cooks, and his sons
+  Jordan and Matthias run the restaurant. Fresh produce from the daily market
+  and Mediterranean cooking with fine details: cannelloni of squid and shellfish
+  in an ink jus, Alpilles lamb baked in clay, truffle gnocchi. The wine list is
+  extensive, with the best wines of the region.
 ---

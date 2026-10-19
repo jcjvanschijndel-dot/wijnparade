@@ -16,4 +16,14 @@ description: >-
   combineren met wijnen uit Bergerac en Cahors.
 image: /uploads/beynac.webp
 website: http://www.vinothequebeynac.com/
+description_en: >-
+  A cosy wine bar overlooking the Château de Beynac, run by friendly Spanish
+  owners. Perfect for a glass with a view of one of the most beautiful castles
+  in the Dordogne. Next to the bar there's also a playground, which is handy for
+  families.
+
+
+  Vinothèque de Beynac is in Beynac-et-Cazenac, on the river Dordogne in the
+  Périgord. Recommended during a holiday in the Dordogne, and a good way to try
+  wines from Bergerac and Cahors.
 ---

@@ -27,4 +27,13 @@ description: >
   De boerderijwinkel bezoeken.
 image: /uploads/guerrieri.webp
 website: https://www.aziendaguerrieri.it/
+description_en: >-
+  One of the most respected wineries in Le Marche, with a real family-business
+  atmosphere. Visitors can do the following free of charge, all year round: walk
+  among the vineyards and olive trees, surrounded by roses, lavender and
+  Mediterranean plants; taste the still, sparkling and sweet wines, plus the
+  estate's own spirits, olive oil and honey; visit the experimental vineyard,
+  where 27 different grape varieties from the region are grown; visit the
+  petting farm (local chicken breeds, geese, pigeons, peacocks, goats, rabbits,
+  a pony and a horse); and visit the farm shop.
 ---

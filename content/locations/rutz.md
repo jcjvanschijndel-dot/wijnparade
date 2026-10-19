@@ -13,4 +13,11 @@ description: De ruimte op de begane grond onder het driesterrenrestaurant Rutz,
   bezoeken.
 image: /uploads/rutz.webp
 website: https://rutz-restaurant.de/
+description_en: >-
+  The ground-floor space below the three-star restaurant Rutz, with the most
+  serious classically oriented programme in the city. Head sommelier Nancy
+  Großmann runs a cellar with vertical sets of Keller, Egon Müller, Weil and the
+  Mosel canon, at prices that are remarkably reasonable for Berlin. The wine
+  list has around 800 wines from Germany, Austria, France and Italy. The wine
+  bar can also be visited separately from the restaurant.
 ---

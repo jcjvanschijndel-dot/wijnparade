@@ -10,4 +10,13 @@ minLat: 42.3
 maxLat: 42.7
 minLng: -3.2
 maxLng: -2.0
+name_en: Rioja
+slug_en: rioja
+country_en: Spain
+description_en: >-
+  La Rioja is the best-known wine region in Spain, home to the great Reserva and
+  Gran Reserva wines made from Tempranillo. The region stretches along the Ebro
+  river and is home to iconic bodegas such as Marqués de Murrieta, Muga, Marqués
+  de Riscal and Bodegas Ysios. The capital Logroño is a must for tapas and wine.
+  Nearby Laguardia is one of the most beautiful walled towns in Spain.
 ---

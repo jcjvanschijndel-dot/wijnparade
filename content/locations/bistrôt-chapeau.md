@@ -14,4 +14,13 @@ description: >-
   leukere restaurants in de regio voor wie van klassieke Franse gerechten houdt.
 image: /uploads/chapeau.webp
 website: https://chapeaublaricum.nl/
+description_en: >-
+  A finalist in the world championship of oeuf mayonnaise... that gets my
+  attention. A lovely French menu and wine list. And a Bib Gourmand menu for
+  €49.50. Always worth a try!
+
+
+  Bistrôt Chapeau is on the Huizerweg in Blaricum, in Het Gooi. A cosy French
+  bistro for a relaxed dinner with a good glass of wine, and one of the nicer
+  restaurants in the area if you love classic French dishes.
 ---

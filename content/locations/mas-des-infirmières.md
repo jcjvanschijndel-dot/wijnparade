@@ -18,4 +18,13 @@ description: >-
   VIP-rondleiding — diepgaander bezoek aan de wijnmakerij- en rijpingskelders, gevolgd door een privéproeverij inclusief de exclusieve Ombre de Lune in de VIP-lounge.
 image: /uploads/mas-infirmieres.webp
 website: https://masdesinfermieres.com/
+description_en: >-
+  Since 2020 the estate has had a brand-new winery and a tasting room with a
+  permanent exhibition of costumes, props and sets from the iconic films of
+  owner Ridley Scott: Gladiator, Blade Runner, Thelma & Louise. There are two
+  options. Classic tour: an introduction to the Luberon appellation, the harvest
+  and the winemaking steps, ending with a guided tasting amid the film
+  exhibition. VIP tour: a more in-depth visit to the winery and ageing cellars,
+  followed by a private tasting including the exclusive Ombre de Lune in the VIP
+  lounge.
 ---

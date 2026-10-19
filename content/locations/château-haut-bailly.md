@@ -29,4 +29,22 @@ description: >-
   Kookworkshop — leer traditionele Franse recepten koken, bezoek daarna het domein en eet je eigen creaties bij een glas Haut-Bailly. Origineel en leuk voor een groepje vrienden.
 image: /uploads/bailly.webp
 website: https://www.haut-bailly.com/
+description_en: >-
+  If you visit one château in Pessac-Léognan, make it this one. Haut-Bailly
+  isn't the biggest or the best known, but it's one of the most complete visits
+  in the whole region: a place where wine, food and accommodation all come
+  together at a high level. There are several ways to discover the estate.
+  Classic visit + tasting: a tour of the vineyard and cellar, followed by two
+  wines with a plate of cheese, chocolate and dried fruit. Simple and good.
+  Extended tasting: an in-depth visit with five Haut-Bailly wines, including
+  several vintages of the Grand Cru, with a plate of cheese and chocolate. La
+  Table Privée: in the château's dining room the chef cooks a four-course menu
+  of seasonal produce paired with three of the estate's wines, preceded by a
+  champagne aperitif and a tour, for groups of 4 to 15 people. This is the
+  finest way to experience the estate, so book well ahead. Vertical tasting: a
+  rare and memorable experience with a series of Haut-Bailly vintages alongside
+  a five-course menu, including an old vintage. For the true connoisseur.
+  Cooking workshop: learn to cook traditional French recipes, then visit the
+  estate and eat your own creations with a glass of Haut-Bailly. Original and
+  fun for a group of friends.
 ---

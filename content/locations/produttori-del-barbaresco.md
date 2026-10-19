@@ -19,4 +19,19 @@ description: >-
 
   Enoteca in het centrum van Barbaresco — vrij toegankelijk, deskundig en vriendelijk personeel. Dit is de betere optie dan het eigenlijke bezoekerskantoor. Proeverij van de standaard Barbaresco vrijwel altijd mogelijk.
 image: /uploads/produttori-del-barbaresco.webp
+description_en: >-
+  A story of resistance and survival. In 1894 the farmers of Barbaresco founded
+  a cooperative. It was dissolved during the fascist period but re-established
+  in 1958 by the local priest, Don Fiorino Marengo, and now has 53 members.
+  Since then the quality has risen year after year. Connoisseurs worldwide
+  regard Produttori's wines as the best value in the whole Langhe. Director Aldo
+  Vacca is considered one of the most respected people in the Piedmontese wine
+  world. Exclusively Barbaresco, from 53 members with a total of 100 hectares.
+  The standard Barbaresco is a blend: accessible, elegant and affordable. The
+  absolute highlights are the nine cru Riservas, Asili, Ovello, Montestefano,
+  Rabajà, Moccagatta, Paje, Pora, Rio Sordo and Montefico, each from a single
+  vineyard and made only in top years. The enoteca in the centre of Barbaresco
+  is freely accessible, with knowledgeable and friendly staff, and is the better
+  option compared with the actual visitor office. A tasting of the standard
+  Barbaresco is almost always possible.
 ---

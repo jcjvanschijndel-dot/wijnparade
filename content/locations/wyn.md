@@ -12,4 +12,10 @@ description: Boven op de heuvels van Domme — het Akropolis van de Périgord �
   regio.
 image: /uploads/wyn.webp
 website: https://laperlededomme.com/services/#wine-bar-terrace
+description_en: >-
+  High on the hills of Domme, the Acropolis of the Périgord, WYN offers
+  panoramic views over the Dordogne valley from a rooftop terrace. A broad
+  selection of French and international wines, including local Dordogne
+  varieties, to enjoy with cheese and charcuterie boards in a relaxed, elegant
+  atmosphere. One of the most remarkable wine bars in the whole region.
 ---

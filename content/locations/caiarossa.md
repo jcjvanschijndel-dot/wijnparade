@@ -15,4 +15,14 @@ description: "Caiarossa ligt hoog boven de Tyrreense kust, op de hellingen van
   rondleidingen te boeken, die kun je op de website vinden."
 image: /uploads/caiarossa-cover.jpg
 website: https://www.caiarossa.com/en/
+description_en: >-
+  Caiarossa sits high above the Tyrrhenian coast, on the slopes of Riparbella,
+  less than half an hour's drive north of Bolgheri. The estate is owned by the
+  Albada Jelgersma family, who also own Château Giscours and Château du Tertre
+  in Margaux. The fiery red winery grabs your attention on arrival, and
+  fascinates inside too: a vertical, gravity-driven cellar laid out according to
+  feng shui principles. The architecture isn't meant to be symbolic but
+  functional: natural light, optimal temperature control and minimal
+  intervention in the winemaking. Various tastings and tours can be booked;
+  you'll find them on the website.
 ---

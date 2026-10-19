@@ -15,4 +15,13 @@ description: >-
   wijnbar en wijnwinkel voor liefhebbers van Duitse en Oostenrijkse wijn.
 image: /uploads/weinbar.webp
 website: https://dieweinbar.nl/
+description_en: >-
+  A great concept if you love wines from Germany, Austria and South Tyrol. A
+  wine bar and wine shop (or rather the other way round), where you pay a fixed
+  €18.50 extra if you drink the wine in the bar. I think that's pretty
+  reasonable!
+
+
+  Die Weinbar is on the Vinkenplein in Bilthoven, close to Utrecht. A nice wine
+  bar and wine shop for lovers of German and Austrian wine.
 ---

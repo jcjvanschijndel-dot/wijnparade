@@ -14,4 +14,13 @@ description: "Meer dan 400 champagnes op de kaart, uitsluitend van kleine
   lekkernijen. Zondagsbrunch van 10.00-14.00 uur."
 image: /uploads/recommande.webp
 website: lerecommande.fr
+description_en: >-
+  More than 400 champagnes on the list, exclusively from small growers from
+  Avize and the Côte des Blancs, including rare bottles from Selosse,
+  Diebolt-Vallois and other top producers that you taste here literally on their
+  home turf. That's the big difference: the same champagnes that are impossible
+  to find elsewhere even at twice the price are available here, in the village
+  where they're made. With them: boards of regional produce, escargots, pâté en
+  croûte, tourte, jars of blanquette de veau and other local treats. Sunday
+  brunch from 10.00-14.00.
 ---

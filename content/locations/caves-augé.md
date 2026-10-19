@@ -14,4 +14,12 @@ description: "Zo'n 3.000 à 4.000 wijnen, gerangschikt op regio, met een
   advies? Het personeel is deskundig en helpt graag"
 image: /uploads/auge.webp
 website: https://www.instagram.com/cavesauge
+description_en: >-
+  Some 3,000 to 4,000 wines, arranged by region, with a remarkably strong Loire
+  section and an excellent choice of old Bordeaux vintages. A special feature is
+  the spirits collection in one corner of the shop: Armagnac, Calvados, Cognac,
+  sherry, port and whisky of rare quality. Once a month the shop holds a free
+  tasting on the pavement of the Boulevard Haussmann, where producers come to
+  pour their wines themselves: one of the cosiest and most informal wine events
+  in Paris. Looking for advice? The staff are knowledgeable and happy to help.
 ---

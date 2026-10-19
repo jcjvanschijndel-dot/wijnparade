@@ -15,4 +15,13 @@ description: >-
   Wijngaarden in La Morra (Conca, Bricco Luciani, Gallinotto) en in Serralunga. Barolo, Barbera d'Alba, Dolcetto d'Alba, Langhe Nebbiolo en Freisa. Wijnbar op het domein met uitzicht over de Langhe-heuvels. Ook agriturismo met appartementen.
 image: /uploads/mauro-molino.webp
 website: https://www.mauromolino.com/
+description_en: >-
+  Founded in 1982 by Mauro Molino in the frazione of Annunziata in La Morra:
+  young and dynamic, but deeply rooted in the traditions of the area. Today his
+  children Matteo and Martina run the estate. The style is modern but respectful
+  of the terroir, a perfect introduction to Barolo if you don't only want to
+  visit the most traditional houses. Vineyards in La Morra (Conca, Bricco
+  Luciani, Gallinotto) and in Serralunga. Barolo, Barbera d'Alba, Dolcetto
+  d'Alba, Langhe Nebbiolo and Freisa. A wine bar on the estate overlooking the
+  Langhe hills. Also an agriturismo with apartments.
 ---

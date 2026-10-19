@@ -14,4 +14,13 @@ description: "Zo Duits mogelijk — een zeldzaam concept in Amsterdam. Gevestigd
   aanbevolen, maar er is soms nog plek aan de bar."
 image: /uploads/stern.webp
 website: https://www.weinlokalstern.nl/
+description_en: >-
+  As German as it gets: a rare concept in Amsterdam. On the Singel, in the
+  building of the former restaurant Breda. Schweinshaxe, schnitzel, bratwurst,
+  Spätzle and Spaghettieis on the menu, and a wine list that leans heavily on
+  Germany with plenty by the glass. The atmosphere is cosy and warm, with a
+  special feeling of being somewhere else in the middle of Amsterdam. The wine
+  list is put together with real knowledge of the German wine landscape, from
+  Mosel Riesling to Baden Spätburgunder. Star Wine List White Star. Booking
+  recommended, but there's sometimes still room at the bar.
 ---

@@ -22,4 +22,22 @@ description: >-
   Naast de proeverij met tapas is er ook de optie van een volledige lunch met wijnspijscombinatie. 
 image: /uploads/felisa.webp
 website: https://bodegadonafelisa.com/contacto/
+description_en: >-
+  Bodega Doña Felisa is a true family business, founded in 1999 by José María
+  Losantos and his wife Gema Alonso. They came to Ronda, fell in love with the
+  area straight away and never left. The second generation is now developing the
+  project further. The vineyard lies at around 900 metres in the Chinchilla
+  area, surrounded by oak forests and the nature reserves of Grazalema and
+  Sierra de las Nieves. This has also been wine country since ancient times:
+  nearby are the Roman ruins of Acinipo, literally "land of wine", where wine
+  was being made as early as the first century BC. The bodega is a little
+  outside Ronda, along a bumpy country lane, but as soon as you drive up the
+  last hill and see the rolling vineyards with mountain ranges behind them,
+  you've already forgotten the drive. The tour (an hour and a half, in English
+  and Spanish) takes you through the vineyard and production areas, where you
+  learn all about hand harvesting, fermentation and ageing. It's followed by a
+  tasting of 3 to 5 of their own wines, each with a matching snack. Book in
+  time, as the English-language tours in particular fill up quickly. You could
+  combine the visit with the nearby Roman ruins of Acinipo. Besides the tasting
+  with tapas, there's also the option of a full lunch with wine pairing.
 ---

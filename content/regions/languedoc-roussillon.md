@@ -10,4 +10,13 @@ minLat: 42.5
 maxLat: 43.89
 minLng: 2.5
 maxLng: 4.4
+name_en: Languedoc-Roussillon
+slug_en: languedoc-roussillon
+country_en: France
+description_en: >-
+  France's largest wine region stretches from the Camargue to the Pyrenees.
+  Where mostly bulk wine used to be made, a new generation of winemakers now
+  works with old vines on schist and limestone, in Faugères, Pic Saint-Loup and
+  Maury. Montpellier has a buzzing wine bar scene, and on the Étang de Thau you
+  can eat oysters straight from the farm.
 ---

@@ -22,4 +22,20 @@ description: "Rijsel in Amsterdam-Oost is voor wijnliefhebbers een instutuut.
   dat het restaurant gerund wordt door ras-epicureurs."
 image: /uploads/rijssel.webp
 website: https://rijsel.com/
+description_en: >-
+  For wine lovers, Rijsel in Amsterdam East is an institution. Tucked away in a
+  former domestic science school, this no-nonsense restaurant combines
+  French-Belgian rotisserie cooking with one of the most thoughtful wine lists
+  in the country. What makes Rijsel so unique is its deep love for the classic
+  European wine regions. The list breathes the grandeur of France, with a
+  peerless selection from Burgundy, the Rhône, the Loire and Bordeaux.
+  Oenophiles are in their element among the impressive cellar treasures: Rijsel
+  is known for only pouring wines when they're perfectly ready to drink, all at
+  strikingly reasonable margins. The sommeliers combine an enormous level of
+  expertise with an accessible, welcoming approach without stiff etiquette. And
+  the robust menu, famous for its spit-roasted poussin and refined terrines, is
+  built entirely to let gastronomic wines shine. Whether you sit down for a
+  renowned Meursault, a mature Rhône or a surprising natural wine from a small
+  producer, at Rijsel you feel in every sip and at every table that the
+  restaurant is run by true epicureans.
 ---

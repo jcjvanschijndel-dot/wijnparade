@@ -10,4 +10,12 @@ minLat: 41.7
 maxLat: 42.5
 minLng: 2.6
 maxLng: 3.4
+name_en: Costa Brava & Empordà
+slug_en: costa-brava
+country_en: Spain
+description_en: >-
+  The Costa Brava combines a dramatic rocky coastline, medieval villages and the
+  DO Empordà. Avant-garde winemakers work here with native grapes such as
+  Garnacha and Cariñena. Girona, Pals and Begur are ideal bases. The region also
+  has some of Spain's very best Michelin-starred restaurants.
 ---

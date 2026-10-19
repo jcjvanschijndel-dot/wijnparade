@@ -18,4 +18,20 @@ description: >-
   16 kamers en suites in het herenhuis, elk met een eigen naam en sfeer: Magnolia, La Suite Bleue, La Chambre aux Orangers, Sous les Tilleuls, La Tour. Edele materialen, brede ruimtes, gepatineerd houtwerk en antieke gevonden voorwerpen. De Master Suite heeft een jacuzzi op het terras met panoramisch uitzicht.
 image: /uploads/saprale.webp
 website: https://www.lehameaudesaparale.com/
+description_en: >-
+  For more than 25 years Julie and Philippe Farinelli worked on the rebirth of
+  this forgotten 13th-century hamlet. The Saparale cellar holds five vintages of
+  the estate, plus a number of exclusive cuvées that can only be tasted on site,
+  including the Oenoteca micro-cuvées, the Cuvée Casteddu (aged in oak barrels)
+  and the Cuvée Domaine Saparale, the oldest cuvée of the house. At lunchtime
+  the food is simple: vegetables from the kitchen garden, saucisses de porc
+  nustrale, produce from local farmers in the valley. In the evening the cooking
+  becomes more refined, with saddle of rabbit stuffed with kidney and green
+  anise, or polenta with tarragon. The terrace restaurant above the chai,
+  overlooking the vineyard landscape, is also open to outside visitors, by
+  reservation only. 16 rooms and suites in the manor house, each with its own
+  name and atmosphere: Magnolia, La Suite Bleue, La Chambre aux Orangers, Sous
+  les Tilleuls, La Tour. Noble materials, spacious rooms, patinated woodwork and
+  antique found objects. The Master Suite has a jacuzzi on the terrace with
+  panoramic views.
 ---

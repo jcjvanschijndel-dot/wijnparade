@@ -19,4 +19,16 @@ description: >-
   Son Mayol maakt slechts twee wijnen en produceert bewust weinig — druiven of wijn die de eigen kwaliteitsstandaard niet haalt, wordt verkocht aan andere producenten. Bezoeken zijn op afspraak mogelijk voor serieuze wijnliefhebbers. 
 image: /uploads/mayol.jpeg
 website: https://www.bodegasonmayol.es/en/
+description_en: >-
+  In the early 2000s Swiss entrepreneur Gregory Hirschmann fell in love with a
+  piece of land about 20 minutes from Palma, and saw something in it that others
+  had missed: 35 different terroirs with enormous ripening potential for red
+  wine. In 2006 he planted the first Cabernet Sauvignon, Merlot and Petit Verdot
+  vines, a deliberate nod to his favourite wine region, Bordeaux. His dream: to
+  make the best red wine in Mallorca. To achieve it he brought in the legendary
+  winemaker Patrick Léon, for 20 years head winemaker at Château
+  Mouton-Rothschild, and oenologist Marie Barbé, who worked at the same house
+  for five years. Son Mayol makes only two wines and deliberately produces
+  little: grapes or wine that don't meet its own quality standard are sold to
+  other producers. Visits are possible by appointment for serious wine lovers.
 ---

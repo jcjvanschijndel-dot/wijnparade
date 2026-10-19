@@ -10,4 +10,13 @@ minLat: 48.81
 maxLat: 48.91
 minLng: 2.25
 maxLng: 2.47
+name_en: Paris
+slug_en: paris
+country_en: France
+description_en: >-
+  Paris is the wine capital par excellence: not because it has vineyards, but
+  because the city brings together the best wines from all over France. From the
+  classic caves of the Marais to natural wine cafés in Belleville and Pigalle,
+  and the iconic wine bars of Saint-Germain-des-Prés. A wine weekend in Paris is
+  also a journey through the best appellations of France.
 ---

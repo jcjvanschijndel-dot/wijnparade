@@ -13,4 +13,12 @@ description: Intieme wijnwinkel op de Provenierssingel, maar tegelijk ook een
   van Rotterdam maar dat de meeste bezoekers van buiten de stad niet kennen.
 image: /uploads/le-nord.webp
 website: https://lenord.nl/
+description_en: >-
+  An intimate wine shop on the Provenierssingel that is also a fully fledged
+  wine bar. Downstairs is the shop with a carefully curated selection; upstairs
+  an atmospheric tasting room where you can simply have a glass without buying
+  anything. Monthly open tastings, often in collaboration with Hart voor Wijn.
+  Regulars come here both for the shop and for an evening at the bar: the kind
+  of place you'll find on every Rotterdam insider list but that most visitors
+  from outside the city don't know.
 ---

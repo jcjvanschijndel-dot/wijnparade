@@ -24,4 +24,34 @@ description: >-
   Rinuccio 1180 is het restaurant direct op de wijngaard, met een indrukwekkende keuken, Antinori-wijnen en personeel dat vakkundig advies geeft over wijnkeuzes. Reserveer ver van tevoren voor een raam- of terrasplaats. Open voor lunch en diner.
 image: /uploads/antinori.webp
 website: https://www.antinori.it/it/tenuta/tenute-antinori/antinori-nel-chianti-classico/
+description_en: >-
+  In 2022, Antinori nel Chianti Classico was named the best winery in the world
+  by World's Best Vineyards. But the reason to come here is as much the
+  architecture as the wine. The winery, opened in 2012, is almost invisible in
+  the Tuscan landscape: the façade consists of two elegant horizontal cuts in
+  the hillside. Barely visible from outside; inside, a spectacular spiral
+  staircase connects three levels.
+
+
+  Tinaia Tour: an introduction to the family history through a short
+  documentary, followed by a tour past the spiral staircase, the roof garden
+  with vineyard, the museum and the production areas. It ends with a tasting of
+  three wines in the glass museum space overlooking the family's art collection.
+
+
+  Bottaia Tour: a more in-depth tour for wine lovers, with access to the most
+  special and unusual spaces in the winery. A multidisciplinary experience in
+  oenology, architecture and wine tasting across more than six centuries of
+  Antinori history, including a tasting of four wines in the striking floating
+  tasting room or the exclusive bottaia.
+
+
+  Private Experiences: for those who want to taste Tignanello or Solaia in the
+  exclusive glass tasting room above the barrique cellars, or take a combined
+  tour of Badia a Passignano and Antinori.
+
+
+  Rinuccio 1180 is the restaurant right on the vineyard, with impressive
+  cooking, Antinori wines and staff who give expert advice on wine choices. Book
+  well in advance for a window or terrace table. Open for lunch and dinner.
 ---

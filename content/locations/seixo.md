@@ -15,4 +15,13 @@ description: >-
   uitzicht over de terrassenwijngaarden, en daarna port proeven op de quinta.
 image: /uploads/seixo.webp
 website: https://restauranteseixo.pt/
+description_en: >-
+  High above the river, open for lunch only, but with one of the most beautiful
+  views in the valley. Easy to combine with a Sandeman port tasting. Picnic
+  options are available too.
+
+
+  Restaurant Seixo is at Quinta do Seixo in the Douro Valley in Portugal, high
+  above the river. Recommended during a wine trip through the Douro: lunch
+  overlooking the terraced vineyards, then a port tasting at the quinta.
 ---

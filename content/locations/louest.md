@@ -13,4 +13,12 @@ description: "Op een minuut lopen van Rotterdam Centraal, maar ver verwijderd
   Toegankelijk, informatief en gezellig."
 image: /uploads/ouest.webp
 website: https://louest.nl/
+description_en: >-
+  A minute's walk from Rotterdam Central, but far removed from the usual station
+  surroundings. L'Ouest specialises in wine flights: three carefully selected
+  wines with matching bites and explanation from the sommelier, ideal if you
+  want to explore without ordering a bottle straight away. The selection
+  deliberately focuses on forgotten wine regions and lesser-known producers,
+  supplemented with wines from France, Italy and Spain. Accessible, informative
+  and cosy.
 ---

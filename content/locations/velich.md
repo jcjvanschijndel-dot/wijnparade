@@ -16,4 +16,12 @@ description: >-
   serieus neemt.
 image: /uploads/velich.jpg
 website: https://www.velich.at/en/winery
+description_en: >-
+  Far to the east, close to the Hungarian border, you'll find this headstrong
+  winemaker. Among true connoisseurs their wines are highly regarded. It's a
+  long way, but fortunately you can stay to eat and sleep, and how!
+
+
+  Velich is in Apetlon on Lake Neusiedl, in Burgenland in Austria. Known for its
+  white wines, and recommended for anyone who takes Austrian wine seriously.
 ---

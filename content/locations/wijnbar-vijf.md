@@ -16,4 +16,14 @@ description: >-
   een gezellige avond met vrienden.
 image: /uploads/vijf.webp
 website: https://wijnbarvijf.nl/
+description_en: >-
+  A cosy wine bar overlooking the lock in the middle of Muiden. A really lovely
+  wine list with lots of original wineries you won't come across everywhere.
+  There's also an extensive shared dining menu, so you can easily stay all
+  evening!
+
+
+  Wijnbar Vijf is on the Herengracht in the historic fortified town of Muiden,
+  close to Amsterdam. A nice wine bar for summer drinks by the water or a cosy
+  evening with friends.
 ---

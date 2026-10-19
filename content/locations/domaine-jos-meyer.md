@@ -22,4 +22,21 @@ description: >-
   Open maandag t/m vrijdag 9.00-12.00 en 14.00-17.30, zaterdag 9.00-12.00. Zaterdagmiddag, zondag en feestdagen gesloten. Proeverijen uitsluitend op afspraak.
 image: /uploads/jos-meyer.webp
 website: https://domaine-josmeyer.com/
+description_en: >-
+  The Meyer family has made wine in Wintzenheim, a small village near Colmar,
+  since 1854. Five generations later, sisters Céline and Isabelle Meyer run the
+  domaine with the same drive with which their father Jean Meyer made the big
+  switch to organic-biodynamic farming in the 1990s. That choice, considered
+  risky by many at the time, transformed Josmeyer into one of the most respected
+  wineries in all of Alsace. The cellar, with centuries-old oak foudres, is one
+  of the most beautiful in the region. Importers and enthusiasts stepping inside
+  for the first time consistently describe a visit as "pure inspiration." Guided
+  tours of the cellar and vineyards, tastings by appointment. The cellar is a
+  place where you really understand what biodynamics means, from the way the
+  foudres are arranged to the harvest notes that have been kept for decades.
+  Combine the visit with a walk or bike ride along the Route des Vins d'Alsace:
+  Wintzenheim is on the most beautiful stretch of the route, between Colmar and
+  Turckheim. Open Monday to Friday 9.00-12.00 and 14.00-17.30, Saturday
+  9.00-12.00. Closed Saturday afternoon, Sunday and public holidays. Tastings by
+  appointment only.
 ---

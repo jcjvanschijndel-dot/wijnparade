@@ -16,4 +16,12 @@ description: >-
   Dagelijks, behalve zondag, geopend voor verkoop. Rondleidingen vanaf 12 personen.
 image: /uploads/apostelhoeve.webp
 website: https://www.apostelhoeve.nl/
+description_en: >-
+  On top of the Louwberg above the beautiful Jeker valley on the south side of
+  Maastricht lies the monumental 15th-century Apostelhoeve: the oldest and
+  largest vineyard in the Netherlands. Wines have been produced commercially
+  here since 1970. From among the vines you have an impressive view over the
+  Jeker valley and the city. It's also lovely to walk or cycle here from
+  Maastricht. Open for sales daily except Sunday. Tours for groups of 12 or
+  more.
 ---

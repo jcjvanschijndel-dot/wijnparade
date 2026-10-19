@@ -15,4 +15,10 @@ description: >-
   Bezoeken uitsluitend op reservering.
 image: /uploads/villa-ligi.webp
 website: https://www.villaligi.it/
+description_en: >-
+  Fattoria Villa Ligi is an authentic, non-commercial winery in Pergola, a small
+  town in the province of Pesaro-Urbino, inland in the northern Marche, about 40
+  km from the coast. The estate is tucked away in the hills and has run on
+  passion for the craft and the land for generations. Visits by reservation
+  only.
 ---

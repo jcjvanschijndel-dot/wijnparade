@@ -12,4 +12,9 @@ description: >-
   Wie juist op zoek is naar grote Franse namen zal die hier minder vanzelfsprekend vinden — maar wie openstaat voor de beste Rieslings van de Moezel komt hier volledig aan zijn trekken.
 image: /uploads/bagatelle.webp
 website: bagatelle.de
+description_en: >-
+  A restaurant that has been a well-known name in Trier for years. It sits right
+  on the Mosel, with a romantic terrace and a dreamy view over the water. If
+  you're looking for big French names, you'll find them less readily here, but
+  if you're open to the best Rieslings of the Mosel, you'll be in your element.
 ---

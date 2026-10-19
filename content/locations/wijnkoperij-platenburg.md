@@ -13,4 +13,12 @@ description: "Bijna 130 jaar oud, Koninklijk Hofleverancier sinds 2019 — en to
   proefgelegenheid is uniek in Rotterdam."
 image: /uploads/platenburg.webp
 website: https://www.wijnkoperijplatenburg.nl/
+description_en: >-
+  Almost 130 years old and a Purveyor to the Royal Household since 2019, yet far
+  from stuffy. More than 1,000 wines from all over the world, from European
+  classics to New World gems. In spring 2023 fourth-generation owner Julien
+  Platenburg opened Proef bij Platenburg next door: a wine bar and restaurant in
+  the same building, with special wines by the glass via Coravin every day. The
+  combination of a historic wine merchant and a lively tasting venue is unique
+  in Rotterdam.
 ---

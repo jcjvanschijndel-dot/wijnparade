@@ -15,4 +15,13 @@ description: >-
   Le Chai Bordin ligt in het centrum van Sarlat, in de Dordogne.
 image: /uploads/chai-bordin.webp
 website: https://www.lechaibordin.com/
+description_en: >-
+  The Sarlat branch of the much-loved wine shop and wine bar from Périgueux.
+  More than 1,500 wines from independent winemakers, mostly organic or
+  biodynamic, sold at direct domaine prices. Next to the shop is a wine bar with
+  around thirty wines by the glass each week, to enjoy with cheese and local
+  charcuterie.
+
+
+  Le Chai Bordin is in the centre of Sarlat, in the Dordogne.
 ---

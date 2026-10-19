@@ -15,4 +15,13 @@ description: >-
   een wijnbril wil beleven.
 image: /uploads/44.webp
 website: https://www.teatro44taormina.it/
+description_en: >-
+  A small oeno-bistro a few steps from the Ancient Theatre and the Villa
+  Comunale, tucked away in the quieter lanes of Taormina.
+
+
+  Teatro44 is a small wine bistro in Taormina, on Sicily. A lovely place for a
+  quiet meal and a glass of Sicilian wine after visiting the Greek theatre.
+  Recommended if you want to experience Taormina and the area around Etna
+  through a wine lens.
 ---

@@ -15,4 +15,14 @@ description: >-
   neem je je favoriete wijn ook mee naar huis.
 image: /uploads/zoldering.webp
 website: https://www.zoldering.nl/
+description_en: >-
+  For its wine list combined with beautiful dishes, really one of the top places
+  in Amsterdam. And it's great that you can also buy the wines in their own
+  shop, called Lof. The only drawback is that it's hard to get a reservation, so
+  book early.
+
+
+  Zoldering is on the Utrechtsestraat in Amsterdam. One of the best restaurants
+  in Amsterdam for wine lovers, and with their own wine shop Lof you can take
+  your favourite wine home too.
 ---

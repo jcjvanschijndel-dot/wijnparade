@@ -16,4 +16,14 @@ description: >-
   vidiano en liatiko.
 image: /uploads/salis.webp
 website: https://www.salischania.com/
+description_en: >-
+  Right on the old Venetian harbour of Chania, with a robust wine list ranging
+  from local Cretan grape varieties to international labels. A seasonal menu
+  with local produce, and a waterside terrace. Open daily 12.00-22.30. Booking
+  recommended.
+
+
+  Salis is a restaurant in Chania, on Crete. Recommended for discovering Cretan
+  wines with a view of the harbour, for example from the local grapes Vidiano
+  and Liatiko.
 ---

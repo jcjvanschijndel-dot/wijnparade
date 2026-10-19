@@ -10,4 +10,12 @@ minLat: 34.0
 maxLat: 42.0
 minLng: 19.0
 maxLng: 28.5
+name_en: Greece
+slug_en: greece
+country_en: Greece
+description_en: >-
+  Greece has one of the oldest wine traditions in the world, and the modern
+  Greek wine renaissance is now being discovered by the rest of Europe.
+  Santorini with its volcanic Assyrtiko, Crete with its Kotsifali and Athens as
+  a lively capital with a growing wine bar scene will surprise any wine lover.
 ---

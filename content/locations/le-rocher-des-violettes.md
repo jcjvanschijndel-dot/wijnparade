@@ -13,4 +13,11 @@ description: >-
   Xavier en Clémence Weisskopf ontvangen bezoekers uitsluitend op afspraak in hun cave in Dierre. Geen showroom, geen touroperator-sfeer — gewoon een gesprek over Montlouis, Chenin Blanc en de terroirs van de Loire met mensen die er hun leven aan wijden.
 image: /uploads/violettes.webp
 website: https://www.lerocherdesviolettes.com/
+description_en: >-
+  On the south bank of the Loire, opposite Vouvray, Xavier Weisskopf makes
+  Chenin Blanc that wine lovers increasingly mention in the same breath as the
+  greats of Vouvray, but at a fraction of the price. Xavier and Clémence
+  Weisskopf receive visitors by appointment only in their cellar in Dierre. No
+  showroom, no tour-operator feel: just a conversation about Montlouis, Chenin
+  Blanc and the terroirs of the Loire with people who devote their lives to it.
 ---

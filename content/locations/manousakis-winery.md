@@ -11,4 +11,9 @@ description: Eén van de leukere wijnhuizen om te bezoeken op Kreta. Via de
   probleem om die mee te nemen dus.
 image: /uploads/manousakis.webp
 website: https://www.manousakiswinery.com/
+description_en: >-
+  One of the nicer wineries to visit on Crete. You can easily book a tour and
+  tasting through the website, and taste some surprising wines here. They also
+  have a menu of Greek dishes with children in mind, so bringing them along is
+  no problem.
 ---

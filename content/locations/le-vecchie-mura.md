@@ -19,4 +19,14 @@ description: >-
   eten met een glas Toscaanse wijn.
 image: /uploads/mura.webp
 website: https://www.vecchiemura.it/
+description_en: >-
+  A lovely terrace! Opened in 1982 by the Bagnai family, just outside the old
+  city walls of San Gimignano. Dishes are still made to nonna Fiorella's
+  recipes: classics such as ribollita and rabbit with white wine have been on
+  the menu since the beginning.
+
+
+  Le Vecchie Mura is a restaurant in San Gimignano, the Tuscan town of towers. A
+  nice place to eat real Tuscan food with a glass of Tuscan wine after a day of
+  sightseeing.
 ---

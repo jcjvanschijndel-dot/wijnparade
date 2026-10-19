@@ -12,4 +12,10 @@ description: 'Meer dan een wijnwinkel: een ontmoetingsplek voor wijnliefhebbers,
   van de nieuwe referentiepunten van de Spaanse wijnscene.'
 image: /uploads/baco.webp
 website: https://bacoenoteca.es/
+description_en: >-
+  More than a wine shop: a meeting place for wine lovers, founded by Juanjo
+  Muñoz from the belief that every bottle tells a story. Besides selling wine,
+  Baco regularly holds themed tastings, "Wine Flights" (taste three wines before
+  deciding what to buy) and talks on the history of Rioja wine. In less than a
+  year it has become one of the new reference points of the Spanish wine scene.
 ---

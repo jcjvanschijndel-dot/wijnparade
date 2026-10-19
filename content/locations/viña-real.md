@@ -14,4 +14,10 @@ description: >-
   Het absolute hoogtepunt: twee enorme tunnels, 125 meter lang en 15 meter hoog, uitgehouwen in het rotsgesteente van de berg, waarin de vaten staan opgeslagen.
 image: /uploads/vina-real.jpg
 website: https://cvne.com/en/
+description_en: >-
+  High on a hill stands this mighty, cylindrical building, designed by Frenchman
+  Philippe Mazières, the same architect who designed the cellars of Château
+  Margaux and Château Lafite-Rothschild. Construction took from 1997 to 2004.
+  The absolute highlight: two enormous tunnels, 125 metres long and 15 metres
+  high, carved into the rock of the hill, where the barrels are stored.
 ---

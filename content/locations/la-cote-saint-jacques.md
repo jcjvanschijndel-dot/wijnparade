@@ -15,4 +15,13 @@ description: >-
   La Côte Saint-Jacques ligt in Joigny, in het noorden van Bourgogne.
 image: /uploads/saint-jacques.webp
 website: https://www.cotesaintjacques.com/
+description_en: >-
+  The wine list has 800 references, guided by a knowledgeable sommelier who also
+  handles the wine pairings. A special feature: La Côte Saint-Jacques organises
+  wine tastings in small groups hosted by winemakers, owners or cellar masters,
+  an exclusive way to taste great Burgundy wines straight from the people who
+  make them.
+
+
+  La Côte Saint-Jacques is in Joigny, in the north of Burgundy.
 ---

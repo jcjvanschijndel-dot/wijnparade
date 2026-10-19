@@ -17,4 +17,8 @@ description: >+
 
 image: /uploads/bott.webp
 website: https://www.bott-geyl.com/
+description_en: >-
+  The vineyards (20 hectares spread over 80 plots in seven villages, with six
+  grand cru sites) are farmed entirely organically and biodynamically. Harvested
+  by hand, with as little intervention as possible in the cellar.
 ---

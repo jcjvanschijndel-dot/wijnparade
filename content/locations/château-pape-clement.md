@@ -17,4 +17,14 @@ description: "Het domein ligt in Pessac, op zo'n 15 minuten van het centrum van
   meubilair van een oude apotheek."
 image: /uploads/pape-clement.jpeg
 website: https://www.chateau-pape-clement.fr/
+description_en: >-
+  The estate is in Pessac, about 15 minutes from the centre of Bordeaux, and
+  like its famous neighbour Château Haut-Brion it is a striking example of an
+  urban vineyard, set around a park with centuries-old trees and a greenhouse
+  built by Gustave Eiffel. The château can be visited seven days a week by
+  appointment, with a wide range of technical and historical tours, from
+  beginner level to extended vertical tastings and even wine and truffle
+  pairings for the seasoned collector. A special experience: a tasting in which
+  certain senses are deliberately switched off so you approach wine from a
+  different angle. The tour ends in the boutique.
 ---

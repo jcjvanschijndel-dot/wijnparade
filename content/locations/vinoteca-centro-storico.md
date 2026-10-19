@@ -18,4 +18,17 @@ description: >-
 
   Drie antipasti, drie primi, drie secondi — dagelijks wisselend. Tajarin, plin, fassone rundvlees, klassieke Piemontese desserts.
 image: /uploads/vinoteca-centro-storico.webp
+description_en: >-
+  Tucked beneath the walls of the 14th-century castle of Serralunga d'Alba, one
+  of the best-preserved medieval castles in Piedmont, Alessio Cighetti opened
+  his Vinoteca Centro Storico. A small, cosy wine restaurant and enoteca in one:
+  wine bottles and prosciutto legs on the walls, a handwritten menu at the
+  entrance, classic rock in the background. Star Wine List Red Star. The
+  absolute star: the best Champagne list in the whole Langhe. Besides Barolo and
+  Barbaresco from local top producers, Alessio keeps an impressive selection of
+  Champagne, Burgundy, Bordeaux and Mosel, rare bottles you won't find anywhere
+  else in the region. Anyone who comes in just for a glass is treated like
+  royalty. Fair prices for the quality. Three antipasti, three primi, three
+  secondi, changing daily: tajarin, plin, Fassone beef, classic Piedmontese
+  desserts.
 ---

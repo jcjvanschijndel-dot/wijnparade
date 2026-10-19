@@ -15,4 +15,13 @@ description: >-
   Een fijne wijnbar om de lokale wijnen uit de Languedoc te ontdekken.
 image: /uploads/part-des-anges.webp
 website: https://www.lapartdesangesmontpellier.com/
+description_en: >-
+  A wine bar in a historic stone building in the old town: bottles stacked to
+  the ceiling, an intimate atmosphere and a focus on local wines from the
+  region. Light bites alongside. The kind of place you go to for one glass and
+  are still sitting two hours later.
+
+
+  La Part des Anges is in the old town of Montpellier, in the Languedoc. A nice
+  wine bar for discovering the local wines of the Languedoc.
 ---

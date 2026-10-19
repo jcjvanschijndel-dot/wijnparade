@@ -16,4 +16,14 @@ description: >-
   Het restaurant staat bekend om zijn verfijnde desserts: profiteroles, citroentaart, parfait. De wijn- en champagneselectie is zorgvuldig samengesteld — logisch, gezien de ligging op een steenworp van de Avenue de Champagne.
 image: /uploads/l-oben.webp
 website: https://www.restaurantloben.fr/nl/
+description_en: >-
+  L'Oben is the brainchild of Loïc and Benjamin, whose names were combined to
+  form the name of the restaurant. Small, intimate and always full: the regulars
+  are mostly locals, which tells you straight away how good it is. The
+  restaurant seats at most 26 guests, which makes the atmosphere both exclusive
+  and cosy. Michelin Bib Gourmand, the recognition for excellent quality at fair
+  prices. The restaurant is known for its refined desserts: profiteroles, lemon
+  tart, parfait. The wine and champagne selection is carefully put together,
+  which makes sense given its location a stone's throw from the Avenue de
+  Champagne.
 ---

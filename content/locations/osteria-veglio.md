@@ -15,4 +15,13 @@ description: >-
   restaurants tijdens een wijnreis door de Barolo-streek.
 image: /uploads/osteria-veglio.webp
 website: https://www.osteriaveglio.it/
+description_en: >-
+  Don't miss this one when visiting Barolo and Barbaresco. A terrace with a
+  beautiful view over Barolo and a delicious Piedmontese menu. And the owner
+  isn't above fetching older vintages of the Barolos on the list from the
+  cellar, for the same price!
+
+
+  Osteria Veglio is in La Morra, in the Langhe in Piedmont. One of the nicest
+  restaurants during a wine trip through the Barolo area.
 ---

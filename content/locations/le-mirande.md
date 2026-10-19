@@ -21,4 +21,21 @@ description: >-
   De wijnkaart focust op biologische en low-interventie producenten, met maar liefst vijf pagina's gewijd aan Châteauneuf-du-Pape — logisch, want Avignon ligt er vlak naast. Een ruime selectie per glas. De keuken van Le Restaurant werkt met tasting menu's van 3, 5 of 7 gangen, sterk seizoensgebonden en lokaal: olijfolie, groenten van eigen bodem, vis en vlees uit de regio.
 image: /uploads/mirande.webp
 website: la-mirande.fr
+description_en: >-
+  La Mirande offers four completely different dining experiences under one roof.
+  Le Restaurant (one Michelin star + Green Star, chef Florent Pietravalle)
+  serves seasonal Provençal cooking in the historic Salle Cardinalice or on the
+  terrace at the foot of the Palais des Papes. La Table Haute is the most
+  special experience: up to 12 guests sit at a big table in the old 19th-century
+  kitchen while the chef cooks dinner on the original charcoal range; the
+  evening starts with an aperitif in the wine cellar (€120 p.p. including wine
+  pairing). Le Bistrot Pamard is for a relaxed à la carte lunch or dinner. Le
+  Mirage is a tavern with a daily menu of organic and local produce, made in an
+  open kitchen with a wood-fired oven. There's also a cookery school ("Le
+  Marmiton") and a bar with afternoon tea. The wine list focuses on organic and
+  low-intervention producers, with no fewer than five pages devoted to
+  Châteauneuf-du-Pape, which makes sense, as Avignon is right next door. A wide
+  selection by the glass. The kitchen at Le Restaurant works with tasting menus
+  of 3, 5 or 7 courses, strongly seasonal and local: olive oil, home-grown
+  vegetables, fish and meat from the region.
 ---
