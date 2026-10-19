@@ -133,6 +133,20 @@ body {
 .lang-flags a.is-current { border-color: var(--navy); }
 .lang-flags .flag { width: 30px; height: 20px; }
 
+/* Instagram: logo in de header en volgblok onderaan elke pagina */
+.ig-follow-btn { display: inline-flex; margin-left: 0.75rem; line-height: 0; transition: transform .15s; }
+.ig-follow-btn:hover { transform: scale(1.08); }
+.ig-follow-btn .ig-logo { width: 28px; height: 28px; }
+.ig-card-section { padding: 2.5rem 0; margin-top: 2rem; background: white; border-top: 1px solid var(--gray-200); }
+.ig-card-section + .footer, .ig-card-section ~ .footer { margin-top: 0; }
+.ig-promo { display: flex; align-items: center; justify-content: center; gap: 1.25rem; text-decoration: none; }
+.ig-logo-round { width: 92px; height: 92px; flex-shrink: 0; transition: transform .2s; }
+.ig-promo:hover .ig-logo-round { transform: scale(1.05); }
+.ig-promo-text { display: flex; flex-direction: column; line-height: 1; }
+.ig-promo-top { font-size: 1.6rem; font-weight: 700; color: #333; letter-spacing: -0.3px; }
+.ig-promo-word { font-family: 'Grand Hotel', cursive; font-size: 3.6rem; line-height: 1.1; padding-right: .15em; background: linear-gradient(90deg, #f9ce34, #fa7e1e 30%, #ee2a7b 60%, #6228d7); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media (max-width: 480px) { .ig-logo-round { width: 68px; height: 68px; } .ig-promo { gap: 0.9rem; } .ig-promo-top { font-size: 1.2rem; } .ig-promo-word { font-size: 2.7rem; } }
+
 .instagram-profile-link {
     display: inline-flex;
     align-items: center;
@@ -336,36 +350,6 @@ body {
 .page-intro {
     color: var(--gray-600);
     font-size: 1rem;
-}
-
-/* Tips Form Section */
-.tips-form-section {
-    background: var(--gray-50);
-    padding: 3rem 0;
-    margin-top: 2rem;
-}
-
-.form-title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.form-intro {
-    text-align: center;
-    color: var(--gray-600);
-    margin-bottom: 2rem;
-}
-
-.tips-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--gray-200);
 }
 
 .form-group {
@@ -766,10 +750,6 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .tips-form {
-        padding: 1.5rem;
-    }
-
     .list-link {
         padding: 1rem;
     }
@@ -812,37 +792,6 @@ textarea {
         margin-bottom: 1rem;
     }
 }
-/* Instagram Follow Section */
-.instagram-follow {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.instagram-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 12px rgba(131, 58, 180, 0.3);
-}
-
-.instagram-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(131, 58, 180, 0.4);
-}
-
-.instagram-link svg {
-    width: 24px;
-    height: 24px;
-}
-
 /* Homepage H1 */
 .page-hero-title {
     font-size: 1rem;
@@ -865,3 +814,12 @@ textarea {
     height: 1em;
     flex-shrink: 0;
 }
+
+/* Kruimelpad onder de header */
+.breadcrumb { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); font-size: 0.8rem; }
+.breadcrumb ol { list-style: none; margin: 0; padding: 0.6rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0; color: var(--gray-600); }
+.breadcrumb li { display: inline-flex; align-items: center; min-width: 0; }
+.breadcrumb li + li::before { content: "›"; margin: 0 0.5rem; color: #9ca3af; }
+.breadcrumb a { color: var(--navy); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb li[aria-current] { color: var(--gray-900); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60vw; }

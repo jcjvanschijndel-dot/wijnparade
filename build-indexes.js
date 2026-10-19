@@ -9,6 +9,40 @@ const path = require('path');
 
 const CONTENT_DIR = path.join(__dirname, 'content');
 
+// ============================================================
+// INSTAGRAM: volgknop in de header en volgblok onderaan elke pagina
+//   (zelfde HTML staat ook in de vaste pagina's zoals index.html)
+// ============================================================
+const IG_URL = 'https://www.instagram.com/de_wijnparade/';
+// Instagram-logo in de officiële kleuren: vierkant (header) en rond (volgblok)
+const IG_LOGO = '<svg class="ig-logo" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-grad)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.3" cy="7.7" r="1.1" fill="#fff"/></svg>';
+const IG_LOGO_ROUND = '<svg class="ig-logo-round" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig-grad)"/><rect x="6" y="6" width="12" height="12" rx="3.5" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="15.6" cy="8.4" r="0.9" fill="#fff"/></svg>';
+const igFollowBtn = (lang = 'nl') =>
+  `<a href="${IG_URL}" target="_blank" rel="noopener" class="ig-follow-btn" aria-label="${lang === 'en' ? 'Follow us on Instagram' : 'Volg ons op Instagram'}" title="Instagram">${IG_LOGO}</a>`;
+// Kruimelpad onder de header, plus BreadcrumbList voor Google.
+//   items: [{ name, path }]; het laatste item is de huidige pagina (zonder link).
+const breadcrumb = (items, lang = 'nl') => {
+  const esc = t => String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const ld = { '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: String(it.name),
+      ...(it.path ? { item: SITE_URL + it.path } : {}) })) };
+  const li = items.map((it, i) => i < items.length - 1 && it.path
+    ? `<li><a href="${esc(it.path)}">${esc(it.name)}</a></li>`
+    : `<li aria-current="page">${esc(it.name)}</li>`).join('');
+  return `<nav class="breadcrumb" aria-label="${lang === 'en' ? 'Breadcrumb' : 'Kruimelpad'}"><div class="container"><ol>${li}</ol></div></nav>
+  <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
+};
+const igFollowCard = (lang = 'nl') => `<section class="ig-card-section"><div class="container">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap&text=Instagram" media="print" onload="this.media='all'">
+    <a href="${IG_URL}" target="_blank" rel="noopener" class="ig-promo">
+      ${IG_LOGO_ROUND}
+      <span class="ig-promo-text">
+        <span class="ig-promo-top">${lang === 'en' ? 'Follow us on' : 'Volg ons op'}</span>
+        <span class="ig-promo-word">Instagram</span>
+      </span>
+    </a>
+  </div></section>`;
+
 console.log('🔨 Generating content indexes...');
 
 // Get all subdirectories in content/
@@ -167,34 +201,21 @@ for (const file of locationFiles) {
         <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
         <span class="header-logo-name">de_wijnparade</span>
       </a>
-      <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:white;font-size:11px;font-weight:600;">Volgen</span></a>
+      ${igFollowBtn()}
     </div>
   </div></header>
   <main class="main"><div class="container">
-    <a href="/wijnkaart" class="back-button">← Terug naar kaart</a>
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <div class="recipe-header">
       <h1 class="recipe-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
       <div class="recipe-wine">${typeLabel}</div>
     </div>
     <div class="info-section"><div class="info-label">Adres</div><div class="info-value">${loc.address || ''}</div></div>
-    <div class="info-section"><div class="info-label">ℹ️ Over deze locatie</div><div class="info-value">${description}</div></div>
+    <div class="info-section"><div class="info-label">Over deze locatie</div><div class="info-value">${description}</div></div>
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">Bezoek website →</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
   </div></main>
-  <section class="tips-form-section"><div class="container">
-    <h2 class="form-title">Geef je tips door!</h2>
-    <p class="form-intro">Ken jij een geweldige wijn of locatie? Deel het met ons!</p>
-    <form name="tips" method="POST" data-netlify="true" class="tips-form" action="/bedankt.html">
-      <input type="hidden" name="form-name" value="tips">
-      <div class="form-group"><label for="tip">Jouw tip</label><textarea id="tip" name="tip" rows="4" required placeholder="Vertel ons over je tip..."></textarea></div>
-      <div class="form-row">
-        <div class="form-group"><label for="tipname">Naam</label><input type="text" id="tipname" name="name" required placeholder="Je naam"></div>
-        <div class="form-group"><label for="tipemail">E-mail</label><input type="email" id="tipemail" name="email" required placeholder="je@email.nl"></div>
-      </div>
-      <button type="submit" class="submit-btn">Versturen</button>
-    </form>
-  </div></section>
+  ${igFollowCard()}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
   </div></footer>
@@ -610,10 +631,11 @@ for (const region of REGIONS) {
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
-        <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:white;font-size:11px;font-weight:600;">Volgen</span></a>
+        ${igFollowBtn()}
       </div>
     </div>
   </header>
+  ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name }])}
 
   <div class="region-hero">
     <div class="container">
@@ -642,6 +664,7 @@ for (const region of REGIONS) {
     </div>
   </main>
 
+  ${igFollowCard()}
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
@@ -721,6 +744,9 @@ for (const loc of allLocations) {
 
   // Meest specifieke regio (kleinste kader) waar deze locatie in valt
   const region = REGIONS.filter(r => inBounds(loc, r)).sort((a, b) => boxSize(a) - boxSize(b))[0];
+  page = page.replace('</header>', '</header>\n  ' + breadcrumb(region
+    ? [{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name, path: regionPath(region.id) }, { name: loc.title || loc.name }]
+    : [{ name: 'Home', path: '/' }, { name: 'Alle locaties', path: '/locaties' }, { name: loc.title || loc.name }]));
 
   // Dichtstbijzijnde andere locaties (binnen de regio als die er is)
   const pool = (region ? geoLocs.filter(l => inBounds(l, region)) : geoLocs)
@@ -741,7 +767,7 @@ for (const loc of allLocations) {
     </p>
   </div></section>
 `;
-  const anchor = '<section class="tips-form-section">';
+  const anchor = '<section class="ig-card-section">';
   page = page.includes(anchor) ? page.replace(anchor, block + '  ' + anchor)
                                : page.replace('<footer', block + '<footer');
   fs.writeFileSync(pagePath, page);
@@ -772,6 +798,8 @@ for (const f of ['wijnreizen.html', 'wijnkaart.html']) {
   let page = fs.readFileSync(fp, 'utf8');
   if (/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/.test(page)) {
     page = page.replace(/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/, regionListHtml);
+  } else if (page.includes('<section class="ig-card-section">')) {
+    page = page.replace('<section class="ig-card-section">', regionListHtml + '\n    <section class="ig-card-section">');
   } else if (page.includes('<footer')) {
     page = page.replace('<footer', regionListHtml + '\n<footer');
   } else {
@@ -898,9 +926,10 @@ const COUNTRY_BY_ID = new Map();
       <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
       <span class="header-logo-name">de_wijnparade</span>
     </a>
+    ${igFollowBtn()}
   </div></div></header>
+  ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Alle locaties' }])}
   <main class="main"><div class="container">
-    <a href="/wijnkaart" class="back-button">← Naar de kaart</a> &nbsp; <a href="/wijnreizen" class="back-button">Regiogidsen</a>
     <h1 style="color:var(--navy);margin-top:1rem">Alle wijnlocaties</h1>
     <p>${all.length} wijnhuizen, wijnbars, restaurants en wijnwinkels in ${countries.length} landen.</p>
     ${countries.map(c => {
@@ -917,6 +946,7 @@ const COUNTRY_BY_ID = new Map();
       return `<h2 class="loc-country">${escHtml(c)} (${groups[c].length})</h2>\n    ${body}`;
     }).join('\n    ')}
   </div></main>
+  ${igFollowCard()}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
   </div></footer>
@@ -1125,10 +1155,11 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
-        <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4a0e2e,#d12b64,#fff3e0);border-radius:50px;padding:0.3rem 0.65rem;text-decoration:none;"><svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg><span style="color:#4a0e2e;font-size:11px;font-weight:600;">Volgen</span></a>
+        ${igFollowBtn()}
       </div>
     </div>
   </header>
+  ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Shop', path: '/shop' }, { name }])}
 
   <main class="main">
     <div class="container">
@@ -1206,6 +1237,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     </div>
   </div>
 
+  ${igFollowCard()}
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
@@ -1317,7 +1349,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       `${FLAG[lang]}<span>${LANG_NAME[lang]}</span>`)).join('')}</div></details>` +
     `<script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})})</script>`;
 
-  const enPage = ({ title, description, enPath, nlPath, body, extraHead = '', extraBody = '' }) => `<!DOCTYPE html>
+  const enPage = ({ title, description, enPath, nlPath, body, crumbs = null, extraHead = '', extraBody = '' }) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1374,9 +1406,12 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <a href="/en/">Wine guides</a>
       <a href="/en/all-locations">All locations</a>
     </nav>
+    ${igFollowBtn('en')}
     ${langMenu('en', nlPath, enPath)}
   </div></div></header>
+  ${crumbs ? breadcrumb(crumbs, 'en') : ''}
   ${body}
+  ${igFollowCard('en')}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener">@de_wijnparade</a></p>
   </div></footer>
@@ -1443,7 +1478,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     </div></main>`;
     const file = path.join(__dirname, r.enPath.slice(1) + '.html');
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, enPage({ title, description, enPath: r.enPath, nlPath: regionPath(r.id), body }));
+    fs.writeFileSync(file, enPage({ title, description, enPath: r.enPath, nlPath: regionPath(r.id), body,
+      crumbs: [{ name: 'Home', path: '/en/' }, { name: r.nameEn }] }));
     enUrls.push(r.enPath);
   }
 
@@ -1464,12 +1500,12 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       ...(l.lat && l.lng ? { geo: { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lng } } : {})
     };
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', `/locations/${escHtml(l._id)}`, enLocPath(l))}${r ? `<a href="${r.enPath}">← ${escHtml(r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`)}</a>` : ''}</p>
+      <p class="lang-switch">${langFlags('en', `/locations/${escHtml(l._id)}`, enLocPath(l))}</p>
       ${l.image ? `<img src="${escHtml(l.image)}" alt="${escHtml(name)}" class="en-hero-img">` : ''}
       <h1 class="en-h1">${escHtml(name)}</h1>
       <div class="en-sub">${escHtml(cap(type))}${city ? ` in ${escHtml(city)}` : ''}</div>
       <div class="en-box"><h2>Address</h2><div>${escHtml(l.address || '')}</div></div>
-      <div class="en-box"><h2>ℹ️ About</h2><div class="en-text">${escHtml(String(l.description_en).trim())}</div></div>
+      <div class="en-box"><h2>About</h2><div class="en-text">${escHtml(String(l.description_en).trim())}</div></div>
       ${l.website ? `<a class="en-btn" href="${escHtml(websiteUrl(l.website))}" target="_blank" rel="noopener">Visit website →</a>` : ''}
       ${l.lat && l.lng ? '<div class="en-map" id="locationMap"></div>' : ''}
       ${r ? `<p><a href="${r.enPath}" style="color:var(--navy);font-weight:600">More in ${escHtml(r.nameEn)} →</a></p>` : ''}
@@ -1483,7 +1519,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     L.marker([${Number(l.lat)}, ${Number(l.lng)}]).addTo(map);
   </script>` : '';
     fs.writeFileSync(path.join(__dirname, 'en', 'locations', `${l._id}.html`),
-      enPage({ title, description, enPath, nlPath: `/locations/${l._id}`, body, extraHead: mapHead, extraBody: mapBody }));
+      enPage({ title, description, enPath, nlPath: `/locations/${l._id}`, body, extraHead: mapHead, extraBody: mapBody,
+        crumbs: [{ name: 'Home', path: '/en/' }, r ? { name: r.nameEn, path: r.enPath } : { name: 'All locations', path: '/en/all-locations' }, { name }] }));
     enUrls.push(enPath);
   }
 
@@ -1526,7 +1563,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const groups = {};
     for (const l of enLocs) (groups[enCountry(COUNTRY_BY_ID.get(l._id))] ||= []).push(l);
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', '/locaties', '/en/all-locations')}<a href="/en/">← Wine guides by region</a></p>
+      <p class="lang-switch">${langFlags('en', '/locaties', '/en/all-locations')}</p>
       <h1 class="en-h1">All wine locations</h1>
       <p class="en-sub">All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.</p>
       ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)} (${groups[c].length})</h2>
@@ -1537,7 +1574,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     fs.writeFileSync(path.join(__dirname, 'en', 'all-locations.html'), enPage({
       title: 'All wine locations in Europe: wineries, wine bars and restaurants | de_wijnparade',
       description: `All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.`,
-      enPath: '/en/all-locations', nlPath: '/locaties', body }));
+      enPath: '/en/all-locations', nlPath: '/locaties', body,
+      crumbs: [{ name: 'Home', path: '/en/' }, { name: 'All locations' }] }));
     enUrls.splice(1, 0, '/en/all-locations');
   }
 
@@ -1562,7 +1600,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     let html = fs.readFileSync(home, 'utf8');
     if (!html.includes('class="lang-menu"')) {
       html = html.replace(/\s*<a href="\/en\/" hreflang="en" lang="en">English<\/a>/, '')
-        .replace(/(<\/nav>)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n                ${langMenu('nl', '/', '/en/')}$2`);
+        .replace(/(<header[\s\S]*?)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n                ${langMenu('nl', '/', '/en/')}$2`);
       fs.writeFileSync(home, html);
     }
   }
@@ -1609,7 +1647,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   // URL zonder accenten: grüner-veltliner -> gruner-veltliner
   const slugOf = id => String(id).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-  const pairingPage = ({ title, description, canonical, h1, body }) => `<!DOCTYPE html>
+  const pairingPage = ({ title, description, canonical, h1, body, crumbs }) => `<!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1628,8 +1666,6 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
-    .ws-crumbs{font-size:.85rem;color:var(--gray-600);margin:1rem 0}
-    .ws-crumbs a{color:var(--navy)}
     .ws-h1{font-size:1.6rem;color:var(--navy);margin:.5rem 0 1rem;line-height:1.3}
     .ws-intro{line-height:1.8;margin-bottom:2rem;color:var(--gray-900);white-space:pre-line}
     .ws-section{margin-bottom:2rem}
@@ -1654,11 +1690,14 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <a href="/wijnreizen">Reisgidsen</a>
       <a href="/wijn-spijs">Wijn &amp; spijs</a>
     </nav>
+    ${igFollowBtn()}
   </div></div></header>
+  ${breadcrumb(crumbs)}
   <main class="main"><div class="container">
     ${h1}
     ${body}
   </div></main>
+  ${igFollowCard()}
   <footer class="footer"><div class="container">
     <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener">@de_wijnparade</a></p>
   </div></footer>
@@ -1696,7 +1735,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const d = dishByName.get(norm(name));
     return d ? `<a href="/wijn-bij/${slugOf(d._id)}">${escHtml(name)}</a>` : `<strong>${escHtml(name)}</strong>`;
   };
-  const crumbs = current => `<div class="ws-crumbs"><a href="/">Home</a> › <a href="/wijn-spijs">Wijn &amp; spijs</a> › ${escHtml(current)}</div>`;
+  const crumbs = current => [{ name: 'Home', path: '/' }, { name: 'Wijn & spijs', path: '/wijn-spijs' }, { name: current }];
   const pairingUrls = [];
 
   // --- /wijn-bij/<gerecht> ---
@@ -1729,7 +1768,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       title: `Welke wijn bij ${d.dish}? Wijntips | de_wijnparade`,
       description: `Welke wijn drink je bij ${d.dish}? Onze topkeuzes: ${leadText}. Plus goede alternatieven, met sterren per combinatie.`.substring(0, 160),
       canonical,
-      h1: `${crumbs(d.dish)}<h1 class="ws-h1">Welke wijn bij ${escHtml(d.dish)}?</h1>`,
+      crumbs: crumbs(d.dish),
+      h1: `<h1 class="ws-h1">Welke wijn bij ${escHtml(d.dish)}?</h1>`,
       body: `<p class="ws-intro">${escHtml(intro)}</p>
     ${sections}
     <section class="ws-section"><h2>Meer wijn-spijscombinaties</h2><div class="ws-links">
@@ -1763,7 +1803,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       title: `Wat eet je bij ${w.wine}? Gerechten bij ${w.wine} | de_wijnparade`,
       description: `Welk eten past bij ${w.wine}? Bijvoorbeeld ${leadText}. Bekijk alle gerechten die goed combineren met ${w.wine}.`.substring(0, 160),
       canonical,
-      h1: `${crumbs(w.wine)}<h1 class="ws-h1">Wat eet je bij ${escHtml(w.wine)}?</h1>`,
+      crumbs: crumbs(w.wine),
+      h1: `<h1 class="ws-h1">Wat eet je bij ${escHtml(w.wine)}?</h1>`,
       body: `<p class="ws-intro">${escHtml(intro)}</p>
     ${own.length ? `<section class="ws-section"><h2>Gerechten bij ${escHtml(w.wine)}</h2><ul class="ws-list">
       ${own.map(n => `<li>${dishLink(n)}</li>`).join('\n      ')}
@@ -1785,7 +1826,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     title: 'Wijn-spijscombinaties: welke wijn bij welk gerecht? | de_wijnparade',
     description: `Welke wijn drink je bij asperges, kaas of wild? En wat eet je bij een Riesling of Barolo? Wijn-spijstips voor ${dishes.length} gerechten en ${wines.length} wijnen.`.substring(0, 160),
     canonical: overviewUrl,
-    h1: `<div class="ws-crumbs"><a href="/">Home</a> › Wijn &amp; spijs</div><h1 class="ws-h1">Welke wijn bij welk gerecht?</h1>`,
+    crumbs: [{ name: 'Home', path: '/' }, { name: 'Wijn & spijs' }],
+    h1: `<h1 class="ws-h1">Welke wijn bij welk gerecht?</h1>`,
     body: `<p class="ws-intro">De juiste wijn maakt een gerecht nog beter, en andersom. Kies hieronder je gerecht en ontdek welke wijnen er het best bij passen. Heb je al een fles in huis? Kies dan je wijn en zie welke gerechten erbij passen.</p>
     <section class="ws-section"><h2>Welke wijn bij…</h2><div class="ws-links">
       ${dishes.filter(d => d.wines.length).map(d => `<a href="/wijn-bij/${slugOf(d._id)}">${escHtml(d.dish)}</a>`).join('\n      ')}
