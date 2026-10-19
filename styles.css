@@ -148,6 +148,7 @@ body {
 .ig-bio { font-size: 0.875rem; color: #737373; line-height: 1.4; }
 .ig-btn { flex-shrink: 0; padding: 0.5rem 1.1rem; background: #0095F6; color: white; border-radius: 8px; font-size: 0.875rem; font-weight: 600; }
 .ig-card:hover .ig-btn { background: #1877F2; }
+.ig-card-section + .footer, .ig-card-section ~ .footer { margin-top: 0; }
 @media (max-width: 480px) { .ig-card { gap: 0.75rem; padding: 0.85rem; } .ig-avatar { width: 54px; height: 54px; } .ig-btn { padding: 0.45rem 0.85rem; } }
 
 .instagram-profile-link {
