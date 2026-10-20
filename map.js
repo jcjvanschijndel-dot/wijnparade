@@ -125,6 +125,7 @@ async function loadLocationsFromCMS(skipFit = false) {
         if (wineLocations.length > 0) {
             addMarkers(wineLocations);
             if (!skipFit) fitMapToMarkers();
+            openFocusedLocation();
         }
         
     } catch (error) {
@@ -148,6 +149,7 @@ function addMarkers(locations) {
         });
 
         marker.addListener('click', () => {
+            infoWindow.setOptions({ pixelOffset: null });
             infoWindow.setContent(createInfoWindowContent(location));
             infoWindow.open(map, marker);
         });
@@ -194,6 +196,17 @@ function getTypeLabel(type) {
         ? { 'wijnbar': '🍾 Wine bar', 'wijnwinkel': '🏪 Wine shop', 'wijnhuis': '🏰 Winery', 'restaurant': '🍽️ Restaurant' }
         : { 'wijnbar': '🍾 Wijnbar', 'wijnwinkel': '🏪 Wijnwinkel', 'wijnhuis': '🏰 Wijnhuis', 'restaurant': '🍽️ Restaurant' };
     return labels[type] || type;
+}
+
+// Komt de bezoeker via het adres op een locatiepagina (?id=...), open dan meteen de popup van die locatie
+function openFocusedLocation() {
+    const id = new URLSearchParams(window.location.search).get('id');
+    const location = id && wineLocations.find(l => l.id === id || l.id.normalize('NFC') === id.normalize('NFC'));
+    if (!location) return;
+    infoWindow.setContent(createInfoWindowContent(location));
+    infoWindow.setPosition({ lat: location.lat, lng: location.lng });
+    infoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
+    infoWindow.open(map);
 }
 
 function fitMapToMarkers() {
