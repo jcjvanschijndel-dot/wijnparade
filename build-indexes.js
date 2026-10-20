@@ -125,12 +125,13 @@ function cityFromAddress(addr) {
 // LOCATIEPAGINA-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
 // ============================================================
 const LOC_TEXT = {
-  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →' },
-  en: { address: 'Address', about: 'About this location', website: 'Visit website →' },
+  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', openMap: 'Open in Google Maps ↗' },
+  en: { address: 'Address', about: 'About this location', website: 'Visit website →', openMap: 'Open in Google Maps ↗' },
 };
 function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema,
                               logoHref = '/wijnkaart', headExtra = '', headerExtra = '', afterHeader = '', beforeCard = '' }) {
   const t = LOC_TEXT[lang];
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, ${loc.address || ''}`)}`;
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -151,13 +152,18 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
-    .location-hero{width:100%;height:350px;object-fit:cover;border-radius:12px;margin-bottom:2rem}
+    .location-hero{width:100%;height:350px;object-fit:cover;border-radius:12px;margin-bottom:1.25rem}
+    .loc-title{font-size:1.5rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:1.25rem}
+    .loc-address{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .75rem;padding:.75rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;margin-bottom:1rem;text-decoration:none;color:var(--gray-900);font-size:.9rem;transition:border-color .2s}
+    .loc-address:hover{border-color:var(--navy)}
+    .loc-address-label{font-weight:600;color:var(--navy)}
+    .loc-address-cta{margin-left:auto;color:var(--navy);font-weight:500;white-space:nowrap}
     .location-map{height:350px;border-radius:12px;border:1px solid var(--gray-200);margin:2rem 0}
     .info-section{padding:1.5rem;background:var(--gray-50);border-radius:12px;border:1px solid var(--gray-200);margin-bottom:1.5rem}
     .info-label{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1rem}
     .info-value{font-size:1rem;color:var(--gray-900);line-height:1.8;white-space:pre-wrap}
     .website-btn{display:inline-block;padding:0.75rem 1.5rem;background:var(--navy);color:#fff;text-decoration:none;border-radius:8px;font-weight:500;margin:1rem 0}
-    @media(max-width:768px){.location-hero{height:250px}.location-map{height:300px}}
+    @media(max-width:768px){.location-hero{height:250px}.location-map{height:300px}.loc-title{font-size:1.3rem}}
   </style>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
@@ -176,12 +182,9 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   ${afterHeader}
   <main class="main"><div class="container">
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
-    <div class="recipe-header">
-      <h1 class="recipe-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
-      <div class="recipe-wine">${typeLabel}</div>
-    </div>
-    <div class="info-section"><div class="info-label">${t.address}</div><div class="info-value">${loc.address || ''}</div></div>
+    <h1 class="loc-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
     <div class="info-section"><div class="info-label">${t.about}</div><div class="info-value">${description}</div></div>
+    ${loc.address ? `<a class="loc-address" href="${mapsUrl}" target="_blank" rel="noopener"><span class="loc-address-label">${t.address}</span><span>${loc.address}</span><span class="loc-address-cta">${t.openMap}</span></a>` : ''}
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
   </div></main>
@@ -548,8 +551,8 @@ function regionSeo(region) {
 // REGIOGIDS-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
 // ============================================================
 const REGION_TEXT = {
-  nl: { map: 'Bekijk op de kaart', label: typeLabelsReg, plural: typeLabelsPlural },
-  en: { map: 'View on the map',
+  nl: { map: 'Bekijk op de kaart', more: 'Lees meer', label: typeLabelsReg, plural: typeLabelsPlural },
+  en: { map: 'View on the map', more: 'Read more',
         label: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' },
         plural: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' } },
 };
@@ -601,13 +604,16 @@ function renderRegionPage({ lang = 'nl', name, country, description, h1, title, 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   ${headExtra}
   <style>
-    .region-hero{background:var(--navy);color:#fff;padding:3rem 0 2rem;text-align:center}
-    .region-hero h1{font-size:2rem;font-weight:700;margin-bottom:0.5rem}
-    .region-hero-country{opacity:0.8;font-size:1rem;margin-bottom:1.5rem}
-    .region-hero-desc{max-width:680px;margin:0 auto 2rem;line-height:1.8;opacity:0.9;font-size:1rem}
-    .region-map-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;background:#fff;color:var(--navy);border-radius:8px;font-weight:600;text-decoration:none;font-size:0.95rem;transition:transform 0.2s}
-    .region-map-btn:hover{transform:translateY(-2px)}
-    .region-stats{display:flex;justify-content:center;gap:2rem;padding:1.5rem 0;border-bottom:1px solid var(--gray-200);flex-wrap:wrap;margin-bottom:2rem}
+    .region-hero{background:var(--navy);color:#fff;padding:1.25rem 0}
+    .region-hero h1{font-size:1.5rem;font-weight:700;line-height:1.3;margin-bottom:0.35rem}
+    .region-hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem 1rem;margin-bottom:0.6rem;font-size:0.85rem}
+    .region-hero-country{opacity:0.8}
+    .region-hero-desc{line-height:1.6;opacity:0.9;font-size:0.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .region-hero-desc.open{display:block}
+    .region-desc-more{background:none;border:0;padding:0;margin-top:0.25rem;color:#fff;font:inherit;font-size:0.85rem;text-decoration:underline;cursor:pointer;opacity:0.9}
+    .region-map-btn{display:inline-flex;align-items:center;padding:0.25rem 0.75rem;background:#fff;color:var(--navy);border-radius:999px;font-weight:600;text-decoration:none;font-size:0.8rem}
+    .region-map-btn:hover{opacity:0.9}
+    .region-stats{display:flex;justify-content:center;gap:2rem;padding:0.75rem 0;border-bottom:1px solid var(--gray-200);flex-wrap:wrap;margin-bottom:1.5rem}
     .region-stat{text-align:center}
     .region-stat-num{font-size:1.5rem;font-weight:700;color:var(--navy)}
     .region-stat-label{font-size:0.8rem;color:var(--gray-600)}
@@ -623,7 +629,7 @@ function renderRegionPage({ lang = 'nl', name, country, description, h1, title, 
     .region-loc-desc{font-size:0.85rem;line-height:1.6;color:var(--gray-900);margin-bottom:0.5rem}
     .region-loc-link{display:inline-block;font-size:0.82rem;color:var(--navy);font-weight:500;text-decoration:none;margin-right:0.75rem}
     .region-loc-link:hover{text-decoration:underline}
-    @media(max-width:600px){.region-loc-card{grid-template-columns:80px 1fr}.region-loc-img{width:80px;height:80px}.region-hero h1{font-size:1.5rem}}
+    @media(max-width:600px){.region-loc-card{grid-template-columns:80px 1fr}.region-loc-img{width:80px;height:80px}.region-hero h1{font-size:1.3rem}}
   </style>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
@@ -646,11 +652,14 @@ function renderRegionPage({ lang = 'nl', name, country, description, h1, title, 
   <div class="region-hero">
     <div class="container">
       <h1>${h1}</h1>
-      <div class="region-hero-country">${country}</div>
-      <p class="region-hero-desc">${description}</p>
-      <a href="${mapHref}" class="region-map-btn">
-        ${t.map}
-      </a>
+      <div class="region-hero-meta">
+        <span class="region-hero-country">${country}</span>
+        <a href="${mapHref}" class="region-map-btn">${t.map} →</a>
+      </div>
+      <p class="region-hero-desc" id="regionDesc">${description}</p>
+      <button type="button" class="region-desc-more" id="regionDescMore" hidden>${t.more}</button>
+      <script>(function(){var d=document.getElementById('regionDesc'),b=document.getElementById('regionDescMore');
+        if(d.scrollHeight>d.clientHeight+2){b.hidden=false;b.onclick=function(){d.classList.add('open');b.hidden=true;};}})();</script>
     </div>
   </div>
 
