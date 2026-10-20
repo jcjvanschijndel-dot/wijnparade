@@ -125,13 +125,15 @@ function cityFromAddress(addr) {
 // LOCATIEPAGINA-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
 // ============================================================
 const LOC_TEXT = {
-  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', openMap: 'Open in Google Maps ↗' },
-  en: { address: 'Address', about: 'About this location', website: 'Visit website →', openMap: 'Open in Google Maps ↗' },
+  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', },
+  en: { address: 'Address', about: 'About this location', website: 'Visit website →' },
 };
 function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema,
                               logoHref = '/wijnkaart', headExtra = '', headerExtra = '', afterHeader = '', beforeCard = '' }) {
   const t = LOC_TEXT[lang];
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name}, ${loc.address || ''}`)}`;
+  // Adres linkt naar de eigen wijnkaart, ingezoomd op deze locatie (met de popup open)
+  const mapUrl = loc.lat && loc.lng
+    ? `${lang === 'en' ? '/en/wine-map' : '/wijnkaart'}?lat=${loc.lat}&lng=${loc.lng}&zoom=15&id=${encodeURIComponent(loc._id || '')}` : '';
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -154,10 +156,10 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   <style>
     .location-hero{width:100%;height:350px;object-fit:cover;border-radius:12px;margin-bottom:1.25rem}
     .loc-title{font-size:1.5rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:1.25rem}
-    .loc-address{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .75rem;padding:.75rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;margin-bottom:1rem;text-decoration:none;color:var(--gray-900);font-size:.9rem;transition:border-color .2s}
-    .loc-address:hover{border-color:var(--navy)}
+    .loc-address{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .75rem;padding:.75rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;margin-bottom:1rem;font-size:.9rem}
     .loc-address-label{font-weight:600;color:var(--navy)}
-    .loc-address-cta{margin-left:auto;color:var(--navy);font-weight:500;white-space:nowrap}
+    .loc-address a{color:var(--gray-900);text-decoration:underline;text-decoration-color:var(--gray-300);text-underline-offset:3px}
+    .loc-address a:hover{color:var(--navy);text-decoration-color:var(--navy)}
     .location-map{height:350px;border-radius:12px;border:1px solid var(--gray-200);margin:2rem 0}
     .info-section{padding:1.5rem;background:var(--gray-50);border-radius:12px;border:1px solid var(--gray-200);margin-bottom:1.5rem}
     .info-label{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1rem}
@@ -184,7 +186,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <h1 class="loc-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
     <div class="info-section"><div class="info-label">${t.about}</div><div class="info-value">${description}</div></div>
-    ${loc.address ? `<a class="loc-address" href="${mapsUrl}" target="_blank" rel="noopener"><span class="loc-address-label">${t.address}</span><span>${loc.address}</span><span class="loc-address-cta">${t.openMap}</span></a>` : ''}
+    ${loc.address ? `<div class="loc-address"><span class="loc-address-label">${t.address}</span>${mapUrl ? `<a href="${mapUrl}">${loc.address}</a>` : `<span>${loc.address}</span>`}</div>` : ''}
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
   </div></main>
@@ -248,7 +250,7 @@ for (const file of locationFiles) {
         ...(loc.lat && loc.lng ? { geo: { '@type': 'GeoCoordinates', latitude: loc.lat, longitude: loc.lng } } : {})
     };
 
-    const html = renderLocationPage({ loc, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema });
+    const html = renderLocationPage({ loc: { ...loc, _id: id }, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema });
 
     fs.writeFileSync(path.join(staticLocationsDir, `${id}.html`), html);
     sitemapUrls.push(pageUrl.replace(".html", ""));
@@ -551,12 +553,12 @@ function regionSeo(region) {
 // REGIOGIDS-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
 // ============================================================
 const REGION_TEXT = {
-  nl: { map: 'Bekijk op de kaart', more: 'Lees meer', label: typeLabelsReg, plural: typeLabelsPlural },
-  en: { map: 'View on the map', more: 'Read more',
+  nl: { more: 'Lees meer', label: typeLabelsReg, plural: typeLabelsPlural },
+  en: { more: 'Read more',
         label: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' },
         plural: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' } },
 };
-function renderRegionPage({ lang = 'nl', name, country, description, h1, title, metaDesc, pageUrl, mapHref, logoHref, locs,
+function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc, pageUrl, logoHref, locs,
                             locHref, locDesc, readMore, headExtra = '', headerExtra = '', afterHeader = '' }) {
   const t = REGION_TEXT[lang];
   const byType = { wijnhuis: [], wijnbar: [], restaurant: [], wijnwinkel: [] };
@@ -605,18 +607,15 @@ function renderRegionPage({ lang = 'nl', name, country, description, h1, title, 
   ${headExtra}
   <style>
     .region-hero{background:var(--navy);color:#fff;padding:1.25rem 0}
-    .region-hero h1{font-size:1.5rem;font-weight:700;line-height:1.3;margin-bottom:0.35rem}
-    .region-hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem 1rem;margin-bottom:0.6rem;font-size:0.85rem}
-    .region-hero-country{opacity:0.8}
+    .region-hero h1{font-size:1.5rem;font-weight:700;line-height:1.3;margin-bottom:0.5rem}
     .region-hero-desc{line-height:1.6;opacity:0.9;font-size:0.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
     .region-hero-desc.open{display:block}
     .region-desc-more{background:none;border:0;padding:0;margin-top:0.25rem;color:#fff;font:inherit;font-size:0.85rem;text-decoration:underline;cursor:pointer;opacity:0.9}
-    .region-map-btn{display:inline-flex;align-items:center;padding:0.25rem 0.75rem;background:#fff;color:var(--navy);border-radius:999px;font-weight:600;text-decoration:none;font-size:0.8rem}
-    .region-map-btn:hover{opacity:0.9}
-    .region-stats{display:flex;justify-content:center;gap:2rem;padding:0.75rem 0;border-bottom:1px solid var(--gray-200);flex-wrap:wrap;margin-bottom:1.5rem}
+    .region-stats{display:flex;justify-content:center;gap:1.5rem;padding:0 0 0.6rem;border-bottom:1px solid var(--gray-200);flex-wrap:wrap;margin-bottom:1.25rem}
+    main.main{padding-top:0.75rem}
     .region-stat{text-align:center}
-    .region-stat-num{font-size:1.5rem;font-weight:700;color:var(--navy)}
-    .region-stat-label{font-size:0.8rem;color:var(--gray-600)}
+    .region-stat-num{font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.2}
+    .region-stat-label{font-size:0.72rem;color:var(--gray-600)}
     .region-section{margin-bottom:3rem}
     .region-section-title{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gray-200);display:flex;align-items:center;gap:0.5rem;}
     .region-locs{display:grid;gap:1.25rem}
@@ -652,10 +651,6 @@ function renderRegionPage({ lang = 'nl', name, country, description, h1, title, 
   <div class="region-hero">
     <div class="container">
       <h1>${h1}</h1>
-      <div class="region-hero-meta">
-        <span class="region-hero-country">${country}</span>
-        <a href="${mapHref}" class="region-map-btn">${t.map} →</a>
-      </div>
       <p class="region-hero-desc" id="regionDesc">${description}</p>
       <button type="button" class="region-desc-more" id="regionDescMore" hidden>${t.more}</button>
       <script>(function(){var d=document.getElementById('regionDesc'),b=document.getElementById('regionDescMore');
@@ -715,8 +710,8 @@ for (const region of REGIONS) {
     : `Tips voor je wijnreis naar ${region.name}: de beste wijnhuizen, wijnbars en restaurants, waaronder ${locNames}. Geselecteerd door de_wijnparade.`).substring(0, 160);
 
   const html = renderRegionPage({
-    name: region.name, country: region.country, description: region.description, h1: seo.h1, title: seo.title,
-    metaDesc, pageUrl, mapHref: `/wijnkaart?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}`,
+    name: region.name, description: region.description, h1: seo.h1, title: seo.title,
+    metaDesc, pageUrl,
     logoHref: '/wijnreizen', locs, locHref: l => `/locations/${l._id}`, locDesc: l => l.description, readMore: () => 'Lees meer →',
     afterHeader: breadcrumb([{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name }]) });
 
@@ -1491,8 +1486,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       ? `Wine tips for ${r.nameEn}: the best wine bars, wine shops and restaurants, including ${names}. Personally selected by de_wijnparade.`
       : `Planning a wine trip to ${r.nameEn}? The best wineries, wine bars and restaurants, including ${names}. Personally selected by de_wijnparade.`).slice(0, 160);
     const html = renderRegionPage({
-      lang: 'en', name: r.nameEn, country: r.countryEn, description: r.descriptionEn, h1: regionTitleEn(r), title, metaDesc,
-      pageUrl: SITE_URL + r.enPath, mapHref: `/en/wine-map?lat=${r.centerLat}&lng=${r.centerLng}&zoom=${r.zoom}`, logoHref: '/en/wine-travel',
+      lang: 'en', name: r.nameEn, description: r.descriptionEn, h1: regionTitleEn(r), title, metaDesc,
+      pageUrl: SITE_URL + r.enPath, logoHref: '/en/wine-travel',
       locs, locHref: enLocHref, locDesc: l => l.description_en || l.description || '',
       readMore: l => l.description_en ? 'Read more →' : 'Read more (in Dutch) →',
       headExtra: altLinks(regionPath(r.id), r.enPath), headerExtra: langMenu('en', regionPath(r.id), r.enPath),
