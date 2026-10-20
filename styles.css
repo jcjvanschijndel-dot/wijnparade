@@ -106,13 +106,6 @@ body {
         transition: color 0.2s;
     }
     .header-nav a:hover { color: white; }
-    .header-shop-btn {
-        background: #BBF7D0;
-        color: #14532D !important;
-        padding: 0.35rem 0.85rem;
-        border-radius: 6px;
-        font-weight: 500 !important;
-    }
 }
 
 /* Taalkeuze: dropdown met vlaggetjes in de header */
@@ -127,6 +120,20 @@ body {
 .lang-menu-list a { display: flex; align-items: center; gap: 8px; padding: 0.5rem 0.65rem; border-radius: 6px; color: #1f2937 !important; text-decoration: none; font-size: 14px; }
 .lang-menu-list a:hover { background: #f3f4f6; }
 .lang-menu-list a.is-current { font-weight: 600; background: #eef2ff; }
+
+/* Shopknop in de header (ook op mobiel zichtbaar) */
+.header-shop-btn { display: inline-flex; align-items: center; margin-left: 0.75rem; background: #BBF7D0; color: #14532D !important; padding: 0.35rem 0.85rem; border-radius: 6px; font-size: 13px; font-weight: 500 !important; text-decoration: none; white-space: nowrap; }
+.header-shop-btn:hover { background: #a7f3c0; }
+/* Heel smalle schermen: knoppen dichter op elkaar, taalcode alleen als vlag */
+@media (max-width: 380px) {
+    .header-shop-btn, .ig-follow-btn, .lang-menu { margin-left: 0.5rem; }
+    .lang-menu summary > span { display: none; }
+}
+@media (max-width: 340px) {
+    .header-inner { padding-left: 0.75rem; padding-right: 0.75rem; }
+    .header-shop-btn { padding: 0.35rem 0.6rem; }
+    .header-logo-name { font-size: 13px; }
+}
 
 /* Instagram: logo in de header en volgblok onderaan elke pagina */
 .ig-follow-btn { display: inline-flex; margin-left: 0.75rem; line-height: 0; transition: transform .15s; }

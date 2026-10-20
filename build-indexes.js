@@ -17,6 +17,10 @@ const IG_URL = 'https://www.instagram.com/de_wijnparade/';
 // Instagram-logo in de officiële kleuren: vierkant (header) en rond (volgblok)
 const IG_LOGO = '<svg class="ig-logo" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-grad)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.3" cy="7.7" r="1.1" fill="#fff"/></svg>';
 const IG_LOGO_ROUND = '<svg class="ig-logo-round" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><circle cx="12" cy="12" r="12" fill="url(#ig-grad)"/><rect x="6" y="6" width="12" height="12" rx="3.5" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="15.6" cy="8.4" r="0.9" fill="#fff"/></svg>';
+// Shopknop in de header (alleen op de Nederlandse site; ook zichtbaar op mobiel)
+const SHOP_URL = 'https://wijnparade.listedwines.com/';
+const shopBtn = (lang = 'nl') => lang === 'nl'
+  ? `<a href="${SHOP_URL}" class="header-shop-btn" target="_blank" rel="noopener">Shop</a>` : '';
 const igFollowBtn = (lang = 'nl') =>
   `<a href="${IG_URL}" target="_blank" rel="noopener" class="ig-follow-btn" aria-label="${lang === 'en' ? 'Follow us on Instagram' : 'Volg ons op Instagram'}" title="Instagram">${IG_LOGO}</a>`;
 // Kruimelpad onder de header, plus BreadcrumbList voor Google.
@@ -177,7 +181,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
         <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
         <span class="header-logo-name">de_wijnparade</span>
       </a>
-      ${igFollowBtn(lang)}
+      ${shopBtn(lang)}${igFollowBtn(lang)}
       ${headerExtra}
     </div>
   </div></header>
@@ -641,7 +645,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
-        ${igFollowBtn(lang)}
+        ${shopBtn(lang)}${igFollowBtn(lang)}
         ${headerExtra}
       </div>
     </div>
@@ -968,7 +972,7 @@ const COUNTRY_BY_ID = new Map();
       <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
       <span class="header-logo-name">de_wijnparade</span>
     </a>
-    ${igFollowBtn()}
+    ${shopBtn()}${igFollowBtn()}
   </div></div></header>
   ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Alle locaties' }])}
   <main class="main"><div class="container">
@@ -1197,7 +1201,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
-        ${igFollowBtn()}
+        ${shopBtn()}${igFollowBtn()}
       </div>
     </div>
   </header>
@@ -1466,7 +1470,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     return html;
   };
   const igToEn = [
-    [igFollowBtn('nl'), igFollowBtn('en')],
+    [shopBtn('nl') + igFollowBtn('nl'), igFollowBtn('en')],
     ['<span class="ig-promo-top">Volg ons op</span>', '<span class="ig-promo-top">Follow us on</span>'],
   ];
   const regionTitleEn = r => r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`;
@@ -1784,7 +1788,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <a href="/wijnreizen">Reisgidsen</a>
       <a href="/wijn-spijs">Wijn &amp; spijs</a>
     </nav>
-    ${igFollowBtn()}
+    ${shopBtn()}${igFollowBtn()}
   </div></div></header>
   ${breadcrumb(crumbs)}
   <main class="main"><div class="container">
