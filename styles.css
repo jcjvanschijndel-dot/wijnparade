@@ -115,7 +115,7 @@ body {
     }
 }
 
-/* Taalkeuze: dropdown in de header en vlaggetjes in de pagina */
+/* Taalkeuze: dropdown met vlaggetjes in de header */
 .header-logo { margin-right: auto; }
 .flag { width: 20px; height: 13px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); flex-shrink: 0; }
 .lang-menu { position: relative; margin-left: 0.75rem; font-size: 13px; }
@@ -127,11 +127,6 @@ body {
 .lang-menu-list a { display: flex; align-items: center; gap: 8px; padding: 0.5rem 0.65rem; border-radius: 6px; color: #1f2937 !important; text-decoration: none; font-size: 14px; }
 .lang-menu-list a:hover { background: #f3f4f6; }
 .lang-menu-list a.is-current { font-weight: 600; background: #eef2ff; }
-.lang-flags { display: inline-flex; gap: 0.5rem; vertical-align: middle; }
-.lang-flags a { display: inline-flex; padding: 4px; border: 2px solid transparent; border-radius: 6px; line-height: 0; }
-.lang-flags a:hover { border-color: #d1d5db; }
-.lang-flags a.is-current { border-color: var(--navy); }
-.lang-flags .flag { width: 30px; height: 20px; }
 
 /* Instagram: logo in de header en volgblok onderaan elke pagina */
 .ig-follow-btn { display: inline-flex; margin-left: 0.75rem; line-height: 0; transition: transform .15s; }

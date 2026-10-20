@@ -121,6 +121,87 @@ function cityFromAddress(addr) {
   }
   return '';
 }
+// ============================================================
+// LOCATIEPAGINA-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
+// ============================================================
+const LOC_TEXT = {
+  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →' },
+  en: { address: 'Address', about: 'About this location', website: 'Visit website →' },
+};
+function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema,
+                              logoHref = '/wijnkaart', headExtra = '', headerExtra = '', afterHeader = '', beforeCard = '' }) {
+  const t = LOC_TEXT[lang];
+  return `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#1e3a8a">
+  <title>${seoTitle}</title>
+  <meta name="description" content="${metaDesc.replace(/"/g,'&quot;')}">
+  <meta property="og:title" content="${seoTitle}">
+  <meta property="og:description" content="${metaDesc.replace(/"/g,'&quot;')}">
+  <meta property="og:image" content="${image}">
+  <meta property="og:url" content="${pageUrl}">
+  <link rel="canonical" href="${pageUrl}">
+  <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>
+  ${headExtra}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <style>
+    .location-hero{width:100%;height:350px;object-fit:cover;border-radius:12px;margin-bottom:2rem}
+    .location-map{height:350px;border-radius:12px;border:1px solid var(--gray-200);margin:2rem 0}
+    .info-section{padding:1.5rem;background:var(--gray-50);border-radius:12px;border:1px solid var(--gray-200);margin-bottom:1.5rem}
+    .info-label{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1rem}
+    .info-value{font-size:1rem;color:var(--gray-900);line-height:1.8;white-space:pre-wrap}
+    .website-btn{display:inline-block;padding:0.75rem 1.5rem;background:var(--navy);color:#fff;text-decoration:none;border-radius:8px;font-weight:500;margin:1rem 0}
+    @media(max-width:768px){.location-hero{height:250px}.location-map{height:300px}}
+  </style>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
+<body>
+  <header class="header"><div class="container">
+    <div class="header-inner">
+      <a href="${logoHref}" class="header-logo">
+        <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
+        <span class="header-logo-name">de_wijnparade</span>
+      </a>
+      ${igFollowBtn(lang)}
+      ${headerExtra}
+    </div>
+  </div></header>
+  ${afterHeader}
+  <main class="main"><div class="container">
+    ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
+    <div class="recipe-header">
+      <h1 class="recipe-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
+      <div class="recipe-wine">${typeLabel}</div>
+    </div>
+    <div class="info-section"><div class="info-label">${t.address}</div><div class="info-value">${loc.address || ''}</div></div>
+    <div class="info-section"><div class="info-label">${t.about}</div><div class="info-value">${description}</div></div>
+    ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
+    ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
+  </div></main>
+  ${beforeCard}${igFollowCard(lang)}
+  <footer class="footer"><div class="container">
+    <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
+  </div></footer>
+  ${loc.lat && loc.lng ? `
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const map = L.map('locationMap').setView([${loc.lat}, ${loc.lng}], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'© OpenStreetMap',maxZoom:19}).addTo(map);
+    const icons = {wijnbar:'🍾',wijnwinkel:'🏪',wijnhuis:'🏰',restaurant:'🍽️'};
+    const emoji = icons['${loc.type}'] || '📍';
+    L.marker([${loc.lat}, ${loc.lng}], {icon: L.divIcon({className:'',html:'<div style="background:#1e3a8a;width:40px;height:40px;border-radius:50%;border:3px solid white;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 2px 8px rgba(0,0,0,.3)">'+emoji+'</div>',iconSize:[40,40],iconAnchor:[20,20]})}).addTo(map);
+  </script>` : ''}
+</body></html>`;
+
+}
+
 const typeNouns = { wijnbar: 'wijnbar', wijnwinkel: 'wijnwinkel', wijnhuis: 'wijnhuis', restaurant: 'restaurant' };
 const locationsDir = path.join(CONTENT_DIR, 'locations');
 const staticLocationsDir = path.join(__dirname, 'locations');
@@ -164,71 +245,7 @@ for (const file of locationFiles) {
         ...(loc.lat && loc.lng ? { geo: { '@type': 'GeoCoordinates', latitude: loc.lat, longitude: loc.lng } } : {})
     };
 
-    const html = `<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="theme-color" content="#1e3a8a">
-  <title>${seoTitle}</title>
-  <meta name="description" content="${metaDesc.replace(/"/g,'&quot;')}">
-  <meta property="og:title" content="${seoTitle}">
-  <meta property="og:description" content="${metaDesc.replace(/"/g,'&quot;')}">
-  <meta property="og:image" content="${image}">
-  <meta property="og:url" content="${pageUrl}">
-  <link rel="canonical" href="${pageUrl}">
-  <script type="application/ld+json">${JSON.stringify(schema)}</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <style>
-    .location-hero{width:100%;height:350px;object-fit:cover;border-radius:12px;margin-bottom:2rem}
-    .location-map{height:350px;border-radius:12px;border:1px solid var(--gray-200);margin:2rem 0}
-    .info-section{padding:1.5rem;background:var(--gray-50);border-radius:12px;border:1px solid var(--gray-200);margin-bottom:1.5rem}
-    .info-label{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1rem}
-    .info-value{font-size:1rem;color:var(--gray-900);line-height:1.8;white-space:pre-wrap}
-    .website-btn{display:inline-block;padding:0.75rem 1.5rem;background:var(--navy);color:#fff;text-decoration:none;border-radius:8px;font-weight:500;margin:1rem 0}
-    @media(max-width:768px){.location-hero{height:250px}.location-map{height:300px}}
-  </style>
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
-<body>
-  <header class="header"><div class="container">
-    <div class="header-inner">
-      <a href="/wijnkaart" class="header-logo">
-        <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
-        <span class="header-logo-name">de_wijnparade</span>
-      </a>
-      ${igFollowBtn()}
-    </div>
-  </div></header>
-  <main class="main"><div class="container">
-    ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
-    <div class="recipe-header">
-      <h1 class="recipe-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
-      <div class="recipe-wine">${typeLabel}</div>
-    </div>
-    <div class="info-section"><div class="info-label">Adres</div><div class="info-value">${loc.address || ''}</div></div>
-    <div class="info-section"><div class="info-label">Over deze locatie</div><div class="info-value">${description}</div></div>
-    ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">Bezoek website →</a>` : ''}
-    ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
-  </div></main>
-  ${igFollowCard()}
-  <footer class="footer"><div class="container">
-    <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
-  </div></footer>
-  ${loc.lat && loc.lng ? `
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script>
-    const map = L.map('locationMap').setView([${loc.lat}, ${loc.lng}], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'© OpenStreetMap',maxZoom:19}).addTo(map);
-    const icons = {wijnbar:'🍾',wijnwinkel:'🏪',wijnhuis:'🏰',restaurant:'🍽️'};
-    const emoji = icons['${loc.type}'] || '📍';
-    L.marker([${loc.lat}, ${loc.lng}], {icon: L.divIcon({className:'',html:'<div style="background:#1e3a8a;width:40px;height:40px;border-radius:50%;border:3px solid white;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 2px 8px rgba(0,0,0,.3)">'+emoji+'</div>',iconSize:[40,40],iconAnchor:[20,20]})}).addTo(map);
-  </script>` : ''}
-</body></html>`;
+    const html = renderLocationPage({ loc, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema });
 
     fs.writeFileSync(path.join(staticLocationsDir, `${id}.html`), html);
     sitemapUrls.push(pageUrl.replace(".html", ""));
@@ -527,32 +544,18 @@ function regionSeo(region) {
     : { h1: `Wijnreis ${region.name}: tips`, title: `Wijnreis ${region.name}: tips voor wijnhuizen, wijnbars en restaurants`, link: `Wijnreis ${region.name}` };
 }
 
-// Read all location items from the already-generated _index.json
-let allLocations = [];
-try {
-  const locIdx = path.join(CONTENT_DIR, 'locations', '_index.json');
-  if (fs.existsSync(locIdx)) allLocations = JSON.parse(fs.readFileSync(locIdx, 'utf8'));
-} catch(e) {}
-
-const regionsIndex = [];
-
-for (const region of REGIONS) {
-  // Filter locations that fall within bounding box
-  const locs = allLocations.filter(l => {
-    const lat = parseFloat(l.lat), lng = parseFloat(l.lng);
-    if (isNaN(lat) || isNaN(lng)) return false;
-    return lat >= region.bounds.minLat && lat <= region.bounds.maxLat &&
-           lng >= region.bounds.minLng && lng <= region.bounds.maxLng;
-  });
-
-  const pageUrl = `${SITE_URL_REGIONS}${regionPath(region.id)}`;
-  const locNames = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
-  const seo = regionSeo(region);
-  const metaDesc = (CITY_REGIONS.has(region.id)
-    ? `Wijntips voor ${region.name}: de beste wijnbars, wijnwinkels en restaurants, waaronder ${locNames}. Persoonlijk geselecteerd door de_wijnparade.`
-    : `Tips voor je wijnreis naar ${region.name}: de beste wijnhuizen, wijnbars en restaurants, waaronder ${locNames}. Geselecteerd door de_wijnparade.`).substring(0, 160);
-
-  // Group by type
+// ============================================================
+// REGIOGIDS-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
+// ============================================================
+const REGION_TEXT = {
+  nl: { map: 'Bekijk op de kaart', label: typeLabelsReg, plural: typeLabelsPlural },
+  en: { map: 'View on the map',
+        label: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' },
+        plural: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' } },
+};
+function renderRegionPage({ lang = 'nl', name, country, description, h1, title, metaDesc, pageUrl, mapHref, logoHref, locs,
+                            locHref, locDesc, readMore, headExtra = '', headerExtra = '', afterHeader = '' }) {
+  const t = REGION_TEXT[lang];
   const byType = { wijnhuis: [], wijnbar: [], restaurant: [], wijnwinkel: [] };
   locs.forEach(l => { if (byType[l.type]) byType[l.type].push(l); });
 
@@ -560,7 +563,7 @@ for (const region of REGIONS) {
     if (!items.length) return '';
     return `<div class="region-section">
       <h2 class="region-section-title">
-        ${typeLabelsPlural[type]} in ${region.name}
+        ${t.plural[type]} in ${name}
       </h2>
       <div class="region-locs">
         ${items.map(l => `
@@ -569,8 +572,8 @@ for (const region of REGIONS) {
             <div class="region-loc-body">
               <h3 class="region-loc-name">${l.title || l.name}</h3>
               <div class="region-loc-address">${l.address || ''}</div>
-              ${l.description ? `<div class="region-loc-desc">${l.description.substring(0, 200)}${l.description.length > 200 ? '…' : ''}</div>` : ''}
-              <a href="/locations/${l._id}" class="region-loc-link">Lees meer →</a>
+              ${locDesc(l) ? `<div class="region-loc-desc">${locDesc(l).substring(0, 200)}${locDesc(l).length > 200 ? '…' : ''}</div>` : ''}
+              <a href="${locHref(l)}" class="region-loc-link">${readMore(l)}</a>
               ${l.website ? `<a href="${l.website.startsWith('http') ? l.website : 'https://' + l.website}" target="_blank" rel="noopener" class="region-loc-link region-loc-web">Website →</a>` : ''}
             </div>
           </div>`).join('')}
@@ -578,23 +581,25 @@ for (const region of REGIONS) {
     </div>`;
   };
 
-  const html = `<!DOCTYPE html>
-<html lang="nl">
+  const tx = t;
+  return `<!DOCTYPE html>
+<html lang="${lang}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#1e3a8a">
-  <title>${seo.title} | de_wijnparade</title>
+  <title>${title} | de_wijnparade</title>
   <meta name="description" content="${metaDesc.replace(/"/g,'&quot;')}">
-  <meta property="og:title" content="${seo.title} | de_wijnparade">
+  <meta property="og:title" content="${title} | de_wijnparade">
   <meta property="og:description" content="${metaDesc.replace(/"/g,'&quot;')}">
   <meta property="og:url" content="${pageUrl}">
   <meta property="og:type" content="article">
   <link rel="canonical" href="${pageUrl}">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"${region.name}","description":"${region.description.replace(/"/g,'\\"')}","url":"${pageUrl}"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"${name}","description":"${description.replace(/"/g,'\\"')}","url":"${pageUrl}"}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  ${headExtra}
   <style>
     .region-hero{background:var(--navy);color:#fff;padding:3rem 0 2rem;text-align:center}
     .region-hero h1{font-size:2rem;font-weight:700;margin-bottom:0.5rem}
@@ -627,23 +632,24 @@ for (const region of REGIONS) {
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <a href="/wijnreizen" class="header-logo">
+        <a href="${logoHref}" class="header-logo">
           <div class="header-logo-box"><img src="/logo.svg" alt="de_wijnparade"></div>
           <span class="header-logo-name">de_wijnparade</span>
         </a>
-        ${igFollowBtn()}
+        ${igFollowBtn(lang)}
+        ${headerExtra}
       </div>
     </div>
   </header>
-  ${breadcrumb([{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name }])}
+  ${afterHeader}
 
   <div class="region-hero">
     <div class="container">
-      <h1>${seo.h1}</h1>
-      <div class="region-hero-country">${region.country}</div>
-      <p class="region-hero-desc">${region.description}</p>
-      <a href="/wijnkaart?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}" class="region-map-btn">
-        Bekijk op de kaart
+      <h1>${h1}</h1>
+      <div class="region-hero-country">${country}</div>
+      <p class="region-hero-desc">${description}</p>
+      <a href="${mapHref}" class="region-map-btn">
+        ${t.map}
       </a>
     </div>
   </div>
@@ -654,7 +660,7 @@ for (const region of REGIONS) {
         ${Object.entries(byType).filter(([,v])=>v.length).map(([t,v])=>`
           <div class="region-stat">
             <div class="region-stat-num">${v.length}</div>
-            <div class="region-stat-label">${typeLabelsReg[t]}</div>
+            <div class="region-stat-label">${tx.label[t]}</div>
           </div>`).join('')}
       </div>
       ${renderSection('wijnhuis', byType.wijnhuis)}
@@ -664,7 +670,7 @@ for (const region of REGIONS) {
     </div>
   </main>
 
-  ${igFollowCard()}
+  ${igFollowCard(lang)}
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 de_wijnparade | <a href="https://www.instagram.com/de_wijnparade/" target="_blank">@de_wijnparade</a></p>
@@ -672,6 +678,38 @@ for (const region of REGIONS) {
   </footer>
 </body>
 </html>`;
+}
+
+// Read all location items from the already-generated _index.json
+let allLocations = [];
+try {
+  const locIdx = path.join(CONTENT_DIR, 'locations', '_index.json');
+  if (fs.existsSync(locIdx)) allLocations = JSON.parse(fs.readFileSync(locIdx, 'utf8'));
+} catch(e) {}
+
+const regionsIndex = [];
+
+for (const region of REGIONS) {
+  // Filter locations that fall within bounding box
+  const locs = allLocations.filter(l => {
+    const lat = parseFloat(l.lat), lng = parseFloat(l.lng);
+    if (isNaN(lat) || isNaN(lng)) return false;
+    return lat >= region.bounds.minLat && lat <= region.bounds.maxLat &&
+           lng >= region.bounds.minLng && lng <= region.bounds.maxLng;
+  });
+
+  const pageUrl = `${SITE_URL_REGIONS}${regionPath(region.id)}`;
+  const locNames = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
+  const seo = regionSeo(region);
+  const metaDesc = (CITY_REGIONS.has(region.id)
+    ? `Wijntips voor ${region.name}: de beste wijnbars, wijnwinkels en restaurants, waaronder ${locNames}. Persoonlijk geselecteerd door de_wijnparade.`
+    : `Tips voor je wijnreis naar ${region.name}: de beste wijnhuizen, wijnbars en restaurants, waaronder ${locNames}. Geselecteerd door de_wijnparade.`).substring(0, 160);
+
+  const html = renderRegionPage({
+    name: region.name, country: region.country, description: region.description, h1: seo.h1, title: seo.title,
+    metaDesc, pageUrl, mapHref: `/wijnkaart?lat=${region.centerLat}&lng=${region.centerLng}&zoom=${region.zoom}`,
+    logoHref: '/wijnreizen', locs, locHref: l => `/locations/${l._id}`, locDesc: l => l.description, readMore: () => 'Lees meer →',
+    afterHeader: breadcrumb([{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name }]) });
 
   fs.writeFileSync(path.join(__dirname, regionPath(region.id).slice(1) + '.html'), html);
 
@@ -1323,7 +1361,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       enPath: `/en/${isCity ? 'wine-tips' : 'wine-travel'}/${slug}`,
     });
   }
-  const regionOf = l => enRegions.find(r => inBounds(l, r));
+  const regionOf = l => enRegions.filter(r => inBounds(l, r)).sort((a, b) => boxSize(a) - boxSize(b))[0];
   const enLocs = allLocations.filter(l => l.name && l._id && l.description_en &&
     fs.existsSync(path.join(staticLocationsDir, `${l._id}.html`)));
   const enLocPath = l => `/en/locations/${l._id}`;
@@ -1331,7 +1369,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   const altLinks = (nlPath, enPath) =>
     `<link rel="alternate" hreflang="nl" href="${SITE_URL}${nlPath}">\n  <link rel="alternate" hreflang="en" href="${SITE_URL}${enPath}">\n  <link rel="alternate" hreflang="x-default" href="${SITE_URL}${nlPath}">`;
 
-  // Taalkeuze: vlaggetjes in de pagina en een dropdown bovenin de header
+  // Taalkeuze: dropdown met vlaggetjes bovenin de header
   const FLAG = {
     nl: '<svg class="flag" viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg>',
     en: '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="uk-t"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>',
@@ -1340,9 +1378,6 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   const langLink = (lang, cur, href, inner) => lang === cur
     ? `<a href="${href}" hreflang="${lang}" lang="${lang}" aria-current="page" class="is-current">${inner}</a>`
     : `<a href="${href}" hreflang="${lang}" lang="${lang}">${inner}</a>`;
-  const langFlags = (cur, nlPath, enPath) =>
-    `<span class="lang-flags">${['nl', 'en'].map(lang => langLink(lang, cur, lang === 'nl' ? nlPath : enPath,
-      FLAG[lang]).replace('<a ', `<a title="${LANG_NAME[lang]}" aria-label="${LANG_NAME[lang]}" `)).join('')}</span>`;
   const langMenu = (cur, nlPath, enPath) =>
     `<details class="lang-menu"><summary aria-label="${cur === 'nl' ? 'Taal kiezen' : 'Choose language'}">${FLAG[cur]}<span>${cur.toUpperCase()}</span></summary>` +
     `<div class="lang-menu-list">${['nl', 'en'].map(lang => langLink(lang, cur, lang === 'nl' ? nlPath : enPath,
@@ -1369,30 +1404,10 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
-    .lang-switch{font-size:.85rem;margin:1rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
-    .lang-switch>a{color:var(--navy)}
-    .en-hero{background:var(--navy);color:#fff;padding:2.5rem 0 2rem;text-align:center}
-    .en-hero h1{font-size:2rem;font-weight:700;margin-bottom:.5rem}
-    .en-hero-sub{opacity:.8;margin-bottom:1.25rem}
-    .en-hero-desc{max-width:680px;margin:0 auto;line-height:1.8;opacity:.92}
     .en-h1{font-size:1.6rem;color:var(--navy);margin:.5rem 0 .25rem;line-height:1.3}
     .en-sub{color:var(--gray-600);margin-bottom:1.5rem}
     .en-section{margin:2rem 0}
     .en-section h2{font-size:1.1rem;color:var(--navy);padding-bottom:.5rem;border-bottom:2px solid var(--gray-200);margin-bottom:1rem}
-    .en-cards{display:grid;gap:1rem}
-    .en-card{display:grid;grid-template-columns:110px 1fr;gap:1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden}
-    .en-card img{width:110px;height:110px;object-fit:cover}
-    .en-card-body{padding:.75rem .75rem .75rem 0}
-    .en-card h3{color:var(--navy);font-size:1rem;margin-bottom:.25rem}
-    .en-card p{font-size:.85rem;line-height:1.6;margin:.25rem 0 .5rem}
-    .en-card a{color:var(--navy);font-weight:600;font-size:.85rem}
-    .en-hero-img{width:100%;height:320px;object-fit:cover;border-radius:12px;margin:1rem 0 1.5rem}
-    .en-box{padding:1.25rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;margin-bottom:1.25rem}
-    .en-box h2{font-size:1.05rem;color:var(--navy);margin-bottom:.75rem}
-    .en-text{line-height:1.8;white-space:pre-line}
-    .en-btn{display:inline-block;padding:.7rem 1.4rem;background:var(--navy);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;margin:.5rem 0 1rem}
-    .en-map{height:320px;border-radius:12px;border:1px solid var(--gray-200);margin:1rem 0 2rem}
-    @media(max-width:600px){.en-card{grid-template-columns:80px 1fr}.en-card img{width:80px;height:80px}.en-hero h1{font-size:1.5rem}.en-hero-img{height:220px}}
   </style>
   ${extraHead}
 </head>
@@ -1403,7 +1418,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       <span class="header-logo-name">de_wijnparade</span>
     </a>
     <nav class="header-nav">
-      <a href="/en/">Wine guides</a>
+      <a href="/en/wine-map">Wine map</a>
+      <a href="/en/wine-travel">Travel guides</a>
       <a href="/en/all-locations">All locations</a>
     </nav>
     ${igFollowBtn('en')}
@@ -1436,134 +1452,215 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
 </body>
 </html>`;
 
-  const websiteUrl = w => w ? (String(w).startsWith('http') ? w : 'https://' + w) : '';
-  const excerpt = s => { s = String(s).replace(/\s+/g, ' ').trim(); return s.length > 200 ? s.slice(0, 200).replace(/\s+\S*$/, '') + '…' : s; };
+  // Statische NL-pagina omzetten naar Engels: elke vervanging moet precies passen,
+  // zodat een gewijzigde NL-pagina de build laat stoppen in plaats van half-Engels te worden.
+  const swap = (html, pairs, file) => {
+    for (const [from, to] of pairs) {
+      if (from instanceof RegExp ? !from.test(html) : !html.includes(from)) throw new Error(`EN-versie van ${file}: tekst niet gevonden: ${from}`);
+      html = from instanceof RegExp ? html.replace(from, to) : html.split(from).join(to);
+    }
+    return html;
+  };
+  const igToEn = [
+    [igFollowBtn('nl'), igFollowBtn('en')],
+    ['<span class="ig-promo-top">Volg ons op</span>', '<span class="ig-promo-top">Follow us on</span>'],
+  ];
+  const regionTitleEn = r => r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`;
+  const enLocHref = l => l.description_en ? enLocPath(l) : `/locations/${l._id}`;
+  const EN_LABEL = { wijnbar: 'Wine bar', wijnwinkel: 'Wine shop', wijnhuis: 'Winery', restaurant: 'Restaurant' };
+  const HOME_EN = { name: 'Home', path: '/en/' };
+  const GUIDES_EN = { name: 'Travel guides', path: '/en/wine-travel' };
 
-  // --- Engelse regiopagina's ---
+  // --- Engelse regiopagina's (zelfde template als NL) ---
   for (const r of enRegions) {
-    const locs = allLocations.filter(l => l.name && inBounds(l, r));
-    const byType = { wijnhuis: [], restaurant: [], wijnbar: [], wijnwinkel: [] };
-    locs.forEach(l => { if (byType[l.type]) byType[l.type].push(l); });
+    const locs = allLocations.filter(l => inBounds(l, r));
     const names = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
     const title = r.isCity
-      ? `${r.nameEn} wine tips: the best wine bars, wine shops and restaurants | de_wijnparade`
-      : `${r.nameEn} wine travel guide: wineries, wine bars and restaurants | de_wijnparade`;
-    const description = (r.isCity
+      ? `${r.nameEn} wine tips: the best wine bars, wine shops and restaurants`
+      : `${r.nameEn} wine travel guide: wineries, wine bars and restaurants`;
+    const metaDesc = (r.isCity
       ? `Wine tips for ${r.nameEn}: the best wine bars, wine shops and restaurants, including ${names}. Personally selected by de_wijnparade.`
       : `Planning a wine trip to ${r.nameEn}? The best wineries, wine bars and restaurants, including ${names}. Personally selected by de_wijnparade.`).slice(0, 160);
-    const card = l => {
-      const hasEn = !!l.description_en;
-      const href = hasEn ? enLocPath(l) : `/locations/${l._id}`;
-      return `<div class="en-card">
-        ${l.image ? `<img src="${escHtml(l.image)}" alt="${escHtml(l.title || l.name)}" loading="lazy">` : '<div></div>'}
-        <div class="en-card-body">
-          <h3>${escHtml(l.title || l.name)}</h3>
-          <p>${escHtml(excerpt(hasEn ? l.description_en : l.description || ''))}</p>
-          <a href="${href}"${hasEn ? '' : ' hreflang="nl"'}>${hasEn ? 'Read more →' : 'Read more (in Dutch) →'}</a>
-        </div>
-      </div>`;
-    };
-    const body = `<div class="en-hero"><div class="container">
-      <h1>${escHtml(r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`)}</h1>
-      <div class="en-hero-sub">${escHtml(r.countryEn)}</div>
-      <p class="en-hero-desc">${escHtml(r.descriptionEn)}</p>
-    </div></div>
-    <main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', regionPath(r.id), r.enPath)}</p>
-      ${Object.entries(byType).filter(([, v]) => v.length).map(([t, v]) => `<section class="en-section">
-        <h2>${EN_TYPE_PLURAL[t]} in ${escHtml(r.nameEn)}</h2>
-        <div class="en-cards">${v.map(card).join('')}</div>
-      </section>`).join('\n      ')}
-      <p><a class="en-btn" href="/wijnkaart?lat=${r.centerLat}&lng=${r.centerLng}&zoom=${r.zoom}">View on the map</a></p>
-    </div></main>`;
+    const html = renderRegionPage({
+      lang: 'en', name: r.nameEn, country: r.countryEn, description: r.descriptionEn, h1: regionTitleEn(r), title, metaDesc,
+      pageUrl: SITE_URL + r.enPath, mapHref: `/en/wine-map?lat=${r.centerLat}&lng=${r.centerLng}&zoom=${r.zoom}`, logoHref: '/en/wine-travel',
+      locs, locHref: enLocHref, locDesc: l => l.description_en || l.description || '',
+      readMore: l => l.description_en ? 'Read more →' : 'Read more (in Dutch) →',
+      headExtra: altLinks(regionPath(r.id), r.enPath), headerExtra: langMenu('en', regionPath(r.id), r.enPath),
+      afterHeader: breadcrumb([HOME_EN, GUIDES_EN, { name: r.nameEn }], 'en') });
     const file = path.join(__dirname, r.enPath.slice(1) + '.html');
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, enPage({ title, description, enPath: r.enPath, nlPath: regionPath(r.id), body,
-      crumbs: [{ name: 'Home', path: '/en/' }, { name: r.nameEn }] }));
+    fs.writeFileSync(file, html);
     enUrls.push(r.enPath);
   }
 
-  // --- Engelse locatiepagina's ---
+  // --- Engelse locatiepagina's (zelfde template als NL) ---
   fs.mkdirSync(path.join(__dirname, 'en', 'locations'), { recursive: true });
+  const geoLocsEn = allLocations.filter(l => l.name && hasGeo(l));
   for (const l of enLocs) {
     const name = l.title || l.name;
     const city = cityFromAddress(l.address);
     const type = EN_TYPE[l.type] || '';
     const r = regionOf(l);
     const enPath = enLocPath(l);
-    const title = `${name}${type ? ` – ${type}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`;
-    const description = String(l.description_en).replace(/\s+/g, ' ').trim().slice(0, 160);
+    const nlPath = `/locations/${l._id}`;
+    const description = String(l.description_en);
+    const image = l.image ? `${SITE_URL}${l.image}` : `${SITE_URL}/profile-photo.jpg`;
+    const pageUrl = `${SITE_URL}${enPath}`;
     const schema = {
-      '@context': 'https://schema.org', '@type': 'LocalBusiness', name, description: String(l.description_en),
-      image: l.image ? `${SITE_URL}${l.image}` : `${SITE_URL}/profile-photo.jpg`, url: websiteUrl(l.website) || `${SITE_URL}${enPath}`,
+      '@context': 'https://schema.org', '@type': 'LocalBusiness', name, description, image, url: l.website || pageUrl,
       address: { '@type': 'PostalAddress', streetAddress: l.address || '' },
       ...(l.lat && l.lng ? { geo: { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lng } } : {})
     };
-    const body = `<main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', `/locations/${escHtml(l._id)}`, enLocPath(l))}</p>
-      ${l.image ? `<img src="${escHtml(l.image)}" alt="${escHtml(name)}" class="en-hero-img">` : ''}
-      <h1 class="en-h1">${escHtml(name)}</h1>
-      <div class="en-sub">${escHtml(cap(type))}${city ? ` in ${escHtml(city)}` : ''}</div>
-      <div class="en-box"><h2>Address</h2><div>${escHtml(l.address || '')}</div></div>
-      <div class="en-box"><h2>About</h2><div class="en-text">${escHtml(String(l.description_en).trim())}</div></div>
-      ${l.website ? `<a class="en-btn" href="${escHtml(websiteUrl(l.website))}" target="_blank" rel="noopener">Visit website →</a>` : ''}
-      ${l.lat && l.lng ? '<div class="en-map" id="locationMap"></div>' : ''}
-      ${r ? `<p><a href="${r.enPath}" style="color:var(--navy);font-weight:600">More in ${escHtml(r.nameEn)} →</a></p>` : ''}
-    </div></main>
-    <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`;
-    const mapHead = l.lat && l.lng ? '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">' : '';
-    const mapBody = l.lat && l.lng ? `<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script>
-    var map = L.map('locationMap').setView([${Number(l.lat)}, ${Number(l.lng)}], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'© OpenStreetMap', maxZoom:19}).addTo(map);
-    L.marker([${Number(l.lat)}, ${Number(l.lng)}]).addTo(map);
-  </script>` : '';
-    fs.writeFileSync(path.join(__dirname, 'en', 'locations', `${l._id}.html`),
-      enPage({ title, description, enPath, nlPath: `/locations/${l._id}`, body, extraHead: mapHead, extraBody: mapBody,
-        crumbs: [{ name: 'Home', path: '/en/' }, r ? { name: r.nameEn, path: r.enPath } : { name: 'All locations', path: '/en/all-locations' }, { name }] }));
+    // "More in <regio>": dichtstbijzijnde locaties, net als op de NL-pagina
+    const pool = (r ? geoLocsEn.filter(x => inBounds(x, r)) : geoLocsEn).filter(x => x._id !== l._id);
+    const nearby = hasGeo(l) ? pool.sort((a, b) => dist2(l, a) - dist2(l, b)).slice(0, 6) : [];
+    const more = `<!-- interne-links -->
+  <section class="more-links"><div class="container">
+    <h2 style="font-size:1.2rem;color:var(--navy);margin:2rem 0 1rem">${r ? `More in ${escHtml(r.nameEn)}` : 'More nearby'}</h2>
+    ${nearby.length ? `<ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.5rem 1.5rem;margin:0 0 1rem">
+      ${nearby.map(x => `<li><a href="${enLocHref(x)}" style="color:var(--navy)">${escHtml(x.title || x.name)}</a> <span style="color:var(--gray-600);font-size:.85em">${escHtml(EN_LABEL[x.type] || '')}</span></li>`).join('\n      ')}
+    </ul>` : ''}
+    <p style="margin:0 0 2rem">
+      ${r ? `<a href="${r.enPath}" style="color:var(--navy);font-weight:600">${escHtml(regionTitleEn(r))}: all tips →</a> &nbsp;·&nbsp; ` : ''}<a href="/en/wine-travel" style="color:var(--navy)">All wine travel guides</a> &nbsp;·&nbsp; <a href="/en/all-locations" style="color:var(--navy)">All locations</a>
+    </p>
+  </div></section>
+  `;
+    const html = renderLocationPage({
+      lang: 'en', loc: l, name, description, metaDesc: description.replace(/\s+/g, ' ').trim().substring(0, 160),
+      typeLabel: EN_LABEL[l.type] || '', city, seoTitle: `${name}${type ? ` – ${type}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`,
+      image, pageUrl, schema, logoHref: '/en/wine-map',
+      headExtra: altLinks(nlPath, enPath), headerExtra: langMenu('en', nlPath, enPath),
+      afterHeader: breadcrumb(r ? [HOME_EN, GUIDES_EN, { name: r.nameEn, path: r.enPath }, { name }]
+                                : [HOME_EN, { name: 'All locations', path: '/en/all-locations' }, { name }], 'en'),
+      beforeCard: more });
+    fs.writeFileSync(path.join(__dirname, 'en', 'locations', `${l._id}.html`), html);
     enUrls.push(enPath);
   }
 
-  // --- /en/ (overzicht regiogidsen) en /en/locations (alle locaties) ---
+  // --- Landen in het Engels ---
   const EN_COUNTRY = { 'Nederland': 'Netherlands', 'België': 'Belgium', 'Luxemburg': 'Luxembourg', 'Frankrijk': 'France',
     'Italië': 'Italy', 'Spanje': 'Spain', 'Portugal': 'Portugal', 'Duitsland': 'Germany', 'Oostenrijk': 'Austria',
-    'Zwitserland': 'Switzerland', 'Verenigd Koninkrijk': 'United Kingdom', 'Ierland': 'Ireland', 'Griekenland': 'Greece',
+    'Zwitserland': 'Switzerland', 'Verenigd Koninkrijk': 'United Kingdom', 'Engeland': 'England', 'Ierland': 'Ireland', 'Griekenland': 'Greece',
     'Hongarije': 'Hungary', 'Slovenië': 'Slovenia', 'Kroatië': 'Croatia', 'Tsjechië': 'Czechia', 'Slowakije': 'Slovakia',
     'Denemarken': 'Denmark', 'Zweden': 'Sweden', 'Noorwegen': 'Norway', 'Polen': 'Poland', 'Roemenië': 'Romania',
     'Bulgarije': 'Bulgaria', 'Georgië': 'Georgia', 'Cyprus': 'Cyprus', 'Malta': 'Malta', 'Monaco': 'Monaco',
     'Liechtenstein': 'Liechtenstein', 'Servië': 'Serbia', 'Turkije': 'Turkey', 'Marokko': 'Morocco', 'Overig': 'Other' };
   const enCountry = c => EN_COUNTRY[c] || c || 'Other';
   const byCountrySort = (a, b) => a === 'Other' ? 1 : b === 'Other' ? -1 : a.localeCompare(b, 'en');
-  const firstSentences = (s, n) => { const parts = String(s).replace(/\s+/g, ' ').trim().split(/(?<=[.!?])\s+/); return parts.slice(0, n).join(' '); };
 
-  // /en/
+  // --- Regiolijst voor travelguides.js (EN) en vaste lijst met links (SEO) ---
+  const enRegionsIndex = enRegions.map(r => ({
+    id: r.id, name: r.nameEn, country: r.countryEn, description: r.descriptionEn,
+    centerLat: r.centerLat, centerLng: r.centerLng, zoom: r.zoom,
+    locationCount: allLocations.filter(l => inBounds(l, r)).length,
+    url: r.enPath, mapUrl: `/en/wine-map?lat=${r.centerLat}&lng=${r.centerLng}&zoom=${r.zoom}`,
+  }));
+  fs.writeFileSync(path.join(__dirname, 'en', 'regions.json'), JSON.stringify(enRegionsIndex));
+  const enByCountry = {};
+  for (const r of enRegionsIndex) (enByCountry[r.country || 'Other'] ||= []).push(r);
+  const enRegionListHtml = `<!-- REGIO-LINKS -->
+<section class="region-link-list"><div class="container">
+  <h2 style="font-size:1.2rem;color:var(--navy);margin:2rem 0 1rem">All wine travel guides by country</h2>
+  ${Object.keys(enByCountry).sort(byCountrySort).map(c => `<div style="margin-bottom:1rem">
+    <strong>${escHtml(c)}</strong><br>
+    ${enByCountry[c].sort((a, b) => a.name.localeCompare(b.name, 'en')).map(r =>
+      `<a href="${r.url}" style="color:var(--navy);margin-right:1rem;display:inline-block">${escHtml(r.name)} (${r.locationCount})</a>`).join('\n    ')}
+  </div>`).join('\n  ')}
+  <p style="margin:0 0 2rem"><a href="/en/all-locations" style="color:var(--navy);font-weight:600">Or browse all ${enLocs.length} locations →</a></p>
+</div></section>
+<!-- /REGIO-LINKS -->`;
+  const enHead = (nlPath, enPath) => `<link rel="canonical" href="${SITE_URL}${enPath}">\n    ${altLinks(nlPath, enPath)}`;
+  const enHeaderEnd = (nlPath, enPath) => [/(<header[\s\S]*?)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n                ${langMenu('en', nlPath, enPath)}$2`];
+
+  // --- /en/wine-travel: overzicht reisgidsen (zelfde pagina als /wijnreizen) ---
   {
-    const groups = {};
-    for (const r of enRegions) (groups[r.countryEn] ||= []).push(r);
-    const body = `<main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', '/wijnreizen', '/en/')}</p>
-      <h1 class="en-h1">Wine travel in Europe: guides by wine region</h1>
-      <p class="en-sub" style="line-height:1.8">Planning a wine trip to Burgundy, Tuscany, the Douro or the Mosel? For each wine region you'll find the wineries worth visiting, the best wine bars and the finest restaurants, all personally selected by de_wijnparade. Or browse <a href="/en/all-locations" style="color:var(--navy)">all ${enLocs.length} locations</a> by country.</p>
-      ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)}</h2><div class="en-cards">
-        ${groups[c].sort((a, b) => a.nameEn.localeCompare(b.nameEn, 'en')).map(r => `<div class="en-card" style="grid-template-columns:1fr"><div class="en-card-body" style="padding:.9rem 1rem">
-          <h3><a href="${r.enPath}" style="font-size:1rem">${escHtml(r.isCity ? `${r.nameEn} wine tips` : `${r.nameEn} wine travel guide`)}</a></h3>
-          <p>${escHtml(firstSentences(r.descriptionEn, 2))}</p>
-        </div></div>`).join('')}
-      </div></section>`).join('\n      ')}
-    </div></main>`;
-    fs.writeFileSync(path.join(__dirname, 'en', 'index.html'), enPage({
-      title: 'Wine travel in Europe: guides by wine region | de_wijnparade',
-      description: 'Planning a wine trip? Guides to the most beautiful wine regions in Europe, with the best wineries, wine bars and restaurants in each region.',
-      enPath: '/en/', nlPath: '/wijnreizen', body }));
+    const src = fs.readFileSync(path.join(__dirname, 'wijnreizen.html'), 'utf8');
+    const html = swap(src, [
+      ['<html lang="nl">', '<html lang="en">'],
+      [/<meta name="description" content="[^"]*">/, '<meta name="description" content="Planning a wine trip? Guides to the most beautiful wine regions in Europe, with the best wineries, wine bars and restaurants in each region. Filter by country and distance from Utrecht.">'],
+      ['Wijnreizen in Europa: reisgidsen per wijnregio | de_wijnparade', 'Wine travel in Europe: guides by wine region | de_wijnparade'],
+      ['<link rel="canonical" href="https://wijn-parade.nl/wijnreizen">', enHead('/wijnreizen', '/en/wine-travel')],
+      ['<meta property="og:url" content="https://wijn-parade.nl/wijnreizen">', '<meta property="og:url" content="https://wijn-parade.nl/en/wine-travel">'],
+      ['href="styles.css"', 'href="/styles.css"'],
+      ['<a href="/" class="header-logo">', '<a href="/en/" class="header-logo">'],
+      ...igToEn,
+      enHeaderEnd('/wijnreizen', '/en/wine-travel'),
+      [/<nav class="breadcrumb"[\s\S]*?<\/script>/, breadcrumb([HOME_EN, { name: 'Travel guides' }], 'en')],
+      ['<h1 class="page-title">Wijnreizen in Europa: reisgidsen per wijnregio</h1>', '<h1 class="page-title">Wine travel in Europe: guides by wine region</h1>'],
+      [/<p class="page-subtitle">[^<]*<\/p>/, `<p class="page-subtitle">Planning a wine trip to Burgundy, Tuscany, the Douro or the Mosel? For each wine region you'll find the wineries worth visiting, the best wine bars and the finest restaurants, all personally selected. Filter by country or by distance from Utrecht and find your next wine destination.</p>`],
+      ['<label for="filterCountry">Land</label>', '<label for="filterCountry">Country</label>'],
+      ['<option value="">Alle landen</option>', '<option value="">All countries</option>'],
+      ['<label for="filterDistance">Max. afstand vanuit Utrecht</label>', '<label for="filterDistance">Max. distance from Utrecht</label>'],
+      ['<option value="">Alle afstanden</option>', '<option value="">All distances</option>'],
+      ['1.000 km', '1,000 km'], ['1.500 km', '1,500 km'], ['2.000 km', '2,000 km'],
+      [/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/, enRegionListHtml],
+      ['<script src="travelguides.js"></script>', '<script src="/travelguides.js"></script>'],
+    ], 'wijnreizen.html');
+    fs.writeFileSync(path.join(__dirname, 'en', 'wine-travel.html'), html);
+    enUrls.push('/en/wine-travel');
+  }
+
+  // --- /en/wine-map: de kaart (zelfde pagina als /wijnkaart) ---
+  {
+    const src = fs.readFileSync(path.join(__dirname, 'wijnkaart.html'), 'utf8');
+    const html = swap(src, [
+      ['<html lang="nl">', '<html lang="en">'],
+      ['<link rel="canonical" href="https://wijn-parade.nl/wijnkaart">', enHead('/wijnkaart', '/en/wine-map') +
+        '\n    <meta name="description" content="Map of the best wineries, wine bars, wine shops and wine restaurants in Europe, personally selected by de_wijnparade.">'],
+      ['<title>Wijnkaart | de_wijnparade</title>', '<title>Wine map of Europe: wineries, wine bars and restaurants | de_wijnparade</title>'],
+      ['href="styles.css"', 'href="/styles.css"'],
+      ['<a href="/" class="header-logo">', '<a href="/en/" class="header-logo">'],
+      ...igToEn,
+      enHeaderEnd('/wijnkaart', '/en/wine-map'),
+      [/<nav class="breadcrumb"[\s\S]*?<\/script>/, breadcrumb([HOME_EN, { name: 'Wine map' }], 'en')],
+      ['placeholder="Zoek een stad, buurt of adres…"', 'placeholder="Search for a city, area or address…"'],
+      ['data-type="all">Alle locaties</button>', 'data-type="all">All locations</button>'],
+      ['🍾 Wijnbars</button>', '🍾 Wine bars</button>'],
+      ['🏪 Wijnwinkels</button>', '🏪 Wine shops</button>'],
+      ['🏰 Wijnhuizen</button>', '🏰 Wineries</button>'],
+      [/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/, enRegionListHtml],
+      ['<script src="map.js"></script>', '<script src="/map.js"></script>'],
+    ], 'wijnkaart.html');
+    fs.writeFileSync(path.join(__dirname, 'en', 'wine-map.html'), html);
+    enUrls.push('/en/wine-map');
+  }
+
+  // --- /en/: homepage (zelfde pagina als /, zonder wijn-spijs en shop) ---
+  {
+    const src = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+    const html = swap(src, [
+      ['<html lang="nl">', '<html lang="en">'],
+      [/<meta name="description" content="[^"]*">/, '<meta name="description" content="Wine tips and the best wine hotspots in Europe: a wine map, travel guides by wine region and value scores from de_wijnparade.">'],
+      ['<title>Wijntips en de beste wijn hotspots in Europa | de_wijnparade</title>', '<title>Wine tips and the best wine hotspots in Europe | de_wijnparade</title>\n    ' + enHead('/', '/en/')],
+      ['"url":"https://wijn-parade.nl","description":"Wijntips en de beste wijn hotspots in Europa"', '"url":"https://wijn-parade.nl/en/","description":"Wine tips and the best wine hotspots in Europe","inLanguage":"en"'],
+      ['href="styles.css"', 'href="/styles.css"'],
+      ['<a href="/" class="header-logo">', '<a href="/en/" class="header-logo">'],
+      [/<nav class="header-nav">[\s\S]*?<\/nav>/, `<nav class="header-nav">
+                    <a href="/en/wine-map">Wine map</a>
+                    <a href="/en/wine-travel">Travel guides</a>
+                    <a href="/value-score" hreflang="nl">Value Score</a>
+                </nav>`],
+      ...igToEn,
+      enHeaderEnd('/', '/en/'),
+      ['<h1 class="page-hero-title">Wijntips en de beste wijn hotspots in Europa</h1>', '<h1 class="page-hero-title">Wine tips and the best wine hotspots in Europe</h1>'],
+      [/\s*<a href="\/wijn-spijs" class="nav-card">[\s\S]*?<\/a>/, ''],
+      [/\s*<a href="https:\/\/wijnparade\.listedwines\.com\/" class="nav-card"[\s\S]*?<\/a>/, ''],
+      [/<a href="\/wijnkaart" class="nav-card">([\s\S]*?)<span class="link-text">Wijnkaart<\/span>/, '<a href="/en/wine-map" class="nav-card">$1<span class="link-text">Wine map</span>'],
+      [/<a href="\/wijnreizen" class="nav-card">([\s\S]*?)<span class="link-text">Reisgidsen<\/span>/, '<a href="/en/wine-travel" class="nav-card">$1<span class="link-text">Travel guides</span>'],
+      ['<a href="/value-score" class="nav-card">', '<a href="/value-score" class="nav-card" hreflang="nl">'],
+      ['>Voeg toe als app</span>', '>Add as app</span>'],
+      ['<a href="/install" class="nav-card">', '<a href="/install" class="nav-card" hreflang="nl">'],
+    ], 'index.html');
+    fs.writeFileSync(path.join(__dirname, 'en', 'index.html'), html);
     enUrls.unshift('/en/');
   }
 
-  // /en/locations
+  // /en/all-locations
   {
     const groups = {};
     for (const l of enLocs) (groups[enCountry(COUNTRY_BY_ID.get(l._id))] ||= []).push(l);
     const body = `<main class="main"><div class="container">
-      <p class="lang-switch">${langFlags('en', '/locaties', '/en/all-locations')}</p>
       <h1 class="en-h1">All wine locations</h1>
       <p class="en-sub">All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.</p>
       ${Object.keys(groups).sort(byCountrySort).map(c => `<section class="en-section"><h2>${escHtml(c)} (${groups[c].length})</h2>
@@ -1575,34 +1672,29 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       title: 'All wine locations in Europe: wineries, wine bars and restaurants | de_wijnparade',
       description: `All ${enLocs.length} wineries, wine bars, restaurants and wine shops of de_wijnparade, by country.`,
       enPath: '/en/all-locations', nlPath: '/locaties', body,
-      crumbs: [{ name: 'Home', path: '/en/' }, { name: 'All locations' }] }));
+      crumbs: [HOME_EN, { name: 'All locations' }] }));
     enUrls.splice(1, 0, '/en/all-locations');
   }
 
-  // --- NL-pagina's: hreflang en een taalknop toevoegen ---
+  // --- NL-pagina's: hreflang en de taalkeuze bovenin toevoegen ---
   const addAlternate = (file, nlPath, enPath) => {
     if (!fs.existsSync(file)) return;
     let html = fs.readFileSync(file, 'utf8');
     if (html.includes('hreflang="en"')) return;
     html = html.replace('</head>', `  ${altLinks(nlPath, enPath)}\n</head>`);
-    const sw = `<p class="lang-switch" style="font-size:.85rem;margin:1rem 0">${langFlags('nl', nlPath, enPath)}</p>`;
-    html = html.replace(/(<main class="main">\s*<div class="container">)/, `$1\n    ${sw}`);
     html = html.replace(/(<header[\s\S]*?)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n      ${langMenu('nl', nlPath, enPath)}$2`);
     fs.writeFileSync(file, html);
   };
   for (const r of enRegions) addAlternate(path.join(__dirname, regionPath(r.id).slice(1) + '.html'), regionPath(r.id), r.enPath);
   for (const l of enLocs) addAlternate(path.join(staticLocationsDir, `${l._id}.html`), `/locations/${l._id}`, enLocPath(l));
-  addAlternate(path.join(__dirname, 'wijnreizen.html'), '/wijnreizen', '/en/');
+  addAlternate(path.join(__dirname, 'wijnreizen.html'), '/wijnreizen', '/en/wine-travel');
+  addAlternate(path.join(__dirname, 'wijnkaart.html'), '/wijnkaart', '/en/wine-map');
   addAlternate(path.join(__dirname, 'locaties.html'), '/locaties', '/en/all-locations');
-  // Homepage: taalmenu bovenin (naar het Engelse reisgidsenoverzicht)
+  // Homepage: oude "English"-link weg, daarna hreflang en taalkeuze zoals op de andere pagina's
   {
     const home = path.join(__dirname, 'index.html');
-    let html = fs.readFileSync(home, 'utf8');
-    if (!html.includes('class="lang-menu"')) {
-      html = html.replace(/\s*<a href="\/en\/" hreflang="en" lang="en">English<\/a>/, '')
-        .replace(/(<header[\s\S]*?)(\s*<\/div>\s*<\/div>\s*<\/header>)/, `$1\n                ${langMenu('nl', '/', '/en/')}$2`);
-      fs.writeFileSync(home, html);
-    }
+    fs.writeFileSync(home, fs.readFileSync(home, 'utf8').replace(/\s*<a href="\/en\/" hreflang="en" lang="en">English<\/a>/, ''));
+    addAlternate(home, '/', '/en/');
   }
 
   // --- sitemap ---

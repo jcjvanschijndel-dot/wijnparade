@@ -5,6 +5,8 @@ let markers = [];
 let activeFilter = 'all';
 let infoWindow;
 let clusterer = null;
+// Engelse kaart (/en/wine-map): Engelse teksten en links naar de Engelse locatiepagina's
+const EN = document.documentElement.lang === 'en';
 
 // Clusters: blauwe cirkels met het aantal locaties, in de huisstijl
 const clusterRenderer = {
@@ -22,7 +24,7 @@ const clusterRenderer = {
                 scaledSize: new google.maps.Size(size, size),
                 anchor: new google.maps.Point(size / 2, size / 2)
             },
-            title: `${count} locaties`,
+            title: `${count} ${EN ? 'locations' : 'locaties'}`,
             zIndex: 1000 + count
         });
     }
@@ -112,7 +114,8 @@ async function loadLocationsFromCMS(skipFit = false) {
                     lng: parseFloat(parsed.lng),
                     description: parsed.description,
                     image: parsed.image || 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop',
-                    website: parsed.website
+                    website: parsed.website,
+                    hasEn: !!parsed.description_en
                 });
             }
         }
@@ -180,14 +183,16 @@ function createInfoWindowContent(location) {
                 <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
                 <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
                 <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
-                <a href="/locations/${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">Lees verder →</a>
+                <a href="${EN && location.hasEn ? '/en' : ''}/locations/${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">${EN ? 'Read more →' : 'Lees verder →'}</a>
             </div>
         </div>
     `;
 }
 
 function getTypeLabel(type) {
-    const labels = { 'wijnbar': '🍾 Wijnbar', 'wijnwinkel': '🏪 Wijnwinkel', 'wijnhuis': '🏰 Wijnhuis', 'restaurant': '🍽️ Restaurant' };
+    const labels = EN
+        ? { 'wijnbar': '🍾 Wine bar', 'wijnwinkel': '🏪 Wine shop', 'wijnhuis': '🏰 Winery', 'restaurant': '🍽️ Restaurant' }
+        : { 'wijnbar': '🍾 Wijnbar', 'wijnwinkel': '🏪 Wijnwinkel', 'wijnhuis': '🏰 Wijnhuis', 'restaurant': '🍽️ Restaurant' };
     return labels[type] || type;
 }
 

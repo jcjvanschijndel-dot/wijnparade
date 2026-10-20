@@ -9,10 +9,12 @@ function haversineKm(lat1, lng1, lat2, lng2) {
 }
 
 let allRegions = [];
+// Engelse versie (/en/wine-travel): Engelse regiolijst en teksten
+const EN = document.documentElement.lang === 'en';
 
 document.addEventListener('DOMContentLoaded', async function() {
   try {
-    const response = await fetch('/content/regions/_index.json');
+    const response = await fetch(EN ? '/en/regions.json' : '/content/regions/_index.json');
     if (!response.ok) { showEmpty(); return; }
     allRegions = await response.json();
     allRegions = allRegions
@@ -50,7 +52,7 @@ function render() {
   const filtered = getFiltered();
   const container = document.getElementById('regionsList');
   if (!filtered.length) {
-    container.innerHTML = '<p style="color:var(--gray-600);padding:2rem 0;text-align:center;">Geen regio\'s gevonden voor deze filters.</p>';
+    container.innerHTML = `<p style="color:var(--gray-600);padding:2rem 0;text-align:center;">${EN ? 'No regions found for these filters.' : 'Geen regio\'s gevonden voor deze filters.'}</p>`;
     return;
   }
 
@@ -74,14 +76,14 @@ function render() {
             <div class="region-row-header">
               <div>
                 <div class="region-row-name">${r.name}</div>
-                <div class="region-row-meta">±${r.km} km van Utrecht &middot; ${r.locationCount} locaties</div>
+                <div class="region-row-meta">±${EN ? r.km.toLocaleString('en-GB') : r.km} km ${EN ? 'from' : 'van'} Utrecht &middot; ${r.locationCount} ${EN ? 'locations' : 'locaties'}</div>
               </div>
             </div>
             <p class="region-row-intro">${r.description.split('.').slice(0,2).join('.')}.</p>
           </div>
           <div class="region-row-actions">
-            <a href="${r.url}" class="region-btn-primary">Bekijk gids →</a>
-            <a href="${r.mapUrl}" class="region-btn-map">Kaart</a>
+            <a href="${r.url}" class="region-btn-primary">${EN ? 'View guide →' : 'Bekijk gids →'}</a>
+            <a href="${r.mapUrl}" class="region-btn-map">${EN ? 'Map' : 'Kaart'}</a>
           </div>
         </div>`).join('')}
       </div>
@@ -90,5 +92,5 @@ function render() {
 
 function showEmpty() {
   document.getElementById('regionsList').innerHTML =
-    '<p style="color:var(--gray-600);padding:2rem 0;text-align:center;">Regiogidsen worden geladen tijdens de volgende deploy.</p>';
+    `<p style="color:var(--gray-600);padding:2rem 0;text-align:center;">${EN ? 'Travel guides will be available after the next deploy.' : 'Regiogidsen worden geladen tijdens de volgende deploy.'}</p>`;
 }
