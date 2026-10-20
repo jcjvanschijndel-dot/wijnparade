@@ -1578,7 +1578,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const src = fs.readFileSync(path.join(__dirname, 'wijnreizen.html'), 'utf8');
     const html = swap(src, [
       ['<html lang="nl">', '<html lang="en">'],
-      [/<meta name="description" content="[^"]*">/, '<meta name="description" content="Planning a wine trip? Guides to the most beautiful wine regions in Europe, with the best wineries, wine bars and restaurants in each region. Filter by country and distance from Utrecht.">'],
+      [/<meta name="description" content="[^"]*">/, '<meta name="description" content="Planning a wine trip? Guides to the most beautiful wine regions in Europe, with the best wineries, wine bars and restaurants in each region.">'],
       ['Wijnreizen in Europa: reisgidsen per wijnregio | de_wijnparade', 'Wine travel in Europe: guides by wine region | de_wijnparade'],
       ['<link rel="canonical" href="https://wijn-parade.nl/wijnreizen">', enHead('/wijnreizen', '/en/wine-travel')],
       ['<meta property="og:url" content="https://wijn-parade.nl/wijnreizen">', '<meta property="og:url" content="https://wijn-parade.nl/en/wine-travel">'],
@@ -1588,12 +1588,10 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       enHeaderEnd('/wijnreizen', '/en/wine-travel'),
       [/<nav class="breadcrumb"[\s\S]*?<\/script>/, breadcrumb([HOME_EN, { name: 'Travel guides' }], 'en')],
       ['<h1 class="page-title">Wijnreizen in Europa: reisgidsen per wijnregio</h1>', '<h1 class="page-title">Wine travel in Europe: guides by wine region</h1>'],
-      [/<p class="page-subtitle">[^<]*<\/p>/, `<p class="page-subtitle">Planning a wine trip to Burgundy, Tuscany, the Douro or the Mosel? For each wine region you'll find the wineries worth visiting, the best wine bars and the finest restaurants, all personally selected. Filter by country or by distance from Utrecht and find your next wine destination.</p>`],
+      [/<p class="page-subtitle">[^<]*<\/p>/, `<p class="page-subtitle">Planning a wine trip to Burgundy, Tuscany, the Douro or the Mosel? For each wine region you'll find the wineries worth visiting, the best wine bars and the finest restaurants, all personally selected. Filter by country and find your next wine destination.</p>`],
       ['<label for="filterCountry">Land</label>', '<label for="filterCountry">Country</label>'],
       ['<option value="">Alle landen</option>', '<option value="">All countries</option>'],
-      ['<label for="filterDistance">Max. afstand vanuit Utrecht</label>', '<label for="filterDistance">Max. distance from Utrecht</label>'],
-      ['<option value="">Alle afstanden</option>', '<option value="">All distances</option>'],
-      ['1.000 km', '1,000 km'], ['1.500 km', '1,500 km'], ['2.000 km', '2,000 km'],
+      [/\s*<div class="filter-item">\s*<label for="filterDistance">[\s\S]*?<\/select>\s*<\/div>/, ''],
       [/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/, enRegionListHtml],
       ['<script src="travelguides.js"></script>', '<script src="/travelguides.js"></script>'],
     ], 'wijnreizen.html');

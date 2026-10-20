@@ -39,12 +39,14 @@ function populateFilters() {
 
 function setupFilters() {
   document.getElementById('filterCountry').addEventListener('change', render);
-  document.getElementById('filterDistance').addEventListener('change', render);
+  const dist = document.getElementById('filterDistance'); // alleen op de NL-pagina
+  if (dist) dist.addEventListener('change', render);
 }
 
 function getFiltered() {
   const country = document.getElementById('filterCountry').value;
-  const maxKm = parseInt(document.getElementById('filterDistance').value) || Infinity;
+  const dist = document.getElementById('filterDistance');
+  const maxKm = (dist && parseInt(dist.value)) || Infinity;
   return allRegions.filter(r => (!country || r.country === country) && r.km <= maxKm);
 }
 
@@ -61,8 +63,9 @@ function render() {
     if (!byCountry[r.country]) byCountry[r.country] = [];
     byCountry[r.country].push(r);
   });
-  Object.values(byCountry).forEach(list => list.sort((a,b) => a.km - b.km));
-  const sortedCountries = Object.keys(byCountry).sort((a,b) =>
+  // NL: op afstand vanuit Utrecht; EN: alfabetisch
+  Object.values(byCountry).forEach(list => list.sort(EN ? (a,b) => a.name.localeCompare(b.name, 'en') : (a,b) => a.km - b.km));
+  const sortedCountries = Object.keys(byCountry).sort(EN ? (a,b) => a.localeCompare(b, 'en') : (a,b) =>
     byCountry[a][0].km - byCountry[b][0].km
   );
 
@@ -76,7 +79,7 @@ function render() {
             <div class="region-row-header">
               <div>
                 <div class="region-row-name">${r.name}</div>
-                <div class="region-row-meta">±${EN ? r.km.toLocaleString('en-GB') : r.km} km ${EN ? 'from' : 'van'} Utrecht &middot; ${r.locationCount} ${EN ? 'locations' : 'locaties'}</div>
+                <div class="region-row-meta">${EN ? `${r.locationCount} locations` : `±${r.km} km van Utrecht &middot; ${r.locationCount} locaties`}</div>
               </div>
             </div>
             <p class="region-row-intro">${r.description.split('.').slice(0,2).join('.')}.</p>
