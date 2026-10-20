@@ -23,6 +23,6 @@ description_en: "A visit is like the estate itself: anything but commercial.
   absolute rarity: two versions of Nascetta, an almost extinct native white
   grape that may only be grown in Novello as Langhe Nascetta DOC del Comune di
   Novello."
-image: /uploads/cogli-l-attimo.webp
+image: /uploads/cogli-l-attimo-2.webp
 website: https://www.instagram.com/cogli_lattimo_winery/
 ---
