@@ -167,7 +167,8 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     .location-map{height:350px;border-radius:12px;border:1px solid var(--gray-200);margin:2rem 0}
     .info-section{padding:1.5rem;background:var(--gray-50);border-radius:12px;border:1px solid var(--gray-200);margin-bottom:1.5rem}
     .info-label{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1rem}
-    .info-value{font-size:1rem;color:var(--gray-900);line-height:1.8;white-space:pre-wrap}
+    .info-value{font-size:1rem;color:var(--gray-900);line-height:1.8}
+    .info-value p+p{margin-top:1em}
     .website-btn{display:inline-block;padding:0.75rem 1.5rem;background:var(--navy);color:#fff;text-decoration:none;border-radius:8px;font-weight:500;margin:1rem 0}
     @media(max-width:768px){.location-hero{height:250px}.location-map{height:300px}.loc-title{font-size:1.3rem}}
   </style>
@@ -189,7 +190,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   <main class="main"><div class="container">
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <h1 class="loc-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
-    <div class="info-section"><div class="info-label">${t.about}</div><div class="info-value">${description}</div></div>
+    <div class="info-section"><div class="info-label">${t.about}</div><div class="info-value">${String(description).split(/\n+/).map(p => `<p>${p}</p>`).join('')}</div></div>
     ${loc.address ? `<div class="loc-address"><span class="loc-address-label">${t.address}</span>${mapUrl ? `<a href="${mapUrl}">${loc.address}</a>` : `<span>${loc.address}</span>`}</div>` : ''}
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
@@ -324,8 +325,14 @@ function parseFrontmatter(content) {
                         blockLines.push(lines[i].replace(/^  /, ''));
                         i++;
                     }
+                    // Gevouwen (>): gewone regeleinden worden spaties, een lege regel blijft
+                    // een regeleinde (= alinea-scheiding), zoals YAML het voorschrijft
                     let text = fold
-                        ? blockLines.join(' ').replace(/\s+/g, ' ').trim()
+                        ? blockLines.reduce((acc, l) => {
+                              const t = l.replace(/\s+/g, ' ').trim();
+                              if (!t) return acc ? acc + '\n' : acc;
+                              return acc && !acc.endsWith('\n') ? acc + ' ' + t : acc + t;
+                          }, '').replace(/\n+$/, '')
                         : blockLines.join('\n');
                     if (strip) text = text.replace(/\n+$/, '');
                     result[key] = text;
@@ -604,7 +611,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
   <meta property="og:url" content="${pageUrl}">
   <meta property="og:type" content="article">
   <link rel="canonical" href="${pageUrl}">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristDestination","name":"${name}","description":"${description.replace(/"/g,'\\"')}","url":"${pageUrl}"}</script>
+  <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'TouristDestination', name, description, url: pageUrl }).replace(/</g, '\\u003c')}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
