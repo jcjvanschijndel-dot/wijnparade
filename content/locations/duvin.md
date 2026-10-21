@@ -1,14 +1,16 @@
 ---
 name: Duvin
 type: restaurant
-address: 9bis Rue Jean-Baptiste Pigalle, 75009 Paris, Frankrijk
+address: 9 bis Rue Jean-Baptiste Pigalle, 75009 Paris, Frankrijk
+lat: 48.8783581
+lng: 2.3322682
 description: >-
-  Net achter de Église de la Trinité, in het 9e arrondissement, ligt een
-  bistrot waar alles om wijn draait — de naam zegt het al. Gastheer Pierre
-  Guignard was eerder sommelier bij buurman Le Bon Georges. In de keuken staat
-  de Belgische chef David Meert, die onder meer in Australië en Bordeaux kookte.
-  De wijnkaart is ruim en eerlijk geprijsd, met namen als Jean Foillard, Pierre
-  Vaïsse en Emmanuel Reynaud.
+  Net achter de Église de la Trinité, in het 9e arrondissement, ligt een bistrot
+  waar alles om wijn draait — de naam zegt het al. Gastheer Pierre Guignard was
+  eerder sommelier bij buurman Le Bon Georges. In de keuken staat de Belgische
+  chef David Meert, die onder meer in Australië en Bordeaux kookte. De wijnkaart
+  is ruim en eerlijk geprijsd, met namen als Jean Foillard, Pierre Vaïsse en
+  Emmanuel Reynaud.
 
 
   Op het menu staan Franse bistroklassiekers: oeuf mayo, eend om te delen, mousse au chocolat en de beef Wellington van de chef. De frites worden — als knipoog naar zijn Belgische afkomst — in rundervet gebakken. Het zit er bijna altijd vol, dus reserveer op tijd. Een aanrader voor wie in Parijs goed wil eten bij een serieuze wijnkaart, op loopafstand van Pigalle.
