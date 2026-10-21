@@ -2,6 +2,8 @@
 name: Nic & ik Wine and Food
 type: wijnbar
 address: Sprongstraat 16, 7201 KS Zutphen
+lat: 52.1411143
+lng: 6.19775
 description: >-
   In een rijksmonument aan de Sprongstraat, midden in het centrum van Zutphen,
   openden Nicolai Huls en Bibi Bodegom in 2018 Nic & ik — volgens de lokale
@@ -10,9 +12,7 @@ description: >-
   ingrediënten.
 
 
-  Elke maand is er een wijnproeverij met een ander thema, en het team
-  organiseerde ook het wijn- en foodfestival The Taste of Zutphen. Een
-  aanrader voor een wijnavond in Zutphen.
+  Elke maand is er een wijnproeverij met een ander thema, en het team organiseerde ook het wijn- en foodfestival The Taste of Zutphen. Een aanrader voor een wijnavond in Zutphen.
 description_en: >-
   In a listed building on the Sprongstraat, in the heart of Zutphen, Nicolai
   Huls and Bibi Bodegom opened Nic & ik in 2018; according to the local paper,
@@ -21,8 +21,7 @@ description_en: >-
   ingredients.
 
 
-  Every month there is a wine tasting with a different theme, and the team has
-  also organised the wine and food festival The Taste of Zutphen. Recommended
-  for a wine evening in Zutphen.
+  Every month there is a wine tasting with a different theme, and the team has also organised the wine and food festival The Taste of Zutphen. Recommended for a wine evening in Zutphen.
+image: /uploads/nic-ik-wine-and-food.webp
 website: https://nicenik.nl/
 ---
