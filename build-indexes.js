@@ -551,7 +551,7 @@ for (const dir of ['wijnreis', 'wijntips']) {
 const typeLabelsReg = { wijnbar: 'Wijnbar', wijnwinkel: 'Wijnwinkel', wijnhuis: 'Wijnhuis', restaurant: 'Restaurant' };
 const typeLabelsPlural = { wijnbar: 'Wijnbars', wijnwinkel: 'Wijnwinkels', wijnhuis: 'Wijnhuizen', restaurant: 'Restaurants' };
 // Stedelijke regio's krijgen "Wijntips <stad>" in plaats van "Wijnreis <regio>"
-const CITY_REGIONS = new Set(['amsterdam', 'rotterdam', 'parijs', 't-gooi']);
+const CITY_REGIONS = new Set(['amsterdam', 'rotterdam', 'parijs', 't-gooi', 'utrecht']);
 function regionPath(id) {
   return `/${CITY_REGIONS.has(id) ? 'wijntips' : 'wijnreis'}/${id}`;
 }
