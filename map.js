@@ -50,6 +50,7 @@ function initMap() {
     });
 
     infoWindow = new google.maps.InfoWindow();
+    map.addListener('click', hideSheet);
 
     // Clustering (werkt alleen als de clusterbibliotheek is geladen; anders losse markers)
     if (window.markerClusterer) {
@@ -149,6 +150,7 @@ function addMarkers(locations) {
         });
 
         marker.addListener('click', () => {
+            if (isMobile()) { showSheet(location); return; }
             infoWindow.setOptions({ pixelOffset: null });
             infoWindow.setContent(createInfoWindowContent(location));
             infoWindow.open(map, marker);
@@ -185,10 +187,48 @@ function createInfoWindowContent(location) {
                 <h3 style="font-size: 1rem; font-weight: 600; color: #1e3a8a; margin-bottom: 0.25rem;">${location.name}</h3>
                 <p style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.25rem;">${getTypeLabel(location.type)}</p>
                 <p style="font-size: 0.8rem; color: #4b5563; margin-bottom: 0.75rem;">📍 ${location.address}</p>
-                <a href="${EN && location.hasEn ? '/en' : ''}/locations/${location.id}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">${EN ? 'Read more →' : 'Lees verder →'}</a>
+                <a href="${locationUrl(location)}" style="display: inline-block; padding: 0.4rem 0.8rem; background: #1e3a8a; color: white; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: 500;">${EN ? 'Read more →' : 'Lees verder →'}</a>
             </div>
         </div>
     `;
+}
+
+function locationUrl(location) {
+    return `${EN && location.hasEn ? '/en' : ''}/locations/${location.id}`;
+}
+
+// Mobiel: in plaats van de Google-popup (waarin de knop wegvalt) een kaartje onderin het scherm
+const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+function showSheet(location) {
+    infoWindow.close();
+    let sheet = document.getElementById('locSheet');
+    if (!sheet) {
+        sheet = document.createElement('a');
+        sheet.id = 'locSheet';
+        sheet.className = 'loc-sheet';
+        sheet.innerHTML = '<img alt=""><div><div class="loc-sheet-name"></div><div class="loc-sheet-type"></div>' +
+            '<div class="loc-sheet-addr"></div><span class="loc-sheet-btn"></span></div>' +
+            `<button type="button" class="loc-sheet-close" aria-label="${EN ? 'Close' : 'Sluiten'}">×</button>`;
+        sheet.querySelector('.loc-sheet-close').addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); hideSheet(); });
+        sheet.querySelector('img').addEventListener('error', e => { e.target.style.visibility = 'hidden'; });
+        document.body.appendChild(sheet);
+    }
+    sheet.href = locationUrl(location);
+    const img = sheet.querySelector('img');
+    img.style.visibility = location.image ? 'visible' : 'hidden';
+    img.src = location.image || '';
+    img.alt = location.name;
+    sheet.querySelector('.loc-sheet-name').textContent = location.name;
+    sheet.querySelector('.loc-sheet-type').textContent = getTypeLabel(location.type);
+    sheet.querySelector('.loc-sheet-addr').textContent = location.address || '';
+    sheet.querySelector('.loc-sheet-btn').textContent = EN ? 'Read more →' : 'Lees verder →';
+    sheet.classList.add('open');
+}
+
+function hideSheet() {
+    const sheet = document.getElementById('locSheet');
+    if (sheet) sheet.classList.remove('open');
 }
 
 function getTypeLabel(type) {
@@ -203,6 +243,7 @@ function openFocusedLocation() {
     const id = new URLSearchParams(window.location.search).get('id');
     const location = id && wineLocations.find(l => l.id === id || l.id.normalize('NFC') === id.normalize('NFC'));
     if (!location) return;
+    if (isMobile()) { showSheet(location); return; }
     infoWindow.setContent(createInfoWindowContent(location));
     infoWindow.setPosition({ lat: location.lat, lng: location.lng });
     infoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
@@ -222,6 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             activeFilter = this.dataset.type;
+            hideSheet();
             if (wineLocations.length > 0) {
                 addMarkers(wineLocations);
                 if (activeFilter === 'all') fitMapToMarkers();
