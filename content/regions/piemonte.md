@@ -2,7 +2,15 @@
 name: Piemonte & Langhe
 country: Italië
 emoji: "🍄"
-description: "Piemonte is de Bourgogne van Italië: gefragmenteerde wijngaarden, Nebbiolo als koningsdruf en wijnen die pas na jaren rijpen. De heuvels van de Langhe rond Alba zijn doordrenkt van truffel en tannine. Barolo, Barbaresco, Barbera en Dolcetto wachten op ontdekking."
+description: >-
+  In de heuvels van de Langhe rond Alba draait alles om nebbiolo, de druif
+  achter Barolo en Barbaresco: wijnen die pas na jaren op hun best zijn.
+  Daarnaast zijn er de toegankelijkere barbera en dolcetto. In het najaar is
+  Alba de stad van de witte truffel. La Morra, Barolo en Barbaresco zijn goede
+  uitvalsbases voor bezoeken aan de kleine familiewijnhuizen.
+short_description: >-
+  Barolo en Barbaresco van nebbiolo in de Langhe rond Alba, met kleine
+  familiewijnhuizen en in het najaar witte truffel.
 centerLat: 44.68
 centerLng: 8.0
 zoom: 11
@@ -14,8 +22,12 @@ name_en: Piedmont & Langhe
 slug_en: piedmont
 country_en: Italy
 description_en: >-
-  Piedmont is the Burgundy of Italy: fragmented vineyards, Nebbiolo as the king
-  of grapes and wines that only come into their own after years of ageing. The
-  hills of the Langhe around Alba are steeped in truffle and tannin. Barolo,
-  Barbaresco, Barbera and Dolcetto are waiting to be discovered.
+  In the hills of the Langhe around Alba, everything revolves around Nebbiolo,
+  the grape behind Barolo and Barbaresco: wines that only show their best after
+  years. Alongside them are the more approachable Barbera and Dolcetto. In
+  autumn, Alba is the city of the white truffle. La Morra, Barolo and Barbaresco
+  are good bases for visiting the small family wineries.
+short_description_en: >-
+  Barolo and Barbaresco from Nebbiolo in the Langhe around Alba, with small
+  family wineries and white truffles in autumn.
 ---

@@ -2,7 +2,15 @@
 name: Noordelijke Rhône
 country: Frankrijk
 emoji: "⛰️"
-description: "De Noordelijke Rhône is het koninkrijk van Syrah en Viognier. Op steile graniethellingen boven de rivier groeien de druiven voor Hermitage, Côte-Rôtie en Condrieu. Tain-l'Hermitage is het wijncentrum. M. Chapoutier en E. Guigal zijn de grootste namen."
+description: >-
+  In de Noordelijke Rhône groeien syrah en viognier op steile graniethellingen
+  boven de rivier, voor Hermitage, Côte-Rôtie en Condrieu. Tain-l'Hermitage is
+  het wijncentrum, met onder meer M. Chapoutier; E. Guigal zit in Ampuis, onder
+  Côte-Rôtie. Combineer proeverijen met een wandeling door de wijngaarden op de
+  heuvel van Hermitage.
+short_description: >-
+  Syrah en viognier van steile hellingen voor Hermitage, Côte-Rôtie en Condrieu,
+  met Tain-l'Hermitage als centrum.
 centerLat: 45.1
 centerLng: 4.84
 zoom: 11
@@ -14,8 +22,12 @@ name_en: Northern Rhône
 slug_en: northern-rhone
 country_en: France
 description_en: >-
-  The Northern Rhône is the kingdom of Syrah and Viognier. On steep granite
-  slopes above the river grow the grapes for Hermitage, Côte-Rôtie and Condrieu.
-  Tain-l'Hermitage is the wine centre. M. Chapoutier and E. Guigal are the
-  biggest names.
+  In the Northern Rhône, Syrah and Viognier grow on steep granite slopes above
+  the river, for Hermitage, Côte-Rôtie and Condrieu. Tain-l'Hermitage is the
+  wine centre, home to M. Chapoutier among others; E. Guigal is based in Ampuis,
+  below Côte-Rôtie. Combine tastings with a walk through the vineyards on the
+  hill of Hermitage.
+short_description_en: >-
+  Syrah and Viognier from steep slopes for Hermitage, Côte-Rôtie and Condrieu,
+  centred on Tain-l'Hermitage.
 ---

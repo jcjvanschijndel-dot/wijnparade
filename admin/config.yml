@@ -158,10 +158,12 @@ collections:
       - {label: "Land", name: "country", widget: "string"}
       - {label: "Emoji", name: "emoji", widget: "string", default: "🍷"}
       - {label: "Omschrijving", name: "description", widget: "text"}
+      - {label: "Korte tekst (één zin voor het overzicht op /wijnreizen; leeg = eerste twee zinnen van de omschrijving)", name: "short_description", widget: "text", required: false}
       - {label: "Naam Engels (optioneel, bv. Burgundy)", name: "name_en", widget: "string", required: false}
       - {label: "URL Engels (optioneel, bv. burgundy)", name: "slug_en", widget: "string", required: false}
       - {label: "Land Engels (optioneel, bv. France)", name: "country_en", widget: "string", required: false}
       - {label: "Omschrijving Engels (optioneel; als dit is ingevuld komt er een Engelse regiopagina)", name: "description_en", widget: "text", required: false}
+      - {label: "Korte tekst Engels (optioneel, voor /en/wine-travel)", name: "short_description_en", widget: "text", required: false}
       - {label: "Center Breedtegraad", name: "centerLat", widget: "number", value_type: "float"}
       - {label: "Center Lengtegraad", name: "centerLng", widget: "number", value_type: "float"}
       - {label: "Kaart Zoom", name: "zoom", widget: "number", default: 10, value_type: "int"}

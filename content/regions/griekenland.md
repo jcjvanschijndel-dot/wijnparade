@@ -2,7 +2,15 @@
 name: Griekenland
 country: Griekenland
 emoji: "🏛️"
-description: "Griekenland heeft een van de oudste wijntraditities ter wereld en de moderne Griekse wijnrenaissance wordt nu ontdekt door de rest van Europa. Santorini met zijn vulkanische Assyrtiko, Kreta met zijn Kotsifali en Athene als levendige hoofdstad met een groeiende wijnbarscene verrassen elke wijnliefhebber."
+description: >-
+  Griekenland heeft een van de oudste wijntradities ter wereld, en de moderne
+  Griekse wijn wordt in de rest van Europa steeds meer ontdekt. Op Santorini
+  groeit assyrtiko op vulkanische bodem, op Kreta onder meer kotsifali. Athene
+  heeft een groeiend aantal wijnbars en is een goed startpunt. Combineer
+  wijnbezoeken met de eilanden en de Griekse keuken.
+short_description: >-
+  Assyrtiko van Santorini, wijnen van Kreta en een groeiend aantal wijnbars in
+  Athene.
 centerLat: 37.8
 centerLng: 23.8
 zoom: 7
@@ -14,8 +22,12 @@ name_en: Greece
 slug_en: greece
 country_en: Greece
 description_en: >-
-  Greece has one of the oldest wine traditions in the world, and the modern
-  Greek wine renaissance is now being discovered by the rest of Europe.
-  Santorini with its volcanic Assyrtiko, Crete with its Kotsifali and Athens as
-  a lively capital with a growing wine bar scene will surprise any wine lover.
+  Greece has one of the oldest wine traditions in the world, and modern Greek
+  wine is increasingly being discovered across Europe. On Santorini, Assyrtiko
+  grows on volcanic soil; on Crete, grapes such as Kotsifali. Athens has a
+  growing number of wine bars and makes a good starting point. Combine winery
+  visits with the islands and Greek cuisine.
+short_description_en: >-
+  Assyrtiko from Santorini, wines from Crete and a growing number of wine bars
+  in Athens.
 ---

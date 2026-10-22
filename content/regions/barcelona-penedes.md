@@ -3,6 +3,9 @@ name: Barcelona & Penedès
 country: Spanje
 emoji: "🍾"
 description: "Barcelona is een prima uitvalsbasis voor een wijnreis. Op een half uur tot een uur rijden ligt de Penedès, het hart van de Catalaanse mousserende wijn: in en rond Sant Sadurní d'Anoia maken familiewijnhuizen cava en Corpinnat van xarel·lo, macabeo en parellada, vaak met eeuwenoude kelders en masia's die je kunt bezoeken. Combineer het met de kleine DO Alella vlak boven de stad, de wijnhuizen van Pla de Bages bij Montserrat en de wijnbars van Barcelona zelf."
+short_description: >-
+  Cava en Corpinnat in de Penedès, op een half uur tot een uur rijden van
+  Barcelona, plus de DO Alella en Pla de Bages.
 centerLat: 41.5
 centerLng: 1.9
 zoom: 9
@@ -21,4 +24,7 @@ description_en: >-
   you can visit. Combine it with the small DO Alella just above the city, the
   wineries of Pla de Bages near Montserrat and the wine bars of Barcelona
   itself.
+short_description_en: >-
+  Cava and Corpinnat in the Penedès, half an hour to an hour's drive from
+  Barcelona, plus DO Alella and Pla de Bages.
 ---

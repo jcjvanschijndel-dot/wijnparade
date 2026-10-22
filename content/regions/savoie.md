@@ -2,7 +2,15 @@
 name: Savoie
 country: Frankrijk
 emoji: "🏔️"
-description: "Wijngaarden aan de voet van de Alpen, met uitzicht op besneeuwde toppen en heldere bergmeren. Savoie is het domein van eigenzinnige lokale druiven zoals jacquère, altesse en de kruidige rode mondeuse. Lichte, frisse en verrassend mineralige wijnen die perfect passen bij fondue, raclette en een dag aan het meer van Annecy."
+description: >-
+  Savoie ligt aan de voet van de Alpen, rond Chambéry en het meer van Annecy.
+  Hier groeien lokale druiven als jacquère en altesse voor witte wijn en
+  mondeuse voor kruidige rode wijn. De wijnen zijn licht, fris en mineralig en
+  passen goed bij fondue en raclette. Combineer wijnbezoeken met een dag aan het
+  meer van Annecy of een wandeling in de bergen.
+short_description: >-
+  Jacquère, altesse en mondeuse aan de voet van de Alpen, rond Chambéry en het
+  meer van Annecy.
 centerLat: 45.7
 centerLng: 6.0
 zoom: 9
@@ -14,8 +22,12 @@ name_en: Savoie
 slug_en: savoie
 country_en: France
 description_en: >-
-  Vineyards at the foot of the Alps, with views of snowy peaks and clear
-  mountain lakes. Savoie is the domain of characterful local grapes such as
-  Jacquère, Altesse and the spicy red Mondeuse. Light, fresh and surprisingly
-  mineral wines that are perfect with fondue, raclette and a day on Lake Annecy.
+  Savoie lies at the foot of the Alps, around Chambéry and Lake Annecy. Local
+  grapes grow here, such as Jacquère and Altesse for white wine and Mondeuse for
+  spicy reds. The wines are light, fresh and mineral and go well with fondue and
+  raclette. Combine winery visits with a day on Lake Annecy or a walk in the
+  mountains.
+short_description_en: >-
+  Jacquère, Altesse and Mondeuse at the foot of the Alps, around Chambéry and
+  Lake Annecy.
 ---

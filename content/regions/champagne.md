@@ -2,7 +2,15 @@
 name: Champagne
 country: Frankrijk
 emoji: "🥂"
-description: "De Champagnestreek rond Reims en Épernay is het enige gebied ter wereld dat echte Champagne produceert. Van de grote huizen op de Avenue de Champagne tot de kleine growers die hun terroir in de fles stoppen. Hautvillers, waar Dom Pérignon werkte, is een korte fietstocht van Épernay."
+description: >-
+  De Champagnestreek rond Reims en Épernay is het enige gebied waar echte
+  champagne wordt gemaakt. Je kunt er de grote huizen aan de Avenue de Champagne
+  in Épernay bezoeken, maar ook kleine growers die champagne maken van hun eigen
+  druiven. Hautvillers, waar Dom Pérignon werkte, ligt op een korte fietstocht
+  van Épernay.
+short_description: >-
+  Grote champagnehuizen en kleine growers rond Reims en Épernay, met Hautvillers
+  op fietsafstand.
 centerLat: 49.08
 centerLng: 3.97
 zoom: 11
@@ -14,8 +22,11 @@ name_en: Champagne
 slug_en: champagne
 country_en: France
 description_en: >-
-  The Champagne region around Reims and Épernay is the only place in the world
-  that produces real Champagne. From the great houses on the Avenue de Champagne
-  to the small growers who put their terroir in the bottle. Hautvillers, where
-  Dom Pérignon worked, is a short bike ride from Épernay.
+  The Champagne region around Reims and Épernay is the only place where real
+  Champagne is made. You can visit the big houses on the Avenue de Champagne in
+  Épernay, but also small growers who make Champagne from their own grapes.
+  Hautvillers, where Dom Pérignon worked, is a short bike ride from Épernay.
+short_description_en: >-
+  Large Champagne houses and small growers around Reims and Épernay, with
+  Hautvillers within cycling distance.
 ---

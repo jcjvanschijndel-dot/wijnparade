@@ -2,7 +2,12 @@
 name: Rotterdam
 country: Nederland
 emoji: "🚢"
-description: "Rotterdam is de meest dynamische stad van Nederland, met een skyline die meer aan Manhattan doet denken dan aan een Hollands stadscentrum. De wijnscène groeit snel: van gezellige wijnbars in het Oude Westen tot serieuze wijnwinkels in de herontwikkelde havenbuurten. Combineer een wijnronde met de Markthal, de Erasmusbrug en de beste restaurantscene buiten Amsterdam."
+description: >-
+  Rotterdam heeft een snelgroeiende wijnscene: van wijnbars in het Oude Westen
+  tot wijnwinkels in de vernieuwde havenbuurten. Combineer een wijnronde met de
+  Markthal, de Erasmusbrug en de restaurants in de stad.
+short_description: >-
+  Wijnbars en wijnwinkels van het Oude Westen tot de vernieuwde havenbuurten.
 centerLat: 51.9225
 centerLng: 4.4792
 zoom: 13
@@ -14,9 +19,10 @@ name_en: Rotterdam
 slug_en: rotterdam
 country_en: Netherlands
 description_en: >-
-  Rotterdam is the most dynamic city in the Netherlands, with a skyline more
-  reminiscent of Manhattan than a Dutch city centre. The wine scene is growing
-  fast: from cosy wine bars in the Oude Westen to serious wine shops in the
-  redeveloped harbour districts. Combine a wine crawl with the Markthal, the
-  Erasmus Bridge and the best restaurant scene outside Amsterdam.
+  Rotterdam has a fast-growing wine scene: from wine bars in the Oude Westen to
+  wine shops in the redeveloped harbour districts. Combine a wine crawl with the
+  Markthal, the Erasmus Bridge and the city's restaurants.
+short_description_en: >-
+  Wine bars and wine shops from the Oude Westen to the redeveloped harbour
+  districts.
 ---
