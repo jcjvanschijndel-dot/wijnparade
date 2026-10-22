@@ -2,7 +2,14 @@
 name: Málaga & Costa del Sol
 country: Spanje
 emoji: "☀️"
-description: "Málaga heeft een verrassend rijke wijncultuur: van zoete Moscatel tot frisse bergwijnen van Ronda en de Axarquía. De stad zelf bruist van wijnbars die ver uitstijgen boven het toeristenniveau. Combineer een bezoek aan de historische binnenstad met uitstapjes naar de bodegas in het achterland en de pittoreske witte dorpen van Andalusië."
+description: >-
+  Málaga heeft een rijke wijncultuur: van zoete moscatel tot frisse wijnen uit
+  de bergen rond Ronda en de Axarquía. In de stad vind je wijnbars waar je de
+  lokale wijnen kunt proeven. Combineer de historische binnenstad met uitstapjes
+  naar de bodegas in het achterland en de witte dorpen van Andalusië.
+short_description: >-
+  Zoete moscatel en wijnen uit de bergen rond Ronda en de Axarquía, met wijnbars
+  in de binnenstad van Málaga.
 centerLat: 36.72
 centerLng: -4.7
 zoom: 10
@@ -14,9 +21,11 @@ name_en: Málaga & Costa del Sol
 slug_en: malaga
 country_en: Spain
 description_en: >-
-  Málaga has a surprisingly rich wine culture: from sweet Moscatel to fresh
-  mountain wines from Ronda and the Axarquía. The city itself is buzzing with
-  wine bars that rise far above tourist level. Combine a visit to the historic
-  centre with trips to the bodegas in the hinterland and the picturesque white
-  villages of Andalusia.
+  Málaga has a rich wine culture: from sweet Moscatel to fresh mountain wines
+  from around Ronda and the Axarquía. In the city you'll find wine bars where
+  you can taste the local wines. Combine the historic centre with trips to the
+  bodegas in the hinterland and the white villages of Andalusia.
+short_description_en: >-
+  Sweet Moscatel and wines from the mountains around Ronda and the Axarquía,
+  with wine bars in Málaga's old town.
 ---

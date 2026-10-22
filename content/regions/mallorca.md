@@ -2,7 +2,14 @@
 name: Mallorca
 country: Spanje
 emoji: "🏝️"
-description: "Mallorca heeft een bloeiende wijntraditie met lokale druivenrassen als Callet, Mantonegro en Prensal. De bodegas in de vallei van Binissalem en op de hellingen van de Tramuntana produceren wijnen die steeds meer internationaal erkenning krijgen. Combineer wijnbezoeken met de prachtige dorpjes van het binnenland en de verstilde baaien van de westkust."
+description: >-
+  Mallorca heeft een eigen wijntraditie met lokale druiven als callet,
+  mantonegro en prensal. De meeste bodegas liggen in de vallei rond Binissalem
+  en op de hellingen van de Tramuntana. Combineer wijnbezoeken met de dorpjes in
+  het binnenland en de baaien aan de westkust.
+short_description: >-
+  Lokale druiven als callet en mantonegro, met bodegas rond Binissalem en in de
+  Tramuntana.
 centerLat: 39.65
 centerLng: 2.85
 zoom: 10
@@ -14,9 +21,11 @@ name_en: Mallorca
 slug_en: mallorca
 country_en: Spain
 description_en: >-
-  Mallorca has a flourishing wine tradition with local grapes such as Callet,
-  Mantonegro and Prensal. The bodegas in the Binissalem valley and on the slopes
-  of the Tramuntana produce wines that are gaining more and more international
-  recognition. Combine winery visits with the beautiful villages of the interior
-  and the quiet coves of the west coast.
+  Mallorca has its own wine tradition with local grapes such as Callet,
+  Mantonegro and Prensal. Most bodegas are in the valley around Binissalem and
+  on the slopes of the Tramuntana. Combine winery visits with the villages of
+  the interior and the coves of the west coast.
+short_description_en: >-
+  Local grapes such as Callet and Mantonegro, with bodegas around Binissalem and
+  in the Tramuntana.
 ---

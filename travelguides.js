@@ -82,7 +82,7 @@ function render() {
                 <div class="region-row-meta">${EN ? `${r.locationCount} locations` : `±${r.km} km van Utrecht &middot; ${r.locationCount} locaties`}</div>
               </div>
             </div>
-            <p class="region-row-intro">${r.description.split('.').slice(0,2).join('.')}.</p>
+            <p class="region-row-intro">${r.shortDescription || r.description.split('.').slice(0,2).join('.') + '.'}</p>
           </div>
           <div class="region-row-actions">
             <a href="${r.url}" class="region-btn-primary">${EN ? 'View guide →' : 'Bekijk gids →'}</a>

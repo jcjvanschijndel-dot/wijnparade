@@ -114,3 +114,23 @@ Verwerk feedback en laat het opnieuw zien. Ga pas verder als de gebruiker akkoor
 - Commit alleen het locatiebestand (en de foto), push naar de werkbranch en maak een pull request met een Nederlandse beschrijving.
 - Vermeld dat de locatie pas live gaat na "Merge pull request", en dat Netlify (als Deploy Previews aanstaan) in de pull request een voorbeeldlink toont.
 - **Voeg nooit zelf samen.** Publiceren doet de gebruiker.
+
+## Regiogidsen: stijl van de intro en de korte tekst
+
+Bij een nieuwe regiogids (`content/regions/<id>.md`) of het herschrijven van een intro. Voorbeeld van de gewenste stijl: `barcelona-penedes.md` en `bourgogne.md`.
+
+*Intro (`description`, `description_en`)*
+- 50 tot 80 woorden, drie of vier zinnen, geen witregels.
+- Opbouw: (1) waar de streek ligt en wat de uitvalsbasis is, met de regionaam in de eerste zin; (2) wat er gemaakt wordt: druiven, wijnen, appellations, eventueel een of twee bekende producenten; (3) wat je er doet: een wijnroute, proeverijen, een wandeling; (4) waarmee je het combineert: steden, dorpen, eten.
+- Concreet en zakelijk: plaatsnamen, druiven en wijnnamen in plaats van sfeerbeelden. Geen superlatieven of clichés ("legendarisch", "Mekka", "bedevaart", "perfect", "ideaal", "verborgen parels", "de beste ter wereld").
+- Jaartallen en getallen alleen als ze vaststaan; bij tegenstrijdige bronnen weglaten.
+
+*Korte tekst (`short_description`, `short_description_en`)*
+- Eén zin van 12 tot 22 woorden voor het overzicht op /wijnreizen: wat je er vindt en waar, bijvoorbeeld "Pinot noir en chardonnay van Chablis tot de Mâconnais, met Beaune en de Route des Grands Crus als middelpunt."
+- Herhaal de regionaam niet; die staat er al boven.
+
+*SEO*
+- Titel, h1 en meta description van de gids worden automatisch gemaakt ("Wijnreis X: tips voor wijnhuizen, wijnbars en restaurants"); daar hoeft de intro niet voor te zorgen.
+- De intro helpt vooral met concrete zoektermen (plaatsen, druiven, appellations, routes) die mensen naast de regionaam zoeken.
+
+Laat de nieuwe of herschreven teksten (NL en EN) eerst aan de gebruiker zien en wacht op akkoord.

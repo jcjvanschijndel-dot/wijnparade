@@ -523,6 +523,7 @@ if (fs.existsSync(regionsContentPath)) {
       country: parsed.country || '',
       emoji: parsed.emoji || '🍷',
       description: parsed.description || '',
+      shortDescription: parsed.short_description || '',
       centerLat: parseFloat(parsed.centerLat) || 0,
       centerLng: parseFloat(parsed.centerLng) || 0,
       zoom: parseInt(parsed.zoom) || 10,
@@ -734,6 +735,7 @@ for (const region of REGIONS) {
     country: region.country,
     emoji: region.emoji,
     description: region.description,
+    shortDescription: region.shortDescription,
     centerLat: region.centerLat,
     centerLng: region.centerLng,
     zoom: region.zoom,
@@ -1372,6 +1374,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       nameEn: d.name_en || region.name,
       countryEn: d.country_en || region.country,
       descriptionEn: d.description_en,
+      shortDescriptionEn: d.short_description_en || '',
       isCity,
       enPath: `/en/${isCity ? 'wine-tips' : 'wine-travel'}/${slug}`,
     });
@@ -1566,7 +1569,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
 
   // --- Regiolijst voor travelguides.js (EN) en vaste lijst met links (SEO) ---
   const enRegionsIndex = enRegions.map(r => ({
-    id: r.id, name: r.nameEn, country: r.countryEn, description: r.descriptionEn,
+    id: r.id, name: r.nameEn, country: r.countryEn, description: r.descriptionEn, shortDescription: r.shortDescriptionEn,
     centerLat: r.centerLat, centerLng: r.centerLng, zoom: r.zoom,
     locationCount: allLocations.filter(l => inBounds(l, r)).length,
     url: r.enPath, mapUrl: `/en/wine-map?lat=${r.centerLat}&lng=${r.centerLng}&zoom=${r.zoom}`,

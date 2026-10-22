@@ -2,7 +2,16 @@
 name: Languedoc-Roussillon
 country: Frankrijk
 emoji: "🌊"
-description: "Het grootste wijngebied van Frankrijk strekt zich uit van de Camargue tot aan de Pyreneeën. Waar hier vroeger vooral bulkwijn werd gemaakt, werkt nu een nieuwe generatie wijnmakers met oude wijnstokken op schist en kalk, in Faugères, Pic Saint-Loup en Maury. Montpellier heeft een bruisende wijnbarscene, en aan het Étang de Thau eet je oesters direct van de kwekerij."
+description: >-
+  De Languedoc-Roussillon is het grootste wijngebied van Frankrijk en loopt van
+  de Camargue tot de Pyreneeën. Vroeger werd hier vooral bulkwijn gemaakt; nu
+  werken veel wijnmakers met oude wijnstokken op schist en kalk, in onder meer
+  Faugères, Pic Saint-Loup en Maury. Montpellier heeft veel wijnbars en is een
+  goede uitvalsbasis. Aan het Étang de Thau eet je oesters direct bij de
+  kwekerij.
+short_description: >-
+  Van de Camargue tot de Pyreneeën: Faugères, Pic Saint-Loup en Maury, wijnbars
+  in Montpellier en oesters uit het Étang de Thau.
 centerLat: 43.3
 centerLng: 3.3
 zoom: 8
@@ -14,9 +23,12 @@ name_en: Languedoc-Roussillon
 slug_en: languedoc-roussillon
 country_en: France
 description_en: >-
-  France's largest wine region stretches from the Camargue to the Pyrenees.
-  Where mostly bulk wine used to be made, a new generation of winemakers now
-  works with old vines on schist and limestone, in Faugères, Pic Saint-Loup and
-  Maury. Montpellier has a buzzing wine bar scene, and on the Étang de Thau you
-  can eat oysters straight from the farm.
+  Languedoc-Roussillon is France's largest wine region and runs from the
+  Camargue to the Pyrenees. It used to produce mostly bulk wine; today many
+  winemakers work with old vines on schist and limestone, in places such as
+  Faugères, Pic Saint-Loup and Maury. Montpellier has plenty of wine bars and is
+  a good base. On the Étang de Thau you can eat oysters straight from the farm.
+short_description_en: >-
+  From the Camargue to the Pyrenees: Faugères, Pic Saint-Loup and Maury, wine
+  bars in Montpellier and oysters from the Étang de Thau.
 ---

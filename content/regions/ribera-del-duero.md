@@ -2,7 +2,15 @@
 name: Ribera del Duero
 country: Spanje
 emoji: "🏰"
-description: "Ribera del Duero is een van de meest opwindende wijngebieden van Spanje, op 850 meter hoogte langs de Duero-rivier. Krachtige rode wijnen van Tempranillo (hier Tinto Fino) met als absolute topnamen Vega Sicilia en Pago de Carraovejas. Combineer een bezoek met het middeleeuwse Peñafiel en de historische stad Segovia."
+description: >-
+  Ribera del Duero ligt op zo'n 850 meter hoogte langs de Duero, ten noorden van
+  Madrid. Hier worden krachtige rode wijnen gemaakt van tempranillo, die hier
+  tinto fino heet, met Vega Sicilia en Pago de Carraovejas als bekendste namen.
+  Combineer wijnbezoeken met het middeleeuwse Peñafiel, met een wijnmuseum in
+  het kasteel, en de historische stad Segovia.
+short_description: >-
+  Krachtige tempranillo op 850 meter hoogte langs de Duero, met Peñafiel en
+  Segovia in de buurt.
 centerLat: 41.62
 centerLng: -4.2
 zoom: 10
@@ -14,9 +22,12 @@ name_en: Ribera del Duero
 slug_en: ribera-del-duero
 country_en: Spain
 description_en: >-
-  Ribera del Duero is one of the most exciting wine regions in Spain, at 850
-  metres altitude along the Duero river. Powerful red wines from Tempranillo
-  (here called Tinto Fino), with Vega Sicilia and Pago de Carraovejas as the
-  absolute top names. Combine a visit with medieval Peñafiel and the historic
-  city of Segovia.
+  Ribera del Duero lies at around 850 metres along the Duero, north of Madrid.
+  Powerful red wines are made here from Tempranillo, known locally as Tinto
+  Fino, with Vega Sicilia and Pago de Carraovejas as the best-known names.
+  Combine winery visits with medieval Peñafiel, which has a wine museum in its
+  castle, and the historic city of Segovia.
+short_description_en: >-
+  Powerful Tempranillo at 850 metres along the Duero, with Peñafiel and Segovia
+  nearby.
 ---
