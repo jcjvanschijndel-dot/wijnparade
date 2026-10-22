@@ -130,7 +130,8 @@ Bij een nieuwe regiogids (`content/regions/<id>.md`) of het herschrijven van een
 - Herhaal de regionaam niet; die staat er al boven.
 
 *SEO*
-- Titel, h1 en meta description van de gids worden automatisch gemaakt ("Wijnreis X: tips voor wijnhuizen, wijnbars en restaurants"); daar hoeft de intro niet voor te zorgen.
+- Titel en h1 van de gids worden automatisch gemaakt ("Wijnreis X: tips voor wijnhuizen, wijnbars en restaurants"); daar hoeft de intro niet voor te zorgen.
+- De meta description (de tekst onder de link in Google) is de korte tekst plus "Tips voor wijnhuizen, wijnbars en restaurants." Houd de korte tekst daarom onder de 115 tekens; is hij langer, dan blijft alleen de korte tekst over (maximaal 160 tekens).
 - De intro helpt vooral met concrete zoektermen (plaatsen, druiven, appellations, routes) die mensen naast de regionaam zoeken.
 
 Laat de nieuwe of herschreven teksten (NL en EN) eerst aan de gebruiker zien en wacht op akkoord.

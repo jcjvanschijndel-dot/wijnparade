@@ -555,6 +555,24 @@ const CITY_REGIONS = new Set(['amsterdam', 'rotterdam', 'parijs', 't-gooi']);
 function regionPath(id) {
   return `/${CITY_REGIONS.has(id) ? 'wijntips' : 'wijnreis'}/${id}`;
 }
+// Meta description van een regiogids: de korte tekst van de regio plus wat je in
+// de gids vindt, als dat binnen 160 tekens past. Zonder korte tekst: de oude zin met
+// de regionaam en de eerste locaties.
+function regionMetaDesc(lang, short, isCity, name, names) {
+  const en = lang === 'en';
+  const types = isCity ? (en ? 'wine bars, wine shops and restaurants' : 'wijnbars, wijnwinkels en restaurants')
+                       : (en ? 'wineries, wine bars and restaurants' : 'wijnhuizen, wijnbars en restaurants');
+  if (short) {
+    const s = String(short).replace(/\s+/g, ' ').trim();
+    const full = `${s} ${en ? 'Tips for' : 'Tips voor'} ${types}.`;
+    return full.length <= 160 ? full : s;
+  }
+  const list = names.slice(0, 3).join(', ');
+  return (en
+    ? `${isCity ? 'Wine tips for' : 'Tips for a wine trip to'} ${name}: ${types}, including ${list}. Selected by de_wijnparade.`
+    : `${isCity ? 'Wijntips voor' : 'Tips voor je wijnreis naar'} ${name}: ${types}, waaronder ${list}. Geselecteerd door de_wijnparade.`).substring(0, 160);
+}
+
 function regionSeo(region) {
   return CITY_REGIONS.has(region.id)
     ? { h1: `Wijntips ${region.name}`, title: `Wijntips ${region.name}: de beste wijnbars, wijnwinkels en restaurants`, link: `Wijntips ${region.name}` }
@@ -715,11 +733,8 @@ for (const region of REGIONS) {
   });
 
   const pageUrl = `${SITE_URL_REGIONS}${regionPath(region.id)}`;
-  const locNames = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
   const seo = regionSeo(region);
-  const metaDesc = (CITY_REGIONS.has(region.id)
-    ? `Wijntips voor ${region.name}: de beste wijnbars, wijnwinkels en restaurants, waaronder ${locNames}. Persoonlijk geselecteerd door de_wijnparade.`
-    : `Tips voor je wijnreis naar ${region.name}: de beste wijnhuizen, wijnbars en restaurants, waaronder ${locNames}. Geselecteerd door de_wijnparade.`).substring(0, 160);
+  const metaDesc = regionMetaDesc('nl', region.shortDescription, CITY_REGIONS.has(region.id), region.name, locs.map(l => l.title || l.name));
 
   const html = renderRegionPage({
     name: region.name, description: region.description, h1: seo.h1, title: seo.title,
@@ -1492,13 +1507,10 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   // --- Engelse regiopagina's (zelfde template als NL) ---
   for (const r of enRegions) {
     const locs = allLocations.filter(l => inBounds(l, r));
-    const names = locs.slice(0, 3).map(l => l.title || l.name).join(', ');
     const title = r.isCity
       ? `${r.nameEn} wine tips: the best wine bars, wine shops and restaurants`
       : `${r.nameEn} wine travel guide: wineries, wine bars and restaurants`;
-    const metaDesc = (r.isCity
-      ? `Wine tips for ${r.nameEn}: the best wine bars, wine shops and restaurants, including ${names}. Personally selected by de_wijnparade.`
-      : `Planning a wine trip to ${r.nameEn}? The best wineries, wine bars and restaurants, including ${names}. Personally selected by de_wijnparade.`).slice(0, 160);
+    const metaDesc = regionMetaDesc('en', r.shortDescriptionEn, r.isCity, r.nameEn, locs.map(l => l.title || l.name));
     const html = renderRegionPage({
       lang: 'en', name: r.nameEn, description: r.descriptionEn, h1: regionTitleEn(r), title, metaDesc,
       pageUrl: SITE_URL + r.enPath, logoHref: '/en/wine-travel',
