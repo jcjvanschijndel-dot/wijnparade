@@ -1,6 +1,6 @@
 ---
 name: Descorche
-type: restaurant
+type: wijnbar
 address: C. Álamos, 8, Distrito Centro, 29012 Málaga, Spanje
 lat: 36.7238954
 lng: -4.4200124
