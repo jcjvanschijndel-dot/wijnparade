@@ -1,6 +1,6 @@
 ---
 name: El Pimpi
-type: restaurant
+type: wijnbar
 address: C. Granada, 62, Distrito Centro, 29015 Málaga, Spanje
 lat: 36.721909
 lng: -4.4181144
