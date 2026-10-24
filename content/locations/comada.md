@@ -1,5 +1,5 @@
 ---
-name: Comada
+name: Clomada
 type: restaurant
 address: C/ Méndez Núñez, 12, Distrito Centro, 29007 Málaga, Spanje
 lat: 36.7232978
