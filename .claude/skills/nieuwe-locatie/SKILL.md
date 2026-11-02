@@ -50,6 +50,8 @@ De stijl en opbouw hieronder zijn afgeleid van alle gepubliceerde teksten in `co
 - Spaarzaam met uitroeptekens (hooguit één, en niet in elke tekst).
 - Wijn- en vaktermen gewoon gebruiken (cru, cuvée, naturelwijn, barrique, Riesling, Nebbiolo), namen van wijnen en producenten exact overnemen.
 - Geen holle superlatieven ("de allerbeste", "een absolute must") tenzij het om iets aantoonbaars gaat (een prijs, een ster, een ranking). Geen marketingtaal van de website overnemen; herschrijf in eigen woorden.
+- Noem geen recensies, recensenten of externe bronnen ("volgens Gault&Millau", "na een recensie in NRC", "staat op Star Wine List", "Tripadvisor-reviewers"). Gebruik wat ze zeggen als feit in eigen woorden. Alleen iets echt bijzonders mag met naam: een Michelinster, World's Best Vineyards, een grote prijs.
+- Besteed altijd een paar zinnen aan de wijn: wat er op de kaart staat (landen, streken, stijlen, naturel), per glas, een wijnarrangement, proeverijen, eigen wijnen of een sommelier. Zoek daar gericht naar (wijnkaart-pdf op de eigen site, berichten van wijnhandels over proeverijen) voordat je de tekst schrijft.
 - Openingstijden en prijzen alleen als ze op de officiële website staan en niet snel veranderen (bijv. "huisverkoop op zaterdag"); bij twijfel weglaten.
 - Gericht op vindbaarheid in Google: noem het type, de plaats, de streek en relevante termen (bijv. "wijnproeverij", "wijnbar in Málaga") op een natuurlijke manier, vooral in de eerste en de laatste zin.
 - Geen aanhalingstekens rond de hele tekst en geen markdown.
