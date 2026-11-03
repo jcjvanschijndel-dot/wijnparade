@@ -110,6 +110,29 @@ collections:
       - {label: "Hoofd Foto", name: "image", widget: "image", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
 
+  # Artikelen (/artikelen/<slug>, Engels optioneel op /en/articles/<slug>)
+  - name: "articles"
+    label: "Artikelen"
+    folder: "content/articles"
+    create: true
+    identifier_field: title
+    slug: "{{slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: ["date", "title"]
+    fields:
+      - {label: "Titel", name: "title", widget: "string", hint: "Zoals mensen zoeken, bijv. 'Wijnproeverij in de Bourgogne: zo plan je je bezoek'"}
+      - {label: "Korte inleiding", name: "description", widget: "text", hint: "1 à 2 zinnen; staat boven het artikel en in Google (max. 160 tekens)"}
+      - {label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD-MM-YYYY", time_format: false}
+      - {label: "Foto", name: "image", widget: "image", required: false}
+      - {label: "Regiogids", name: "region", widget: "relation", collection: "regions", value_field: "{{slug}}", search_fields: ["name"], display_fields: ["name"], required: false, hint: "Het artikel verschijnt dan ook onderaan deze gids"}
+      - {label: "Adressen in dit artikel", name: "locations", widget: "relation", collection: "locations", value_field: "{{slug}}", search_fields: ["name"], display_fields: ["name"], multiple: true, required: false}
+      - {label: "Tekst", name: "body", widget: "markdown"}
+      - {label: "Titel Engels (optioneel)", name: "title_en", widget: "string", required: false}
+      - {label: "URL Engels (optioneel)", name: "slug_en", widget: "string", required: false}
+      - {label: "Korte inleiding Engels (optioneel)", name: "description_en", widget: "text", required: false}
+      - {label: "Tekst Engels (optioneel; dan komt er een Engelse versie)", name: "body_en", widget: "markdown", required: false}
+      - {label: "Concept (niet publiceren)", name: "draft", widget: "boolean", default: false, required: false}
+
   # Gerechten met wijnen
   - name: "dishes_pairing"
     label: "Gerechten (met wijnen)"
