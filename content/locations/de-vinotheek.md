@@ -21,5 +21,6 @@ description_en: >-
 
 
   Tastings and workshops are held in the shop. Combine a visit with a glass at VinVin, around the corner. Recommended for anyone in Utrecht's city centre looking for natural wine with personal advice.
+image: /uploads/de-vinotheek.webp
 website: https://www.devinotheek.nl/
 ---
