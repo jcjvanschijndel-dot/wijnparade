@@ -28,4 +28,6 @@ description_en: >-
 short_description_en: >-
   Wine shops and wine bars in Bussum, Blaricum, Laren, Naarden and Weesp, close
   to Amsterdam.
+seo_title: "Wijntips 't Gooi: wijnbars en wijnwinkels in Bussum, Laren en Blaricum"
+seo_title_en: "Het Gooi wine tips: wine bars and wine shops in Bussum, Laren and Blaricum"
 ---

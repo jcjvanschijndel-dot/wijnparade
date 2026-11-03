@@ -109,6 +109,8 @@ collections:
       - {label: "Beschrijving Engels (optioneel, voor de Engelse versie)", name: "description_en", widget: "text", required: false}
       - {label: "Hoofd Foto", name: "image", widget: "image", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
+      - {label: "Tekst voor Google (optioneel; anders de eerste zinnen van de beschrijving, max. 160 tekens)", name: "meta_description", widget: "text", required: false}
+      - {label: "Tekst voor Google Engels (optioneel)", name: "meta_description_en", widget: "text", required: false}
 
   # Artikelen (/artikelen/<slug>, Engels optioneel op /en/articles/<slug>)
   - name: "articles"
@@ -150,6 +152,7 @@ collections:
         fields:
           - {label: "Wijn", name: "name", widget: "string"}
           - {label: "Sterren", name: "stars", widget: "select", options: ["1", "2", "3"]}
+      - {label: "Hier eet je dit met een goed glas (optioneel)", name: "locations", widget: "relation", collection: "locations", value_field: "{{slug}}", search_fields: ["name"], display_fields: ["name"], multiple: true, required: false}
 
   # Wijnen met gerechten
   - name: "wines_pairing"
@@ -186,6 +189,8 @@ collections:
       - {label: "URL Engels (optioneel, bv. burgundy)", name: "slug_en", widget: "string", required: false}
       - {label: "Land Engels (optioneel, bv. France)", name: "country_en", widget: "string", required: false}
       - {label: "Omschrijving Engels (optioneel; als dit is ingevuld komt er een Engelse regiopagina)", name: "description_en", widget: "text", required: false}
+      - {label: "Titel voor Google (optioneel; anders automatisch)", name: "seo_title", widget: "string", required: false}
+      - {label: "Titel voor Google Engels (optioneel)", name: "seo_title_en", widget: "string", required: false}
       - {label: "Korte tekst Engels (optioneel, voor /en/wine-travel)", name: "short_description_en", widget: "text", required: false}
       - {label: "Center Breedtegraad", name: "centerLat", widget: "number", value_type: "float"}
       - {label: "Center Lengtegraad", name: "centerLng", widget: "number", value_type: "float"}

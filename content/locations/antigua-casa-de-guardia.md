@@ -5,7 +5,7 @@ address: Alameda Principal, 18, Distrito Centro, 29005 Málaga, Spanje
 lat: 36.7182138
 lng: -4.4245408
 description: >-
-  Dit is nou een echte wijnbar!
+  De oudste wijnbar van Málaga, sinds 1840 — en nog altijd een echte wijnbar.
 
 
   Achter een bescheiden gevel op de Alameda Principal — de brede boulevard die het historische centrum van Málaga doorsnijdt — schuilt een van de meest bijzondere wijnbars van heel Spanje. Antigua Casa de Guardia werd in 1840 opgericht door Don José de Guardia, een voormalig gouverneur van Segovia en gepassioneerd wijnmaker. Zijn creatie groeide uit tot een icoon: de oudste wijnbar van Málaga, door de Malagueños zelf liefkozend ook wel de "tweede kathedraal van Málaga" of "El Barril Místico" (het Mystieke Wijnvat) genoemd.
@@ -44,7 +44,7 @@ description: >-
 image: /uploads/antigua.webp
 website: https://antiguacasadeguardia.com/
 description_en: >-
-  Now this is a real wine bar! Behind a modest façade on the Alameda Principal,
+  The oldest wine bar in Málaga, open since 1840 — and still a real wine bar. Behind a modest façade on the Alameda Principal,
   the wide boulevard that cuts through the historic centre of Málaga, hides one
   of the most remarkable wine bars in all of Spain. Antigua Casa de Guardia was
   founded in 1840 by Don José de Guardia, a former governor of Segovia and a

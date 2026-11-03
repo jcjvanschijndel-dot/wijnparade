@@ -97,6 +97,26 @@ console.log('✅ Content indexes generated!');
 
 const SITE_URL = 'https://wijn-parade.nl';
 
+// Tekst voor Google (meta description) uit een beschrijving: hele zinnen tot ~160 tekens.
+// Een kort aanloopje als eerste zin ("Dit is nou een echte wijnbar!") wordt overgeslagen.
+function metaFromText(text) {
+  const s = String(text || '').replace(/\s+/g, ' ').trim();
+  let sentences = s.match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) || [s];
+  sentences = sentences.map(x => x.trim()).filter(Boolean);
+  if (sentences.length > 1 && sentences[0].length < 45 && sentences.slice(1).join(' ').length >= 100) sentences.shift();
+  let out = '';
+  for (const x of sentences) {
+    if ((out ? out + ' ' + x : x).length > 160) break;
+    out = out ? out + ' ' + x : x;
+  }
+  // Te kort gebleven omdat de volgende zin lang is: aanvullen tot ~155 tekens en afsluiten met …
+  if (out.length < 110) {
+    const rest = sentences.slice(out ? sentences.findIndex(x => !out.includes(x)) : 0).join(' ');
+    if (rest) out = ((out ? out + ' ' : '') + rest).slice(0, 157).replace(/[\s,;:—–-]+\S*$/, '') + '…';
+  }
+  return out;
+}
+
 // Plaatsnaam uit een adres halen (voor paginatitels als "Café de Klepel – restaurant in Amsterdam")
 const COUNTRY_WORDS = /^(frankrijk|france|italië|italie|italy|italia|spanje|spain|españa|duitsland|germany|deutschland|oostenrijk|austria|österreich|portugal|griekenland|greece|nederland|netherlands|the netherlands|belgië|belgie|belgium|verenigd koninkrijk|united kingdom|uk|engeland|hongarije|hungary|slovenië|kroatië|polen|servië|georgië|turkije|marokko|liechtenstein|zwitserland|rheinland-pfalz|illes balears)$/i;
 function cityFromAddress(addr) {
@@ -240,7 +260,7 @@ for (const file of locationFiles) {
 
     const name = loc.title || loc.name;
     const description = loc.description || '';
-    const metaDesc = description.replace(/\s+/g, ' ').trim().substring(0, 160);
+    const metaDesc = loc.meta_description ? String(loc.meta_description).replace(/\s+/g, ' ').trim() : metaFromText(description);
     const typeLabel = typeLabels[loc.type] || loc.type || '';
     const image = loc.image ? `${SITE_URL}${loc.image}` : `${SITE_URL}/profile-photo.jpg`;
     const pageUrl = `${SITE_URL}/locations/${id}`;
@@ -551,6 +571,7 @@ if (fs.existsSync(regionsContentPath)) {
       emoji: parsed.emoji || '🍷',
       description: parsed.description || '',
       shortDescription: parsed.short_description || '',
+      seoTitle: parsed.seo_title || '',
       centerLat: parseFloat(parsed.centerLat) || 0,
       centerLng: parseFloat(parsed.centerLng) || 0,
       zoom: parseInt(parsed.zoom) || 10,
@@ -623,7 +644,10 @@ const typePageTypes = locs => Object.keys(TYPE_PAGES).filter(t => locs.filter(l 
 // Intro en meta description van een typepagina
 function typePageTexts(lang, type, name, items) {
   const en = lang === 'en', pl = TYPE_PLURAL_LC[lang][type], n = items.length;
-  const names = items.map(l => l.title || l.name);
+  const names = items.map(l => {
+    const city = cityFromAddress(l.address);
+    return (l.title || l.name) + (city && !name.toLowerCase().includes(city.toLowerCase()) ? ` (${city})` : '');
+  });
   const intro = en
     ? `${n} ${pl} in ${name}, selected by de_wijnparade, each with a short description, address and website. For wineries, wine bars, restaurants and wine shops together, see the full ${name} guide.`
     : `${n} ${pl} in ${name}, geselecteerd door de_wijnparade, elk met een korte beschrijving, adres en website. Voor wijnhuizen, wijnbars, restaurants en wijnwinkels samen, zie de volledige gids ${name}.`;
@@ -648,8 +672,8 @@ function typePageMore(lang, type, name, guidePath, guideLabel, siblings) {
 
 function regionSeo(region) {
   return CITY_REGIONS.has(region.id)
-    ? { h1: `Wijntips ${region.name}`, title: `Wijntips ${region.name}: de beste wijnbars, wijnwinkels en restaurants`, link: `Wijntips ${region.name}` }
-    : { h1: `Wijnreis ${region.name}: tips`, title: `Wijnreis ${region.name}: tips voor wijnhuizen, wijnbars en restaurants`, link: `Wijnreis ${region.name}` };
+    ? { h1: `Wijntips ${region.name}`, title: region.seoTitle || `Wijntips ${region.name}: de beste wijnbars, wijnwinkels en restaurants`, link: `Wijntips ${region.name}` }
+    : { h1: `Wijnreis ${region.name}: tips`, title: region.seoTitle || `Wijnreis ${region.name}: tips voor wijnhuizen, wijnbars en restaurants`, link: `Wijnreis ${region.name}` };
 }
 
 // ============================================================
@@ -863,12 +887,19 @@ function renderArticlePage({ lang = 'nl', title, description, date, image, bodyH
     .article-body ul,.article-body ol{padding-left:1.4rem}
     .article-body a{color:var(--navy);font-weight:500}
     .article-body blockquote{border-left:3px solid var(--navy);padding-left:1rem;color:var(--gray-600);font-style:italic}
-    .article-body img{max-width:100%;border-radius:10px}
+    .article-body img{width:100%;max-height:420px;object-fit:cover;border-radius:10px}
     .article-related{max-width:720px;margin:0 auto 2.5rem}
     .article-related h2{font-size:1.2rem;color:var(--navy);margin-bottom:1rem}
     .article-related ul{list-style:none;padding:0;display:grid;gap:0.6rem}
     .article-related li a{color:var(--navy);font-weight:600}
     .article-related li span{color:var(--gray-600);font-size:0.85rem}
+    .article-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:1rem}
+    .article-card{display:block;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden;text-decoration:none;color:inherit}
+    .article-card:hover{box-shadow:0 4px 12px rgba(30,58,138,0.1)}
+    .article-card img{width:100%;height:130px;object-fit:cover;display:block}
+    .article-card div{padding:0.6rem 0.75rem}
+    .article-card strong{display:block;color:var(--navy);font-size:0.95rem}
+    .article-card span{font-size:0.8rem;color:var(--gray-600)}
     @media(max-width:600px){.article h1{font-size:1.45rem}}
   </style>
 </head>
@@ -1617,6 +1648,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       countryEn: d.country_en || region.country,
       descriptionEn: d.description_en,
       shortDescriptionEn: d.short_description_en || '',
+      seoTitleEn: d.seo_title_en || '',
       isCity,
       enPath: `/en/${isCity ? 'wine-tips' : 'wine-travel'}/${slug}`,
     });
@@ -1735,9 +1767,9 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   const enTypePairs = [];   // [nlPath, enPath] van de typepagina's, voor hreflang op de NL-kant
   for (const r of enRegions) {
     const locs = allLocations.filter(l => inBounds(l, r));
-    const title = r.isCity
+    const title = r.seoTitleEn || (r.isCity
       ? `${r.nameEn} wine tips: the best wine bars, wine shops and restaurants`
-      : `${r.nameEn} wine travel guide: wineries, wine bars and restaurants`;
+      : `${r.nameEn} wine travel guide: wineries, wine bars and restaurants`);
     const metaDesc = regionMetaDesc('en', r.shortDescriptionEn, r.isCity, r.nameEn, locs.map(l => l.title || l.name));
     // Typepagina's: dezelfde types als op de NL-gids
     const types = typePageUrls.filter(u => u.region === r.id).map(u => u.type);
@@ -1811,7 +1843,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   </div></section>
   `;
     const html = renderLocationPage({
-      lang: 'en', loc: l, name, description, metaDesc: description.replace(/\s+/g, ' ').trim().substring(0, 160),
+      lang: 'en', loc: l, name, description, metaDesc: l.meta_description_en ? String(l.meta_description_en).replace(/\s+/g, ' ').trim() : metaFromText(description),
       typeLabel: EN_LABEL[l.type] || '', city, seoTitle: `${name}${type ? ` – ${type}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`,
       image, pageUrl, schema, logoHref: '/en/wine-map',
       headExtra: altLinks(nlPath, enPath), headerExtra: langMenu('en', nlPath, enPath),
@@ -1982,8 +2014,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     if (!locs.length && !region) return '';
     return `<section class="article-related">
         <h2>${en ? 'Addresses in this article' : 'Adressen uit dit artikel'}</h2>
-        <ul>${locs.map(l => `<li><a href="${en ? enLocHref(l) : `/locations/${l._id}`}">${escHtml(l.title || l.name)}</a> <span>${escHtml((en ? EN_LABEL : NL_TYPE)[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></li>`).join('')}
-        ${region ? `<li><a href="${en && enRegion ? enRegion.enPath : regionPath(region.id)}">${escHtml(en && enRegion ? regionTitleEn(enRegion) : regionSeo(region).link)}</a> <span>${en ? 'full guide' : 'volledige gids'}</span></li>` : ''}</ul>
+        <div class="article-cards">${locs.map(l => `<a class="article-card" href="${en ? enLocHref(l) : `/locations/${l._id}`}">${l.image ? `<img src="${l.image}" alt="${escHtml(l.title || l.name)}" loading="lazy">` : ''}<div><strong>${escHtml(l.title || l.name)}</strong><span>${escHtml((en ? EN_LABEL : NL_TYPE)[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></div></a>`).join('')}</div>
+        <ul>${region ? `<li><a href="${en && enRegion ? enRegion.enPath : regionPath(region.id)}">${escHtml(en && enRegion ? regionTitleEn(enRegion) : regionSeo(region).link)}</a> <span>${en ? 'full guide' : 'volledige gids'}</span></li>` : ''}</ul>
       </section>`;
   };
   const articleCards = (list, lang) => `<div class="region-locs">${list.map(a => {
@@ -2301,6 +2333,15 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   const crumbs = current => [{ name: 'Home', path: '/' }, { name: 'Wijn & spijs', path: '/wijn-spijs' }, { name: current }];
   const pairingUrls = [];
 
+  // Adressen waar je dit gerecht met een goed glas eet (CMS-veld "locations" bij het gerecht)
+  const dishLocs = d => {
+    const locs = (Array.isArray(d.locations) ? d.locations : []).map(id => allLocations.find(l => l._id === String(id))).filter(Boolean);
+    if (!locs.length) return '';
+    return `<section class="ws-section"><h2>Hier eet je ${escHtml(String(d.dish).toLowerCase())} met een goed glas</h2><ul class="ws-list">
+        ${locs.map(l => `<li><a href="/locations/${l._id}">${escHtml(l.title || l.name)}</a> <span style="color:var(--gray-600);font-size:.85em">${escHtml(typeLabelsReg[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></li>`).join('\n        ')}
+      </ul></section>`;
+  };
+
   // --- /wijn-bij/<gerecht> ---
   const dishDir = path.join(__dirname, 'wijn-bij');
   if (!fs.existsSync(dishDir)) fs.mkdirSync(dishDir);
@@ -2335,6 +2376,7 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
       h1: `<h1 class="ws-h1">Welke wijn bij ${escHtml(d.dish)}?</h1>`,
       body: `<p class="ws-intro">${escHtml(intro)}</p>
     ${sections}
+    ${dishLocs(d)}
     <section class="ws-section"><h2>Meer wijn-spijscombinaties</h2><div class="ws-links">
       ${others.map(o => `<a href="/wijn-bij/${slugOf(o._id)}">Wijn bij ${escHtml(o.dish)}</a>`).join('\n      ')}
     </div></section>
