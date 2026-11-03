@@ -30,5 +30,5 @@ description_en: >-
 short_description_en: >-
   Vineyard terraces along the river with port and dry wines, the port lodges of
   Vila Nova de Gaia and the train to Pinhão.
-bg_image: /uploads/crasxto.webp
+bg_image: /uploads/quinta-nova.webp
 ---

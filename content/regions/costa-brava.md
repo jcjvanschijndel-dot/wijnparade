@@ -31,5 +31,5 @@ description_en: >-
 short_description_en: >-
   The vineyards of DO Empordà behind the rocky coast, with Girona, Pals and
   Begur as bases.
-bg_image: /uploads/peralada.webp
+bg_image: /uploads/geli.webp
 ---

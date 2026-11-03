@@ -25,5 +25,5 @@ description_en: >-
 short_description_en: >-
   Wine bars and wine shops from the Oude Westen to the redeveloped harbour
   districts.
-bg_image: /uploads/bruggetje.webp
+bg_image: /uploads/achtergrond-rotterdam.webp
 ---
