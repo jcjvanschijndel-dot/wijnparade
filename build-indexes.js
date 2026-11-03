@@ -2101,6 +2101,51 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
     fs.writeFileSync(path.join(__dirname, 'llms.txt'), txt);
   }
 
+  // --- IndexNow: lijst met pagina's die door deze deploy veranderen ---
+  // Netlify geeft CACHED_COMMIT_REF (vorige deploy) en COMMIT_REF (deze deploy).
+  // De functie netlify/functions/deploy-succeeded.js stuurt de lijst na de deploy naar IndexNow.
+  {
+    const urls = new Set();
+    const from = process.env.CACHED_COMMIT_REF, to = process.env.COMMIT_REF;
+    let changed = [];
+    if (from && to && from !== to) {
+      try {
+        changed = require('child_process').execSync(`git -c core.quotePath=false diff --name-only ${from} ${to} -- content`,
+          { cwd: __dirname, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).split('\n').filter(Boolean).map(f => f.normalize('NFC'));
+      } catch (e) {}
+    }
+    const addRegion = (r, type) => {
+      urls.add(SITE_URL + regionPath(r.id));
+      const en = enRegions.find(x => x.id === r.id);
+      if (en) urls.add(SITE_URL + en.enPath);
+      for (const u of typePageUrls.filter(u => u.region === r.id && (!type || u.type === type))) {
+        urls.add(SITE_URL + u.path);
+        if (en) urls.add(`${SITE_URL}/en/${TYPE_PAGES[u.type].en}/${en.enPath.split('/').pop()}`);
+      }
+    };
+    for (const f of changed) {
+      const m = f.match(/^content\/(locations|regions|articles)\/(.+)\.md$/);
+      if (!m) continue;
+      const id = m[2];
+      if (m[1] === 'locations') {
+        const l = allLocations.find(x => x._id === id);
+        if (!l) continue;   // verwijderd
+        urls.add(`${SITE_URL}/locations/${id}`);
+        if (enLocs.includes(l)) urls.add(SITE_URL + enLocPath(l));
+        for (const r of REGIONS.filter(r => inBounds(l, r))) addRegion(r, l.type);
+      } else if (m[1] === 'regions') {
+        const r = REGIONS.find(x => x.id === id);
+        if (r) addRegion(r);
+      } else {
+        const a = articles.find(x => x._id === id);
+        if (a) { urls.add(SITE_URL + nlArticlePath(a)); if (hasEn(a)) urls.add(SITE_URL + enArticlePath(a)); urls.add(`${SITE_URL}/artikelen`); }
+      }
+    }
+    if (urls.size) { urls.add(`${SITE_URL}/wijnreizen`); urls.add(`${SITE_URL}/llms.txt`); }
+    fs.writeFileSync(path.join(__dirname, 'indexnow-urls.json'), JSON.stringify([...urls].map(u => encodeURI(decodeURI(u)))));
+    if (changed.length) console.log(`  📣 IndexNow: ${urls.size} gewijzigde pagina's klaargezet`);
+  }
+
   // --- NL-pagina's: hreflang en de taalkeuze bovenin toevoegen ---
   const addAlternate = (file, nlPath, enPath) => {
     if (!fs.existsSync(file)) return;
