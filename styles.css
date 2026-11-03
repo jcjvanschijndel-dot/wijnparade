@@ -82,8 +82,8 @@ body {
 }
 
 .header-logo-name {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 19px;
+    font-weight: 700;
     color: white;
     letter-spacing: -0.2px;
 }
@@ -107,6 +107,8 @@ body {
     }
     .header-nav a:hover { color: white; }
 }
+/* Desktopmenu weggelaten: alleen de taallink (English / Nederlands) blijft staan */
+.header-nav a:not([lang]) { display: none; }
 
 /* Taalkeuze: dropdown met vlaggetjes in de header */
 .header-logo { margin-right: auto; }
@@ -139,15 +141,14 @@ body {
 .ig-follow-btn { display: inline-flex; margin-left: 0.75rem; line-height: 0; transition: transform .15s; }
 .ig-follow-btn:hover { transform: scale(1.08); }
 .ig-follow-btn .ig-logo { width: 28px; height: 28px; }
-.ig-card-section { padding: 2.5rem 0; margin-top: 2rem; background: white; border-top: 1px solid var(--gray-200); }
+.ig-card-section { padding: 1.25rem 0; margin-top: 1.5rem; background: transparent; border-top: 1px solid var(--gray-200); }
 .ig-card-section + .footer, .ig-card-section ~ .footer { margin-top: 0; }
-.ig-promo { display: flex; align-items: center; justify-content: center; gap: 1.25rem; text-decoration: none; }
-.ig-logo-round { width: 92px; height: 92px; flex-shrink: 0; transition: transform .2s; }
+.ig-promo { display: flex; align-items: center; justify-content: center; gap: 0.6rem; text-decoration: none; }
+.ig-logo-round { width: 34px; height: 34px; flex-shrink: 0; transition: transform .2s; }
 .ig-promo:hover .ig-logo-round { transform: scale(1.05); }
-.ig-promo-text { display: flex; flex-direction: column; line-height: 1; }
-.ig-promo-top { font-size: 1.6rem; font-weight: 700; color: #333; letter-spacing: -0.3px; }
-.ig-promo-word { font-family: 'Grand Hotel', cursive; font-size: 3.6rem; line-height: 1.1; padding-right: .15em; background: linear-gradient(90deg, #f9ce34, #fa7e1e 30%, #ee2a7b 60%, #6228d7); -webkit-background-clip: text; background-clip: text; color: transparent; }
-@media (max-width: 480px) { .ig-logo-round { width: 68px; height: 68px; } .ig-promo { gap: 0.9rem; } .ig-promo-top { font-size: 1.2rem; } .ig-promo-word { font-size: 2.7rem; } }
+.ig-promo-text { display: flex; align-items: baseline; gap: 0.35rem; line-height: 1; }
+.ig-promo-top { font-size: 0.9rem; font-weight: 500; color: var(--gray-600); }
+.ig-promo-word { font-family: 'Grand Hotel', cursive; font-size: 1.6rem; line-height: 1.1; padding-right: .15em; background: linear-gradient(90deg, #f9ce34, #fa7e1e 30%, #ee2a7b 60%, #6228d7); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
 .instagram-profile-link {
     display: inline-flex;
@@ -837,3 +838,24 @@ textarea {
 .loc-sheet-btn { display: inline-block; margin-top: 0.45rem; padding: 0.4rem 0.9rem; background: var(--navy); color: #fff; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
 .loc-sheet-close { position: absolute; top: 4px; right: 6px; width: 34px; height: 34px; border: 0; background: none; font-size: 24px; line-height: 1; color: var(--gray-600); cursor: pointer; }
 @media (min-width: 769px) { .loc-sheet { display: none; } }
+
+/* Homepage en reisgidsen: lichte wijngaardfoto op de achtergrond.
+   Een vaste laag achter de pagina, zodat de foto ook op lange pagina's en op mobiel niet uitrekt. */
+body.home, body.bg-vineyard {
+    background: transparent;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+body.home::before, body.bg-vineyard::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(255,255,255,.84), rgba(255,255,255,.84)), url(/uploads/achtergrond-barolo.webp) center 40% / cover no-repeat;
+}
+body.home .main, body.bg-vineyard .main { flex: 1; background: transparent; }
+body.home .nav-card { background: rgba(255,255,255,.94); }
+body.bg-vineyard::before {
+    background: linear-gradient(rgba(255,255,255,.84), rgba(255,255,255,.84)), url(/uploads/achtergrond-bourgogne.webp) center 40% / cover no-repeat;
+}
