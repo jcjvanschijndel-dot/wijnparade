@@ -21,5 +21,6 @@ description_en: >-
 
 
   The cooking is Piedmontese, classic and refined. The best-known dish is the agnolotti del plin made to mother Lidia's recipe. The wine list centres on Piedmont: big names alongside small producers, with white wines, Barbera, Nebbiolo and plenty of Barolo — including Fontanafredda's own, such as the Barolo La Rosa from the estate's vineyard. Book well in advance, and combine dinner with a visit to the Fontanafredda wine cellars. Recommended for a special evening during a wine trip through Piedmont.
+image: /uploads/guido-ristorante.webp
 website: https://www.guidoristorante.it/
 ---
