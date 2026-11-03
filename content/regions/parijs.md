@@ -30,5 +30,5 @@ description_en: >-
 short_description_en: >-
   Wine shops and wine bars in the Marais, Belleville, Pigalle and Saint-Germain,
   with wines from all over France.
-bg_image: /uploads/legrand.webp
+bg_image: /uploads/achtergrond-parijs.webp
 ---

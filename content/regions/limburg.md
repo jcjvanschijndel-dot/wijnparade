@@ -1,5 +1,5 @@
 ---
-name: Limburg
+name: Maastricht & Limburg
 country: Nederland
 emoji: "🏔️"
 description: >-
@@ -18,7 +18,7 @@ minLat: 50.75
 maxLat: 51.55
 minLng: 5.55
 maxLng: 6.25
-name_en: Limburg
+name_en: Maastricht & Limburg
 slug_en: limburg
 country_en: Netherlands
 description_en: >-
@@ -30,5 +30,5 @@ description_en: >-
 short_description_en: >-
   Vineyards in the hills of South Limburg around Maastricht, Eijsden-Margraten
   and Vijlen.
-bg_image: /uploads/apostelhoeve.webp
+bg_image: /uploads/achtergrond-limburg.webp
 ---

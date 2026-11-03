@@ -779,7 +779,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
-<body class="bg-vineyard"${bgImage ? ` style="--bg-img:url('${bgImage}')"` : ''}>
+<body${bgImage ? ` class="bg-vineyard" style="--bg-img:url('${bgImage}')"` : ''}>
   <header class="header">
     <div class="container">
       <div class="header-inner">
