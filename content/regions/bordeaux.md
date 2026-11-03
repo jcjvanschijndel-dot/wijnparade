@@ -31,4 +31,5 @@ description_en: >-
 short_description_en: >-
   The châteaux of the Médoc, Saint-Émilion, Pomerol and Sauternes, with the city
   of Bordeaux as a base.
+bg_image: /uploads/lynch.webp
 ---

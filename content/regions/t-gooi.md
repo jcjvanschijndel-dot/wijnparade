@@ -30,4 +30,5 @@ short_description_en: >-
   to Amsterdam.
 seo_title: "Wijntips 't Gooi: wijnbars en wijnwinkels in Bussum, Laren en Blaricum"
 seo_title_en: "Het Gooi wine tips: wine bars and wine shops in Bussum, Laren and Blaricum"
+bg_image: /uploads/zonnestraal.webp
 ---

@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Barolo and Barbaresco from Nebbiolo in the Langhe around Alba, with small
   family wineries and white truffles in autumn.
+bg_image: /uploads/achtergrond-barolo.webp
 ---

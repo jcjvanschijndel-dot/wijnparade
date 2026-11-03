@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Grenache and blends from Châteauneuf-du-Pape, Gigondas and Cairanne, with
   Avignon as a base.
+bg_image: /uploads/verger-papes.webp
 ---

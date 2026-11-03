@@ -570,6 +570,7 @@ if (fs.existsSync(regionsContentPath)) {
       description: parsed.description || '',
       shortDescription: parsed.short_description || '',
       seoTitle: parsed.seo_title || '',
+      bgImage: parsed.bg_image || '',
       centerLat: parseFloat(parsed.centerLat) || 0,
       centerLng: parseFloat(parsed.centerLng) || 0,
       zoom: parseInt(parsed.zoom) || 10,
@@ -678,14 +679,21 @@ function regionSeo(region) {
 // REGIOGIDS-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
 // ============================================================
 const REGION_TEXT = {
-  nl: { more: 'Lees meer', label: typeLabelsReg, plural: typeLabelsPlural },
+  nl: { more: 'Lees meer', label: typeLabelsReg, single: typeLabelsReg, plural: typeLabelsPlural },
   en: { more: 'Read more',
         label: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' },
+        single: { wijnbar: 'Wine bar', wijnwinkel: 'Wine shop', wijnhuis: 'Winery', restaurant: 'Restaurant' },
         plural: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' } },
+};
+// Adres op één regel: zonder het land aan het eind (bv. "…, 51480 Cormoyeux, Frankrijk" → "…, 51480 Cormoyeux")
+const shortAddress = a => {
+  const parts = String(a || '').split(',').map(p => p.trim()).filter(Boolean);
+  if (parts.length >= 3 && !/\d/.test(parts[parts.length - 1])) parts.pop();
+  return parts.join(', ');
 };
 function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc, pageUrl, logoHref, locs,
                             locHref, locDesc, readMore, headExtra = '', headerExtra = '', afterHeader = '',
-                            typeLinks = {}, afterSections = '' }) {
+                            typeLinks = {}, afterSections = '', bgImage = '' }) {
   const t = REGION_TEXT[lang];
   const byType = { wijnhuis: [], wijnbar: [], restaurant: [], wijnwinkel: [] };
   locs.forEach(l => { if (byType[l.type]) byType[l.type].push(l); });
@@ -703,11 +711,11 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
       </h2>
       <div class="region-locs">
         ${items.map(l => `
-          <div class="region-loc-card">
+          <div class="region-loc-card${l.image ? '' : ' no-img'}">
             ${l.image ? `<img src="${l.image}" alt="${l.title || l.name}" class="region-loc-img" loading="lazy">` : ''}
             <div class="region-loc-body">
-              <h3 class="region-loc-name">${l.title || l.name}</h3>
-              <div class="region-loc-address">${l.address || ''}</div>
+              <h3 class="region-loc-name"><a href="${locHref(l)}">${l.title || l.name}</a></h3>
+              <div class="region-loc-address">${shortAddress(l.address)}</div>
               ${locDesc(l) ? `<div class="region-loc-desc">${locDesc(l).substring(0, 200)}${locDesc(l).length > 200 ? '…' : ''}</div>` : ''}
               <a href="${locHref(l)}" class="region-loc-link">${readMore(l)}</a>
               ${l.website ? `<a href="${l.website.startsWith('http') ? l.website : 'https://' + l.website}" target="_blank" rel="noopener" class="region-loc-link region-loc-web">Website →</a>` : ''}
@@ -738,38 +746,40 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   ${headExtra}
   <style>
-    .region-hero{background:var(--navy);color:#fff;padding:1.25rem 0}
-    .region-hero h1{font-size:1.5rem;font-weight:700;line-height:1.3;margin-bottom:0.5rem}
-    .region-hero-desc{line-height:1.6;opacity:0.9;font-size:0.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .region-hero{padding:1rem 0 0.25rem}
+    .region-hero h1{font-size:1.15rem;font-weight:600;line-height:1.3;color:var(--navy);margin-bottom:0.35rem}
+    .region-hero-desc{line-height:1.5;color:var(--gray-600);font-size:0.82rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0}
     .region-hero-desc.open{display:block}
-    .region-desc-more{background:none;border:0;padding:0;margin-top:0.25rem;color:#fff;font:inherit;font-size:0.85rem;text-decoration:underline;cursor:pointer;opacity:0.9}
-    .region-stats{display:flex;justify-content:center;gap:1.5rem;padding:0 0 0.6rem;border-bottom:1px solid var(--gray-200);flex-wrap:wrap;margin-bottom:1.25rem}
-    main.main{padding-top:0.75rem}
-    .region-stat{text-align:center}
-    .region-stat-num{font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.2}
-    .region-stat-label{font-size:0.72rem;color:var(--gray-600)}
-    .region-section{margin-bottom:3rem}
-    .region-section-title{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gray-200);display:flex;align-items:center;gap:0.5rem;}
+    .region-desc-more{background:none;border:0;padding:0;margin-top:0.2rem;color:var(--navy);font:inherit;font-size:0.8rem;font-weight:500;cursor:pointer}
+    .region-stats{display:flex;gap:0.25rem;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0.75rem 0 1.25rem}
+    main.main{padding-top:0}
+    .region-stat{display:flex;align-items:baseline;gap:0.25rem;flex-shrink:0;white-space:nowrap;background:rgba(255,255,255,.92);border:0.5px solid var(--gray-200);border-radius:999px;padding:0.1rem 0.45rem}
+    .region-stat-num{font-size:0.74rem;font-weight:600;color:var(--navy)}
+    .region-stat-label{font-size:0.7rem;color:var(--gray-600)}
+    .region-section{margin-bottom:1.5rem}
+    .region-section-title{font-size:0.8rem;font-weight:600;color:var(--gray-600);letter-spacing:0.05em;text-transform:uppercase;margin:0 0 0.5rem}
     .region-section-title a{color:inherit;text-decoration:none}
-    .region-section-title a:hover{text-decoration:underline}
-    .region-more{border-top:1px solid var(--gray-200);padding-top:1.25rem;margin-bottom:2rem;line-height:1.8}
+    .region-section-title a:hover{color:var(--navy)}
+    .region-more{padding-top:0.5rem;margin-bottom:1.5rem;line-height:1.8;font-size:0.9rem}
     .region-more a{color:var(--navy);font-weight:500}
-    .region-locs{display:grid;gap:1.25rem}
-    .region-loc-card{display:grid;grid-template-columns:120px 1fr;gap:1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s}
-    .region-loc-card:hover{box-shadow:0 4px 12px rgba(30,58,138,0.1)}
-    .region-loc-img{width:120px;height:120px;object-fit:cover}
-    .region-loc-body{padding:0.75rem 0.75rem 0.75rem 0}
-    .region-loc-name{font-weight:600;color:var(--navy);margin-bottom:0.25rem}
-    .region-loc-address{font-size:0.8rem;color:var(--gray-600);margin-bottom:0.4rem}
-    .region-loc-desc{font-size:0.85rem;line-height:1.6;color:var(--gray-900);margin-bottom:0.5rem}
-    .region-loc-link{display:inline-block;font-size:0.82rem;color:var(--navy);font-weight:500;text-decoration:none;margin-right:0.75rem}
+    .region-locs{display:grid;gap:0.5rem}
+    .region-loc-card{display:grid;grid-template-columns:96px 1fr;gap:0.85rem;background:var(--white);border:0.5px solid var(--gray-200);border-radius:10px;overflow:hidden;transition:all 0.2s ease}
+    .region-loc-card:hover{border-color:var(--navy);box-shadow:0 2px 8px rgba(30,58,138,0.08)}
+    .region-loc-card.no-img{grid-template-columns:1fr;padding-left:1rem}
+    .region-loc-img{width:96px;height:100%;min-height:96px;object-fit:cover}
+    .region-loc-body{padding:0.6rem 0.9rem 0.6rem 0;min-width:0}
+    .region-loc-name{font-weight:600;font-size:0.95rem;color:var(--navy);margin-bottom:0.1rem}
+    .region-loc-name a{color:inherit;text-decoration:none}
+    .region-loc-address{font-size:0.75rem;color:var(--gray-600);margin-bottom:0.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .region-loc-desc{font-size:0.83rem;line-height:1.5;color:var(--gray-900);margin-bottom:0.3rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .region-loc-link{display:inline-block;font-size:0.78rem;color:var(--navy);font-weight:500;text-decoration:none;margin-right:0.75rem}
     .region-loc-link:hover{text-decoration:underline}
-    @media(max-width:600px){.region-loc-card{grid-template-columns:80px 1fr}.region-loc-img{width:80px;height:80px}.region-hero h1{font-size:1.3rem}}
+    @media(max-width:600px){.region-loc-card{grid-template-columns:76px 1fr;gap:0.7rem}.region-loc-img{width:76px;min-height:76px}.region-loc-desc{-webkit-line-clamp:3}}
   </style>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-57CJ2STYT6');</script>
-<body>
+<body class="bg-vineyard"${bgImage ? ` style="--bg-img:url('${bgImage}')"` : ''}>
   <header class="header">
     <div class="container">
       <div class="header-inner">
@@ -798,8 +808,8 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
       <div class="region-stats">
         ${Object.entries(byType).filter(([,v])=>v.length).map(([t,v])=>`
           <div class="region-stat">
-            <div class="region-stat-num">${v.length}</div>
-            <div class="region-stat-label">${tx.label[t]}</div>
+            <span class="region-stat-num">${v.length}</span>
+            <span class="region-stat-label">${String(v.length === 1 ? tx.single[t] : tx.plural[t]).toLowerCase()}</span>
           </div>`).join('')}
       </div>
       ${renderSection('wijnhuis', byType.wijnhuis)}
@@ -968,7 +978,7 @@ for (const region of REGIONS) {
   const siblings = types.map(t => ({ type: t, path: typePath(t) }));
   const locHrefNl = l => `/locations/${l._id}`;
 
-  const html = renderRegionPage({
+  const html = renderRegionPage({ bgImage: region.bgImage,
     name: region.name, description: region.description, h1: seo.h1, title: seo.title,
     metaDesc, pageUrl,
     logoHref: '/wijnreizen', locs, locHref: locHrefNl, locDesc: l => l.description, readMore: () => 'Lees meer →',
@@ -983,7 +993,7 @@ for (const region of REGIONS) {
     const items = locs.filter(l => l.type === t);
     const tx = typePageTexts('nl', t, region.name, items);
     const p = typePath(t);
-    const typeHtml = renderRegionPage({
+    const typeHtml = renderRegionPage({ bgImage: region.bgImage,
       name: region.name, description: tx.intro, h1: TYPE_PAGES[t].nlH1(region.name), title: TYPE_PAGES[t].nlTitle(region.name),
       metaDesc: tx.meta, pageUrl: SITE_URL_REGIONS + p,
       logoHref: '/wijnreizen', locs: items, locHref: locHrefNl, locDesc: l => l.description, readMore: () => 'Lees meer →',
@@ -1772,7 +1782,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const siblings = types.map(t => ({ type: t, path: enTypePath(t) }));
     const enLocDesc = l => l.description_en || l.description || '';
     const enReadMore = l => l.description_en ? 'Read more →' : 'Read more (in Dutch) →';
-    const html = renderRegionPage({
+    const html = renderRegionPage({ bgImage: r.bgImage,
       lang: 'en', name: r.nameEn, description: r.descriptionEn, h1: regionTitleEn(r), title, metaDesc,
       pageUrl: SITE_URL + r.enPath, logoHref: '/en/wine-travel',
       locs, locHref: enLocHref, locDesc: enLocDesc, readMore: enReadMore,
@@ -1788,7 +1798,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       const items = locs.filter(l => l.type === t);
       const tx = typePageTexts('en', t, r.nameEn, items);
       const p = enTypePath(t);
-      const typeHtml = renderRegionPage({
+      const typeHtml = renderRegionPage({ bgImage: r.bgImage,
         lang: 'en', name: r.nameEn, description: tx.intro, h1: TYPE_PAGES[t].enH1(r.nameEn), title: TYPE_PAGES[t].enTitle(r.nameEn),
         metaDesc: tx.meta, pageUrl: SITE_URL + p, logoHref: '/en/wine-travel',
         locs: items, locHref: enLocHref, locDesc: enLocDesc, readMore: enReadMore,
@@ -1954,6 +1964,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       [/\s*<a href="https:\/\/wijnparade\.listedwines\.com\/" class="nav-card"[\s\S]*?<\/a>/, ''],
       [/<a href="\/wijnkaart" class="nav-card">([\s\S]*?)<span class="link-text">Wijnkaart<\/span>/, '<a href="/en/wine-map" class="nav-card">$1<span class="link-text">Wine map</span>'],
       [/<a href="\/wijnreizen" class="nav-card">([\s\S]*?)<span class="link-text">Reisgidsen<\/span>/, '<a href="/en/wine-travel" class="nav-card">$1<span class="link-text">Travel guides</span>'],
+      [/<a href="\/artikelen" class="nav-card">([\s\S]*?)<span class="link-text">Artikelen<\/span>/, '<a href="/en/articles" class="nav-card">$1<span class="link-text">Articles</span>'],
       ['<a href="/value-score" class="nav-card">', '<a href="/value-score" class="nav-card" hreflang="nl">'],
       ['>Voeg toe als app</span>', '>Add as app</span>'],
       ['<a href="/install" class="nav-card">', '<a href="/install" class="nav-card" hreflang="nl">'],
@@ -2062,13 +2073,40 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       const add = ['/artikelen', ...articles.map(nlArticlePath)].map(u => `  <url><loc>${SITE_URL}${u}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n');
       fs.writeFileSync(smA, fs.readFileSync(smA, 'utf8').replace('</urlset>', add + '\n</urlset>'));
     }
-    // Gidsen: "Artikelen over <regio>" onderaan, als een artikel aan die regio hangt
+    // Onderaan gidsen, typepagina's en locatiepagina's: de artikelen waarin die adressen voorkomen
+    const inject = (file, html, marker) => {
+      const fp = path.join(__dirname, file);
+      if (!fs.existsSync(fp)) return;
+      const page = fs.readFileSync(fp, 'utf8').replace(/<!-- artikelen -->[\s\S]*?<!-- \/artikelen -->\n?/g, '');
+      if (page.includes(marker)) fs.writeFileSync(fp, page.replace(marker, html + '\n' + marker));
+    };
+    const articleBlock = (list, lang, heading) => `<!-- artikelen --><div class="container"><div class="region-section"><h2 class="region-section-title">${heading}</h2>${articleCards(list, lang)}</div></div><!-- /artikelen -->`;
+    const articlesFor = (ids, regionId) => articles.filter(a => a.region === regionId || a.locations.some(id => ids.has(id)));
+    const H = { nl: n => n > 1 ? 'Artikelen waar deze locaties voorkomen' : 'Artikel waar deze locaties voorkomen',
+                en: n => n > 1 ? 'Articles featuring these places' : 'Article featuring these places' };
     for (const region of REGIONS) {
-      const list = articles.filter(a => a.region === region.id);
+      const inRegion = allLocations.filter(l => l.name && inBounds(l, region));
+      const enR = enRegions.find(r => r.id === region.id);
+      const pages = [{ ids: inRegion, nl: regionPath(region.id), en: enR && enR.descriptionEn ? enR.enPath : '', region: region.id }];
+      for (const u of typePageUrls.filter(u => u.region === region.id)) {
+        const pair = enTypePairs.find(([nl]) => nl === u.path);
+        pages.push({ ids: inRegion.filter(l => l.type === u.type), nl: u.path, en: pair ? pair[1] : '', region: region.id });
+      }
+      for (const pg of pages) {
+        const list = articlesFor(new Set(pg.ids.map(l => l._id)), pg.region);
+        if (list.length) inject(pg.nl.slice(1) + '.html', articleBlock(list, 'nl', H.nl(list.length)), '</main>');
+        const enList = list.filter(hasEn);
+        if (pg.en && enList.length) inject(pg.en.slice(1) + '.html', articleBlock(enList, 'en', H.en(enList.length)), '</main>');
+      }
+    }
+    const HL = { nl: n => n > 1 ? 'Artikelen waar deze locatie voorkomt' : 'Artikel waar deze locatie voorkomt',
+                 en: n => n > 1 ? 'Articles featuring this place' : 'Article featuring this place' };
+    for (const l of allLocations.filter(l => l.name)) {
+      const list = articles.filter(a => a.locations.includes(l._id));
       if (!list.length) continue;
-      const block = `<!-- artikelen --><div class="container"><div class="region-section"><h2 class="region-section-title">Artikelen over ${escHtml(region.name)}</h2>${articleCards(list, 'nl')}</div></div>`;
-      const fp = path.join(__dirname, regionPath(region.id).slice(1) + '.html');
-      if (fs.existsSync(fp)) fs.writeFileSync(fp, fs.readFileSync(fp, 'utf8').replace('</main>', block + '\n  </main>'));
+      inject(`locations/${l._id}.html`, articleBlock(list, 'nl', HL.nl(list.length)), '<section class="ig-card-section">');
+      const enList = list.filter(hasEn);
+      if (enList.length) inject(`en/locations/${l._id}.html`, articleBlock(enList, 'en', HL.en(enList.length)), '<section class="ig-card-section">');
     }
     console.log(`  📝 artikelen: ${articles.length} (waarvan ${enList.length} ook in het Engels)`);
   }

@@ -31,4 +31,5 @@ description_en: >-
 short_description_en: >-
   From the Camargue to the Pyrenees: Faugères, Pic Saint-Loup and Maury, wine
   bars in Montpellier and oysters from the Étang de Thau.
+bg_image: /uploads/gratiot.webp
 ---

@@ -31,4 +31,5 @@ description_en: >-
 short_description_en: >-
   Addresses around the Dom, 't Wed and the Oudegracht, and in Oost and the
   Dichterswijk.
+bg_image: /uploads/fico.webp
 ---

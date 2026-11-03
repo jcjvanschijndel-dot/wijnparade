@@ -29,4 +29,5 @@ description_en: >-
 short_description_en: >-
   Large Champagne houses and small growers around Reims and Épernay, with
   Hautvillers within cycling distance.
+bg_image: /uploads/sacy.jpeg
 ---

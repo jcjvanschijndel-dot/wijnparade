@@ -27,4 +27,5 @@ description_en: >-
 short_description_en: >-
   Cava and Corpinnat in the Penedès, half an hour to an hour's drive from
   Barcelona, plus DO Alella and Pla de Bages.
+bg_image: /uploads/juvé-camps.webp
 ---

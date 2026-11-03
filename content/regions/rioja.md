@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Tempranillo reservas along the Ebro, tapas bars on Calle Laurel in Logroño and
   walled Laguardia.
+bg_image: /uploads/murrieta.webp
 ---

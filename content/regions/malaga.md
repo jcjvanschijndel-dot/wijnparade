@@ -32,4 +32,5 @@ description_en: >-
 short_description_en: >-
   Moscatel from the barrel in Málaga, bodegas around Ronda and in the Axarquía,
   and wine bars and restaurants in Marbella.
+bg_image: /uploads/fabio-coullet.jpg
 ---

@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Chianti Classico, Brunello di Montalcino and Bolgheri, with Florence and Siena
   as bases.
+bg_image: /uploads/castello-di-brolio.webp
 ---
