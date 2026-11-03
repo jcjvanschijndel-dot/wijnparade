@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Monastrell and sweet Fondillón from DO Alicante, and fish restaurants on the
   coast around Dénia and Jávea.
+bg_image: /uploads/perla-javea.webp
 ---

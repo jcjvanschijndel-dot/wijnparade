@@ -31,4 +31,5 @@ description_en: >-
 short_description_en: >-
   Bergerac, sweet Monbazillac and the dark Malbec of Cahors, among castles and
   villages such as Sarlat.
+bg_image: /uploads/cure.webp
 ---

@@ -192,6 +192,7 @@ collections:
       - {label: "Titel voor Google (optioneel; anders automatisch)", name: "seo_title", widget: "string", required: false}
       - {label: "Titel voor Google Engels (optioneel)", name: "seo_title_en", widget: "string", required: false}
       - {label: "Korte tekst Engels (optioneel, voor /en/wine-travel)", name: "short_description_en", widget: "text", required: false}
+      - {label: "Achtergrondfoto (optioneel; licht op de achtergrond van de gids en de typepagina's)", name: "bg_image", widget: "image", required: false}
       - {label: "Center Breedtegraad", name: "centerLat", widget: "number", value_type: "float"}
       - {label: "Center Lengtegraad", name: "centerLng", widget: "number", value_type: "float"}
       - {label: "Kaart Zoom", name: "zoom", widget: "number", default: 10, value_type: "int"}

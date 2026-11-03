@@ -34,4 +34,5 @@ description_en: >-
 short_description_en: >-
   Wine bars and restaurants on the Eilandje and in the Zuid, with natural and
   Belgian wine in the centre.
+bg_image: /uploads/restaurant-marcel.webp
 ---

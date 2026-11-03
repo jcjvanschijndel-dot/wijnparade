@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   From Muscadet near Nantes to Sauvignon Blanc in Sancerre, with Vouvray, Saumur
   and the châteaux in between.
+bg_image: /uploads/beaumont.webp
 ---

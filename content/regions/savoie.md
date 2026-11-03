@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Jacquère, Altesse and Mondeuse at the foot of the Alps, around Chambéry and
   Lake Annecy.
+bg_image: /uploads/dupasquier.webp
 ---

@@ -32,4 +32,5 @@ description_en: >-
 short_description_en: >-
   Pinot Noir and Chardonnay from Chablis to the Mâconnais, centred on Beaune and
   the Route des Grands Crus.
+bg_image: /uploads/achtergrond-bourgogne.webp
 ---

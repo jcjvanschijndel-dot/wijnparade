@@ -33,4 +33,5 @@ description_en: >-
 short_description_en: >-
   Steep valley south of Bonn, with Spätburgunder from slate slopes and the
   Rotweinwanderweg through the vineyards.
+bg_image: /uploads/meyernakel.webp
 ---

@@ -31,4 +31,5 @@ description_en: >-
 short_description_en: >-
   San Sebastián and Bilbao: pintxo bars, Michelin-starred restaurants and crisp
   txakoli from the wineries around Getaria.
+bg_image: /uploads/txomin.webp
 ---

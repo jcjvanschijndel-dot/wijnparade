@@ -28,4 +28,5 @@ description_en: >-
 short_description_en: >-
   Local grapes such as Callet and Mantonegro, with bodegas around Binissalem and
   in the Tramuntana.
+bg_image: /uploads/gelat.webp
 ---

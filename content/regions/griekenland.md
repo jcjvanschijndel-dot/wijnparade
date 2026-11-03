@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Assyrtiko from Santorini, wines from Crete and a growing number of wine bars
   in Athens.
+bg_image: /uploads/orizontas.webp
 ---

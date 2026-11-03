@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Syrah and Viognier from steep slopes for Hermitage, Côte-Rôtie and Condrieu,
   centred on Tain-l'Hermitage.
+bg_image: /uploads/chapoutier.webp
 ---

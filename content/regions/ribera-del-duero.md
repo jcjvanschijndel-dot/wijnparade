@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Powerful Tempranillo at 850 metres along the Duero, with Peñafiel and Segovia
   nearby.
+bg_image: /uploads/abadia.webp
 ---

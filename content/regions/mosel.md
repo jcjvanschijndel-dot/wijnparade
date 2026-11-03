@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Riesling from steep slate slopes, with Bernkastel-Kues, Piesport and
   Traben-Trarbach along the river.
+bg_image: /uploads/weingut-dr-loosen.jpg
 ---

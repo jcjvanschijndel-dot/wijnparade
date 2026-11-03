@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Wine bars, wine shops and restaurants in De Pijp, along the canals and in
   Oost, often with natural wine from small producers.
+bg_image: /uploads/tweeprinsen.webp
 ---

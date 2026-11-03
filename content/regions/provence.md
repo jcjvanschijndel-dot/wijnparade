@@ -28,4 +28,5 @@ description_en: >-
 short_description_en: >-
   Rosé, red Bandol and white Cassis, within reach of the Côte d'Azur and
   Aix-en-Provence.
+bg_image: /uploads/peyrassol.webp
 ---

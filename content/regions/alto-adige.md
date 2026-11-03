@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Wine valleys among the Dolomites around Bolzano and Merano, with aromatic
   whites and red Lagrein.
+bg_image: /uploads/rametz.webp
 ---

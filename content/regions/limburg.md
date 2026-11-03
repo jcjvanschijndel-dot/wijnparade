@@ -30,4 +30,5 @@ description_en: >-
 short_description_en: >-
   Vineyards in the hills of South Limburg around Maastricht, Eijsden-Margraten
   and Vijlen.
+bg_image: /uploads/apostelhoeve.webp
 ---
