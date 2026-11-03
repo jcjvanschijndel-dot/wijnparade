@@ -2013,7 +2013,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const enRegion = region && enRegions.find(r => r.id === region.id);
     if (!locs.length && !region) return '';
     return `<section class="article-related">
-        <h2>${en ? 'Addresses in this article' : 'Adressen uit dit artikel'}</h2>
+        <h2>${en ? 'Wine hotspots in this article' : 'Wijnhotspots in dit artikel'}</h2>
         <div class="article-cards">${locs.map(l => `<a class="article-card" href="${en ? enLocHref(l) : `/locations/${l._id}`}">${l.image ? `<img src="${l.image}" alt="${escHtml(l.title || l.name)}" loading="lazy">` : ''}<div><strong>${escHtml(l.title || l.name)}</strong><span>${escHtml((en ? EN_LABEL : NL_TYPE)[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></div></a>`).join('')}</div>
         <ul>${region ? `<li><a href="${en && enRegion ? enRegion.enPath : regionPath(region.id)}">${escHtml(en && enRegion ? regionTitleEn(enRegion) : regionSeo(region).link)}</a> <span>${en ? 'full guide' : 'volledige gids'}</span></li>` : ''}</ul>
       </section>`;
@@ -2337,7 +2337,7 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   const dishLocs = d => {
     const locs = (Array.isArray(d.locations) ? d.locations : []).map(id => allLocations.find(l => l._id === String(id))).filter(Boolean);
     if (!locs.length) return '';
-    return `<section class="ws-section"><h2>Hier eet je ${escHtml(String(d.dish).toLowerCase())} met een goed glas</h2><ul class="ws-list">
+    return `<section class="ws-section"><h2>Wijnhotspots om ${escHtml(String(d.dish).trim().toLowerCase())} te eten met de juiste wijn</h2><ul class="ws-list">
         ${locs.map(l => `<li><a href="/locations/${l._id}">${escHtml(l.title || l.name)}</a> <span style="color:var(--gray-600);font-size:.85em">${escHtml(typeLabelsReg[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></li>`).join('\n        ')}
       </ul></section>`;
   };

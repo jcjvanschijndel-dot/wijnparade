@@ -152,7 +152,7 @@ collections:
         fields:
           - {label: "Wijn", name: "name", widget: "string"}
           - {label: "Sterren", name: "stars", widget: "select", options: ["1", "2", "3"]}
-      - {label: "Hier eet je dit met een goed glas (optioneel)", name: "locations", widget: "relation", collection: "locations", value_field: "{{slug}}", search_fields: ["name"], display_fields: ["name"], multiple: true, required: false}
+      - {label: "Wijnhotspots om dit gerecht te eten (optioneel)", name: "locations", widget: "relation", collection: "locations", value_field: "{{slug}}", search_fields: ["name"], display_fields: ["name"], multiple: true, required: false}
 
   # Wijnen met gerechten
   - name: "wines_pairing"
