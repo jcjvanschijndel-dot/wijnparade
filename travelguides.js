@@ -1,13 +1,3 @@
-const UTRECHT = { lat: 52.0907, lng: 5.1214 };
-
-function haversineKm(lat1, lng1, lat2, lng2) {
-  const R = 6371;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLng = (lng2 - lng1) * Math.PI / 180;
-  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLng/2)**2;
-  return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)) / 50) * 50;
-}
-
 let allRegions = [];
 // Engelse versie (/en/wine-travel): Engelse regiolijst en teksten
 const EN = document.documentElement.lang === 'en';
@@ -17,12 +7,10 @@ document.addEventListener('DOMContentLoaded', async function() {
     const response = await fetch(EN ? '/en/regions.json' : '/content/regions/_index.json');
     if (!response.ok) { showEmpty(); return; }
     allRegions = await response.json();
-    allRegions = allRegions
-      .filter(r => r.locationCount > 0)
-      .map(r => ({ ...r, km: haversineKm(UTRECHT.lat, UTRECHT.lng, r.centerLat, r.centerLng) }));
+    allRegions = allRegions.filter(r => r.locationCount > 0);
     if (!allRegions.length) { showEmpty(); return; }
     populateFilters();
-    setupFilters();
+    document.getElementById('filterCountry').addEventListener('change', render);
     render();
   } catch(e) { showEmpty(); }
 });
@@ -37,17 +25,9 @@ function populateFilters() {
   });
 }
 
-function setupFilters() {
-  document.getElementById('filterCountry').addEventListener('change', render);
-  const dist = document.getElementById('filterDistance'); // alleen op de NL-pagina
-  if (dist) dist.addEventListener('change', render);
-}
-
 function getFiltered() {
   const country = document.getElementById('filterCountry').value;
-  const dist = document.getElementById('filterDistance');
-  const maxKm = (dist && parseInt(dist.value)) || Infinity;
-  return allRegions.filter(r => (!country || r.country === country) && r.km <= maxKm);
+  return allRegions.filter(r => !country || r.country === country);
 }
 
 function render() {
@@ -63,32 +43,25 @@ function render() {
     if (!byCountry[r.country]) byCountry[r.country] = [];
     byCountry[r.country].push(r);
   });
-  // NL: op afstand vanuit Utrecht; EN: alfabetisch
-  Object.values(byCountry).forEach(list => list.sort(EN ? (a,b) => a.name.localeCompare(b.name, 'en') : (a,b) => a.km - b.km));
-  const sortedCountries = Object.keys(byCountry).sort(EN ? (a,b) => a.localeCompare(b, 'en') : (a,b) =>
-    byCountry[a][0].km - byCountry[b][0].km
-  );
+  const lang = EN ? 'en' : 'nl';
+  // Nederland eerst (met Amsterdam bovenaan), daarna de andere landen op alfabet
+  const isNL = c => c === 'Nederland' || c === 'Netherlands' || c === 'The Netherlands';
+  const first = r => (r.id === 'amsterdam' || /^amsterdam$/i.test(r.name)) ? 0 : 1;
+  Object.values(byCountry).forEach(list => list.sort((a, b) => first(a) - first(b) || a.name.localeCompare(b.name, lang)));
+  const sortedCountries = Object.keys(byCountry).sort((a, b) => isNL(b) - isNL(a) || a.localeCompare(b, lang));
 
   container.innerHTML = sortedCountries.map(country => `
     <div class="country-group">
       <h2 class="country-heading">${country}</h2>
       <div class="country-regions">
         ${byCountry[country].map(r => `
-        <div class="region-row">
+        <a href="${r.url}" class="region-row">
           <div class="region-row-left">
-            <div class="region-row-header">
-              <div>
-                <div class="region-row-name">${r.name}</div>
-                <div class="region-row-meta">${EN ? `${r.locationCount} locations` : `±${r.km} km van Utrecht &middot; ${r.locationCount} locaties`}</div>
-              </div>
-            </div>
+            <div class="region-row-name">${r.name}<span class="region-row-count">${r.locationCount} hotspots</span></div>
             <p class="region-row-intro">${r.shortDescription || r.description.split('.').slice(0,2).join('.') + '.'}</p>
           </div>
-          <div class="region-row-actions">
-            <a href="${r.url}" class="region-btn-primary">${EN ? 'View guide →' : 'Bekijk gids →'}</a>
-            <a href="${r.mapUrl}" class="region-btn-map">${EN ? 'Map' : 'Kaart'}</a>
-          </div>
-        </div>`).join('')}
+          <span class="region-row-link">${EN ? 'View guide →' : 'Bekijk gids →'}</span>
+        </a>`).join('')}
       </div>
     </div>`).join('');
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#1e3a8a">
-    <meta name="description" content="Wijnreis plannen? Reisgidsen voor de mooiste wijnregio's van Europa, met de beste wijnhuizen, wijnbars en restaurants per regio. Te filteren op land en afstand vanuit Utrecht.">
+    <meta name="description" content="Wijnreis plannen? Reisgidsen voor de mooiste wijnregio's van Europa, met de beste wijnhuizen, wijnbars en restaurants per regio. Te filteren op land.">
     <title>Wijnreizen in Europa: reisgidsen per wijnregio | de_wijnparade</title>
     <link rel="canonical" href="https://wijn-parade.nl/wijnreizen">
     <meta property="og:title" content="Wijnreizen in Europa: reisgidsen per wijnregio | de_wijnparade">
@@ -16,25 +16,14 @@
     <link rel="manifest" href="/manifest.json">
     <style>
         .page-title { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
-        .page-subtitle { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .page-subtitle { color: var(--gray-600); font-size: 0.82rem; line-height: 1.5; margin-bottom: 1rem; }
 
-        .filters-bar {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-            padding: 1rem 1.25rem;
-            background: var(--gray-50);
-            border: 1px solid var(--gray-200);
-            border-radius: 12px;
-            align-items: flex-end;
-        }
-        .filter-item { display: flex; flex-direction: column; gap: 0.3rem; flex: 1; min-width: 140px; }
-        .filter-item label { font-size: 0.8rem; font-weight: 500; color: var(--gray-900); }
+        .filters-bar { display: flex; margin-bottom: 1.25rem; }
+        .filter-item { display: flex; flex-direction: column; min-width: 200px; }
         .filter-item select {
             padding: 0.5rem 0.75rem;
-            border: 1px solid var(--gray-200);
-            border-radius: 8px;
+            border: 0.5px solid var(--gray-200);
+            border-radius: 10px;
             font-family: inherit;
             font-size: 0.875rem;
             background: var(--white);
@@ -42,71 +31,46 @@
         }
         .filter-item select:focus { outline: none; border-color: var(--navy); }
 
-        .country-group { margin-bottom: 2.5rem; }
+        .country-group { margin-bottom: 1.25rem; }
         .country-heading {
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--gray-600);
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            margin-bottom: 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--gray-200);
+            margin: 0 0 0.5rem;
         }
-        .country-regions { display: flex; flex-direction: column; }
+        .country-regions { display: flex; flex-direction: column; gap: 0.5rem; }
 
         .region-row {
             display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 1.5rem;
-            padding: 1.1rem 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-        .region-row-left { flex: 1; min-width: 0; }
-        .region-row-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.4rem; }
-        .region-row-emoji { flex-shrink: 0; }
-        .region-icon-box {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: #eff3ff;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--navy);
-            font-size: 16px;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            background: var(--white);
+            border: 0.5px solid var(--gray-200);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--gray-900);
+            transition: all 0.2s ease;
         }
-        .region-row-name { font-weight: 600; font-size: 1rem; color: var(--navy); }
-        .region-row-meta { font-size: 0.78rem; color: var(--gray-600); margin-top: 0.1rem; }
-        .region-row-intro { font-size: 0.875rem; line-height: 1.65; color: var(--gray-900); margin: 0; }
-
-        .region-row-actions { display: flex; flex-direction: column; gap: 0.5rem; flex-shrink: 0; }
-        .region-btn-primary {
-            display: block; padding: 0.45rem 1rem;
-            background: var(--navy); color: #fff;
-            border-radius: 7px; font-size: 0.83rem; font-weight: 500;
-            text-decoration: none; text-align: center; white-space: nowrap;
-            transition: background 0.2s;
-        }
-        .region-btn-primary:hover { background: #1e40af; }
-        .region-btn-map {
-            display: block; padding: 0.45rem 1rem;
-            background: var(--gray-50); color: var(--gray-900);
-            border: 1px solid var(--gray-200); border-radius: 7px;
-            font-size: 0.83rem; font-weight: 500;
-            text-decoration: none; text-align: center; white-space: nowrap;
-            transition: all 0.2s;
-        }
-        .region-btn-map:hover { background: var(--gray-100); }
+        .region-row:hover { border-color: var(--navy); box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08); }
+        .region-row-left { flex: 1; min-width: 0; }
+        .region-row-name { font-weight: 600; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.15rem; }
+        .region-row-count { font-weight: 400; font-size: 0.8rem; color: var(--gray-600); margin-left: 0.4rem; }
+        .region-row-intro { font-size: 0.85rem; line-height: 1.5; color: var(--gray-900); margin: 0; }
+        .region-row-link { flex-shrink: 0; font-size: 0.8rem; font-weight: 500; color: var(--navy); white-space: nowrap; }
 
         @media (max-width: 600px) {
-            .region-row { flex-direction: column; gap: 0.75rem; }
-            .region-row-actions { flex-direction: row; }
-            .filters-bar { gap: 0.5rem; }
+            .region-row { padding: 0.7rem 0.9rem; }
+            .region-row-link { display: none; }
+            .filter-item { flex: 1; }
         }
     </style>
+  <link rel="alternate" hreflang="nl" href="https://wijn-parade.nl/wijnreizen">
+  <link rel="alternate" hreflang="en" href="https://wijn-parade.nl/en/wine-travel">
+  <link rel="alternate" hreflang="x-default" href="https://wijn-parade.nl/wijnreizen">
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-57CJ2STYT6"></script>
 <script>
@@ -115,17 +79,15 @@
   gtag('js', new Date());
   gtag('config', 'G-57CJ2STYT6');
 </script>
-<body>
+<body class="bg-vineyard">
     <header class="header">
         <div class="container">
             <div class="header-inner">
                 <a href="/" class="header-logo">
-                    <div class="header-logo-box">
-                        <img src="/logo.svg" alt="de_wijnparade">
-                    </div>
                     <span class="header-logo-name">de_wijnparade</span>
                 </a>
-                <a href="https://wijnparade.listedwines.com/" class="header-shop-btn" target="_blank" rel="noopener">Shop</a><a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" class="ig-follow-btn" aria-label="Volg ons op Instagram" title="Instagram"><svg class="ig-logo" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-grad)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.3" cy="7.7" r="1.1" fill="#fff"/></svg></a>
+                <a href="https://www.instagram.com/de_wijnparade/" target="_blank" rel="noopener" class="ig-follow-btn" aria-label="Volg ons op Instagram" title="Instagram"><svg class="ig-logo" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-grad)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.3" cy="7.7" r="1.1" fill="#fff"/></svg></a>
+      <details class="lang-menu"><summary aria-label="Taal kiezen"><svg class="flag" viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg><span>NL</span></summary><div class="lang-menu-list"><a href="/wijnreizen" hreflang="nl" lang="nl" aria-current="page" class="is-current"><svg class="flag" viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg><span>Nederlands</span></a><a href="/en/wine-travel" hreflang="en" lang="en"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="uk-t"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span>English</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})})</script>
             </div>
         </div>
     </header>
@@ -135,23 +97,12 @@
     <main class="main">
         <div class="container">
             <h1 class="page-title">Wijnreizen in Europa: reisgidsen per wijnregio</h1>
-            <p class="page-subtitle">Een wijnreis plannen naar Bourgogne, Toscane, de Douro of de Moezel? Per wijnregio vind je de wijnhuizen die je moet bezoeken, de leukste wijnbars en de beste restaurants, allemaal persoonlijk geselecteerd. Filter op land of op afstand vanuit Utrecht en vind je volgende wijnbestemming.</p>
+            <p class="page-subtitle">Per wijnregio de wijnhuizen, wijnbars en restaurants die wij aanraden.</p>
 
             <div class="filters-bar">
                 <div class="filter-item">
-                    <label for="filterCountry">Land</label>
-                    <select id="filterCountry">
+                    <select id="filterCountry" aria-label="Filter op land">
                         <option value="">Alle landen</option>
-                    </select>
-                </div>
-                <div class="filter-item">
-                    <label for="filterDistance">Max. afstand vanuit Utrecht</label>
-                    <select id="filterDistance">
-                        <option value="">Alle afstanden</option>
-                        <option value="500">≤ 500 km</option>
-                        <option value="1000">≤ 1.000 km</option>
-                        <option value="1500">≤ 1.500 km</option>
-                        <option value="2000">≤ 2.000 km</option>
                     </select>
                 </div>
             </div>
