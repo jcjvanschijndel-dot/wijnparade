@@ -265,9 +265,36 @@ console.log(`  📍 locations: ${locationFiles.length} statische pagina's gegene
 
 // sitemap.xml
 const today = new Date().toISOString().split('T')[0];
+// Laatste wijzigingsdatum per bronbestand uit git (één git-aanroep voor de hele map).
+// Zonder git of bij een fout valt lastmod terug op vandaag.
+const GIT_DATES = (() => {
+  const dates = {};
+  try {
+    const out = require('child_process').execSync(
+      'git -c core.quotePath=false log --format=%x00%cs --name-only -- content',
+      { cwd: __dirname, encoding: 'utf8', maxBuffer: 1 << 28, stdio: ['ignore', 'pipe', 'ignore'] });
+    let date = null;
+    for (const line of out.split('\n')) {
+      if (line.startsWith('\0')) date = line.slice(1).trim();
+      else if (line && date && !dates[line.normalize('NFC')]) dates[line.normalize('NFC')] = date;
+    }
+  } catch (e) {}
+  return dates;
+})();
+const gitDate = (...files) => files.map(f => GIT_DATES[f.normalize('NFC')]).filter(Boolean).sort().pop() || today;
+const locImages = {};   // pagina-URL -> afbeelding, voor de afbeeldingen in de sitemap
+for (const file of locationFiles) {
+  const loc = parseFrontmatter(fs.readFileSync(path.join(locationsDir, file), 'utf8'));
+  if (loc && loc.name && loc.image) locImages[`${SITE_URL}/locations/${file.replace('.md', '')}`] = SITE_URL + loc.image;
+}
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(url => `  <url><loc>${url}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>${url === SITE_URL + '/' ? '1.0' : url.includes('/locations/') ? '0.8' : '0.7'}</priority></url>`).join('\n')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${sitemapUrls.map(url => {
+  const isLoc = url.includes('/locations/');
+  const lastmod = isLoc ? gitDate(`content/locations/${decodeURIComponent(url.split('/locations/')[1])}.md`) : today;
+  const img = locImages[url] ? `<image:image><image:loc>${encodeURI(locImages[url])}</image:loc></image:image>` : '';
+  return `  <url><loc>${url}</loc><lastmod>${lastmod}</lastmod><changefreq>weekly</changefreq><priority>${url === SITE_URL + '/' ? '1.0' : isLoc ? '0.8' : '0.7'}</priority>${img}</url>`;
+}).join('\n')}
 </urlset>`;
 fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemap);
 console.log(`  🗺️  sitemap.xml: ${sitemapUrls.length} URLs`);
@@ -573,6 +600,52 @@ function regionMetaDesc(lang, short, isCity, name, names) {
     : `${isCity ? 'Wijntips voor' : 'Tips voor je wijnreis naar'} ${name}: ${types}, waaronder ${list}. Geselecteerd door de_wijnparade.`).substring(0, 160);
 }
 
+// Pagina's per type binnen een gids (bijv. /wijnbars/amsterdam), alleen bij minstens
+// TYPE_PAGE_MIN adressen van dat type. Eigen titel voor zoekopdrachten als "wijnbar Antwerpen".
+const TYPE_PAGE_MIN = 3;
+const TYPE_PAGES = {
+  wijnhuis:   { nl: 'wijnhuizen',  en: 'wineries',
+                nlTitle: n => `Wijnhuizen bezoeken in ${n}: wijnproeverijen en tips`, nlH1: n => `Wijnhuizen in ${n}`,
+                enTitle: n => `Wineries to visit in ${n}: wine tastings and tips`, enH1: n => `Wineries in ${n}` },
+  wijnbar:    { nl: 'wijnbars',    en: 'wine-bars',
+                nlTitle: n => `Wijnbars in ${n}: tips voor een goed glas wijn`, nlH1: n => `Wijnbars in ${n}`,
+                enTitle: n => `Wine bars in ${n}: where to drink good wine`, enH1: n => `Wine bars in ${n}` },
+  restaurant: { nl: 'restaurants', en: 'restaurants',
+                nlTitle: n => `Restaurants in ${n} met een goede wijnkaart`, nlH1: n => `Restaurants in ${n}`,
+                enTitle: n => `Restaurants in ${n} with a great wine list`, enH1: n => `Restaurants in ${n}` },
+  wijnwinkel: { nl: 'wijnwinkels', en: 'wine-shops',
+                nlTitle: n => `Wijnwinkels in ${n}: waar koop je goede wijn`, nlH1: n => `Wijnwinkels in ${n}`,
+                enTitle: n => `Wine shops in ${n}: where to buy good wine`, enH1: n => `Wine shops in ${n}` },
+};
+const TYPE_PLURAL_LC = { nl: { wijnhuis: 'wijnhuizen', wijnbar: 'wijnbars', restaurant: 'restaurants', wijnwinkel: 'wijnwinkels' },
+                         en: { wijnhuis: 'wineries', wijnbar: 'wine bars', restaurant: 'restaurants', wijnwinkel: 'wine shops' } };
+const typePageTypes = locs => Object.keys(TYPE_PAGES).filter(t => locs.filter(l => l.type === t).length >= TYPE_PAGE_MIN);
+// Intro en meta description van een typepagina
+function typePageTexts(lang, type, name, items) {
+  const en = lang === 'en', pl = TYPE_PLURAL_LC[lang][type], n = items.length;
+  const names = items.map(l => l.title || l.name);
+  const intro = en
+    ? `${n} ${pl} in ${name}, selected by de_wijnparade, each with a short description, address and website. For wineries, wine bars, restaurants and wine shops together, see the full ${name} guide.`
+    : `${n} ${pl} in ${name}, geselecteerd door de_wijnparade, elk met een korte beschrijving, adres en website. Voor wijnhuizen, wijnbars, restaurants en wijnwinkels samen, zie de volledige gids ${name}.`;
+  let meta = '';
+  for (let k = Math.min(3, n); k >= 0; k--) {
+    const list = names.slice(0, k).join(', ').replace(/, ([^,]*)$/, ` ${en ? 'and' : 'en'} $1`);
+    meta = en ? `${n} ${pl} in ${name}${k ? `, including ${list}` : ''}. With descriptions, addresses and tips from de_wijnparade.`
+              : `${n} ${pl} in ${name}${k ? `, waaronder ${list}` : ''}. Met beschrijvingen, adressen en tips van de_wijnparade.`;
+    if (meta.length <= 160) break;
+  }
+  return { intro, meta: meta.substring(0, 160) };
+}
+// Links onderaan een typepagina: terug naar de gids en naar de andere typepagina's
+function typePageMore(lang, type, name, guidePath, guideLabel, siblings) {
+  const en = lang === 'en';
+  const others = siblings.filter(s => s.type !== type)
+    .map(s => `<a href="${s.path}">${REGION_TEXT[lang].plural[s.type]} in ${name}</a>`).join(' &nbsp;·&nbsp; ');
+  return `<div class="region-more">
+        <a href="${guidePath}">← ${guideLabel}</a>${others ? `<br>${en ? 'Also in' : 'Ook in'} ${name}: ${others}` : ''}
+      </div>`;
+}
+
 function regionSeo(region) {
   return CITY_REGIONS.has(region.id)
     ? { h1: `Wijntips ${region.name}`, title: `Wijntips ${region.name}: de beste wijnbars, wijnwinkels en restaurants`, link: `Wijntips ${region.name}` }
@@ -589,16 +662,22 @@ const REGION_TEXT = {
         plural: { wijnbar: 'Wine bars', wijnwinkel: 'Wine shops', wijnhuis: 'Wineries', restaurant: 'Restaurants' } },
 };
 function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc, pageUrl, logoHref, locs,
-                            locHref, locDesc, readMore, headExtra = '', headerExtra = '', afterHeader = '' }) {
+                            locHref, locDesc, readMore, headExtra = '', headerExtra = '', afterHeader = '',
+                            typeLinks = {}, afterSections = '' }) {
   const t = REGION_TEXT[lang];
   const byType = { wijnhuis: [], wijnbar: [], restaurant: [], wijnwinkel: [] };
   locs.forEach(l => { if (byType[l.type]) byType[l.type].push(l); });
+  // Lijst met alle adressen op de pagina, zodat Google ze als lijst herkent
+  const itemList = { '@context': 'https://schema.org', '@type': 'ItemList', name: h1,
+    itemListElement: Object.values(byType).flat().map((l, i) => ({ '@type': 'ListItem', position: i + 1,
+      name: l.title || l.name, url: SITE_URL + locHref(l) })) };
 
   const renderSection = (type, items) => {
     if (!items.length) return '';
+    const heading = `${t.plural[type]} in ${name}`;
     return `<div class="region-section">
       <h2 class="region-section-title">
-        ${t.plural[type]} in ${name}
+        ${typeLinks[type] ? `<a href="${typeLinks[type]}">${heading} →</a>` : heading}
       </h2>
       <div class="region-locs">
         ${items.map(l => `
@@ -631,6 +710,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
   <meta property="og:type" content="article">
   <link rel="canonical" href="${pageUrl}">
   <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'TouristDestination', name, description, url: pageUrl }).replace(/</g, '\\u003c')}</script>
+  <script type="application/ld+json">${JSON.stringify(itemList).replace(/</g, '\\u003c')}</script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -648,6 +728,10 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
     .region-stat-label{font-size:0.72rem;color:var(--gray-600)}
     .region-section{margin-bottom:3rem}
     .region-section-title{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gray-200);display:flex;align-items:center;gap:0.5rem;}
+    .region-section-title a{color:inherit;text-decoration:none}
+    .region-section-title a:hover{text-decoration:underline}
+    .region-more{border-top:1px solid var(--gray-200);padding-top:1.25rem;margin-bottom:2rem;line-height:1.8}
+    .region-more a{color:var(--navy);font-weight:500}
     .region-locs{display:grid;gap:1.25rem}
     .region-loc-card{display:grid;grid-template-columns:120px 1fr;gap:1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s}
     .region-loc-card:hover{box-shadow:0 4px 12px rgba(30,58,138,0.1)}
@@ -701,6 +785,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
       ${renderSection('restaurant', byType.restaurant)}
       ${renderSection('wijnbar', byType.wijnbar)}
       ${renderSection('wijnwinkel', byType.wijnwinkel)}
+      ${afterSections}
     </div>
   </main>
 
@@ -722,6 +807,8 @@ try {
 } catch(e) {}
 
 const regionsIndex = [];
+const regionLastmod = {};   // gids-id -> laatste wijziging van de gids of een van zijn adressen
+const typePageUrls = [];   // { path, region, type, lastmod } voor sitemap en Engelse versie
 
 for (const region of REGIONS) {
   // Filter locations that fall within bounding box
@@ -736,13 +823,38 @@ for (const region of REGIONS) {
   const seo = regionSeo(region);
   const metaDesc = regionMetaDesc('nl', region.shortDescription, CITY_REGIONS.has(region.id), region.name, locs.map(l => l.title || l.name));
 
+  const types = typePageTypes(locs);
+  const typePath = t => `/${TYPE_PAGES[t].nl}/${region.id}`;
+  const siblings = types.map(t => ({ type: t, path: typePath(t) }));
+  const locHrefNl = l => `/locations/${l._id}`;
+
   const html = renderRegionPage({
     name: region.name, description: region.description, h1: seo.h1, title: seo.title,
     metaDesc, pageUrl,
-    logoHref: '/wijnreizen', locs, locHref: l => `/locations/${l._id}`, locDesc: l => l.description, readMore: () => 'Lees meer →',
+    logoHref: '/wijnreizen', locs, locHref: locHrefNl, locDesc: l => l.description, readMore: () => 'Lees meer →',
+    typeLinks: Object.fromEntries(siblings.map(s => [s.type, s.path])),
     afterHeader: breadcrumb([{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' }, { name: region.name }]) });
 
   fs.writeFileSync(path.join(__dirname, regionPath(region.id).slice(1) + '.html'), html);
+
+  regionLastmod[region.id] = gitDate(`content/regions/${region.id}.md`, ...locs.map(l => `content/locations/${l._id}.md`));
+  // Typepagina's (wijnbars, restaurants, ...) van deze gids
+  for (const t of types) {
+    const items = locs.filter(l => l.type === t);
+    const tx = typePageTexts('nl', t, region.name, items);
+    const p = typePath(t);
+    const typeHtml = renderRegionPage({
+      name: region.name, description: tx.intro, h1: TYPE_PAGES[t].nlH1(region.name), title: TYPE_PAGES[t].nlTitle(region.name),
+      metaDesc: tx.meta, pageUrl: SITE_URL_REGIONS + p,
+      logoHref: '/wijnreizen', locs: items, locHref: locHrefNl, locDesc: l => l.description, readMore: () => 'Lees meer →',
+      afterSections: typePageMore('nl', t, region.name, regionPath(region.id), `Volledige gids: ${seo.link}`, siblings),
+      afterHeader: breadcrumb([{ name: 'Home', path: '/' }, { name: 'Reisgidsen', path: '/wijnreizen' },
+        { name: region.name, path: regionPath(region.id) }, { name: REGION_TEXT.nl.plural[t] }]) });
+    fs.mkdirSync(path.join(__dirname, TYPE_PAGES[t].nl), { recursive: true });
+    fs.writeFileSync(path.join(__dirname, p.slice(1) + '.html'), typeHtml);
+    typePageUrls.push({ path: p, region: region.id, type: t,
+      lastmod: gitDate(`content/regions/${region.id}.md`, ...items.map(l => `content/locations/${l._id}.md`)) });
+  }
 
   regionsIndex.push({
     id: region.id,
@@ -770,8 +882,10 @@ fs.writeFileSync(path.join(regionsContentDir, '_index.json'), JSON.stringify(reg
 const sitemapPath = path.join(__dirname, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
   let sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const regionUrls = regionsIndex.map(r => `  <url>\n    <loc>${SITE_URL_REGIONS}${r.url}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`).join('\n');
-  sitemap = sitemap.replace('</urlset>', regionUrls + '\n</urlset>');
+  const regionUrls = regionsIndex.map(r => `  <url>\n    <loc>${SITE_URL_REGIONS}${r.url}</loc>\n    <lastmod>${regionLastmod[r.id] || today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`).join('\n');
+  const typeUrls = typePageUrls.map(u => `  <url><loc>${SITE_URL_REGIONS}${u.path}</loc><lastmod>${u.lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`).join('\n');
+  sitemap = sitemap.replace('</urlset>', regionUrls + '\n' + typeUrls + '\n</urlset>');
+  console.log(`  🗂️  typepagina's: ${typePageUrls.length} (wijnbars/restaurants/wijnhuizen/wijnwinkels per gids)`);
   fs.writeFileSync(sitemapPath, sitemap);
 }
 
@@ -1505,23 +1619,50 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   const GUIDES_EN = { name: 'Travel guides', path: '/en/wine-travel' };
 
   // --- Engelse regiopagina's (zelfde template als NL) ---
+  const enTypePairs = [];   // [nlPath, enPath] van de typepagina's, voor hreflang op de NL-kant
   for (const r of enRegions) {
     const locs = allLocations.filter(l => inBounds(l, r));
     const title = r.isCity
       ? `${r.nameEn} wine tips: the best wine bars, wine shops and restaurants`
       : `${r.nameEn} wine travel guide: wineries, wine bars and restaurants`;
     const metaDesc = regionMetaDesc('en', r.shortDescriptionEn, r.isCity, r.nameEn, locs.map(l => l.title || l.name));
+    // Typepagina's: dezelfde types als op de NL-gids
+    const types = typePageUrls.filter(u => u.region === r.id).map(u => u.type);
+    const slug = r.enPath.split('/').pop();
+    const enTypePath = t => `/en/${TYPE_PAGES[t].en}/${slug}`;
+    const nlTypePath = t => `/${TYPE_PAGES[t].nl}/${r.id}`;
+    const siblings = types.map(t => ({ type: t, path: enTypePath(t) }));
+    const enLocDesc = l => l.description_en || l.description || '';
+    const enReadMore = l => l.description_en ? 'Read more →' : 'Read more (in Dutch) →';
     const html = renderRegionPage({
       lang: 'en', name: r.nameEn, description: r.descriptionEn, h1: regionTitleEn(r), title, metaDesc,
       pageUrl: SITE_URL + r.enPath, logoHref: '/en/wine-travel',
-      locs, locHref: enLocHref, locDesc: l => l.description_en || l.description || '',
-      readMore: l => l.description_en ? 'Read more →' : 'Read more (in Dutch) →',
+      locs, locHref: enLocHref, locDesc: enLocDesc, readMore: enReadMore,
+      typeLinks: Object.fromEntries(siblings.map(s => [s.type, s.path])),
       headExtra: altLinks(regionPath(r.id), r.enPath), headerExtra: langMenu('en', regionPath(r.id), r.enPath),
       afterHeader: breadcrumb([HOME_EN, GUIDES_EN, { name: r.nameEn }], 'en') });
     const file = path.join(__dirname, r.enPath.slice(1) + '.html');
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, html);
     enUrls.push(r.enPath);
+
+    for (const t of types) {
+      const items = locs.filter(l => l.type === t);
+      const tx = typePageTexts('en', t, r.nameEn, items);
+      const p = enTypePath(t);
+      const typeHtml = renderRegionPage({
+        lang: 'en', name: r.nameEn, description: tx.intro, h1: TYPE_PAGES[t].enH1(r.nameEn), title: TYPE_PAGES[t].enTitle(r.nameEn),
+        metaDesc: tx.meta, pageUrl: SITE_URL + p, logoHref: '/en/wine-travel',
+        locs: items, locHref: enLocHref, locDesc: enLocDesc, readMore: enReadMore,
+        afterSections: typePageMore('en', t, r.nameEn, r.enPath, `Full guide: ${regionTitleEn(r)}`, siblings),
+        headExtra: altLinks(nlTypePath(t), p), headerExtra: langMenu('en', nlTypePath(t), p),
+        afterHeader: breadcrumb([HOME_EN, GUIDES_EN, { name: r.nameEn, path: r.enPath }, { name: REGION_TEXT.en.plural[t] }], 'en') });
+      const tf = path.join(__dirname, p.slice(1) + '.html');
+      fs.mkdirSync(path.dirname(tf), { recursive: true });
+      fs.writeFileSync(tf, typeHtml);
+      enUrls.push(p);
+      enTypePairs.push([nlTypePath(t), p]);
+    }
   }
 
   // --- Engelse locatiepagina's (zelfde template als NL) ---
@@ -1714,6 +1855,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     fs.writeFileSync(file, html);
   };
   for (const r of enRegions) addAlternate(path.join(__dirname, regionPath(r.id).slice(1) + '.html'), regionPath(r.id), r.enPath);
+  for (const [nlP, enP] of enTypePairs) addAlternate(path.join(__dirname, nlP.slice(1) + '.html'), nlP, enP);
   for (const l of enLocs) addAlternate(path.join(staticLocationsDir, `${l._id}.html`), `/locations/${l._id}`, enLocPath(l));
   addAlternate(path.join(__dirname, 'wijnreizen.html'), '/wijnreizen', '/en/wine-travel');
   addAlternate(path.join(__dirname, 'wijnkaart.html'), '/wijnkaart', '/en/wine-map');
