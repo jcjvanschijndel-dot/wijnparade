@@ -20,5 +20,6 @@ description_en: >-
 
 
   The list is mostly natural wine, and what you like you can also take home as a bottle. With the wine you can have small dishes such as Gordal olives, Ibérico paleta or veal tongue with salsa verde. In good weather you sit on the terrace. Recommended for an evening of natural wine in the Zuid.
+image: /uploads/spiridon.webp
 website: https://spiridon-antwerp.be/
 ---
