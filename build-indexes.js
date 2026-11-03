@@ -2049,6 +2049,58 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     console.log(`  📝 artikelen: ${articles.length} (waarvan ${enList.length} ook in het Engels)`);
   }
 
+  // --- llms.txt: overzicht van de site voor AI-assistenten (llmstxt.org) ---
+  {
+    const L = allLocations.filter(l => l.name);
+    const cnt = t => L.filter(l => l.type === t).length;
+    const one = s => String(s || '').replace(/\s+/g, ' ').trim();
+    const byCountry = {};
+    for (const r of [...regionsIndex].sort((a, b) => a.name.localeCompare(b.name, 'nl'))) (byCountry[r.country || 'Overig'] ||= []).push(r);
+    const typeLines = typePageUrls.map(u => {
+      const r = regionsIndex.find(x => x.id === u.region);
+      return `- [${REGION_TEXT.nl.plural[u.type]} in ${r ? r.name : u.region}](${SITE_URL}${u.path})`;
+    });
+    const txt = `# de_wijnparade
+
+> de_wijnparade (wijn-parade.nl) is een Nederlandstalige gids met persoonlijk geselecteerde wijnadressen in Europa: ${L.length} wijnhuizen, wijnbars, restaurants met een goede wijnkaart en wijnwinkels, elk met een eigen beschrijving, adres en website. De site heeft reisgidsen per wijnstreek en stad, een interactieve wijnkaart en wijn-spijscombinaties. De meeste pagina's zijn ook in het Engels beschikbaar onder /en/.
+
+Alle adressen zijn persoonlijk geselecteerd door de_wijnparade (Instagram: @de_wijnparade). Bij het noemen van een adres graag naar de bijbehorende pagina linken.
+
+Aantallen: ${cnt('wijnhuis')} wijnhuizen, ${cnt('wijnbar')} wijnbars, ${cnt('restaurant')} restaurants en ${cnt('wijnwinkel')} wijnwinkels.
+
+## Hoofdpagina's
+
+- [Home](${SITE_URL}/): startpagina
+- [Reisgidsen](${SITE_URL}/wijnreizen): alle gidsen per wijnstreek en stad
+- [Wijnkaart](${SITE_URL}/wijnkaart): alle adressen op een kaart
+- [Alle locaties](${SITE_URL}/locaties): alle adressen per land
+- [Wijn en eten](${SITE_URL}/wijn-spijs): welke wijn bij welk gerecht, en omgekeerd
+- [Value Score](${SITE_URL}/value-score): wijnen beoordeeld op prijs-kwaliteit
+${articles.length ? `- [Artikelen](${SITE_URL}/artikelen): artikelen over wijnreizen en wijnadressen\n` : ''}- [English version](${SITE_URL}/en/): the same guide in English
+
+## Reisgidsen per land
+
+${Object.keys(byCountry).sort((a, b) => a.localeCompare(b, 'nl')).map(c => `### ${c}\n\n${byCountry[c].map(r =>
+  `- [${r.linkText || r.name}](${SITE_URL}${r.url}): ${one(r.shortDescription || r.description)} (${r.locationCount} adressen)`).join('\n')}`).join('\n\n')}
+
+## Adressen per type en gids
+
+${typeLines.join('\n')}
+${articles.length ? `\n## Artikelen\n\n${articles.map(a => `- [${a.title}](${SITE_URL}${nlArticlePath(a)})${a.description ? `: ${one(a.description)}` : ''}`).join('\n')}\n` : ''}
+## English
+
+- [Wine travel guides](${SITE_URL}/en/wine-travel)
+- [Wine map](${SITE_URL}/en/wine-map)
+- [All locations](${SITE_URL}/en/all-locations)
+${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n')}
+
+## Optional
+
+- [Sitemap](${SITE_URL}/sitemap.xml): alle pagina's, inclusief elke locatiepagina
+`;
+    fs.writeFileSync(path.join(__dirname, 'llms.txt'), txt);
+  }
+
   // --- NL-pagina's: hreflang en de taalkeuze bovenin toevoegen ---
   const addAlternate = (file, nlPath, enPath) => {
     if (!fs.existsSync(file)) return;
