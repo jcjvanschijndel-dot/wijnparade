@@ -1,0 +1,613 @@
+[
+  {
+    "dish": "Witte Asperges",
+    "intro": "Asperges zijn lastig voor wijn: ze zijn licht bitter en hebben een groene, aardse smaak, waardoor veel wijnen metalig gaan smaken. Kies een droge, frisse witte wijn zonder hout. Grüner veltliner uit Oostenrijk, met zijn tikje witte peper, is de klassieker. Sauvignon blanc uit de Loire, zoals Sancerre of Pouilly-Fumé, past bij asperges met een frisse saus of kruiden. Bij de Hollandse versie met ham, ei en botersaus werkt een droge riesling of een chardonnay zonder hout: die hebben genoeg zuur om de boter te dragen.",
+    "wines": [
+      {
+        "name": "Grüner Veltliner",
+        "stars": 3
+      },
+      {
+        "name": "Pouilly-Fumé",
+        "stars": 3
+      },
+      {
+        "name": "Riesling ",
+        "stars": 3
+      },
+      {
+        "name": "Chardonnay (zonder hout)",
+        "stars": 3
+      },
+      {
+        "name": "Sancerre",
+        "stars": 3
+      },
+      {
+        "name": "Muscat",
+        "stars": 2
+      },
+      {
+        "name": "Pinot Blanc",
+        "stars": 2
+      },
+      {
+        "name": "Chardonnay (unoaked)",
+        "stars": 2
+      },
+      {
+        "name": "Sauvignon Blanc",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "troef",
+      "von-winning"
+    ],
+    "_id": "asperges"
+  },
+  {
+    "dish": "Aziatische gerechten",
+    "intro": "Bij gerechten met pit, zoet-zuur of veel kruiden, zoals Thais, Chinees of Indiaas, past een aromatische witte wijn met weinig alcohol en een vleugje zoet. Gewürztraminer uit de Elzas heeft de geur van lychee en rozen en kan goed tegen gember en koriander. Een Duitse riesling kabinett of spätlese verzacht de pit met zijn restzoet en blijft fris door de zuren. Chenin blanc uit de Loire, droog of halfdroog, werkt ook goed. Vermijd zware rode wijnen met veel tannine: die maken de pit scherper. Wie geen alcohol drinkt, kan een mousserende thee proberen.",
+    "wines": [
+      {
+        "name": "Gewürztramnier",
+        "stars": 3
+      },
+      {
+        "name": "Riesling (duitse)",
+        "stars": 3
+      },
+      {
+        "name": "Sparkling tea",
+        "stars": 3
+      },
+      {
+        "name": "Chenin Blanc",
+        "stars": 2
+      },
+      {
+        "name": "Champagne",
+        "stars": 1
+      }
+    ],
+    "locations": [
+      "café-wu",
+      "bistro-de-la-mer",
+      "dr-wines",
+      "merlet",
+      "ta-nnin",
+      "nus"
+    ],
+    "_id": "aziatische-gerechten"
+  },
+  {
+    "dish": "BBQ",
+    "intro": "Gegrild vlees met een rokerige korst en zoete marinade vraagt om een rode wijn met veel rijp fruit. Australische shiraz en Californische zinfandel zijn de klassiekers: vol, kruidig en zacht genoeg voor barbecuesaus. Een frissere keuze is barbera uit Piemonte, met veel zuur en weinig tannine. Beaujolais kun je licht gekoeld drinken, wat op een warme dag prettig is. Bij gegrilde vis, kip of groenten past een droge rosé.",
+    "wines": [
+      {
+        "name": "Shiraz (Australië)",
+        "stars": 3
+      },
+      {
+        "name": "Zinfandel (Californië)",
+        "stars": 3
+      },
+      {
+        "name": "Beaujolais",
+        "stars": 2
+      },
+      {
+        "name": "Barbera",
+        "stars": 2
+      },
+      {
+        "name": "Rosé",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "de-badcuyp",
+      "restaurant-badhuis",
+      "braise",
+      "araboka",
+      "elkano"
+    ],
+    "_id": "bbq"
+  },
+  {
+    "dish": "Big Mac van McDonalds",
+    "intro": "Een knipoog, maar het werkt. Een hamburger met saus, augurk en kaas past bij een sappige, frisse wijn die niet te serieus is. Beaujolais, licht gekoeld, heeft rood fruit en weinig tannine. Een chenin blanc uit Zuid-Afrika is fris en een beetje romig, en dat past bij de saus en de kaas. Op zoek naar een burger met een glas champagne? Probeer dan de wijnhotspots hieronder.",
+    "wines": [
+      {
+        "name": "Chenin blanc",
+        "stars": 1
+      },
+      {
+        "name": "Beaujolais",
+        "stars": 1
+      }
+    ],
+    "locations": [
+      "café-clicquot",
+      "sacré-bistro"
+    ],
+    "_id": "big-mac-van-mcdonalds"
+  },
+  {
+    "dish": "Bloemkool",
+    "intro": "Bloemkool smaakt mild en een beetje nootachtig, en wordt vaak geserveerd met boter, kaas of kerrie. Pinot gris uit de Elzas heeft genoeg body voor een romige kaassaus of geroosterde bloemkool. Een Duitse riesling past beter bij bloemkool met kerrie of andere specerijen. Als de bloemkool licht en eenvoudig bereid is, kies dan voor een frisse, droge riesling.",
+    "wines": [
+      {
+        "name": "Pinot Gris",
+        "stars": 2
+      },
+      {
+        "name": "Riesling (Duitsland)",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "comada"
+    ],
+    "_id": "bloemkool"
+  },
+  {
+    "dish": "Bouillabaise",
+    "intro": "Bouillabaisse is de vissoep uit Marseille, met saffraan, venkel, knoflook en rouille. Kies wijn uit dezelfde streek. Witte Cassis, van de kliffen vlak bij Marseille, is de klassieker: van marsanne en clairette, droog en met tonen van kruiden. Een stevige rosé uit Bandol, van mourvèdre, kan tegen de knoflook en de saffraan. Ook witte wijn of rosé uit de Provence past goed.",
+    "wines": [
+      {
+        "name": "Cassis wit",
+        "stars": 3
+      },
+      {
+        "name": "Provence wit",
+        "stars": 2
+      },
+      {
+        "name": "Rosé Provence",
+        "stars": 2
+      },
+      {
+        "name": "Bandol rosé",
+        "stars": 3
+      }
+    ],
+    "_id": "bouillabaise"
+  },
+  {
+    "dish": "Carpaccio (runder)",
+    "intro": "Rauwe runderhaas met olijfolie, Parmezaanse kaas, pijnboompitjes en rucola vraagt om een frisse wijn die het vlees niet overheerst. Een rosé champagne combineert de frisheid van de bubbels met het rode fruit van pinot noir. Chianti Classico, van sangiovese, heeft de zuren voor de olijfolie en blijft licht genoeg. Een droge rosé is een eenvoudig alternatief.",
+    "wines": [
+      {
+        "name": "Rosé Champagne",
+        "stars": 3
+      },
+      {
+        "name": "Chianti Classico",
+        "stars": 2
+      },
+      {
+        "name": "Rosé (droog)",
+        "stars": 2
+      }
+    ],
+    "_id": "carpaccio-runder"
+  },
+  {
+    "dish": "Chili con Carne",
+    "intro": "Chili con carne is pittig, kruidig en vol, met bonen, gehakt en tomaat. Primitivo uit Puglia heeft rijp, zoet fruit dat de pit dempt. Syrah of shiraz voegt peper en kruiden toe. Beaujolais is een lichtere keuze. Een riesling met wat restzoet koelt de mond af. Kies geen wijn met veel alcohol of tannine: die maakt de pepers heter.",
+    "wines": [
+      {
+        "name": "Primitivo",
+        "stars": 3
+      },
+      {
+        "name": "Syrah / Shiraz",
+        "stars": 2
+      },
+      {
+        "name": "Beaujolais",
+        "stars": 2
+      },
+      {
+        "name": "Riesling",
+        "stars": 1
+      }
+    ],
+    "_id": "chili-con-carne"
+  },
+  {
+    "dish": "Chocolade",
+    "intro": "Bij chocolade moet de wijn minstens even zoet zijn als het dessert, anders smaakt de wijn zuur en bitter. Banyuls, een versterkte rode wijn uit de Roussillon, is de klassieker bij pure chocolade. Pedro Ximénez-sherry, donker en stroperig, past bij chocoladetaart en -mousse. Madeira (bual of malmsey) heeft een zuurtje dat goed werkt bij chocolade met noten of karamel. Muscat past beter bij melkchocolade of chocolade met fruit. Een cabernet sauvignon past alleen bij hele pure chocolade met weinig suiker.",
+    "wines": [
+      {
+        "name": "Banyuls",
+        "stars": 3
+      },
+      {
+        "name": "Madeira",
+        "stars": 3
+      },
+      {
+        "name": "Muscat",
+        "stars": 3
+      },
+      {
+        "name": "Sherry PX",
+        "stars": 3
+      },
+      {
+        "name": "Cabernet Sauvignon",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "duvin",
+      "la-passione",
+      "wijngoed-fromberg",
+      "château-guiraud",
+      "mas-geli"
+    ],
+    "_id": "chocolade"
+  },
+  {
+    "dish": "Dim Sum",
+    "intro": "Dim sum bestaat uit kleine hapjes: gestoomde dumplings met garnalen, varkensvlees of groenten, vaak met sojasaus of chiliolie. Mousserende witte wijn past daar het best bij. De bubbels maken je mond schoon na het vet van gefrituurde hapjes, en de zuren passen bij de soja. Een champagne, cava of crémant is een goede keuze. Een droge sekt van riesling ook.",
+    "wines": [
+      {
+        "name": "Mousserende wijnen (wit)",
+        "stars": 3
+      }
+    ],
+    "locations": [
+      "enstase",
+      "von-winning",
+      "pheasants-tears-winery"
+    ],
+    "_id": "dim-sum"
+  },
+  {
+    "dish": "Geitenkaas",
+    "intro": "Geitenkaas en sauvignon blanc uit de Loire horen bij elkaar. Rond Sancerre en Chavignol worden zowel de wijn als de kaas gemaakt: de crottin de Chavignol komt uit hetzelfde dorp als veel Sancerre. De frisse zuren en kruidige tonen van de wijn passen bij de zure, romige kaas. Een sauvignon blanc uit een ander land werkt ook, zolang hij droog en fris is. Bij een warme geitenkaas met honing past een wijn met iets meer body.",
+    "wines": [
+      {
+        "name": "Sancerre",
+        "stars": 3
+      },
+      {
+        "name": "Sauvignon Blanc",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "cheu-lzib",
+      "arte-de-cozina"
+    ],
+    "_id": "geitenkaas"
+  },
+  {
+    "dish": "Kaviaar",
+    "intro": "Kaviaar is zilt en romig, en een wijn met veel smaak overheerst hem snel. Champagne is de klassieke keuze, het liefst een blanc de blancs: chardonnay, strak en met fijne bubbels. Een droge chardonnay zonder veel hout of een droge pinot gris past ook. Vermijd rode wijn en wijn met veel hout, want die maken de kaviaar metalig.",
+    "wines": [
+      {
+        "name": "Champagne",
+        "stars": 2
+      },
+      {
+        "name": "Pinot Gris ",
+        "stars": 1
+      },
+      {
+        "name": "Chardonnay",
+        "stars": 1
+      },
+      {
+        "name": "Champagne Blanc des Blancs",
+        "stars": 3
+      }
+    ],
+    "locations": [
+      "tres",
+      "vineum",
+      "steinheuers-landgasthof-poststuben",
+      "château-guiraud"
+    ],
+    "_id": "kaviaar"
+  },
+  {
+    "dish": "Kip",
+    "intro": "Kip past bij veel wijnen. De saus bepaalt vaak meer dan het vlees. Bij kip met een romige saus of champignons is chardonnay de klassieker, zoals een witte Bourgogne. Bij geroosterde kip of kip met kruiden past pinot noir, die licht is en veel fruit heeft. In de Jura eten ze kip in vin jaune, met dezelfde wijn in het glas.",
+    "wines": [
+      {
+        "name": "Chardonnay",
+        "stars": 3
+      },
+      {
+        "name": "Pinot noir",
+        "stars": 3
+      }
+    ],
+    "locations": [
+      "la-finette",
+      "le-soufflot",
+      "cheu-lzib",
+      "castello-di-ama",
+      "quinta-nova",
+      "mas-roig",
+      "uva"
+    ],
+    "_id": "kip"
+  },
+  {
+    "dish": "Kreeft",
+    "intro": "Kreeft is rijk en een tikje zoet, en vraagt om een wijn met body én frisheid. Witte Bourgogne, zoals Meursault of Puligny-Montrachet, is de klassieke keuze: chardonnay met wat houtrijping sluit aan bij een botersaus, terwijl de zuren het gerecht fris houden. Champagne, liefst een blanc de blancs of een wat rijpere jaargang, past mooi bij koude kreeft of kreeft van de grill. Condrieu, van viognier uit de noordelijke Rhône, is een rijkere en aromatischere keuze, vooral bij kreeft met specerijen of een romige saus.",
+    "wines": [
+      {
+        "name": "Bourgogne wit",
+        "stars": 3
+      },
+      {
+        "name": "Champagne",
+        "stars": 3
+      },
+      {
+        "name": "Chardonnay ",
+        "stars": 2
+      },
+      {
+        "name": "Condrieu",
+        "stars": 2
+      }
+    ],
+    "_id": "kreeft"
+  },
+  {
+    "dish": "Lamsvlees",
+    "intro": "Lamsvlees heeft een volle smaak en wat vet, en past daardoor goed bij een rode wijn met tannine. Rioja, van tempranillo met houtrijping, is de klassieker bij lamskoteletjes en geroosterd lam. Ribera del Duero is steviger en past bij het zuiglam (lechazo) uit Castilië. Cabernet sauvignon past bij lam met kruiden of een jus. Côtes du Rhône, van grenache en syrah, past bij lam met rozemarijn, tijm en knoflook. Bij gestoofd lam kan een amarone.",
+    "wines": [
+      {
+        "name": "Rioja rood",
+        "stars": 3
+      },
+      {
+        "name": "Cabernet Sauvignon",
+        "stars": 3
+      },
+      {
+        "name": "Ribera del Duero",
+        "stars": 2
+      },
+      {
+        "name": "Côtes du Rhône rood",
+        "stars": 2
+      },
+      {
+        "name": "Amarone",
+        "stars": 1
+      }
+    ],
+    "locations": [
+      "bistrot-neuf",
+      "café-verward",
+      "merlet",
+      "cal-xim",
+      "bodeagas-arzuaga",
+      "restaurante-bodega-charolais",
+      "le-figuier-de-saint-esprit",
+      "antica-bottega-del-vino"
+    ],
+    "_id": "lamsvlees"
+  },
+  {
+    "dish": "Mexicaanse gerechten",
+    "intro": "Taco's, guacamole en salsa zijn pittig, fris en vaak zuur door de limoen. Een frisse witte wijn past daar goed bij. Sauvignon blanc heeft groene, citrusachtige tonen die passen bij koriander en limoen. Een riesling met een beetje zoet tempert de pit. Bij gerechten met rundvlees, mole of bonen past een rijpe primitivo of zinfandel.",
+    "wines": [
+      {
+        "name": "Riesling",
+        "stars": 3
+      },
+      {
+        "name": "Sauvignon Blanc",
+        "stars": 3
+      },
+      {
+        "name": "Primitivo",
+        "stars": 3
+      }
+    ],
+    "locations": [
+      "bottleshop"
+    ],
+    "_id": "mexicaanse-gerechten"
+  },
+  {
+    "dish": "Mosselen",
+    "intro": "Mosselen zijn zilt en licht zoet, en meestal gekookt met witte wijn, sjalot en kruiden. Kies een frisse, droge witte wijn, het liefst dezelfde als in de pan. Muscadet uit de Loire is de klassieker: licht, strak en zilt. Sauvignon blanc past bij mosselen met veel kruiden of knoflook. Chablis is wat voller en past bij mosselen in roomsaus. Bij mosselen in curry past een wijn met wat meer aroma, zoals een droge riesling.",
+    "wines": [
+      {
+        "name": "Muscadet",
+        "stars": 3
+      },
+      {
+        "name": "Sauvignon Blanc",
+        "stars": 3
+      },
+      {
+        "name": "Chablis",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "louise-petit-restaurant",
+      "bar-vitrine"
+    ],
+    "_id": "mosselen"
+  },
+  {
+    "dish": "Oesters",
+    "intro": "Oesters vragen om wijn met frisheid en een zilte toets: droog, strak en zonder hout. De klassieker is muscadet uit de Loire, die rond Nantes vlak bij de Atlantische oesterbanken groeit. Chablis, van chardonnay op kalkbodem vol fossiele oesterschelpjes, heeft dezelfde mineralige strakheid. Champagne werkt door de zuren en de bubbels, vooral een brut nature of extra brut. Ook een frisse sauvignon blanc, zoals een Sancerre, past goed. Vermijd houtgerijpte of zoete wijnen: die overheersen de oester.",
+    "wines": [
+      {
+        "name": "Chablis",
+        "stars": 3
+      },
+      {
+        "name": "Champagne",
+        "stars": 3
+      },
+      {
+        "name": "Sauvignon Blanc",
+        "stars": 3
+      },
+      {
+        "name": "Muscadet",
+        "stars": 3
+      }
+    ],
+    "locations": [
+      "bar-du-champagne",
+      "wijnbar-shiraz",
+      "bistro-de-la-mer",
+      "rosie",
+      "wijnbar-kurk",
+      "lavant-comptoir-de-la-terre-et-mer",
+      "la-muscadetterie"
+    ],
+    "_id": "oesters"
+  },
+  {
+    "dish": "Oude Kaas",
+    "intro": "Oude kaas, zoals een belegen Goudse, comté of Parmezaanse kaas, is zout en hartig, met zoute kristallen. Veel mensen kiezen rode wijn, maar witte wijn past vaak beter. Een riesling met wat restzoet en veel zuren is een goede keuze. Witte Bourgogne past bij comté en gruyère. Bordeaux rood past bij harde, oude kaas, zolang de wijn wat rijper is en de tannine zacht is geworden. In de Jura drinken ze bij comté de vin jaune.",
+    "wines": [
+      {
+        "name": "Riesling",
+        "stars": 3
+      },
+      {
+        "name": "Bordeaux rood",
+        "stars": 2
+      },
+      {
+        "name": "Bourgogne wit",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "wijnbar-shiraz",
+      "bar-françois",
+      "la-casera",
+      "la-finette",
+      "le-coq-rouge",
+      "wyn"
+    ],
+    "_id": "oude-kaas"
+  },
+  {
+    "dish": "Paddestoelen",
+    "intro": "Paddestoelen hebben een aardse, umami-smaak, en die past goed bij wijn met rijpe tonen van bosgrond. Pinot noir is de klassieker: een rode Bourgogne heeft vaak tonen van paddestoelen. Bij truffel uit Piemonte past nebbiolo, zoals Barolo of Barbaresco. Champagne, vooral een rijpere, past bij paddestoelen in roomsaus of risotto. Cabernet sauvignon past bij gegrilde paddestoelen of paddestoelen met vlees.",
+    "wines": [
+      {
+        "name": "Pinot Noir",
+        "stars": 3
+      },
+      {
+        "name": "Champagne",
+        "stars": 2
+      },
+      {
+        "name": "Cabernet Sauvignon",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "café-sjiek",
+      "zafvino",
+      "la-passione",
+      "pazzo",
+      "le-soufflot",
+      "le-strasbourg",
+      "belsit",
+      "domaine-pesquié",
+      "quinta-nova"
+    ],
+    "_id": "paddestoelen"
+  },
+  {
+    "dish": "Rundvlees / Steak",
+    "intro": "Een steak heeft vet en eiwit, en die maken de tannine in rode wijn zachter. Daarom passen stevige rode wijnen goed. Cabernet sauvignon uit de Bordeaux is de klassieker bij een entrecote of côte de boeuf. Syrah uit de noordelijke Rhône voegt peper toe. Een Côtes du Rhône is een betaalbare keuze. Barolo past bij een steak uit Piemonte (fassone) of een bistecca. Pinot noir past bij een mager stuk, zoals een ossenhaas, of bij steak tartaar.",
+    "wines": [
+      {
+        "name": "Cabernet Sauvignon (Bordeaux)",
+        "stars": 3
+      },
+      {
+        "name": "Shiraz/Syrah",
+        "stars": 3
+      },
+      {
+        "name": "Côtes du Rhône",
+        "stars": 3
+      },
+      {
+        "name": "Barolo",
+        "stars": 3
+      },
+      {
+        "name": "Pinot Noir",
+        "stars": 3
+      }
+    ],
+    "locations": [
+      "vineum",
+      "louise-petit-restaurant",
+      "sacré-bistro",
+      "le-coq-rouge",
+      "mas-roig",
+      "trattoria-il-leccio",
+      "vinoteca-centro-storico"
+    ],
+    "_id": "rundvlees-steak"
+  },
+  {
+    "dish": "Spruitjes",
+    "intro": "Spruitjes zijn licht bitter en hebben een zwavelachtige smaak die veel wijnen niet goed verdragen. Een frisse sauvignon blanc met groene tonen past het best, vooral bij geroosterde spruitjes of spruitjes met spek. Kies geen rode wijn met veel tannine: die maakt de spruitjes bitterder.",
+    "wines": [
+      {
+        "name": "Sauvignon Blanc",
+        "stars": 2
+      }
+    ],
+    "_id": "spruitjes"
+  },
+  {
+    "dish": "Wild",
+    "intro": "Wild, zoals hert, ree, haas of everzwijn, heeft een volle, licht zoete smaak en wordt vaak met bessen of een donkere saus geserveerd. Barolo, van nebbiolo, heeft de tannine en zuren voor een stoofpot van everzwijn of hert. Côtes du Rhône, van grenache en syrah, heeft kruiden en rijp fruit, en dat past bij wildragout. Bij lichter wild, zoals fazant of eend, past pinot noir. In Toscane eten ze everzwijn met chianti of brunello.",
+    "wines": [
+      {
+        "name": "Barolo",
+        "stars": 3
+      },
+      {
+        "name": "Côtes du Rhône rood",
+        "stars": 3
+      },
+      {
+        "name": "Pinot Noir",
+        "stars": 2
+      }
+    ],
+    "locations": [
+      "bak",
+      "café-restaurant-terroir",
+      "café-sjiek",
+      "graacher-tor",
+      "can-roquet",
+      "badia-a-coltibuono",
+      "castello-di-ama",
+      "castello-di-fonterutoli",
+      "trattoria-il-leccio"
+    ],
+    "_id": "wild"
+  }
+]

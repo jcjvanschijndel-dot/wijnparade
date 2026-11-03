@@ -2337,7 +2337,7 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   const dishLocs = d => {
     const locs = (Array.isArray(d.locations) ? d.locations : []).map(id => allLocations.find(l => l._id === String(id))).filter(Boolean);
     if (!locs.length) return '';
-    return `<section class="ws-section"><h2>Wijnhotspots om ${escHtml(String(d.dish).trim().toLowerCase())} te eten met de juiste wijn</h2><ul class="ws-list">
+    return `<section class="ws-section"><h2>Wijnhotspots om ${escHtml(/mcdonald/i.test(d.dish) ? 'een Big Mac' : String(d.dish).trim().toLowerCase().replace(' / ', ' of '))} te eten met de juiste wijn</h2><ul class="ws-list">
         ${locs.map(l => `<li><a href="/locations/${l._id}">${escHtml(l.title || l.name)}</a> <span style="color:var(--gray-600);font-size:.85em">${escHtml(typeLabelsReg[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></li>`).join('\n        ')}
       </ul></section>`;
   };
