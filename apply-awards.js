@@ -17,7 +17,8 @@
  *
  * Per locatie worden bestaande onderscheidingen van dezelfde bron (bijvoorbeeld Michelin)
  * vervangen door de nieuwe. Onderscheidingen van andere bronnen blijven staan.
- * Er wordt nooit iets verwijderd dat niet in awards.json voorkomt.
+ * Er wordt nooit iets verwijderd dat niet in awards.json voorkomt. Zulke onderscheidingen staan
+ * in het rapport onder "nietInBronlijst", zodat de gebruiker ze kan beoordelen.
  *
  * Uitvoer: apply-awards-report.json (en de verschillen in de terminal)
  */
@@ -164,7 +165,7 @@ function main() {
 
     // Koppelen
     const matched = new Map();   // file -> { loc, items: [] }
-    const report = { toegepast: [], geenMatch: [], meerdereMatches: [], ongeldig: [], ongewijzigd: [] };
+    const report = { toegepast: [], geenMatch: [], meerdereMatches: [], ongeldig: [], ongewijzigd: [], nietInBronlijst: [] };
 
     for (const e of entries) {
         if (!SOURCES.includes(e.source)) {
@@ -217,6 +218,17 @@ function main() {
         }
     }
 
+    // Onderscheidingen die op de site staan, maar waarvoor awards.json (voor die locatie en bron)
+    // geen regel heeft. Die worden NIET verwijderd; ze staan alleen in het rapport ter beoordeling.
+    for (const loc of locs) {
+        const block = findAwardsBlock(loc.lines);
+        if (!block) continue;
+        const covered = new Set((matched.get(loc.file) || { items: [] }).items.map(i => i.name));
+        for (const a of parseAwards(loc.lines.slice(block.start + 1, block.end))) {
+            if (!covered.has(a.name)) report.nietInBronlijst.push({ locatie: loc.name, bestand: loc.file, onderscheiding: label(a) });
+        }
+    }
+
     fs.writeFileSync(REPORT, JSON.stringify(report, null, 2), 'utf8');
 
     console.log('----------------------------------------');
@@ -226,6 +238,7 @@ function main() {
     console.log(`Regels zonder match:      ${report.geenMatch.length}`);
     console.log(`Regels met >1 match:      ${report.meerdereMatches.length}`);
     console.log(`Ongeldige regels:         ${report.ongeldig.length}`);
+    console.log(`Niet in de bronlijst:     ${report.nietInBronlijst.length} (staan op de site; ter beoordeling, niet verwijderd)`);
     if (report.geenMatch.length) {
         console.log('\nGeen match (staat de locatie niet op de site, of wijkt de naam of plaats af?):');
         report.geenMatch.forEach(e => console.log(`  - ${e.name} (${e.city}): ${e.source} ${e.detail || ''}`));
@@ -233,6 +246,10 @@ function main() {
     if (report.meerdereMatches.length) {
         console.log('\nMeerdere matches (handmatig oplossen of "aliases" aanscherpen):');
         report.meerdereMatches.forEach(e => console.log(`  - ${e.name} (${e.city}): ${e.kandidaten.join(', ')}`));
+    }
+    if (report.nietInBronlijst.length) {
+        console.log('\nOp de site, maar niet (meer) in awards.json (niet verwijderd; beoordelen):');
+        report.nietInBronlijst.forEach(e => console.log(`  - ${e.locatie} (${e.bestand}): ${e.onderscheiding}`));
     }
     console.log(`\nRapport: ${REPORT}`);
 }
