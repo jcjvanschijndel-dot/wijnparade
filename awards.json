@@ -1,0 +1,21 @@
+[
+  { "source": "Michelin", "name": "Azurite", "city": "Delft", "detail": "2 sterren", "detail_en": "2 stars", "year": "2026", "url": "https://guide.michelin.com/nl/nl/zuid-holland/delft/restaurant/azurite" },
+  { "source": "Michelin", "name": "Bistro de la Mer", "city": "Amsterdam", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/noord-holland/amsterdam/restaurant/bistro-de-la-mer" },
+  { "source": "Michelin", "name": "De Kas", "aliases": ["Restaurant De Kas"], "city": "Amsterdam", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/noord-holland/amsterdam/restaurant/de-kas" },
+  { "source": "Michelin", "name": "Wils", "aliases": ["Restaurant Wils"], "city": "Amsterdam", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/noord-holland/amsterdam/restaurant/wils" },
+  { "source": "Michelin", "name": "Zoldering", "city": "Amsterdam", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/noord-holland/amsterdam/restaurant/zoldering" },
+  { "source": "Michelin", "name": "De Nederlanden", "city": "Vreeland", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/utrecht/vreeland/restaurant/de-nederlanden" },
+  { "source": "Michelin", "name": "'t Amsterdammertje", "city": "Loenen aan de Vecht", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/utrecht/loenen-aan-de-vecht/restaurant/t-amsterdammertje" },
+  { "source": "Michelin", "name": "Merlet", "city": "Schoorl", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/noord-holland/schoorl/restaurant/merlet" },
+  { "source": "Michelin", "name": "The Millèn", "city": "Rotterdam", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/zuid-holland/rotterdam/restaurant/the-millen" },
+  { "source": "Michelin", "name": "Bij Jef", "city": "Den Hoorn", "detail": "1 ster", "detail_en": "1 star", "year": "2026", "url": "https://guide.michelin.com/nl/nl/noord-holland/den-hoorn/restaurant/bij-jef" },
+  { "source": "Michelin", "name": "Rijsel", "city": "Amsterdam", "detail": "Bib Gourmand", "detail_en": "Bib Gourmand", "year": "2026", "url": "https://guide.michelin.com/nl/nl/noord-holland/amsterdam/restaurant/rijsel" },
+  { "source": "Michelin", "name": "Vineum", "city": "Rotterdam", "detail": "Bib Gourmand", "detail_en": "Bib Gourmand", "year": "2026", "url": "https://guide.michelin.com/nl/nl/zuid-holland/rotterdam/restaurant/vineum460329" },
+  { "source": "Michelin", "name": "Café Sjiek", "city": "Maastricht", "detail": "Bib Gourmand", "detail_en": "Bib Gourmand", "year": "2026", "url": "https://guide.michelin.com/nl/nl/limburg/maastricht/restaurant/cafe-sjiek" },
+
+  { "source": "Lekker", "name": "Azurite", "city": "Delft", "detail": "nr. 6 in de Top 100", "detail_en": "No. 6 in the Top 100", "year": "2027", "url": "https://www.derestaurantkrant.nl/lekker500-2027-de-volledige-top-100" },
+  { "source": "Lekker", "name": "Bij Jef", "city": "Den Hoorn", "detail": "nr. 14 in de Top 100", "detail_en": "No. 14 in the Top 100", "year": "2027", "url": "https://www.derestaurantkrant.nl/lekker500-2027-de-volledige-top-100" },
+  { "source": "Lekker", "name": "Merlet", "city": "Schoorl", "detail": "nr. 34 in de Top 100", "detail_en": "No. 34 in the Top 100", "year": "2027", "url": "https://www.derestaurantkrant.nl/lekker500-2027-de-volledige-top-100" },
+  { "source": "Lekker", "name": "De Nederlanden", "city": "Vreeland", "detail": "nr. 52 in de Top 100", "detail_en": "No. 52 in the Top 100", "year": "2027", "url": "https://www.derestaurantkrant.nl/lekker500-2027-de-volledige-top-100" },
+  { "source": "Lekker", "name": "De Kas", "aliases": ["Restaurant De Kas"], "city": "Amsterdam", "detail": "nr. 74 in de Top 100", "detail_en": "No. 74 in the Top 100", "year": "2027", "url": "https://www.derestaurantkrant.nl/lekker500-2027-de-volledige-top-100" }
+]
