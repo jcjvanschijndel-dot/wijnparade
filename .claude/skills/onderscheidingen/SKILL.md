@@ -62,13 +62,34 @@ awards:
 
 Zoek de bronnen na voor de nieuwe locatie: bij restaurants vooral Michelin, Gault&Millau, Lekker (Nederland), World's 50 Best en Wine Spectator; bij wijnbars Star Wine List en Raisin; bij wijnhuizen Decanter, James Suckling, Robert Parker, World's Best Vineyards en de gids van het land (Gambero Rosso, Falstaff, Guía Peñín, La Revue du Vin de France). Laat wat je vond, met de link naar de bron, zien in de akkoordronde.
 
+## Bronlijst en script: awards.json en apply-awards.js
+
+Onderscheidingen worden niet per locatie opgezocht, maar per bron en per land:
+
+- `awards.json` in de root bevat de officiële lijsten, één regel per onderscheiding:
+  `{ "source": "Michelin", "name": "Azurite", "aliases": ["…"], "city": "Delft", "detail": "2 sterren", "detail_en": "2 stars", "year": "2026", "url": "<bronlink>" }`.
+  `source` is precies een naam uit de tabel hierboven; `url` is de link naar de bron (verplicht). `aliases` alleen als de locatie op de site een andere naam of schrijfwijze heeft.
+- `node apply-awards.js` is een droogloop: het koppelt elke regel op naam en plaats aan precies één locatie en laat zien wat er zou veranderen. `--write` schrijft het veld `awards` in de locatiebestanden.
+- Per locatie vervangt het script alleen de onderscheidingen van dezelfde bron. Het verwijdert zelf nooit iets: onderscheidingen die op de site staan maar niet (meer) in `awards.json`, staan in het rapport `apply-awards-report.json` onder `nietInBronlijst`.
+- Het rapport (`apply-awards-report.json`) is een werkbestand: niet committen.
+
+Hoe je de bronnen leest:
+- **Michelin:** de volledige lijsten per land op guide.michelin.com (sterren en Bib Gourmand) zijn gewone pagina's.
+- **Lekker500:** lekker.nl laadt de lijst met JavaScript; de volledige Top 100 staat ook op derestaurantkrant.nl.
+- **Star Wine List:** blokkeert bots; gebruik zoekresultaten of de eigen pagina van de locatie.
+- **Robert Parker, James Suckling, Wine Spectator:** grotendeels achter een betaalmuur. Alleen invullen als de bron het zonder betaalmuur toont; anders overslaan.
+
 ## Update van alle locaties (elk kwartaal)
 
 1. Werk vanaf de nieuwste `main` op een nieuwe branch `claude/onderscheidingen-<jaar>-q<kwartaal>`.
-2. Loop alle `content/locations/*.md` langs (sla `_index.json` over). Doe het per regio of per type in porties, zodat je het overzicht houdt.
-3. Per locatie:
-   - controleer bestaande onderscheidingen: staan ze nog bij de bron, klopt het detail en het jaar? Pas aan of verwijder;
-   - zoek nieuwe onderscheidingen bij de bronnen uit de tabel.
-4. Draai `node build-indexes.js`, controleer dat er geen fouten zijn, en zet de gegenereerde bestanden terug: `git checkout index.html wijnkaart.html wijnreizen.html content/locations/_index.json content/regions/_index.json`. Commit alleen de gewijzigde `.md`-bestanden.
-5. Maak een pull request met een Nederlandse beschrijving. Neem een tabel op met per gewijzigde locatie: oud → nieuw en de link naar de bron. Noem apart wat je verwijderd hebt en waarom.
-6. **Voeg nooit zelf samen.** De gebruiker controleert en publiceert.
+2. **Ververs per bron de lijst in `awards.json`.** Haal per bron en per land één keer de actuele officiële lijst op en zet die in `awards.json` (met bronlink en jaar). Houd alleen regels voor locaties die op de site staan, plus de regels die nog niet gekoppeld konden worden.
+3. **Droogloop:** `node apply-awards.js`. Bekijk:
+   - *Geen match*: staat de locatie wel op de site onder een andere naam of schrijfwijze, voeg `aliases` toe. Staat hij er niet op, laat de regel staan en meld hem.
+   - *Meerdere matches*: maak de regel scherper (plaats, aliases).
+   - *Niet in de bronlijst*: onderscheidingen die op de site staan maar niet meer in de nieuwe lijst. **Niet zelf verwijderen**; zet ze in de pull request ter beoordeling.
+4. `node apply-awards.js --write`, daarna `node build-indexes.js`. Controleer dat de build slaagt en zet de gegenereerde bestanden terug: `git checkout index.html wijnkaart.html wijnreizen.html content/locations/_index.json content/regions/_index.json` en `git clean -fd` (na `git add` van wat je wilt houden). Commit alleen de gewijzigde `.md`-bestanden en `awards.json`.
+5. Maak **één** pull request in het Nederlands met:
+   - een tabel per gewijzigde locatie: oud → nieuw, met de bronlink;
+   - de regels zonder match (en waarom);
+   - de onderscheidingen uit *Niet in de bronlijst*, zodat de gebruiker beslist of ze weg moeten.
+6. **Voeg nooit zelf samen.** De gebruiker controleert en publiceert. Pas alleen het veld `awards` en `awards.json` aan, geen teksten of andere velden.
