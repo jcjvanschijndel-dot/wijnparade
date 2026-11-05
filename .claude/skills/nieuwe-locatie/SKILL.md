@@ -24,6 +24,8 @@ Zoek op internet (officiële website, Google-vermelding, recensies, gidsen) naar
 - de **coördinaten** (lat/lng, minstens 6 decimalen)
 - feiten voor de tekst: wat er bijzonder is, specialiteiten, wijnen of druiven, proeverijen en rondleidingen, keuken, sfeer, ligging, geschiedenis, of reserveren nodig is
 
+- **onderscheidingen**: volg de skill `onderscheidingen` (`.claude/skills/onderscheidingen/SKILL.md`). Zoek ze alleen op bij de bron zelf (de gidsen en prijzen uit die skill) of op de eigen website van de locatie, en zet ze in het veld `awards`, niet in de tekst.
+
 **Verzin niets.** Alleen feiten die je in een bron vindt. Twijfel je over iets, laat het weg of meld het aan de gebruiker. Noem geen openingstijden of prijzen; die veranderen te vaak.
 
 ## 3. Teksten schrijven
@@ -84,8 +86,15 @@ description_en: >-
   English text…
 image: /uploads/<slug>.webp
 website: https://www.voorbeeld.nl/
+awards:
+  - name: "Michelin"
+    detail: "1 ster"
+    detail_en: "1 star"
+    year: "2026"
 ---
 ```
+
+Laat `awards` weg als er geen onderscheidingen zijn.
 
 Zet een naam met een apostrof aan het begin, een dubbele punt of een `#` tussen aanhalingstekens. Controleer met een YAML-parser dat de frontmatter geldig is.
 
@@ -106,7 +115,7 @@ Vond je geen betrouwbare coördinaten? Laat `lat` en `lng` weg en meld het: de g
 
 Laat de gebruiker in de chat zien, **vóórdat je commit of een pull request maakt**:
 - de screenshots;
-- de Nederlandse en Engelse tekst, het type, het adres, de website en de regio;
+- de Nederlandse en Engelse tekst, het type, het adres, de website, de regio en de onderscheidingen (met link naar de bron);
 - wat je niet kon vinden of waarover je twijfelt, met je bronnen.
 
 Verwerk feedback en laat het opnieuw zien. Ga pas verder als de gebruiker akkoord geeft.

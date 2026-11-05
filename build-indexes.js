@@ -148,8 +148,24 @@ function cityFromAddress(addr) {
 // LOCATIEPAGINA-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
 // ============================================================
 const LOC_TEXT = {
-  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', },
-  en: { address: 'Address', about: 'About this location', website: 'Visit website →' },
+  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', awards: 'Onderscheidingen' },
+  en: { address: 'Address', about: 'About this location', website: 'Visit website →', awards: 'Awards' },
+};
+// Onderscheidingen (CMS-veld "awards"): [{ name, detail, detail_en, year }]
+const locAwards = loc => (Array.isArray(loc.awards) ? loc.awards : [])
+  .filter(a => a && String(a.name || '').trim())
+  .map(a => ({ name: String(a.name).trim(), detail: String(a.detail || '').trim(), detailEn: String(a.detail_en || '').trim(),
+               year: String(a.year || '').trim() }));
+const awardText = (a, lang) => [a.name, (lang === 'en' && a.detailEn) || a.detail, a.year].filter(Boolean).join(' · ');
+const awardsBlock = (loc, lang) => {
+  const list = locAwards(loc);
+  if (!list.length) return '';
+  const esc = x => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  return `<div class="loc-awards"><div class="loc-address-label">${LOC_TEXT[lang].awards}</div>
+      <ul>${list.map(a => {
+        const rest = [(lang === 'en' && a.detailEn) || a.detail, a.year].filter(Boolean).map(esc).join(' · ');
+        return `<li><strong>${esc(a.name)}</strong>${rest ? `<span>${rest}</span>` : ''}</li>`;
+      }).join('')}</ul></div>`;
 };
 function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema,
                               logoHref = '/wijnkaart', headExtra = '', headerExtra = '', afterHeader = '', beforeCard = '' }) {
@@ -181,6 +197,12 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     .loc-title{font-size:1.5rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:1.25rem}
     .loc-address{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .75rem;padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem}
     .loc-address-label{font-weight:600;color:var(--navy)}
+    .loc-awards{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem}
+    .loc-awards .loc-address-label{margin-bottom:.35rem}
+    .loc-awards ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.3rem 1.5rem;list-style:none;margin:0;padding:0}
+    .loc-awards li{display:flex;align-items:center;gap:.45rem;min-width:0;white-space:nowrap;color:var(--gray-900)}
+    .loc-awards li strong{font-weight:600;color:var(--navy);flex-shrink:0}
+    .loc-awards li span{color:var(--gray-600);overflow:hidden;text-overflow:ellipsis}
     .loc-address a{color:var(--gray-900);text-decoration:underline;text-decoration-color:var(--gray-300);text-underline-offset:3px}
     .loc-address a:hover{color:var(--navy);text-decoration-color:var(--navy)}
     .location-map{height:350px;border-radius:12px;border:1px solid var(--gray-200);margin:2rem 0}
@@ -208,6 +230,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   <main class="main"><div class="container">
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <h1 class="loc-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
+    ${awardsBlock(loc, lang)}
     <div class="info-section"><div class="info-value">${String(description).split(/\n+/).map(p => `<p>${p}</p>`).join('')}</div></div>
     ${loc.address ? `<div class="loc-address"><span class="loc-address-label">${t.address}</span>${mapUrl ? `<a href="${mapUrl}">${loc.address}</a>` : `<span>${loc.address}</span>`}</div>` : ''}
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
@@ -270,7 +293,8 @@ for (const file of locationFiles) {
         '@context': 'https://schema.org', '@type': 'LocalBusiness',
         name, description, image, url: loc.website || pageUrl,
         address: { '@type': 'PostalAddress', streetAddress: loc.address || '' },
-        ...(loc.lat && loc.lng ? { geo: { '@type': 'GeoCoordinates', latitude: loc.lat, longitude: loc.lng } } : {})
+        ...(loc.lat && loc.lng ? { geo: { '@type': 'GeoCoordinates', latitude: loc.lat, longitude: loc.lng } } : {}),
+        ...(locAwards(loc).length ? { award: locAwards(loc).map(a => awardText(a, 'nl')) } : {})
     };
 
     const html = renderLocationPage({ loc: { ...loc, _id: id }, name, description, metaDesc, typeLabel, city, seoTitle, image, pageUrl, schema });
@@ -1829,7 +1853,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const schema = {
       '@context': 'https://schema.org', '@type': 'LocalBusiness', name, description, image, url: l.website || pageUrl,
       address: { '@type': 'PostalAddress', streetAddress: l.address || '' },
-      ...(l.lat && l.lng ? { geo: { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lng } } : {})
+      ...(l.lat && l.lng ? { geo: { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lng } } : {}),
+      ...(locAwards(l).length ? { award: locAwards(l).map(a => awardText(a, 'en')) } : {})
     };
     // "More in <regio>": dichtstbijzijnde locaties, net als op de NL-pagina
     const pool = (r ? geoLocsEn.filter(x => inBounds(x, r)) : geoLocsEn).filter(x => x._id !== l._id);
