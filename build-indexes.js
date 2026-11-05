@@ -179,12 +179,12 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   <style>
     .location-hero{width:100%;height:350px;object-fit:cover;border-radius:12px;margin-bottom:1.25rem}
     .loc-title{font-size:1.5rem;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:1.25rem}
-    .loc-address{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .75rem;padding:.75rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;margin-bottom:1rem;font-size:.9rem}
+    .loc-address{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .75rem;padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem}
     .loc-address-label{font-weight:600;color:var(--navy)}
     .loc-address a{color:var(--gray-900);text-decoration:underline;text-decoration-color:var(--gray-300);text-underline-offset:3px}
     .loc-address a:hover{color:var(--navy);text-decoration-color:var(--navy)}
     .location-map{height:350px;border-radius:12px;border:1px solid var(--gray-200);margin:2rem 0}
-    .info-section{padding:1.5rem;background:var(--gray-50);border-radius:12px;border:1px solid var(--gray-200);margin-bottom:1.5rem}
+    .info-section{padding:1.5rem;background:var(--gray-50);border-radius:12px;margin-bottom:1.5rem}
     .info-label{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:1rem}
     .info-value{font-size:1rem;color:var(--gray-900);line-height:1.8}
     .info-value p+p{margin-top:1em}
@@ -208,7 +208,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   <main class="main"><div class="container">
     ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
     <h1 class="loc-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
-    <div class="info-section"><div class="info-label">${t.about}</div><div class="info-value">${String(description).split(/\n+/).map(p => `<p>${p}</p>`).join('')}</div></div>
+    <div class="info-section"><div class="info-value">${String(description).split(/\n+/).map(p => `<p>${p}</p>`).join('')}</div></div>
     ${loc.address ? `<div class="loc-address"><span class="loc-address-label">${t.address}</span>${mapUrl ? `<a href="${mapUrl}">${loc.address}</a>` : `<span>${loc.address}</span>`}</div>` : ''}
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
