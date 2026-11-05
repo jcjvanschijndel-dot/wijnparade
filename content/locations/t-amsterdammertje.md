@@ -25,4 +25,9 @@ description_en: >-
   Restaurant 't Amsterdammertje is on the Rijksstraatweg in Loenen aan de Vecht,
   in the beautiful Vecht area between Amsterdam and Utrecht. A Michelin-starred
   restaurant for lovers of organic wine and a special dinner.
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
 ---

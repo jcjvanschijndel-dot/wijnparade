@@ -38,4 +38,9 @@ description_en: >-
   renowned Meursault, a mature Rhône or a surprising natural wine from a small
   producer, at Rijsel you feel in every sip and at every table that the
   restaurant is run by true epicureans.
+awards:
+  - name: Michelin
+    detail: Bib Gourmand
+    detail_en: Bib Gourmand
+    year: "2026"
 ---

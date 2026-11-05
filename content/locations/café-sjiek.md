@@ -27,4 +27,9 @@ description_en: >-
   choucroute. The menu plays with the Maastricht dialect with a wink. The wine
   list is excellent and includes Limburg wines too: a glass of wine with a
   dessert tart on the staff's recommendation is a classic here.
+awards:
+  - name: Michelin
+    detail: Bib Gourmand
+    detail_en: Bib Gourmand
+    year: "2026"
 ---

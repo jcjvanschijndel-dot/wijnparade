@@ -25,4 +25,9 @@ description_en: >-
   Zoldering is on the Utrechtsestraat in Amsterdam. One of the best restaurants
   in Amsterdam for wine lovers, and with their own wine shop Lof you can take
   your favourite wine home too.
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
 ---

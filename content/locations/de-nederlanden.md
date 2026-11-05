@@ -15,4 +15,13 @@ description_en: >-
   list is also a reason to go, from classic favourites to original finds from
   all over the world. If you really have something to celebrate, or you're
   looking for a top spot to have lunch outside... go here!
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
+  - name: Lekker
+    detail: nr. 52 in de Top 100
+    detail_en: No. 52 in the Top 100
+    year: "2027"
 ---
