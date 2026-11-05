@@ -21,4 +21,13 @@ description_en: >-
   addresses in the Netherlands, with a 17.5 from Gault & Millau. All this comes
   with a price tag, of course... but if that doesn't bother you, or you have
   something to celebrate, this is one of the country's real gems.
+awards:
+  - name: Michelin
+    detail: 2 sterren
+    detail_en: 2 stars
+    year: "2026"
+  - name: Lekker
+    detail: nr. 6 in de Top 100
+    detail_en: No. 6 in the Top 100
+    year: "2027"
 ---

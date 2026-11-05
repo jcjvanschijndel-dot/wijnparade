@@ -23,4 +23,13 @@ description_en: >-
   such as Wadden Sea shrimps and Texel lamb. The wine list is Merlet's real
   secret: no fewer than 60 wines by the glass, many of them via Coravin,
   including older vintages at remarkably reasonable prices for the Netherlands.
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
+  - name: Lekker
+    detail: nr. 34 in de Top 100
+    detail_en: No. 34 in the Top 100
+    year: "2027"
 ---

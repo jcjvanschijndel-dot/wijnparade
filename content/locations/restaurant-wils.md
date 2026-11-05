@@ -23,4 +23,9 @@ description_en: >-
   years. A culinary ode to fire, the primal force of every kitchen: fire pits,
   wood-fired ovens and hanging grills in the open kitchen. One Michelin star. 21
   wines by the glass, including exclusive selections via Coravin.
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
 ---

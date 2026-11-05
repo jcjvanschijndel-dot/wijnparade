@@ -28,4 +28,9 @@ description_en: >-
   dashi-Albufera sauce, poussin stuffed with smoked eel. The dishes combine
   classic French technique with Japanese influences. The wine list is classic
   and well thought out, with many well-known top wines.
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
 ---

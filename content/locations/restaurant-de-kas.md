@@ -29,4 +29,13 @@ description_en: >-
   and minimal intervention, chosen from winemaker friends who work the same way
   as the restaurant. No wine pairing, but the sommelier guides you by the bottle
   or by the glass.
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
+  - name: Lekker
+    detail: nr. 74 in de Top 100
+    detail_en: No. 74 in the Top 100
+    year: "2027"
 ---

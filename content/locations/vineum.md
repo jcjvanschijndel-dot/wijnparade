@@ -31,4 +31,9 @@ description_en: >-
   with modern accents: lobster salad with Baeri caviar, ceviche of young
   mackerel, grilled entrecôte with béarnaise. All dishes also come in half
   portions.
+awards:
+  - name: Michelin
+    detail: Bib Gourmand
+    detail_en: Bib Gourmand
+    year: "2026"
 ---

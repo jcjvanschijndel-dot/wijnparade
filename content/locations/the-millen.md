@@ -33,4 +33,9 @@ description_en: >-
   away if you have dietary requirements or preferences. Regulars know a hidden
   secret: ask the sommelier about cheese pairings with sweet Portuguese dessert
   wines. They're not on the menu, but they're always there.
+awards:
+  - name: Michelin
+    detail: 1 ster
+    detail_en: 1 star
+    year: "2026"
 ---
