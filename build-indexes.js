@@ -1947,6 +1947,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const src = fs.readFileSync(path.join(__dirname, 'wijnkaart.html'), 'utf8');
     const html = swap(src, [
       ['<html lang="nl">', '<html lang="en">'],
+      [/\n\s*<meta name="description" content="[^"]*">/, ''],
       ['<link rel="canonical" href="https://wijn-parade.nl/wijnkaart">', enHead('/wijnkaart', '/en/wine-map') +
         '\n    <meta name="description" content="Map of the best wineries, wine bars, wine shops and wine restaurants in Europe, personally selected by de_wijnparade.">'],
       ['<title>Wijnkaart | de_wijnparade</title>', '<title>Wine map of Europe: wineries, wine bars and restaurants | de_wijnparade</title>'],
@@ -2541,4 +2542,49 @@ try {
   }
 } catch (e) {
   console.log('  ⚠️  kon styles.css niet inline zetten:', e.message);
+}
+
+// ============================================================
+// TITELS: maximaal 70 tekens (Bing en Google kappen langere titels af)
+// Volgorde: met " | de_wijnparade" → zonder → kortere varianten → afkappen op een heel woord.
+// ============================================================
+try {
+  const MAX = 70;
+  const fitTitle = t => {
+    const S = ' | de_wijnparade';
+    const base = t.endsWith(S) ? t.slice(0, -S.length) : t;
+    const tries = [base + S, base,
+      base.replace(': tips voor ', ': '),
+      base.replace(' wine travel guide: ', ' wine guide: ').replace(': wineries, wine bars and restaurants', ': wineries and wine bars'),
+      base.replace(': tips voor ', ': ').replace(': wijnhuizen, wijnbars en restaurants', ': wijnhuizen en wijnbars'),
+      base.includes(':') ? base.split(':')[0] : '',
+      / – [^|]* in /.test(base) ? base.replace(/ in [^–|]+$/, '') : ''];
+    for (const x of tries) if (x && x.length <= MAX) return x;
+    const cut = base.slice(0, MAX - 1);
+    return cut.slice(0, cut.lastIndexOf(' ')) + '…';
+  };
+  const unesc = s => s.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
+  const esc = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+  let changed = 0;
+  const walk = dir => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) { if (!['node_modules', 'admin', '.git', 'netlify', 'uploads', 'content'].includes(e.name)) walk(p); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      const html = fs.readFileSync(p, 'utf8');
+      const m = html.match(/<title>([\s\S]*?)<\/title>/);
+      if (!m) continue;
+      const old = unesc(m[1].trim());
+      const neu = fitTitle(old);
+      if (neu === old) continue;
+      let out = html.replace(m[0], `<title>${esc(neu)}</title>`);
+      out = out.replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${esc(neu)}$2`);
+      fs.writeFileSync(p, out);
+      changed++;
+    }
+  };
+  walk(__dirname);
+  console.log(`  ✂️  titels ingekort tot max. ${MAX} tekens: ${changed} pagina's`);
+} catch (e) {
+  console.log('  ⚠️  kon titels niet inkorten:', e.message);
 }
