@@ -111,6 +111,17 @@ collections:
       - {label: "Website", name: "website", widget: "string", required: false}
       - {label: "Tekst voor Google (optioneel; anders de eerste zinnen van de beschrijving, max. 160 tekens)", name: "meta_description", widget: "text", required: false}
       - {label: "Tekst voor Google Engels (optioneel)", name: "meta_description_en", widget: "text", required: false}
+      - label: "Onderscheidingen (optioneel)"
+        name: "awards"
+        widget: "list"
+        required: false
+        summary: "{{fields.name}} {{fields.detail}} {{fields.year}}"
+        hint: "Alleen overnemen van de bron zelf (zie .claude/skills/onderscheidingen). Wordt elk kwartaal automatisch gecontroleerd."
+        fields:
+          - {label: "Onderscheiding", name: "name", widget: "select", options: ["Michelin", "Gault&Millau", "Decanter", "Star Wine List", "James Suckling", "Lekker", "Robert Parker", "World's 50 Best", "Wine Spectator", "Gambero Rosso", "Falstaff", "Guía Peñín", "La Revue du Vin de France", "Raisin"]}
+          - {label: "Wat (bv. 1 ster, Bib Gourmand, 15/20, White Star, 98 punten)", name: "detail", widget: "string", required: false}
+          - {label: "Wat, in het Engels (optioneel; bv. 1 star)", name: "detail_en", widget: "string", required: false}
+          - {label: "Jaar (optioneel)", name: "year", widget: "string", required: false}
 
   # Artikelen (/artikelen/<slug>, Engels optioneel op /en/articles/<slug>)
   - name: "articles"
