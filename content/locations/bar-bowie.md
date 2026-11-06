@@ -5,23 +5,33 @@ address: Regentesselaan 24A, 2562 CS Den Haag
 lat: 52.07946279999999
 lng: 4.2827606
 description: >-
-  De sfeer doet denken aan een Parijse bistro: messing details, houten
-  elementen, een aantrekkelijk terras dat ook in de winter in gebruik is, en een
-  open bar waar je even makkelijk aan kunt schuiven voor een solo-glas als voor
-  een volledig diner.
+  Aan de Regentesselaan in Den Haag opende in oktober 2023 Bar Bowie, wijnbar en
+  bistro in één. De sfeer doet denken aan Parijs: messing en hout, een open bar
+  waar je net zo makkelijk aanschuift voor één glas als voor een heel diner, en
+  een terras dat ook in de winter open is.
 
 
-  Frans-Mediterraanse bistrokeuken, van ontbijt tot laat in de nacht: umami-rijke vegetarische gerechten, langoustines, houtduif, steak tartaar op zijn eigen manier. Seizoensgebonden en eenvoudig in zijn eerlijkheid. De wijnkaart heeft een uitgesproken focus op Frans — Bourgogne, Loire, Rhône — maar ook Oostenrijkse en Zuid-Afrikaanse etiketten krijgen hier een podium. Per glas een wisselende, zorgvuldig samengestelde selectie.
+  De keuken is Frans-mediterraan en seizoensgebonden, van ontbijt tot laat op de
+  avond: langoustines, houtduif, steak tartaar en veel vegetarische gerechten.
+  De wijnkaart draait om Frankrijk — Bourgogne, Loire en de Rhône — met
+  daarnaast wijnen uit Oostenrijk en Zuid-Afrika, en een wisselende selectie per
+  glas. Een aanrader voor een glas wijn of een bistrodiner in Den Haag.
 image: /uploads/bar-bowie.webp
 website: https://www.barbowie.nl/
 description_en: >-
-  The atmosphere is reminiscent of a Parisian bistro: brass details, wooden
-  elements, an inviting terrace that is also used in winter, and an open bar
-  where you can just as easily drop in for a solo glass as for a full dinner.
-  French-Mediterranean bistro cooking from breakfast until late at night:
-  umami-rich vegetarian dishes, langoustines, wood pigeon, steak tartare done
-  their own way. Seasonal and simple in its honesty. The wine list has a clear
-  focus on France (Burgundy, Loire, Rhône), but Austrian and South African
-  labels get a stage here too. A changing, carefully chosen selection by the
-  glass.
+  Bar Bowie opened on the Regentesselaan in The Hague in October 2023, a wine
+  bar and bistro in one. The atmosphere recalls Paris: brass and wood, an open
+  bar where you can drop in just as easily for one glass as for a full dinner,
+  and a terrace that stays open in winter.
+
+
+  The cooking is French-Mediterranean and seasonal, from breakfast until late in
+  the evening: langoustines, wood pigeon, steak tartare and plenty of vegetarian
+  dishes. The wine list centres on France (Burgundy, the Loire and the Rhône),
+  alongside wines from Austria and South Africa, with a changing selection by
+  the glass. Recommended for a glass of wine or a bistro dinner in The Hague.
+seo_title: "Bar Bowie Den Haag – wijnbar en bistro aan de Regentesselaan"
+seo_title_en: "Bar Bowie The Hague – wine bar and bistro on the Regentesselaan"
+meta_description: "Bar Bowie in Den Haag: wijnbar en bistro met Frans-mediterrane keuken van ontbijt tot laat, wijn uit Bourgogne, Loire en Rhône en veel per glas."
+meta_description_en: "Bar Bowie in The Hague: wine bar and bistro with French-Mediterranean food from breakfast to late, wines from Burgundy, Loire and Rhône, many by the glass."
 ---
