@@ -5,28 +5,34 @@ address: Wibautstraat 130, 1091 GP Amsterdam
 lat: 52.3546114
 lng: 4.911442
 description: >-
-  Opgericht door Freek Kattenberg — ook eigenaar van Libre Wines — samen met
-  Niels Vermeer en chef Janneau Torres Peralta, aan de Wibautstraat in Amsterdam
-  Oost. Bottleshop begon als concept, groeide door het succes en opende
-  uiteindelijk een vaste locatie. De naam zegt het al: de fles staat centraal.
-  De wijnkaart draagt bewust de waarschuwing "conventionally incorrect" — een
-  knipoog naar de radicale keuze voor naturelwijn boven alles.
+  In het Thonik-gebouw aan de Wibautstraat in Amsterdam-Oost zit Bottleshop, een
+  wijnbar die alleen natuurwijn schenkt. Achter de zaak staan onder meer Freek
+  Kattenberg, oprichter van wijnimporteur Sec Wines, Niels Vermeer en chef
+  Janneau Torres Peralta. De wijnkaart draagt bewust de waarschuwing
+  "conventionally incorrect".
 
 
-  De wijnkaart is indrukwekkend breed: naturelwijn in alle kleuren, aangevuld met sake, cider, bier, likeuren en Champagne. Naast biologische en biodynamische wijnen ook oranje wijnen die je in Amsterdam zelden tegenkomt. Chef Janneau Torres Peralta combineert Frans-Japanse en Mexicaans geïnspireerde kleine gerechten bij de wijn — farm-to-table, seizoensgebonden en verrassend complex voor een wijnbar.
+  Er staan meer dan 350 natuurwijnen op de kaart, in alle kleuren en ook
+  oranje wijn, aangevuld met sake, cider, bier en champagne. Daarbij eet je
+  kleine gerechten met Frans-Japanse invloeden, seizoensgebonden en met
+  producten van dichtbij. Een aanrader voor wie in Amsterdam natuurwijn wil
+  ontdekken.
 image: /uploads/bottleshop.webp
 website: https://www.bottleshopams.nl/
 description_en: >-
-  Founded by Freek Kattenberg, also the owner of Libre Wines, together with
-  Niels Vermeer and chef Janneau Torres Peralta, on the Wibautstraat in
-  Amsterdam East. Bottleshop started as a concept, grew thanks to its success
-  and eventually opened a permanent location. The name says it all: the bottle
-  takes centre stage. The wine list deliberately carries the warning
-  "conventionally incorrect", a nod to its radical choice of natural wine above
-  all else. The list is impressively broad: natural wine in every colour,
-  supplemented with sake, cider, beer, liqueurs and Champagne. Besides organic
-  and biodynamic wines there are also orange wines you rarely come across in
-  Amsterdam. Chef Janneau Torres Peralta pairs French-Japanese and
-  Mexican-inspired small dishes with the wine: farm-to-table, seasonal and
-  surprisingly complex for a wine bar.
+  In the Thonik building on the Wibautstraat in Amsterdam-Oost, Bottleshop is a
+  wine bar that pours natural wine only. Behind it are Freek Kattenberg, founder
+  of the wine importer Sec Wines, Niels Vermeer and chef Janneau Torres Peralta,
+  among others. The wine list deliberately carries the warning "conventionally
+  incorrect".
+
+
+  The list has more than 350 natural wines in every colour, including
+  orange wine, alongside sake, cider, beer and Champagne. With it you eat small
+  dishes with French-Japanese influences, seasonal and made with local produce.
+  Recommended for anyone who wants to explore natural wine in Amsterdam.
+seo_title: "Bottleshop Amsterdam – natuurwijnbar aan de Wibautstraat"
+seo_title_en: "Bottleshop Amsterdam – natural wine bar on the Wibautstraat"
+meta_description: "Bottleshop in Amsterdam-Oost: wijnbar met meer dan 350 natuurwijnen, oranje wijn, sake en cider, en kleine gerechten met Frans-Japanse invloeden."
+meta_description_en: "Bottleshop in Amsterdam-Oost: wine bar with more than 350 natural wines, orange wine, sake and cider, and small dishes with French-Japanese influences."
 ---

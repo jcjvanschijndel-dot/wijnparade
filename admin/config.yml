@@ -109,6 +109,8 @@ collections:
       - {label: "Beschrijving Engels (optioneel, voor de Engelse versie)", name: "description_en", widget: "text", required: false}
       - {label: "Hoofd Foto", name: "image", widget: "image", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
+      - {label: "Titel voor Google (optioneel; anders automatisch 'Naam – type in plaats', max. 60 tekens)", name: "seo_title", widget: "string", required: false}
+      - {label: "Titel voor Google Engels (optioneel)", name: "seo_title_en", widget: "string", required: false}
       - {label: "Tekst voor Google (optioneel; anders de eerste zinnen van de beschrijving, max. 160 tekens)", name: "meta_description", widget: "text", required: false}
       - {label: "Tekst voor Google Engels (optioneel)", name: "meta_description_en", widget: "text", required: false}
       - label: "Onderscheidingen (optioneel)"

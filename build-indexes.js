@@ -287,7 +287,8 @@ for (const file of locationFiles) {
     const pageUrl = `${SITE_URL}/locations/${id}`;
     const city = cityFromAddress(loc.address);
     const typeNoun = typeNouns[loc.type] || '';
-    const seoTitle = `${name}${typeNoun ? ` – ${typeNoun}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`;
+    const seoTitle = loc.seo_title ? `${String(loc.seo_title).trim()} | de_wijnparade`
+      : `${name}${typeNoun ? ` – ${typeNoun}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`;
 
     const schema = {
         '@context': 'https://schema.org', '@type': 'LocalBusiness',
@@ -1872,7 +1873,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
   `;
     const html = renderLocationPage({
       lang: 'en', loc: l, name, description, metaDesc: l.meta_description_en ? String(l.meta_description_en).replace(/\s+/g, ' ').trim() : metaFromText(description),
-      typeLabel: EN_LABEL[l.type] || '', city, seoTitle: `${name}${type ? ` – ${type}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`,
+      typeLabel: EN_LABEL[l.type] || '', city, seoTitle: l.seo_title_en ? `${String(l.seo_title_en).trim()} | de_wijnparade` : `${name}${type ? ` – ${type}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`,
       image, pageUrl, schema, logoHref: '/en/wine-map',
       headExtra: altLinks(nlPath, enPath), headerExtra: langMenu('en', nlPath, enPath),
       afterHeader: breadcrumb(r ? [HOME_EN, GUIDES_EN, { name: r.nameEn, path: r.enPath }, { name }]
