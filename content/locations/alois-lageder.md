@@ -23,4 +23,6 @@ description_en: >-
   sustainability, and the complex itself is a fine example of ecological
   building. Tastings and tours give insight into both the classic Alto Adige
   grapes and the biodynamic approach the house has practised for decades.
+taste_note: "Proeverijen en rondleidingen over de Alto Adige-druiven en de biodynamische aanpak"
+taste_note_en: "Tastings and tours about the Alto Adige grapes and the biodynamic approach"
 ---

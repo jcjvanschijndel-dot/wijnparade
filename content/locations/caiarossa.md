@@ -25,4 +25,6 @@ description_en: >-
   functional: natural light, optimal temperature control and minimal
   intervention in the winemaking. Various tastings and tours can be booked;
   you'll find them on the website.
+taste_note: "Verschillende proeverijen en rondleidingen, te boeken via de website"
+taste_note_en: "Several tastings and tours, bookable through the website"
 ---

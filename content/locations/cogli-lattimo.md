@@ -25,4 +25,6 @@ description_en: "A visit is like the estate itself: anything but commercial.
   Novello."
 image: /uploads/cogli-l-attimo-2.webp
 website: https://www.instagram.com/cogli_lattimo_winery/
+taste_note: "Proeven aan picknicktafels onder de bomen; reserveren via Instagram"
+taste_note_en: "Tastings at picnic tables under the trees; book via Instagram"
 ---

@@ -26,4 +26,6 @@ description_en: >-
   sales counter rather than a big commercial shop, which makes the wine tasting
   very relaxed. The castle can be visited Monday to Friday between 11.00-13.00
   and 15.00-17.00. Booking is strongly recommended, especially in high season.
+taste_note: "Bezoek aan het kasteel door de week, met proeverij"
+taste_note_en: "Weekday visits to the castle, with a tasting"
 ---

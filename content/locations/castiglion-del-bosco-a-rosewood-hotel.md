@@ -45,4 +45,6 @@ stay_type: hotel
 stay_note: "42 suites en 11 villa's op het landgoed"
 stay_note_en: "42 suites and 11 villas on the estate"
 booking_url: "https://www.booking.com/hotel/it/castiglion-del-bosco.html"
+taste_note: "Rondleiding door de Brunello-wijnmakerij en proefseminars"
+taste_note_en: "Tour of the Brunello winery and tasting seminars"
 ---

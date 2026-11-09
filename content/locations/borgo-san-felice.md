@@ -47,4 +47,6 @@ stay_type: hotel
 stay_note: "Relais & Châteaux in het middeleeuwse dorp, met 40 kamers en 23 suites"
 stay_note_en: "Relais & Châteaux in the medieval village, with 40 rooms and 23 suites"
 booking_url: "https://www.booking.com/hotel/it/borgo-san-felice.html"
+taste_note: "Proeverij in de moestuin onder de pergola, met hapjes van de chef"
+taste_note_en: "Tasting in the kitchen garden under the pergola, with bites from the chef"
 ---

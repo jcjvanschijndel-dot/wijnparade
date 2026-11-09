@@ -36,4 +36,6 @@ description_en: >-
   shop is open daily (except Sunday) and you can taste the full range without an
   appointment. From the shop and tasting room you have a panoramic view over the
   vineyards and Lake Kaltern, which for many is reason enough to stop.
+taste_note: "April tot oktober twee rondleidingen met proeverij van vijf wijnen, op reservering"
+taste_note_en: "April to October, two tours with a tasting of five wines, by reservation"
 ---

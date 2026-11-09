@@ -33,4 +33,6 @@ stay_type: hotel
 stay_note: "Kamers in de oude monnikencellen en appartementen op het landgoed"
 stay_note_en: "Rooms in the former monks' cells and apartments on the estate"
 booking_url: "https://www.booking.com/hotel/it/badia-a-coltibuono.html"
+taste_note: "Bezoek aan de kelder die via een gang uitkomt in het oude klooster"
+taste_note_en: "Visit to the cellar, reached through a passage into the old abbey"
 ---

@@ -39,4 +39,6 @@ description_en: >-
   which is fun if you also want to see the landscape (with views towards Monte
   Amiata and even the island of Montecristo). In summer (late July/August) there
   are special evening tours with dinner, cellar visit and tasting from 19.30.
+taste_note: "Kelderrondleiding met proeverij van drie wijnen in de architectuurkelder"
+taste_note_en: "Cellar tour with a tasting of three wines in the architect-designed winery"
 ---

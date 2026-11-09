@@ -32,4 +32,6 @@ description_en: >-
   della Spinetta. You can book several tastings through the website, from
   tasting 3 wines to a whole day visiting several locations with lunch. There
   are three locations, so check the website carefully before you go.
+taste_note: "Proeverijen via de website, van drie wijnen tot een hele dag met lunch"
+taste_note_en: "Tastings via the website, from three wines to a full day with lunch"
 ---

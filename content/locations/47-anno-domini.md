@@ -29,4 +29,6 @@ description_en: >-
   visit to the historic centre of Treviso, the prosecco hills of
   Conegliano-Valdobbiadene (a UNESCO World Heritage Site) and the Venetian
   lagoon, all less than an hour's drive away.
+taste_note: "Rondleidingen en proeverijen op reservering"
+taste_note_en: "Tours and tastings by reservation"
 ---

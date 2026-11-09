@@ -14,6 +14,8 @@ description: >-
 
 
   Omringd door het betoverende wijngaard-amfitheater van Martinenga, in het hart van de historische wijnmakerij en barrique-kelder, kunnen bezoekers kiezen uit meerdere proeverij-ervaringen, uitsluitend voor kleine groepen en alleen op afspraak.
+
+  Proeverijen boek je via de website; je proeft in de kruidentuin in het amfitheater van Martinenga.
 image: /uploads/marchese-di-gresy.webp
 website: https://www.marchesidigresy.com/
 description_en: >-
@@ -25,4 +27,8 @@ description_en: >-
   label. Surrounded by the enchanting vineyard amphitheatre of Martinenga, in
   the heart of the historic winery and barrique cellar, visitors can choose from
   several tasting experiences, for small groups only and by appointment only.
+
+  Tastings can be booked through the website; you taste in the aromatic garden in the Martinenga amphitheatre.
+taste_note: "Proeverij in de kruidentuin van Martinenga, te boeken via de website"
+taste_note_en: "Tasting in the Martinenga aromatic garden, bookable through the website"
 ---

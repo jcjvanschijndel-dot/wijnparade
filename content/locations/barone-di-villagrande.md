@@ -34,4 +34,6 @@ stay_type: hotel
 stay_note: "Wine resort met vier kamers en een infinity pool tussen de wijngaarden"
 stay_note_en: "Wine resort with four rooms and an infinity pool among the vines"
 booking_url: "https://www.booking.com/hotel/it/wine-resort-villagrande.html"
+taste_note: "Proeverijen en wijn-spijscombinaties met de vulkanische Etna-wijnen"
+taste_note_en: "Tastings and food pairings with the volcanic Etna wines"
 ---

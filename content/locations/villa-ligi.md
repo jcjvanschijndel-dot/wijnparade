@@ -21,4 +21,6 @@ description_en: >-
   km from the coast. The estate is tucked away in the hills and has run on
   passion for the craft and the land for generations. Visits by reservation
   only.
+taste_note: "Bezoek alleen op reservering"
+taste_note_en: "Visits by reservation only"
 ---

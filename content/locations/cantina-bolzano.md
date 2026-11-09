@@ -30,4 +30,6 @@ description_en: >-
   tasting you try a selection from several collections, often around fifteen to
   sixteen wines in small sips. Many of the wines have won awards from Gambero
   Rosso, Robert Parker, Decanter and The Wine Hunter, among others.
+taste_note: "Rondleiding van de druivenontvangst tot de kelder, met proeverij"
+taste_note_en: "Tour from grape reception to the cellar, with a tasting"
 ---

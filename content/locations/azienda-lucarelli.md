@@ -24,4 +24,6 @@ description_en: >-
   directly via the website or by phone. The area around Cartoceto is also known
   for its own olive oil (Cartoceto DOP), one of the few olive oil DOPs in the
   Marche: a nice reason to combine a tasting of wine and oil.
+taste_note: "Proeverij en rondleiding door wijngaard en kelder, vaak met Lucarelli zelf"
+taste_note_en: "Tasting and tour of the vineyard and cellar, often with Lucarelli himself"
 ---

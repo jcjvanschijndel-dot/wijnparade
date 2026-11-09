@@ -23,4 +23,6 @@ description_en: >-
   sculpture park, or go to the estate's Enoteca purely for the wine. Authentic,
   affordable dishes such as pasta with wild boar sauce or chicken with black
   olives in wine sauce.
+taste_note: "Wijntour en proeverij, lunch in de villa, het beeldenpark en de enoteca"
+taste_note_en: "Wine tour and tasting, lunch at the villa, the sculpture park and the enoteca"
 ---

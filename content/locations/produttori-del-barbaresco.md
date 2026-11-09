@@ -34,4 +34,6 @@ description_en: >-
   is freely accessible, with knowledgeable and friendly staff, and is the better
   option compared with the actual visitor office. A tasting of the standard
   Barbaresco is almost always possible.
+taste_note: "Proeverij van de Barbaresco bijna altijd mogelijk"
+taste_note_en: "Tasting of the Barbaresco almost always possible"
 ---

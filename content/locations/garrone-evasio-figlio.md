@@ -28,4 +28,6 @@ description_en: >-
   a tasting of 3 wines, a more extensive version with 5 wines including a
   comparative Ruchè tasting, and a playful, educational tour devoted to Ruchè,
   with a small crossword about the character of the grape.
+taste_note: "Rondleiding met de producent zelf, afgesloten met een proeverij"
+taste_note_en: "Tour with the producer himself, ending with a tasting"
 ---

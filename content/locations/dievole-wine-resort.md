@@ -44,4 +44,6 @@ stay_type: hotel
 stay_note: "Wine resort met 28 kamers in gebouwen uit de 16e eeuw"
 stay_note_en: "Wine resort with 28 rooms in 16th-century buildings"
 booking_url: "https://www.booking.com/hotel/it/wine-resort-dievole.html"
+taste_note: "Grand Tour langs wijngaarden en kelder, met proeverij van de topwijnen"
+taste_note_en: "Grand Tour of the vineyards and cellar, with a tasting of the top wines"
 ---

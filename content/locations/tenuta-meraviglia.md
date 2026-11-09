@@ -25,4 +25,6 @@ description_en: >-
   In 2025 the new winery opened, carved into an old quarry, with glass walls and a terrace above the vineyards. Tours start at the Le Colonne enoteca: through the barrel cellar, by car past the vineyards and finally a tasting at a viewpoint. Book at least a day ahead. Recommended on a wine trip through Bolgheri.
 image: /uploads/tenuta-meraviglia.webp
 website: https://tenutalecolonne.com/
+taste_note: "Rondleiding door de vatenkelder en per auto door de wijngaarden, met proeverij op een uitzichtpunt; reserveren vooraf"
+taste_note_en: "Tour of the barrel cellar and by car through the vineyards, with a tasting at a viewpoint; book ahead"
 ---

@@ -34,4 +34,6 @@ description_en: >-
   vintage bottles going back to 1964. The visit ends with a tasting of five of
   the house's top wines, served with Kaiserspeck, an artisan bacon speciality
   once served to imperial guests.
+taste_note: "Binnenlopen voor een proeverij in de vinotheek, of een rondleiding met proeverij"
+taste_note_en: "Walk in for a tasting at the wine shop, or a guided tour with tasting"
 ---

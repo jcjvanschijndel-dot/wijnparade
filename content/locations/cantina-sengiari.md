@@ -38,4 +38,6 @@ description_en: >-
   (19.30-22.00), Saturday lunchtime (12.30-14.00) and evening (19.30-22.00), and
   Sunday lunchtime (12.30-14.00). Reservations are required for the restaurant:
   call or use the online form at sengiari.it.
+taste_note: "Proeverij met zicht op de barriquekelder en over de Colli Euganei"
+taste_note_en: "Tasting with a view into the barrel cellar and over the Colli Euganei"
 ---

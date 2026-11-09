@@ -14,6 +14,8 @@ description: >-
 
 
   Barolo Cerretta, Barolo Vigna Rionda, Barolo Serra — drie van de meest gerespecteerde cru's van Serralunga. De wijnen zijn krachtig, tannineus en vragen geduld — maar de beloning is evenredig. Naast Barolo ook Barbaresco en Moscato d'Asti.
+
+  De cantina ontvangt bezoekers van maandag tot vrijdag voor rondleidingen en proeverijen.
 image: /uploads/palladino.webp
 website: https://www.palladinovini.com/
 description_en: >-
@@ -26,4 +28,8 @@ description_en: >-
   most respected crus in Serralunga. The wines are powerful and tannic and ask
   for patience, but the reward is in proportion. Besides Barolo, also Barbaresco
   and Moscato d'Asti.
+
+  The winery welcomes visitors Monday to Friday for tours and tastings.
+taste_note: "Rondleiding en proeverij, maandag tot vrijdag"
+taste_note_en: "Tour and tasting, Monday to Friday"
 ---
