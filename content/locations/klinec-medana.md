@@ -27,6 +27,4 @@ description_en: >-
   the region.
 
   The Ošterija is open on Monday (12.00–16.00), Friday (18.00–22.00), Saturday (12.00–16.00 and 18.00–22.00) and Sunday (12.00–16.00); it is closed Tuesday to Thursday.
-taste_note: "De eigen wijnen drink je in de Ošterija, open maandag en vrijdag tot en met zondag"
-taste_note_en: "Taste the house wines at the Ošterija, open Monday and Friday to Sunday"
 ---
