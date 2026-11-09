@@ -1,6 +1,6 @@
 ---
 name: Argos
-type: wijnhuis
+type: restaurant
 address: "Tekelli, Kayabaş Sk. No: 23, 50240 Uçhisar/Nevşehir Merkez/Nevşehir, Turkije"
 lat: 38.6295769
 lng: 34.8067524
