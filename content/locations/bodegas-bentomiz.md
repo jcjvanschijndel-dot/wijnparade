@@ -33,4 +33,6 @@ description_en: >-
   with workshops and food and wine pairings available. In summer the bodega also
   hosts "Mountain Wine & Music" evenings. You can stay the night right next to
   the vineyard.
+taste_note: "Rondleidingen door bodega en wijngaard, ook workshops en wijn-spijscombinaties"
+taste_note_en: "Tours of the bodega and vineyard, plus workshops and food pairings"
 ---

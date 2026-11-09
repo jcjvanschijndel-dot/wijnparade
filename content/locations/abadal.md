@@ -30,4 +30,6 @@ description_en: >-
   for anyone who wants to discover Catalan wine beyond the Penedès.
 image: /uploads/abadal.webp
 website: https://abadal.net/
+taste_note: "Rondleiding vanaf de middeleeuwse kelder van Masia Roqueta, met een klein wijnmuseum en proeverij"
+taste_note_en: "Tour starting at the medieval cellar of Masia Roqueta, with a small wine museum and a tasting"
 ---

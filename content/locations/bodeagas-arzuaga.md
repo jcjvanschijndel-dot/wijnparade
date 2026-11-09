@@ -46,4 +46,6 @@ description_en: >-
 stay_type: hotel
 stay_note: "Hotel & Spa Arzuaga tussen de wijngaarden, met wijnspa"
 stay_note_en: "Hotel & Spa Arzuaga among the vineyards, with a wine spa"
+taste_note: "Rondleidingen door de kelders en de wijngaarden, van oogst tot botteling"
+taste_note_en: "Tours of the cellars and vineyards, from harvest to bottling"
 ---

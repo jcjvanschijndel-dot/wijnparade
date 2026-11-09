@@ -29,4 +29,6 @@ description_en: >-
   reserva (basic package, €10) to five special wines (€25), a tasting of all the
   single-varietal wines (Tempranillo, Garnacha, Mazuelo, Graciano), an organic
   package from the Carravalseca range, or lunch in the historic building itself.
+taste_note: "Rondleiding van 90 minuten langs de in de rots uitgehakte tanks en de ondergrondse kelders, met proeverij"
+taste_note_en: "90-minute tour past the tanks carved into the rock and the underground cellars, with a tasting"
 ---

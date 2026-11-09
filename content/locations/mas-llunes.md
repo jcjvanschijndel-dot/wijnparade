@@ -34,4 +34,6 @@ description_en: >-
   surrounding the estate, a unique combination of winegrowing and local history.
   An organic vineyard tour along the Albera mountain range is also possible,
   with an explanation of biodynamic winegrowing and the lunar calendar system.
+taste_note: "Zintuiglijke proeverij met muziek, licht en beelden, en een historische wandeling langs bunkers"
+taste_note_en: "Sensory tasting with music, light and images, and a historic walk past Civil War bunkers"
 ---

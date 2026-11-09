@@ -22,4 +22,6 @@ description_en: >-
   the manor house, the winery, the vineyards and the outdoor event spaces. You
   taste at least three wines and two aguardientes (spirits distilled from
   Albariño). Contact the winery by email for group visits.
+taste_note: "Rondleiding langs het landgoed en de wijnmakerij, met proeverij; maandag tot vrijdag op afspraak"
+taste_note_en: "Tour of the estate and winery, with a tasting; Monday to Friday by appointment"
 ---

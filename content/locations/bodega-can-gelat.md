@@ -31,4 +31,6 @@ description_en: >-
 stay_type: vakantiewoning
 stay_note: "Twee villa's met eigen zwembad op het landgoed"
 stay_note_en: "Two villas with private pools on the estate"
+taste_note: "Rondleiding door de biologische wijngaard, met proeverij tussen de wijnstokken of in de proefruimte"
+taste_note_en: "Tour of the organic vineyard, with a tasting among the vines or in the tasting room"
 ---

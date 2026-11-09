@@ -12,6 +12,8 @@ description: >-
 
 
   Het absolute hoogtepunt: twee enorme tunnels, 125 meter lang en 15 meter hoog, uitgehouwen in het rotsgesteente van de berg, waarin de vaten staan opgeslagen.
+
+  De bodega uit 2004, met kelders die in de heuvel zijn uitgegraven, is te bezoeken; reserveren telefonisch.
 image: /uploads/vina-real.jpg
 website: https://cvne.com/en/
 description_en: >-
@@ -20,4 +22,8 @@ description_en: >-
   Margaux and Château Lafite-Rothschild. Construction took from 1997 to 2004.
   The absolute highlight: two enormous tunnels, 125 metres long and 15 metres
   high, carved into the rock of the hill, where the barrels are stored.
+
+  The 2004 winery, with cellars dug into the hill, can be visited; book by phone.
+taste_note: "Bezoek aan de bodega met kelders in de heuvel; telefonisch reserveren"
+taste_note_en: "Visit to the winery with cellars dug into the hill; book by phone"
 ---

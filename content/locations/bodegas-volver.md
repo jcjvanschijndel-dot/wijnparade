@@ -23,4 +23,6 @@ description_en: >-
   old, no irrigation, pure rainwater. Visits are possible Tuesday to Saturday
   from 11.00 to 13.30, including a vineyard visit, cellar tour, tasting and a
   gastronomic tasting with local produce. Harvest activities in season too.
+taste_note: "Dinsdag tot zaterdag: wijngaard, kelder en proeverij met lokale producten"
+taste_note_en: "Tuesday to Saturday: vineyard, cellar and tasting with local products"
 ---

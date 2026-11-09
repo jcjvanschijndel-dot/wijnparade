@@ -35,4 +35,6 @@ stay_type: hotel
 stay_note: "Bolet Casa Modernista: het familiehuis uit 1911, nu een hotel met vijf kamers"
 stay_note_en: "Bolet Casa Modernista: the 1911 family house, now a hotel with five rooms"
 booking_url: "https://www.booking.com/hotel/es/bolet-casa-modernista.html"
+taste_note: "Bezoek aan de masia en het modernistische huis, met proeverij van drie wijnen of cava's"
+taste_note_en: "Visit to the masia and the modernist house, with a tasting of three wines or cavas"
 ---

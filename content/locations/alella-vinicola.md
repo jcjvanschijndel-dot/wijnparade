@@ -14,6 +14,8 @@ description: >-
   Marfil is het bekendste merk, en de pansa blanca is de wijn waar de streek
   om draait. Ook de zoete Marfil Generós Dolç Solera wordt hoog gewaardeerd.
   Een mooi adres om de kleine DO Alella te ontdekken, vlak bij Barcelona.
+
+  Er is een korte proeverij van vier wijnen in de bodega, of een wandeling van tweeënhalf uur door twee wijngaarden met een proeverij onder een eik; reserveren vooraf.
 description_en: >-
   In Alella, about 15 kilometres north of Barcelona, 54 winegrowers founded
   the Alella Vinícola cooperative in 1906. Architect Jeroni Martorell, a
@@ -26,6 +28,10 @@ description_en: >-
   Marfil is the best-known brand, and pansa blanca is the wine the region
   revolves around. The sweet Marfil Generós Dolç Solera is also highly rated.
   A lovely place to discover the small DO Alella, close to Barcelona.
+
+  There is a short tasting of four wines at the winery, or a two-and-a-half-hour walk through two vineyards with a tasting under an oak tree; book ahead.
 image: /uploads/alella-vinícola.webp
 website: https://alellavinicola.com/
+taste_note: "Proeverij van vier wijnen in de bodega, of een wandeling door de wijngaarden met proeverij onder een eik"
+taste_note_en: "Tasting of four wines at the winery, or a vineyard walk with a tasting under an oak tree"
 ---

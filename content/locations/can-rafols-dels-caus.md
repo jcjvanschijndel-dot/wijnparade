@@ -33,4 +33,6 @@ description_en: >-
   the finest vineyards. Recommended for lovers of exceptional xarel·lo.
 image: /uploads/can-ràfols-dels-caus.webp
 website: https://canrafols.com/
+taste_note: "Bezoek met ontbijt in de boerderij, met een proeverij van drie wijnen of per 4x4 door de wijngaarden"
+taste_note_en: "Visit with breakfast at the farmhouse, a tasting of three wines or a 4x4 tour of the vineyards"
 ---

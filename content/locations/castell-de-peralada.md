@@ -26,4 +26,6 @@ stay_type: hotel
 stay_note: "Hotel Peralada Wine Spa & Golf, met 62 kamers"
 stay_note_en: "Hotel Peralada Wine Spa & Golf, with 62 rooms"
 booking_url: "https://www.booking.com/hotel/es/peralada-wine-spa-golf.html"
+taste_note: "Verschillende proeverijen en rondleidingen bij kasteel en wijnmakerij"
+taste_note_en: "Several tastings and tours at the castle and winery"
 ---

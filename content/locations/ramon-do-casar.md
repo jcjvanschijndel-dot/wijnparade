@@ -19,4 +19,6 @@ description_en: >-
   tours by appointment, including a tasting of the Ribeiro wines with an
   explanation of the grapes and the terroir. The bodega is in Castrelo de Miño,
   close to the Miño river: a lovely base if you want to explore the area too.
+taste_note: "Bezoek en rondleiding op afspraak, met proeverij van de Ribeiro-wijnen"
+taste_note_en: "Visit and tour by appointment, with a tasting of the Ribeiro wines"
 ---

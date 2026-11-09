@@ -30,4 +30,6 @@ description_en: >-
   about 30 kilometres from Barcelona.
 image: /uploads/parés-baltà.webp
 website: https://paresbalta.com/
+taste_note: "Bezoek van twee uur langs wijngaarden en kelders, met proeverij en olijfolie; reserveren nodig"
+taste_note_en: "Two-hour visit through the vineyards and cellars, with a tasting and olive oil; booking required"
 ---

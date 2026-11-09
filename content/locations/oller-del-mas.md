@@ -35,4 +35,6 @@ website: https://ollerdelmas.com/
 stay_type: hotel
 stay_note: "Les Cabanes: hutten tussen de bomen op het landgoed"
 stay_note_en: "Les Cabanes: cabins among the trees on the estate"
+taste_note: "Rondleiding door kasteel, kelder en wijngaarden, met uitzicht op Montserrat vanaf de toren"
+taste_note_en: "Tour of the castle, cellar and vineyards, with a view of Montserrat from the tower"
 ---

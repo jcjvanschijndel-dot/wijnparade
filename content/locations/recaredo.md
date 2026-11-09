@@ -33,4 +33,6 @@ description_en: >-
   biodynamic walk through the vineyards. Book in advance.
 image: /uploads/recaredo.webp
 website: https://www.recaredo.com/
+taste_note: "Van een kennismaking tot een privébezoek met degorgeren met de hand of een biodynamische wandeling; reserveer vooraf"
+taste_note_en: "From an introduction to a private visit with hand disgorging or a biodynamic walk; book ahead"
 ---

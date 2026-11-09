@@ -32,4 +32,6 @@ description_en: >-
   private dinners on the estate for groups on request. In summer there are
   exclusive Wine & Dine evenings with a five-course menu, wine pairing and live
   music.
+taste_note: "Proeverij van vier wijnen met tapas, of een wandeling door de wijngaard met uitzicht op zee"
+taste_note_en: "Tasting of four wines with tapas, or a vineyard walk with sea views"
 ---

@@ -26,4 +26,6 @@ description_en: >-
   A walk through the vineyards reveals the steep slopes where the vines grow in this unique corner of the Axarquía. Guided tours available for groups of 4 to 60 people, by prior reservation.
 image: /uploads/jorge-ordonez.webp
 website: https://jorgeordonez.es/
+taste_note: "Rondleidingen door de steile wijngaarden voor groepen van 4 tot 60 personen, op reservering"
+taste_note_en: "Tours of the steep vineyards for groups of 4 to 60 people, by reservation"
 ---

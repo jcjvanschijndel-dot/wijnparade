@@ -19,4 +19,6 @@ description_en: >-
   evenings of poetry, music and astronomy in the vineyards. The wine bar is open
   daily: you can drop in for a glass with home-made cheeses and charcuterie of
   their own production. Tours by appointment.
+taste_note: "Wijnbar dagelijks open met eigen kazen en vleeswaren; rondleidingen op afspraak"
+taste_note_en: "Wine bar open daily with their own cheeses and charcuterie; tours by appointment"
 ---

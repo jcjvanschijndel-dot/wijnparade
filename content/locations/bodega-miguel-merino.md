@@ -29,4 +29,6 @@ description_en: >-
   villages in La Rioja. The winery borders the village wall. Visits by
   appointment only: contact the winery by email or phone in advance. Miguel and
   Erika reply quickly by email.
+taste_note: "Persoonlijk bezoek met de familie, met proeverij"
+taste_note_en: "Personal visit with the family, with a tasting"
 ---
