@@ -23,6 +23,6 @@ locations:
   - duvin
   - la-passione
   - wijngoed-fromberg
-  - château-guiraud
+  - chateau-guiraud
   - mas-geli
 ---

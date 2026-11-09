@@ -15,7 +15,7 @@ locations:
   - bar-du-champagne
   - wijnbar-shiraz
   - vermeers-wijnkamer
-  - bar-françois
+  - bar-francois
   - barrica
   - bottleshop
   - clos
@@ -46,7 +46,7 @@ body_en: |-
 
   ## Oud-West: neighbourhood bars with character
 
-  In Oud-West, Frenchman Paco runs [Bar François](/en/locations/bar-françois) on his own, from the kitchen to the wine list, with southern French dishes that change every week. On the Wilhelminastraat, [Barrica](/en/locations/barrica) combines Spanish and international wines with tapas, on one of the nicest terraces in the area.
+  In Oud-West, Frenchman Paco runs [Bar François](/en/locations/bar-francois) on his own, from the kitchen to the wine list, with southern French dishes that change every week. On the Wilhelminastraat, [Barrica](/en/locations/barrica) combines Spanish and international wines with tapas, on one of the nicest terraces in the area.
 
   ![Bar François in Oud-West](/uploads/francois.jpg)
 
@@ -83,7 +83,7 @@ Aan de Prinsengracht zit in het souterrain van [Sinck](/locations/sinck) een wij
 
 ## Oud-West: buurtbars met karakter
 
-In Oud-West runt de Fransman Paco [Bar François](/locations/bar-françois) in zijn eentje, van de keuken tot de wijnkaart, met Zuid-Franse gerechten die wekelijks wisselen. Aan de Wilhelminastraat combineert [Barrica](/locations/barrica) Spaanse en internationale wijnen met tapas, op een van de fijnste terrassen van de buurt.
+In Oud-West runt de Fransman Paco [Bar François](/locations/bar-francois) in zijn eentje, van de keuken tot de wijnkaart, met Zuid-Franse gerechten die wekelijks wisselen. Aan de Wilhelminastraat combineert [Barrica](/locations/barrica) Spaanse en internationale wijnen met tapas, op een van de fijnste terrassen van de buurt.
 
 ![Bar François in Oud-West](/uploads/francois.jpg)
 

@@ -69,7 +69,7 @@ De stijl en opbouw hieronder zijn afgeleid van alle gepubliceerde teksten in `co
 
 ## 5. Het locatiebestand maken
 
-Bestandsnaam: `content/locations/<slug>.md`, waarbij de slug is wat het CMS ervan zou maken: de naam in kleine letters, spaties en leestekens vervangen door `-` (accenten blijven staan, bijv. `château-pape-clement`). Gebruik NFC-tekens in de bestandsnaam.
+Bestandsnaam: `content/locations/<slug>.md`, waarbij de slug is wat het CMS ervan zou maken: de naam in kleine letters, spaties en leestekens vervangen door `-` zonder accenten (bijv. `chateau-pape-clement` voor Château Pape Clément, `cafe-kiem` voor café Kiem). Alleen kleine letters, cijfers en `-`.
 
 Formaat (velden in deze volgorde, lange teksten als `>-`-blok):
 

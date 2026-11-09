@@ -10,14 +10,14 @@ locations:
   - 520
   - la-cave-a-champagne
   - loben
-  - sacré-bistro
+  - sacre-bistro
   - le-coq-rouge
   - le-wine-bar-by-le-vintage
   - la-vertu
   - le-clos
   - cave-du-13or
   - les-caves-du-forum
-  - le-recommandé
+  - le-recommande
   - diebolt-vallois
   - cyrill-banchet
   - gatinois
@@ -42,7 +42,7 @@ body_en: |-
 
   On the Avenue de Champagne, between the big houses, [#Brut](/en/locations/brut) pours only grower Champagne. A few minutes' walk away is [L'Atypique](/en/locations/latypique), a Champagne bar in an inner garden, with live music. At [Le 520](/en/locations/520) you can choose from 650 cuvées from more than 180 houses and vignerons. Every Saturday morning there is a free tasting with a winemaker.
 
-  To eat, book early at [La Cave à Champagne](/en/locations/la-cave-a-champagne), a family bistro with plenty of grower Champagne on the list. Ask for a table in the main room. [L'Oben](/en/locations/loben) is small, with room for 26 guests, and is often full of locals. [Sacré Bistro](/en/locations/sacré-bistro) pairs burgers with Champagne, as a stop between two cellar visits.
+  To eat, book early at [La Cave à Champagne](/en/locations/la-cave-a-champagne), a family bistro with plenty of grower Champagne on the list. Ask for a table in the main room. [L'Oben](/en/locations/loben) is small, with room for 26 guests, and is often full of locals. [Sacré Bistro](/en/locations/sacre-bistro) pairs burgers with Champagne, as a stop between two cellar visits.
 
   ![#Brut on the Avenue de Champagne](/uploads/brutepernay.webp)
 
@@ -54,7 +54,7 @@ body_en: |-
 
   ## Visiting the growers
 
-  In the Côte des Blancs, [Diebolt-Vallois](/en/locations/diebolt-vallois) in Cramant makes Blanc de Blancs from vines planted in 1950. In Chouilly, [Cyrill Banchet](/en/locations/cyrill-banchet) makes Chardonnay on grand cru chalk. In Avize, at [Le Recommandé](/en/locations/le-recommandé), you can choose from more than 400 Champagnes from small growers of the Côte des Blancs, in the village where they are made.
+  In the Côte des Blancs, [Diebolt-Vallois](/en/locations/diebolt-vallois) in Cramant makes Blanc de Blancs from vines planted in 1950. In Chouilly, [Cyrill Banchet](/en/locations/cyrill-banchet) makes Chardonnay on grand cru chalk. In Avize, at [Le Recommandé](/en/locations/le-recommande), you can choose from more than 400 Champagnes from small growers of the Côte des Blancs, in the village where they are made.
 
   On the Montagne de Reims, [Gatinois](/en/locations/gatinois) in Aÿ makes only grand cru, 90% Pinot Noir, around 50,000 bottles a year. [Egly-Ouriet](/en/locations/champagne-egly-ouriet) in Ambonnay ages its Champagne for three to four years, much longer than most makers. [Champagne Gardet](/en/locations/champagne-gardet) in Chigny-les-Roses is a small house with several tastings. [Roger Coulon](/en/locations/roger-coulon) in Vrigny works organically, without filtration, with the eighth and ninth generations.
 
@@ -75,7 +75,7 @@ Er zijn drie belangrijke gebieden. Op de **Montagne de Reims**, tussen Reims en 
 
 Aan de Avenue de Champagne, tussen de grote huizen, schenkt [#Brut](/locations/brut) alleen champagne van growers. Een paar minuten lopen verderop zit [L'Atypique](/locations/latypique), een champagnebar in een binnentuin, met livemuziek. Bij [Le 520](/locations/520) kun je kiezen uit 650 cuvées van meer dan 180 huizen en vignerons. Elke zaterdagochtend is er een gratis proeverij met een wijnmaker.
 
-Om te eten reserveer je op tijd bij [La Cave à Champagne](/locations/la-cave-a-champagne), een familiebistro met veel champagne van growers op de kaart. Vraag om een tafel in het hoofdgedeelte. [L'Oben](/locations/loben) is klein, met plek voor 26 gasten, en zit vaak vol met mensen uit de buurt. [Sacré Bistro](/locations/sacré-bistro) combineert burgers met champagne, als tussenstop tussen twee kelderbezoeken.
+Om te eten reserveer je op tijd bij [La Cave à Champagne](/locations/la-cave-a-champagne), een familiebistro met veel champagne van growers op de kaart. Vraag om een tafel in het hoofdgedeelte. [L'Oben](/locations/loben) is klein, met plek voor 26 gasten, en zit vaak vol met mensen uit de buurt. [Sacré Bistro](/locations/sacre-bistro) combineert burgers met champagne, als tussenstop tussen twee kelderbezoeken.
 
 ![#Brut aan de Avenue de Champagne](/uploads/brutepernay.webp)
 
@@ -87,7 +87,7 @@ Aan de voet van de kathedraal heeft [Cave du 13OR](/locations/cave-du-13or) een 
 
 ## Wijnhuizen bezoeken
 
-In de Côte des Blancs maakt [Diebolt-Vallois](/locations/diebolt-vallois) in Cramant blanc de blancs van stokken die in 1950 zijn geplant. In Chouilly maakt [Cyrill Banchet](/locations/cyrill-banchet) chardonnay op grand-cru-krijt. In Avize kun je bij [Le Recommandé](/locations/le-recommandé) kiezen uit meer dan 400 champagnes van kleine growers uit de Côte des Blancs, in het dorp waar ze gemaakt worden.
+In de Côte des Blancs maakt [Diebolt-Vallois](/locations/diebolt-vallois) in Cramant blanc de blancs van stokken die in 1950 zijn geplant. In Chouilly maakt [Cyrill Banchet](/locations/cyrill-banchet) chardonnay op grand-cru-krijt. In Avize kun je bij [Le Recommandé](/locations/le-recommande) kiezen uit meer dan 400 champagnes van kleine growers uit de Côte des Blancs, in het dorp waar ze gemaakt worden.
 
 Op de Montagne de Reims maakt [Gatinois](/locations/gatinois) in Aÿ alleen grand cru, voor 90% pinot noir, en zo'n 50.000 flessen per jaar. [Egly-Ouriet](/locations/champagne-egly-ouriet) in Ambonnay laat de champagne drie tot vier jaar rijpen, veel langer dan de meeste makers. [Champagne Gardet](/locations/champagne-gardet) in Chigny-les-Roses is een klein huis met meerdere proeverijen. [Roger Coulon](/locations/roger-coulon) in Vrigny werkt biologisch, zonder filtratie, met de achtste en negende generatie.
 

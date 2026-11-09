@@ -6,6 +6,12 @@ backend:
 media_folder: "uploads"
 public_folder: "/uploads"
 
+# Nieuwe bestandsnamen (en dus adressen) zonder accenten: "château" wordt "chateau"
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   # Homepage content
   - name: "homepage"

@@ -1,5 +1,5 @@
 ---
-name: Le Chai Bordin 1
+name: Le Chai Bordin Périgueux
 type: wijnwinkel
 address: 8 Rue de la Sagesse, 24000 Périgueux, Frankrijk
 lat: 45.1846738

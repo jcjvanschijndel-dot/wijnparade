@@ -22,7 +22,7 @@ wines:
 locations:
   - vineum
   - louise-petit-restaurant
-  - sacré-bistro
+  - sacre-bistro
   - le-coq-rouge
   - mas-roig
   - trattoria-il-leccio

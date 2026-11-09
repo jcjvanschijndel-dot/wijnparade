@@ -7,7 +7,7 @@ region: mosel
 locations:
   - kesselstatt
   - bagatelle
-  - maximin-grünhaus
+  - maximin-grunhaus
   - weingut-dr-loosen
   - weingut-dr-pauly-bergweiler
   - graacher-tor
@@ -25,7 +25,7 @@ body_en: |-
 
   ## Trier and the Ruwer
 
-  On the market square in Trier, looking out on the cathedral, [Kesselstatt](/en/locations/kesselstatt) has a Weinstube. You taste Riesling from famous vineyards of the Mosel, Saar and Ruwer side by side, such as Piesporter Goldtröpfchen and Bernkasteler Doctor. [Bagatelle](/en/locations/bagatelle) is right on the Mosel, with a terrace by the water and a list full of Riesling. Just outside Trier, on the Ruwer, lies [Maximin Grünhaus](/en/locations/maximin-grünhaus), where wine has been made for almost 2,000 years, first by the Romans and then by monks. Since 1882 the estate has belonged to the Von Schubert family.
+  On the market square in Trier, looking out on the cathedral, [Kesselstatt](/en/locations/kesselstatt) has a Weinstube. You taste Riesling from famous vineyards of the Mosel, Saar and Ruwer side by side, such as Piesporter Goldtröpfchen and Bernkasteler Doctor. [Bagatelle](/en/locations/bagatelle) is right on the Mosel, with a terrace by the water and a list full of Riesling. Just outside Trier, on the Ruwer, lies [Maximin Grünhaus](/en/locations/maximin-grunhaus), where wine has been made for almost 2,000 years, first by the Romans and then by monks. Since 1882 the estate has belonged to the Von Schubert family.
 
   ## Bernkastel-Kues
 
@@ -50,7 +50,7 @@ De beste wijngaarden liggen op zuidhellingen langs de rivier, waar het water en 
 
 ## Trier en de Ruwer
 
-Op het marktplein van Trier, met uitzicht op de Dom, heeft [Kesselstatt](/locations/kesselstatt) een Weinstube. Je proeft er riesling uit bekende wijngaarden van Moezel, Saar en Ruwer naast elkaar, zoals Piesporter Goldtröpfchen en Bernkasteler Doctor. [Bagatelle](/locations/bagatelle) ligt direct aan de Moezel, met een terras aan het water en een kaart vol riesling. Net buiten Trier, aan de Ruwer, ligt [Maximin Grünhaus](/locations/maximin-grünhaus), waar al bijna 2.000 jaar wijn wordt gemaakt, eerst door de Romeinen en daarna door monniken. Sinds 1882 is het landgoed van de familie Von Schubert.
+Op het marktplein van Trier, met uitzicht op de Dom, heeft [Kesselstatt](/locations/kesselstatt) een Weinstube. Je proeft er riesling uit bekende wijngaarden van Moezel, Saar en Ruwer naast elkaar, zoals Piesporter Goldtröpfchen en Bernkasteler Doctor. [Bagatelle](/locations/bagatelle) ligt direct aan de Moezel, met een terras aan het water en een kaart vol riesling. Net buiten Trier, aan de Ruwer, ligt [Maximin Grünhaus](/locations/maximin-grunhaus), waar al bijna 2.000 jaar wijn wordt gemaakt, eerst door de Romeinen en daarna door monniken. Sinds 1882 is het landgoed van de familie Von Schubert.
 
 ## Bernkastel-Kues
 

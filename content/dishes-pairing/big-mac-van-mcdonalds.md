@@ -12,6 +12,6 @@ wines:
   - name: Beaujolais
     stars: "1"
 locations:
-  - café-clicquot
-  - sacré-bistro
+  - cafe-clicquot
+  - sacre-bistro
 ---

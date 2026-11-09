@@ -21,7 +21,7 @@ wines:
     stars: "1"
 locations:
   - bistrot-neuf
-  - café-verward
+  - cafe-verward
   - merlet
   - cal-xim
   - bodeagas-arzuaga
