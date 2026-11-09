@@ -14,6 +14,8 @@ description: >-
   Velich ligt in Apetlon aan het Neusiedlersee, in het Burgenland in Oostenrijk.
   Bekend om zijn witte wijnen, en een aanrader voor wie Oostenrijkse wijn
   serieus neemt.
+
+  Je proeft de wijnen samen met wijnmaker Heinz Velich, die vertelt over zijn manier van wijnmaken, desgewenst naast wijnen uit de Bourgogne en champagne. Een proeverij duurt vanaf een uur.
 image: /uploads/velich.jpg
 website: https://www.velich.at/en/winery
 description_en: >-
@@ -24,8 +26,12 @@ description_en: >-
 
   Velich is in Apetlon on Lake Neusiedl, in Burgenland in Austria. Known for its
   white wines, and recommended for anyone who takes Austrian wine seriously.
+
+  You taste the wines with winemaker Heinz Velich, who explains his approach to winemaking, alongside wines from Burgundy and Champagne if you like. A tasting takes from one hour.
 stay_type: hotel
 stay_note: "Residenz Velich: 17 kamers met spa"
 stay_note_en: "Residenz Velich: 17 rooms with a spa"
 booking_url: "https://www.booking.com/hotel/at/residenz-velich.html"
+taste_note: "Proeverij met wijnmaker Heinz Velich, ook naast wijnen uit de Bourgogne en champagne; vanaf een uur"
+taste_note_en: "Tasting with winemaker Heinz Velich, also alongside wines from Burgundy and Champagne; from one hour"
 ---
