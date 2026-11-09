@@ -150,11 +150,11 @@ function cityFromAddress(addr) {
 const LOC_TEXT = {
   nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', awards: 'Onderscheidingen',
         stay: 'Overnachten', stayBooking: 'Bekijk beschikbaarheid op Booking.com', stayAirbnb: 'Bekijk op Airbnb',
-        stayWebsite: 'Bekijk de kamers op de website →',
+        stayWebsite: 'Bekijk de kamers op de website',
         stayDisclosure: 'Boek je via Booking.com, dan krijgt de_wijnparade een kleine vergoeding. Jij betaalt niets extra.' },
   en: { address: 'Address', about: 'About this location', website: 'Visit website →', awards: 'Awards',
         stay: 'Stay here', stayBooking: 'Check availability on Booking.com', stayAirbnb: 'View on Airbnb',
-        stayWebsite: 'See the rooms on the website →',
+        stayWebsite: 'See the rooms on the website',
         stayDisclosure: 'If you book through Booking.com, de_wijnparade receives a small commission at no extra cost to you.' },
 };
 // Overnachten (CMS-velden stay_type, stay_note, stay_note_en, booking_url, airbnb_url)
@@ -187,9 +187,9 @@ function winalistLink(url, sid) {
   return winalistTemplate.replace('{url}', encodeURIComponent(url)).replace('{sid}', encodeURIComponent(sid || ''));
 }
 const TASTE_TEXT = {
-  nl: { label: 'Proeverij', btn: 'Boek een proeverij op Winalist', site: 'Bekijk de proeverijen op de website →', website: 'Website',
+  nl: { label: 'Proeverij', btn: 'Boek een proeverij op Winalist', site: 'Bekijk de proeverijen op de website', website: 'Website',
         disclosure: 'Boek je via Winalist, dan krijgt de_wijnparade een kleine vergoeding. Jij betaalt niets extra.' },
-  en: { label: 'Tastings', btn: 'Book a tasting on Winalist', site: 'See the tastings on the website →', website: 'Website',
+  en: { label: 'Tastings', btn: 'Book a tasting on Winalist', site: 'See the tastings on the website', website: 'Website',
         disclosure: 'If you book through Winalist, de_wijnparade receives a small commission at no extra cost to you.' },
 };
 const siteUrl = loc => loc.website ? (String(loc.website).startsWith('http') ? String(loc.website).trim() : 'https://' + String(loc.website).trim()) : '';
@@ -206,7 +206,7 @@ const tasteBlock = (loc, lang, { disclosure = true } = {}) => {
   return `<div class="loc-stay loc-taste"><div class="loc-address-label">${t.label}</div>
       ${note ? `<p>${esc(note)}</p>` : ''}
       ${link ? `<div class="loc-stay-btns"><a href="${esc(link)}" target="_blank" rel="sponsored noopener" class="loc-stay-btn">${t.btn}</a></div>`
-             : site ? `<a href="${esc(site)}" target="_blank" rel="noopener" class="loc-stay-link">${t.site}</a>` : ''}
+             : site ? `<div class="loc-stay-btns"><a href="${esc(site)}" target="_blank" rel="noopener" class="loc-stay-btn">${t.site}</a></div>` : ''}
       ${disclosure && link && winalistTemplate ? `<p class="loc-stay-disclosure">${t.disclosure}</p>` : ''}</div>`;
 };
 // Opmaak van het vlak Overnachten (locatiepagina's en artikelen)
@@ -255,7 +255,7 @@ const stayBlock = (loc, lang, { disclosure = true } = {}) => {
   ].filter(Boolean).join('');
   return `<div class="loc-stay"><div class="loc-address-label">${t.stay}</div>
       <p><strong>${STAY_TYPES[loc.stay_type][lang]}</strong>${note ? ` · ${esc(note)}` : ''}</p>
-      ${btns ? `<div class="loc-stay-btns">${btns}</div>` : site ? `<a href="${esc(site)}" target="_blank" rel="noopener" class="loc-stay-link">${t.stayWebsite}</a>` : ''}
+      ${btns ? `<div class="loc-stay-btns">${btns}</div>` : site ? `<div class="loc-stay-btns"><a href="${esc(site)}" target="_blank" rel="noopener" class="loc-stay-btn">${t.stayWebsite}</a></div>` : ''}
       ${disclosure && booking && bookingTemplate ? `<p class="loc-stay-disclosure">${t.stayDisclosure}</p>` : ''}</div>`;
 };
 // Onderscheidingen (CMS-veld "awards"): [{ name, detail, detail_en, year }]
