@@ -23,4 +23,6 @@ description_en: >-
   region but were lost with the arrival of Beaujolais Nouveau. Visits and
   tastings are possible; booking in advance is recommended, especially in high
   season.
+taste_note: "Bezoek en proeverij; reserveren aanbevolen, zeker in het hoogseizoen"
+taste_note_en: "Visit and tasting; booking recommended, especially in high season"
 ---

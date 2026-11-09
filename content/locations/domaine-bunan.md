@@ -18,6 +18,8 @@ description: >-
 
 
   Via de website kun je verschillende tours en tastings boeken. 
+
+  Een wandeling langs de druivencollectie, de kelders en de wijnmakerij eindigt met een proeverij van de Bandol-wijnen; het domein is ook op zondag open.
 image: /uploads/bunan.webp
 website: https://bunan.com/en/home-page/
 description_en: >-
@@ -33,4 +35,8 @@ description_en: >-
   wines. All the grapes are harvested by hand. No chemical weed control, no
   synthetic treatments: everything is worked by hand. You can book various tours
   and tastings through the website.
+
+  A walk past the grape collection, cellars and winery ends with a tasting of the Bandol wines; the estate is also open on Sundays.
+taste_note: "Wandeling langs druivencollectie en kelders, met proeverij van de Bandol-wijnen; ook op zondag open"
+taste_note_en: "Walk past the grape collection and cellars, with a tasting of the Bandol wines; also open on Sundays"
 ---

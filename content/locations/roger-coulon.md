@@ -36,4 +36,6 @@ description_en: >-
   you want to stay longer, there's the Clos des Terres Soudées guest house,
   where antique furniture and eight generations of history fill the walls. In
   season, vineyard visits, themed workshops and harvest days are also possible.
+taste_note: "Rondleiding door kelders en pers met proeverij; in het seizoen ook wijngaardbezoeken"
+taste_note_en: "Tour of the cellars and press with a tasting; vineyard visits in season"
 ---

@@ -27,4 +27,6 @@ description_en: >-
   exhibition. VIP tour: a more in-depth visit to the winery and ageing cellars,
   followed by a private tasting including the exclusive Ombre de Lune in the VIP
   lounge.
+taste_note: "Klassieke rondleiding in de nieuwe wijnmakerij, met een tentoonstelling uit de films van Ridley Scott"
+taste_note_en: "Classic tour of the new winery, with an exhibition from Ridley Scott's films"
 ---

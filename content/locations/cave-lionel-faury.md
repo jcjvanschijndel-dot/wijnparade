@@ -44,4 +44,6 @@ description_en: >-
   and from 13.30 to 17.00; Tuesday and Thursday from 8.30 to 12.00 and from
   13.30 to 17.00; Wednesday and Friday from 8.30 to 12.00. Tastings are possible
   without an appointment, so just walk in.
+taste_note: "Proeven kan zonder afspraak: gewoon binnenlopen"
+taste_note_en: "Tastings without an appointment: just walk in"
 ---

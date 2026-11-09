@@ -38,4 +38,6 @@ description_en: >-
   with a basket of local charcuterie, cheeses and spreads plus a bottle of wine,
   for €49 per person. Visitors unanimously name this as the highlight. Tour +
   meal: a tasting of the wines followed by a meal on the estate.
+taste_note: "Klassieke rondleiding met drie Bandol-wijnen, of een jeeptocht met picknick boven de zee"
+taste_note_en: "Classic tour with three Bandol wines, or a jeep tour with a picnic above the sea"
 ---

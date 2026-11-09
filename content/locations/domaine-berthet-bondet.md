@@ -24,4 +24,6 @@ description_en: >-
   The vin jaune ages in a 16th-century cellar in the village, one of the most
   historic ageing cellars in the region. The caveau is open Monday to Friday by
   appointment, and Saturday from 10.00 to 12.00 and from 14.00 to 18.00.
+taste_note: "Caveau doordeweeks open op afspraak, zaterdag zonder afspraak"
+taste_note_en: "Tasting room open on weekdays by appointment, on Saturdays without"
 ---

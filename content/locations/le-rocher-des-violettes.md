@@ -20,4 +20,6 @@ description_en: >-
   Weisskopf receive visitors by appointment only in their cellar in Dierre. No
   showroom, no tour-operator feel: just a conversation about Montlouis, Chenin
   Blanc and the terroirs of the Loire with people who devote their lives to it.
+taste_note: "Bezoek alleen op afspraak"
+taste_note_en: "Visits by appointment only"
 ---

@@ -27,4 +27,6 @@ description_en: >-
   warm and the wines as sublime. Vincent or Robin receive you personally when
   they aren't out in the vineyard. A special touch: sometimes older vintages are
   poured too.
+taste_note: "Proeverij op het domein, soms met oude jaargangen"
+taste_note_en: "Tastings at the estate, sometimes including older vintages"
 ---

@@ -30,4 +30,6 @@ description_en: >-
   garden into a daily changing menu, with local farmers as suppliers and a view
   of the vineyards. Nicolas and Margaux work on their own: only 20 seats, open
   Monday to Friday from 11.30 to 14.00. Booking well in advance is essential.
+taste_note: "Proefruimte, botanische tuin en kurkentrekkersmuseum; reserveer ruim vooraf"
+taste_note_en: "Tasting room, botanical garden and corkscrew museum; book well ahead"
 ---

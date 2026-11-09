@@ -27,4 +27,6 @@ description_en: >-
   are concerts, exhibitions and themed evenings on the estate. The flagships are
   the Picpoul de Pinet Brechallume (citrus-fresh and mineral, with kumquat and
   ginger) and the Chant des Dolia range in white (Roussanne, full and generous).
+taste_note: "Het hele jaar proeverijen en rondleidingen"
+taste_note_en: "Tastings and guided tours all year round"
 ---

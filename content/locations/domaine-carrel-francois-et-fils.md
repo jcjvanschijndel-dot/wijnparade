@@ -15,6 +15,8 @@ description: >-
 
 
   Verkoop direct aan het domein en levering in heel Europa. Open maandag t/m zaterdag van 9.00-12.00 en 14.00-18.00 uur. Gesloten op zondag.
+
+  In de caveau proef je de wijnen, eventueel met een plank lokale kazen, en er zijn rondleidingen over het domein.
 image: /uploads/carrel.webp
 website: https://www.domaine-carrel-francois-et-fils.fr/
 description_en: >-
@@ -26,4 +28,8 @@ description_en: >-
   the better white Savoie wines you can drink. Direct sales at the domaine and
   delivery throughout Europe. Open Monday to Saturday from 9.00-12.00 and
   14.00-18.00. Closed on Sundays.
+
+  At the cellar door you can taste the wines, with a board of local cheeses if you like, and there are tours of the estate.
+taste_note: "Proeven in de caveau, met een plank lokale kazen; ook rondleidingen"
+taste_note_en: "Tastings at the cellar door, with a board of local cheeses; tours available"
 ---

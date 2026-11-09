@@ -48,4 +48,6 @@ description_en: >-
   passing through. A lovely stop on a wine trip through southern Burgundy.
 image: /uploads/domaine-gaillard.webp
 website: https://www.domainegaillard.com/
+taste_note: "Proeven in de stenen proefkelder, ook rondleidingen door wijngaard en kelder, ook in het Engels"
+taste_note_en: "Tastings in the stone tasting cellar, plus tours of the vineyard and cellar, also in English"
 ---

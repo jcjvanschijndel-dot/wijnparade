@@ -30,4 +30,6 @@ description_en: >-
   outside on the terrace at tables in the garden. A tour takes you through the
   cellars, the press, the fermentation tanks and the remuage room, all fitted
   out with historic winemaking tools.
+taste_note: "Het hele jaar open zonder verplichte reservering; proeflokaal met uitzicht"
+taste_note_en: "Open all year without compulsory booking; tasting room with a view"
 ---

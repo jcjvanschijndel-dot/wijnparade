@@ -21,4 +21,6 @@ description_en: >-
   vignerons: informal tasting evenings in the garrigue atmosphere of the estate.
   In summer there are regular events. Opening hours are Monday to Friday from
   16.00 to 19.00 and Saturday from 10.00 to 13.00 and from 15.00 to 19.00.
+taste_note: "Het hele jaar proeverijen, wijngaard- en kelderbezoeken en apéros vignerons"
+taste_note_en: "Tastings, vineyard and cellar visits and apéros vignerons all year round"
 ---

@@ -28,4 +28,6 @@ description_en: >-
   (Savigny-les-Beaune, Rully, Meursault) and 3 reds (Santenay, Beaune 1er Cru,
   Nuits-Saint-Georges 1er Cru). Privilege Visit: a private tour with a
   sommelier, 7 wines and a bottle to take home as a gift.
+taste_note: "Zelfstandige rondleiding met audiogids door de kelders, met proeverij"
+taste_note_en: "Self-guided tour of the cellars with an audio guide, with a tasting"
 ---

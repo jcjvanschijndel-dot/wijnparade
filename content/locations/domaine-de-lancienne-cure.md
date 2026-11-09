@@ -25,4 +25,6 @@ description_en: >-
   one of the best in the appellation: made from botrytis-affected Sémillon and
   Muscadelle, harvested in several selective passes through the vineyard, and
   aged in new oak barrels.
+taste_note: "Rondleiding langs de percelen en de kelder; reserveren aanbevolen"
+taste_note_en: "Tour of the plots and the cellar; booking recommended"
 ---

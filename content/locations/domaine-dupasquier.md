@@ -13,6 +13,8 @@ description: >-
 
 
   Het absolute hoogtepunt is de Roussette de Savoie Marestel — 100% Altesse uit een steile cru op klei-kalk bodems, zuidwestgericht, met 45 jaar oude wijnstokken, gerijpt in foudres en vervolgens nog eens 18 maanden op fles. Een wijn die twintig jaar en meer kan rijpen en internationaal wordt vergeleken met de grote witte Bourgognes. 
+
+  In de kelder kun je proeven; in de zomer zijn er proeverijen in de wijngaard. Laat het domein vooraf weten wanneer je komt.
 image: /uploads/dupasquier.webp
 website: https://vinsdupasquier.fr/
 description_en: >-
@@ -25,4 +27,8 @@ description_en: >-
   aged in foudres and then for a further 18 months in bottle. A wine that can
   age for twenty years and more and is compared internationally with the great
   white Burgundies.
+
+  You can taste in the cellar; in summer there are tastings in the vineyard. Let the estate know beforehand when you are coming.
+taste_note: "Proeven in de kelder, in de zomer ook in de wijngaard; meld je vooraf"
+taste_note_en: "Tastings in the cellar, in summer also in the vineyard; let them know beforehand"
 ---

@@ -23,4 +23,6 @@ description_en: >-
   cellar followed by a tasting. Freely accessible for groups. There's also a
   picnic area. Open all year round, daily from 9.00 to 12.00 and from 15.00 to
   19.00.
+taste_note: "Rondleiding door wijngaard en kelder, gevolgd door een proeverij"
+taste_note_en: "Guided tour of the vineyard and cellar, followed by a tasting"
 ---

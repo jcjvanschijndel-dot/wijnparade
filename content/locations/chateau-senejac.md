@@ -34,4 +34,6 @@ stay_type: gastenkamers
 stay_note: "Gastenkamers in het château"
 stay_note_en: "Guest rooms in the château"
 booking_url: "https://www.booking.com/hotel/fr/chateau-senejac.html"
+taste_note: "Klassieke rondleiding met twee wijnen, of een uitgebreide met wijnen uit drie terroirs"
+taste_note_en: "Classic tour with two wines, or an extended one with wines from three terroirs"
 ---

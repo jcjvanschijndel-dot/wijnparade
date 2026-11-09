@@ -31,4 +31,6 @@ description_en: >-
 stay_type: vakantiewoning
 stay_note: "Loft van 250 m² boven de kelders, voor maximaal tien personen"
 stay_note_en: "250 m² loft above the cellars, for up to ten people"
+taste_note: "Binnenlopen voor een proeverij, maandag tot zaterdag; groepen op afspraak"
+taste_note_en: "Walk in for a tasting, Monday to Saturday; groups by appointment"
 ---

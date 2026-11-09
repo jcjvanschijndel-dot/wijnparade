@@ -41,4 +41,6 @@ description_en: >-
   by chef Fabien Ferré, one of the youngest chefs ever to hold three Michelin
   stars. Guests get special access to Château Lynch-Bages for tastings and
   tours. Pool, gym and sauna.
+taste_note: "Verschillende proefformules, van een introductie tot blenden; alleen op afspraak"
+taste_note_en: "Several tasting formats, from an introduction to blending; by appointment only"
 ---

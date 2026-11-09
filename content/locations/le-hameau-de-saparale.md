@@ -38,4 +38,6 @@ stay_type: hotel
 stay_note: "16 kamers en suites in het herenhuis en drie bergeries"
 stay_note_en: "16 rooms and suites in the manor house and three bergeries"
 booking_url: "https://www.booking.com/hotel/fr/le-hameau-de-saparale-sartene.html"
+taste_note: "Proef in de kelder vijf jaargangen en cuvées die je alleen hier kunt proeven"
+taste_note_en: "Taste five vintages in the cellar, plus cuvées you can only taste here"
 ---

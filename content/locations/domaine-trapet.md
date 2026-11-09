@@ -20,4 +20,6 @@ description_en: >-
   Don't expect a showroom or tasting pavilion: the domaine radiates the calm
   confidence of a house that has nothing to prove. You come here if you are
   serious about Burgundy, and then it is one of the finest visits you can make.
+taste_note: "Op afspraak, maximaal vier personen, met een Bourgondische maaltijd bij vijf cuvées"
+taste_note_en: "By appointment, up to four people, with a Burgundian meal and five cuvées"
 ---

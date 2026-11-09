@@ -14,6 +14,8 @@ description: >-
 
 
   De MCCCXL rosé is mijn persoonlijke favoriet. En niet in NL verkrijgbaar, dus de moeite waard om een doos te scoren.
+
+  De caveau ontvangt bezoekers het hele jaar zonder afspraak; een rondleiding door de kelders is op afspraak.
 image: /uploads/belieu.webp
 website: https://www.bertaud-belieu.com/fr/
 description_en: >-
@@ -26,4 +28,8 @@ description_en: >-
   beach clubs and hotels in Saint-Tropez. The MCCCXL rosé is my personal
   favourite, and it isn't available in the Netherlands, so it's worth picking up
   a case.
+
+  The tasting room welcomes visitors all year without an appointment; a cellar tour is by appointment.
+taste_note: "Proeven in de caveau zonder afspraak; kelderrondleiding op afspraak"
+taste_note_en: "Tastings in the cellar door without an appointment; cellar tour by appointment"
 ---

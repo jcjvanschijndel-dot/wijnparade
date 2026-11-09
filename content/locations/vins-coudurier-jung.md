@@ -29,4 +29,6 @@ description_en: >-
 
   What you taste here is astonishing. Bottle for bottle, this is one of the best
   values in all of Beaune.
+taste_note: "Christine ontvangt je persoonlijk voor een proeverij in de kleine kelder"
+taste_note_en: "Christine welcomes you personally for a tasting in the small cellar"
 ---

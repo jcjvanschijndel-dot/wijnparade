@@ -52,4 +52,6 @@ description_en: >-
   with an open kitchen and fireplace, chef Thomas Simmoneau serves bistronomy
   dishes made with local, seasonal produce: poached egg with Sauternes sauce,
   pâté en croûte, pork shoulder with smoked pepper.
+taste_note: "Van een flash tasting zonder reservering tot uitgebreide rondleidingen"
+taste_note_en: "From a walk-in flash tasting to extended guided tours"
 ---

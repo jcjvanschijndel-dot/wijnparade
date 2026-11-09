@@ -78,4 +78,6 @@ description_en: >-
   Please contact the estate in advance to arrange a visit. Savigny-lès-Beaune is five minutes from Beaune.
 image: /uploads/briailles.webp
 website: https://www.chandondebriailles.com/fr_FR/
+taste_note: "Bezoek op afspraak: neem vooraf contact op"
+taste_note_en: "Visits by appointment: get in touch beforehand"
 ---

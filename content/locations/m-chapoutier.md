@@ -54,4 +54,6 @@ description_en: >-
 stay_type: vakantiewoning
 stay_note: "Gîte La Tour du Pavillon voor twee personen tussen de wijngaarden"
 stay_note_en: "Gîte La Tour du Pavillon for two people among the vines"
+taste_note: "Van een eenvoudige proeverij tot wijngaardwandelingen met een sommelier en e-bike-tochten"
+taste_note_en: "From a simple tasting to vineyard walks with a sommelier and e-bike tours"
 ---

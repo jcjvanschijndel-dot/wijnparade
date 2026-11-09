@@ -40,4 +40,7 @@ description_en: >-
   an escape game in the bunker, the first and only escape game in the Gironde in
   an authentic nuclear shelter: you're surrounded by old vintages of Château
   Siran as you try to unravel the riddles of the family archive.
+taste_note: "Rondleiding met als hoogtepunt de atoomschuilkelder vol oude jaargangen"
+taste_note_en: "Guided tour, with the nuclear bunker full of old vintages as its highlight"
+winalist_url: "https://www.winalist.com/hosts/534/chateau-siran"
 ---

@@ -26,4 +26,6 @@ description_en: >-
   the history, the architecture and the winemaking process, followed by a
   tasting of two wines: the second wine, C des Carmes, and the grand vin. By
   appointment only.
+taste_note: "Rondleiding door wijngaard en kelder met proeverij van twee wijnen, alleen op afspraak"
+taste_note_en: "Tour of the vineyard and cellar with a tasting of two wines, by appointment only"
 ---

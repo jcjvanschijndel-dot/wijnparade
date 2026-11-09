@@ -12,6 +12,8 @@ description: >-
 
   Champagne Charlier et Fils ligt in Châtillon-sur-Marne, in de Vallée de la
   Marne. Een aanrader voor een wijnreis door de Champagne.
+
+  Proeven kan het hele jaar zonder afspraak; een kelderbezoek met proeverij boek je minstens 48 uur vooraf.
 image: /uploads/charlier.webp
 website: https://www.champagne-charlier.com/en/index
 description_en: >-
@@ -22,4 +24,8 @@ description_en: >-
 
   Champagne Charlier et Fils is in Châtillon-sur-Marne, in the Vallée de la
   Marne. Recommended for a wine trip through Champagne.
+
+  Tastings are possible all year without an appointment; a cellar visit with tasting should be booked at least 48 hours ahead.
+taste_note: "Proeverij zonder afspraak; kelderbezoek met proeverij minstens 48 uur vooraf reserveren"
+taste_note_en: "Tastings without an appointment; book a cellar visit with tasting at least 48 hours ahead"
 ---

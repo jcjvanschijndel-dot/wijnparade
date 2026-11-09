@@ -17,4 +17,6 @@ description_en: >-
   Provence and an age-worthy red in AOC Bandol, all certified organic. The
   tasting and sales caveau is open Monday to Sunday from 9.30 to 12.30 and from
   14.00 to 18.00. No reservation needed for a simple tasting: just walk in.
+taste_note: "Caveau dagelijks open; een eenvoudige proeverij zonder reservering"
+taste_note_en: "Tasting room open daily; a simple tasting without booking"
 ---

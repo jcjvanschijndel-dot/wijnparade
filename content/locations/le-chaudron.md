@@ -1,6 +1,6 @@
 ---
 name: Le Chaudron
-type: wijnhuis
+type: restaurant
 address: 7 Rue Saint-Antoine, 07300 Tournon-sur-Rhône, Frankrijk
 lat: 45.0664254
 lng: 4.832859399999999

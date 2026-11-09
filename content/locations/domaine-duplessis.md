@@ -26,4 +26,6 @@ description_en: >-
   Duplessis recently built a new tasting room, a sign that the domaine is
   deliberately opening up more to visitors. Visits are by appointment; Lilian
   receives you himself when he isn't out in the vineyard.
+taste_note: "Bezoek op afspraak in de nieuwe proefruimte"
+taste_note_en: "Visits by appointment in the new tasting room"
 ---

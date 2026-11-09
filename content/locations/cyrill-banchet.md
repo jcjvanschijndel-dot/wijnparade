@@ -30,4 +30,6 @@ description_en: >-
   different from what you're used to at the well-known maisons: a small room
   with tanks and a somewhat untidy cellar, which makes it much easier to see how
   Champagne is really made. A kind of behind-the-scenes look!
+taste_note: "Persoonlijke rondleiding; kondig je bezoek vooraf aan"
+taste_note_en: "Personal tour; let them know you're coming"
 ---
