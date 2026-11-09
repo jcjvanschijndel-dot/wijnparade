@@ -124,6 +124,8 @@ collections:
       - {label: "Overnachten: korte zin Engels (optioneel)", name: "stay_note_en", widget: "string", required: false}
       - {label: "Booking.com-link (optioneel; alleen de link naar de accommodatie zelf, zonder ?-deel)", name: "booking_url", widget: "string", required: false, hint: "Bijv. https://www.booking.com/hotel/it/locanda-di-fonterutoli.html. De affiliate-code wordt automatisch toegevoegd."}
       - {label: "Airbnb-link (optioneel; alleen als de advertentie van de locatie zelf is)", name: "airbnb_url", widget: "string", required: false}
+      - {label: "Proeverij: korte zin (optioneel; bv. 'Rondleiding door de kelder en proeverij van drie wijnen, ongeveer een uur')", name: "taste_note", widget: "string", required: false}
+      - {label: "Proeverij: korte zin Engels (optioneel)", name: "taste_note_en", widget: "string", required: false}
       - {label: "Winalist-link (optioneel; proeverij boeken, bv. https://www.winalist.com/hosts/2812/chateau-soutard)", name: "winalist_url", widget: "string", required: false, hint: "Alleen de pagina van deze locatie op winalist.com. De affiliate-code wordt automatisch toegevoegd."}
       - label: "Onderscheidingen (optioneel)"
         name: "awards"
