@@ -25,4 +25,6 @@ description_en: >-
   overlooking the vineyards and the Serra de Tramuntana. Every year there's the
   Concert de la Lluna a les Vinyes, an open-air classical music concert among
   the vines on a warm July night.
+taste_note: "Rondleiding door de bodega, met proeverij op het terras met uitzicht op de Tramuntana"
+taste_note_en: "Tour of the bodega, with a tasting on the terrace overlooking the Tramuntana"
 ---

@@ -40,4 +40,6 @@ description_en: >-
   through the Penedès.
 image: /uploads/juvé-camps.webp
 website: https://www.juveycamps.com/
+taste_note: "Wandeling door de historische kelders met proeverij in La Capella"
+taste_note_en: "Walk through the historic cellars with a tasting in La Capella"
 ---

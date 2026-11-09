@@ -24,4 +24,6 @@ description_en: >-
   Every visit takes you through the history of Málaga wines and of Bodegas Quitapenas itself, with stories about the cellar and production methods. Four visit formats: Visita Quitapenas (1 hour, 3 wines), Visita Momentos (1 hour, 3 wines + cheese), Jamón y Vino (1 hour, 3 wines + Ibérico ham) and the Initiation Tasting (2 hours, 4 wines + masterclass).
 image: /uploads/quitapenas.webp
 website: https://quitapenas.es/
+taste_note: "Vier formules, van drie wijnen in een uur tot een masterclass van twee uur"
+taste_note_en: "Four formats, from three wines in an hour to a two-hour masterclass"
 ---

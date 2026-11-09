@@ -34,4 +34,6 @@ description_en: >-
   trip through the Penedès.
 image: /uploads/jean-leon.webp
 website: https://jeanleon.com/
+taste_note: "Rondleiding door de wijngaarden met film over de oprichter, en een proeverij van vier wijnen met tapas"
+taste_note_en: "Vineyard tour with a film about the founder, and a tasting of four wines with tapas"
 ---

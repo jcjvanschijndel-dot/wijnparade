@@ -31,4 +31,6 @@ description_en: >-
   course in the remarkable Espacio Torre Muga (opened in 2008, 400 m² over three
   floors), a segway ride through the vineyards, or even a hot-air balloon flight
   over the wine region followed by a traditional Riojan lunch.
+taste_note: "Rondleiding van ongeveer 90 minuten langs de houten gistkuipen en de kuiperij, met proeverij"
+taste_note_en: "Tour of about 90 minutes past the wooden fermentation vats and the cooperage, with a tasting"
 ---

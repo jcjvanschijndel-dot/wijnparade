@@ -29,4 +29,6 @@ description_en: >-
   curated programme that makes the winery a destination in itself. The
   night-time experiences in summer are especially popular. Book weeks ahead in
   high season.
+taste_note: "Bijzondere wijnervaringen, verder dan een standaardrondleiding; reserveer ruim vooraf"
+taste_note_en: "Special wine experiences beyond a standard tour; book well ahead"
 ---

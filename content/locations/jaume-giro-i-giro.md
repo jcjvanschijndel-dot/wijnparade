@@ -29,4 +29,6 @@ description_en: >-
   reservation only. Recommended on a wine trip through the Penedès.
 image: /uploads/jaume-giró-i-giró.webp
 website: https://www.cavagiro.com/
+taste_note: "Bezoek aan het Cava Centre en de familiekelder met proeverij; in het weekend, op reservering"
+taste_note_en: "Visit to the Cava Centre and the family cellar with a tasting; at weekends, by reservation"
 ---

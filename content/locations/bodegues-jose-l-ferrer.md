@@ -21,4 +21,6 @@ description_en: >-
   poured. Standard tastings with three or four glasses, but single tasting pours
   of a specific wine are possible too. The Veritas label is recommended. Wines
   can also be shipped to the Netherlands.
+taste_note: "Rondleidingen door de kelders en proeverijen van drie of vier wijnen; ook losse glazen"
+taste_note_en: "Cellar tours and tastings of three or four wines; single glasses too"
 ---

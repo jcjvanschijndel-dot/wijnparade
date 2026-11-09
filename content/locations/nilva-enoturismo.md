@@ -28,4 +28,6 @@ description_en: >-
   During the tour you visit the CIVIMA (Centro de Interpretación Viñas de Manilva), where three rooms — viticulture, oenology and grape harvest — teach you about Manilva's winemaking traditions. Next comes the small cellar, and finally the Viña del Peñoncillo, certified organic, where you taste wines and tapas (ham, cheese) with extraordinary views over the Mediterranean, the African coast and the Strait of Gibraltar.
 image: /uploads/nilva.webp
 website: https://nilva.es/
+taste_note: "Rondleiding langs het CIVIMA, de bodega en de wijngaard, met proeverij van moscatel en tapas"
+taste_note_en: "Tour of the CIVIMA, the bodega and the vineyard, with a moscatel tasting and tapas"
 ---

@@ -14,6 +14,8 @@ description: >-
 
 
   Fabio werkt biologisch en met zo min mogelijk ingrijpen in de kelder. Hij kiest voor oude lokale druiven: Garnacha en de bijna vergeten Romé voor rood, en Moscatel de Alejandría, Pedro Ximénez en Doradilla voor wit. Alle wijnen vallen onder DOP Sierras de Málaga en zijn droog. Dat is bijzonder in een streek die vooral bekend is om zoete wijn.
+
+  Op vrijdag en zaterdag zijn er bezoeken: een korte kennismaking met drie wijnen, of een wandeling door de wijngaard en de bodega met een proeverij van vijf wijnen en tapas.
 description_en: >-
   Fabio Coullet is an agronomist who worked in wine countries around the world
   for more than twenty years. In 2020 he started his own winery in Almáchar, a
@@ -24,6 +26,10 @@ description_en: >-
 
 
   Fabio farms organically and intervenes as little as possible in the cellar. He chooses old local grapes: Garnacha and the almost forgotten Romé for red, and Moscatel de Alejandría, Pedro Ximénez and Doradilla for white. All the wines fall under DOP Sierras de Málaga and are dry. That is unusual in a region best known for sweet wine.
+
+  Visits run on Fridays and Saturdays: a short introduction with three wines, or a walk through the vineyard and bodega with a tasting of five wines and tapas.
 image: /uploads/fabio-coullet.jpg
 website: https://bodegafabiocoullet.com/
+taste_note: "Vrijdag en zaterdag: kennismaking met drie wijnen, of wijngaard en bodega met vijf wijnen en tapas"
+taste_note_en: "Fridays and Saturdays: an introduction with three wines, or vineyard and bodega with five wines and tapas"
 ---

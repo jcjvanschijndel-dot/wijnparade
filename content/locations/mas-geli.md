@@ -27,4 +27,6 @@ description_en: >-
   Friday to Sunday by reservation, with the Montgrí massif and the vineyards as
   a backdrop. In summer there are live music evenings at sunset and tastings
   with chocolate pairings.
+taste_note: "Wijnbar met uitzicht op de Montgrí, vrijdag tot zondag op reservering; proeverijen met muziek"
+taste_note_en: "Wine bar overlooking the Montgrí, Friday to Sunday by reservation; tastings with music"
 ---

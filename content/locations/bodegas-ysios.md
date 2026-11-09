@@ -26,4 +26,6 @@ description_en: >-
   refers to the Egyptian goddess Isis. The undulating aluminium roof mirrors the
   mountain range of the Sierra de Cantabria behind it, while the structure
   itself recalls stacked wooden wine barrels. Tours with tasting by reservation.
+taste_note: "Rondleidingen met proeverij, op reservering"
+taste_note_en: "Tours with tastings, by reservation"
 ---

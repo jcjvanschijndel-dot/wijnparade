@@ -32,4 +32,6 @@ website: https://baltadecela.com/
 stay_type: vakantiewoning
 stay_note: "Masia tussen de wijngaarden, te huur als geheel"
 stay_note_en: "Farmhouse among the vineyards, rented as a whole"
+taste_note: "Elke dag op reservering: wijngaardwandeling, kelder en proeverij met hapjes"
+taste_note_en: "Daily by reservation: vineyard walk, cellar and tasting with snacks"
 ---

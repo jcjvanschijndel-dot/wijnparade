@@ -31,4 +31,6 @@ description_en: >-
   for five years. Son Mayol makes only two wines and deliberately produces
   little: grapes or wine that don't meet its own quality standard are sold to
   other producers. Visits are possible by appointment for serious wine lovers.
+taste_note: "Bezoek op afspraak, voor serieuze wijnliefhebbers"
+taste_note_en: "Visits by appointment, for serious wine lovers"
 ---

@@ -30,4 +30,6 @@ description_en: >-
 stay_type: vakantiewoning
 stay_note: "Chalet Bell-Lloc met vier slaapkamers bij de wijngaard"
 stay_note_en: "Chalet Bell-Lloc with four bedrooms by the vineyard"
+taste_note: "Proeverijen, tours en diner op het landgoed, te boeken via de website"
+taste_note_en: "Tastings, tours and dinner on the estate, bookable through the website"
 ---

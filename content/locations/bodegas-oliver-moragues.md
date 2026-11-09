@@ -20,4 +20,6 @@ description_en: >-
   balance, elegance and a Mediterranean character. A visit consists of a tour of
   the historic house, the vineyards and the cellar, with an explanation of the
   biodynamic farming methods that have been used here for centuries.
+taste_note: "Rondleiding door het historische huis, de wijngaarden en de kelder"
+taste_note_en: "Tour of the historic house, vineyards and cellar"
 ---

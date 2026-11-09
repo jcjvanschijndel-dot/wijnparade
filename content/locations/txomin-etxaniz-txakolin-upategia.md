@@ -38,4 +38,6 @@ description_en: >-
   closed on public holidays. Booking in advance is required. Easy to combine
   with lunch at the famous restaurant Elkano in Getaria, specialists in fish
   grilled over charcoal and a household name throughout Spain.
+taste_note: "Rondleiding van 90 minuten met proeverij van txakoli bij ansjovis en tonijn; reserveren per e-mail"
+taste_note_en: "90-minute tour with a tasting of txakoli with anchovies and tuna; book by email"
 ---

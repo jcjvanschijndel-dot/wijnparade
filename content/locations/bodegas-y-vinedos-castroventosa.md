@@ -19,4 +19,6 @@ description_en: >-
   concentration of old vineyards and sand and clay soils that create a unique
   microclimate, gentler than the surrounding areas. Visits by appointment;
   contact via castroventosa.com.
+taste_note: "Bezoek aan de in de rots uitgehouwen kelder, op afspraak"
+taste_note_en: "Visit to the cellar carved into the rock, by appointment"
 ---

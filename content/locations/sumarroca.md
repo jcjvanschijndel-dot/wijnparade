@@ -31,4 +31,6 @@ description_en: >-
   through the Penedès.
 image: /uploads/sumarroca.webp
 website: https://www.sumarroca.com/
+taste_note: "Welkomstdrankje, rondleiding en proeverij"
+taste_note_en: "Welcome drink, tour and tasting"
 ---

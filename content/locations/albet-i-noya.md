@@ -35,4 +35,6 @@ description_en: >-
   trees. Recommended on a wine trip through the Penedès.
 image: /uploads/albet-i-noya.webp
 website: https://albetinoya.cat/
+taste_note: "Rondleiding met proeverij, bij mooi weer op het terras onder de platanen"
+taste_note_en: "Guided tour with a tasting, on the terrace under the plane trees in good weather"
 ---

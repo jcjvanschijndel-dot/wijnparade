@@ -29,4 +29,6 @@ stay_type: hotel
 stay_note: "Vijfsterrenhotel LeDomaine in de abdij, met 27 kamers en 3 suites"
 stay_note_en: "Five-star hotel LeDomaine in the abbey, with 27 rooms and 3 suites"
 booking_url: "https://www.booking.com/hotel/es/abadia-retuerta-ledomaine.html"
+taste_note: "Rondleiding door de wijngaarden en de bodega, met proeverij van de wijnen naast elkaar"
+taste_note_en: "Tour of the vineyards and bodega, with a side-by-side tasting of the wines"
 ---

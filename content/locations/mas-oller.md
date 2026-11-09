@@ -25,4 +25,6 @@ description_en: >-
   Mas Oller is in the Empordà, the Costa Brava wine region of Catalonia, in the
   province of Girona. A lovely winery to visit if you're nearby, and easy to
   combine with a day on the coast or in the medieval villages inland.
+taste_note: "Proeverijen van jonge en gerijpte wijnen"
+taste_note_en: "Tastings of young and aged wines"
 ---

@@ -30,4 +30,6 @@ description_en: >-
   version with brunch. Recommended on a wine trip through the Penedès.
 image: /uploads/torelló-viticultors.webp
 website: https://torello.com/
+taste_note: "In kleine groepen door wijngaarden, masia, kelder en ondergrondse gangen, met proeverij"
+taste_note_en: "In small groups through the vineyards, masia, cellar and underground passages, with a tasting"
 ---

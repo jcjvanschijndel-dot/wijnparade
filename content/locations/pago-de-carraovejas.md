@@ -26,4 +26,6 @@ description_en: >-
   Pago de Carraovejas is near Peñafiel, in the Ribera del Duero in Spain. One of
   the wineries you shouldn't miss during a wine trip through the Ribera del
   Duero.
+taste_note: "Verschillende rondleidingen met proeverij, van woensdag tot zondag"
+taste_note_en: "Several tours with tastings, Wednesday to Sunday"
 ---

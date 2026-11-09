@@ -40,4 +40,6 @@ description_en: >-
   time, as the English-language tours in particular fill up quickly. You could
   combine the visit with the nearby Roman ruins of Acinipo. Besides the tasting
   with tapas, there's also the option of a full lunch with wine pairing.
+taste_note: "Rondleiding van anderhalf uur met proeverij van 3 tot 5 wijnen met hapjes; boek op tijd"
+taste_note_en: "Tour of an hour and a half with a tasting of 3 to 5 wines with snacks; book early"
 ---

@@ -18,6 +18,8 @@ description: >-
 
 
   Standaard rondleiding met proeverij van drie wijnen gepaard met tapasper persoon. Uitgebreide gastronomische ervaring met meergangenmenu beschikbaar.
+
+  Bezoekers lopen door de wijngaard, het Castillo Ygay en het museum, en sluiten af met een proeverij; reserveren vooraf.
 image: /uploads/murrieta.webp
 website: https://marquesdemurrieta.com/
 description_en: >-
@@ -30,4 +32,8 @@ description_en: >-
   Tempranillo, Gran Reserva). Tours by appointment only; book online. The
   standard tour includes a tasting of three wines paired with tapas. An extended
   gastronomic experience with a multi-course menu is also available.
+
+  Visitors walk through the vineyard, Castillo Ygay and the museum, finishing with a tasting; book ahead.
+taste_note: "Rondleiding door wijngaard, Castillo Ygay en museum, met proeverij; reserveren vooraf"
+taste_note_en: "Tour of the vineyard, Castillo Ygay and the museum, with a tasting; book ahead"
 ---

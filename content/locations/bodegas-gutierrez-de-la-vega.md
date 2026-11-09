@@ -27,4 +27,6 @@ description_en: >-
   with a tasting of three wines (white, red and sweet). Or the special option:
   an eno-cultural tour led by Felipe himself, in which he lets you taste
   exclusively selected wines from his personal collection.
+taste_note: "Klassieke rondleiding met drie wijnen, of een enoculturele rondleiding met Felipe zelf"
+taste_note_en: "Classic tour with three wines, or a wine-and-culture tour with Felipe himself"
 ---

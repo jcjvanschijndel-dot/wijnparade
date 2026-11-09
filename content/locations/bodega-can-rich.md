@@ -26,4 +26,6 @@ description_en: >-
   Ibicencas. The estate's own organic olive oil and balsamic vinegar aged in
   French oak barrels are popular things to take home. You can arrange the tour
   and tasting through the website.
+taste_note: "Wandeling door de wijngaarden, rondleiding en proeverij met lokale producten; te boeken via de website"
+taste_note_en: "Vineyard walk, tour and tasting with local products; book through the website"
 ---

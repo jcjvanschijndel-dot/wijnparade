@@ -32,4 +32,6 @@ description_en: >-
   a wine trip through the Penedès.
 image: /uploads/blancher-capdevila-pujol.webp
 website: https://www.blancher.es/
+taste_note: "Rondleiding met film, klein museum, wijnbar en picknickplek; open in het weekend en op feestdagen"
+taste_note_en: "Tour with a film, small museum, wine bar and picnic area; open at weekends and on public holidays"
 ---

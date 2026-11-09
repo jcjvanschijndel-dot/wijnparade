@@ -27,4 +27,6 @@ description_en: >-
   includes a vineyard visit, a cellar tour and a tasting of five wines with
   local tapas for €25 per person. Children are welcome, with their own tasting
   programme for €10. Tours are available in Spanish and English.
+taste_note: "Kleinschalige rondleiding door de familie, met proeverij op een terras boven het dal"
+taste_note_en: "Small-scale tour by the family, with a tasting on a terrace above the valley"
 ---
