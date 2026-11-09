@@ -23,4 +23,6 @@ description_en: >-
   cellars with contemporary architecture, the vats and the cellars 35 metres
   underground. Afterwards there's a view over Épernay and the surroundings from
   the rooftop terrace.
+taste_note: "Alleen op afspraak, in groepjes van maximaal zes, met de kelders op 35 meter diepte"
+taste_note_en: "By appointment only, in groups of up to six, including cellars 35 metres underground"
 ---

@@ -35,4 +35,6 @@ description_en: >-
   restaurant, Maison Wessman par Thierry Marx, is a contemporary bistro serving
   seasonal terroir cooking: a bold choice for a Bergerac domaine, and straight
   away one of the gastronomically strongest addresses in the area.
+taste_note: "Rondleidingen en proeverijen op maat, ook met wijn-spijscombinaties"
+taste_note_en: "Tailor-made tours and tastings, including food and wine pairings"
 ---

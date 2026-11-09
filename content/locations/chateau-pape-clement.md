@@ -14,7 +14,9 @@ description: "Het domein ligt in Pessac, op zo'n 15 minuten van het centrum van
   bijzondere ervaring: een proeverij waarbij bepaalde zintuigen bewust worden
   uitgeschakeld om wijn vanuit een andere invalshoek te benaderen. De
   rondleiding eindigt in de boetiek \"Les Clés du Vin\", ingericht met rekken en
-  meubilair van een oude apotheek."
+  meubilair van een oude apotheek.
+
+  Er zijn verschillende rondleidingen met proeverij, van een ontdekking van de wijnen van Bordeaux tot een verticale proeverij; reserveren via de website."
 image: /uploads/pape-clement.jpeg
 website: https://www.chateau-pape-clement.fr/
 description_en: >-
@@ -28,4 +30,9 @@ description_en: >-
   certain senses are deliberately switched off so you approach wine from a
   different angle. The tour ends in the boutique "Les Clés du Vin", furnished
   with racks and furniture from an old pharmacy.
+
+  There are several tours with tastings, from an introduction to Bordeaux wines to a vertical tasting; book through the website.
+taste_note: "Rondleidingen met proeverij, van een kennismaking tot een verticale proeverij"
+taste_note_en: "Tours with tastings, from an introduction to a vertical tasting"
+winalist_url: "https://www.winalist.com/hosts/87/chateau-pape-clement"
 ---

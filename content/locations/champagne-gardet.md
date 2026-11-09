@@ -14,6 +14,8 @@ description: >-
   Champagne Gardet ligt in Chigny-les-Roses, op de Montagne de Reims. Een
   aanrader voor wie tijdens een wijnreis door de Champagne een kleiner, charmant
   huis wil bezoeken in plaats van een van de grote merken.
+
+  Proeverijen zijn op afspraak, van maandag tot zaterdag, in de vernieuwde Winter Garden.
 image: /uploads/gardet.webp
 website: https://www.champagne-gardet.com/
 description_en: >-
@@ -26,4 +28,8 @@ description_en: >-
   Champagne Gardet is in Chigny-les-Roses, on the Montagne de Reims. Recommended
   if, during a wine trip through Champagne, you'd like to visit a smaller,
   charming house instead of one of the big brands.
+
+  Tastings are by appointment, Monday to Saturday, in the renovated Winter Garden.
+taste_note: "Proeverijen op afspraak, maandag tot zaterdag, in de Winter Garden"
+taste_note_en: "Tastings by appointment, Monday to Saturday, in the Winter Garden"
 ---

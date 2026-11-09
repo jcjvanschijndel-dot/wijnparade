@@ -21,4 +21,6 @@ description_en: >-
   Saturday for tastings. A guided cellar tour with tasting costs €20 per person,
   by appointment. La Table de Terrebrune is a charming, refined and elegant
   restaurant on the estate, open for lunch and dinner all year round.
+taste_note: "Kelderrondleiding met proeverij, op afspraak"
+taste_note_en: "Cellar tour with a tasting, by appointment"
 ---

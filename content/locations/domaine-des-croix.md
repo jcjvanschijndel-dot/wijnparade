@@ -24,4 +24,6 @@ description_en: >-
   October. An intimate tasting and tour of the cellars of both Domaine des Croix
   and Camille Giroud, plus a walk through the vineyards with David himself, for
   a maximum of six people.
+taste_note: "Op afspraak, buiten de oogst: proeverij, kelders en een wijngaardwandeling, maximaal zes personen"
+taste_note_en: "By appointment, outside harvest: tasting, cellars and a vineyard walk, up to six people"
 ---

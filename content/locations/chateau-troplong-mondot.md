@@ -12,6 +12,8 @@ description: >-
 
 
   Je kunt hier ook overnachten en bij het chateau zit een top restaurant: Les Belles Perdrix. En het terras...buitencategorie!
+
+  Het hele jaar zijn er rondleidingen door wijngaard en wijnmakerij, die eindigen met een proeverij met uitzicht over de wijngaarden.
 image: /uploads/troplong-mondot.webp
 website:  troplong-mondot.com
 description_en: >-
@@ -21,8 +23,12 @@ description_en: >-
   village, but for those who know how to find it, often the best. You can also
   stay the night here, and the château has a top restaurant: Les Belles Perdrix.
   And the terrace... in a class of its own!
+
+  Tours of the vineyard and winery run all year and end with a tasting overlooking the vines.
 stay_type: gastenkamers
 stay_note: "Les Clefs: kamers en een suite tussen de wijngaarden"
 stay_note_en: "Les Clefs: rooms and a suite among the vines"
 booking_url: "https://www.booking.com/hotel/fr/les-belles-perdrix.html"
+taste_note: "Rondleidingen door wijngaard en wijnmakerij, het hele jaar, altijd met proeverij"
+taste_note_en: "Tours of the vineyard and winery all year, always with a tasting"
 ---

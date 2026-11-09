@@ -40,4 +40,6 @@ description_en: >-
   the know-how and values behind them. Vineyard walk: through Guigal's vineyards
   to learn about the life cycle of the vine and the production methods specific
   to the region.
+taste_note: "Kelderrondleiding met proeverij, of een wandeling door de wijngaarden"
+taste_note_en: "Cellar tour with a tasting, or a walk through the vineyards"
 ---

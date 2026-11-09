@@ -21,4 +21,6 @@ description_en: >-
   receive you themselves, explain the wines and take their time: no rush, no
   sales pressure. For groups, a guided tour with tasting is possible by
   reservation.
+taste_note: "Rondleiding met proeverij voor groepen, op reservering"
+taste_note_en: "Guided tour with tasting for groups, by reservation"
 ---

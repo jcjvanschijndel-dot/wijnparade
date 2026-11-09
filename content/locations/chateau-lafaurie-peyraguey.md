@@ -46,4 +46,7 @@ stay_type: hotel
 stay_note: "Hotel met 13 kamers, ingericht door Lalique"
 stay_note_en: "Hotel with 13 rooms, designed by Lalique"
 booking_url: "https://www.booking.com/hotel/fr/chateau-lafaurie-peyraguey-by-lalique.html"
+taste_note: "Rondleiding langs de ondergrondse tankruimte en het kristallen Lalique-vat, met proeverij; reserveren aanbevolen"
+taste_note_en: "Tour of the underground vat room and the Lalique crystal barrel, with a tasting; booking recommended"
+winalist_url: "https://www.winalist.com/hosts/230/chateau-lafaurie-peyraguey-1er-grand-cru-classe"
 ---

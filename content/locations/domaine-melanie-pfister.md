@@ -19,4 +19,6 @@ description_en: >-
   and enthusiasm, and happily answers even the most basic questions. Visitors
   describe her welcome as instantly relaxed and warm, and after such a visit
   they understand why wine is first and foremost a story of sharing.
+taste_note: "Gratis proeven zonder afspraak; voor groepen een rondleiding op reservering"
+taste_note_en: "Free tastings without an appointment; guided tours for groups by reservation"
 ---

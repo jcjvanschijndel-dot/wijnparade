@@ -10,6 +10,8 @@ description: >-
 
 
   7 hectare, uitsluitend Grand Cru Aÿ. Pinot Noir domineert (ca. 90%), met een kleine fractie Chardonnay voor frisheid. Licht, veerend, wonderlijk gebalanceerd — niet het type champagne voor wie houdt van zware, volle stijlen, maar voor wie zoekt naar finesse en terroir-expressie. Slechts 50.000 flessen per jaar. Vier cuvées: Brut Réserve, Rosé, Millésimé en de Grand Cru Brut. De Millésimé is de meest complexe — een absolute koopje vergeleken met tête de cuvées van de grote huizen voor 2-3 keer de prijs.
+
+  Het huis ontvangt bezoekers het hele jaar, op afspraak.
 image: /uploads/gatinois.webp
 website: https://www.champagnegatinois.com
 description_en: >-
@@ -21,4 +23,8 @@ description_en: >-
   50,000 bottles a year. Four cuvées: Brut Réserve, Rosé, Millésimé and the
   Grand Cru Brut. The Millésimé is the most complex, an absolute bargain
   compared with the têtes de cuvée of the big houses at 2-3 times the price.
+
+  The house receives visitors all year round, by appointment.
+taste_note: "Bezoek het hele jaar, op afspraak"
+taste_note_en: "Visits all year round, by appointment"
 ---

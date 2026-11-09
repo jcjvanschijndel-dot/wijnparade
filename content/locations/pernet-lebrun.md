@@ -33,4 +33,6 @@ description_en: >-
   you immediately notice you're visiting a welcoming family business. No fuss,
   but a warm welcome, explanation, and everything can be tasted. And what
   beautiful Champagnes...
+taste_note: "Warme ontvangst met uitleg en proeverij"
+taste_note_en: "A warm welcome with explanations and a tasting"
 ---

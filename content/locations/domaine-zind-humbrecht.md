@@ -26,4 +26,6 @@ description_en: >-
   Brand, Hengst and Goldert, plus the top sites Clos Windsbuhl, Clos Jebsal,
   Heimbourg and Herrenweg. A tasting of several terroir expressions side by side
   is one of the best ways to understand the difference between soils.
+taste_note: "Bezoek op afspraak in de wijnmakerij in Turckheim"
+taste_note_en: "Visits by appointment at the winery in Turckheim"
 ---

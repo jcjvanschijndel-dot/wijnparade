@@ -21,4 +21,6 @@ description_en: >-
   vineyard and an explanation of every stage of production, finishing with a
   guided tasting, by reservation. Pascal welcomes visitors personally when he is
   there.
+taste_note: "Rondleiding door de biologische wijngaard met becommentarieerde proeverij, op reservering"
+taste_note_en: "Tour of the organic vineyard with a guided tasting, by reservation"
 ---

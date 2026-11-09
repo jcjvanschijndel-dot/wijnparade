@@ -27,4 +27,6 @@ description_en: >-
 
   Domaine de la Sénèchalière is in Saint-Julien-de-Concelles, in the Muscadet
   area near Nantes, in the Loire.
+taste_note: "Bezoek alleen op afspraak, op een echte boerderij"
+taste_note_en: "Visits by appointment only, on a working farm"
 ---

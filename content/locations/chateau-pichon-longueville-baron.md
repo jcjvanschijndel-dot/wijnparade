@@ -32,4 +32,6 @@ description_en: >-
   Monday to Friday for walk-in visitors, and also on Saturdays from May to
   November. From January to early April and in November and December: open
   Monday to Friday from 9.00-12.30 and 14.00-17.30.
+taste_note: "Privébezoek op afspraak: wijngaard, kelders en een proeverij van drie wijnen"
+taste_note_en: "Private visit by appointment: vineyard, cellars and a tasting of three wines"
 ---

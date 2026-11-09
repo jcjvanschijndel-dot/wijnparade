@@ -1,6 +1,9 @@
 {
-  "_uitleg": "booking.link_template: de deeplink van het affiliate-netwerk (bv. CJ) met {url} op de plek van de Booking.com-link en {sid} voor de pagina (locatie-id). Leeg laten = gewone Booking.com-links zonder vergoeding.",
+  "_uitleg": "Per netwerk een link_template: de deeplink van het affiliate-netwerk met {url} op de plek van de link naar de partner en {sid} voor de pagina (locatie-id). Leeg laten = gewone links zonder vergoeding.",
   "booking": {
+    "link_template": ""
+  },
+  "winalist": {
     "link_template": ""
   }
 }

@@ -37,4 +37,6 @@ description_en: >-
   May there is an open day with live music, wine tasting and snacks. You can
   also stay in one of the guest rooms on the domaine, which is special if you
   want to stay longer.
+taste_note: "Rondleiding en proeverij op afspraak in de historische kelder"
+taste_note_en: "Tour and tasting by appointment in the historic cellar"
 ---

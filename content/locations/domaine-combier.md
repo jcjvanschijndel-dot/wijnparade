@@ -29,4 +29,6 @@ description_en: >-
 
   Domaine Combier is in Pont-de-l'Isère, in the Northern Rhône. Recommended for
   lovers of Crozes-Hermitage Syrah during a wine trip through the Rhône.
+taste_note: "Bezoek en proeverij van maandag tot zaterdagochtend, alleen op afspraak"
+taste_note_en: "Visits and tastings Monday to Saturday morning, by appointment only"
 ---

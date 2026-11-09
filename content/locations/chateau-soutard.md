@@ -31,4 +31,7 @@ description_en: >-
 stay_type: gastenkamers
 stay_note: "Gastenverblijf met vier kamers in het château"
 stay_note_en: "Guest house with four rooms in the château"
+taste_note: "Van picknick en fietstocht tot een verticale proeverij"
+taste_note_en: "From a picnic and bike ride to a vertical tasting"
+winalist_url: "https://www.winalist.com/hosts/2812/chateau-soutard"
 ---

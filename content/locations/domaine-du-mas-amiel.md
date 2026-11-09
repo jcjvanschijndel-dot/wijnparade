@@ -26,4 +26,6 @@ description_en: >-
   Wander freely around the estate and look at the bonbonnes, large glass globes
   quietly ageing in the sun. Discover the majestic century-old foudres in the
   cellar and taste freely from the range of 25 cuvées.
+taste_note: "Kelder met eeuwenoude foudres; proef vrij uit 25 cuvées"
+taste_note_en: "Cellar with centuries-old foudres; taste freely from 25 cuvées"
 ---

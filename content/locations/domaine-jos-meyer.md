@@ -39,4 +39,6 @@ description_en: >-
   Turckheim. Open Monday to Friday 9.00-12.00 and 14.00-17.30, Saturday
   9.00-12.00. Closed Saturday afternoon, Sunday and public holidays. Tastings by
   appointment only.
+taste_note: "Rondleidingen door kelder en wijngaarden, proeverijen op afspraak"
+taste_note_en: "Tours of the cellar and vineyards, tastings by appointment"
 ---

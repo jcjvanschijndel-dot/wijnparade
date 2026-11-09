@@ -48,4 +48,6 @@ description_en: >-
 stay_type: vakantiewoning
 stay_note: "Wine Lodge (4 personen) en Wine Cottage (2 personen)"
 stay_note_en: "Wine Lodge (4 people) and Wine Cottage (2 people)"
+taste_note: "Van een korte rondleiding met drie wijnen (1 uur) tot een uitgebreide ontdekkingstour"
+taste_note_en: "From a short tour with three wines (1 hour) to an in-depth discovery tour"
 ---

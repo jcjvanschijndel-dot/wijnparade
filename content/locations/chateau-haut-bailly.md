@@ -51,4 +51,7 @@ stay_type: gastenkamers
 stay_note: "La Chartreuse: vier gastenkamers op het domein"
 stay_note_en: "La Chartreuse: four guest rooms on the estate"
 booking_url: "https://www.booking.com/hotel/fr/chateau-le-pape.html"
+taste_note: "Klassiek bezoek met twee wijnen, een uitgebreide proeverij met vijf wijnen, of lunch aan La Table Privée"
+taste_note_en: "Classic visit with two wines, an extended tasting of five wines, or lunch at La Table Privée"
+winalist_url: "https://www.winalist.com/hosts/158/chateau-haut-bailly"
 ---

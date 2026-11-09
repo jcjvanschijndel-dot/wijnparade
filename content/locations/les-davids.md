@@ -14,6 +14,8 @@ description: >-
 
 
   Het domein biedt ook overnachtingsmogelijkheden in de vorm van gerenoveerde stenen gehuchten verspreid over het landgoed — volledig ingericht en omringd door wijngaard en natuur. Ideaal voor wie het domein langzamer wil beleven.
+
+  Kelderbezoek met een proeverij van vijf cuvées om 11.30 en 15.30 uur, op reservering.
 image: /uploads/les-davids.webp
 website: https://www.lesdavids.fr/en
 description_en: >-
@@ -26,7 +28,11 @@ description_en: >-
   cheeses. The estate also offers accommodation in renovated stone hamlets
   spread across the property, fully furnished and surrounded by vineyards and
   nature. Ideal if you want to experience the estate at a slower pace.
+
+  Cellar visits with a tasting of five cuvées at 11.30 and 15.30, by reservation.
 stay_type: vakantiewoning
 stay_note: "Vakantiehuizen in de gehuchten van het domein"
 stay_note_en: "Holiday houses in the estate's hamlets"
+taste_note: "Kelderbezoek met proeverij van vijf cuvées om 11.30 en 15.30 uur, op reservering"
+taste_note_en: "Cellar visit with a tasting of five cuvées at 11.30 and 15.30, by reservation"
 ---

@@ -37,4 +37,6 @@ stay_type: gastenkamers
 stay_note: "Maison d'hôtes op het wijndomein"
 stay_note_en: "Guest house on the wine estate"
 booking_url: "https://www.booking.com/hotel/fr/domaine-beaumont.html"
+taste_note: "Rondleiding door wijngaard en gewelfde kelder, met proeverij van de drie wijnen van het domein"
+taste_note_en: "Tour of the vineyard and vaulted cellar, with a tasting of the estate's three wines"
 ---

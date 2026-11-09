@@ -33,4 +33,6 @@ description_en: >-
   tasting of the estate's organic wines. The caveau is open all year round,
   Monday to Saturday: in winter from 10.00 to 12.00 and from 14.00 to 17.00; in
   summer until 19.00. Tasting is free. Closed on Sundays.
+taste_note: "Caveau het hele jaar open; in de zomer op dinsdag een wijngaardwandeling met de wijnmaker en proeverij"
+taste_note_en: "Tasting room open all year; in summer a vineyard walk with the winemaker and tasting on Tuesdays"
 ---

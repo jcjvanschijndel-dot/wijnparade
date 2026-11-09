@@ -13,6 +13,8 @@ description: >-
   Domaine Saint-Georges d'Ibry ligt in Abeilhan, vlak bij Béziers in de
   Languedoc. Een fijn wijnhuis om te bezoeken tijdens een vakantie in
   Zuid-Frankrijk, en een mooie kennismaking met de wijnen van de Languedoc.
+
+  De caveau en het kleine museum over de negentiende eeuw zijn van maandag tot zaterdag open; voor groepen is er een wandeling door de wijngaard en een proefinitiatie.
 image: /uploads/st-georges.webp
 website: www.saintgeorgesdibry.com
 description_en: >-
@@ -24,4 +26,8 @@ description_en: >-
   Domaine Saint-Georges d'Ibry is in Abeilhan, close to Béziers in the
   Languedoc. A nice winery to visit during a holiday in the south of France, and
   a lovely introduction to the wines of the Languedoc.
+
+  The tasting room and the small museum about the nineteenth century are open Monday to Saturday; for groups there is a vineyard walk and a tasting introduction.
+taste_note: "Proeven in de caveau met een klein museum, maandag tot zaterdag; voor groepen een wijngaardwandeling"
+taste_note_en: "Tastings at the cellar door with a small museum, Monday to Saturday; vineyard walk for groups"
 ---

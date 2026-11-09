@@ -27,4 +27,6 @@ description_en: >-
   English, and on Thursdays at 16.00 in Dutch. The tasting takes place on the
   terrace overlooking the vineyards, and afterwards you can buy the wines
   directly at the domaine.
+taste_note: "Van april tot september tweemaal per week een gratis rondleiding met proeverij en apéritif"
+taste_note_en: "From April to September, a free tour with tasting and aperitif twice a week"
 ---

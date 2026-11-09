@@ -21,4 +21,6 @@ description_en: >-
   his plots with a horse and uses no herbicides. Visits by appointment. The
   wines sell out almost immediately on release, so a visit is the most direct
   way to get hold of a bottle.
+taste_note: "Bezoek op afspraak"
+taste_note_en: "Visits by appointment"
 ---

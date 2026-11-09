@@ -47,4 +47,6 @@ description_en: >-
   reservation in season, a lunch with truffles from the region and wines from
   the estate. A day with the winemaker: in September and October you can
   experience the harvest with Paul Chaudière.
+taste_note: "Vrije wandeling door de wijngaarden, of een kelderrondleiding met proeverij van 5 tot 7 wijnen"
+taste_note_en: "Free walk through the vineyards, or a cellar tour with a tasting of 5 to 7 wines"
 ---

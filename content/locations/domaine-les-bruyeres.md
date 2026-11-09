@@ -19,4 +19,6 @@ description_en: >-
   Open from Monday afternoon to Saturday from 10.00 to 12.00 and from 14.00 to
   18.00, on Saturdays until 17.00. Individual tastings are free. Guided tours
   and group tastings on request.
+taste_note: "Rondleidingen en groepsproeverijen op aanvraag"
+taste_note_en: "Guided tours and group tastings on request"
 ---

@@ -39,4 +39,6 @@ description_en: >-
   restaurant on the estate is open for lunch (with a terrace under the trees),
   and in the wine shop you can taste and buy a selection from other local
   producers as well as the cooperative's own wines.
+taste_note: "Bezoek aan het kasteel met twintig ingerichte vertrekken en de wijnkelder, met proeverij"
+taste_note_en: "Visit to the castle with twenty furnished rooms and the wine cellar, with a tasting"
 ---

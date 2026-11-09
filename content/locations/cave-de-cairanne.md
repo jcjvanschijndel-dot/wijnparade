@@ -29,4 +29,6 @@ description_en: >-
   your visit you can also see the exhibition in the Museum of Roman heritage:
   Roman remains found in the vineyards of Cairanne, witnesses to its rich
   history.
+taste_note: "Proeverij in de coöperatie, met het hele jaar workshops en het museum over Romeinse vondsten"
+taste_note_en: "Tasting at the cooperative, with workshops all year and a museum of Roman finds"
 ---

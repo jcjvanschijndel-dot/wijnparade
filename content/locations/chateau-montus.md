@@ -22,4 +22,6 @@ description_en: >-
   the "Tannat Cathedral", Château Montus's ageing cellar and one of the most
   beautiful barrel cellars in the world, followed by a guided tasting with
   snacks. Price: €20 per person, duration 2.5 hours. By reservation only.
+taste_note: "Rondleiding door de 'Tannat Cathedral', de vatenkelder, met proeverij en hapjes; alleen op reservering"
+taste_note_en: "Tour of the 'Tannat Cathedral' barrel cellar, with a tasting and snacks; booking required"
 ---

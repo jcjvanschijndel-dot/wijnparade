@@ -22,4 +22,6 @@ description_en: >-
   domaine. The estate's 14 cuvées can also be tasted and bought at the nearby
   restaurant Le Frère. Visits by appointment: call or email in advance via the
   website.
+taste_note: "Bezoek op afspraak: bel of mail vooraf"
+taste_note_en: "Visits by appointment: call or email beforehand"
 ---

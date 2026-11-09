@@ -34,4 +34,6 @@ description_en: >-
 stay_type: vakantiewoning
 stay_note: "Gîte voor zes personen op het domein"
 stay_note_en: "Gîte for six people on the estate"
+taste_note: "Rondleiding door wijngaard en kelder, gevolgd door een proeverij van de eigen champagnes"
+taste_note_en: "Tour of the vineyard and cellar, followed by a tasting of the house champagnes"
 ---
