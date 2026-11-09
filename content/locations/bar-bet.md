@@ -22,4 +22,8 @@ description_en: >-
   With the wine you can have bar snacks or small dishes of meat, fish or vegetables to share, or let the chef choose a four-course menu. Some tables are kept free of reservations, so you can also drop in for a glass. Recommended for anyone looking for a good wine bar in Utrecht's city centre, with a terrace on 't Wed.
 image: /uploads/bar-bet.webp
 website: https://bar-bet.nl/
+seo_title: "Bar Bet Utrecht – wijnbar aan 't Wed bij de Dom"
+seo_title_en: "Bar Bet Utrecht – wine bar on 't Wed by the Dom"
+meta_description: "Bar Bet aan 't Wed bij de Dom: wijnbar met zo'n 250 wijnen, waarvan 30 per glas, kleine gerechten om te delen en een terras. Binnenlopen kan ook."
+meta_description_en: "Bar Bet on 't Wed by the Dom in Utrecht: wine bar with around 250 wines, 30 by the glass, small plates to share and a terrace. Walk-ins welcome."
 ---
