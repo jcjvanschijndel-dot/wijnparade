@@ -32,4 +32,6 @@ description_en: >-
 stay_type: gastenkamers
 stay_note: "Gastenverblijf met zeven kamers, elk vernoemd naar een Grosse Lage"
 stay_note_en: "Guest house with seven rooms, each named after a Grosse Lage"
+taste_note: "Vinothek april tot oktober, maandag tot zaterdag; reserveren verplicht"
+taste_note_en: "Vinothek April to October, Monday to Saturday; booking required"
 ---

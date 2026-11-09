@@ -24,4 +24,6 @@ description_en: >-
   seriously. No electricity in the cellar, no additives, no filters. Visits by
   appointment in Chardakhi, 40 km from Tbilisi. Iago is happy to welcome
   enthusiastic wine lovers.
+taste_note: "Bezoek op afspraak, 40 km van Tbilisi"
+taste_note_en: "Visits by appointment, 40 km from Tbilisi"
 ---

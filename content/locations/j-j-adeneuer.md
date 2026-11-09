@@ -19,4 +19,6 @@ description_en: >-
   favourite Spätburgunder from the Ahr. It isn't the cheapest, but at €30 it can
   hold its own with the best, much pricier ones. There's also a pleasant tasting
   room you can just walk into.
+taste_note: "Proeflokaal waar je zo binnenloopt"
+taste_note_en: "Tasting room where you can just walk in"
 ---

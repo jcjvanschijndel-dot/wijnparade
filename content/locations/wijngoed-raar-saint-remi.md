@@ -42,4 +42,6 @@ description_en: >-
   fortified wine whose fermentation is stopped early with the estate's own
   spirit, distilled from apple cider from the estate by Mwórveld Distillery in
   Moorveld.
+taste_note: "Proeverij in de gewelfde kelder; rondleidingen door wijngaard en kelder"
+taste_note_en: "Tasting in the vaulted cellar; tours of the vineyard and cellar"
 ---

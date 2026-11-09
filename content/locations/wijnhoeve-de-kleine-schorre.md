@@ -26,4 +26,6 @@ website: https://www.dekleineschorre.nl/
 stay_type: vakantiewoning
 stay_note: "Slapen in een wijnvat op de camping, met uitzicht op de wijngaard"
 stay_note_en: "Sleep in a wine barrel at the campsite, overlooking the vineyard"
+taste_note: "Rondleiding met proeverij, of binnenlopen voor een glas in het proeflokaal"
+taste_note_en: "Guided tour with tasting, or walk in for a glass in the tasting room"
 ---

@@ -34,4 +34,6 @@ description_en: >-
   ecosystem. Winery visits and tastings are available by appointment in several
   formats, from a basic tour of the winery to extensive themed tastings with
   lunch or dinner. The restaurant is very much worth it!
+taste_note: "Bezoeken en proeverijen op afspraak, van een rondleiding tot proeverij met lunch"
+taste_note_en: "Visits and tastings by appointment, from a tour to a tasting with lunch"
 ---

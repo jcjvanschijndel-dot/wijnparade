@@ -32,4 +32,6 @@ description_en: >-
   cheese or ham. The slopes have gradients of up to 42%, so walking through the
   vineyard is literally climbing. Shop sales on Saturdays 10.00-17.00, no
   reservation needed.
+taste_note: "Rondleiding door wijngaard en kelder met proeverij van vijf wijnen en Limburgse hapjes"
+taste_note_en: "Tour of the vineyard and cellar with a tasting of five wines and Limburg snacks"
 ---

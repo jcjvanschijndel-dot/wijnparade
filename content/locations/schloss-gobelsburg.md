@@ -22,4 +22,6 @@ description_en: >-
   classification. A special detail: the cellars hold bottles going back to the
   1940s. A typical tour with a tasting of 5 wines takes 2 to 2.5 hours. Schloss
   Gobelsburg is in the top 100 of the World's Best Vineyards 2024.
+taste_note: "Rondleiding door de historische en de moderne kelder, met proeverij"
+taste_note_en: "Tour of the historic and modern cellars, with a tasting"
 ---

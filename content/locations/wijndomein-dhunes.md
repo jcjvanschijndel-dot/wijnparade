@@ -41,4 +41,6 @@ description_en: >-
 stay_type: vakantiewoning
 stay_note: "Wijnstekje: vakantiewoning voor acht personen op het domein"
 stay_note_en: "Wijnstekje: holiday home for eight people on the estate"
+taste_note: "Proeflokaal met uitzicht op de wijngaard"
+taste_note_en: "Tasting room overlooking the vineyard"
 ---

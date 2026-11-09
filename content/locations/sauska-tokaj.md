@@ -37,4 +37,6 @@ description_en: >-
   Sauska style, from bubbles via white Tokaj and red Villány to dessert wines,
   accompanied by gastronomic bites. At the Elite Tasting in Villány you enjoy a
   five-course menu by chef Attila Bicsár with premium wines from both regions.
+taste_note: "Proeverijen woensdag tot zondag, andere dagen op afspraak"
+taste_note_en: "Tastings Wednesday to Sunday, other days by appointment"
 ---

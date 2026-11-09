@@ -26,4 +26,6 @@ description_en: >-
   since 1620. The vineyards cover 11 hectares in the sunny sites of the
   Mittelhaardt, sheltered by the Palatinate Forest. The diverse soils give a
   great variety of flavours. Tastings in an impressive, family atmosphere.
+taste_note: "Proeverij in familiale sfeer"
+taste_note_en: "Tasting in a family atmosphere"
 ---

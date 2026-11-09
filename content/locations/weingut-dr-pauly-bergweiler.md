@@ -26,4 +26,6 @@ description_en: >-
   typical notes of different vineyards. Open from Easter to early November:
   Thursday, Friday and Saturday 14.00-18.00. Monday to Wednesday and out of
   season by appointment only.
+taste_note: "Elke zaterdag om 16.00 uur een becommentarieerde proeverij, ook in het Engels"
+taste_note_en: "Every Saturday at 4 pm a guided tasting, also in English"
 ---

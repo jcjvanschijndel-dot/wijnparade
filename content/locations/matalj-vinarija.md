@@ -27,4 +27,6 @@ description_en: >-
   village of Tamnič are reserved for the absolute top wine, "Kremen Kamen",
   which enjoys an excellent reputation outside Serbia. Booking in advance is
   required. Open daily 10.00-22.00, with a restaurant.
+taste_note: "Moderne proefkamer; goed te combineren met de oude kelders van Rajac"
+taste_note_en: "Modern tasting room; easy to combine with the old cellars of Rajac"
 ---

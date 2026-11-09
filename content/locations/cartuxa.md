@@ -16,4 +16,6 @@ description_en: >-
   both white and red. It's easy to make an appointment and they have a beautiful
   tasting room. Évora is a stunning place to visit anyway. Cartuxa also has an
   enoteca in the centre, which you can of course simply drop into as well.
+taste_note: "Proeverij in de proefruimte, makkelijk op afspraak"
+taste_note_en: "Tasting in the tasting room, easy to book"
 ---

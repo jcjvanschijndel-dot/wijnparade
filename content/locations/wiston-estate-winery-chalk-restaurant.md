@@ -39,4 +39,6 @@ stay_type: vakantiewoning
 stay_note: "Cottage The Pump House op het landgoed, voor 2 tot 4 personen"
 stay_note_en: "The Pump House cottage on the estate, for 2 to 4 people"
 airbnb_url: "https://www.airbnb.com/rooms/930349655535968668"
+taste_note: "Rondleidingen en proeverijen, en wandelingen over de South Downs"
+taste_note_en: "Tours and tastings, and walks across the South Downs"
 ---

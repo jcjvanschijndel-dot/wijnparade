@@ -29,4 +29,6 @@ description_en: >-
   extremely rare Schlossböckelheimer Kupfergrube GG and Oberhäuser Brücke
   Eiswein. Top tip: there's also a Chardonnay in the range, and it's
   surprisingly good.
+taste_note: "Proeverij op afspraak, en een wandelroute langs de topwijngaarden"
+taste_note_en: "Tasting by appointment, and a walking route past the top vineyards"
 ---

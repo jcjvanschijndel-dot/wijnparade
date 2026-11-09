@@ -23,4 +23,6 @@ description_en: >-
   most consistent Tokaji labels. Tours and tastings by appointment in Tolcsva.
   The historic village, the cellars and the vineyards together make a unique
   experience.
+taste_note: "Rondleidingen en proeverijen op afspraak in Tolcsva"
+taste_note_en: "Tours and tastings by appointment in Tolcsva"
 ---

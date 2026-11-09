@@ -30,4 +30,6 @@ description_en: >-
   A picturesque little terrace by the characteristic farmhouse, French chansons
   from a small speaker, and wines for sale in the wine shop. Tastings and tours
   by reservation. Book well in advance for the Wijnrestaurant op het Land.
+taste_note: "Proeverijen en rondleidingen op reservering"
+taste_note_en: "Tastings and tours by reservation"
 ---

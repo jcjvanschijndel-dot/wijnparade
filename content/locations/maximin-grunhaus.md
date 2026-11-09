@@ -28,4 +28,6 @@ description_en: >-
   castle, and you can visit every day. Special times to visit: the open day on
   the weekend after Ascension Day and the Christmas weekend in the festively
   decorated castle.
+taste_note: "Dagelijks proeven in de Vinothek in het historische persgebouw"
+taste_note_en: "Daily tastings in the Vinothek in the historic press house"
 ---

@@ -21,4 +21,6 @@ description_en: >-
 stay_type: hotel
 stay_note: "Viersterren Epicurean Hotel met zwembad tussen de wijngaarden"
 stay_note_en: "Four-star Epicurean Hotel with a pool among the vineyards"
+taste_note: "Proeverijen in de wijnkelder en bezoek aan de wijngaarden"
+taste_note_en: "Tastings in the cellar and visits to the vineyards"
 ---

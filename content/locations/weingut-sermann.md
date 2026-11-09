@@ -19,4 +19,6 @@ description_en: >-
   other side of the Ahr valley from Bad Neuenahr, and they have one of the
   better restaurants in the area, called Thüres. Ideal for combining lunch with
   a tasting here!
+taste_note: "Proeverij te combineren met lunch"
+taste_note_en: "Tasting to combine with lunch"
 ---

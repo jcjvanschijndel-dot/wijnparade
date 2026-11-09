@@ -39,4 +39,6 @@ description_en: >-
   hectares of vineyards spread over the top sites Maltesergarten and Sonnhohle
   (Heitersheim), Schlossberg (Staufen/Grunern) and Castellberg
   (Ballrechten-Dottingen).
+taste_note: "Persoonlijke proeverij in de wijnkelder, met ruim de tijd"
+taste_note_en: "Personal tasting in the cellar, without hurry"
 ---

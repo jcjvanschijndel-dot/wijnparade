@@ -26,4 +26,6 @@ description_en: >-
   in the bottle and is held upside down before serving while the sediment is
   removed, live at the table. Visits by appointment. Aleš is happy to welcome
   visitors to his historic cellar.
+taste_note: "Bezoek op afspraak in de historische kelder"
+taste_note_en: "Visits by appointment in the historic cellar"
 ---

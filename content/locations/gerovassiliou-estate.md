@@ -23,4 +23,6 @@ description_en: >-
   collection of corkscrews in the world, more than 4,000 of them. The wine
   museum and tasting room on the estate are open daily. Tours with tasting by
   appointment. The museum is worth a visit in its own right.
+taste_note: "Wijnmuseum en proeflokaal dagelijks open; rondleidingen met proeverij op afspraak"
+taste_note_en: "Wine museum and tasting room open daily; guided tours with tasting by appointment"
 ---

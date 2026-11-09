@@ -24,4 +24,6 @@ description_en: >-
   The vineyard can be visited all year round: you can walk, taste wine and buy bottles in the shop, and there are chairs made from old wine barrels between the rows. Guided tours with tasting are available by appointment. Recommended for a day out in the Betuwe, combined with the small fortified town of Buren.
 image: /uploads/betuws-wijndomein.webp
 website: https://www.betuwswijndomein.nl/
+taste_note: "Het hele jaar wandelen en proeven; rondleiding met proeverij op afspraak"
+taste_note_en: "Walk and taste all year round; guided tour with tasting by appointment"
 ---

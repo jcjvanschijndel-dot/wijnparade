@@ -24,4 +24,6 @@ description_en: >-
   steep, terraced gneiss and granite slopes above the Danube. Visits by
   appointment in Weißenkirchen, with a tasting in the historic cellar or on the
   terrace overlooking the Danube.
+taste_note: "Bezoek op afspraak, proeven in de kelder of op het terras aan de Donau"
+taste_note_en: "Visits by appointment, tasting in the cellar or on the terrace by the Danube"
 ---

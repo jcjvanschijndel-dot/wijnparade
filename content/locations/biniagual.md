@@ -27,4 +27,6 @@ description_en: >-
   charisma and professionalism, and visitors regularly call the visit
   "unforgettable." You can also buy wine directly at cellar-door prices, or have
   it delivered home after your visit.
+taste_note: "Vinoteca het hele jaar open zonder reservering, of een rondleiding van twee uur"
+taste_note_en: "Vinoteca open all year without booking, or a two-hour guided tour"
 ---

@@ -24,4 +24,6 @@ description_en: >-
   The wine shop is open on Friday and Saturday afternoons from April to December. A guided tour with tasting, lasting about an hour and a half, is available by appointment. Note: sat navs often send you to Egypte 3 — follow the sign at the entrance of number 7. Recommended for anyone in Friesland who wants to see how wine is made this far north.
 image: /uploads/wijngaard-de-frysling.webp
 website: https://frysling.nl/
+taste_note: "Winkel april tot december op vrijdag- en zaterdagmiddag; rondleiding met proeverij op afspraak"
+taste_note_en: "Shop open Friday and Saturday afternoons from April to December; guided tour with tasting by appointment"
 ---

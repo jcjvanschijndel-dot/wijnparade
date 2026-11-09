@@ -34,4 +34,6 @@ description_en: >-
   through the steepest slate vineyards in the valley towards Kloster Marienthal.
   The restaurant next to the winery serves a Vesperteller (a cold platter) with
   a glass of wine by the vineyard, one of the nicer stops in the region.
+taste_note: "Ontvangst door de familie zelf, met proeverij"
+taste_note_en: "Welcomed by the family itself, with a tasting"
 ---

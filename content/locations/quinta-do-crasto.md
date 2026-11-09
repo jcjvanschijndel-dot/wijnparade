@@ -23,4 +23,6 @@ description_en: >-
   visits and tastings, you can also combine your visit with a boat trip. Walk
   through the terraces, see the iconic Vinha da Ponte vineyard, and enjoy the
   view.
+taste_note: "Kelderbezoek en proeverij, te combineren met een boottocht over de Douro"
+taste_note_en: "Cellar visit and tasting, which can be combined with a boat trip on the Douro"
 ---

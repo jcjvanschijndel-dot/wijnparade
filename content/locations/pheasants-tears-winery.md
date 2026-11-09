@@ -30,4 +30,6 @@ description_en: >-
   open to walk-ins, and the winery can be visited in season. Sighnaghi itself is
   well worth it: small cobbled lanes and panoramic views over the Alazani valley
   and the Caucasus.
+taste_note: "Restaurant dagelijks open; de wijnmakerij is in het seizoen te bezoeken"
+taste_note_en: "Restaurant open daily; the winery can be visited in season"
 ---

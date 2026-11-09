@@ -24,4 +24,6 @@ description_en: >-
   but warm cellar with vaults from 1829 and 80 wooden casks, each holding the
   harvest from a single plot. Four Grosse Lagen, Aulerde, Kirchspiel, Morstein
   and Brunnenhäuschen, each with an entirely different character.
+taste_note: "Bezoek op afspraak in de gewelfde kelder uit 1829"
+taste_note_en: "Visits by appointment in the vaulted cellar from 1829"
 ---
