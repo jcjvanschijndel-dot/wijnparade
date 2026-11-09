@@ -29,4 +29,6 @@ stay_type: hotel
 stay_note: "Vineyard suites in een boerderij uit de 13e eeuw"
 stay_note_en: "Vineyard suites in a 13th-century farmhouse"
 booking_url: "https://www.booking.com/hotel/it/salcheto-winehouse.html"
+taste_note: "Rondleidingen met proeverij"
+taste_note_en: "Guided tours with tastings"
 ---

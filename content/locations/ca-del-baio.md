@@ -25,4 +25,6 @@ description_en: >-
   tastings are often led by a family member: a personal, welcoming experience
   that stands in stark contrast to how closed off some other top names in the
   area are.
+taste_note: "Rondleiding en proeverij, vaak met een familielid"
+taste_note_en: "Tour and tasting, often with a member of the family"
 ---

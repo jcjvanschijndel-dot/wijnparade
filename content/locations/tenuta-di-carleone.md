@@ -21,4 +21,6 @@ description_en: >-
   is personal, intimate and unpretentious. The view from the tasting room over
   the vineyards is breathtaking. Visitors unanimously recommend it as one of the
   finest wine visits in Chianti.
+taste_note: "Persoonlijke proeverij met uitzicht over de wijngaarden"
+taste_note_en: "Personal tasting with views over the vineyards"
 ---

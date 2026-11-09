@@ -54,4 +54,6 @@ description_en: >-
   Rinuccio 1180 is the restaurant right on the vineyard, with impressive
   cooking, Antinori wines and staff who give expert advice on wine choices. Book
   well in advance for a window or terrace table. Open for lunch and dinner.
+taste_note: "Tinaia Tour met film, rondleiding door de in de heuvel gebouwde wijnmakerij en proeverij"
+taste_note_en: "Tinaia Tour with a film, a tour of the winery built into the hill and a tasting"
 ---

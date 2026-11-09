@@ -26,4 +26,6 @@ description_en: >-
 stay_type: agriturismo
 stay_note: "Speziale Wine Resort in Verduno"
 stay_note_en: "Speziale Wine Resort in Verduno"
+taste_note: "Proeverij op afspraak in het oude stenen wijnhuis"
+taste_note_en: "Tasting by appointment in the old stone winery"
 ---

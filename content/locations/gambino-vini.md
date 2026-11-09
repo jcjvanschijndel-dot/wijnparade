@@ -17,4 +17,6 @@ description_en: >-
   pouring: new wines, new snacks, not a moment of silence. A fun tradition:
   hard-boiled eggs to line your stomach before you start drinking. On clear days
   there's a fantastic view over Etna and the surroundings.
+taste_note: "Proeverij met hapjes in het restaurant"
+taste_note_en: "Tasting with snacks in the restaurant"
 ---

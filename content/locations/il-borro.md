@@ -35,4 +35,6 @@ stay_type: hotel
 stay_note: "Relais & Châteaux met suites in het middeleeuwse dorp"
 stay_note_en: "Relais & Châteaux with suites in the medieval village"
 booking_url: "https://www.booking.com/hotel/it/ilborro.html"
+taste_note: "Rondleiding en proeverij in de historische kelder, ook zonder overnachting"
+taste_note_en: "Tour and tasting in the historic cellar, also for non-residents"
 ---

@@ -36,4 +36,6 @@ description_en: >-
   where 27 different grape varieties from the region are grown; visit the
   petting farm (local chicken breeds, geese, pigeons, peacocks, goats, rabbits,
   a pony and a horse); and visit the farm shop.
+taste_note: "Gratis en het hele jaar: wandelen door wijngaarden en olijfbomen en proeven van wijn, olie en honing"
+taste_note_en: "Free all year: walk through the vineyards and olive groves and taste wine, oil and honey"
 ---

@@ -27,4 +27,6 @@ description_en: >-
   best of Barbaresco. Tastings by appointment in a family atmosphere: this is
   not a tourist attraction but a working winery where you deal directly with the
   owner. Booking in advance is essential.
+taste_note: "Proeverij op afspraak met de eigenaar zelf; reserveren nodig"
+taste_note_en: "Tasting by appointment with the owner himself; booking required"
 ---

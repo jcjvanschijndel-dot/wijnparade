@@ -52,4 +52,6 @@ description_en: >-
   blend, from plots in Monforte d'Alba. Jeremy Seysses of Domaine Dujac
   (Burgundy), a close friend of Elena and Luca, described it as "a thrilling
   addition to the firmament of star producers."
+taste_note: "Dagelijks open, ook zondag; begeleide proeverijen op afspraak"
+taste_note_en: "Open daily, Sundays included; guided tastings by appointment"
 ---

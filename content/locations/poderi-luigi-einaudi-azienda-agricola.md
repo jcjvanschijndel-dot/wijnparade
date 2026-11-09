@@ -20,4 +20,6 @@ description_en: >-
 stay_type: hotel
 stay_note: "Relais dei Poderi Einaudi op het landgoed"
 stay_note_en: "Relais dei Poderi Einaudi on the estate"
+taste_note: "Rondleiding en proeverij in de proefruimte"
+taste_note_en: "Tour and tasting in the tasting room"
 ---

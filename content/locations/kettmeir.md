@@ -18,4 +18,6 @@ description_en: >-
   (Lago di Caldaro), with a long tradition in both still and sparkling wine.
   Tastings of the classic Alto Adige grapes, with a lovely lakeside location as
   a bonus: easy to combine with a walk or bike ride along the water.
+taste_note: "Proeverijen van de Alto Adige-druiven, bij het meer"
+taste_note_en: "Tastings of the Alto Adige grapes, by the lake"
 ---

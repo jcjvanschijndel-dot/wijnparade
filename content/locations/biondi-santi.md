@@ -18,4 +18,6 @@ description_en: >-
   Standard tours and tastings from €15 per person (the price varies with the
   selection). A special touch: the chance to buy rare vintage wines that have
   never left the estate before, at a corresponding price.
+taste_note: "Rondleidingen en proeverijen; door de week alleen op afspraak"
+taste_note_en: "Tours and tastings; on weekdays by appointment only"
 ---

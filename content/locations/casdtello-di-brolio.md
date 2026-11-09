@@ -31,4 +31,6 @@ description_en: >-
   castle, L'Osteria del Castello serves skilfully reworked traditional Tuscan
   dishes. Dinner is included for those on the Sunset Tour; other visitors can
   book the osteria separately, at least two days in advance.
+taste_note: "Van een glas aan de enoteca tot masterclasses en de Sunset Tour met diner; reserveer ruim vooraf"
+taste_note_en: "From a glass at the enoteca to masterclasses and the Sunset Tour with dinner; book well ahead"
 ---

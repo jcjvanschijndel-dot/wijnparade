@@ -13,6 +13,8 @@ description: >-
 
 
   Wijngaarden in La Morra (Conca, Bricco Luciani, Gallinotto) en in Serralunga. Barolo, Barbera d'Alba, Dolcetto d'Alba, Langhe Nebbiolo en Freisa. Wijnbar op het domein met uitzicht over de Langhe-heuvels. Ook agriturismo met appartementen.
+
+  De proefruimte is open van maandag tot zaterdag; reserveren wordt sterk aangeraden.
 image: /uploads/mauro-molino.webp
 website: https://www.mauromolino.com/
 description_en: >-
@@ -24,4 +26,8 @@ description_en: >-
   Luciani, Gallinotto) and in Serralunga. Barolo, Barbera d'Alba, Dolcetto
   d'Alba, Langhe Nebbiolo and Freisa. A wine bar on the estate overlooking the
   Langhe hills. Also an agriturismo with apartments.
+
+  The tasting room is open Monday to Saturday; booking is strongly recommended.
+taste_note: "Proeven in de proefruimte, maandag tot zaterdag; reserveren aangeraden"
+taste_note_en: "Tastings in the tasting room, Monday to Saturday; booking recommended"
 ---

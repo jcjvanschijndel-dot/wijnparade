@@ -34,4 +34,6 @@ description_en: >-
   house wines are served alongside traditional Valtellina dishes: bresaola,
   pizzoccheri and sciatt are the regional classics. The location above Sondrio
   gives a breathtaking view over the valley and the Alps.
+taste_note: "Kelderrondleiding en begeleide proeverij"
+taste_note_en: "Cellar tour and guided tasting"
 ---

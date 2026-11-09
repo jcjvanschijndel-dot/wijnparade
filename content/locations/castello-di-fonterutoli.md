@@ -35,4 +35,6 @@ stay_type: hotel
 stay_note: "Wine resort met 21 kamers, suites en appartementen in het middeleeuwse gehucht"
 stay_note_en: "Wine resort with 21 rooms, suites and apartments in the medieval hamlet"
 booking_url: "https://www.booking.com/hotel/it/locanda-di-fonterutoli.html"
+taste_note: "Proeverij en eten in de Osteria, à la carte of met degustatiemenu"
+taste_note_en: "Tasting and dining at the Osteria, à la carte or a tasting menu"
 ---

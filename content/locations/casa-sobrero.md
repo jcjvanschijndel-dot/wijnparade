@@ -41,4 +41,6 @@ stay_type: hotel
 stay_note: "Relais met kamers en een infinity pool met uitzicht op de Barolo-heuvels"
 stay_note_en: "Relais with rooms and an infinity pool overlooking the Barolo hills"
 booking_url: "https://www.booking.com/hotel/it/relais-casa-sobrero.html"
+taste_note: "Proeven in de cantina, dagelijks open, ook op zondag"
+taste_note_en: "Tastings at the winery, open daily, Sundays included"
 ---
