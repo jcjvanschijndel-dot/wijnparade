@@ -178,6 +178,25 @@ function bookingLink(url, sid) {
   if (!bookingTemplate) return url;
   return bookingTemplate.replace('{url}', encodeURIComponent(url)).replace('{sid}', encodeURIComponent(sid || ''));
 }
+// Winalist (proeverijen boeken): CMS-veld winalist_url, affiliate.json winalist.link_template
+const winalistTemplate = String((AFFILIATE.winalist || {}).link_template || '').trim();
+function winalistLink(url, sid) {
+  url = String(url || '').trim();
+  if (!/^https:\/\/(www\.)?winalist\.com\//.test(url)) return '';
+  if (!winalistTemplate) return url;
+  return winalistTemplate.replace('{url}', encodeURIComponent(url)).replace('{sid}', encodeURIComponent(sid || ''));
+}
+const TASTE_TEXT = {
+  nl: { btn: 'Boek een proeverij →', disclosure: 'Boek je via Winalist, dan krijgt de_wijnparade een kleine vergoeding. Jij betaalt niets extra.' },
+  en: { btn: 'Book a tasting →', disclosure: 'If you book through Winalist, de_wijnparade receives a small commission at no extra cost to you.' },
+};
+const tasteButton = (loc, lang, { disclosure = true } = {}) => {
+  const link = winalistLink(loc.winalist_url, loc._id);
+  if (!link) return '';
+  const esc = x => String(x).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+  return `<a href="${esc(link)}" target="_blank" rel="sponsored noopener" class="website-btn taste-btn">${TASTE_TEXT[lang].btn}</a>`
+    + (disclosure && winalistTemplate ? `<p class="loc-stay-disclosure">${TASTE_TEXT[lang].disclosure}</p>` : '');
+};
 // Opmaak van het vlak Overnachten (locatiepagina's en artikelen)
 const STAY_CSS = `.loc-stay{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem;color:var(--gray-900)}
     .loc-stay .loc-address-label{font-weight:600;color:var(--navy);margin-bottom:.35rem}
@@ -187,7 +206,8 @@ const STAY_CSS = `.loc-stay{padding:.75rem 1rem;background:var(--gray-50);border
     .loc-stay-btn{display:inline-block;padding:.5rem 1rem;background:var(--navy);color:#fff!important;text-decoration:none!important;border-radius:8px;font-weight:500;font-size:.85rem}
     .loc-stay-btn-alt{background:#fff;color:var(--navy)!important;border:1px solid var(--navy)}
     .loc-stay-link{display:inline-block;margin-top:.4rem;color:var(--navy);font-weight:500}
-    .loc-stay-disclosure{margin-top:.5rem!important;font-size:.72rem;color:var(--gray-600)}`;
+    .loc-stay-disclosure{margin-top:.5rem!important;font-size:.72rem;color:var(--gray-600)}
+    .taste-line .taste-btn{display:inline-block;padding:.5rem 1rem;background:var(--navy);color:#fff!important;text-decoration:none!important;border-radius:8px;font-weight:500;font-size:.85rem;margin:0}`;
 // In artikelen: een alinea met alleen [[overnachten:locatie-id]] wordt het vlak Overnachten van die locatie
 function injectStayBlocks(html, lang) {
   let any = false;
@@ -197,7 +217,17 @@ function injectStayBlocks(html, lang) {
     if (bookingLink(loc.booking_url, loc._id)) any = true;
     return stayBlock(loc, lang, { disclosure: false });
   });
-  return any && bookingTemplate ? out + `<p class="loc-stay-disclosure">${LOC_TEXT[lang].stayDisclosure}</p>` : out;
+  let anyTaste = false;
+  const out2 = out.replace(/<p>\[\[proeverij:([^\]]+)\]\]<\/p>/g, (m, id) => {
+    const loc = allLocations.find(l => l._id === id.trim());
+    const btn = loc && tasteButton(loc, lang, { disclosure: false });
+    if (!btn) { console.warn(`  ⚠️  artikel: [[proeverij:${id}]] heeft geen Winalist-link`); return ''; }
+    anyTaste = true;
+    return `<p class="taste-line">${btn}</p>`;
+  });
+  return out2
+    + (any && bookingTemplate ? `<p class="loc-stay-disclosure">${LOC_TEXT[lang].stayDisclosure}</p>` : '')
+    + (anyTaste && winalistTemplate ? `<p class="loc-stay-disclosure">${TASTE_TEXT[lang].disclosure}</p>` : '');
 }
 const stayBlock = (loc, lang, { disclosure = true } = {}) => {
   if (!hasStay(loc)) return '';
@@ -277,6 +307,9 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     .info-value{font-size:1rem;color:var(--gray-900);line-height:1.8}
     .info-value p+p{margin-top:1em}
     .website-btn{display:inline-block;padding:0.75rem 1.5rem;background:var(--navy);color:#fff;text-decoration:none;border-radius:8px;font-weight:500;margin:1rem 0}
+    .loc-btns{display:flex;flex-wrap:wrap;gap:.5rem .75rem;margin:1rem 0}
+    .loc-btns .website-btn{margin:0}
+    .website-btn-alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
     @media(max-width:768px){.location-hero{height:250px}.location-map{height:300px}.loc-title{font-size:1.3rem}}
   </style>
 </head>
@@ -300,7 +333,8 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     <div class="info-section"><div class="info-value">${String(description).split(/\n+/).map(p => `<p>${p}</p>`).join('')}</div></div>
     ${stayBlock(loc, lang)}
     ${loc.address ? `<div class="loc-address"><span class="loc-address-label">${t.address}</span>${mapUrl ? `<a href="${mapUrl}">${loc.address}</a>` : `<span>${loc.address}</span>`}</div>` : ''}
-    ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
+    <div class="loc-btns">${tasteButton(loc, lang, { disclosure: false })}${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn${winalistLink(loc.winalist_url) ? ' website-btn-alt' : ''}">${t.website}</a>` : ''}</div>
+    ${winalistLink(loc.winalist_url) && winalistTemplate ? `<p class="loc-stay-disclosure">${TASTE_TEXT[lang].disclosure}</p>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
   </div></main>
   ${beforeCard}${igFollowCard(lang)}
