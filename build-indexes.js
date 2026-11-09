@@ -178,7 +178,28 @@ function bookingLink(url, sid) {
   if (!bookingTemplate) return url;
   return bookingTemplate.replace('{url}', encodeURIComponent(url)).replace('{sid}', encodeURIComponent(sid || ''));
 }
-const stayBlock = (loc, lang) => {
+// Opmaak van het vlak Overnachten (locatiepagina's en artikelen)
+const STAY_CSS = `.loc-stay{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem;color:var(--gray-900)}
+    .loc-stay .loc-address-label{font-weight:600;color:var(--navy);margin-bottom:.35rem}
+    .loc-stay p{margin:0}
+    .loc-stay strong{font-weight:600}
+    .loc-stay-btns{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.65rem}
+    .loc-stay-btn{display:inline-block;padding:.5rem 1rem;background:var(--navy);color:#fff!important;text-decoration:none!important;border-radius:8px;font-weight:500;font-size:.85rem}
+    .loc-stay-btn-alt{background:#fff;color:var(--navy)!important;border:1px solid var(--navy)}
+    .loc-stay-link{display:inline-block;margin-top:.4rem;color:var(--navy);font-weight:500}
+    .loc-stay-disclosure{margin-top:.5rem!important;font-size:.72rem;color:var(--gray-600)}`;
+// In artikelen: een alinea met alleen [[overnachten:locatie-id]] wordt het vlak Overnachten van die locatie
+function injectStayBlocks(html, lang) {
+  let any = false;
+  const out = html.replace(/<p>\[\[overnachten:([^\]]+)\]\]<\/p>/g, (m, id) => {
+    const loc = allLocations.find(l => l._id === id.trim());
+    if (!loc || !hasStay(loc)) { console.warn(`  ⚠️  artikel: [[overnachten:${id}]] heeft geen overnachting`); return ''; }
+    if (bookingLink(loc.booking_url, loc._id)) any = true;
+    return stayBlock(loc, lang, { disclosure: false });
+  });
+  return any && bookingTemplate ? out + `<p class="loc-stay-disclosure">${LOC_TEXT[lang].stayDisclosure}</p>` : out;
+}
+const stayBlock = (loc, lang, { disclosure = true } = {}) => {
   if (!hasStay(loc)) return '';
   const t = LOC_TEXT[lang];
   const esc = x => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
@@ -193,7 +214,7 @@ const stayBlock = (loc, lang) => {
   return `<div class="loc-stay"><div class="loc-address-label">${t.stay}</div>
       <p><strong>${STAY_TYPES[loc.stay_type][lang]}</strong>${note ? ` · ${esc(note)}` : ''}</p>
       ${btns ? `<div class="loc-stay-btns">${btns}</div>` : site ? `<a href="${esc(site)}" target="_blank" rel="noopener" class="loc-stay-link">${t.stayWebsite}</a>` : ''}
-      ${booking && bookingTemplate ? `<p class="loc-stay-disclosure">${t.stayDisclosure}</p>` : ''}</div>`;
+      ${disclosure && booking && bookingTemplate ? `<p class="loc-stay-disclosure">${t.stayDisclosure}</p>` : ''}</div>`;
 };
 // Onderscheidingen (CMS-veld "awards"): [{ name, detail, detail_en, year }]
 const locAwards = loc => (Array.isArray(loc.awards) ? loc.awards : [])
@@ -243,15 +264,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     .loc-address-label{font-weight:600;color:var(--navy)}
     .loc-awards{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem}
     .loc-awards .loc-address-label{margin-bottom:.35rem}
-    .loc-stay{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem;color:var(--gray-900)}
-    .loc-stay .loc-address-label{margin-bottom:.35rem}
-    .loc-stay p{margin:0}
-    .loc-stay strong{font-weight:600}
-    .loc-stay-btns{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.65rem}
-    .loc-stay-btn{display:inline-block;padding:.5rem 1rem;background:var(--navy);color:#fff;text-decoration:none;border-radius:8px;font-weight:500;font-size:.85rem}
-    .loc-stay-btn-alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
-    .loc-stay-link{display:inline-block;margin-top:.4rem;color:var(--navy);font-weight:500}
-    .loc-stay-disclosure{margin-top:.5rem!important;font-size:.72rem;color:var(--gray-600)}
+    ${STAY_CSS}
     .loc-awards ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.3rem 1.5rem;list-style:none;margin:0;padding:0}
     .loc-awards li{display:flex;align-items:center;gap:.45rem;min-width:0;white-space:nowrap;color:var(--gray-900)}
     .loc-awards li strong{font-weight:600;color:var(--navy);flex-shrink:0}
@@ -976,6 +989,7 @@ function renderArticlePage({ lang = 'nl', title, description, date, image, bodyH
     .article-body blockquote{border-left:3px solid var(--navy);padding-left:1rem;color:var(--gray-600);font-style:italic}
     .article-body img{width:100%;max-height:420px;object-fit:cover;border-radius:10px}
     .article-related{max-width:720px;margin:0 auto 2.5rem}
+    ${STAY_CSS}
     .article-related h2{font-size:1.2rem;color:var(--navy);margin-bottom:1rem}
     .article-related ul{list-style:none;padding:0;display:grid;gap:0.6rem}
     .article-related li a{color:var(--navy);font-weight:600}
@@ -2119,12 +2133,12 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     for (const a of articles) {
       const nlP = nlArticlePath(a), enP = enArticlePath(a);
       fs.writeFileSync(path.join(__dirname, nlP.slice(1) + '.html'), renderArticlePage({
-        title: a.title, description: a.description || '', date: a.date, image: a.image, bodyHtml: mdToHtml(a.body),
+        title: a.title, description: a.description || '', date: a.date, image: a.image, bodyHtml: injectStayBlocks(mdToHtml(a.body), 'nl'),
         pageUrl: SITE_URL + nlP, logoHref: '/', relatedHtml: articleRelated(a, 'nl'),
         afterHeader: breadcrumb([{ name: 'Home', path: '/' }, NL_ART, { name: a.title }]) }));
       if (hasEn(a)) {
         fs.writeFileSync(path.join(__dirname, enP.slice(1) + '.html'), renderArticlePage({
-          lang: 'en', title: a.title_en, description: a.description_en || '', date: a.date, image: a.image, bodyHtml: mdToHtml(a.body_en),
+          lang: 'en', title: a.title_en, description: a.description_en || '', date: a.date, image: a.image, bodyHtml: injectStayBlocks(mdToHtml(a.body_en), 'en'),
           pageUrl: SITE_URL + enP, logoHref: '/en/', relatedHtml: articleRelated(a, 'en'),
           headExtra: altLinks(nlP, enP), headerExtra: langMenu('en', nlP, enP),
           afterHeader: breadcrumb([HOME_EN, EN_ART, { name: a.title_en }], 'en') }));
