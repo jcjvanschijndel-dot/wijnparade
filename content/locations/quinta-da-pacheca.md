@@ -25,4 +25,8 @@ description_en: >-
   anywhere else. The "Wine House" restaurant, led by chef Carlos Pires, serves
   traditional Portuguese dishes such as roast cod and marinated sardines, served
   with the estate's own wines: think of the Superior Red or the Vale de Abraão.
+stay_type: hotel
+stay_note: "The Wine House Hotel, ook met suites in wijnvaten"
+stay_note_en: "The Wine House Hotel, including suites in wine barrels"
+booking_url: "https://www.booking.com/hotel/pt/the-wine-house.html"
 ---

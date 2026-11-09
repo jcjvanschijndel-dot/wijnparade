@@ -26,4 +26,7 @@ description_en: >-
   cheeses. The estate also offers accommodation in renovated stone hamlets
   spread across the property, fully furnished and surrounded by vineyards and
   nature. Ideal if you want to experience the estate at a slower pace.
+stay_type: vakantiewoning
+stay_note: "Vakantiehuizen in de gehuchten van het domein"
+stay_note_en: "Holiday houses in the estate's hamlets"
 ---

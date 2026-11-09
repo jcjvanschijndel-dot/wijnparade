@@ -24,4 +24,8 @@ description_en: >-
   The wine list features many wines from Málaga and the Sierras de Málaga. That suits the kitchen, which also leans on local produce. Think goat's cheese, honey from Frigiliana and chivo lechal (young kid goat). In the tapas bar there is a list of wines, vermouths and sparkling wines by the glass.
 image: /uploads/arte-de-cozina.webp
 website: https://www.artedecozina.com/
+stay_type: hotel
+stay_note: "Kleine kamers boven het restaurant"
+stay_note_en: "Small rooms above the restaurant"
+booking_url: "https://www.booking.com/hotel/es/arte-de-cozina-antequera.html"
 ---

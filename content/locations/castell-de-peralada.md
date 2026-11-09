@@ -22,4 +22,8 @@ description_en: >-
   five-star hotel, a wine spa and a Michelin-starred restaurant, all on the same
   estate. You have several options for tastings and tours, so do take a look at
   the website.
+stay_type: hotel
+stay_note: "Hotel Peralada Wine Spa & Golf, met 62 kamers"
+stay_note_en: "Hotel Peralada Wine Spa & Golf, with 62 rooms"
+booking_url: "https://www.booking.com/hotel/es/peralada-wine-spa-golf.html"
 ---

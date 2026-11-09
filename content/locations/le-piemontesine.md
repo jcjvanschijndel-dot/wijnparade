@@ -24,4 +24,7 @@ description_en: >-
   The wine list is not large but well chosen, with many wines from the Langhe and the rest of Piedmont, a few biodynamic names and French wines. On a clear day you can see as far as the Alps, and you can stay the night too. Recommended for anyone on a wine trip through Piedmont looking for the quiet of the Alta Langa.
 image: /uploads/le-piemontesine.webp
 website: https://www.le-piemontesine.it/
+stay_type: hotel
+stay_note: "Tien kamers en een suite met uitzicht over de heuvels"
+stay_note_en: "Ten rooms and a suite with views over the hills"
 ---

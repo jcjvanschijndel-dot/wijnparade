@@ -43,4 +43,8 @@ description_en: >-
   single-vineyard wine that has earned its place among Italy's best. San Felice
   has three estates: San Felice in Chianti Classico (600 hectares),
   Campogiovanni in Montalcino and Bell'Aja in Bolgheri.
+stay_type: hotel
+stay_note: "Relais & Châteaux in het middeleeuwse dorp, met 40 kamers en 23 suites"
+stay_note_en: "Relais & Châteaux in the medieval village, with 40 rooms and 23 suites"
+booking_url: "https://www.booking.com/hotel/it/borgo-san-felice.html"
 ---

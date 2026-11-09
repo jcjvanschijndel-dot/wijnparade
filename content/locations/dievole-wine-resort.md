@@ -40,4 +40,8 @@ description_en: >-
   olive oil. 27 suites and double rooms spread across several buildings, all
   with beautiful views over vineyards and olive groves. Two panoramic pools
   overlooking the vineyards, a bar and a children's playground.
+stay_type: hotel
+stay_note: "Wine resort met 28 kamers in gebouwen uit de 16e eeuw"
+stay_note_en: "Wine resort with 28 rooms in 16th-century buildings"
+booking_url: "https://www.booking.com/hotel/it/wine-resort-dievole.html"
 ---

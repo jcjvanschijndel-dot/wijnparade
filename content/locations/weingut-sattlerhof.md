@@ -18,4 +18,7 @@ description_en: >-
   vineyards and various activities on the farm. Besides the winery, Sattlerhof
   has a gourmet restaurant (early May to late October), a Farmhouse Bistro and
   an Epicurean Hotel.
+stay_type: hotel
+stay_note: "Viersterren Epicurean Hotel met zwembad tussen de wijngaarden"
+stay_note_en: "Four-star Epicurean Hotel with a pool among the vineyards"
 ---

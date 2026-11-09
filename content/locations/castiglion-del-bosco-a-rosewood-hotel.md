@@ -41,4 +41,8 @@ description_en: >-
   ingredients from its own gardens, in the evening). The Lobby Bar, with an
   authentic Tuscan open fireplace, serves stuzzichini, afternoon tea and
   award-winning Brunello di Montalcino wines.
+stay_type: hotel
+stay_note: "42 suites en 11 villa's op het landgoed"
+stay_note_en: "42 suites and 11 villas on the estate"
+booking_url: "https://www.booking.com/hotel/it/castiglion-del-bosco.html"
 ---

@@ -24,4 +24,7 @@ description_en: >-
   of the house's great strengths: impressive depth of vintages, very fair
   prices, and a worldwide selection with a clear focus on the top producers of
   Germany and France.
+stay_type: hotel
+stay_note: "Hotel bij het restaurant"
+stay_note_en: "Hotel next to the restaurant"
 ---

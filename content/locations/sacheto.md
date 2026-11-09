@@ -25,4 +25,8 @@ description_en: >-
   Salcheto is a winery in Montepulciano, in Tuscany, home of Vino Nobile di
   Montepulciano. Recommended during a wine trip through Tuscany, and easy to
   combine with a visit to Montalcino and Pienza.
+stay_type: hotel
+stay_note: "Vineyard suites in een boerderij uit de 13e eeuw"
+stay_note_en: "Vineyard suites in a 13th-century farmhouse"
+booking_url: "https://www.booking.com/hotel/it/salcheto-winehouse.html"
 ---

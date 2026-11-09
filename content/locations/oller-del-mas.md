@@ -32,4 +32,7 @@ description_en: >-
   wine weekend in Catalonia.
 image: /uploads/oller-del-mas.webp
 website: https://ollerdelmas.com/
+stay_type: hotel
+stay_note: "Les Cabanes: hutten tussen de bomen op het landgoed"
+stay_note_en: "Les Cabanes: cabins among the trees on the estate"
 ---

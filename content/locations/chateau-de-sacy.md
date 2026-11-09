@@ -32,4 +32,8 @@ description_en: >-
   château you can walk to Damien-Buffet, a small producer within walking
   distance, and by car you're quickly at big names like Ruinart (the oldest
   champagne house in the region) and Taittinger.
+stay_type: hotel
+stay_note: "Hotel met 12 kamers en suites boven de wijngaarden"
+stay_note_en: "Hotel with 12 rooms and suites above the vineyards"
+booking_url: "https://www.booking.com/hotel/fr/chateau-de-sacy.html"
 ---

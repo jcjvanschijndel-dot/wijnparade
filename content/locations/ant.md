@@ -36,4 +36,8 @@ description_en: >-
   in one of the apartments in the same building. One set menu of 8 to 9 courses:
   no choice, no menu, except for intolerances. The menu changes every one to two
   months. Eclectic, international cooking with surprising combinations.
+stay_type: appartementen
+stay_note: "Twee appartementen in het oude centrum van Novello"
+stay_note_en: "Two apartments in the old centre of Novello"
+booking_url: "https://www.booking.com/hotel/it/ant-appartamenti-vacanze-novello.html"
 ---

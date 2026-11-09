@@ -26,4 +26,8 @@ description_en: >-
   Langhe Nebbiolo. Visits include a tasting and a magnificent view. There's a
   hotel too, so if you're still looking for somewhere to stay, Dosio is
   definitely an option.
+stay_type: hotel
+stay_note: "Antica Dimora Dosio: vijf kamers en twee suites met uitzicht op de wijngaard"
+stay_note_en: "Antica Dimora Dosio: five rooms and two suites with vineyard views"
+booking_url: "https://www.booking.com/hotel/it/antica-dimora-dosio.html"
 ---

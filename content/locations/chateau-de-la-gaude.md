@@ -35,4 +35,8 @@ description_en: >-
   lunch or dinner) and B'Art (an outdoor bar with terrace for a relaxed aperitif
   in the shade). The estate's own wines (AOP Coteaux d'Aix-en-Provence,
   organically grown) are available in all the restaurants.
+stay_type: hotel
+stay_note: "Vijfsterrenhotel tussen de wijngaarden"
+stay_note_en: "Five-star hotel among the vineyards"
+booking_url: "https://www.booking.com/hotel/fr/chateau-de-la-gaude.html"
 ---

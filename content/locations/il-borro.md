@@ -31,4 +31,8 @@ description_en: >-
   Pratomagno hills. For Petruna, both fermentation and ageing take place in
   amphorae, making it one of the reference wines of the Valdarno di Sopra
   region. The estate produces its own olive oil, vegetables and herbs.
+stay_type: hotel
+stay_note: "Relais & Châteaux met suites in het middeleeuwse dorp"
+stay_note_en: "Relais & Châteaux with suites in the medieval village"
+booking_url: "https://www.booking.com/hotel/it/ilborro.html"
 ---

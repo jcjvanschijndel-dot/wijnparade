@@ -43,4 +43,7 @@ description_en: >-
   meat, local cheeses and sausages. A more accessible alternative if you don't
   want the full tasting menu but still want to eat on the estate. Both are open
   to hotel guests and day visitors. Do check the website for all the options.
+stay_type: hotel
+stay_note: "Hotel & Spa Arzuaga tussen de wijngaarden, met wijnspa"
+stay_note_en: "Hotel & Spa Arzuaga among the vineyards, with a wine spa"
 ---

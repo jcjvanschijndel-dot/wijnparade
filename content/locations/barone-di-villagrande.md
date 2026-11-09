@@ -30,4 +30,8 @@ description_en: >-
   Barone di Villagrande is a winery in Milo, on the eastern flank of Etna in
   Sicily. A lovely place to get to know the volcanic Etna wines, and easy to
   combine with a visit to Taormina.
+stay_type: hotel
+stay_note: "Wine resort met vier kamers en een infinity pool tussen de wijngaarden"
+stay_note_en: "Wine resort with four rooms and an infinity pool among the vines"
+booking_url: "https://www.booking.com/hotel/it/wine-resort-villagrande.html"
 ---

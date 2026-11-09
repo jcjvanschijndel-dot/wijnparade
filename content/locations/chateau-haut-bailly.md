@@ -47,4 +47,8 @@ description_en: >-
   Cooking workshop: learn to cook traditional French recipes, then visit the
   estate and eat your own creations with a glass of Haut-Bailly. Original and
   fun for a group of friends.
+stay_type: gastenkamers
+stay_note: "La Chartreuse: vier gastenkamers op het domein"
+stay_note_en: "La Chartreuse: four guest rooms on the estate"
+booking_url: "https://www.booking.com/hotel/fr/chateau-le-pape.html"
 ---

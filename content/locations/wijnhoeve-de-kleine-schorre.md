@@ -23,4 +23,7 @@ description_en: >-
   You can book a guided tour with tasting, or simply cycle by for a glass and a bite in the tasting room. There is also a farm shop with regional produce, and at the campsite you can spend the night in a wine barrel overlooking the vineyard. Recommended during a day out or holiday in Zeeland.
 image: /uploads/wijnhoeve-de-kleine-schorre.webp
 website: https://www.dekleineschorre.nl/
+stay_type: vakantiewoning
+stay_note: "Slapen in een wijnvat op de camping, met uitzicht op de wijngaard"
+stay_note_en: "Sleep in a wine barrel at the campsite, overlooking the vineyard"
 ---

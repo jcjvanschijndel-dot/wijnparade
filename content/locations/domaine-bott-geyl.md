@@ -28,4 +28,7 @@ description_en: >-
   terrace, three bedrooms and room for up to 10 guests. You literally sleep
   above the wines, with a view of the vineyards. Ideal for a group of friends or
   a family weekend.
+stay_type: vakantiewoning
+stay_note: "Loft van 250 m² boven de kelders, voor maximaal tien personen"
+stay_note_en: "250 m² loft above the cellars, for up to ten people"
 ---

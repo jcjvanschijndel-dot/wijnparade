@@ -29,4 +29,7 @@ description_en: >-
   a view of Montserrat. A peaceful stop on a wine trip through the Penedès.
 image: /uploads/heretat-baltà-de-cela.webp
 website: https://baltadecela.com/
+stay_type: vakantiewoning
+stay_note: "Masia tussen de wijngaarden, te huur als geheel"
+stay_note_en: "Farmhouse among the vineyards, rented as a whole"
 ---

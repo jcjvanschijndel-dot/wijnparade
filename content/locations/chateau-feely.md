@@ -45,4 +45,7 @@ description_en: >-
   guests personally at the train station. Yoga retreats and overnight stays: the
   estate offers eco-friendly accommodation with panoramic views over the
   vineyards, with yoga classes.
+stay_type: vakantiewoning
+stay_note: "Wine Lodge (4 personen) en Wine Cottage (2 personen)"
+stay_note_en: "Wine Lodge (4 people) and Wine Cottage (2 people)"
 ---

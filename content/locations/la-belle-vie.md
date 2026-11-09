@@ -24,4 +24,8 @@ description_en: >-
   more discreet organic and natural wine gems. Nine rooms and suites, designed
   as peaceful havens, with direct access to the two pools, the terrace or the
   garden.
+stay_type: hotel
+stay_note: "Hotel met negen kamers en suites"
+stay_note_en: "Hotel with nine rooms and suites"
+booking_url: "https://www.booking.com/hotel/fr/la-belle-vie-saint-hilaire-d-ozilhan.html"
 ---

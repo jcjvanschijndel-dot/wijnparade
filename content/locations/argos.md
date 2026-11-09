@@ -49,4 +49,8 @@ description_en: >-
   strict 60 km radius, supplemented with produce and herbs from the hotel's own
   garden. An extensive selection of wines from its own vineyards is kept in the
   underground cellar.
+stay_type: hotel
+stay_note: "Grothotel met kamers verspreid over het dorp"
+stay_note_en: "Cave hotel with rooms spread across the village"
+booking_url: "https://www.booking.com/hotel/tr/argos-in-cappadocia.html"
 ---

@@ -29,4 +29,8 @@ description_en: >-
   home-made bread and pasta, the estate's own olive oil and, for example, a
   tartare of locally hunted venison. The wine list naturally revolves around the
   estate's own Chianti Classicos.
+stay_type: hotel
+stay_note: "Kamers in de oude monnikencellen en appartementen op het landgoed"
+stay_note_en: "Rooms in the former monks' cells and apartments on the estate"
+booking_url: "https://www.booking.com/hotel/it/badia-a-coltibuono.html"
 ---

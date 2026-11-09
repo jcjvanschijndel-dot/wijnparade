@@ -31,4 +31,8 @@ description_en: >-
   option with three top wines. Recommended on a wine trip through the Penedès.
 image: /uploads/caves-bolet.webp
 website: https://www.cavasbolet.com/
+stay_type: hotel
+stay_note: "Bolet Casa Modernista: het familiehuis uit 1911, nu een hotel met vijf kamers"
+stay_note_en: "Bolet Casa Modernista: the 1911 family house, now a hotel with five rooms"
+booking_url: "https://www.booking.com/hotel/es/bolet-casa-modernista.html"
 ---

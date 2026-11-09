@@ -28,4 +28,7 @@ description_en: >-
   masterclass in viticulture and blending, get to work in the vineyard yourself
   (and perhaps learn to drive a tractor), and enjoy dinners cooked by a private
   chef.
+stay_type: vakantiewoning
+stay_note: "Twee villa's met eigen zwembad op het landgoed"
+stay_note_en: "Two villas with private pools on the estate"
 ---

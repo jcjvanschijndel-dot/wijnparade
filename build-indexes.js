@@ -148,8 +148,73 @@ function cityFromAddress(addr) {
 // LOCATIEPAGINA-TEMPLATE (NL en EN gebruiken dezelfde opmaak)
 // ============================================================
 const LOC_TEXT = {
-  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', awards: 'Onderscheidingen' },
-  en: { address: 'Address', about: 'About this location', website: 'Visit website →', awards: 'Awards' },
+  nl: { address: 'Adres', about: 'Over deze locatie', website: 'Bezoek website →', awards: 'Onderscheidingen',
+        stay: 'Overnachten', stayBooking: 'Bekijk beschikbaarheid op Booking.com', stayAirbnb: 'Bekijk op Airbnb',
+        stayWebsite: 'Bekijk de kamers op de website →',
+        stayDisclosure: 'Boek je via Booking.com, dan krijgt de_wijnparade een kleine vergoeding. Jij betaalt niets extra.' },
+  en: { address: 'Address', about: 'About this location', website: 'Visit website →', awards: 'Awards',
+        stay: 'Stay here', stayBooking: 'Check availability on Booking.com', stayAirbnb: 'View on Airbnb',
+        stayWebsite: 'See the rooms on the website →',
+        stayDisclosure: 'If you book through Booking.com, de_wijnparade receives a small commission at no extra cost to you.' },
+};
+// Overnachten (CMS-velden stay_type, stay_note, stay_note_en, booking_url, airbnb_url)
+const STAY_TYPES = {
+  hotel:          { nl: 'Hotel', en: 'Hotel' },
+  gastenkamers:   { nl: 'Gastenkamers (B&B)', en: 'Guest rooms (B&B)' },
+  vakantiewoning: { nl: 'Vakantiewoning', en: 'Holiday home' },
+  agriturismo:    { nl: 'Agriturismo', en: 'Agriturismo' },
+  appartementen:  { nl: 'Appartementen', en: 'Apartments' },
+};
+const hasStay = loc => !!(loc && STAY_TYPES[String(loc.stay_type || '').trim()]);
+// Affiliate-instellingen (affiliate.json): booking.link_template met {url} en {sid}, bv. een CJ-deeplink.
+// Leeg = gewone Booking.com-link.
+const AFFILIATE = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(__dirname, 'affiliate.json'), 'utf8')); } catch (e) { return {}; }
+})();
+const bookingTemplate = String((AFFILIATE.booking || {}).link_template || '').trim();
+function bookingLink(url, sid) {
+  url = String(url || '').trim();
+  if (!/^https:\/\/(www\.)?booking\.com\//.test(url)) return '';
+  if (!bookingTemplate) return url;
+  return bookingTemplate.replace('{url}', encodeURIComponent(url)).replace('{sid}', encodeURIComponent(sid || ''));
+}
+// Opmaak van het vlak Overnachten (locatiepagina's en artikelen)
+const STAY_CSS = `.loc-stay{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem;color:var(--gray-900)}
+    .loc-stay .loc-address-label{font-weight:600;color:var(--navy);margin-bottom:.35rem}
+    .loc-stay p{margin:0}
+    .loc-stay strong{font-weight:600}
+    .loc-stay-btns{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.65rem}
+    .loc-stay-btn{display:inline-block;padding:.5rem 1rem;background:var(--navy);color:#fff!important;text-decoration:none!important;border-radius:8px;font-weight:500;font-size:.85rem}
+    .loc-stay-btn-alt{background:#fff;color:var(--navy)!important;border:1px solid var(--navy)}
+    .loc-stay-link{display:inline-block;margin-top:.4rem;color:var(--navy);font-weight:500}
+    .loc-stay-disclosure{margin-top:.5rem!important;font-size:.72rem;color:var(--gray-600)}`;
+// In artikelen: een alinea met alleen [[overnachten:locatie-id]] wordt het vlak Overnachten van die locatie
+function injectStayBlocks(html, lang) {
+  let any = false;
+  const out = html.replace(/<p>\[\[overnachten:([^\]]+)\]\]<\/p>/g, (m, id) => {
+    const loc = allLocations.find(l => l._id === id.trim());
+    if (!loc || !hasStay(loc)) { console.warn(`  ⚠️  artikel: [[overnachten:${id}]] heeft geen overnachting`); return ''; }
+    if (bookingLink(loc.booking_url, loc._id)) any = true;
+    return stayBlock(loc, lang, { disclosure: false });
+  });
+  return any && bookingTemplate ? out + `<p class="loc-stay-disclosure">${LOC_TEXT[lang].stayDisclosure}</p>` : out;
+}
+const stayBlock = (loc, lang, { disclosure = true } = {}) => {
+  if (!hasStay(loc)) return '';
+  const t = LOC_TEXT[lang];
+  const esc = x => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  const note = String((lang === 'en' && loc.stay_note_en) || loc.stay_note || '').trim();
+  const booking = bookingLink(loc.booking_url, loc._id);
+  const airbnb = /^https:\/\/(www\.)?airbnb\.[a-z.]+\//.test(String(loc.airbnb_url || '').trim()) ? String(loc.airbnb_url).trim() : '';
+  const site = loc.website ? (loc.website.startsWith('http') ? loc.website : 'https://' + loc.website) : '';
+  const btns = [
+    booking ? `<a href="${esc(booking)}" target="_blank" rel="sponsored noopener" class="loc-stay-btn">${t.stayBooking}</a>` : '',
+    airbnb ? `<a href="${esc(airbnb)}" target="_blank" rel="noopener" class="loc-stay-btn loc-stay-btn-alt">${t.stayAirbnb}</a>` : '',
+  ].filter(Boolean).join('');
+  return `<div class="loc-stay"><div class="loc-address-label">${t.stay}</div>
+      <p><strong>${STAY_TYPES[loc.stay_type][lang]}</strong>${note ? ` · ${esc(note)}` : ''}</p>
+      ${btns ? `<div class="loc-stay-btns">${btns}</div>` : site ? `<a href="${esc(site)}" target="_blank" rel="noopener" class="loc-stay-link">${t.stayWebsite}</a>` : ''}
+      ${disclosure && booking && bookingTemplate ? `<p class="loc-stay-disclosure">${t.stayDisclosure}</p>` : ''}</div>`;
 };
 // Onderscheidingen (CMS-veld "awards"): [{ name, detail, detail_en, year }]
 const locAwards = loc => (Array.isArray(loc.awards) ? loc.awards : [])
@@ -199,6 +264,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     .loc-address-label{font-weight:600;color:var(--navy)}
     .loc-awards{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem}
     .loc-awards .loc-address-label{margin-bottom:.35rem}
+    ${STAY_CSS}
     .loc-awards ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.3rem 1.5rem;list-style:none;margin:0;padding:0}
     .loc-awards li{display:flex;align-items:center;gap:.45rem;min-width:0;white-space:nowrap;color:var(--gray-900)}
     .loc-awards li strong{font-weight:600;color:var(--navy);flex-shrink:0}
@@ -232,6 +298,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
     <h1 class="loc-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
     ${awardsBlock(loc, lang)}
     <div class="info-section"><div class="info-value">${String(description).split(/\n+/).map(p => `<p>${p}</p>`).join('')}</div></div>
+    ${stayBlock(loc, lang)}
     ${loc.address ? `<div class="loc-address"><span class="loc-address-label">${t.address}</span>${mapUrl ? `<a href="${mapUrl}">${loc.address}</a>` : `<span>${loc.address}</span>`}</div>` : ''}
     ${loc.website ? `<a href="${loc.website.startsWith('http') ? loc.website : 'https://' + loc.website}" target="_blank" rel="noopener" class="website-btn">${t.website}</a>` : ''}
     ${loc.lat && loc.lng ? `<div class="location-map" id="locationMap"></div>` : ''}
@@ -739,7 +806,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
           <div class="region-loc-card${l.image ? '' : ' no-img'}">
             ${l.image ? `<img src="${l.image}" alt="${l.title || l.name}" class="region-loc-img" loading="lazy">` : ''}
             <div class="region-loc-body">
-              <h3 class="region-loc-name"><a href="${locHref(l)}">${l.title || l.name}</a></h3>
+              <h3 class="region-loc-name"><a href="${locHref(l)}">${l.title || l.name}</a>${hasStay(l) ? `<span class="region-loc-stay">${lang === 'en' ? 'stay' : 'overnachten'}</span>` : ''}</h3>
               <div class="region-loc-address">${shortAddress(l.address)}</div>
               ${locDesc(l) ? `<div class="region-loc-desc">${locDesc(l).substring(0, 200)}${locDesc(l).length > 200 ? '…' : ''}</div>` : ''}
               <a href="${locHref(l)}" class="region-loc-link">${readMore(l)}</a>
@@ -794,6 +861,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
     .region-loc-img{width:96px;height:100%;min-height:96px;object-fit:cover}
     .region-loc-body{padding:0.6rem 0.9rem 0.6rem 0;min-width:0}
     .region-loc-name{font-weight:600;font-size:0.95rem;color:var(--navy);margin-bottom:0.1rem}
+    .region-loc-stay{display:inline-block;margin-left:.4rem;padding:0 .4rem;border:0.5px solid var(--gray-300);border-radius:999px;font-size:.66rem;font-weight:500;color:var(--gray-600);vertical-align:2px;white-space:nowrap}
     .region-loc-name a{color:inherit;text-decoration:none}
     .region-loc-address{font-size:0.75rem;color:var(--gray-600);margin-bottom:0.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .region-loc-desc{font-size:0.83rem;line-height:1.5;color:var(--gray-900);margin-bottom:0.3rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -921,6 +989,7 @@ function renderArticlePage({ lang = 'nl', title, description, date, image, bodyH
     .article-body blockquote{border-left:3px solid var(--navy);padding-left:1rem;color:var(--gray-600);font-style:italic}
     .article-body img{width:100%;max-height:420px;object-fit:cover;border-radius:10px}
     .article-related{max-width:720px;margin:0 auto 2.5rem}
+    ${STAY_CSS}
     .article-related h2{font-size:1.2rem;color:var(--navy);margin-bottom:1rem}
     .article-related ul{list-style:none;padding:0;display:grid;gap:0.6rem}
     .article-related li a{color:var(--navy);font-weight:600}
@@ -1959,9 +2028,10 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       [/<nav class="breadcrumb"[\s\S]*?<\/script>/, breadcrumb([HOME_EN, { name: 'Wine map' }], 'en')],
       ['placeholder="Zoek een stad, buurt of adres…"', 'placeholder="Search for a city, area or address…"'],
       ['data-type="all">Alle locaties</button>', 'data-type="all">All locations</button>'],
-      ['🍾 Wijnbars</button>', '🍾 Wine bars</button>'],
-      ['🏪 Wijnwinkels</button>', '🏪 Wine shops</button>'],
-      ['🏰 Wijnhuizen</button>', '🏰 Wineries</button>'],
+      ['Wijnbars</button>', 'Wine bars</button>'],
+      ['Wijnwinkels</button>', 'Wine shops</button>'],
+      ['Wijnhuizen</button>', 'Wineries</button>'],
+      ['Overnachten</button>', 'Stay</button>'],
       [/<!-- REGIO-LINKS -->[\s\S]*?<!-- \/REGIO-LINKS -->/, enRegionListHtml],
       ['<script src="map.js"></script>', '<script src="/map.js"></script>'],
     ], 'wijnkaart.html');
@@ -2063,12 +2133,12 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     for (const a of articles) {
       const nlP = nlArticlePath(a), enP = enArticlePath(a);
       fs.writeFileSync(path.join(__dirname, nlP.slice(1) + '.html'), renderArticlePage({
-        title: a.title, description: a.description || '', date: a.date, image: a.image, bodyHtml: mdToHtml(a.body),
+        title: a.title, description: a.description || '', date: a.date, image: a.image, bodyHtml: injectStayBlocks(mdToHtml(a.body), 'nl'),
         pageUrl: SITE_URL + nlP, logoHref: '/', relatedHtml: articleRelated(a, 'nl'),
         afterHeader: breadcrumb([{ name: 'Home', path: '/' }, NL_ART, { name: a.title }]) }));
       if (hasEn(a)) {
         fs.writeFileSync(path.join(__dirname, enP.slice(1) + '.html'), renderArticlePage({
-          lang: 'en', title: a.title_en, description: a.description_en || '', date: a.date, image: a.image, bodyHtml: mdToHtml(a.body_en),
+          lang: 'en', title: a.title_en, description: a.description_en || '', date: a.date, image: a.image, bodyHtml: injectStayBlocks(mdToHtml(a.body_en), 'en'),
           pageUrl: SITE_URL + enP, logoHref: '/en/', relatedHtml: articleRelated(a, 'en'),
           headExtra: altLinks(nlP, enP), headerExtra: langMenu('en', nlP, enP),
           afterHeader: breadcrumb([HOME_EN, EN_ART, { name: a.title_en }], 'en') }));

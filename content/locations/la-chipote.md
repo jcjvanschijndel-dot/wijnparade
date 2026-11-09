@@ -19,4 +19,8 @@ description_en: >-
   of Hôtel Plein Large, but fully open to anyone who wants breakfast, brunch,
   lunch or dinner overlooking the Mediterranean. The owner serves rosé, white,
   red and sparkling wines from the family business: Château Salettes Bandol.
+stay_type: hotel
+stay_note: "La Chipote hoort bij Hôtel Plein Large: acht kamers met zeezicht"
+stay_note_en: "La Chipote is part of Hôtel Plein Large: eight rooms with sea views"
+booking_url: "https://www.booking.com/hotel/fr/plein-large.html"
 ---

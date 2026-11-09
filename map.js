@@ -116,7 +116,8 @@ async function loadLocationsFromCMS(skipFit = false) {
                     description: parsed.description,
                     image: parsed.image || 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop',
                     website: parsed.website,
-                    hasEn: !!parsed.description_en
+                    hasEn: !!parsed.description_en,
+                    stay: !!parsed.stay_type
                 });
             }
         }
@@ -140,7 +141,7 @@ function addMarkers(locations) {
     markers = [];
 
     locations.forEach(location => {
-        if (activeFilter !== 'all' && location.type !== activeFilter) return;
+        if (activeFilter === 'stay' ? !location.stay : (activeFilter !== 'all' && location.type !== activeFilter)) return;
 
         const marker = new google.maps.Marker({
             position: { lat: location.lat, lng: location.lng },

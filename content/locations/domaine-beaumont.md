@@ -33,4 +33,8 @@ description_en: >-
   cellar and the tasting room, followed by a tasting of the three wines: 100%
   Cabernet Franc (red), Chenin Blanc (white) and the Extra Brut Nature sparkling
   wine.
+stay_type: gastenkamers
+stay_note: "Maison d'hôtes op het wijndomein"
+stay_note_en: "Guest house on the wine estate"
+booking_url: "https://www.booking.com/hotel/fr/domaine-beaumont.html"
 ---

@@ -25,4 +25,8 @@ description_en: >-
   behind that diversity. And we haven't even mentioned the (very luxurious)
   hotel and (Michelin-starred!) restaurants, housed in a magnificent old abbey
   (abadía). A must-visit if you're going to Ribera del Duero.
+stay_type: hotel
+stay_note: "Vijfsterrenhotel LeDomaine in de abdij, met 27 kamers en 3 suites"
+stay_note_en: "Five-star hotel LeDomaine in the abbey, with 27 rooms and 3 suites"
+booking_url: "https://www.booking.com/hotel/es/abadia-retuerta-ledomaine.html"
 ---

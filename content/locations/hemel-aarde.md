@@ -28,4 +28,8 @@ description_en: >-
   few glasses of wine at the bar, in the heart of Utrecht's city centre.
 image: /uploads/hemel-aarde.webp
 website: https://www.hemel-aarde.nl/
+stay_type: hotel
+stay_note: "Hemel & Aarde zit in The Nox Hotel"
+stay_note_en: "Hemel & Aarde is part of The Nox Hotel"
+booking_url: "https://www.booking.com/hotel/nl/the-nox.html"
 ---

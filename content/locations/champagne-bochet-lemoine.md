@@ -31,4 +31,7 @@ description_en: >-
   home) on the estate, ideal if you want to stay longer. Easy to follow with a
   visit to Hautvillers, with the abbey of Dom Pérignon and the Vinaigrerie
   d'Hautvillers.
+stay_type: vakantiewoning
+stay_note: "Gîte voor zes personen op het domein"
+stay_note_en: "Gîte for six people on the estate"
 ---

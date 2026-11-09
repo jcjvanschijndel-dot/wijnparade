@@ -23,4 +23,8 @@ description_en: >-
   more informal brasserie: GIGI. The wine list of passionate sommelier Julian
   Rebollar focuses on local and regional wines (Côtes Catalanes, Tavel,
   Languedoc), supplemented with international names.
+stay_type: hotel
+stay_note: "Rouge hoort bij Margaret - Hôtel Chouleur, met elf kamers en suites"
+stay_note_en: "Rouge is part of Margaret - Hôtel Chouleur, with eleven rooms and suites"
+booking_url: "https://www.booking.com/hotel/fr/margaret-chouleur.html"
 ---

@@ -24,4 +24,7 @@ description_en: >-
   Die Mosel Vinothek & Winebar is in Traben-Trarbach, in the middle of the Mosel
   valley. The ideal place to taste and buy Riesling during a wine trip along the
   Mosel.
+stay_type: appartementen
+stay_note: "Boutique-appartementen en een villa met gastenkamers"
+stay_note_en: "Boutique apartments and a villa with guest rooms"
 ---
