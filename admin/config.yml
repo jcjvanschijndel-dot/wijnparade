@@ -119,6 +119,11 @@ collections:
       - {label: "Titel voor Google Engels (optioneel)", name: "seo_title_en", widget: "string", required: false}
       - {label: "Tekst voor Google (optioneel; anders de eerste zinnen van de beschrijving, max. 160 tekens)", name: "meta_description", widget: "text", required: false}
       - {label: "Tekst voor Google Engels (optioneel)", name: "meta_description_en", widget: "text", required: false}
+      - {label: "Overnachten: soort verblijf (leeg = geen overnachting)", name: "stay_type", widget: "select", required: false, options: [{label: "Hotel", value: "hotel"}, {label: "Gastenkamers (B&B)", value: "gastenkamers"}, {label: "Vakantiewoning / gîte", value: "vakantiewoning"}, {label: "Agriturismo", value: "agriturismo"}, {label: "Appartementen", value: "appartementen"}], hint: "Alleen invullen als je er volgens de eigen website van de locatie kunt overnachten"}
+      - {label: "Overnachten: korte zin (optioneel, bv. '21 kamers en suites in het middeleeuwse gehucht')", name: "stay_note", widget: "string", required: false}
+      - {label: "Overnachten: korte zin Engels (optioneel)", name: "stay_note_en", widget: "string", required: false}
+      - {label: "Booking.com-link (optioneel; alleen de link naar de accommodatie zelf, zonder ?-deel)", name: "booking_url", widget: "string", required: false, hint: "Bijv. https://www.booking.com/hotel/it/locanda-di-fonterutoli.html. De affiliate-code wordt automatisch toegevoegd."}
+      - {label: "Airbnb-link (optioneel; alleen als de advertentie van de locatie zelf is)", name: "airbnb_url", widget: "string", required: false}
       - label: "Onderscheidingen (optioneel)"
         name: "awards"
         widget: "list"
