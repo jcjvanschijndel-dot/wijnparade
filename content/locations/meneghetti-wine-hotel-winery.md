@@ -47,4 +47,6 @@ stay_type: hotel
 stay_note: "Vijfsterren wine hotel, Relais & Châteaux"
 stay_note_en: "Five-star wine hotel, Relais & Châteaux"
 booking_url: "https://www.booking.com/hotel/hr/villa-meneghetti.html"
+taste_note: "Proeverijen, en op aanvraag kook- en sommeliercursussen"
+taste_note_en: "Tastings, and cooking and sommelier courses on request"
 ---

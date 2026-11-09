@@ -26,4 +26,6 @@ description_en: >-
 
   Dourakis Winery is near Chania, on Crete. Recommended for a wine tasting
   during a holiday on Crete.
+taste_note: "Het hele jaar rondleidingen en proeverijen, met kruidentuin en kelders in de berg"
+taste_note_en: "Tours and tastings all year, with a herb garden and cellars in the mountain"
 ---

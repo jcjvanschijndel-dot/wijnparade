@@ -27,4 +27,6 @@ description_en: >-
   white, rosé, red, sparkling and sweet, with a vineyard and cellar visit). The
   Afoura Assyrtiko scored 94/100 from Decanter and the Dolphins 93/100 from Wine
   & Spirits, among more than 50 international awards.
+taste_note: "Cellar Door bij Fira, april tot oktober: rondleidingen, proeverijen, lunches en kooklessen"
+taste_note_en: "Cellar Door near Fira, April to October: tours, tastings, lunches and cooking classes"
 ---

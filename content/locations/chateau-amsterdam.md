@@ -25,4 +25,6 @@ description_en: >-
   On the site of around 3,000 m² you'll find the production area, a tasting room, a wine shop and a restaurant. You can join an Urban Wine Tasting. You share the site with the Oedipus brewery and the Kromhouthal, among others; take the North/South metro line to Noorderpark and walk a short way. Recommended for a different kind of wine outing in Amsterdam.
 image: /uploads/chateau-amsterdam.webp
 website: https://chateau.amsterdam/
+taste_note: "Proefruimte en wijnwinkel bij de stadswijnmakerij"
+taste_note_en: "Tasting room and wine shop at the urban winery"
 ---

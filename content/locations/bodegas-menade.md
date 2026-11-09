@@ -25,4 +25,6 @@ description_en: >-
   petting farm, with donkeys, chickens, geese and an insect hotel, all part of
   the house's biodiversity philosophy. You can book various tastings and tours
   through the website.
+taste_note: "Diverse proeverijen en rondleidingen, te boeken via de website"
+taste_note_en: "Several tastings and tours, bookable through the website"
 ---

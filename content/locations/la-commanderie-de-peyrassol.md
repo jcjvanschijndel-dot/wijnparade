@@ -42,4 +42,6 @@ description_en: >-
   to Monday for lunch and Thursday to Saturday for dinner) and Le Bistrot de Lou
   (open daily, with grills and produce from the estate's own organic farm and
   kitchen garden). Both work exclusively with seasonal produce from the estate.
+taste_note: "Kelderrondleiding, kunstcollectie, koetstocht door de wijngaarden en beeldenpark"
+taste_note_en: "Cellar tour, art collection, carriage ride through the vineyards and sculpture park"
 ---

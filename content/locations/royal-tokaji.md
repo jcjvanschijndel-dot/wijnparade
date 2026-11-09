@@ -23,4 +23,6 @@ description_en: >-
   pioneer in the return to single-vineyard Tokaji. Visits and tastings in Mád,
   daily. The historic village of Mád is the heart of the Tokaj wine route, so
   combine it with a walk past the other historic cellars.
+taste_note: "Dagelijks bezoeken en proeverijen in Mád"
+taste_note_en: "Daily visits and tastings in Mád"
 ---

@@ -30,4 +30,6 @@ description_en: >-
   with a sharing board afterwards. Also special: a tour with sparkling wines
   paired with handmade chocolate from Geruba. The wine tavern is open Thursday
   to Sunday 13.00-18.00. Tours every Saturday at 11.30 by reservation.
+taste_note: "Proeven op het terras, kelderrondleiding of een wijnwandeling van 8 of 13 km"
+taste_note_en: "Tasting on the terrace, cellar tour or a wine walk of 8 or 13 km"
 ---

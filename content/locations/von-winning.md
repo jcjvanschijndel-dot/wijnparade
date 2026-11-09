@@ -42,4 +42,6 @@ description_en: >-
   dumplings, top-quality produce perfectly prepared. Von Winning's Rieslings are
   offered at friendly prices. Booking strongly recommended, especially at
   weekends.
+taste_note: "Vinothek open van maandag tot vrijdag en in het weekend"
+taste_note_en: "Vinothek open Monday to Friday and at weekends"
 ---

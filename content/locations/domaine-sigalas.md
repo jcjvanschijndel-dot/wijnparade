@@ -23,4 +23,6 @@ description_en: >-
   Sigalas makes both dry and sweet Assyrtiko, as well as the rare Mavrotragano,
   an almost extinct red grape that grows only on Santorini. Tastings at the
   estate in Oia or at the winery in Akrotiri. Booking recommended.
+taste_note: "Proeverijen in Oia of bij de wijnmakerij; reserveren aanbevolen"
+taste_note_en: "Tastings in Oia or at the winery; booking recommended"
 ---

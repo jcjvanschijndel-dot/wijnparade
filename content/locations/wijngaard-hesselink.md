@@ -22,4 +22,6 @@ description_en: >-
   Tours and tastings can be booked all year round; the tasting includes five wines with baguette and cheese. The vineyard is on the cycle junction network and is a rest stop for cyclists and walkers. Recommended for anyone cycling in the Achterhoek who wants to taste Dutch wine along the way.
 image: /uploads/wijngaard-hesselink.webp
 website: https://www.wijngaardhesselink.com/
+taste_note: "Het hele jaar rondleiding of proeverij van vijf wijnen met stokbrood en kaas"
+taste_note_en: "Tour or tasting of five wines with bread and cheese all year round"
 ---

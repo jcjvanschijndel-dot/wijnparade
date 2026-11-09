@@ -23,4 +23,6 @@ description_en: >-
   year round in the shop for tastings. Groups of more than four people should
   let them know in advance. On Saturdays, Sundays and public holidays by
   appointment only. A full tasting takes 45 minutes.
+taste_note: "Proeverij van 45 minuten in de winkel; in het weekend op afspraak"
+taste_note_en: "45-minute tasting in the shop; at weekends by appointment"
 ---

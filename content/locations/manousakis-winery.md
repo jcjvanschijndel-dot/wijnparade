@@ -16,4 +16,6 @@ description_en: >-
   tasting through the website, and taste some surprising wines here. They also
   have a menu of Greek dishes with children in mind, so bringing them along is
   no problem.
+taste_note: "Rondleiding en proeverij, te boeken via de website"
+taste_note_en: "Tour and tasting, bookable through the website"
 ---

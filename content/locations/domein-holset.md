@@ -31,4 +31,6 @@ description_en: >-
   Route des Vins Vijlen-Holset past several wine estates in the area. Or rent an
   e-bike and ride to the Three-Country Point. The tasting room and wine shop are
   open daily from 11.00-17.00, and you can simply walk in.
+taste_note: "Wandelen door de wijngaard en mousserende wijnen proeven op het terras"
+taste_note_en: "Walk through the vineyard and taste the sparkling wines on the terrace"
 ---

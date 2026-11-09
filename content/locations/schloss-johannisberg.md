@@ -25,4 +25,6 @@ description_en: >-
   concerts, and in winter the surroundings are beautifully dressed for
   Christmas. Outside you can also simply stop at the vineyard tasting stand for
   a glass and a light bite, without a tour.
+taste_note: "Rondleiding door het paleis en de 900 jaar oude kelders, met proeverij"
+taste_note_en: "Tour of the palace and the 900-year-old cellars, with a tasting"
 ---

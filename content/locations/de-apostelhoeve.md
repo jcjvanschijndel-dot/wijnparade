@@ -24,4 +24,6 @@ description_en: >-
   Jeker valley and the city. It's also lovely to walk or cycle here from
   Maastricht. Open for sales daily except Sunday. Tours for groups of 12 or
   more.
+taste_note: "Dagelijks behalve zondag open voor verkoop; rondleidingen vanaf 12 personen"
+taste_note_en: "Open daily except Sunday for sales; guided tours from 12 people"
 ---

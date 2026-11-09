@@ -21,4 +21,6 @@ description_en: >-
   and still reasonably priced. And winemaker Harry Vorselen talks passionately
   about the history of Wijngoed Thorn and very clearly about winemaking. Do stop
   by if you're in the area.
+taste_note: "Proeflokaal; openingstijden op de website"
+taste_note_en: "Tasting room; opening hours on the website"
 ---

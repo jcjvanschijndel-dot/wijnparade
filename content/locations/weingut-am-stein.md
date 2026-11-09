@@ -33,4 +33,6 @@ description_en: >-
   (January to March 10.00-14.00). Easy to combine with a visit to the Würzburg
   Residenz (UNESCO), the Festung Marienberg and the wine bars of Würzburg's
   Altstadt.
+taste_note: "Proeverijen, workshops en seminars; maandag tot zaterdag open"
+taste_note_en: "Tastings, workshops and seminars; open Monday to Saturday"
 ---

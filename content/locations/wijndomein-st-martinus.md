@@ -24,4 +24,6 @@ description_en: >-
   Wijndomein St. Martinus is in Vijlen, in the rolling Heuvelland of South
   Limburg. Recommended for a wine weekend in Limburg and a lovely introduction
   to Dutch wine.
+taste_note: "Rondleidingen en proeverijen, ook eten"
+taste_note_en: "Tours and tastings, plus food"
 ---

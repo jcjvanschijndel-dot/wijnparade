@@ -32,4 +32,6 @@ description_en: >-
   regeneratively). The conservatory is special: its walls can open completely,
   so you sit among the vines with a view over the Rhine valley and the
   Liechtenstein Alps.
+taste_note: "Bezoek aan de prinselijke wijnkelder met proeverij, te combineren met diner"
+taste_note_en: "Visit to the princely wine cellar with a tasting, to combine with dinner"
 ---

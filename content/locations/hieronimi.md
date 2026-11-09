@@ -27,4 +27,6 @@ description_en: >-
   Chardonnay and Burgundy grapes. Buy by the glass or by the bottle: you get the
   glasses with it and bring them back afterwards. Small snack boards are
   available, but no full dinner.
+taste_note: "Wijn per glas of per fles in de wijnstube"
+taste_note_en: "Wine by the glass or bottle in the wine bar"
 ---

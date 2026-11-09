@@ -26,4 +26,6 @@ description_en: >-
   Medieval Barn with a guided tasting of four top wines: the gold-medal-winning
   Classic Cuvée Multi-Vintage, Rosé Multi-Vintage, Cuvée Chérie Multi-Vintage
   and the Blanc de Blancs.
+taste_note: "Open Day-tour van 2,5 uur met wandeling door de wijngaarden en proeverij"
+taste_note_en: "2.5-hour Open Day tour with a vineyard walk and tasting"
 ---

@@ -35,4 +35,6 @@ description_en: >-
   centuries-old twisting vine, with an incredible view over the valley.
   Recommended dishes: free-range chicken stuffed with pistachio, truffle and
   mushrooms, and confit cod with truffled purée.
+taste_note: "Wandelroutes, picknick aan de rivier en een boottocht met proeverij"
+taste_note_en: "Walking trails, a riverside picnic and a boat trip with tasting"
 ---

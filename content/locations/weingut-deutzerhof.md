@@ -8,7 +8,7 @@ description: Eén van de mooiere en leukere wijnhuizen om te bezoeken als je in
   de Ahr bent. Dit wijngoed is hard getroffen tijdens de vloedgolf in 2021.
   Bijna de gehele lokatie is nieuw opgebouwd en, zeker als je van modern houdt,
   met een schitterend resultaat! Qua Spätburgunders een van onze favorieten. De
-  kwaliteit behoort tot de beste, de prijzen liggen net iets lager.
+  kwaliteit behoort tot de beste, de prijzen liggen net iets lager. Een paar keer per jaar is er een open proeverij van zeven wijnen met een glas sekt, te boeken via de website.
 image: /uploads/deutzerhof.webp
 website: https://deutzerhof.de/
 description_en: >-
@@ -17,4 +17,8 @@ description_en: >-
   rebuilt, with a stunning result, especially if you like modern design! One of
   our favourites for Spätburgunder: the quality is among the best, and prices
   are just a little lower.
+
+  A few times a year there is an open tasting of seven wines with a glass of sekt, bookable through the website.
+taste_note: "Open proeverij van zeven wijnen en sekt, een paar keer per jaar via de website"
+taste_note_en: "Open tasting of seven wines and sekt, a few times a year via the website"
 ---

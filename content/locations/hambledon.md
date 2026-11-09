@@ -36,4 +36,6 @@ description_en: >-
   the Michelin Guide) overlooks the vineyard and the South Downs. The kitchen
   works with seasonal produce from Hampshire and pairs it exclusively with the
   estate's wines.
+taste_note: "Wijngaard- en kelderrondleidingen met proeverij van de mousserende wijnen"
+taste_note_en: "Vineyard and winery tours with a tasting of the sparkling wines"
 ---
