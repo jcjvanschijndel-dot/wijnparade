@@ -13,8 +13,6 @@ description: >-
 
 
   Het restaurant serveert Sloveens-Friulische streekgerechten direct bij de wijn — een van de mooiste combinaties van eten en wijn in de regio.
-
-  De Ošterija is open op maandag (12.00–16.00), vrijdag (18.00–22.00), zaterdag (12.00–16.00 en 18.00–22.00) en zondag (12.00–16.00); van dinsdag tot en met donderdag is hij dicht.
 image: /uploads/klinec.webp
 website: http://www.klinec.si/
 description_en: >-
@@ -25,6 +23,4 @@ description_en: >-
   an agriturismo and restaurant, which serves Slovenian-Friulian regional dishes
   right alongside the wine: one of the finest combinations of food and wine in
   the region.
-
-  The Ošterija is open on Monday (12.00–16.00), Friday (18.00–22.00), Saturday (12.00–16.00 and 18.00–22.00) and Sunday (12.00–16.00); it is closed Tuesday to Thursday.
 ---
