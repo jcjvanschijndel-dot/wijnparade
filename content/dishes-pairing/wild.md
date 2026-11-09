@@ -16,8 +16,8 @@ wines:
     stars: "2"
 locations:
   - bak
-  - café-restaurant-terroir
-  - café-sjiek
+  - cafe-restaurant-terroir
+  - cafe-sjiek
   - graacher-tor
   - can-roquet
   - badia-a-coltibuono

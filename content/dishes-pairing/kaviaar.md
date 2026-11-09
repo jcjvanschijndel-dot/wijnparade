@@ -19,5 +19,5 @@ locations:
   - tres
   - vineum
   - steinheuers-landgasthof-poststuben
-  - château-guiraud
+  - chateau-guiraud
 ---

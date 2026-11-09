@@ -16,7 +16,7 @@ wines:
     stars: "2"
 locations:
   - wijnbar-shiraz
-  - bar-françois
+  - bar-francois
   - la-casera
   - la-finette
   - le-coq-rouge

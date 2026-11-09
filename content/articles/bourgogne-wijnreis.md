@@ -14,7 +14,7 @@ locations:
   - enstase
   - loiseau-des-vignes
   - maison-denis-perret
-  - patriarche-père-et-fils
+  - patriarche-pere-et-fils
   - vins-coudurier-jung
   - domaine-des-croix
   - caveau-de-lhotel-les-charmes
@@ -23,7 +23,7 @@ locations:
   - la-cuverie-de-vosne
   - domaine-trapet
   - chandon-de-briailles
-  - domaine-rapet-père-fils
+  - domaine-rapet-pere-fils
   - le-clos-du-moulin-aux-moines
   - reserve-de-bacchus
   - chablis-wine-not
@@ -48,13 +48,13 @@ body_en: |-
 
   ## Tasting in Beaune
 
-  At [Maison Denis Perret](/en/locations/maison-denis-perret) on the Place Carnot you can taste the wines of five large négociants, including Bouchard, Drouhin and Jadot. Under the cobblestones of Beaune lie the cellars of [Patriarche](/en/locations/patriarche-père-et-fils), five kilometres of tunnels with more than two million bottles. You walk around on your own with an audio guide. Smaller is [Coudurier Jung](/en/locations/vins-coudurier-jung), an urban winery with a cellar of a handful of barrels, without filtration and with little sulphur. [Domaine des Croix](/en/locations/domaine-des-croix) receives visitors by appointment, except in September and October.
+  At [Maison Denis Perret](/en/locations/maison-denis-perret) on the Place Carnot you can taste the wines of five large négociants, including Bouchard, Drouhin and Jadot. Under the cobblestones of Beaune lie the cellars of [Patriarche](/en/locations/patriarche-pere-et-fils), five kilometres of tunnels with more than two million bottles. You walk around on your own with an audio guide. Smaller is [Coudurier Jung](/en/locations/vins-coudurier-jung), an urban winery with a cellar of a handful of barrels, without filtration and with little sulphur. [Domaine des Croix](/en/locations/domaine-des-croix) receives visitors by appointment, except in September and October.
 
   ## The Côte de Beaune
 
   In Meursault, the [Caveau de l'Hôtel Les Charmes](/en/locations/caveau-de-lhotel-les-charmes) pours almost 500 wines, including all the premiers crus of Meursault, at shop price plus €10. Just down the road you eat at [Le Soufflot](/en/locations/le-soufflot), in an old winegrower's house. In a side street of Chassagne-Montrachet is [Colette](/en/locations/colette), a wine bar with a cellar where you can also buy bottles at good prices.
 
-  In Savigny-lès-Beaune, [Chandon de Briailles](/en/locations/chandon-de-briailles) has farmed biodynamically since 2005, with vineyards in three villages. [Domaine Rapet](/en/locations/domaine-rapet-père-fils) in Pernand-Vergelesses, at the foot of the Corton, has made wine for more than 250 years. In Auxey-Duresses, monks from Cluny planted the vineyards of [Le Clos du Moulin aux Moines](/en/locations/le-clos-du-moulin-aux-moines) in 962, with a windmill above the vines. And at [Réserve de Bacchus](/en/locations/reserve-de-bacchus) in Ladoix-Serrigny there are more than 1,000 wines, handy for taking a few bottles home at the end of your trip.
+  In Savigny-lès-Beaune, [Chandon de Briailles](/en/locations/chandon-de-briailles) has farmed biodynamically since 2005, with vineyards in three villages. [Domaine Rapet](/en/locations/domaine-rapet-pere-fils) in Pernand-Vergelesses, at the foot of the Corton, has made wine for more than 250 years. In Auxey-Duresses, monks from Cluny planted the vineyards of [Le Clos du Moulin aux Moines](/en/locations/le-clos-du-moulin-aux-moines) in 962, with a windmill above the vines. And at [Réserve de Bacchus](/en/locations/reserve-de-bacchus) in Ladoix-Serrigny there are more than 1,000 wines, handy for taking a few bottles home at the end of your trip.
 
   ## The Côte de Nuits and Chablis
 
@@ -83,13 +83,13 @@ Aan de Place Ziem zit [Bistrot du Coin](/locations/bistrot-du-coin), een klein w
 
 ## Proeven in Beaune
 
-Bij [Maison Denis Perret](/locations/maison-denis-perret) aan de Place Carnot kun je de wijnen van vijf grote négociants proeven, waaronder Bouchard, Drouhin en Jadot. Onder de kasseien van Beaune liggen de kelders van [Patriarche](/locations/patriarche-père-et-fils), vijf kilometer gangen met meer dan twee miljoen flessen. Je loopt er zelf rond met een audiogids. Kleiner is [Coudurier Jung](/locations/vins-coudurier-jung), een stadswijnmakerij met een kelder van een handvol vaten, zonder filtratie en met weinig sulfiet. [Domaine des Croix](/locations/domaine-des-croix) ontvangt op afspraak, behalve in september en oktober.
+Bij [Maison Denis Perret](/locations/maison-denis-perret) aan de Place Carnot kun je de wijnen van vijf grote négociants proeven, waaronder Bouchard, Drouhin en Jadot. Onder de kasseien van Beaune liggen de kelders van [Patriarche](/locations/patriarche-pere-et-fils), vijf kilometer gangen met meer dan twee miljoen flessen. Je loopt er zelf rond met een audiogids. Kleiner is [Coudurier Jung](/locations/vins-coudurier-jung), een stadswijnmakerij met een kelder van een handvol vaten, zonder filtratie en met weinig sulfiet. [Domaine des Croix](/locations/domaine-des-croix) ontvangt op afspraak, behalve in september en oktober.
 
 ## De Côte de Beaune
 
 In Meursault schenkt het [Caveau de l'Hôtel Les Charmes](/locations/caveau-de-lhotel-les-charmes) bijna 500 wijnen, waaronder alle premiers crus van Meursault, tegen winkelprijs plus €10. Even verderop eet je bij [Le Soufflot](/locations/le-soufflot), in een oud wijnboerenhuis. In een zijstraatje van Chassagne-Montrachet zit [Colette](/locations/colette), een wijnbar met een kelder waar je ook flessen kunt kopen tegen goede prijzen.
 
-In Savigny-lès-Beaune werkt [Chandon de Briailles](/locations/chandon-de-briailles) sinds 2005 biodynamisch, met wijngaarden in drie dorpen. [Domaine Rapet](/locations/domaine-rapet-père-fils) in Pernand-Vergelesses, aan de voet van de Corton, maakt al meer dan 250 jaar wijn. In Auxey-Duresses legden monniken van Cluny in 962 de wijngaarden aan van [Le Clos du Moulin aux Moines](/locations/le-clos-du-moulin-aux-moines), met een windmolen boven de stokken. En bij [Réserve de Bacchus](/locations/reserve-de-bacchus) in Ladoix-Serrigny staan meer dan 1.000 wijnen, handig om aan het eind van je reis een paar flessen mee te nemen.
+In Savigny-lès-Beaune werkt [Chandon de Briailles](/locations/chandon-de-briailles) sinds 2005 biodynamisch, met wijngaarden in drie dorpen. [Domaine Rapet](/locations/domaine-rapet-pere-fils) in Pernand-Vergelesses, aan de voet van de Corton, maakt al meer dan 250 jaar wijn. In Auxey-Duresses legden monniken van Cluny in 962 de wijngaarden aan van [Le Clos du Moulin aux Moines](/locations/le-clos-du-moulin-aux-moines), met een windmolen boven de stokken. En bij [Réserve de Bacchus](/locations/reserve-de-bacchus) in Ladoix-Serrigny staan meer dan 1.000 wijnen, handig om aan het eind van je reis een paar flessen mee te nemen.
 
 ## De Côte de Nuits en Chablis
 

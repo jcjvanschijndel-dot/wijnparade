@@ -114,6 +114,13 @@
   to = "/wijn-spijs"
   status = 301
 
+# Wijnen die niet meer in de shop staan: oude productpagina naar de shop
+# (niet geforceerd, dus bestaande productpagina's blijven gewoon werken)
+[[redirects]]
+  from = "/products/*"
+  to = "/shop"
+  status = 301
+
 # Nederlandse URL's voor de wijnkaart en de reisgidsen (query-parameters zoals ?lat= gaan mee)
 [[redirects]]
   from = "/map.html"

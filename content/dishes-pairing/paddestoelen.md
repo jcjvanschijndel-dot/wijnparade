@@ -15,13 +15,13 @@ wines:
   - name: Cabernet Sauvignon
     stars: "2"
 locations:
-  - café-sjiek
+  - cafe-sjiek
   - zafvino
   - la-passione
   - pazzo
   - le-soufflot
   - le-strasbourg
   - belsit
-  - domaine-pesquié
+  - domaine-pesquie
   - quinta-nova
 ---

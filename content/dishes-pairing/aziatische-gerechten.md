@@ -21,7 +21,7 @@ wines:
   - name: Champagne
     stars: "1"
 locations:
-  - café-wu
+  - cafe-wu
   - bistro-de-la-mer
   - dr-wines
   - merlet

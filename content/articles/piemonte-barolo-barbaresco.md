@@ -24,13 +24,13 @@ locations:
   - cogli-lattimo
   - fratelli-alessandria
   - produttori-del-barbaresco
-  - marchesi-di-grésy
+  - marchesi-di-gresy
   - azienda-agricola-ronchi
   - antica-torre
   - al-nido-della-cinciallegra
   - ca-del-baio
   - villa-garassino
-  - vincafè
+  - vincafe
   - la-piola
   - roberto-sarotto
   - poderi-luigi-einaudi-azienda-agricola
@@ -66,7 +66,7 @@ body_en: |-
 
   ## Barbaresco, Neive and Treiso
 
-  In Barbaresco, [Produttori del Barbaresco](/en/locations/produttori-del-barbaresco) is a cooperative of 53 growers, founded in 1894. [Marchesi di Grésy](/en/locations/marchesi-di-grésy) has owned the Martinenga vineyard since 1797. [Ronchi](/en/locations/azienda-agricola-ronchi) is a small family estate with seven hectares. You eat at [Antica Torre](/en/locations/antica-torre), a family restaurant with rabbit, truffle and pasta.
+  In Barbaresco, [Produttori del Barbaresco](/en/locations/produttori-del-barbaresco) is a cooperative of 53 growers, founded in 1894. [Marchesi di Grésy](/en/locations/marchesi-di-gresy) has owned the Martinenga vineyard since 1797. [Ronchi](/en/locations/azienda-agricola-ronchi) is a small family estate with seven hectares. You eat at [Antica Torre](/en/locations/antica-torre), a family restaurant with rabbit, truffle and pasta.
 
   In Neive, [Al nido della Cinciallegra](/en/locations/al-nido-della-cinciallegra) on the village square is the oldest enoteca in the village, full of local wines. In Treiso, [Ca' del Baio](/en/locations/ca-del-baio) lies in a natural amphitheatre of vineyards, and [Villa Garassino](/en/locations/villa-garassino) is an agriturismo looking out over Barbaresco.
 
@@ -74,7 +74,7 @@ body_en: |-
 
   ## Alba and the surroundings
 
-  In Alba, [Vincafè](/en/locations/vincafè) on the Via Vittorio Emanuele pours more than sixty Piedmontese wines. [La Piola](/en/locations/la-piola) on the Piazza Risorgimento is the Ceretto family's simple restaurant, opposite the cathedral. On the Piazza Michele Ferrero the Sarotto family has a wine bar: [Roberto Sarotto](/en/locations/roberto-sarotto). A little further away are [Poderi Luigi Einaudi](/en/locations/poderi-luigi-einaudi-azienda-agricola) in Dogliani, where you can also stay, [Trattoria del Peso](/en/locations/trattoria-del-peso) in Belvedere Langhe, where you eat whatever is cooking that day, and [Le Piemontesine](/en/locations/le-piemontesine) in the Alta Langa.
+  In Alba, [Vincafè](/en/locations/vincafe) on the Via Vittorio Emanuele pours more than sixty Piedmontese wines. [La Piola](/en/locations/la-piola) on the Piazza Risorgimento is the Ceretto family's simple restaurant, opposite the cathedral. On the Piazza Michele Ferrero the Sarotto family has a wine bar: [Roberto Sarotto](/en/locations/roberto-sarotto). A little further away are [Poderi Luigi Einaudi](/en/locations/poderi-luigi-einaudi-azienda-agricola) in Dogliani, where you can also stay, [Trattoria del Peso](/en/locations/trattoria-del-peso) in Belvedere Langhe, where you eat whatever is cooking that day, and [Le Piemontesine](/en/locations/le-piemontesine) in the Alta Langa.
 
   ## Tip
 
@@ -107,7 +107,7 @@ Novello is het rustigste Barolo-dorp. Bij [Langotto](/locations/langotto-ristora
 
 ## Barbaresco, Neive en Treiso
 
-In Barbaresco is [Produttori del Barbaresco](/locations/produttori-del-barbaresco) een coöperatie van 53 boeren, opgericht in 1894. [Marchesi di Grésy](/locations/marchesi-di-grésy) heeft de wijngaard Martinenga al sinds 1797. [Ronchi](/locations/azienda-agricola-ronchi) is een klein familiebedrijf met zeven hectare. Je eet er bij [Antica Torre](/locations/antica-torre), een familierestaurant met konijn, truffel en pasta.
+In Barbaresco is [Produttori del Barbaresco](/locations/produttori-del-barbaresco) een coöperatie van 53 boeren, opgericht in 1894. [Marchesi di Grésy](/locations/marchesi-di-gresy) heeft de wijngaard Martinenga al sinds 1797. [Ronchi](/locations/azienda-agricola-ronchi) is een klein familiebedrijf met zeven hectare. Je eet er bij [Antica Torre](/locations/antica-torre), een familierestaurant met konijn, truffel en pasta.
 
 In Neive heeft [Al nido della Cinciallegra](/locations/al-nido-della-cinciallegra) op het dorpsplein de oudste enoteca van het dorp, vol lokale wijnen. In Treiso ligt [Ca' del Baio](/locations/ca-del-baio) in een natuurlijk amfitheater van wijngaarden, en [Villa Garassino](/locations/villa-garassino) is een agriturismo met uitzicht over de Barbaresco.
 
@@ -115,7 +115,7 @@ In Neive heeft [Al nido della Cinciallegra](/locations/al-nido-della-cinciallegr
 
 ## Alba en de omgeving
 
-In Alba schenkt [Vincafè](/locations/vincafè) aan de Via Vittorio Emanuele meer dan zestig Piemontese wijnen. [La Piola](/locations/la-piola) op de Piazza Risorgimento is het eenvoudige restaurant van de familie Ceretto, tegenover de kathedraal. Op de Piazza Michele Ferrero heeft de familie Sarotto een wijnbar: [Roberto Sarotto](/locations/roberto-sarotto). Iets verder weg liggen [Poderi Luigi Einaudi](/locations/poderi-luigi-einaudi-azienda-agricola) in Dogliani, waar je ook kunt overnachten, [Trattoria del Peso](/locations/trattoria-del-peso) in Belvedere Langhe, waar je eet wat de pot schaft, en [Le Piemontesine](/locations/le-piemontesine) in de Alta Langa.
+In Alba schenkt [Vincafè](/locations/vincafe) aan de Via Vittorio Emanuele meer dan zestig Piemontese wijnen. [La Piola](/locations/la-piola) op de Piazza Risorgimento is het eenvoudige restaurant van de familie Ceretto, tegenover de kathedraal. Op de Piazza Michele Ferrero heeft de familie Sarotto een wijnbar: [Roberto Sarotto](/locations/roberto-sarotto). Iets verder weg liggen [Poderi Luigi Einaudi](/locations/poderi-luigi-einaudi-azienda-agricola) in Dogliani, waar je ook kunt overnachten, [Trattoria del Peso](/locations/trattoria-del-peso) in Belvedere Langhe, waar je eet wat de pot schaft, en [Le Piemontesine](/locations/le-piemontesine) in de Alta Langa.
 
 ## Tip
 

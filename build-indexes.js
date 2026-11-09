@@ -2519,6 +2519,18 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   for (const r of regionsIndex) addRedirect(`/regio/${r.id}`, r.url);
   for (const d of dishes) if (slugOf(d._id) !== d._id) addRedirect(`/wijn-bij/${d._id}`, `/wijn-bij/${slugOf(d._id)}`);
   for (const w of wines) if (slugOf(w._id) !== w._id) addRedirect(`/eten-bij/${w._id}`, `/eten-bij/${slugOf(w._id)}`);
+  // Hernoemde locaties (o.a. adressen zonder accenten): oud adres -> nieuw adres, NL en EN
+  const locRenames = fs.existsSync(path.join(__dirname, 'location-redirects.json'))
+    ? JSON.parse(fs.readFileSync(path.join(__dirname, 'location-redirects.json'), 'utf8')) : {};
+  for (const [oldId, newId] of Object.entries(locRenames)) {
+    const loc = allLocations.find(l => l._id === newId);
+    if (!loc) { console.warn(`  ⚠️  location-redirects.json: locatie "${newId}" bestaat niet`); continue; }
+    const hasEn = fs.existsSync(path.join(__dirname, 'en', 'locations', `${newId}.html`));
+    for (const id of new Set([oldId.normalize('NFC'), oldId.normalize('NFD')])) {
+      addRedirect(`/locations/${id}`, `/locations/${newId}`);
+      addRedirect(`/en/locations/${id}`, hasEn ? `/en/locations/${newId}` : `/locations/${newId}`);
+    }
+  }
   fs.writeFileSync(path.join(__dirname, '_redirects'),
     '# Automatisch gegenereerd door build-indexes.js — niet met de hand aanpassen\n' + redirectLines.join('\n') + '\n');
   console.log(`  ↪️  _redirects: ${redirectLines.length} doorverwijzingen`);

@@ -13,14 +13,14 @@ locations:
   - visatelier-laren
   - ottovino
   - wexxs
-  - bistrôt-chapeau
+  - bistrot-chapeau
   - rust-wat-by-sidney-schutte
   - vineria-nebbiolo
   - gastrovino-mijn-hemel
   - wijngaard-zonnestraal
   - siersma-wijnadvies
   - wijnbar-vijf
-  - somm-bistro-à-vin
+  - somm-bistro-a-vin
   - de-nederlanden
   - t-amsterdammertje
 title_en: "Wine in Het Gooi: wine bars and wine shops in Bussum, Laren and Blaricum"
@@ -41,7 +41,7 @@ body_en: |-
 
   [De Larense Wijnkoperij](/en/locations/de-larense-wijnkoperij) is in a listed farmhouse on the Torenlaan, with more than 600 wines, many of them imported by the owners. At [Visatelier](/en/locations/visatelier-laren) in Laren a fishmonger, a restaurant and a wine bar share one roof. In the wine bar you drink sparkling or white wine, without having to eat.
 
-  In Blaricum, [Ottovino](/en/locations/ottovino) on the Dorpsstraat pours more than thirty wines by the glass. Owner Otto collects the wines himself from the estates, often small producers, and you can take your favourite bottle straight home. [Wexxs](/en/locations/wexxs) is also in a farmhouse, on the Torenlaan in Blaricum. At the end of the day there is often something open to taste. If you want to eat, there is [Bistrôt Chapeau](/en/locations/bistrôt-chapeau) on the Huizerweg for French bistro dishes, or [Rust Wat](/en/locations/rust-wat-by-sidney-schutte) on the Schapendrift for a French brasserie with fish and aged meat.
+  In Blaricum, [Ottovino](/en/locations/ottovino) on the Dorpsstraat pours more than thirty wines by the glass. Owner Otto collects the wines himself from the estates, often small producers, and you can take your favourite bottle straight home. [Wexxs](/en/locations/wexxs) is also in a farmhouse, on the Torenlaan in Blaricum. At the end of the day there is often something open to taste. If you want to eat, there is [Bistrôt Chapeau](/en/locations/bistrot-chapeau) on the Huizerweg for French bistro dishes, or [Rust Wat](/en/locations/rust-wat-by-sidney-schutte) on the Schapendrift for a French brasserie with fish and aged meat.
 
   ![De Larense Wijnkoperij in a farmhouse on the Torenlaan](/uploads/dlw.jpg)
 
@@ -53,7 +53,7 @@ body_en: |-
 
   ## Around Het Gooi
 
-  By the lock in Muiden is [Wijnbar Vijf](/en/locations/wijnbar-vijf), with wines from small estates and a large menu of dishes to share. In Weesp, [Somm](/en/locations/somm-bistro-à-vin) has more than 250 wines, from affordable to exclusive. In Vreeland and Loenen aan de Vecht there are two restaurants with a Michelin star: [De Nederlanden](/en/locations/de-nederlanden), with a broad wine list, and ['t Amsterdammertje](/en/locations/t-amsterdammertje), with organic wines only.
+  By the lock in Muiden is [Wijnbar Vijf](/en/locations/wijnbar-vijf), with wines from small estates and a large menu of dishes to share. In Weesp, [Somm](/en/locations/somm-bistro-a-vin) has more than 250 wines, from affordable to exclusive. In Vreeland and Loenen aan de Vecht there are two restaurants with a Michelin star: [De Nederlanden](/en/locations/de-nederlanden), with a broad wine list, and ['t Amsterdammertje](/en/locations/t-amsterdammertje), with organic wines only.
 
   ## Tip
 
@@ -74,7 +74,7 @@ Voor een fles voor thuis ga je naar de [Bussumsche Wijnkooperij](/locations/buss
 
 [De Larense Wijnkoperij](/locations/de-larense-wijnkoperij) zit in een monumentale boerderij aan de Torenlaan, met meer dan 600 wijnen, waarvan veel uit eigen import. Bij [Visatelier](/locations/visatelier-laren) in Laren zitten een visspeciaalzaak, een restaurant en een wijnbar onder één dak. In de wijnbar drink je bubbels of witte wijn, ook zonder te eten.
 
-In Blaricum schenkt [Ottovino](/locations/ottovino) aan de Dorpsstraat meer dan dertig wijnen per glas. Eigenaar Otto haalt de wijnen zelf op bij de wijnhuizen, vaak kleine producenten, en je kunt je favoriete fles direct meenemen. Ook [Wexxs](/locations/wexxs) zit in een boerderij, aan de Torenlaan in Blaricum. Aan het eind van de dag staat er vaak iets open om te proeven. Wil je uit eten, dan is er [Bistrôt Chapeau](/locations/bistrôt-chapeau) aan de Huizerweg voor Franse bistrogerechten, of [Rust Wat](/locations/rust-wat-by-sidney-schutte) aan de Schapendrift voor een Franse brasserie met vis en gerijpt vlees.
+In Blaricum schenkt [Ottovino](/locations/ottovino) aan de Dorpsstraat meer dan dertig wijnen per glas. Eigenaar Otto haalt de wijnen zelf op bij de wijnhuizen, vaak kleine producenten, en je kunt je favoriete fles direct meenemen. Ook [Wexxs](/locations/wexxs) zit in een boerderij, aan de Torenlaan in Blaricum. Aan het eind van de dag staat er vaak iets open om te proeven. Wil je uit eten, dan is er [Bistrôt Chapeau](/locations/bistrot-chapeau) aan de Huizerweg voor Franse bistrogerechten, of [Rust Wat](/locations/rust-wat-by-sidney-schutte) aan de Schapendrift voor een Franse brasserie met vis en gerijpt vlees.
 
 ![De Larense Wijnkoperij in een boerderij aan de Torenlaan](/uploads/dlw.jpg)
 
@@ -86,7 +86,7 @@ In Blaricum schenkt [Ottovino](/locations/ottovino) aan de Dorpsstraat meer dan 
 
 ## Rond 't Gooi
 
-Aan de sluis in Muiden zit [Wijnbar Vijf](/locations/wijnbar-vijf), met wijnen van kleine wijnhuizen en een uitgebreide kaart met gerechten om te delen. In Weesp heeft [Somm](/locations/somm-bistro-à-vin) meer dan 250 wijnen, van betaalbaar tot exclusief. In Vreeland en Loenen aan de Vecht zitten twee restaurants met een Michelinster: [De Nederlanden](/locations/de-nederlanden), met een brede wijnkaart, en ['t Amsterdammertje](/locations/t-amsterdammertje), met uitsluitend biologische wijnen.
+Aan de sluis in Muiden zit [Wijnbar Vijf](/locations/wijnbar-vijf), met wijnen van kleine wijnhuizen en een uitgebreide kaart met gerechten om te delen. In Weesp heeft [Somm](/locations/somm-bistro-a-vin) meer dan 250 wijnen, van betaalbaar tot exclusief. In Vreeland en Loenen aan de Vecht zitten twee restaurants met een Michelinster: [De Nederlanden](/locations/de-nederlanden), met een brede wijnkaart, en ['t Amsterdammertje](/locations/t-amsterdammertje), met uitsluitend biologische wijnen.
 
 ## Tip
 

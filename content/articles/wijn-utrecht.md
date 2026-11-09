@@ -6,14 +6,14 @@ image: /uploads/talud9.webp
 region: utrecht
 locations:
   - wijnbar-vinvin
-  - wijncafé-lefebvre
+  - wijncafe-lefebvre
   - talud9
   - bar-bet
   - wijnbar-kurk
   - wijnbar-vino
   - proeflokaal-de-lindebar
   - jacobs-wine-gastrobar-union-house
-  - café-restaurant-terroir
+  - cafe-restaurant-terroir
   - rosie
   - hemel-aarde
   - bistro-madeleine
@@ -34,7 +34,7 @@ body_en: |-
 
   ## Wine bars around the Neude and the Dom
 
-  [VinVin](/en/locations/wijnbar-vinvin) on the Predikherenstraat, open since 2016, has no printed wine list: the staff help you choose from some thirty wines by French, Italian and Spanish producers who intervene as little as possible. On the Neude, [Wijncafé Lefebvre](/en/locations/wijncafé-lefebvre) pours 27 wines by the glass in three price ranges, and you can taste a few first. On the Lange Jansstraat is [Wijnbar Kurk](/en/locations/wijnbar-kurk), a small wine bar with old wooden cabinets. The team takes you through the list glass by glass. On Fridays and Saturdays it is walk-in only.
+  [VinVin](/en/locations/wijnbar-vinvin) on the Predikherenstraat, open since 2016, has no printed wine list: the staff help you choose from some thirty wines by French, Italian and Spanish producers who intervene as little as possible. On the Neude, [Wijncafé Lefebvre](/en/locations/wijncafe-lefebvre) pours 27 wines by the glass in three price ranges, and you can taste a few first. On the Lange Jansstraat is [Wijnbar Kurk](/en/locations/wijnbar-kurk), a small wine bar with old wooden cabinets. The team takes you through the list glass by glass. On Fridays and Saturdays it is walk-in only.
 
   Between the Domplein and the Oudegracht, [Talud9](/en/locations/talud9) has more than 50 wines by the glass, mostly European and partly natural. On 't Wed, close to the Dom, [Bar Bet](/en/locations/bar-bet) has around 250 bottles and 30 wines by the glass, with classics and natural wine side by side and a terrace by the water.
 
@@ -46,7 +46,7 @@ body_en: |-
 
   ## Eating with a good glass
 
-  At [Café-Restaurant Terroir](/en/locations/café-restaurant-terroir) in the Museumkwartier you choose your wine first and then your dish. There are around 500 wines on the list, with a fixed margin per bottle and a lot of German wine, Burgundy and natural wine. [Rosie](/en/locations/rosie) on the Lucasbolwerk is half restaurant, half bar, with plenty of natural wine and oysters at the bar. In the Polman's Huis, [Hemel & Aarde](/en/locations/hemel-aarde) has a restaurant and a wine bar, with wines that change with the seasons. [Bistro Madeleine](/en/locations/bistro-madeleine) on 't Wed is a French bistro with a long bar, also good for a glass and a bite. At [San Siro](/en/locations/san-siro) on the Oudkerkhof the list is mostly Italian, and nearly everything is available by the glass.
+  At [Café-Restaurant Terroir](/en/locations/cafe-restaurant-terroir) in the Museumkwartier you choose your wine first and then your dish. There are around 500 wines on the list, with a fixed margin per bottle and a lot of German wine, Burgundy and natural wine. [Rosie](/en/locations/rosie) on the Lucasbolwerk is half restaurant, half bar, with plenty of natural wine and oysters at the bar. In the Polman's Huis, [Hemel & Aarde](/en/locations/hemel-aarde) has a restaurant and a wine bar, with wines that change with the seasons. [Bistro Madeleine](/en/locations/bistro-madeleine) on 't Wed is a French bistro with a long bar, also good for a glass and a bite. At [San Siro](/en/locations/san-siro) on the Oudkerkhof the list is mostly Italian, and nearly everything is available by the glass.
 
   Just outside the centre are [Restaurant Badhuis](/en/locations/restaurant-badhuis), in a bathhouse from 1927 with dishes from the grill over an open fire, and [De Watertoren](/en/locations/restaurant-de-watertoren) in Rotsoord, with views over the city. At [Vondels Chefs Bar](/en/locations/vondels-chefs-bar) in the Dichterswijk there is deliberately no set wine pairing: the staff help you discover something yourself.
 
@@ -67,7 +67,7 @@ In Utrecht liggen de meeste wijnbars op loopafstand van elkaar, rond de Dom, de 
 
 ## Wijnbars rond de Neude en de Dom
 
-[VinVin](/locations/wijnbar-vinvin) in de Predikherenstraat, sinds 2016, heeft geen gedrukte wijnkaart: het personeel helpt je kiezen uit ruim dertig wijnen van Franse, Italiaanse en Spaanse producenten die zo min mogelijk ingrijpen. Aan de Neude schenkt [Wijncafé Lefebvre](/locations/wijncafé-lefebvre) 27 wijnen per glas in drie prijsklassen, en je mag eerst een paar wijnen proeven. In de Lange Jansstraat zit [Wijnbar Kurk](/locations/wijnbar-kurk), een kleine wijnbar met oude houten kasten. Het team neemt je glas voor glas mee door de kaart. Op vrijdag en zaterdag kun je alleen binnenlopen.
+[VinVin](/locations/wijnbar-vinvin) in de Predikherenstraat, sinds 2016, heeft geen gedrukte wijnkaart: het personeel helpt je kiezen uit ruim dertig wijnen van Franse, Italiaanse en Spaanse producenten die zo min mogelijk ingrijpen. Aan de Neude schenkt [Wijncafé Lefebvre](/locations/wijncafe-lefebvre) 27 wijnen per glas in drie prijsklassen, en je mag eerst een paar wijnen proeven. In de Lange Jansstraat zit [Wijnbar Kurk](/locations/wijnbar-kurk), een kleine wijnbar met oude houten kasten. Het team neemt je glas voor glas mee door de kaart. Op vrijdag en zaterdag kun je alleen binnenlopen.
 
 Tussen het Domplein en de Oudegracht heeft [Talud9](/locations/talud9) meer dan 50 wijnen per glas, vooral uit Europa en voor een deel naturel. Aan 't Wed, vlak bij de Dom, heeft [Bar Bet](/locations/bar-bet) zo'n 250 flessen en 30 wijnen per glas, met klassiekers en naturel door elkaar en een terras aan het water.
 
@@ -79,7 +79,7 @@ Aan de Oudegracht zit [VINO](/locations/wijnbar-vino) in de Winkel van Sinkel, h
 
 ## Eten met een goed glas
 
-Bij [Café-Restaurant Terroir](/locations/café-restaurant-terroir) in het Museumkwartier kies je eerst je wijn en dan je gerecht. Er staan zo'n 500 wijnen op de kaart, met een vaste marge per fles en veel Duitse wijn, Bourgogne en naturel. [Rosie](/locations/rosie) aan het Lucasbolwerk is half restaurant, half bar, met veel natuurwijn en oesters aan de bar. In het Polman's Huis heeft [Hemel & Aarde](/locations/hemel-aarde) een restaurant en een wijnbar, met wijnen die met de seizoenen meewisselen. [Bistro Madeleine](/locations/bistro-madeleine) aan 't Wed is een Franse bistro met een lange bar, ook voor een glas met een hapje. Bij [San Siro](/locations/san-siro) aan het Oudkerkhof is de kaart grotendeels Italiaans, en bijna alles is per glas.
+Bij [Café-Restaurant Terroir](/locations/cafe-restaurant-terroir) in het Museumkwartier kies je eerst je wijn en dan je gerecht. Er staan zo'n 500 wijnen op de kaart, met een vaste marge per fles en veel Duitse wijn, Bourgogne en naturel. [Rosie](/locations/rosie) aan het Lucasbolwerk is half restaurant, half bar, met veel natuurwijn en oesters aan de bar. In het Polman's Huis heeft [Hemel & Aarde](/locations/hemel-aarde) een restaurant en een wijnbar, met wijnen die met de seizoenen meewisselen. [Bistro Madeleine](/locations/bistro-madeleine) aan 't Wed is een Franse bistro met een lange bar, ook voor een glas met een hapje. Bij [San Siro](/locations/san-siro) aan het Oudkerkhof is de kaart grotendeels Italiaans, en bijna alles is per glas.
 
 Iets buiten het centrum zitten [Restaurant Badhuis](/locations/restaurant-badhuis), in een badhuis uit 1927 met gerechten van de grill boven open vuur, en [De Watertoren](/locations/restaurant-de-watertoren) in Rotsoord, met uitzicht over de stad. Bij [Vondels Chefs Bar](/locations/vondels-chefs-bar) in de Dichterswijk is er bewust geen vast wijnarrangement: de bediening helpt je zelf iets te ontdekken.
 
