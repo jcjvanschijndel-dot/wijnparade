@@ -28,4 +28,8 @@ description_en: >-
   oil, made from thousand-year-old olive trees, is praised by many. The wine
   list has a clear focus on Mallorcan wines, supplemented with a broad Spanish
   and international selection.
+stay_type: hotel
+stay_note: "Miró hoort bij hotel Belmond La Residencia"
+stay_note_en: "Miró is part of the Belmond La Residencia hotel"
+booking_url: "https://www.booking.com/hotel/es/laresidencia.html"
 ---

@@ -31,4 +31,8 @@ description_en: >-
   has 21 rooms, suites and apartments spread across the historic buildings of
   the medieval hamlet, designed by Agnese Mazzei in a rustic-elegant style.
   Rooms range from 20 to 60 m². Overnight guests get 10% off all Mazzei wines.
+stay_type: hotel
+stay_note: "Wine resort met 21 kamers, suites en appartementen in het middeleeuwse gehucht"
+stay_note_en: "Wine resort with 21 rooms, suites and apartments in the medieval hamlet"
+booking_url: "https://www.booking.com/hotel/it/locanda-di-fonterutoli.html"
 ---

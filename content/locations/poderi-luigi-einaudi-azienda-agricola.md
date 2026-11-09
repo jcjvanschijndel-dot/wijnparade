@@ -17,4 +17,7 @@ description_en: >-
   the wines left over from the tasting rooms). Friendly staff, a really nice
   tour and a professional tasting room. Dogliani isn't the most charming
   village, but this place is truly worth it.
+stay_type: hotel
+stay_note: "Relais dei Poderi Einaudi op het landgoed"
+stay_note_en: "Relais dei Poderi Einaudi on the estate"
 ---

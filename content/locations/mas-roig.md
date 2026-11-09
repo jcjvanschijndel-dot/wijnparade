@@ -18,4 +18,7 @@ description_en: >-
   Traditional Empordà cooking with a modern touch: black rice, chicken with
   langoustines, meatballs with cuttlefish, côte de boeuf. The wine cellar holds
   more than 140 wines.
+stay_type: hotel
+stay_note: "Hotel met negen kamers in een boerderij uit de 16e eeuw"
+stay_note_en: "Hotel with nine rooms in a 16th-century farmhouse"
 ---

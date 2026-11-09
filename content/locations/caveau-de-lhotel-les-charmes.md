@@ -29,4 +29,8 @@ description_en: >-
   Alongside the wine: cheese from Alain Hess, charcuterie from the Boucherie de
   Meursault, smoked salmon, and seasonal dishes such as a truffle
   croque-monsieur, warm Mont-d'Or with Aligoté, and burrata.
+stay_type: hotel
+stay_note: "Hôtel Les Charmes, direct naast de caveau"
+stay_note_en: "Hôtel Les Charmes, right next to the tasting cellar"
+booking_url: "https://www.booking.com/hotel/fr/les-charmes.html"
 ---

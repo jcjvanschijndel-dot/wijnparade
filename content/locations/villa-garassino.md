@@ -24,4 +24,8 @@ description_en: >-
   terroir. Food and wine pairings are carefully put together to let guests
   discover the flavours and labels of the Langhe and Roero, with a focus on the
   wines of Tenuta Carretta.
+stay_type: agriturismo
+stay_note: "Agriturismo met vijf kamers en uitzicht op de wijngaarden van Barbaresco"
+stay_note_en: "Agriturismo with five rooms overlooking the Barbaresco vineyards"
+booking_url: "https://www.booking.com/hotel/it/villa-garassino.html"
 ---

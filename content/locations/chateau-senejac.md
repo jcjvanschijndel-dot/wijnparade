@@ -30,4 +30,8 @@ description_en: >-
   beautiful tapestries has extraordinary charm; the boudoir is more intimate and
   cosy. A fresh, seasonal breakfast is served every morning in the dining room,
   in your room or on the terrace.
+stay_type: gastenkamers
+stay_note: "Gastenkamers in het château"
+stay_note_en: "Guest rooms in the château"
+booking_url: "https://www.booking.com/hotel/fr/chateau-senejac.html"
 ---

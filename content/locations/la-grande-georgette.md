@@ -33,4 +33,8 @@ description_en: >-
   its best wines. The wine list is deeply rooted in Champagne: exclusive bottles
   from small growers you'll hardly find elsewhere in Reims, plus access to the
   oenotheque of the Caserne Chanzy.
+stay_type: hotel
+stay_note: "La Grande Georgette hoort bij Hôtel & Spa La Caserne Chanzy, tegenover de kathedraal"
+stay_note_en: "La Grande Georgette is part of Hôtel & Spa La Caserne Chanzy, opposite the cathedral"
+booking_url: "https://www.booking.com/hotel/fr/la-caserne-chanzy-spa-autograph-collection.html"
 ---

@@ -29,4 +29,7 @@ description_en: >-
   the Mosel bank, Dr. Loosen has a guest house with seven rooms, each named
   after one of the estate's Grosse Lagen. From the rooms and terrace you look
   out over the vineyards and the river.
+stay_type: gastenkamers
+stay_note: "Gastenverblijf met zeven kamers, elk vernoemd naar een Grosse Lage"
+stay_note_en: "Guest house with seven rooms, each named after a Grosse Lage"
 ---

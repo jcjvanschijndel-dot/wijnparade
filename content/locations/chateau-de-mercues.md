@@ -31,4 +31,7 @@ description_en: >-
   the valley or the garden. Some rooms are in the historic towers, with vaulted
   ceilings four to five metres high and huge windows with panoramic views over
   the Lot valley. There's an outdoor pool, a tennis court and wifi.
+stay_type: hotel
+stay_note: "Relais & Châteaux in het kasteel, met 30 kamers en suites"
+stay_note_en: "Relais & Châteaux in the castle, with 30 rooms and suites"
 ---

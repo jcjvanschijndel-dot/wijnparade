@@ -24,4 +24,8 @@ description_en: >-
   of Burgundy. A cosy wine bar for one more glass of Burgundy and a bite to eat
   after a day of tasting in the Côte d'Or. With rooms to stay in, it is also a
   handy base for a wine trip.
+stay_type: appartementen
+stay_note: "Vijf appartementen boven de wijnbar"
+stay_note_en: "Five apartments above the wine bar"
+booking_url: "https://www.booking.com/hotel/fr/maison-du-colombier.html"
 ---

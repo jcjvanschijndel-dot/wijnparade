@@ -23,4 +23,7 @@ description_en: >-
   beautiful old stone winery, Alessandro and Vittore welcome visitors in a cosy,
   intimate cantina style. Tastings by appointment. You can also stay the night
   here, in what they call the Wine Resort.
+stay_type: agriturismo
+stay_note: "Speziale Wine Resort in Verduno"
+stay_note_en: "Speziale Wine Resort in Verduno"
 ---

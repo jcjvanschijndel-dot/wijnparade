@@ -38,4 +38,7 @@ description_en: >-
   also hosts events, meetings and weddings. Het Wijnstekje d'Hunes is a holiday
   home for 8 people on the estate, and guests get 10% off the tasting. With the
   tasting: fresh rolls for lunch, sharing boards and changing bites.
+stay_type: vakantiewoning
+stay_note: "Wijnstekje: vakantiewoning voor acht personen op het domein"
+stay_note_en: "Wijnstekje: holiday home for eight people on the estate"
 ---

@@ -27,4 +27,7 @@ description_en: >-
   for those who want to discover the region more slowly and in more depth. You
   stay overnight at Finca Bell-Lloc itself, surrounded by vineyards and olive
   trees.
+stay_type: vakantiewoning
+stay_note: "Chalet Bell-Lloc met vier slaapkamers bij de wijngaard"
+stay_note_en: "Chalet Bell-Lloc with four bedrooms by the vineyard"
 ---

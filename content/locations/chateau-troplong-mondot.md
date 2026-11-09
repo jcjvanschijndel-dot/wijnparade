@@ -21,4 +21,8 @@ description_en: >-
   village, but for those who know how to find it, often the best. You can also
   stay the night here, and the château has a top restaurant: Les Belles Perdrix.
   And the terrace... in a class of its own!
+stay_type: gastenkamers
+stay_note: "Les Clefs: kamers en een suite tussen de wijngaarden"
+stay_note_en: "Les Clefs: rooms and a suite among the vines"
+booking_url: "https://www.booking.com/hotel/fr/les-belles-perdrix.html"
 ---

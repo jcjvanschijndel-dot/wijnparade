@@ -34,4 +34,8 @@ description_en: >-
   les Tilleuls, La Tour. Noble materials, spacious rooms, patinated woodwork and
   antique found objects. The Master Suite has a jacuzzi on the terrace with
   panoramic views.
+stay_type: hotel
+stay_note: "16 kamers en suites in het herenhuis en drie bergeries"
+stay_note_en: "16 rooms and suites in the manor house and three bergeries"
+booking_url: "https://www.booking.com/hotel/fr/le-hameau-de-saparale-sartene.html"
 ---

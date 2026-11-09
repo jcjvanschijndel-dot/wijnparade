@@ -36,4 +36,8 @@ description_en: >-
   occasionally hosts small concerts in the courtyard. The wine hotel, designed
   by Pritzker Prize winner Álvaro Siza Vieira, has 13 rooms, and the infinity
   pool is spectacular. Walking routes have been marked out across the estate.
+stay_type: hotel
+stay_note: "Wine hotel met 19 kamers"
+stay_note_en: "Wine hotel with 19 rooms"
+booking_url: "https://www.booking.com/hotel/pt/quinta-do-vallado.html"
 ---

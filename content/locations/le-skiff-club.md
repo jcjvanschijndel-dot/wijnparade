@@ -20,4 +20,8 @@ description_en: >-
   list of more than 1,200 references, with an emphasis on food pairing. A
   special detail: the list includes 17 different vintages of Château d'Yquem.
   The restaurant has two Michelin stars and a Green Star.
+stay_type: hotel
+stay_note: "Le Skiff Club hoort bij Hôtel Ha(a)ïtza"
+stay_note_en: "Le Skiff Club is part of Hôtel Ha(a)ïtza"
+booking_url: "https://www.booking.com/hotel/fr/ha-a-itza.html"
 ---

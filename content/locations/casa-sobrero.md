@@ -37,4 +37,8 @@ description_en: >-
   all designed to make the most of the panorama through large windows. Infinity
   pool, garden, children's playground, free parking. Guests of the relais can
   dine by the pool in the evening with bottles of Sobrero Barolo.
+stay_type: hotel
+stay_note: "Relais met kamers en een infinity pool met uitzicht op de Barolo-heuvels"
+stay_note_en: "Relais with rooms and an infinity pool overlooking the Barolo hills"
+booking_url: "https://www.booking.com/hotel/it/relais-casa-sobrero.html"
 ---

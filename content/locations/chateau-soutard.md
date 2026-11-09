@@ -28,4 +28,7 @@ description_en: >-
   tastings, from bikes to a guest house. The guest house at Château Soutard is
   also a listed French Historic Monument, and staying the night gives you access
   to the estate outside opening hours.
+stay_type: gastenkamers
+stay_note: "Gastenverblijf met vier kamers in het château"
+stay_note_en: "Guest house with four rooms in the château"
 ---

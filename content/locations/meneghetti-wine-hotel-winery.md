@@ -43,4 +43,8 @@ description_en: >-
   furniture and Egyptian cotton. Two outdoor pools, a heated indoor pool, a spa
   with sauna, a gym and a garden full of Mediterranean herbs. What more could
   you want?
+stay_type: hotel
+stay_note: "Vijfsterren wine hotel, Relais & Châteaux"
+stay_note_en: "Five-star wine hotel, Relais & Châteaux"
+booking_url: "https://www.booking.com/hotel/hr/villa-meneghetti.html"
 ---

@@ -42,4 +42,8 @@ description_en: >-
   The cooking is determined and unusual, inspired by the terroir of the Gironde.
   The château's wines are exceptional: Lafaurie-Peyraguey and the second wine,
   La Chapelle de Lafaurie.
+stay_type: hotel
+stay_note: "Hotel met 13 kamers, ingericht door Lalique"
+stay_note_en: "Hotel with 13 rooms, designed by Lalique"
+booking_url: "https://www.booking.com/hotel/fr/chateau-lafaurie-peyraguey-by-lalique.html"
 ---

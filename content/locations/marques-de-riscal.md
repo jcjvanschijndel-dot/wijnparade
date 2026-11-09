@@ -25,4 +25,7 @@ description_en: >-
   the futuristic new complex, which also houses a luxury hotel and restaurant.
   The village of Elciego itself, with its narrow lanes, makes a lovely contrast
   with the ultra-modern building.
+stay_type: hotel
+stay_note: "Hotel Marqués de Riscal in het gebouw van Frank Gehry"
+stay_note_en: "Hotel Marqués de Riscal in the Frank Gehry building"
 ---

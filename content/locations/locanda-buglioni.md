@@ -33,4 +33,8 @@ description_en: >-
   in the enoteca + overnight stay with breakfast + cellar tour + food and wine
   tasting) and the Ristotto Experience (cellar + vineyard + 8 wines with the
   Locanda's iconic risotto dish).
+stay_type: gastenkamers
+stay_note: "Dimora Buglioni Wine Relais, op hetzelfde adres"
+stay_note_en: "Dimora Buglioni Wine Relais, at the same address"
+booking_url: "https://www.booking.com/hotel/it/dimora-del-bugiardo.html"
 ---

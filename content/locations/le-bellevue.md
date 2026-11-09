@@ -38,4 +38,8 @@ description_en: >-
   experience, by reservation. The hotel's champagne list is recognised by Star
   Wine List and focuses on small grower producers you rarely come across
   elsewhere, guided by a team of passionate sommeliers.
+stay_type: hotel
+stay_note: "Le Bellevue hoort bij Royal Champagne Hotel & Spa, met 47 kamers en suites"
+stay_note_en: "Le Bellevue is part of Royal Champagne Hotel & Spa, with 47 rooms and suites"
+booking_url: "https://www.booking.com/hotel/fr/royal-champagne-spa.html"
 ---

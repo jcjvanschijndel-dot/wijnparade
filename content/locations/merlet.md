@@ -23,6 +23,9 @@ description_en: >-
   such as Wadden Sea shrimps and Texel lamb. The wine list is Merlet's real
   secret: no fewer than 60 wines by the glass, many of them via Coravin,
   including older vintages at remarkably reasonable prices for the Netherlands.
+stay_type: hotel
+stay_note: "Hotel met 28 kamers en suites aan de rand van de duinen"
+stay_note_en: "Hotel with 28 rooms and suites on the edge of the dunes"
 awards:
   - name: Michelin
     detail: 1 ster

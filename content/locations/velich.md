@@ -24,4 +24,8 @@ description_en: >-
 
   Velich is in Apetlon on Lake Neusiedl, in Burgenland in Austria. Known for its
   white wines, and recommended for anyone who takes Austrian wine seriously.
+stay_type: hotel
+stay_note: "Residenz Velich: 17 kamers met spa"
+stay_note_en: "Residenz Velich: 17 rooms with a spa"
+booking_url: "https://www.booking.com/hotel/at/residenz-velich.html"
 ---

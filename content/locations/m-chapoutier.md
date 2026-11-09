@@ -51,4 +51,7 @@ description_en: >-
   du Pavillon is a gîte for two on the estate, overlooking the vineyards, and
   Hotel Fac & Spera (4 stars) and Marius Bistro are right at the foot of the
   vineyards.
+stay_type: vakantiewoning
+stay_note: "Gîte La Tour du Pavillon voor twee personen tussen de wijngaarden"
+stay_note_en: "Gîte La Tour du Pavillon for two people among the vines"
 ---
