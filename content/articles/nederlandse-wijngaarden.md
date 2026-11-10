@@ -44,9 +44,13 @@ body_en: |-
 
   Just outside Winterswijk lies [Wijngaard Hesselink](/en/locations/wijngaard-hesselink), on the cycle network. The tasting gives you five wines with bread and cheese. In Hilversum, [Wijngaard Zonnestraal](/en/locations/wijngaard-zonnestraal) has made wine since 2016, with a pizza and wine evening on the first Friday of each month. In Twijzel, in Friesland, is [De Frysling](/en/locations/wijngaard-de-frysling), one of the northernmost vineyards in the Netherlands. They make, among other things, the sparkling Brûswyn.
 
+  ![Wijngaard Hesselink](/uploads/wijngaard-hesselink.webp)
+
   ## In the city
 
   [Chateau Amsterdam](/en/locations/chateau-amsterdam) in Amsterdam-Noord has no vineyard. It is an urban winery that turns grapes from Germany, France and Spain, among other places, into wine on the IJ. There is a tasting room and a restaurant.
+
+  ![Chateau Amsterdam](/uploads/chateau-amsterdam.webp)
 
   ## Tip
 
@@ -75,9 +79,13 @@ Op Schouwen-Duiveland plantte [De Kleine Schorre](/locations/wijnhoeve-de-kleine
 
 Net buiten Winterswijk ligt [Wijngaard Hesselink](/locations/wijngaard-hesselink), aan het fietsknooppuntennetwerk. Bij de proeverij krijg je vijf wijnen met stokbrood en kaas. In Hilversum maakt [Wijngaard Zonnestraal](/locations/wijngaard-zonnestraal) sinds 2016 wijn, met elke eerste vrijdag van de maand een avond met pizza en wijn. In Twijzel, in Friesland, ligt [De Frysling](/locations/wijngaard-de-frysling), een van de noordelijkste wijngaarden van Nederland. Daar maken ze onder meer de mousserende Brûswyn.
 
+![Wijngaard Hesselink](/uploads/wijngaard-hesselink.webp)
+
 ## In de stad
 
 [Chateau Amsterdam](/locations/chateau-amsterdam) in Amsterdam-Noord heeft geen wijngaard. Het is een stadswijnmakerij die druiven uit onder meer Duitsland, Frankrijk en Spanje aan het IJ tot wijn maakt. Er is een proefruimte en een restaurant.
+
+![Chateau Amsterdam](/uploads/chateau-amsterdam.webp)
 
 ## Tip
 

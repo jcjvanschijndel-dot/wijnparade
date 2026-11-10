@@ -44,6 +44,8 @@ body_en: |-
 
   On the Oudegracht, [VINO](/en/locations/wijnbar-vino) is in the Winkel van Sinkel, the first department store in the Netherlands. There are more than 140 wines on the list, and you can order a high wine with five wines and five dishes. [Jacob's](/en/locations/jacobs-wine-gastrobar-union-house) in Union House looks out on the old Tivoli and has a few original wines next to familiar names. On the Nieuwegracht, [Proeflokaal de Lindebar](/en/locations/proeflokaal-de-lindebar) has special wines, but also whisky, port and jenever. A few times a month you can walk in for a tasting without booking.
 
+  ![Wijnbar VINO](/uploads/wijnbar-vino.webp)
+
   ## Eating with a good glass
 
   At [Café-Restaurant Terroir](/en/locations/cafe-restaurant-terroir) in the Museumkwartier you choose your wine first and then your dish. There are around 500 wines on the list, with a fixed margin per bottle and a lot of German wine, Burgundy and natural wine. [Rosie](/en/locations/rosie) on the Lucasbolwerk is half restaurant, half bar, with plenty of natural wine and oysters at the bar. In the Polman's Huis, [Hemel & Aarde](/en/locations/hemel-aarde) has a restaurant and a wine bar, with wines that change with the seasons. [Bistro Madeleine](/en/locations/bistro-madeleine) on 't Wed is a French bistro with a long bar, also good for a glass and a bite. At [San Siro](/en/locations/san-siro) on the Oudkerkhof the list is mostly Italian, and nearly everything is available by the glass.
@@ -55,6 +57,8 @@ body_en: |-
   ## Wine shops
 
   On the Nachtegaalstraat in Utrecht-Oost, two wine shops are a few doors apart. [Vleck](/en/locations/vleck-wijnen) sells natural wine from small winemakers. There are also many clear, classic-tasting bottles, and on Fridays there is often a small tasting. At [Chatobi](/en/locations/chatobi) you only find wines from small estates the owner has visited and tasted in person.
+
+  ![Vleck Wijnen](/uploads/vleck-wijnen.webp)
 
   In the city centre, [De Vinotheek](/en/locations/de-vinotheek) on the Hardebollenstraat has around eighty organic and natural wines, from the same owner as VinVin. [Utregs Wijnhuis](/en/locations/utregs-wijnhuis) is behind the Dom and has everything from an everyday bottle to exclusive wine. [Welkom aan Tafel](/en/locations/welkom-aan-tafel) on the Lange Smeestraat is an importer working with more than 50 European estates, with a tasting cellar under the shop.
 
@@ -77,6 +81,8 @@ Tussen het Domplein en de Oudegracht heeft [Talud9](/locations/talud9) meer dan 
 
 Aan de Oudegracht zit [VINO](/locations/wijnbar-vino) in de Winkel van Sinkel, het eerste warenhuis van Nederland. Er staan meer dan 140 wijnen op de kaart, en je kunt een high wine met vijf wijnen en vijf gerechten bestellen. [Jacob's](/locations/jacobs-wine-gastrobar-union-house) in Union House kijkt uit op het oude Tivoli en heeft naast bekende namen ook een paar originele wijnen. Aan de Nieuwegracht heeft [Proeflokaal de Lindebar](/locations/proeflokaal-de-lindebar) bijzondere wijnen, maar ook whisky, port en jenever. Een paar keer per maand kun je zonder reservering binnenlopen voor een proeverij.
 
+![Wijnbar VINO](/uploads/wijnbar-vino.webp)
+
 ## Eten met een goed glas
 
 Bij [Café-Restaurant Terroir](/locations/cafe-restaurant-terroir) in het Museumkwartier kies je eerst je wijn en dan je gerecht. Er staan zo'n 500 wijnen op de kaart, met een vaste marge per fles en veel Duitse wijn, Bourgogne en naturel. [Rosie](/locations/rosie) aan het Lucasbolwerk is half restaurant, half bar, met veel natuurwijn en oesters aan de bar. In het Polman's Huis heeft [Hemel & Aarde](/locations/hemel-aarde) een restaurant en een wijnbar, met wijnen die met de seizoenen meewisselen. [Bistro Madeleine](/locations/bistro-madeleine) aan 't Wed is een Franse bistro met een lange bar, ook voor een glas met een hapje. Bij [San Siro](/locations/san-siro) aan het Oudkerkhof is de kaart grotendeels Italiaans, en bijna alles is per glas.
@@ -88,6 +94,8 @@ Iets buiten het centrum zitten [Restaurant Badhuis](/locations/restaurant-badhui
 ## Wijnwinkels
 
 In de Nachtegaalstraat in Utrecht-Oost zitten twee wijnwinkels een paar huizen van elkaar. [Vleck](/locations/vleck-wijnen) verkoopt natuurwijn van kleine wijnmakers. Er staan ook veel heldere, klassiek smakende flessen, en op vrijdag is er vaak een kleine proeverij. Bij [Chatobi](/locations/chatobi) liggen alleen wijnen van kleine wijnhuizen die de eigenaar zelf heeft bezocht en geproefd.
+
+![Vleck Wijnen](/uploads/vleck-wijnen.webp)
 
 In de binnenstad heeft [De Vinotheek](/locations/de-vinotheek) in de Hardebollenstraat zo'n tachtig biologische en natuurwijnen, van dezelfde eigenaar als VinVin. [Utregs Wijnhuis](/locations/utregs-wijnhuis) zit achter de Dom en heeft van alles, van een fles voor elke dag tot exclusieve wijn. [Welkom aan Tafel](/locations/welkom-aan-tafel) in de Lange Smeestraat is een importeur met meer dan 50 Europese wijnhuizen en een proefkelder onder de winkel.
 

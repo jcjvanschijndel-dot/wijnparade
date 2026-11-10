@@ -58,11 +58,15 @@ body_en: |-
 
   In Monforte d'Alba, at [Barolo Bar](/en/locations/barolo-bar) on the market square, you drink a glass with antipasti, with a roof terrace opposite. In Castiglione Falletto, [Casa Sobrero](/en/locations/casa-sobrero) has a tasting room and a terrace with views from La Morra to Serralunga. [Le Torri](/en/locations/le-torri) on the village square looks out over the vineyards.
 
+  ![Barolo Bar](/uploads/barolo-bar.webp)
+
   In Serralunga d'Alba, [Palladino](/en/locations/azienda-vinicola-palladino) makes Barolo from its own vineyards in crus such as Vigna Rionda and Cerretta. After 35 years at Vietti, Elena Penna and Luca Currado started a new estate there: [Penna-Currado](/en/locations/penna-currado). Below the castle, [Vinoteca Centro Storico](/en/locations/vinoteca-centro-storico) has three antipasti, three primi and three secondi every day. On the Fontanafredda estate, Ugo Alciati cooks at [Guido](/en/locations/guido-ristorante), with a Michelin star and his mother's agnolotti del plin.
 
   ## Novello and Verduno
 
   Novello is the quietest Barolo village. At [Langotto](/en/locations/langotto-ristorante), sommelier Elisa Andreotti helps you choose. Ask for a glass of Nascetta and a Barolo from the Ravera cru. At [Cogli l'Attimo](/en/locations/cogli-lattimo) you taste at picnic tables under big trees, without a cellar or reception. In Verduno, the least-known Barolo village, the brothers of [Fratelli Alessandria](/en/locations/fratelli-alessandria) welcome you in an old stone winery.
+
+  ![Langotto Ristorante](/uploads/langotto-ristorante.webp)
 
   ## Barbaresco, Neive and Treiso
 
@@ -75,6 +79,8 @@ body_en: |-
   ## Alba and the surroundings
 
   In Alba, [Vincafè](/en/locations/vincafe) on the Via Vittorio Emanuele pours more than sixty Piedmontese wines. [La Piola](/en/locations/la-piola) on the Piazza Risorgimento is the Ceretto family's simple restaurant, opposite the cathedral. On the Piazza Michele Ferrero the Sarotto family has a wine bar: [Roberto Sarotto](/en/locations/roberto-sarotto). A little further away are [Poderi Luigi Einaudi](/en/locations/poderi-luigi-einaudi-azienda-agricola) in Dogliani, where you can also stay, [Trattoria del Peso](/en/locations/trattoria-del-peso) in Belvedere Langhe, where you eat whatever is cooking that day, and [Le Piemontesine](/en/locations/le-piemontesine) in the Alta Langa.
+
+  ![Vincafè](/uploads/vincafe.webp)
 
   ## Tip
 
@@ -99,11 +105,15 @@ In La Morra heeft [Osteria Veglio](/locations/osteria-veglio) een terras met uit
 
 In Monforte d'Alba drink je bij [Barolo Bar](/locations/barolo-bar) aan het marktplein een glas met antipasti, met een dakterras ertegenover. In Castiglione Falletto heeft [Casa Sobrero](/locations/casa-sobrero) een proefruimte en een terras met uitzicht van La Morra tot Serralunga. [Le Torri](/locations/le-torri) op het dorpsplein kijkt uit over de wijngaarden.
 
+![Barolo Bar](/uploads/barolo-bar.webp)
+
 In Serralunga d'Alba maakt [Palladino](/locations/azienda-vinicola-palladino) Barolo van eigen wijngaarden in cru's als Vigna Rionda en Cerretta. Elena Penna en Luca Currado begonnen er na 35 jaar bij Vietti een nieuw domein: [Penna-Currado](/locations/penna-currado). Onder het kasteel heeft [Vinoteca Centro Storico](/locations/vinoteca-centro-storico) elke dag drie antipasti, drie primi en drie secondi. Op het landgoed Fontanafredda kookt Ugo Alciati bij [Guido](/locations/guido-ristorante), met een Michelinster en de agnolotti del plin van zijn moeder.
 
 ## Novello en Verduno
 
 Novello is het rustigste Barolo-dorp. Bij [Langotto](/locations/langotto-ristorante) helpt sommelier Elisa Andreotti je kiezen. Vraag naar een glas nascetta en een barolo uit de cru Ravera. Bij [Cogli l'Attimo](/locations/cogli-lattimo) proef je aan picknicktafels onder grote bomen, zonder kelder of receptie. In Verduno, het minst bekende Barolo-dorp, ontvangen de broers van [Fratelli Alessandria](/locations/fratelli-alessandria) je in een oud stenen wijnhuis.
+
+![Langotto Ristorante](/uploads/langotto-ristorante.webp)
 
 ## Barbaresco, Neive en Treiso
 
@@ -116,6 +126,8 @@ In Neive heeft [Al nido della Cinciallegra](/locations/al-nido-della-cinciallegr
 ## Alba en de omgeving
 
 In Alba schenkt [Vincafè](/locations/vincafe) aan de Via Vittorio Emanuele meer dan zestig Piemontese wijnen. [La Piola](/locations/la-piola) op de Piazza Risorgimento is het eenvoudige restaurant van de familie Ceretto, tegenover de kathedraal. Op de Piazza Michele Ferrero heeft de familie Sarotto een wijnbar: [Roberto Sarotto](/locations/roberto-sarotto). Iets verder weg liggen [Poderi Luigi Einaudi](/locations/poderi-luigi-einaudi-azienda-agricola) in Dogliani, waar je ook kunt overnachten, [Trattoria del Peso](/locations/trattoria-del-peso) in Belvedere Langhe, waar je eet wat de pot schaft, en [Le Piemontesine](/locations/le-piemontesine) in de Alta Langa.
+
+![Vincafè](/uploads/vincafe.webp)
 
 ## Tip
 

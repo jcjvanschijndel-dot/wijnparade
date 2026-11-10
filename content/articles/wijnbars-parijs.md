@@ -41,6 +41,8 @@ body_en: |-
 
   Close to the Palais-Royal, [Legrand Filles et Fils](/en/locations/legrand-filles-et-fils) has plenty of Burgundy, Rhône and Loire, with a separate room for Bordeaux. On Fridays and Saturdays there are often free tastings. At [Caves Augé](/en/locations/caves-auge) on the Boulevard Haussmann there are 3,000 to 4,000 wines. Once a month, winemakers pour their own wine at a free tasting on the pavement. [Lavinia](/en/locations/lavinia) on the Avenue Victor Hugo is the largest wine shop in Paris, with more than 6,500 wines. From the wine dispensers on the ground floor you taste small sips, from house wine to grand cru.
 
+  ![Legrand Filles et Fils](/uploads/legrand.webp)
+
   ## Tip
 
   Many small wine bars in Paris don't take bookings. Come early in the evening, around six. Combine the wine shops with a bar in the same area: Legrand and Willi's are a few minutes' walk apart, as are La Cave Pigalle and Duvin. All addresses are also in the [Paris guide](/en/wine-tips/paris).
@@ -65,6 +67,8 @@ Bij het Odéon zitten drie [Avant Comptoirs](/locations/lavant-comptoir-de-la-te
 ## Wijnwinkels
 
 Vlak bij het Palais-Royal heeft [Legrand Filles et Fils](/locations/legrand-filles-et-fils) veel Bourgogne, Rhône en Loire, met een aparte zaal voor Bordeaux. Op vrijdag en zaterdag zijn er vaak gratis proeverijen. Bij [Caves Augé](/locations/caves-auge) aan de Boulevard Haussmann staan 3.000 tot 4.000 wijnen. Eén keer per maand schenken wijnmakers hun eigen wijn tijdens een gratis proeverij op de stoep. [Lavinia](/locations/lavinia) aan de Avenue Victor Hugo is met meer dan 6.500 wijnen de grootste wijnwinkel van Parijs. Uit de wijnautomaten op de begane grond proef je kleine slokjes, van huiswijn tot grand cru.
+
+![Legrand Filles et Fils](/uploads/legrand.webp)
 
 ## Tip
 

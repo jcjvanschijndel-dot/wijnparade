@@ -39,13 +39,19 @@ body_en: |-
 
   [Torelló](/en/locations/torello-viticultors) in Gelida has documents going back to 1395 and 23 generations of winegrowing, with 135 hectares of organic vineyards around two medieval masias. In Subirats, [Sumarroca](/en/locations/sumarroca) has organic vineyards on a large estate between Sant Sadurní and Monistrol d'Anoia. In Sant Pau d'Ordal, [Albet i Noya](/en/locations/albet-i-noya) became Spain's first organic winemaker. After tasting, eat in the same village at [Cal Xim](/en/locations/cal-xim), where they have grilled lamb chops over oak for more than fifty years.
 
+  ![Torelló Viticultors](/uploads/torelló-viticultors.webp)
+
   ## The rest of the Penedès
 
   [Parés Baltà](/en/locations/pares-balta) in Pacs del Penedès has made wine since 1790. The estate is biodynamic, and its own sheep graze the land. [Can Ràfols dels Caus](/en/locations/can-rafols-dels-caus) in the Garraf massif pioneered fermenting Xarel·lo in chestnut barrels. [Caves Bolet](/en/locations/caves-bolet) in Castellví de la Marca has been organic since 2003, and you can stay in a modernist house from 1911. [Heretat Baltà de Cela](/en/locations/heretat-balta-de-cela) in Guardiola de Font-rubí makes a sparkling wine from Xarel·lo alone that ages for five years. [Jean Leon](/en/locations/jean-leon) in Torrelavit was the first winery in Spain to make a wine from Cabernet Sauvignon alone.
 
+  ![Parés Baltà](/uploads/parés-baltà.webp)
+
   ## Around Barcelona
 
   In Alella, fifteen kilometres north of Barcelona, [Alella Vinícola](/en/locations/alella-vinicola) is in a modernist building by a pupil of Gaudí. If you want to head further inland, go to [Abadal](/en/locations/abadal) in the Bages, where the white Picapoll grows.
+
+  ![Alella Vinícola](/uploads/alella-vinícola.webp)
 
   ## Tip
 
@@ -66,13 +72,19 @@ Ook [Jaume Giró i Giró](/locations/jaume-giro-i-giro), met de gele gevel, en [
 
 [Torelló](/locations/torello-viticultors) in Gelida heeft documenten tot 1395 terug en 23 generaties wijnbouw, met 135 hectare biologische wijngaarden rond twee middeleeuwse masia's. In Subirats heeft [Sumarroca](/locations/sumarroca) biologische wijngaarden op een groot landgoed tussen Sant Sadurní en Monistrol d'Anoia. In Sant Pau d'Ordal werd [Albet i Noya](/locations/albet-i-noya) de eerste biologische wijnmaker van Spanje. Na het proeven eet je in hetzelfde dorp bij [Cal Xim](/locations/cal-xim), waar ze al meer dan vijftig jaar lamskoteletjes grillen op eikenhout.
 
+![Torelló Viticultors](/uploads/torelló-viticultors.webp)
+
 ## De rest van de Penedès
 
 [Parés Baltà](/locations/pares-balta) in Pacs del Penedès maakt al sinds 1790 wijn. Het domein is biodynamisch, en op de landgoederen grazen eigen schapen. [Can Ràfols dels Caus](/locations/can-rafols-dels-caus) in het Garraf-massief begon xarel·lo op kastanjehouten vaten te vergisten. [Caves Bolet](/locations/caves-bolet) in Castellví de la Marca werkt sinds 2003 biologisch, en je kunt er overnachten in een modernistisch huis uit 1911. [Heretat Baltà de Cela](/locations/heretat-balta-de-cela) in Guardiola de Font-rubí maakt een mousserende wijn van alleen xarel·lo die vijf jaar rijpt. [Jean Leon](/locations/jean-leon) in Torrelavit maakte als eerste wijnhuis in Spanje een wijn van alleen cabernet sauvignon.
 
+![Parés Baltà](/uploads/parés-baltà.webp)
+
 ## Rond Barcelona
 
 In Alella, vijftien kilometer ten noorden van Barcelona, staat [Alella Vinícola](/locations/alella-vinicola) in een modernistisch gebouw van een leerling van Gaudí. Wie verder het binnenland in wil, kan naar [Abadal](/locations/abadal) in de Bages, waar de witte picapoll groeit.
+
+![Alella Vinícola](/uploads/alella-vinícola.webp)
 
 ## Tip
 

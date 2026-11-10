@@ -50,15 +50,21 @@ body_en: |-
 
   At [Maison Denis Perret](/en/locations/maison-denis-perret) on the Place Carnot you can taste the wines of five large négociants, including Bouchard, Drouhin and Jadot. Under the cobblestones of Beaune lie the cellars of [Patriarche](/en/locations/patriarche-pere-et-fils), five kilometres of tunnels with more than two million bottles. You walk around on your own with an audio guide. Smaller is [Coudurier Jung](/en/locations/vins-coudurier-jung), an urban winery with a cellar of a handful of barrels, without filtration and with little sulphur. [Domaine des Croix](/en/locations/domaine-des-croix) receives visitors by appointment, except in September and October.
 
+  ![Maison Denis Perret](/uploads/perret.webp)
+
   ## The Côte de Beaune
 
   In Meursault, the [Caveau de l'Hôtel Les Charmes](/en/locations/caveau-de-lhotel-les-charmes) pours almost 500 wines, including all the premiers crus of Meursault, at shop price plus €10. Just down the road you eat at [Le Soufflot](/en/locations/le-soufflot), in an old winegrower's house. In a side street of Chassagne-Montrachet is [Colette](/en/locations/colette), a wine bar with a cellar where you can also buy bottles at good prices.
+
+  ![Caveau de L'hotel les Charmes](/uploads/caveau-charmes.webp)
 
   In Savigny-lès-Beaune, [Chandon de Briailles](/en/locations/chandon-de-briailles) has farmed biodynamically since 2005, with vineyards in three villages. [Domaine Rapet](/en/locations/domaine-rapet-pere-fils) in Pernand-Vergelesses, at the foot of the Corton, has made wine for more than 250 years. In Auxey-Duresses, monks from Cluny planted the vineyards of [Le Clos du Moulin aux Moines](/en/locations/le-clos-du-moulin-aux-moines) in 962, with a windmill above the vines. And at [Réserve de Bacchus](/en/locations/reserve-de-bacchus) in Ladoix-Serrigny there are more than 1,000 wines, handy for taking a few bottles home at the end of your trip.
 
   ## The Côte de Nuits and Chablis
 
   In Vosne-Romanée, Louis-Michel Liger-Belair opened [La Cuverie](/en/locations/la-cuverie-de-vosne) in 2022, a meeting place looking out on the Clos du Château. [Domaine Trapet](/en/locations/domaine-trapet) in Gevrey-Chambertin receives a maximum of four people at a time, with a Burgundian meal and five wines.
+
+  ![La Cuverie De Vosne](/uploads/cuverie.webp)
 
   In Chablis, [Chablis Wine Not](/en/locations/chablis-wine-not) is in an old pharmacy, and the winemakers drink there themselves. [Domaine Duplessis](/en/locations/domaine-duplessis) has premiers crus and grand cru Les Clos, from vines that are 75 years or older on many plots.
 
@@ -85,15 +91,21 @@ Aan de Place Ziem zit [Bistrot du Coin](/locations/bistrot-du-coin), een klein w
 
 Bij [Maison Denis Perret](/locations/maison-denis-perret) aan de Place Carnot kun je de wijnen van vijf grote négociants proeven, waaronder Bouchard, Drouhin en Jadot. Onder de kasseien van Beaune liggen de kelders van [Patriarche](/locations/patriarche-pere-et-fils), vijf kilometer gangen met meer dan twee miljoen flessen. Je loopt er zelf rond met een audiogids. Kleiner is [Coudurier Jung](/locations/vins-coudurier-jung), een stadswijnmakerij met een kelder van een handvol vaten, zonder filtratie en met weinig sulfiet. [Domaine des Croix](/locations/domaine-des-croix) ontvangt op afspraak, behalve in september en oktober.
 
+![Maison Denis Perret](/uploads/perret.webp)
+
 ## De Côte de Beaune
 
 In Meursault schenkt het [Caveau de l'Hôtel Les Charmes](/locations/caveau-de-lhotel-les-charmes) bijna 500 wijnen, waaronder alle premiers crus van Meursault, tegen winkelprijs plus €10. Even verderop eet je bij [Le Soufflot](/locations/le-soufflot), in een oud wijnboerenhuis. In een zijstraatje van Chassagne-Montrachet zit [Colette](/locations/colette), een wijnbar met een kelder waar je ook flessen kunt kopen tegen goede prijzen.
+
+![Caveau de L'hotel les Charmes](/uploads/caveau-charmes.webp)
 
 In Savigny-lès-Beaune werkt [Chandon de Briailles](/locations/chandon-de-briailles) sinds 2005 biodynamisch, met wijngaarden in drie dorpen. [Domaine Rapet](/locations/domaine-rapet-pere-fils) in Pernand-Vergelesses, aan de voet van de Corton, maakt al meer dan 250 jaar wijn. In Auxey-Duresses legden monniken van Cluny in 962 de wijngaarden aan van [Le Clos du Moulin aux Moines](/locations/le-clos-du-moulin-aux-moines), met een windmolen boven de stokken. En bij [Réserve de Bacchus](/locations/reserve-de-bacchus) in Ladoix-Serrigny staan meer dan 1.000 wijnen, handig om aan het eind van je reis een paar flessen mee te nemen.
 
 ## De Côte de Nuits en Chablis
 
 In Vosne-Romanée opende Louis-Michel Liger-Belair in 2022 [La Cuverie](/locations/la-cuverie-de-vosne), een ontmoetingsplek met uitzicht op de Clos du Château. [Domaine Trapet](/locations/domaine-trapet) in Gevrey-Chambertin ontvangt maximaal vier personen per keer, met een Bourgondische maaltijd en vijf wijnen.
+
+![La Cuverie De Vosne](/uploads/cuverie.webp)
 
 In Chablis zit [Chablis Wine Not](/locations/chablis-wine-not) in een oude apotheek, en daar drinken ook de wijnmakers zelf. [Domaine Duplessis](/locations/domaine-duplessis) heeft premiers crus en grand cru Les Clos, van stokken die op veel percelen 75 jaar of ouder zijn.
 
