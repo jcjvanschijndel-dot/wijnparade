@@ -29,6 +29,7 @@ description_en: >-
   and natural wines included, and matches the wines to Jef's refined style of
   cooking. Booking is advisable. Recommended for anyone who wants to eat and
   stay on Texel with a wine list that goes beyond the classics.
+image: /uploads/bij-jef.webp
 website: https://bijjef.nl/
 stay_type: hotel
 stay_note: "Twaalf luxe designsuites boven en naast het restaurant"
