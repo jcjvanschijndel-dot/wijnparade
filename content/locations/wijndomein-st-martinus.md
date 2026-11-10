@@ -26,4 +26,7 @@ description_en: >-
   to Dutch wine.
 taste_note: "Rondleidingen en proeverijen, ook eten"
 taste_note_en: "Tours and tastings, plus food"
+stay_type: hotel
+stay_note: "LÖSS Wijnhotel in Vijlen, met vijf wijnkamers"
+stay_note_en: "LÖSS Wijnhotel in Vijlen, with five wine-themed rooms"
 ---

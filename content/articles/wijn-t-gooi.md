@@ -55,6 +55,8 @@ body_en: |-
 
   By the lock in Muiden is [Wijnbar Vijf](/en/locations/wijnbar-vijf), with wines from small estates and a large menu of dishes to share. In Weesp, [Somm](/en/locations/somm-bistro-a-vin) has more than 250 wines, from affordable to exclusive. In Vreeland and Loenen aan de Vecht there are two restaurants with a Michelin star: [De Nederlanden](/en/locations/de-nederlanden), with a broad wine list, and ['t Amsterdammertje](/en/locations/t-amsterdammertje), with organic wines only.
 
+  ![Wijnbar Vijf](/uploads/vijf.webp)
+
   ## Tip
 
   Many wine shops in Het Gooi have something open to taste at the end of the week. Combine a visit with a drink in one of the wine bars. All addresses are also in the [Het Gooi guide](/en/wine-tips/het-gooi).
@@ -87,6 +89,8 @@ In Blaricum schenkt [Ottovino](/locations/ottovino) aan de Dorpsstraat meer dan 
 ## Rond 't Gooi
 
 Aan de sluis in Muiden zit [Wijnbar Vijf](/locations/wijnbar-vijf), met wijnen van kleine wijnhuizen en een uitgebreide kaart met gerechten om te delen. In Weesp heeft [Somm](/locations/somm-bistro-a-vin) meer dan 250 wijnen, van betaalbaar tot exclusief. In Vreeland en Loenen aan de Vecht zitten twee restaurants met een Michelinster: [De Nederlanden](/locations/de-nederlanden), met een brede wijnkaart, en ['t Amsterdammertje](/locations/t-amsterdammertje), met uitsluitend biologische wijnen.
+
+![Wijnbar Vijf](/uploads/vijf.webp)
 
 ## Tip
 

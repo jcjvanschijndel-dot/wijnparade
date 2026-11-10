@@ -219,6 +219,7 @@ const STAY_CSS = `.loc-stay{padding:.75rem 1rem;background:var(--gray-50);border
     .loc-stay-btn-alt{background:#fff;color:var(--navy)!important;border:1px solid var(--navy)}
     .loc-stay-link{display:inline-block;margin-top:.4rem;color:var(--navy);font-weight:500}
     .loc-stay-disclosure{margin-top:.5rem!important;font-size:.72rem;color:var(--gray-600)}
+    .art-loc-img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:1rem 0 .75rem}
 `;
 // In artikelen: een alinea met alleen [[overnachten:locatie-id]] wordt het vlak Overnachten van die locatie
 function injectStayBlocks(html, lang) {
@@ -227,7 +228,9 @@ function injectStayBlocks(html, lang) {
     const loc = allLocations.find(l => l._id === id.trim());
     if (!loc || !hasStay(loc)) { console.warn(`  ⚠️  artikel: [[overnachten:${id}]] heeft geen overnachting`); return ''; }
     if (bookingLink(loc.booking_url, loc._id)) any = true;
-    return stayBlock(loc, lang, { disclosure: false });
+    // Foto van de locatie boven het vlak (eigen foto's uit /uploads)
+    const img = loc.image ? `<img src="${loc.image}" alt="${String(loc.title || loc.name).replace(/"/g, '&quot;')}" class="art-loc-img" loading="lazy">` : '';
+    return img + stayBlock(loc, lang, { disclosure: false });
   });
   let anyTaste = false;
   const out2 = out.replace(/<p>\[\[proeverij:([^\]]+)\]\]<\/p>/g, (m, id) => {

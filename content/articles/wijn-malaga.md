@@ -53,11 +53,15 @@ body_en: |-
 
   [Bodegas Quitapenas](/en/locations/bodegas-quitapenas) in Churriana, founded in 1880 and now run by the fifth generation, is close to the airport. You taste three or four wines there, with cheese or Ibérico ham if you like. In the Axarquía, east of Málaga, the vineyards lie on steep slopes. [Bodegas Bentomiz](/en/locations/bodegas-bentomiz) in Sayalonga was founded by a Dutch couple and lies at 500 to 800 metres, looking out to sea. [Fabio Coullet](/en/locations/bodega-fabio-coullet) in Almáchar makes dry wines from old local grapes, such as the almost forgotten Romé. That is unusual in a region known mainly for sweet wine. [Bodegas Jorge Ordóñez](/en/locations/bodega-ordonez) in Vélez-Málaga, which specialises in Moscatel, also receives visitors by appointment.
 
+  ![Bodegas Quitapenas](/uploads/quitapenas.webp)
+
   In the mountains near Ronda, [Bodega Doña Felisa](/en/locations/bodega-dona-felisa) lies at around 900 metres, close to the Roman ruins of Acinipo. The tour takes an hour and a half, with a tasting and snacks. Near Manilva, on the coast, [Nilva](/en/locations/nilva-enoturismo) is saving the old Moscatel vines; the tasting takes place in a vineyard with views of Gibraltar and the African coast.
 
   ## Marbella
 
   In Nueva Andalucía, sommelier Emilio Campos runs [Adivino](/en/locations/adivino): wine bar, wine shop and gallery in one space, with guided tastings, blind ones too. [G-Wine](/en/locations/g-wine-bar-and-grill) in San Pedro pours more than 25 wines by the glass, seven days a week. At [Lobito de Mar](/en/locations/lobito-de-mar) you eat fish and bluefin tuna, in seventeen preparations, with a serious wine list. And [Cascada](/en/locations/cascada), in the hills of the Sierra Blanca, has a five-course menu with a €30 wine pairing.
+
+  ![Adivino](/uploads/adivino.webp)
 
   ## Tip
 
@@ -88,11 +92,15 @@ Voor een fles om mee te nemen ga je naar [Crespillo Innova](/locations/crespillo
 
 [Bodegas Quitapenas](/locations/bodegas-quitapenas) in Churriana, sinds 1880 en nu in handen van de vijfde generatie, ligt vlak bij de luchthaven. Je proeft er drie of vier wijnen, eventueel met kaas of Ibérico-ham. In de Axarquía, ten oosten van Málaga, liggen de wijngaarden op steile hellingen. [Bodegas Bentomiz](/locations/bodegas-bentomiz) in Sayalonga werd opgericht door een Nederlands stel en ligt op 500 tot 800 meter hoogte, met uitzicht op zee. [Fabio Coullet](/locations/bodega-fabio-coullet) in Almáchar maakt droge wijnen van oude lokale druiven, zoals de bijna vergeten romé. Dat is bijzonder in een streek die vooral om zoete wijn bekend is. Ook [Bodegas Jorge Ordóñez](/locations/bodega-ordonez) in Vélez-Málaga, gespecialiseerd in moscatel, ontvangt bezoekers op afspraak.
 
+![Bodegas Quitapenas](/uploads/quitapenas.webp)
+
 In de bergen bij Ronda ligt [Bodega Doña Felisa](/locations/bodega-dona-felisa) op zo'n 900 meter hoogte, vlak bij de Romeinse ruïnes van Acinipo. De rondleiding duurt anderhalf uur, met een proeverij en hapjes. Bij Manilva, aan de kust, redt [Nilva](/locations/nilva-enoturismo) de oude moscatelstokken; de proeverij is in een wijngaard met uitzicht op Gibraltar en de Afrikaanse kust.
 
 ## Marbella
 
 In Nueva Andalucía heeft sommelier Emilio Campos [Adivino](/locations/adivino): wijnbar, wijnwinkel en galerie in één ruimte, met begeleide proeverijen, ook blind. [G-Wine](/locations/g-wine-bar-and-grill) in San Pedro schenkt meer dan 25 wijnen per glas, zeven dagen per week. Bij [Lobito de Mar](/locations/lobito-de-mar) eet je vis en blauwvintonijn, in zeventien bereidingen, met een serieuze wijnkaart. En [Cascada](/locations/cascada), in de heuvels van de Sierra Blanca, heeft een menu van vijf gangen met een wijnarrangement van €30.
+
+![Adivino](/uploads/adivino.webp)
 
 ## Tip
 

@@ -27,6 +27,8 @@ body_en: |-
 
   On the market square in Trier, looking out on the cathedral, [Kesselstatt](/en/locations/kesselstatt) has a Weinstube. You taste Riesling from famous vineyards of the Mosel, Saar and Ruwer side by side, such as Piesporter Goldtröpfchen and Bernkasteler Doctor. [Bagatelle](/en/locations/bagatelle) is right on the Mosel, with a terrace by the water and a list full of Riesling. Just outside Trier, on the Ruwer, lies [Maximin Grünhaus](/en/locations/maximin-grunhaus), where wine has been made for almost 2,000 years, first by the Romans and then by monks. Since 1882 the estate has belonged to the Von Schubert family.
 
+  ![Kesselstatt](/uploads/kesselstat.webp)
+
   ## Bernkastel-Kues
 
   Bernkastel is the prettiest wine town on the Mosel, with half-timbered houses and the Bernkasteler Doctor above the centre. [Dr. Loosen](/en/locations/weingut-dr-loosen) is on the World's 50 Best Vineyards list and has vineyards in the famous sites around Bernkastel. [Dr. Pauly-Bergweiler](/en/locations/weingut-dr-pauly-bergweiler) has fifteen plots between Brauneberg and Erden. Every Saturday at four there is a tasting with an explanation, in English too. To eat, go to [Graacher Tor](/en/locations/graacher-tor) in the medieval centre. The owner comes round the tables to help you with the wine.
@@ -36,6 +38,8 @@ body_en: |-
   ## Traben-Trarbach and Cochem
 
   In Traben-Trarbach, at [Die Mosel Vinothek](/en/locations/die-mosel-vinothek-winebar) on the promenade, you can taste, buy and eat, and stay the night. In Cochem the [Hieronimi](/en/locations/hieronimi) family has welcomed guests for more than 35 years in vaulted cellars by the river. In the Weingarten you sit in deckchairs by the water, looking up at the Reichsburg.
+
+  ![Die Mosel Vinothek & Winebar](/uploads/die-mosel.webp)
 
   ## Tip
 
@@ -52,6 +56,8 @@ De beste wijngaarden liggen op zuidhellingen langs de rivier, waar het water en 
 
 Op het marktplein van Trier, met uitzicht op de Dom, heeft [Kesselstatt](/locations/kesselstatt) een Weinstube. Je proeft er riesling uit bekende wijngaarden van Moezel, Saar en Ruwer naast elkaar, zoals Piesporter Goldtröpfchen en Bernkasteler Doctor. [Bagatelle](/locations/bagatelle) ligt direct aan de Moezel, met een terras aan het water en een kaart vol riesling. Net buiten Trier, aan de Ruwer, ligt [Maximin Grünhaus](/locations/maximin-grunhaus), waar al bijna 2.000 jaar wijn wordt gemaakt, eerst door de Romeinen en daarna door monniken. Sinds 1882 is het landgoed van de familie Von Schubert.
 
+![Kesselstatt](/uploads/kesselstat.webp)
+
 ## Bernkastel-Kues
 
 Bernkastel is het mooiste wijnstadje aan de Moezel, met vakwerkhuizen en de Bernkasteler Doctor boven het centrum. [Dr. Loosen](/locations/weingut-dr-loosen) staat in de lijst van World's 50 Best Vineyards en heeft wijngaarden in de bekende lagen rond Bernkastel. [Dr. Pauly-Bergweiler](/locations/weingut-dr-pauly-bergweiler) heeft vijftien percelen tussen Brauneberg en Erden. Elke zaterdag om vier uur is er een proeverij met uitleg, ook in het Engels. Om te eten ga je naar [Graacher Tor](/locations/graacher-tor) in het middeleeuwse centrum. De eigenaar loopt zelf langs de tafels om je te helpen met de wijn.
@@ -61,6 +67,8 @@ Bernkastel is het mooiste wijnstadje aan de Moezel, met vakwerkhuizen en de Bern
 ## Traben-Trarbach en Cochem
 
 In Traben-Trarbach kun je bij [Die Mosel Vinothek](/locations/die-mosel-vinothek-winebar) aan de promenade wijn proeven, kopen en eten, en er ook overnachten. In Cochem ontvangt de familie [Hieronimi](/locations/hieronimi) al meer dan 35 jaar gasten in gewelfde kelders aan de rivier. In de Weingarten zit je in ligstoelen aan het water, met uitzicht op de Reichsburg.
+
+![Die Mosel Vinothek & Winebar](/uploads/die-mosel.webp)
 
 ## Tip
 

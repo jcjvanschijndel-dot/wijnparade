@@ -47,11 +47,15 @@ body_en: |-
 
   On the Proveniersstraat two addresses sit side by side. [Le Nord](/en/locations/le-nord) is a wine shop downstairs and a tasting room upstairs, with an open tasting every month. At [Café Kiem](/en/locations/cafe-kiem) you drink natural wine with local, seasonal food. Around the corner, at [Klaargemaakt](/en/locations/klaargemaakt) on the Schiekade, the list also has plenty of natural wine, next to home-made fermented drinks.
 
+  ![Le Nord](/uploads/le-nord.webp)
+
   At [Walsjérôt](/en/locations/wijnbar-walsjerot) in Blijdorp you load a card and pour your own: a sip, a half or a full glass, from more than 70 wines. In Kralingen, [Juni](/en/locations/juni-rotterdam) treats wine and cheese as equal partners. You can't book, so you just walk in. [LUX](/en/locations/lux) on the 's-Gravendijkwal pours natural wine only, with a four-course menu.
 
   ## Delfshaven
 
   In historic Delfshaven, Fred and Monique Zywiecki have run ['t Ouwe Bruggetje](/en/locations/t-ouwe-bruggetje) since 1989, with a terrace on the water. Nearly all the wines come from their own imports, and whatever you drink with dinner you can buy afterwards in the wine shop next door.
+
+  !['t Ouwe Bruggetje](/uploads/bruggetje.webp)
 
   ## Tip
 
@@ -78,11 +82,15 @@ Op Katendrecht is [NOTK](/locations/notk) aan de Delistraat restaurant, wijnbar 
 
 In de Proveniersstraat zitten twee adressen naast elkaar. [Le Nord](/locations/le-nord) is beneden een wijnwinkel en boven een proeflokaal, met elke maand een open proeverij. Bij [Café Kiem](/locations/cafe-kiem) drink je natuurwijn bij lokaal en seizoensgebonden eten. Om de hoek, bij [Klaargemaakt](/locations/klaargemaakt) aan de Schiekade, staat ook veel natuurwijn op de kaart, naast zelfgemaakte gefermenteerde dranken.
 
+![Le Nord](/uploads/le-nord.webp)
+
 Bij [Walsjérôt](/locations/wijnbar-walsjerot) in Blijdorp laad je een pasje op en tap je zelf: een slokje, een half of een heel glas, uit meer dan 70 wijnen. In Kralingen heeft [Juni](/locations/juni-rotterdam) wijn en kaas als gelijkwaardige partners. Je kunt er niet reserveren, dus je loopt gewoon binnen. [LUX](/locations/lux) aan de 's-Gravendijkwal schenkt uitsluitend natuurwijn, bij een menu van vier gangen.
 
 ## Delfshaven
 
 In Historisch Delfshaven runnen Fred en Monique Zywiecki al sinds 1989 ['t Ouwe Bruggetje](/locations/t-ouwe-bruggetje), met een terras aan het water. Vrijwel alle wijnen komen uit hun eigen import, en wat je bij het eten drinkt, kun je daarna kopen in de wijnwinkel ernaast.
+
+!['t Ouwe Bruggetje](/uploads/bruggetje.webp)
 
 ## Tip
 

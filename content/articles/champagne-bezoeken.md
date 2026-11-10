@@ -50,11 +50,15 @@ body_en: |-
 
   In Reims the Champagne bars are close together in the centre. [Le Coq Rouge](/en/locations/le-coq-rouge) is small and always busy, with wines and Champagnes the team picks from the makers themselves. [Le Wine Bar by Le Vintage](/en/locations/le-wine-bar-by-le-vintage) on the Place du Forum has more than 500 wines and 200 Champagnes. Next door, Aude Henon opened [La Vertu](/en/locations/la-vertu) in 2025, with only Champagne and wine from small producers. [Le Clos](/en/locations/le-clos) is tucked away in an inner garden by the market hall, with a large terrace in summer.
 
+  ![Le Coq Rouge](/uploads/coqrouge.webp)
+
   At the foot of the cathedral, [Cave du 13OR](/en/locations/cave-du-13or) has a Champagne bar and a shop with 200 Champagnes. At [Les Caves du Forum](/en/locations/les-caves-du-forum) you walk down a stone staircase to three 16th-century cellars, nine metres underground.
 
   ## Visiting the growers
 
   In the Côte des Blancs, [Diebolt-Vallois](/en/locations/diebolt-vallois) in Cramant makes Blanc de Blancs from vines planted in 1950. In Chouilly, [Cyrill Banchet](/en/locations/cyrill-banchet) makes Chardonnay on grand cru chalk. In Avize, at [Le Recommandé](/en/locations/le-recommande), you can choose from more than 400 Champagnes from small growers of the Côte des Blancs, in the village where they are made.
+
+  ![Diebolt-Vallois](/uploads/diebolt-vallois.webp)
 
   On the Montagne de Reims, [Gatinois](/en/locations/gatinois) in Aÿ makes only grand cru, 90% Pinot Noir, around 50,000 bottles a year. [Egly-Ouriet](/en/locations/champagne-egly-ouriet) in Ambonnay ages its Champagne for three to four years, much longer than most makers. [Champagne Gardet](/en/locations/champagne-gardet) in Chigny-les-Roses is a small house with several tastings. [Roger Coulon](/en/locations/roger-coulon) in Vrigny works organically, without filtration, with the eighth and ninth generations.
 
@@ -83,11 +87,15 @@ Om te eten reserveer je op tijd bij [La Cave à Champagne](/locations/la-cave-a-
 
 In Reims zitten de champagnebars bij elkaar in het centrum. [Le Coq Rouge](/locations/le-coq-rouge) is klein en altijd druk, met wijnen en champagnes die het team zelf bij de makers uitkiest. [Le Wine Bar by Le Vintage](/locations/le-wine-bar-by-le-vintage) aan de Place du Forum heeft meer dan 500 wijnen en 200 champagnes. Ernaast opende Aude Henon in 2025 [La Vertu](/locations/la-vertu), met alleen champagne en wijn van kleine producenten. [Le Clos](/locations/le-clos) zit verstopt in een binnentuin bij de markthal, met een groot terras in de zomer.
 
+![Le Coq Rouge](/uploads/coqrouge.webp)
+
 Aan de voet van de kathedraal heeft [Cave du 13OR](/locations/cave-du-13or) een champagnebar en een winkel met 200 champagnes. Bij [Les Caves du Forum](/locations/les-caves-du-forum) loop je een stenen trap af naar drie kelders uit de zestiende eeuw, negen meter onder de grond.
 
 ## Wijnhuizen bezoeken
 
 In de Côte des Blancs maakt [Diebolt-Vallois](/locations/diebolt-vallois) in Cramant blanc de blancs van stokken die in 1950 zijn geplant. In Chouilly maakt [Cyrill Banchet](/locations/cyrill-banchet) chardonnay op grand-cru-krijt. In Avize kun je bij [Le Recommandé](/locations/le-recommande) kiezen uit meer dan 400 champagnes van kleine growers uit de Côte des Blancs, in het dorp waar ze gemaakt worden.
+
+![Diebolt-Vallois](/uploads/diebolt-vallois.webp)
 
 Op de Montagne de Reims maakt [Gatinois](/locations/gatinois) in Aÿ alleen grand cru, voor 90% pinot noir, en zo'n 50.000 flessen per jaar. [Egly-Ouriet](/locations/champagne-egly-ouriet) in Ambonnay laat de champagne drie tot vier jaar rijpen, veel langer dan de meeste makers. [Champagne Gardet](/locations/champagne-gardet) in Chigny-les-Roses is een klein huis met meerdere proeverijen. [Roger Coulon](/locations/roger-coulon) in Vrigny werkt biologisch, zonder filtratie, met de achtste en negende generatie.
 

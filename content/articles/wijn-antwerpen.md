@@ -42,11 +42,15 @@ body_en: |-
 
   On the Eilandje, the old dock area, you eat with a big wine list. [Marcel](/en/locations/restaurant-marcel) is in a former seamen's church next to the MAS and has around 800 wines, more than 40 of them by the glass. In an old warehouse on the Oudeleeuwenrui, [Pazzo](/en/locations/pazzo) has a restaurant with hundreds of wines, and a wine bar upstairs with more than 170, most of them by the glass. [Bistrot L'îlot](/en/locations/bistrot-lilot) on the Kribbestraat is smaller: a thirty-seat bistro with a menu that follows the market and mostly French wine at friendly prices.
 
+  ![Restaurant Marcel](/uploads/restaurant-marcel.webp)
+
   On the top floor of the MAS is [Zilte](/en/locations/zilte), with three Michelin stars and views over the docks. Sommelier Aaron Moeraert pours several wines by the glass with each dish, so you can choose yourself.
 
   ## Outside the centre
 
   In the De Koninck city brewery, [The Butcher's Son](/en/locations/the-butchers-son) has a Michelin star. Red meat is the focus, with a list of around 400 wines, mostly from France, Italy and Spain. In Edegem, a fifteen-minute drive away, [Stable](/en/locations/stable) is in the old stables of an 18th-century castle, with a good Belgian selection on the wine list.
+
+  ![The Butcher's Son](/uploads/the-butchers-son.webp)
 
   ## Tip
 
@@ -73,11 +77,15 @@ Op het Zuid zitten twee wijnbars voor wie iets nieuws wil proeven. [Spiridon](/l
 
 Op het Eilandje, het oude havengebied, eet je met een uitgebreide wijnkaart. [Marcel](/locations/restaurant-marcel) zit in een voormalige zeemanskerk naast het MAS en heeft zo'n 800 wijnen, waarvan meer dan 40 per glas. In een oud pakhuis aan de Oudeleeuwenrui heeft [Pazzo](/locations/pazzo) een restaurant met honderden wijnen, en een wijnbar erboven met meer dan 170 wijnen, de meeste per glas. [Bistrot L'îlot](/locations/bistrot-lilot) in de Kribbestraat is kleiner: een bistro met dertig plaatsen, een kaart die met de markt wisselt en vooral Franse wijn tegen vriendelijke prijzen.
 
+![Restaurant Marcel](/uploads/restaurant-marcel.webp)
+
 Op de bovenste verdieping van het MAS ligt [Zilte](/locations/zilte), met drie Michelinsterren en uitzicht over de haven. Sommelier Aaron Moeraert schenkt bij elk gerecht meerdere wijnen per glas, zodat je zelf kunt kiezen.
 
 ## Buiten het centrum
 
 In de stadsbrouwerij van De Koninck heeft [The Butcher's Son](/locations/the-butchers-son) een Michelinster. Rood vlees staat centraal, met een wijnkaart van zo'n 400 wijnen uit vooral Frankrijk, Italië en Spanje. In Edegem, op een kwartier rijden, zit [Stable](/locations/stable) in de oude stallen van een kasteel uit de achttiende eeuw, met een flinke Belgische selectie op de wijnkaart.
+
+![The Butcher's Son](/uploads/the-butchers-son.webp)
 
 ## Tip
 
