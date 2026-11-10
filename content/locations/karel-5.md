@@ -23,6 +23,7 @@ description_en: >-
   The dishes are paired with carefully chosen wines. The hotel has 121 rooms and suites and a large garden — a quiet spot in the middle
   of the city. Recommended for anyone who wants to dine and stay at one historic
   address in Utrecht, within walking distance of the Dom and the Oudegracht.
+image: /uploads/karel-5.webp
 website: https://www.karelv.nl/en/food-drinks/restaurant-karel-5
 stay_type: hotel
 stay_note: "Grand Hotel Karel V, 121 kamers en suites met een grote tuin"
