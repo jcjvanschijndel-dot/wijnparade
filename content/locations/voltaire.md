@@ -28,6 +28,7 @@ description_en: >-
   suites in the main house and the coach house. During the day you can walk or
   cycle through the woods of the Heuvelrug. Recommended for a culinary weekend
   with an overnight stay in the province of Utrecht.
+image: /uploads/voltaire.webp
 website: https://parcbroekhuizen.nl/eten-drinken/restaurant-voltaire/
 stay_type: hotel
 stay_note: "22 kamers en suites op landgoed Parc Broekhuizen"
