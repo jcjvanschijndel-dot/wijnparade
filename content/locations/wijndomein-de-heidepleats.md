@@ -1,7 +1,7 @@
 ---
 name: Wijndomein De Heidepleats
 type: wijnhuis
-address: Heide 13, Sint Nicolaasga, Nederland
+address: Heide 13, 8521 DE Sint Nicolaasga, Nederland
 description: >-
   In het Friese Merengebied, tussen water, bos en weiland, ligt bij Sint
   Nicolaasga wijndomein De Heidepleats. De wijn wordt hier gemaakt van druiven
@@ -25,6 +25,7 @@ description_en: >-
   cheese. If you want to stay, you can sleep in the only guest room of the
   Frisian farmhouse, in the middle of the vineyard. Recommended for anyone who
   wants to discover Friesland and its wine.
+image: /uploads/wijndomein-de-heidepleats.webp
 stay_type: gastenkamers
 stay_note: "Eén gastenkamer in de Friese boerderij, midden in de wijngaard"
 stay_note_en: "One guest room in the Frisian farmhouse, in the middle of the vineyard"
