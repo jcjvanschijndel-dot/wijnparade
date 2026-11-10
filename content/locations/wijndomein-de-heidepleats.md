@@ -26,6 +26,7 @@ description_en: >-
   Frisian farmhouse, in the middle of the vineyard. Recommended for anyone who
   wants to discover Friesland and its wine.
 image: /uploads/wijndomein-de-heidepleats.webp
+website: https://www.deheidepleats.nl/
 stay_type: gastenkamers
 stay_note: "Eén gastenkamer in de Friese boerderij, midden in de wijngaard"
 stay_note_en: "One guest room in the Frisian farmhouse, in the middle of the vineyard"
