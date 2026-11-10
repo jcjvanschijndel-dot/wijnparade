@@ -26,6 +26,7 @@ description_en: >-
   you sleep at Librije's Hotel, with nineteen rooms in the old prison. Book well
   ahead. Recommended for anyone who wants to really push the boat out in Zwolle
   for once.
+image: /uploads/de-librije.webp
 website: https://www.librije.com/
 stay_type: hotel
 stay_note: "Librije's Hotel: negentien kamers in de voormalige vrouwengevangenis"
