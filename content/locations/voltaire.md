@@ -10,7 +10,9 @@ description: >-
 
 
   Bij de menu's kies je uit twee wijnarrangementen van de sommelier, 'Classique'
-  en 'Prestige', of je bestelt een fles van de wijn- en champagnekaart. Na het
+  en 'Prestige', of je bestelt een fles van de wijn- en champagnekaart. Wie het
+  informeler wil, eet in Bistro LOF, met gerechten van lokale producten en een
+  terras aan de moestuin. Na het
   diner hoef je niet ver: het landgoed heeft 22 kamers en suites in het hoofdhuis
   en het koetshuis. Overdag wandel of fiets je door de bossen van de Heuvelrug.
   Een aanrader voor een culinair weekend met overnachting in de provincie
@@ -24,7 +26,8 @@ description_en: >-
 
   With the menus you choose from two wine pairings by the sommelier,
   'Classique' and 'Prestige', or you order a bottle from the wine and Champagne
-  list. After dinner you don't have far to go: the estate has 22 rooms and
+  list. For something more informal, eat at Bistro LOF, with dishes made from
+  local produce and a terrace by the kitchen garden. After dinner you don't have far to go: the estate has 22 rooms and
   suites in the main house and the coach house. During the day you can walk or
   cycle through the woods of the Heuvelrug. Recommended for a culinary weekend
   with an overnight stay in the province of Utrecht.
