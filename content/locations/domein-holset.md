@@ -33,4 +33,8 @@ description_en: >-
   open daily from 11.00-17.00, and you can simply walk in.
 taste_note: "Wandelen door de wijngaard en mousserende wijnen proeven op het terras"
 taste_note_en: "Walk through the vineyard and taste the sparkling wines on the terrace"
+stay_type: gastenkamers
+stay_note: "Elf themakamers op het wijndomein, en een vakantiewoning voor acht personen"
+stay_note_en: "Eleven themed rooms on the wine estate, plus a holiday home for eight"
+booking_url: "https://www.booking.com/hotel/nl/domein-holset.html"
 ---
