@@ -15,6 +15,9 @@ description_en: >-
   list is also a reason to go, from classic favourites to original finds from
   all over the world. If you really have something to celebrate, or you're
   looking for a top spot to have lunch outside... go here!
+stay_type: hotel
+stay_note: "Elf kamers boven het restaurant, deels met uitzicht op de Vecht; woensdag tot en met zaterdag, met diner"
+stay_note_en: "Eleven rooms above the restaurant, some overlooking the Vecht; Wednesday to Saturday, with dinner"
 awards:
   - name: Michelin
     detail: 1 ster
