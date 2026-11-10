@@ -26,6 +26,7 @@ description_en: >-
   dinner you don't have to drive home: Pillows Luxury Boutique Hotel Inter
   Scaldes is at the same address. Recommended for anyone who wants to dine with
   a wine pairing in Zeeland and stay the night.
+image: /uploads/inter-scaldes.webp
 website: https://www.interscaldes.nl/
 stay_type: hotel
 stay_note: "Pillows Luxury Boutique Hotel Inter Scaldes, op hetzelfde adres"
