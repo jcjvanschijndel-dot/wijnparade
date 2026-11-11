@@ -17,7 +17,7 @@ Na het uploaden van deze bestanden naar GitHub, moet je de Geocoding API key ins
 5. **Voeg toe:**
    ```
    Key:   GOOGLE_GEOCODING_API_KEY
-   Value: AIzaSyD0hE8QQ9BC2vLml6dv90NOcbqbRWYqJNg
+   Value: <jouw geocoding-sleutel uit Google Cloud Console>
    Scopes: All scopes (Builds, Functions, Post processing)
    ```
 
@@ -43,7 +43,7 @@ AIzaSyB7XhwbjOwiUGzJ_qpCFhhWHdNRogD1Vgo
 
 ### Geocoding (geheim, server-side):
 ```
-AIzaSyD0hE8QQ9BC2vLml6dv90NOcbqbRWYqJNg
+<jouw geocoding-sleutel uit Google Cloud Console>
 ```
 - Gebruikt in: Netlify Function (server-side)
 - Veilig omdat: Niet in code, alleen als environment variable
