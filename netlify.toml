@@ -1,5 +1,7 @@
+# De publish directory staat per site in Netlify (Site configuration > Build & deploy),
+# niet hier: wijn-parade.nl publiceert de hoofdmap, de Engelse site (winehotspotter.com)
+# de map dist-en. Een "publish" hier zou voor beide sites gelden.
 [build]
-  publish = "."
   command = "bash build.sh"
 
 [build.environment]
