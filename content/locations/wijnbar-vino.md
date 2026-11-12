@@ -2,6 +2,8 @@
 name: Wijnbar VINO
 type: wijnbar
 address: Oudegracht 158, 3511 AZ Utrecht, Nederland
+lat: 52.0920995
+lng: 5.1187318
 description: >-
   In de Winkel van Sinkel aan de Oudegracht, in 1839 geopend als het eerste
   warenhuis van Nederland, zit sinds 2021 wijnbar VINO. Onder een wenteltrap en

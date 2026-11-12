@@ -2,6 +2,8 @@
 name: Chatobi
 type: wijnwinkel
 address: Nachtegaalstraat 65, 3581 AD Utrecht, Nederland
+lat: 52.0914031
+lng: 5.1316735
 description: >-
   In de Nachtegaalstraat, in Utrecht-Oost, heeft Chatobi sinds september 2025
   een vaste winkel. Programmamaker Tobias Camman begon Chatobi als webwinkel,

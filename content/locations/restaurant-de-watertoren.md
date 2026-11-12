@@ -2,6 +2,8 @@
 name: Restaurant De Watertoren
 type: restaurant
 address: Heuveloord 25A, 3523 CK Utrecht, Nederland
+lat: 52.0754964
+lng: 5.1208069
 description: >-
   In Rotsoord, net ten zuiden van de binnenstad, staat een 37 meter hoge
   watertoren uit 1905–1907, een gemeentelijk monument. Sinds 2015 zit op de

@@ -2,6 +2,8 @@
 name: Abadal
 type: wijnhuis
 address: Masia Oliveras, s/n, 08279 Avinyó, Spanje
+lat: 41.8641878
+lng: 1.9724179
 description: >-
   In de Catalaanse streek Bages richtte Valentí Roqueta Abadal op, op het oude
   familielandgoed. Het landgoed kijkt terug op meer dan acht eeuwen

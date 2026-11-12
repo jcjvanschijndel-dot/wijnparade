@@ -2,6 +2,8 @@
 name: Torelló Viticultors
 type: wijnhuis
 address: Carretera C-243b, km 13,4, 08790 Gelida, Spanje
+lat: 41.4394466
+lng: 1.8677754
 description: >-
   Het oudste document van de familie Torelló dateert uit 1395 en gaat over de
   Mas de la Torrevella — de plek waar nu het landgoed Can Martí in Gelida

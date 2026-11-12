@@ -2,6 +2,8 @@
 name: Welkom aan Tafel
 type: wijnwinkel
 address: Lange Smeestraat 1, Utrecht, Nederland
+lat: 52.0862957
+lng: 5.1216781
 description: >-
   In de Lange Smeestraat, tussen de Oudegracht en de Singel, runnen Nicole en
   Nicolai deze wijn- en delicatessenwinkel. Ze zijn sinds 2017 wijnimporteur en

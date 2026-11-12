@@ -2,6 +2,8 @@
 name: Locanda in Cannubi
 type: restaurant
 address: Via Crosia, 14, 12060 Barolo CN, Italië
+lat: 44.6194653
+lng: 7.947983
 description: >-
   Midden in de Cannubi, een van de bekendste cru's van Barolo, staat een
   boerderij uit de achttiende eeuw met een terras dat uitkijkt over de

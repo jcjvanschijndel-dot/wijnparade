@@ -2,6 +2,8 @@
 name: Juvé & Camps
 type: wijnhuis
 address: Carrer de Sant Venat, 1, 08770 Sant Sadurní d'Anoia, Spanje
+lat: 41.4244568
+lng: 1.7913798
 description: >-
   Diep onder Sant Sadurní d'Anoia liggen de kelders die Joan Juvé Baqués en
   Teresa Camps Ferrer onder hun huis lieten uitgraven: inmiddels zes

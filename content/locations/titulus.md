@@ -2,6 +2,8 @@
 name: Titulus
 type: wijnbar
 address: Waversesteenweg 167A, 1050 Elsene, België
+lat: 50.8356022
+lng: 4.3706707
 description: >-
   Aan de Waversesteenweg in Elsene, bij Brussel, is Titulus sinds 2011
   importeur, wijnwinkel en bar voor natuurwijn tegelijk. Je kunt er

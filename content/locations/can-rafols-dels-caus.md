@@ -2,6 +2,8 @@
 name: Can Ràfols dels Caus
 type: wijnhuis
 address: Finca Can Ràfols dels Caus, s/n, 08793 Avinyonet del Penedès, Spanje
+lat: 41.3584444
+lng: 1.8009423
 description: >-
   In het Garraf-massief, in Avinyonet del Penedès, wilde Carlos Esteva
   (1950–2023) eigenlijk een eeuwenoude masia restaureren — maar al snel

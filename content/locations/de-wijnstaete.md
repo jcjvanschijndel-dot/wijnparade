@@ -2,6 +2,8 @@
 name: De Wijnstaete
 type: wijnhuis
 address: Vilstersedijk 13, 8152 EB Lemelerveld, Nederland
+lat: 52.455071
+lng: 6.3406212
 description: >-
   Net buiten Lemelerveld, in Overijssel, runnen Luigi Mascini en
   Annemarie Uhlenbeck een B&B midden in hun eigen wijngaard. Er groeien zes

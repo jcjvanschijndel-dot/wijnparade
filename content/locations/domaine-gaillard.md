@@ -2,6 +2,8 @@
 name: Domaine Gaillard
 type: wijnhuis
 address: 420 Rue des Plantés, 71960 Davayé, Frankrijk
+lat: 46.3011751
+lng: 4.7474765
 description: >-
   In Davayé, in het zuiden van de Mâconnais, begon Roger Gaillard in 1981 met
   één hectare Pouilly-Fuissé. Zijn zoon Romain kwam in 2015 bij het domein,

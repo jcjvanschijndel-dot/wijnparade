@@ -2,6 +2,8 @@
 name: Wijnbar Kurk
 type: wijnbar
 address: Lange Jansstraat 28, 3512 BB Utrecht, Nederland
+lat: 52.0935077
+lng: 5.1202703
 description: >-
   In de Lange Jansstraat, tussen de Neude en het Janskerkhof, zat ooit een
   biercafé; nu is het een kleine wijnbar met oude houten kasten en warm licht.

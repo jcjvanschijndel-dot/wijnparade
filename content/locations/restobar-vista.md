@@ -2,6 +2,8 @@
 name: Restobar Vista
 type: restaurant
 address: Holland Amerikakade 104, 3072 MC Rotterdam, Nederland
+lat: 51.9070397
+lng: 4.4885517
 description: >-
   Op de begane grond van De Rotterdam, op de Wilhelminapier, openden Ingrid en
   Henrie van der Heijden in juli 2024 Restobar Vista. Het is hun tweede

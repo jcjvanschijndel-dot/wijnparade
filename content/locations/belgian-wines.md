@@ -2,6 +2,8 @@
 name: Belgian Wines
 type: wijnbar
 address: Oudevaartplaats 24, 2000 Antwerpen, België
+lat: 51.2144745
+lng: 4.4087966
 description: >-
   Aan de Oudevaartplaats, vlak bij het Theaterplein, schenkt deze wijnbar
   uitsluitend Belgische wijn. Het begon als wijnwinkel in Melsele; sinds 2016

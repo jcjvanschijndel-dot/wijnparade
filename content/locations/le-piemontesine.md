@@ -2,6 +2,8 @@
 name: Le Piemontesine
 type: restaurant
 address: Via San Luigi, 25, 12060 Igliano CN, Italië
+lat: 44.4475353
+lng: 8.0153534
 description: >-
   In het gehucht San Luigi bij Igliano, in de Alta Langa, runnen Charlotte
   Launay en Jérôme Migotto dit restaurant met kamers. Het Frans-Italiaanse stel

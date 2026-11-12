@@ -2,6 +2,8 @@
 name: Restaurant Marcel
 type: restaurant
 address: Van Schoonbekeplein 13, 2000 Antwerpen, België
+lat: 51.2273631
+lng: 4.4055518
 description: >-
   Aan het Van Schoonbekeplein op het Eilandje, vlak naast het MAS, zit Marcel in
   een voormalige zeemanskerk. Onder de hoge boogramen eet je Frans-Belgische

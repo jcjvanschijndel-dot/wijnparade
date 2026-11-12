@@ -2,6 +2,8 @@
 name: Wijngaard Hesselink
 type: wijnhuis
 address: Vredenseweg 168, 7113 AE Winterswijk, Nederland
+lat: 51.9893816
+lng: 6.7702392
 description: >-
   In het buurtschap Henxel, net buiten Winterswijk in de Achterhoek, ligt deze
   wijngaard van Gerhard Ensing. Op zo'n 3 hectare, verdeeld over drie

@@ -2,6 +2,8 @@
 name: Caves Bolet
 type: wijnhuis
 address: Finca Mas Lluet, s/n, 08732 Castellví de la Marca, Spanje
+lat: 41.3324427
+lng: 1.5942571
 description: >-
   Al meer dan zeven generaties maakt de familie Bolet wijn in Castellví de la
   Marca, in de Penedès. De kelder zit in de familiemasia uit 1619, en

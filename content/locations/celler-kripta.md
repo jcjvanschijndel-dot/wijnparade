@@ -2,6 +2,8 @@
 name: Celler Kripta
 type: wijnhuis
 address: La Serra, s/n, 08770 Sant Sadurní d'Anoia, Spanje
+lat: 41.426193
+lng: 1.7847399
 description: >-
   Net buiten Sant Sadurní d'Anoia ligt het wijnhuis van Agustí Torelló Mata,
   dat tegenwoordig Celler Kripta heet. Die naam komt van de bekendste wijn van

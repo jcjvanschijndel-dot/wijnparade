@@ -2,6 +2,8 @@
 name: Wijndomein De Heidepleats
 type: wijnhuis
 address: Heide 13, 8521 DE Sint Nicolaasga, Nederland
+lat: 52.9329345
+lng: 5.7682477
 description: >-
   In het Friese Merengebied, tussen water, bos en weiland, ligt bij Sint
   Nicolaasga wijndomein De Heidepleats. De wijn wordt hier gemaakt van druiven

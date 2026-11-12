@@ -2,6 +2,8 @@
 name: Oller del Mas
 type: wijnhuis
 address: Carretera d'Igualada C-37, km 91, 08241 Manresa, Spanje
+lat: 41.7222133
+lng: 1.7818415
 description: >-
   Vlak bij Manresa, met uitzicht op Montserrat, staat het kasteel van Oller
   del Mas, waarvan de bouw al in de 10e eeuw begon. Door de eeuwen heen is het

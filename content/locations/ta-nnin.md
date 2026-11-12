@@ -2,6 +2,8 @@
 name: Ta-nnin
 type: wijnbar
 address: Volkstraat 50, 2000 Antwerpen, België
+lat: 51.2107107
+lng: 4.3952005
 description: >-
   In de Volkstraat, op het Zuid, zit de wijnbar van sommelier Tawat. Hij kwam
   met zijn familie van Thailand naar België, werkte jaren in de horeca en

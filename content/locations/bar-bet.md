@@ -2,6 +2,8 @@
 name: Bar Bet
 type: wijnbar
 address: Wed 1, 3512 JH Utrecht, Nederland
+lat: 52.0897805
+lng: 5.1214525
 description: >-
   Aan 't Wed, vlak bij de Dom en de Oudegracht, zit sinds begin 2024 Bar Bet, op
   de plek van het oude café De Vriendschap. De zaak is opgezet door Robin

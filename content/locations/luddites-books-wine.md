@@ -2,6 +2,8 @@
 name: Luddites Books & Wine
 type: wijnbar
 address: Hopland 34, 2000 Antwerpen, België
+lat: 51.2166925
+lng: 4.4120876
 description: >-
   In een gerestaureerd herenhuis uit 1902 aan de Hopland, ontworpen door
   architect Jules Bilmeyer, openden Jorien Caers en Richard Bolte in 2019 een

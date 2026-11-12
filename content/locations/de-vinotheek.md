@@ -2,6 +2,8 @@
 name: De Vinotheek
 type: wijnwinkel
 address: Hardebollenstraat 8, 3512 TP Utrecht, Nederland
+lat: 52.0948113
+lng: 5.1193776
 description: >-
   In de Hardebollenstraat, een zijstraat van de Voorstraat vlak bij de Neude,
   opende Julian Cleton in september 2024 deze wijn- en theewinkel. Cleton is

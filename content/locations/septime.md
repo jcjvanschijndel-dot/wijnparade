@@ -2,6 +2,8 @@
 name: Septime
 type: restaurant
 address: 80 Rue de Charonne, 75011 Paris, Frankrijk
+lat: 48.8535772
+lng: 2.3808656
 description: >-
   Aan de Rue de Charonne, in het 11e arrondissement, opende chef Bertrand
   Grébaut in 2011 samen met Théo Pourriat dit restaurant. Grébaut kookt licht en

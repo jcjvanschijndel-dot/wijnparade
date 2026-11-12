@@ -2,6 +2,8 @@
 name: Amber Bottle Shop
 type: wijnwinkel
 address: Schermersstraat 25, 2000 Antwerpen, België
+lat: 51.2124715
+lng: 4.4058462
 description: >-
   In de Schermersstraat, tussen de Meir en het Sint-Jacobskwartier, opende een
   groep vrienden deze winkel voor natuurwijn, met ook een kleine bar. Op de

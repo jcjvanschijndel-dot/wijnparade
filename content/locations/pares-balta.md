@@ -2,6 +2,8 @@
 name: Parés Baltà
 type: wijnhuis
 address: Masia Can Baltà, s/n, 08796 Pacs del Penedès, Spanje
+lat: 41.3640565
+lng: 1.6712104
 description: >-
   Al sinds 1790 wordt er op dit landgoed in Pacs del Penedès wijn gemaakt. In
   de jaren zeventig nam de familie Cusiné het over, en inmiddels staat de

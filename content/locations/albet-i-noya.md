@@ -2,6 +2,8 @@
 name: Albet i Noya
 type: wijnhuis
 address: Can Vendrell de la Codina, s/n, 08739 Sant Pau d'Ordal, Spanje
+lat: 41.382496
+lng: 1.7976041
 description: >-
   Op het landgoed Can Vendrell de la Codina in Sant Pau d'Ordal werkte de
   familie Albet al vanaf het begin van de 20e eeuw als pachtboer; pas in de

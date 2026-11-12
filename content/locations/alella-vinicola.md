@@ -2,6 +2,8 @@
 name: Alella Vinícola
 type: wijnhuis
 address: Rambla Àngel Guimerà, 62, 08328 Alella, Spanje
+lat: 41.4948034
+lng: 2.2957921
 description: >-
   In Alella, zo'n 15 kilometer ten noorden van Barcelona, richtten 54
   wijnboeren in 1906 de coöperatie Alella Vinícola op. Architect Jeroni

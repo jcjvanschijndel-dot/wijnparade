@@ -2,6 +2,8 @@
 name: Blancher-Capdevila Pujol
 type: wijnhuis
 address: Plaça del Pont Romà, Edifici Blancher, 08770 Sant Sadurní d'Anoia, Spanje
+lat: 41.4251649
+lng: 1.7910206
 description: >-
   In het centrum van Sant Sadurní d'Anoia, aan de Plaça del Pont Romà, staat
   het gebouw van Cava Blancher. Het wijnhuis werd opgericht door Antonio

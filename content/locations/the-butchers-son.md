@@ -2,6 +2,8 @@
 name: The Butcher's Son
 type: restaurant
 address: Boomgaardstraat 1, 2018 Antwerpen, België
+lat: 51.1995521
+lng: 4.4156222
 description: >-
   In de stadsbrouwerij van De Koninck, in de Antwerpse wijk Harmonie, zit dit
   restaurant van chef Bert Jan Michielsen en sommelier Luc Dickens. Onder

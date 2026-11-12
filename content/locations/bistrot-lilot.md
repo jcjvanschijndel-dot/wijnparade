@@ -2,6 +2,8 @@
 name: Bistrot L'îlot
 type: restaurant
 address: Kribbestraat 15, 2000 Antwerpen, België
+lat: 51.2302397
+lng: 4.4102866
 description: >-
   Op het Eilandje, het oude havengebied van Antwerpen, zit deze kleine bistro
   met zo'n dertig plaatsen. Sander De Saegher, eerder sommelier bij Graanmarkt

@@ -2,6 +2,8 @@
 name: Het Archief
 type: wijnbar
 address: Geefsstraat 5, 2000 Antwerpen, België
+lat: 51.217662
+lng: 4.4024506
 description: >-
   In de Geefsstraat, vlak bij de Meir, staat het voormalige Provinciaal Archief
   uit 1851. Tot 1980 lagen hier archiefstukken opgeslagen; sinds 2022 zit op de

@@ -2,6 +2,8 @@
 name: Bistro Madeleine
 type: restaurant
 address: Wed 3A, 3512 JH Utrecht, Nederland
+lat: 52.089861
+lng: 5.1216718
 description: >-
   Aan 't Wed, in het Domkwartier, opende Martijn Broekhuijse in 2012 deze Franse
   bar-bistro. Chef Rik de Jonge kookt klassiek Frans met seizoensproducten, en

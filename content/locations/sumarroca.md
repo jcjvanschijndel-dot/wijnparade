@@ -2,6 +2,8 @@
 name: Sumarroca
 type: wijnhuis
 address: Carretera de Sant Sadurní a Gelida (C-243b), km 15, 08739 Subirats, Spanje
+lat: 41.4267347
+lng: 1.797947
 description: >-
   De familie Sumarroca komt oorspronkelijk uit Llimiana, in de Pallars Jussà,
   maar in de jaren tachtig vestigde Carles Sumarroca zich in de Penedès en

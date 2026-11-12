@@ -2,6 +2,8 @@
 name: Proeflokaal de Lindebar
 type: wijnbar
 address: Nieuwegracht 197, 3512 LN Utrecht, Nederland
+lat: 52.0848111
+lng: 5.1273118
 description: >-
   Aan de Nieuwegracht, in het deel dat van oudsher Onder de Linde heet, zit dit
   proeflokaal dat tot voor kort Rubens Proeflokaal heette. De nieuwe oude naam

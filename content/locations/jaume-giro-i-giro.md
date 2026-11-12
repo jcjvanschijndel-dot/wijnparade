@@ -2,6 +2,8 @@
 name: Jaume Giró i Giró
 type: wijnhuis
 address: Carrer d'en Montaner i Oller, 5, 08770 Sant Sadurní d'Anoia, Spanje
+lat: 41.4247427
+lng: 1.7902409
 description: >-
   Midden in Sant Sadurní d'Anoia staat de gele gevel van Cava Jaume Giró i
   Giró, een familiebedrijf dat begon met de handel in wijn. Door het huwelijk

@@ -2,6 +2,8 @@
 name: Voltaire
 type: restaurant
 address: Broekhuizerlaan 2, 3956 NS Leersum, Nederland
+lat: 52.0088195
+lng: 5.4003956
 description: >-
   Op het landgoed Parc Broekhuizen, in het Nationaal Park Utrechtse Heuvelrug,
   zit restaurant Voltaire in het historische landhuis, met uitzicht over het park

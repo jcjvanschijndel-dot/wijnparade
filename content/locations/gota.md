@@ -2,6 +2,8 @@
 name: Gota
 type: wijnbar
 address: C. de Prim, 5, Centro, 28004 Madrid, Spanje
+lat: 40.4220006
+lng: -3.6943516
 description: >-
   In de wijk Las Salesas, vlak bij Chueca, zit achterin bij ACID Bakehouse deze
   wijnbar van Fede Graciano, ook de man achter ACID Café. Gota draait om twee

@@ -2,6 +2,8 @@
 name: Wijngaard De Frysling
 type: wijnhuis
 address: Egypte 7, 9286 EX Twijzel, Nederland
+lat: 53.2507821
+lng: 6.1042908
 description: >-
   In Twijzel, in het oosten van Friesland, ligt een van de noordelijkste
   wijngaarden van Nederland. Douwe en Jantiene Broersma zijn sinds 2009
