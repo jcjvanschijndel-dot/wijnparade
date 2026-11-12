@@ -74,7 +74,11 @@ for (const f of walk(SRC)) {
   const dest = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   if (f.endsWith('.html')) {
-    const html = transformEn(fs.readFileSync(f, 'utf8'));
+    let html = transformEn(fs.readFileSync(f, 'utf8'));
+    // Pinterest: website claimen (meta-tag op de homepage)
+    if (rel === 'index.html' && cfg.pinterest_verify) {
+      html = html.replace('<head>', `<head>\n  <meta name="p:domain_verify" content="${cfg.pinterest_verify}"/>`);
+    }
     if (/(href|src)="\/en[/"]/.test(html) || html.includes(`${NL}/en/`)) fail(`${rel} bevat nog /en/-links`);
     if (/de_wijnparade/.test(html)) fail(`${rel} bevat nog de_wijnparade`);
     if (cfg.analytics_id && html.includes(NL_ANALYTICS_ID)) fail(`${rel} bevat nog het Analytics-ID van wijn-parade.nl`);
