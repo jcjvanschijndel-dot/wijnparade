@@ -2,6 +2,8 @@
 name: Bistro LOF
 type: restaurant
 address: Broekhuizerlaan 2, 3956 NS Leersum, Nederland
+lat: 52.0088195
+lng: 5.4003956
 description: >-
   In een voormalige boerderij op landgoed Parc Broekhuizen in Leersum, midden
   in de moestuin van het landgoed, zit Bistro LOF. Tussen de moestuin en de

@@ -2,6 +2,8 @@
 name: Langotto Ristorante
 type: restaurant
 address: Via Giordano, 8, 12060 Novello CN, Italië
+lat: 44.5891752
+lng: 7.9277372
 description: >-
   In Novello, een van de elf gemeenten van de Barolo, kookt chef Otto Lucà op de
   plek van het vroegere restaurant Grecale. Hij combineert klassieke Piëmontese

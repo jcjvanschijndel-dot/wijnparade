@@ -2,6 +2,8 @@
 name: Spiridon
 type: wijnbar
 address: Kronenburgstraat 41b, 2000 Antwerpen, België
+lat: 51.2122142
+lng: 4.3966815
 description: >-
   In de Kronenburgstraat, op het Zuid, zit deze natuurwijnbar van Nikolaj
   Kovdal, die eerder Fiskebar, Gä Nord en Dabba King opzette. Samen met Sen

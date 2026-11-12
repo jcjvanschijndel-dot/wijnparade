@@ -2,6 +2,8 @@
 name: Utregs Wijnhuis
 type: wijnwinkel
 address: Achter de Dom 8, 3512 JP Utrecht, Nederland
+lat: 52.0911515
+lng: 5.1228897
 description: >-
   Achter de Dom, op een paar stappen van de Domtoren, zit sinds 2014 deze
   wijnwinkel. Het assortiment loopt van bijzondere, exclusieve wijnen tot

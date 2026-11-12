@@ -2,6 +2,8 @@
 name: Bij Jef
 type: restaurant
 address: Herenstraat 34, 1797 AJ Den Hoorn, Nederland
+lat: 53.0247177
+lng: 4.7498221
 description: >-
   In Den Hoorn, op Texel, kookt Jef Schuur met wat het eiland
   en het wad te bieden hebben — van Texels lam tot groenten en kruiden uit de

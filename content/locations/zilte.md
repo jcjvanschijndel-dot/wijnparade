@@ -2,6 +2,8 @@
 name: Zilte
 type: restaurant
 address: Hanzestedenplaats 5, 2000 Antwerpen, België
+lat: 51.2290364
+lng: 4.4047653
 description: >-
   Op de bovenste verdieping van het MAS, op het Eilandje, kijk je bij Zilte uit
   over de haven en de stad. Chef Viki Geunes, selfmade, begon in Mol en kreeg

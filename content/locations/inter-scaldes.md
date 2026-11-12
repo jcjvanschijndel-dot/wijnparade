@@ -2,6 +2,8 @@
 name: Inter Scaldes
 type: restaurant
 address: Zandweg 2, 4416 NA Kruiningen, Nederland
+lat: 51.4570784
+lng: 4.0225685
 description: >-
   Tussen de Oosterschelde en de Westerschelde, in het Zeeuwse Kruiningen, is
   Inter Scaldes al sinds de jaren zeventig een van de bekendste restaurants van

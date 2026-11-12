@@ -2,6 +2,8 @@
 name: Betuws Wijndomein
 type: wijnhuis
 address: Burensewal 5, 4117 GC Erichem, Nederland
+lat: 51.890681
+lng: 5.3322027
 description: >-
   Op een voormalig akkerbouwbedrijf in Erichem, vlak bij Buren en de Linge,
   werd in 2004 de eerste hectare wijnstokken geplant. Inmiddels is het Betuws

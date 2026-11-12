@@ -2,6 +2,8 @@
 name: Tenuta Meraviglia & Tenuta Le Colonne
 type: wijnhuis
 address: Via Vecchia Aurelia, 418, 57022 Donoratico LI, Italië
+lat: 43.1331729
+lng: 10.5508834
 description: >-
   In Bolgheri, aan de Toscaanse kust, horen Tenuta Meraviglia en Tenuta Le
   Colonne sinds 2016 bij de familie Bulgheroni, die ook Dievole in de Chianti

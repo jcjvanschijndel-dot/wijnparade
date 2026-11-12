@@ -2,6 +2,8 @@
 name: Maeve
 type: restaurant
 address: Kromme Nieuwegracht 18, 3512 HH Utrecht, Nederland
+lat: 52.0923992
+lng: 5.1242603
 description: >-
   Aan de Kromme Nieuwegracht, een van de rustigste grachten van de Utrechtse
   binnenstad, runnen chef Tommy Janssen en gastvrouw Vera Voorend hun eigen

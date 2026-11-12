@@ -2,6 +2,8 @@
 name: Pazzo
 type: restaurant
 address: Oudeleeuwenrui 12, 2000 Antwerpen, België
+lat: 51.2266969
+lng: 4.4065078
 description: >-
   In een verbouwd oud pakhuis aan de Oudeleeuwenrui, op het Eilandje, kookt chef
   Ingrid Neven in een ontspannen sfeer onder de houten balken. Haar keuken is

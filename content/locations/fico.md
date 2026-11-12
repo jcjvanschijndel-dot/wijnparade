@@ -2,6 +2,8 @@
 name: Fico
 type: restaurant
 address: Veilinghavenkade 14, 3521 AK Utrecht, Nederland
+lat: 52.0826988
+lng: 5.1068453
 description: >-
   Aan de Veilinghaven, niet ver van de Jaarbeurs, zit Fico in een opvallend
   torentje aan het water, met een terras pal aan de haven. Het restaurant is de

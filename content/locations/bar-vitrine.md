@@ -2,6 +2,8 @@
 name: Bar Vitrine
 type: wijnbar
 address: Møntergade 5, 1116 København, Denemarken
+lat: 55.6818304
+lng: 12.5793717
 description: >-
   Achter grote ramen aan de Møntergade, midden in Kopenhagen, zit deze wijnbar —
   de naam zegt het al: je kijkt van buiten zo naar binnen, langs de rekken met

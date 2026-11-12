@@ -2,6 +2,8 @@
 name: Wijnhuis De Blauwe Camer
 type: restaurant
 address: Kloosterdreef 3, 4901 PH Oosterhout, Nederland
+lat: 51.6417869
+lng: 4.8757297
 description: >-
   De Norbertinessen van de priorij Sint-Catharinadal wonen sinds 1647 op het
   landgoed De Blauwe Camer in Oosterhout. In 2014 plantten de zusters een

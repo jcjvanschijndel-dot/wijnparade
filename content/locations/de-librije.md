@@ -2,6 +2,8 @@
 name: De Librije
 type: restaurant
 address: Spinhuisplein 1, 8011 ZZ Zwolle, Nederland
+lat: 52.5154524
+lng: 6.0976334
 description: >-
   Begin 2000 kochten Jonnie en Thérèse Boer het Spinhuis in Zwolle, een
   voormalige vrouwengevangenis, en maakten er een restaurant en hotel van. De

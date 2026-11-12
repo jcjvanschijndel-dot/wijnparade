@@ -2,6 +2,8 @@
 name: Goodbye Horses
 type: wijnbar
 address: 21 Halliford St, London N1 3HB, Verenigd Koninkrijk
+lat: 51.5402072
+lng: -0.0898242
 description: >-
   In een rustige, groene woonstraat tussen Islington en De Beauvoir zit deze
   wijnbar die aanvoelt als een woonkamer. Achter de houten bar staan kasten vol

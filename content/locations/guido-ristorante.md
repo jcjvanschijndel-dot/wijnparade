@@ -2,6 +2,8 @@
 name: Guido Ristorante
 type: restaurant
 address: Via Alba, 15, 12050 Serralunga d'Alba CN, Italië
+lat: 44.63863
+lng: 7.9883554
 description: >-
   In de Villa Reale op het landgoed Fontanafredda bij Serralunga d'Alba, ooit
   bezit van koning Victor Emanuel II, zit een van de bekendste restaurants van

@@ -2,6 +2,8 @@
 name: Stable
 type: restaurant
 address: Drie Eikenstraat 1, 2650 Edegem, België
+lat: 51.156963
+lng: 4.4431156
 description: >-
   In Edegem, net ten zuiden van Antwerpen, zit Stable in de vroegere stallen van
   Hof ter Linden, een kasteel uit de achttiende eeuw. Architect Dieter Vander

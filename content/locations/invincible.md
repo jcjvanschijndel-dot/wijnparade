@@ -2,6 +2,8 @@
 name: Invincible
 type: restaurant
 address: Haarstraat 7/9, 2000 Antwerpen, België
+lat: 51.2204583
+lng: 4.3980333
 description: >-
   In de Haarstraat, in het centrum van Antwerpen, kookt Kenny Burssens al zo'n
   twintig jaar in zijn eigen restaurant. Hij is kok en sommelier tegelijk, en

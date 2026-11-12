@@ -2,6 +2,8 @@
 name: Talud9
 type: wijnbar
 address: Donkere Gaard 9, 3511 KV Utrecht, Nederland
+lat: 52.0898806
+lng: 5.1209058
 description: >-
   Aan de Donkere Gaard, een straatje tussen het Domplein en de Oudegracht, zit
   sinds 2012 deze koffie- en wijnbar, in een oud pand met houten balken en een

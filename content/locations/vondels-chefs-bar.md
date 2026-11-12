@@ -2,6 +2,8 @@
 name: Vondels Chefs Bar
 type: restaurant
 address: Croeselaan 270, 3521 CL Utrecht, Nederland
+lat: 52.0783511
+lng: 5.1152293
 description: >-
   In de Dichterswijk, aan de Croeselaan, openden sommelier Tom Appeldoorn en
   chef Dijko Janssen begin 2026 hun eigen zaak. Appeldoorn was eerder sommelier

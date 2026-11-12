@@ -2,6 +2,8 @@
 name: Les Piqueurs
 type: wijnbar
 address: 6 Rue Tardieu, 75018 Paris, Frankrijk
+lat: 48.8842777
+lng: 2.3419516
 description: >-
   Aan de voet van de Sacré-Cœur, op een paar minuten lopen van metrostation
   Abbesses, zit deze wijnwinkel met wijnbar. Het idee is eenvoudig: per Franse

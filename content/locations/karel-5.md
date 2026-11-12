@@ -2,6 +2,8 @@
 name: Karel 5
 type: restaurant
 address: Geertebolwerk 1, 3511 XA Utrecht, Nederland
+lat: 52.088053
+lng: 5.118681
 description: >-
   In het hart van Utrecht, achter de muren van een complex dat teruggaat tot de
   veertiende eeuw, zit Grand Hotel Karel V — het enige vijfsterrenhotel van de

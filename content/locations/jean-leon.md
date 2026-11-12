@@ -2,6 +2,8 @@
 name: Jean Leon
 type: wijnhuis
 address: Château Leon, s/n, 08775 Torrelavit, Spanje
+lat: 41.4464612
+lng: 1.7300462
 description: >-
   Ceferino Carrión, beter bekend als Jean Leon, werd in 1928 in Santander
   geboren en runde later het restaurant La Scala in Beverly Hills. In 1962

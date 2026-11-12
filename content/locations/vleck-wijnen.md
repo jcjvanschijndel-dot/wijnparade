@@ -2,6 +2,8 @@
 name: Vleck Wijnen
 type: wijnwinkel
 address: Nachtegaalstraat 72, 3581 AM Utrecht, Nederland
+lat: 52.091728
+lng: 5.1317879
 description: >-
   In de Nachtegaalstraat, in Utrecht-Oost, zit de Utrechtse winkel van Vleck,
   een importeur van natuurwijn met ook winkels in Amsterdam en Zwolle. De

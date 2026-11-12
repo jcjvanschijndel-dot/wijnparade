@@ -2,6 +2,8 @@
 name: Hemel & Aarde
 type: restaurant
 address: Keistraat 8, 3512 HV Utrecht, Nederland
+lat: 52.09235
+lng: 5.123005
 description: >-
   In het monumentale Polman's Huis aan de Keistraat, vlak bij het Janskerkhof,
   opende Hemel & Aarde in 2021 — onder hetzelfde dak als hotel The Nox. De

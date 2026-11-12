@@ -2,6 +2,8 @@
 name: Restaurant Badhuis
 type: restaurant
 address: Willem van Noortplein 19, 3514 GK Utrecht, Nederland
+lat: 52.1029327
+lng: 5.1232722
 description: >-
   Aan het Willem van Noortplein, in Utrecht-Noordoost, staat het oude
   gemeentelijke badhuis uit 1927, gebouwd in de stijl van de Amsterdamse

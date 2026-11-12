@@ -2,6 +2,8 @@
 name: Wijnhoeve De Kleine Schorre
 type: wijnhuis
 address: Zuiddijk 4, 4315 PA Dreischor, Nederland
+lat: 51.6827928
+lng: 3.9824705
 description: >-
   Aan de rand van Dreischor, op Schouwen-Duiveland, werden in 2001 de eerste
   wijnstokken geplant. Het Luxemburgse wijnhuis Cep d'Or hielp bij de keuze van

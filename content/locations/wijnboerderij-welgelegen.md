@@ -2,6 +2,8 @@
 name: Wijnboerderij Welgelegen
 type: wijnhuis
 address: Garderbroekerweg 83, 3774 JC Kootwijkerbroek, Nederland
+lat: 52.1653026
+lng: 5.6495027
 description: >-
   Op de Veluwe bij Barneveld is Welgelegen al sinds 1930 een boerderij. In 2019
   plantten Margriet en Gert er een wijngaard van zo'n duizend wijnstokken, vooral

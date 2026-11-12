@@ -2,6 +2,8 @@
 name: San Siro
 type: restaurant
 address: Oudkerkhof 9, 3512 GH Utrecht, Nederland
+lat: 52.0915251
+lng: 5.1204843
 description: >-
   Aan het Oudkerkhof, vlak bij de Oudegracht, zit San Siro in een monumentaal
   negentiende-eeuws pand waar vroeger lunchroom Noteboom zat. Sinds 2008 is het

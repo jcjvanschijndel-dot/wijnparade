@@ -2,6 +2,8 @@
 name: Rosie
 type: restaurant
 address: Lucasbolwerk 21, 3512 EJ Utrecht, Nederland
+lat: 52.094391
+lng: 5.1258009
 description: >-
   Aan het Lucasbolwerk, aan de singel aan de oostkant van de binnenstad, openden
   chef Jac Rijks en gastvrouw Yora Galjaard in oktober 2022 deze restobar. Rijks

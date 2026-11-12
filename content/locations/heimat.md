@@ -2,6 +2,8 @@
 name: Heimat
 type: restaurant
 address: Biltstraat 48, 3572 BC Utrecht, Nederland
+lat: 52.0953286
+lng: 5.1285206
 description: >-
   Aan de Biltstraat, net buiten de Utrechtse binnenstad, opende chef Niels van
   Zijl in april 2024 zijn eigen restaurant. Van Zijl kookte eerder bij DeZusters

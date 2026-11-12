@@ -2,6 +2,8 @@
 name: Heretat Baltà de Cela
 type: wijnhuis
 address: Camí la Carrerada, 35, 08736 Guardiola de Font-rubí, Spanje
+lat: 41.4139728
+lng: 1.6529144
 description: >-
   Sinds 1889 wordt er op Heretat Baltà de Cela in Guardiola de Font-rubí, in
   de Alt Penedès, wijn gemaakt. Het landgoed maakt wijn en olijfolie van eigen

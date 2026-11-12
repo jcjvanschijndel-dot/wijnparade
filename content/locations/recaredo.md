@@ -2,6 +2,8 @@
 name: Recaredo
 type: wijnhuis
 address: Carrer Tamarit, 10, 08770 Sant Sadurní d'Anoia, Spanje
+lat: 41.4251853
+lng: 1.7868881
 description: >-
   In 1924 begon Josep Mata Capellades een kelder te bouwen onder zijn huis in
   Sant Sadurní d'Anoia, in de Alt Penedès. Hij noemde de wijnmakerij naar zijn
