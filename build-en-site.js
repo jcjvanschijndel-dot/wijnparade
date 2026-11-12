@@ -47,6 +47,9 @@ function walk(dir, out = []) {
 
 // --- 1. Engelse HTML-pagina's omzetten ---
 function transformEn(html) {
+  // Links naar pagina's die alleen in het Nederlands bestaan (Value Score, app installeren)
+  // horen niet in het menu van de Engelse site
+  html = html.replace(/\s*<a href="\/(value-score|install)"[^>]*hreflang="nl"[^>]*>[\s\S]*?<\/a>/g, '');
   html = html.split(`${NL}/en/`).join(`${D}/`).split(`${NL}/en"`).join(`${D}/"`);
   html = html.replace(/(href|src|action)="\/([^"]*)"/g, (m, attr, p) => {
     if (p === 'en') return `${attr}="/"`;
