@@ -21,6 +21,7 @@ const D = cfg.domain.replace(/\/+$/, '');
 const LIVE = cfg.live === true;
 const SRC = path.join(ROOT, 'en');
 const OUT = path.join(ROOT, 'dist-en');
+const NL_ANALYTICS_ID = 'G-57CJ2STYT6';
 const INDEXNOW_KEY = 'd40e2477b6e3fdf71a60dbd3091753c8';
 
 // Bestanden die de Engelse site zelf serveert (klein; meegekopieerd)
@@ -56,6 +57,8 @@ function transformEn(html) {
   html = html.split('instagram.com/de_wijnparade/').join(`instagram.com/${cfg.instagram}/`)
     .split('@de_wijnparade').join(`@${cfg.instagram}`)
     .split('de_wijnparade').join(cfg.brand);
+  // Eigen Google Analytics-property voor de Engelse site
+  if (cfg.analytics_id) html = html.split(NL_ANALYTICS_ID).join(cfg.analytics_id);
   if (!LIVE) html = html.replace('<head>', '<head>\n  <meta name="robots" content="noindex">');
   return html;
 }
@@ -71,6 +74,7 @@ for (const f of walk(SRC)) {
     const html = transformEn(fs.readFileSync(f, 'utf8'));
     if (/(href|src)="\/en[/"]/.test(html) || html.includes(`${NL}/en/`)) fail(`${rel} bevat nog /en/-links`);
     if (/de_wijnparade/.test(html)) fail(`${rel} bevat nog de_wijnparade`);
+    if (cfg.analytics_id && html.includes(NL_ANALYTICS_ID)) fail(`${rel} bevat nog het Analytics-ID van wijn-parade.nl`);
     fs.writeFileSync(dest, html);
     pages++;
   } else if (rel === 'regions.json') {
