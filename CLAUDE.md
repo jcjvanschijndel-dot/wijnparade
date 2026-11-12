@@ -49,4 +49,3 @@ Statische site over wijnadressen in Europa, met Netlify en Decap CMS. Communicee
 ## Nog open (november 2026)
 
 - Affiliate-links instellen in `affiliate.json` (Booking via CJ en Winalist) zodra de eigenaar is goedgekeurd. winehotspotter.com moet daar ook als site worden aangemeld.
-- De coördinaten van `wijndomein-de-oude-hoeve` vastzetten.

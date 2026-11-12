@@ -2,6 +2,8 @@
 name: Wijndomein De Oude Hoeve
 type: wijnhuis
 address: Leenderdijk 14, 3930 Hamont-Achel, België
+lat: 51.2691914
+lng: 5.4774462
 description: >-
   Aan de rand van natuurgebied De Groote Heide, vlak bij de Nederlandse grens,
   ligt in Achel wijndomein De Oude Hoeve. De ouders van Daniëlla Habraken
