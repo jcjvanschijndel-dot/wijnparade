@@ -6,6 +6,9 @@
 // worden alleen in de build-kopie van het .md-bestand gezet, zodat ze op de kaart,
 // in de regiogidsen en in het kruimelpad meetellen. In git verandert niets.
 // Zonder sleutel of bij een fout gaat de build gewoon door.
+//
+// De gevonden coördinaten staan ook in /geocoded.txt op de site (id, lat, lng per regel),
+// zodat ze daarna vast in de .md-bestanden gezet kunnen worden.
 
 const fs = require('fs');
 const path = require('path');
@@ -25,6 +28,7 @@ const key = process.env.GOOGLE_GEOCODING_API_KEY;
   }
 
   let ok = 0;
+  const found = [];
   for (const f of missing) {
     const file = path.join(dir, f);
     const text = fs.readFileSync(file, 'utf8');
@@ -39,10 +43,12 @@ const key = process.env.GOOGLE_GEOCODING_API_KEY;
       const updated = text.replace(/^(lat|lng):[^\n]*\n/gm, '')
         .replace(addrLine[0], `${addrLine[0]}\nlat: ${loc.lat}\nlng: ${loc.lng}`);
       fs.writeFileSync(file, updated);
+      found.push(`${f.replace(/\.md$/, '')} ${loc.lat} ${loc.lng}`);
       ok++;
     } catch (e) {
       console.log(`  ⚠️  geocoding: ${f}: ${e.message}`);
     }
   }
   console.log(`  📌 geocoding: ${ok} van ${missing.length} locatie(s) zonder coördinaten aangevuld`);
+  fs.writeFileSync(path.join(__dirname, 'geocoded.txt'), found.join('\n') + '\n');
 })();
