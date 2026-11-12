@@ -123,6 +123,7 @@ async function loadLocationsFromCMS(skipFit = false) {
         }
         
         console.log(`Loaded ${wineLocations.length} locations`);
+        spreadSharedPositions(wineLocations);
         
         if (wineLocations.length > 0) {
             addMarkers(wineLocations);
@@ -135,6 +136,38 @@ async function loadLocationsFromCMS(skipFit = false) {
     }
 }
 
+// Locaties met precies dezelfde coördinaten (bijvoorbeeld twee zaken op één adres)
+// krijgen een iconpositie een paar meter uit elkaar, in een kleine cirkel rond het adres.
+// Zo liggen de iconen niet over elkaar en zijn ze allebei aan te klikken.
+// De opgeslagen coördinaten (lat/lng) blijven ongewijzigd.
+const SHARED_OFFSET_METERS = 25;
+
+function spreadSharedPositions(locations) {
+    const groups = new Map();
+    locations.forEach(l => {
+        const key = `${l.lat},${l.lng}`;
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(l);
+    });
+    groups.forEach(group => {
+        if (group.length < 2) return;
+        group.sort((a, b) => a.id.localeCompare(b.id));
+        group.forEach((l, i) => {
+            const angle = Math.PI + (2 * Math.PI * i) / group.length; // eerste links, tweede rechts
+            const dLat = (SHARED_OFFSET_METERS * Math.sin(angle)) / 111320;
+            const dLng = (SHARED_OFFSET_METERS * Math.cos(angle)) / (111320 * Math.cos(l.lat * Math.PI / 180));
+            l.markerLat = l.lat + dLat;
+            l.markerLng = l.lng + dLng;
+        });
+    });
+}
+
+function markerPosition(location) {
+    return location.markerLat !== undefined
+        ? { lat: location.markerLat, lng: location.markerLng }
+        : { lat: location.lat, lng: location.lng };
+}
+
 function addMarkers(locations) {
     if (clusterer) clusterer.clearMarkers();
     markers.forEach(marker => marker.setMap(null));
@@ -144,7 +177,7 @@ function addMarkers(locations) {
         if (activeFilter === 'stay' ? !location.stay : (activeFilter !== 'all' && location.type !== activeFilter)) return;
 
         const marker = new google.maps.Marker({
-            position: { lat: location.lat, lng: location.lng },
+            position: markerPosition(location),
             map: clusterer ? null : map,
             title: location.name,
             icon: getMarkerIcon(location.type)
@@ -246,7 +279,7 @@ function openFocusedLocation() {
     if (!location) return;
     if (isMobile()) { showSheet(location); return; }
     infoWindow.setContent(createInfoWindowContent(location));
-    infoWindow.setPosition({ lat: location.lat, lng: location.lng });
+    infoWindow.setPosition(markerPosition(location));
     infoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
     infoWindow.open(map);
 }
