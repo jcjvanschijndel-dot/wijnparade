@@ -172,12 +172,16 @@ collections:
     summary: "{{dish}}"
     fields:
       - {label: "Gerecht Naam", name: "dish", widget: "string"}
+      - {label: "Gerecht Engels (bv. white asparagus; kleine letter, zoals in de zin 'What wine goes with ...?')", name: "dish_en", widget: "string", required: false}
+      - {label: "URL Engels (bv. asparagus; leeg = geen Engelse pagina)", name: "slug_en", widget: "string", required: false}
       - {label: "Toelichting (optioneel, verschijnt bovenaan de pagina /wijn-bij/...)", name: "intro", widget: "text", required: false}
+      - {label: "Toelichting Engels (optioneel)", name: "intro_en", widget: "text", required: false}
       - label: "Passende Wijnen"
         name: "wines"
         widget: "list"
         fields:
           - {label: "Wijn", name: "name", widget: "string"}
+          - {label: "Wijn Engels (alleen als de naam anders is, bv. White Burgundy)", name: "name_en", widget: "string", required: false}
           - {label: "Sterren", name: "stars", widget: "select", options: ["1", "2", "3"]}
       - {label: "Wijnhotspots om dit gerecht te eten (optioneel)", name: "locations", widget: "relation", collection: "locations", value_field: "{{slug}}", search_fields: ["name"], display_fields: ["name"], multiple: true, required: false}
 
@@ -191,12 +195,16 @@ collections:
     summary: "{{wine}}"
     fields:
       - {label: "Wijn Naam", name: "wine", widget: "string"}
+      - {label: "Wijn Engels (bv. Red Burgundy)", name: "wine_en", widget: "string", required: false}
+      - {label: "URL Engels (bv. red-burgundy; leeg = geen Engelse pagina)", name: "slug_en", widget: "string", required: false}
       - {label: "Toelichting (optioneel, verschijnt bovenaan de pagina /eten-bij/...)", name: "intro", widget: "text", required: false}
+      - {label: "Toelichting Engels (optioneel)", name: "intro_en", widget: "text", required: false}
       - label: "Passende Gerechten"
         name: "dishes"
         widget: "list"
         fields:
           - {label: "Gerecht", name: "dish", widget: "string"}
+          - {label: "Gerecht Engels", name: "dish_en", widget: "string", required: false}
 
   # Regiogidsen
   - name: "regions"

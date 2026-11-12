@@ -1892,6 +1892,9 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
 </body>
 </html>`;
 
+  // Ook gebruikt door de wijn-spijspagina's verderop
+  globalThis.EN_HELPERS = { enPage, langMenu, altLinks };
+
   // Statische NL-pagina omzetten naar Engels: elke vervanging moet precies passen,
   // zodat een gewijzigde NL-pagina de build laat stoppen in plaats van half-Engels te worden.
   const swap = (html, pairs, file) => {
@@ -2108,7 +2111,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       igToEn[0], // homepage heeft geen Instagram-blok onderaan
       enHeaderEnd('/', '/en/'),
       ['<h1 class="page-hero-title">Wijntips en de beste wijn hotspots in Europa</h1>', '<h1 class="page-hero-title">Wine tips and the best wine hotspots in Europe</h1>'],
-      [/\s*<a href="\/wijn-spijs" class="nav-card">[\s\S]*?<\/a>/, ''],
+      [/<a href="\/wijn-spijs" class="nav-card">([\s\S]*?)<span class="link-text">Welke wijn bij welk gerecht\?<\/span>/, '<a href="/en/wine-pairing" class="nav-card">$1<span class="link-text">Which wine with which dish?</span>'],
       [/\s*<a href="https:\/\/wijnparade\.listedwines\.com\/" class="nav-card"[\s\S]*?<\/a>/, ''],
       [/<a href="\/wijnkaart" class="nav-card">([\s\S]*?)<span class="link-text">Wijnkaart<\/span>/, '<a href="/en/wine-map" class="nav-card">$1<span class="link-text">Wine map</span>'],
       [/<a href="\/wijnreizen" class="nav-card">([\s\S]*?)<span class="link-text">Reisgidsen<\/span>/, '<a href="/en/wine-travel" class="nav-card">$1<span class="link-text">Travel guides</span>'],
@@ -2419,8 +2422,26 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   const dishName = d => String(typeof d === 'string' ? d : (d && d.dish) || '').trim();
   // URL zonder accenten: grüner-veltliner -> gruner-veltliner
   const slugOf = id => String(id).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  // Engelse versie (CMS-velden dish_en/wine_en en slug_en)
+  const enSlug = x => String(x.slug_en || '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+  const enDishPath = d => d.dish_en && enSlug(d) ? `/en/wine-with/${enSlug(d)}` : null;
+  const enWinePath = w => w.wine_en && enSlug(w) ? `/en/food-with/${enSlug(w)}` : null;
 
-  const pairingPage = ({ title, description, canonical, h1, body, crumbs }) => `<!DOCTYPE html>
+  const EN = globalThis.EN_HELPERS;
+  const WS_CSS = `
+    .ws-h1{font-size:1.6rem;color:var(--navy);margin:.5rem 0 1rem;line-height:1.3}
+    .ws-intro{line-height:1.8;margin-bottom:2rem;color:var(--gray-900);white-space:pre-line}
+    .ws-section{margin-bottom:2rem}
+    .ws-section h2{font-size:1.1rem;color:var(--navy);padding-bottom:.5rem;border-bottom:2px solid var(--gray-200);margin-bottom:1rem}
+    .ws-list{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+    .ws-list li{padding:.75rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px}
+    .ws-list a{color:var(--navy);font-weight:600}
+    .ws-stars{color:#b45309;margin-left:.35rem;white-space:nowrap}
+    .ws-links{display:flex;flex-wrap:wrap;gap:.5rem}
+    .ws-links a{display:inline-block;padding:.35rem .75rem;border:1px solid var(--gray-200);border-radius:999px;color:var(--navy);text-decoration:none;font-size:.9rem}
+    .ws-links a:hover{border-color:var(--navy)}
+  `;
+  const pairingPage = ({ title, description, canonical, h1, body, crumbs, alt = null }) => `<!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -2433,24 +2454,13 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${SITE_URL}/profile-photo.jpg">
   <link rel="canonical" href="${canonical}">
+  ${alt ? EN.altLinks(alt.nlPath, alt.enPath) : ''}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <style>
-    .ws-h1{font-size:1.6rem;color:var(--navy);margin:.5rem 0 1rem;line-height:1.3}
-    .ws-intro{line-height:1.8;margin-bottom:2rem;color:var(--gray-900);white-space:pre-line}
-    .ws-section{margin-bottom:2rem}
-    .ws-section h2{font-size:1.1rem;color:var(--navy);padding-bottom:.5rem;border-bottom:2px solid var(--gray-200);margin-bottom:1rem}
-    .ws-list{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
-    .ws-list li{padding:.75rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px}
-    .ws-list a{color:var(--navy);font-weight:600}
-    .ws-stars{color:#b45309;margin-left:.35rem;white-space:nowrap}
-    .ws-links{display:flex;flex-wrap:wrap;gap:.5rem}
-    .ws-links a{display:inline-block;padding:.35rem .75rem;border:1px solid var(--gray-200);border-radius:999px;color:var(--navy);text-decoration:none;font-size:.9rem}
-    .ws-links a:hover{border-color:var(--navy)}
-  </style>
+  <style>${WS_CSS}</style>
 </head>
 <body>
   <header class="header"><div class="container"><div class="header-inner">
@@ -2463,6 +2473,7 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
       <a href="/wijn-spijs">Wijn &amp; spijs</a>
     </nav>
     ${shopBtn()}${igFollowBtn()}
+    ${alt ? EN.langMenu('nl', alt.nlPath, alt.enPath) : ''}
   </div></div></header>
   ${breadcrumb(crumbs)}
   <main class="main"><div class="container">
@@ -2546,6 +2557,7 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
         acceptedAnswer: { '@type': 'Answer', text: `${leadText} passen het best bij ${d.dish}. Ook goed: ${list.filter(w => !lead.includes(w.name)).map(w => w.name).slice(0, 4).join(', ') || 'zie de lijst op deze pagina'}.` } }]
     };
     const html = pairingPage({
+      alt: enDishPath(d) && { nlPath: `/wijn-bij/${slugOf(d._id)}`, enPath: enDishPath(d) },
       title: `Welke wijn bij ${d.dish}? Wijntips | de_wijnparade`,
       description: `Welke wijn drink je bij ${d.dish}? Onze topkeuzes: ${leadText}. Plus goede alternatieven, met sterren per combinatie.`.substring(0, 160),
       canonical,
@@ -2582,6 +2594,7 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
     const otherWines = wines.filter(o => o._id !== w._id);
     const canonical = `${SITE_URL}/eten-bij/${slugOf(w._id)}`;
     const html = pairingPage({
+      alt: enWinePath(w) && { nlPath: `/eten-bij/${slugOf(w._id)}`, enPath: enWinePath(w) },
       title: `Wat eet je bij ${w.wine}? Gerechten bij ${w.wine} | de_wijnparade`,
       description: `Welk eten past bij ${w.wine}? Bijvoorbeeld ${leadText}. Bekijk alle gerechten die goed combineren met ${w.wine}.`.substring(0, 160),
       canonical,
@@ -2605,6 +2618,7 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   // --- /wijn-spijs overzicht ---
   const overviewUrl = `${SITE_URL}/wijn-spijs`;
   const overview = pairingPage({
+    alt: { nlPath: '/wijn-spijs', enPath: '/en/wine-pairing' },
     title: 'Wijn-spijscombinaties: welke wijn bij welk gerecht? | de_wijnparade',
     description: `Welke wijn drink je bij asperges, kaas of wild? En wat eet je bij een Riesling of Barolo? Wijn-spijstips voor ${dishes.length} gerechten en ${wines.length} wijnen.`.substring(0, 160),
     canonical: overviewUrl,
@@ -2620,6 +2634,144 @@ ${enRegions.map(r => `- [${regionTitleEn(r)}](${SITE_URL}${r.enPath})`).join('\n
   });
   fs.writeFileSync(path.join(__dirname, 'wijn-spijs.html'), overview);
   pairingUrls.unshift(overviewUrl);
+
+
+  // ============================================================
+  // ENGELSE WIJN-SPIJSPAGINA'S
+  //   /en/wine-pairing          overzicht
+  //   /en/wine-with/<gerecht>   "What wine goes with ...?"
+  //   /en/food-with/<wijn>      "What to eat with ...?"
+  // ============================================================
+  {
+    const enDishes = dishes.filter(d => enDishPath(d));
+    const enWines = wines.filter(w => enWinePath(w));
+    const ucFirst = t => t.charAt(0).toUpperCase() + t.slice(1);
+    const andList = a => a.length > 1 ? `${a.slice(0, -1).join(', ')} and ${a[a.length - 1]}` : (a[0] || '');
+    const missing = new Set();
+    // Naam in een lijst: eigen Engelse vertaling, anders die van de gekoppelde pagina, anders de Nederlandse naam (met waarschuwing)
+    const wineEn = item => {
+      const name = wineName(item);
+      const file = wineByName.get(norm(name));
+      const en = (item && item.name_en) || (file && file.wine_en);
+      if (!en && /[a-z]/i.test(name) && /\b(wit|rood|droog|zoet|zonder|mousserende?)\b/i.test(name)) missing.add(`wijn "${name}"`);
+      return { en: String(en || name).trim(), file };
+    };
+    const dishEn = item => {
+      const name = dishName(item);
+      const file = dishByName.get(norm(name));
+      const en = (item && item.dish_en) || (file && file.dish_en && ucFirst(String(file.dish_en)));
+      if (!en) missing.add(`gerecht "${name}"`);
+      return { en: String(en || name).trim(), file };
+    };
+    const wineLinkEn = item => {
+      const { en, file } = wineEn(item);
+      return file && enWinePath(file) ? `<a href="${enWinePath(file)}">${escHtml(en)}</a>` : `<strong>${escHtml(en)}</strong>`;
+    };
+    const dishLinkEn = (label, file) => file && enDishPath(file)
+      ? `<a href="${enDishPath(file)}">${escHtml(label)}</a>` : `<strong>${escHtml(label)}</strong>`;
+    const STAR_GROUPS_EN = ['Other suggestions', 'Also works', 'Good pairings', 'Top pairings'];
+    const crumbsEn = current => [{ name: 'Home', path: '/en/' }, { name: 'Food & wine', path: '/en/wine-pairing' }, { name: current }];
+    const pageEn = ({ title, description, enPath, nlPath, crumbs, h1, body }) => EN.enPage({
+      title, description, enPath, nlPath, crumbs,
+      extraHead: `<style>${WS_CSS}</style>`,
+      body: `<main class="main"><div class="container">
+    <h1 class="ws-h1">${escHtml(h1)}</h1>
+    ${body}
+  </div></main>`,
+    });
+    const enUrlsWs = [];
+
+    for (const d of enDishes) {
+      const list = d.wines.map(w => ({ item: w, en: wineEn(w).en, stars: parseInt(w && w.stars) || 0 })).filter(w => wineName(w.item));
+      if (!list.length) continue;
+      const dish = String(d.dish_en).trim();
+      const top = list.filter(w => w.stars >= 3).map(w => w.en);
+      const lead = (top.length ? top : list.map(w => w.en)).slice(0, 3);
+      const intro = String(d.intro_en || '').trim() ||
+        `Looking for the perfect wine with ${dish}? These are the wines that work best, from top pairing to good alternative. In doubt? Go for ${andList(lead)}.`;
+      const sections = [3, 2, 1, 0].map(n => {
+        const items = list.filter(w => w.stars === n);
+        if (!items.length) return '';
+        return `<section class="ws-section"><h2>${STAR_GROUPS_EN[n]}</h2><ul class="ws-list">
+        ${items.map(w => `<li>${wineLinkEn(w.item)}${w.stars ? `<span class="ws-stars" aria-label="${w.stars} out of 3 stars">${'★'.repeat(w.stars)}</span>` : ''}</li>`).join('\n        ')}
+      </ul></section>`;
+      }).join('\n    ');
+      const locs = (Array.isArray(d.locations) ? d.locations : []).map(id => allLocations.find(l => l._id === String(id))).filter(Boolean);
+      const locSection = locs.length ? `<section class="ws-section"><h2>Wine hotspots to eat ${escHtml(dish)} with the right wine</h2><ul class="ws-list">
+        ${locs.map(l => `<li><a href="${l.description_en ? `/en/locations/${l._id}` : `/locations/${l._id}`}">${escHtml(l.title || l.name)}</a>${cityFromAddress(l.address) ? ` <span style="color:var(--gray-600);font-size:.85em">${escHtml(cityFromAddress(l.address))}</span>` : ''}</li>`).join('\n        ')}
+      </ul></section>` : '';
+      const faq = { '@context': 'https://schema.org', '@type': 'FAQPage',
+        mainEntity: [{ '@type': 'Question', name: `What wine goes with ${dish}?`,
+          acceptedAnswer: { '@type': 'Answer', text: `${andList(lead)} go best with ${dish}.${list.length > lead.length ? ` Also good: ${list.filter(w => !lead.includes(w.en)).map(w => w.en).slice(0, 4).join(', ')}.` : ''}` } }] };
+      pageEnWrite(enDishPath(d), pageEn({
+        title: `What wine goes with ${dish}? Wine pairing tips | de_wijnparade`,
+        description: `Which wine to drink with ${dish}? Our top picks: ${andList(lead)}. Plus good alternatives, with stars for each pairing.`.substring(0, 160),
+        enPath: enDishPath(d), nlPath: `/wijn-bij/${slugOf(d._id)}`, crumbs: crumbsEn(ucFirst(dish)),
+        h1: `What wine goes with ${dish}?`,
+        body: `<p class="ws-intro">${escHtml(intro)}</p>
+    ${sections}
+    ${locSection}
+    <section class="ws-section"><h2>More food and wine pairings</h2><div class="ws-links">
+      ${enDishes.filter(o => o !== d).map(o => `<a href="${enDishPath(o)}">Wine with ${escHtml(String(o.dish_en).trim())}</a>`).join('\n      ')}
+    </div></section>
+    <script type="application/ld+json">${JSON.stringify(faq).replace(/</g, '\\u003c')}</script>`,
+      }));
+    }
+
+    for (const w of enWines) {
+      const wine = String(w.wine_en).trim();
+      const own = w.dishes.map(x => ({ name: dishName(x), ...dishEn(x) })).filter(x => x.name);
+      const reverse = dishes.filter(d => d.wines.some(x => norm(wineName(x)) === norm(w.wine)))
+        .filter(d => !own.some(o => norm(o.name) === norm(d.dish)))
+        .map(d => ({ file: d, en: d.dish_en ? ucFirst(String(d.dish_en).trim()) : d.dish,
+          stars: parseInt((d.wines.find(x => norm(wineName(x)) === norm(w.wine)) || {}).stars) || 0 }))
+        .sort((a, b) => b.stars - a.stars);
+      if (!own.length && !reverse.length) continue;
+      const lead = (own.length ? own : reverse).map(x => /^(Asian|Mexican|BBQ|Brussels)\b/.test(x.en) ? x.en : x.en.charAt(0).toLowerCase() + x.en.slice(1)).slice(0, 3);
+      const intro = String(w.intro_en || '').trim() ||
+        `What to eat with ${wine}? These dishes go well with it, such as ${andList(lead)}. Handy if you already have a bottle of ${wine} at home and still need to decide what to cook.`;
+      pageEnWrite(enWinePath(w), pageEn({
+        title: `What to eat with ${wine}? Food pairings for ${wine} | de_wijnparade`,
+        description: `Which food goes with ${wine}? For example ${andList(lead)}. See all the dishes that pair well with ${wine}.`.substring(0, 160),
+        enPath: enWinePath(w), nlPath: `/eten-bij/${slugOf(w._id)}`, crumbs: crumbsEn(wine),
+        h1: `What to eat with ${wine}?`,
+        body: `<p class="ws-intro">${escHtml(intro)}</p>
+    ${own.length ? `<section class="ws-section"><h2>Dishes with ${escHtml(wine)}</h2><ul class="ws-list">
+      ${own.map(x => `<li>${dishLinkEn(x.en, x.file)}</li>`).join('\n      ')}
+    </ul></section>` : ''}
+    ${reverse.length ? `<section class="ws-section"><h2>${own.length ? 'Also recommended with' : `Dishes with ${escHtml(wine)}`}</h2><ul class="ws-list">
+      ${reverse.map(r => `<li>${dishLinkEn(r.en, r.file)}${r.stars ? `<span class="ws-stars" aria-label="${r.stars} out of 3 stars">${'★'.repeat(r.stars)}</span>` : ''}</li>`).join('\n      ')}
+    </ul></section>` : ''}
+    <section class="ws-section"><h2>Other wines</h2><div class="ws-links">
+      ${enWines.filter(o => o !== w).map(o => `<a href="${enWinePath(o)}">Food with ${escHtml(String(o.wine_en).trim())}</a>`).join('\n      ')}
+    </div></section>`,
+      }));
+    }
+
+    pageEnWrite('/en/wine-pairing', pageEn({
+      title: 'Food and wine pairing: which wine with which dish? | de_wijnparade',
+      description: `Which wine to drink with asparagus, cheese or game? And what to eat with a Riesling or Barolo? Pairing tips for ${enDishes.length} dishes and ${enWines.length} wines.`.substring(0, 160),
+      enPath: '/en/wine-pairing', nlPath: '/wijn-spijs', crumbs: [{ name: 'Home', path: '/en/' }, { name: 'Food & wine' }],
+      h1: 'Which wine with which dish?',
+      body: `<p class="ws-intro">The right wine makes a dish even better, and the other way round. Choose your dish below and find out which wines go best with it. Already have a bottle at home? Then choose your wine and see which dishes go with it.</p>
+    <section class="ws-section"><h2>Which wine with…</h2><div class="ws-links">
+      ${enDishes.filter(d => d.wines.length).map(d => `<a href="${enDishPath(d)}">${escHtml(ucFirst(String(d.dish_en).trim()))}</a>`).join('\n      ')}
+    </div></section>
+    <section class="ws-section"><h2>What to eat with…</h2><div class="ws-links">
+      ${enWines.map(w => `<a href="${enWinePath(w)}">${escHtml(String(w.wine_en).trim())}</a>`).join('\n      ')}
+    </div></section>`,
+    }));
+
+    function pageEnWrite(enPath, html) {
+      const file = path.join(__dirname, `${enPath.replace(/^\//, '')}.html`);
+      fs.mkdirSync(path.dirname(file), { recursive: true });
+      fs.writeFileSync(file, html);
+      enUrlsWs.push(`${SITE_URL}${enPath}`);
+    }
+    pairingUrls.push(...enUrlsWs);
+    if (missing.size) console.warn(`  ⚠️  wijn-spijs EN: geen Engelse naam voor ${[...missing].join(', ')}`);
+    console.log(`  🍷 wijn-spijs EN: ${enUrlsWs.length} Engelse pagina's`);
+  }
 
   const smPathWs = path.join(__dirname, 'sitemap.xml');
   if (fs.existsSync(smPathWs)) {
