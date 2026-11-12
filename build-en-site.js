@@ -145,6 +145,16 @@ fs.writeFileSync(path.join(OUT, '_redirects'), [
 ].join('\n'));
 
 // --- 5. Nederlandse site ---
+// Pinterest: wijn-parade.nl claimen (meta-tag op de Nederlandse homepage; de Engelse
+// homepage is hierboven al uit en/ gemaakt en krijgt deze tag dus niet)
+const nlCfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'site-config.json'), 'utf8')).nl_site || {};
+if (nlCfg.pinterest_verify) {
+  const home = path.join(ROOT, 'index.html');
+  const h = fs.readFileSync(home, 'utf8');
+  if (!h.includes('p:domain_verify')) {
+    fs.writeFileSync(home, h.replace('<head>', `<head>\n  <meta name="p:domain_verify" content="${nlCfg.pinterest_verify}"/>`));
+  }
+}
 // De map dist-en/ hoort niet op wijn-parade.nl
 let nlR = nlRedirects.trimEnd() + '\n\n# Uitvoer van de Engelse site niet tonen op wijn-parade.nl\n/dist-en/*  /dist-en-niet-gevonden  404!\n';
 if (LIVE) {
