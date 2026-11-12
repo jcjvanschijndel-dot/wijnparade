@@ -162,6 +162,9 @@ if (LIVE) {
   // Oude /en/-omleidingen meteen naar het nieuwe domein, daarna alles onder /en/
   nlR = nlR.split('\n').map(l => /^\/en\/\S+\s+\/en\//.test(l) ? l.replace(/\s\/en\//, ` ${D}/`) : l).join('\n')
     + `\n# Engelse site verhuisd naar ${D}\n/en  ${D}/  301!\n/en/*  ${D}/:splat  301!\n`;
+  // llms.txt: Engelse links naar het nieuwe domein
+  const llms = path.join(ROOT, 'llms.txt');
+  if (fs.existsSync(llms)) fs.writeFileSync(llms, fs.readFileSync(llms, 'utf8').split(`${NL}/en/`).join(`${D}/`));
   // Nederlandse sitemap zonder Engelse pagina's
   const nlBlocks = urlBlocks.filter(b => !isEn(b));
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `${head}${nlBlocks.map(b => '  ' + b).join('\n')}\n</urlset>\n`);

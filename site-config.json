@@ -3,7 +3,7 @@
     "domain": "https://winehotspotter.com",
     "brand": "Wine Hotspotter",
     "instagram": "winehotspotter",
-    "live": false,
+    "live": true,
     "analytics_id": "G-T6DRT0Y3PL"
   }
 }
