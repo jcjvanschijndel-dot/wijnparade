@@ -185,7 +185,7 @@ const winalistTemplate = String((AFFILIATE.winalist || {}).link_template || '').
 const winalistAffiliate = !!(winalistParams || winalistTemplate);
 function winalistLink(url, sid) {
   url = String(url || '').trim();
-  if (!/^https:\/\/(www\.)?winalist\.(com|nl)\//.test(url)) return '';
+  if (!/^https:\/\/(www\.)?winalist\.com\//.test(url)) return '';
   if (winalistParams) {
     const [base, hash] = url.split('#');
     return base + (base.includes('?') ? '&' : '?') + winalistParams + (hash ? '#' + hash : '');
