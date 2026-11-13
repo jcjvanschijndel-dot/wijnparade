@@ -178,11 +178,18 @@ function bookingLink(url, sid) {
   if (!bookingTemplate) return url;
   return bookingTemplate.replace('{url}', encodeURIComponent(url)).replace('{sid}', encodeURIComponent(sid || ''));
 }
-// Winalist (proeverijen boeken): CMS-veld winalist_url, affiliate.json winalist.link_template
+// Winalist (proeverijen boeken): CMS-veld winalist_url, en in affiliate.json óf winalist.params
+// (UTM-parameters die achter elke Winalist-link worden gezet) óf winalist.link_template (deeplink met {url} en {sid}).
+const winalistParams = String((AFFILIATE.winalist || {}).params || '').trim().replace(/^[?&]+/, '');
 const winalistTemplate = String((AFFILIATE.winalist || {}).link_template || '').trim();
+const winalistAffiliate = !!(winalistParams || winalistTemplate);
 function winalistLink(url, sid) {
   url = String(url || '').trim();
-  if (!/^https:\/\/(www\.)?winalist\.com\//.test(url)) return '';
+  if (!/^https:\/\/(www\.)?winalist\.(com|nl)\//.test(url)) return '';
+  if (winalistParams) {
+    const [base, hash] = url.split('#');
+    return base + (base.includes('?') ? '&' : '?') + winalistParams + (hash ? '#' + hash : '');
+  }
   if (!winalistTemplate) return url;
   return winalistTemplate.replace('{url}', encodeURIComponent(url)).replace('{sid}', encodeURIComponent(sid || ''));
 }
@@ -207,7 +214,7 @@ const tasteBlock = (loc, lang, { disclosure = true } = {}) => {
       ${note ? `<p>${esc(note)}</p>` : ''}
       ${link ? `<div class="loc-stay-btns"><a href="${esc(link)}" target="_blank" rel="sponsored noopener" class="loc-stay-btn">${t.btn}</a></div>`
              : site ? `<div class="loc-stay-btns"><a href="${esc(site)}" target="_blank" rel="noopener" class="loc-stay-btn">${t.site}</a></div>` : ''}
-      ${disclosure && link && winalistTemplate ? `<p class="loc-stay-disclosure">${t.disclosure}</p>` : ''}</div>`;
+      ${disclosure && link && winalistAffiliate ? `<p class="loc-stay-disclosure">${t.disclosure}</p>` : ''}</div>`;
 };
 // Opmaak van het vlak Overnachten (locatiepagina's en artikelen)
 const STAY_CSS = `.loc-stay{padding:.75rem 1rem;background:var(--gray-50);border-radius:10px;margin-bottom:1rem;font-size:.9rem;color:var(--gray-900)}
@@ -242,7 +249,7 @@ function injectStayBlocks(html, lang) {
   });
   return out2
     + (any && bookingTemplate ? `<p class="loc-stay-disclosure">${LOC_TEXT[lang].stayDisclosure}</p>` : '')
-    + (anyTaste && winalistTemplate ? `<p class="loc-stay-disclosure">${TASTE_TEXT[lang].disclosure}</p>` : '');
+    + (anyTaste && winalistAffiliate ? `<p class="loc-stay-disclosure">${TASTE_TEXT[lang].disclosure}</p>` : '');
 }
 const stayBlock = (loc, lang, { disclosure = true } = {}) => {
   if (!hasStay(loc)) return '';
