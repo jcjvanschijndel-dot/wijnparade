@@ -1,7 +1,7 @@
 ---
 name: L'Asphodèle
 type: restaurant
-address: 1 Chemin des Asphodèles, 56270 Ploemeur
+address: 1 Chemin des Asphodèles, 56270 Ploemeur, Frankrijk
 lat: 47.7100774
 lng: -3.4647914
 description: >-

@@ -1,7 +1,7 @@
 ---
 name: Biniagual
 type: wijnhuis
-address: Finca Biniagual, Binissalem, Mallorca
+address: Finca Biniagual, Binissalem, Mallorca, Spanje
 lat: 39.66775920000001
 lng: 2.8759487
 description: >-

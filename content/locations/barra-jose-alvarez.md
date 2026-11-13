@@ -1,7 +1,7 @@
 ---
 name: BARRA José Álvarez
 type: wijnbar
-address: Bulevar de El Ejido 46, 04700 El Ejido
+address: Bulevar de El Ejido 46, 04700 El Ejido, Spanje
 lat: 36.77084300000001
 lng: -2.8278372
 description: >-

@@ -1,7 +1,7 @@
 ---
 name: Adivino
 type: wijnbar
-address: Avenida Miguel de Cervantes 14, Local 3-4, Nueva Andalucía, 29660 Marbella
+address: Avenida Miguel de Cervantes 14, Local 3-4, Nueva Andalucía, 29660 Marbella, Spanje
 lat: 36.4988201
 lng: -4.97251
 description: >-

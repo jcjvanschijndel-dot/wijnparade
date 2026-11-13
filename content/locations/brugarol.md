@@ -1,7 +1,7 @@
 ---
 name: Brugarol
 type: wijnhuis
-address: V4J5+HP, 17230 Vall-llobrega, Girona, Spain
+address: V4J5+HP, 17230 Vall-llobrega, Girona, Spanje
 lat: 41.879167
 lng: 3.110556
 description: >-

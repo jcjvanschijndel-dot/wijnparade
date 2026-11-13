@@ -1,7 +1,7 @@
 ---
 name: Wijnbar Vijf
 type: wijnbar
-address: Herengracht 74 | 1398 AD Muiden
+address: Herengracht 74, 1398 AD Muiden
 lat: 52.32978809999999
 lng: 5.0693666
 description: >-

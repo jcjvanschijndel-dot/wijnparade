@@ -1,7 +1,7 @@
 ---
 name: Zoldering
 type: restaurant
-address: Utrechtsestraat 141a, amsterdam
+address: Utrechtsestraat 141a, Amsterdam
 lat: 52.361352
 lng: 4.899351999999999
 description: >-

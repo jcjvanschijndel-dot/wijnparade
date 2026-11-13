@@ -1,7 +1,7 @@
 ---
 name: Le Bellevue
 type: restaurant
-address: Le Bellevue
+address: 9 Rue de la République, 51160 Champillon, Frankrijk
 lat: 49.0912374
 lng: 3.9766882
 description: >-

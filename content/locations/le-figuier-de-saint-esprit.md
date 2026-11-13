@@ -1,7 +1,7 @@
 ---
 name: Le Figuier de Saint-Esprit
 type: restaurant
-address: 14 rue Saint-Esprit, 06600 Antibes
+address: 14 rue Saint-Esprit, 06600 Antibes, Frankrijk
 lat: 43.5817598
 lng: 7.1285557
 description: >-

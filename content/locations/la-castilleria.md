@@ -1,7 +1,7 @@
 ---
 name: La Castillería
 type: restaurant
-address: Pago de Santa Lucía s/n, Vejer de la Frontera
+address: Pago de Santa Lucía s/n, Vejer de la Frontera, Spanje
 lat: 36.252034
 lng: -5.9667359
 description: >-

@@ -1,7 +1,7 @@
 ---
 name: UVA
 type: restaurant
-address: 13 Boulevard de la République, 06400 Cannes
+address: 13 Boulevard de la République, 06400 Cannes, Frankrijk
 lat: 43.5532343
 lng: 7.0248065
 description: >-

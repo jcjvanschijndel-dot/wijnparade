@@ -1,7 +1,7 @@
 ---
 name: Enoteca 17.56
 type: restaurant
-address: Real Companhia Velha - 1st Demarcation Museum
+address: Rua Serpa Pinto 44B, 4400-307 Vila Nova de Gaia, Portugal
 lat: 41.13681930000001
 lng: -8.618581299999999
 description: >-

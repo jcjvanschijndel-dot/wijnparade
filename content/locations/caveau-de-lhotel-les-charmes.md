@@ -1,7 +1,7 @@
 ---
 name: Caveau de L'hotel les Charmes
 type: wijnbar
-address: 8 Place du Murger, 21190 Meursault
+address: 8 Place du Murger, 21190 Meursault, Frankrijk
 lat: 46.9801608
 lng: 4.769129599999999
 description: >-

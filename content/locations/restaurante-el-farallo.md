@@ -1,7 +1,7 @@
 ---
 name: Restaurante El Faralló
 type: restaurant
-address: Carrer Fénix 10, Las Rotas, Dénia
+address: Carrer Fénix 10, Las Rotas, Dénia, Spanje
 lat: 38.8336545
 lng: 0.1341115
 description: >-

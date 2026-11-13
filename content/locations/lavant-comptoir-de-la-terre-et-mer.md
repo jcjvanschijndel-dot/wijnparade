@@ -1,7 +1,7 @@
 ---
 name: L'Avant Comptoir de la terre et mer
 type: wijnbar
-address: 3 Carrefour de l'Odéon, 75006 Parijs
+address: 3 Carrefour de l'Odéon, 75006 Parijs, Frankrijk
 lat: 48.85204359999999
 lng: 2.3388461
 description: >-

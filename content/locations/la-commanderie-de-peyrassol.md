@@ -1,7 +1,7 @@
 ---
 name: La Commanderie de Peyrassol
 type: wijnhuis
-address: 1204 chemin de la Commanderie de Peyrassol, RN7, 83340 Flassans-sur-Issole
+address: 1204 chemin de la Commanderie de Peyrassol, RN7, 83340 Flassans-sur-Issole, Frankrijk
 lat: 43.3789147
 lng: 6.2634449
 description: >-

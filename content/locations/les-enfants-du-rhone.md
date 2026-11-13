@@ -1,7 +1,7 @@
 ---
 name: "Les Enfants du Rhône "
 type: wijnbar
-address: 8 Rue des Mariniers, 69420 Condrieu
+address: 8 Rue des Mariniers, 69420 Condrieu, Frankrijk
 lat: 45.4584805
 lng: 4.7694018
 description: >-

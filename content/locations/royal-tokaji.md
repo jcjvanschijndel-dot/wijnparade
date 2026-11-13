@@ -1,7 +1,7 @@
 ---
 name: Royal Tokaji
 type: wijnhuis
-address: Rákóczi utca 35, 3909 Mád, Hungary
+address: Rákóczi utca 35, 3909 Mád, Hongarije
 lat: 48.19312859999999
 lng: 21.2779022
 description: >-

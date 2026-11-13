@@ -1,7 +1,7 @@
 ---
 name: Château de la Gaude
 type: wijnhuis
-address: Route de Sisteron, 13100 Aix-en-Provence
+address: Route de Sisteron, 13100 Aix-en-Provence, Frankrijk
 lat: 43.5572257
 lng: 5.4603683
 description: >-

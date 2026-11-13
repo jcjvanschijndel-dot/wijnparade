@@ -1,7 +1,7 @@
 ---
 name: Castello di Fonterutoli
 type: wijnhuis
-address: "  C8P4+7H Fonterutoli, Siena, Italië"
+address: C8P4+7H Fonterutoli, Siena, Italië
 lat: 43.43568750000001
 lng: 11.3064375
 description: >-

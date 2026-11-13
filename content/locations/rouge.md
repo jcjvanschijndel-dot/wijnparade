@@ -1,7 +1,7 @@
 ---
 name: Rouge
 type: restaurant
-address: 6 Rue Fresque, 30000 Nîmes
+address: 6 Rue Fresque, 30000 Nîmes, Frankrijk
 lat: 43.8371024
 lng: 4.3579048
 description: >-

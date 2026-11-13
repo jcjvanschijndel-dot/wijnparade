@@ -1,7 +1,7 @@
 ---
 name: Garrafeira Baga
 type: wijnbar
-address: Rua Simões de Castro 169, 3000-388 Coimbra
+address: Rua Simões de Castro 169, 3000-388 Coimbra, Portugal
 lat: 40.2126593
 lng: -8.4326438
 description: >-
