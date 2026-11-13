@@ -37,6 +37,7 @@ Statische site over wijnadressen in Europa, met Netlify en Decap CMS. Communicee
   - `en_site`: domein, merk, Instagram, `live`, `analytics_id` (G-T6DRT0Y3PL) en `pinterest_verify`.
   - `nl_site.pinterest_verify`.
 - **Engelse site:** foto's en `/content/*` worden via een proxy van wijn-parade.nl gehaald (`dist-en/_redirects`). Alle `/en/`-adressen sturen met een 301 door naar winehotspotter.com.
+- **Affiliate:** `affiliate.json`. Booking via `link_template` (deeplink met {url} en {sid}); Winalist via `params` (UTM-parameters achter elke `winalist_url`), met een vermelding onder de knop.
 - **Coördinaten:** bij nieuwe locaties direct lat/lng invullen. Haal ze op via de eigen functie:
   `curl -s -X POST https://wijn-parade.nl/.netlify/functions/geocode -H 'Content-Type: application/json' -d '{"address":"<adres>"}'`
   Daarvoor moet de sessie op de omgeving "wijnparade" draaien, waarin wijn-parade.nl is toegestaan.
@@ -48,4 +49,5 @@ Statische site over wijnadressen in Europa, met Netlify en Decap CMS. Communicee
 
 ## Nog open (november 2026)
 
-- Affiliate-links instellen in `affiliate.json` (Booking via CJ en Winalist) zodra de eigenaar is goedgekeurd. winehotspotter.com moet daar ook als site worden aangemeld.
+- Booking-affiliatelink (via CJ) instellen in `affiliate.json` zodra de eigenaar is goedgekeurd. winehotspotter.com moet daar ook als site worden aangemeld.
+- Winalist: krijgt winehotspotter.com een eigen code, dan per site aparte UTM-parameters gebruiken (nu `dewijnparade` voor beide).

@@ -1,9 +1,10 @@
 {
-  "_uitleg": "Per netwerk een link_template: de deeplink van het affiliate-netwerk met {url} op de plek van de link naar de partner en {sid} voor de pagina (locatie-id). Leeg laten = gewone links zonder vergoeding.",
+  "_uitleg": "Per netwerk een link_template: de deeplink van het affiliate-netwerk met {url} op de plek van de link naar de partner en {sid} voor de pagina (locatie-id). Voor Winalist kan in plaats daarvan 'params': UTM-parameters die achter elke Winalist-link worden gezet. Leeg laten = gewone links zonder vergoeding.",
   "booking": {
     "link_template": ""
   },
   "winalist": {
+    "params": "utm_source=dewijnparade&utm_medium=affiliate&utm_campaign=dewijnparade",
     "link_template": ""
   }
 }
