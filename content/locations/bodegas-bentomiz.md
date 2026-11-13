@@ -35,4 +35,5 @@ description_en: >-
   the vineyard.
 taste_note: "Rondleidingen door bodega en wijngaard, ook workshops en wijn-spijscombinaties"
 taste_note_en: "Tours of the bodega and vineyard, plus workshops and food pairings"
+winalist_url: "https://www.winalist.com/hosts/2785/bodegas-bentomiz"
 ---

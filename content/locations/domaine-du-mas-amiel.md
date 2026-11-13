@@ -28,4 +28,5 @@ description_en: >-
   cellar and taste freely from the range of 25 cuvées.
 taste_note: "Kelder met eeuwenoude foudres; proef vrij uit 25 cuvées"
 taste_note_en: "Cellar with centuries-old foudres; taste freely from 25 cuvées"
+winalist_url: "https://www.winalist.com/hosts/3572/domaine-du-mas-amiel"
 ---

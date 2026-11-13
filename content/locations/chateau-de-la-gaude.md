@@ -41,4 +41,5 @@ stay_note_en: "Five-star hotel among the vineyards"
 booking_url: "https://www.booking.com/hotel/fr/chateau-de-la-gaude.html"
 taste_note: "Rondleiding door het domein, de wijngaarden en de kelder, met proeverij"
 taste_note_en: "Tour of the estate, vineyards and cellar, with a tasting"
+winalist_url: "https://www.winalist.com/hosts/1450/chateau-de-la-gaude"
 ---

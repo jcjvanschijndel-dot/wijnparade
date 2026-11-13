@@ -26,4 +26,5 @@ description_en: >-
   recommended.
 taste_note: "Persoonlijke rondleiding door de kelder met proeverij, maximaal 15 personen; reserveren aanbevolen"
 taste_note_en: "Personal cellar tour with a tasting, up to 15 people; booking recommended"
+winalist_url: "https://www.winalist.com/hosts/3342/domaine-galevan"
 ---

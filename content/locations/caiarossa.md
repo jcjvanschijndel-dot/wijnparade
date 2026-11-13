@@ -27,4 +27,5 @@ description_en: >-
   you'll find them on the website.
 taste_note: "Verschillende proeverijen en rondleidingen, te boeken via de website"
 taste_note_en: "Several tastings and tours, bookable through the website"
+winalist_url: "https://www.winalist.com/hosts/687/caiarossa"
 ---

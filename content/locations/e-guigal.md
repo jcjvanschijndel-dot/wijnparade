@@ -42,4 +42,5 @@ description_en: >-
   to the region.
 taste_note: "Kelderrondleiding met proeverij, of een wandeling door de wijngaarden"
 taste_note_en: "Cellar tour with a tasting, or a walk through the vineyards"
+winalist_url: "https://www.winalist.com/hosts/1266/e-guigal-le-caveau-du-chateau"
 ---

@@ -29,4 +29,5 @@ description_en: >-
   programme for €10. Tours are available in Spanish and English.
 taste_note: "Kleinschalige rondleiding door de familie, met proeverij op een terras boven het dal"
 taste_note_en: "Small-scale tour by the family, with a tasting on a terrace above the valley"
+winalist_url: "https://www.winalist.com/hosts/1895/bodegas-calvente"
 ---

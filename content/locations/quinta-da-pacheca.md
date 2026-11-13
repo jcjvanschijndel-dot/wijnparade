@@ -35,4 +35,5 @@ stay_note_en: "The Wine House Hotel, including suites in wine barrels"
 booking_url: "https://www.booking.com/hotel/pt/the-wine-house.html"
 taste_note: "Rondleiding van anderhalf uur met proeverij van twee Douro-wijnen en twee porten"
 taste_note_en: "One-and-a-half-hour tour with a tasting of two Douro wines and two ports"
+winalist_url: "https://www.winalist.com/hosts/3295/quinta-da-pacheca"
 ---

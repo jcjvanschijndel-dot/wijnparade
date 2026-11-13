@@ -32,4 +32,5 @@ stay_note_en: "Antica Dimora Dosio: five rooms and two suites with vineyard view
 booking_url: "https://www.booking.com/hotel/it/antica-dimora-dosio.html"
 taste_note: "Bezoek met proeverij en uitzicht over de Barolo"
 taste_note_en: "Visit with a tasting and a view over Barolo"
+winalist_url: "https://www.winalist.com/hosts/2061/dosio-vigneti"
 ---

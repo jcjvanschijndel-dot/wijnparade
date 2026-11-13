@@ -38,4 +38,5 @@ description_en: >-
   season, vineyard visits, themed workshops and harvest days are also possible.
 taste_note: "Rondleiding door kelders en pers met proeverij; in het seizoen ook wijngaardbezoeken"
 taste_note_en: "Tour of the cellars and press with a tasting; vineyard visits in season"
+winalist_url: "https://www.winalist.com/hosts/2205/champagne-roger-coulon"
 ---

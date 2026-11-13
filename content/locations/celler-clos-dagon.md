@@ -31,4 +31,5 @@ description_en: >-
   high season.
 taste_note: "Bijzondere wijnervaringen, verder dan een standaardrondleiding; reserveer ruim vooraf"
 taste_note_en: "Special wine experiences beyond a standard tour; book well ahead"
+winalist_url: "https://www.winalist.com/hosts/1678/bodegas-clos-d-agon"
 ---

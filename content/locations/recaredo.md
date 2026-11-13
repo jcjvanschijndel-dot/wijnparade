@@ -37,4 +37,5 @@ image: /uploads/recaredo.webp
 website: https://www.recaredo.com/
 taste_note: "Van een kennismaking tot een privébezoek met degorgeren met de hand of een biodynamische wandeling; reserveer vooraf"
 taste_note_en: "From an introduction to a private visit with hand disgorging or a biodynamic walk; book ahead"
+winalist_url: "https://www.winalist.com/hosts/3050/recaredo"
 ---

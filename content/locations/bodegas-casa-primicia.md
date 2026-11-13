@@ -31,4 +31,5 @@ description_en: >-
   package from the Carravalseca range, or lunch in the historic building itself.
 taste_note: "Rondleiding van 90 minuten langs de in de rots uitgehakte tanks en de ondergrondse kelders, met proeverij"
 taste_note_en: "90-minute tour past the tanks carved into the rock and the underground cellars, with a tasting"
+winalist_url: "https://www.winalist.com/hosts/1936/bodegas-casa-primicia"
 ---

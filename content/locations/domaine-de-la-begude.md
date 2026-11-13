@@ -40,4 +40,5 @@ description_en: >-
   meal: a tasting of the wines followed by a meal on the estate.
 taste_note: "Klassieke rondleiding met drie Bandol-wijnen, of een jeeptocht met picknick boven de zee"
 taste_note_en: "Classic tour with three Bandol wines, or a jeep tour with a picnic above the sea"
+winalist_url: "https://www.winalist.com/hosts/2028/domaine-de-la-begude"
 ---

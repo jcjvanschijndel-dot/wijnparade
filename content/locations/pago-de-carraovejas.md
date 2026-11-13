@@ -28,4 +28,5 @@ description_en: >-
   Duero.
 taste_note: "Verschillende rondleidingen met proeverij, van woensdag tot zondag"
 taste_note_en: "Several tours with tastings, Wednesday to Sunday"
+winalist_url: "https://www.winalist.com/hosts/2945/pago-de-carraovejas"
 ---
