@@ -1,7 +1,7 @@
 ---
 name: Le Recommandé
 type: wijnbar
-address: 13 Rue Sainte-Dorothée, 51190 Avize
+address: 13 Rue Sainte-Dorothée, 51190 Avize, Frankrijk
 lat: 48.9718607
 lng: 4.0107722
 description: "Meer dan 400 champagnes op de kaart, uitsluitend van kleine

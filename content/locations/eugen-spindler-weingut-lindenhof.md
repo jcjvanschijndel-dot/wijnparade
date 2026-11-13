@@ -1,7 +1,7 @@
 ---
 name: Eugen Spindler - Weingut Lindenhof
 type: wijnhuis
-address: Weinstraße 55, 67147 Forst an der Weinstraße, Rheinland-Pfalz
+address: Weinstraße 55, 67147 Forst an der Weinstraße, Rheinland-Pfalz, Duitsland
 lat: 49.4252445
 lng: 8.1892415
 description: >-

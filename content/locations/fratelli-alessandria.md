@@ -1,7 +1,7 @@
 ---
 name: Fratelli Alessandria
 type: wijnhuis
-address: Via Beato Valfré 59, 12060 Verduno
+address: Via Beato Valfré 59, 12060 Verduno, Italië
 lat: 44.6690936
 lng: 7.933866999999999
 description: >-

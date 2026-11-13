@@ -1,7 +1,7 @@
 ---
 name: Casa Garras
 type: restaurant
-address: "Barrio Concha 6, 48891 Karrantza "
+address: Barrio Concha 6, 48891 Karrantza, Spanje
 lat: 43.2249428
 lng: -3.3601971
 description: >-

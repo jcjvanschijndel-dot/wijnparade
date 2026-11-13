@@ -1,7 +1,7 @@
 ---
 name: Hieronimi
 type: wijnhuis
-address: Stadionstraße 1, 56812 Cochem
+address: Stadionstraße 1, 56812 Cochem, Duitsland
 lat: 50.147875
 lng: 7.1699137
 description: >

@@ -1,7 +1,7 @@
 ---
 name: Abarrote
 type: wijnbar
-address: Calle San Fernando 23, 03001 Alicante
+address: Calle San Fernando 23, 03001 Alicante, Spanje
 lat: 38.3434636
 lng: -0.483592
 description: >-

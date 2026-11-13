@@ -1,7 +1,7 @@
 ---
 name: Cal Xim
 type: restaurant
-address: Plaça de Subirats 5, 08739 Sant Pau d'Ordal
+address: Plaça de Subirats 5, 08739 Sant Pau d'Ordal, Spanje
 lat: 41.3838184
 lng: 1.7964686
 description: >-

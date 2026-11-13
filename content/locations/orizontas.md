@@ -1,7 +1,7 @@
 ---
 name: Orizontas
 type: restaurant
-address: Od. Karlovasou – Platanos, 832 00 Platanos, Samos
+address: Od. Karlovasou – Platanos, 832 00 Platanos, Samos, Griekenland
 lat: 37.7393578
 lng: 26.7472631
 description: >-

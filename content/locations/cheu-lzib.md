@@ -1,7 +1,7 @@
 ---
 name: C'heu l'Zib
 type: restaurant
-address: 2 Route des Aix 18510 Menetou-Salon((ouvre une nouvelle fenêtre))
+address: 2 Route des Aix, 18510 Menetou-Salon, Frankrijk
 lat: 47.2313753
 lng: 2.490415
 description: >-

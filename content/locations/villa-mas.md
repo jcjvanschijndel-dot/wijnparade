@@ -1,7 +1,7 @@
 ---
 name: Villa Mas
 type: restaurant
-address: Passeig de Sant Pol 95, 17220 Sant Feliu de Guíxols
+address: Passeig de Sant Pol 95, 17220 Sant Feliu de Guíxols, Spanje
 lat: 41.7898502
 lng: 3.0464691
 description: >-

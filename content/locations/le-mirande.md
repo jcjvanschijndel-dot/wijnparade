@@ -1,7 +1,7 @@
 ---
 name: Le Mirande
 type: restaurant
-address: 4 Place de l'Amirande, 84000 Avignon
+address: 4 Place de l'Amirande, 84000 Avignon, Frankrijk
 lat: 43.9500466
 lng: 4.8078017
 description: >-
