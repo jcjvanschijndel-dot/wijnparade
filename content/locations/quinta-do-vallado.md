@@ -42,4 +42,5 @@ stay_note_en: "Wine hotel with 19 rooms"
 booking_url: "https://www.booking.com/hotel/pt/quinta-do-vallado.html"
 taste_note: "Proeverij in het paviljoen boven de Douro; dagelijks rondleidingen"
 taste_note_en: "Tasting in the pavilion above the Douro; daily guided tours"
+winalist_url: "https://www.winalist.com/hosts/1570/quinta-do-vallado"
 ---

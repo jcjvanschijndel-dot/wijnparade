@@ -29,4 +29,5 @@ description_en: >-
   with chocolate pairings.
 taste_note: "Wijnbar met uitzicht op de Montgrí, vrijdag tot zondag op reservering; proeverijen met muziek"
 taste_note_en: "Wine bar overlooking the Montgrí, Friday to Sunday by reservation; tastings with music"
+winalist_url: "https://www.winalist.com/hosts/3382/mas-geli"
 ---

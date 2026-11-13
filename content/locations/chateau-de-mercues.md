@@ -40,4 +40,5 @@ stay_note: "Relais & Châteaux in het kasteel, met 30 kamers en suites"
 stay_note_en: "Relais & Châteaux in the castle, with 30 rooms and suites"
 taste_note: "Rondleiding door domein en kelder met proeverij van drie of vijf wijnen; telefonisch reserveren"
 taste_note_en: "Tour of the estate and cellar with a tasting of three or five wines; book by phone"
+winalist_url: "https://www.winalist.com/hosts/515/chateau-de-mercues"
 ---

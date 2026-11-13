@@ -25,4 +25,5 @@ description_en: >-
   the rooftop terrace.
 taste_note: "Alleen op afspraak, in groepjes van maximaal zes, met de kelders op 35 meter diepte"
 taste_note_en: "By appointment only, in groups of up to six, including cellars 35 metres underground"
+winalist_url: "https://www.winalist.com/hosts/1076/champagne-leclerc-briant"
 ---

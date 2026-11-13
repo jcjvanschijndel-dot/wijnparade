@@ -33,4 +33,5 @@ image: /uploads/celler-kripta.webp
 website: https://www.cellerkripta.com/
 taste_note: "Wandeling door kelders en installaties met proeverij van drie Corpinnat-wijnen; reserveren nodig"
 taste_note_en: "Walk through the cellars and facilities with a tasting of three Corpinnat wines; booking required"
+winalist_url: "https://www.winalist.com/hosts/1783/celler-kripta"
 ---

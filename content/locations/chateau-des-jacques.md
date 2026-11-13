@@ -25,4 +25,5 @@ description_en: >-
   season.
 taste_note: "Bezoek en proeverij; reserveren aanbevolen, zeker in het hoogseizoen"
 taste_note_en: "Visit and tasting; booking recommended, especially in high season"
+winalist_url: "https://www.winalist.com/hosts/1030/chateau-des-jacques"
 ---

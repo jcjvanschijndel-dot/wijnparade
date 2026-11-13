@@ -36,4 +36,5 @@ description_en: >-
   lunch or dinner. The restaurant is very much worth it!
 taste_note: "Bezoeken en proeverijen op afspraak, van een rondleiding tot proeverij met lunch"
 taste_note_en: "Visits and tastings by appointment, from a tour to a tasting with lunch"
+winalist_url: "https://www.winalist.com/hosts/3361/herdade-da-malhadinha-nova"
 ---

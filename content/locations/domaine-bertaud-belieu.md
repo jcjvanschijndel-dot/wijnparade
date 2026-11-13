@@ -32,4 +32,5 @@ description_en: >-
   The tasting room welcomes visitors all year without an appointment; a cellar tour is by appointment.
 taste_note: "Proeven in de caveau zonder afspraak; kelderrondleiding op afspraak"
 taste_note_en: "Tastings in the cellar door without an appointment; cellar tour by appointment"
+winalist_url: "https://www.winalist.com/hosts/3037/domaine-bertaud-belieu"
 ---

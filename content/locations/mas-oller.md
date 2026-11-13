@@ -27,4 +27,5 @@ description_en: >-
   combine with a day on the coast or in the medieval villages inland.
 taste_note: "Proeverijen van jonge en gerijpte wijnen"
 taste_note_en: "Tastings of young and aged wines"
+winalist_url: "https://www.winalist.com/hosts/836/mas-oller"
 ---

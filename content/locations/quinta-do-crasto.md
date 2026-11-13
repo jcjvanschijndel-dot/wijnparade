@@ -25,4 +25,5 @@ description_en: >-
   view.
 taste_note: "Kelderbezoek en proeverij, te combineren met een boottocht over de Douro"
 taste_note_en: "Cellar visit and tasting, which can be combined with a boat trip on the Douro"
+winalist_url: "https://www.winalist.com/hosts/3122/quinta-do-crasto"
 ---

@@ -44,4 +44,5 @@ description_en: >-
   kitchen garden). Both work exclusively with seasonal produce from the estate.
 taste_note: "Kelderrondleiding, kunstcollectie, koetstocht door de wijngaarden en beeldenpark"
 taste_note_en: "Cellar tour, art collection, carriage ride through the vineyards and sculpture park"
+winalist_url: "https://www.winalist.com/hosts/694/commanderie-de-peyrassol"
 ---

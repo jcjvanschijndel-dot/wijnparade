@@ -21,4 +21,5 @@ description_en: >-
   they understand why wine is first and foremost a story of sharing.
 taste_note: "Gratis proeven zonder afspraak; voor groepen een rondleiding op reservering"
 taste_note_en: "Free tastings without an appointment; guided tours for groups by reservation"
+winalist_url: "https://www.winalist.com/hosts/3320/domaine-melanie-pfister"
 ---
