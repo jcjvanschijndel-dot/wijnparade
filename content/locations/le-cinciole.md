@@ -28,6 +28,7 @@ description_en: >-
   as possible. On a visit the owners show you round themselves and you taste the
   wines. A nice address for anyone who wants to get to know a small, personal
   winery on a wine trip through Chianti.
+image: /uploads/le-cinciole.webp
 website: https://www.lecinciole.it/
 winalist_url: "https://www.winalist.com/hosts/1672/le-cinciole"
 ---
