@@ -30,6 +30,7 @@ description_en: >-
   views over the hills of the Langhe. Baràc is also an agriturismo: you sleep in
   complete peace among the vineyards. Recommended for anyone who wants to
   combine Alba, Barbaresco and Barolo on a wine trip through Piedmont.
+image: /uploads/tenuta-barac.webp
 website: https://www.barac.it/
 stay_type: agriturismo
 stay_note: "Agriturismo met kamers in de gerestaureerde boerderij"
