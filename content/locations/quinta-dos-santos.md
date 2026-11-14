@@ -28,6 +28,7 @@ description_en: >-
   tour of the winery and brewery and eat in the restaurant overlooking the
   vineyard. A convivial address for a wine tasting on the Algarve coast, close
   to Portimão.
+image: /uploads/quinta-dos-santos.webp
 website: https://www.quintadossantos.com/
 winalist_url: "https://www.winalist.com/hosts/2884/quinta-dos-santos"
 ---
