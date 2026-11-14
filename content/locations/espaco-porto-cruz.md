@@ -25,6 +25,7 @@ description_en: >-
   guided tastings. There is also a restaurant and, on top, a roof terrace with a
   bar and views over the river and the old town. An easy address for a port
   tasting in Porto, right among the port lodges of Gaia.
+image: /uploads/espaco-porto-cruz.webp
 website: https://www.espacoportocruz.pt/
 winalist_url: "https://www.winalist.com/hosts/693/espaco-porto-cruz"
 ---
