@@ -28,6 +28,7 @@ description_en: >-
   host takes you to the vineyard and the cellar, and you taste the wines in the
   tasting room. A good address for a wine tasting in the south of Chianti
   Classico, a quarter of an hour from Siena.
+image: /uploads/carpineta-fontalpino.webp
 website: https://www.carpinetafontalpino.it/
 winalist_url: "https://www.winalist.com/hosts/1750/fattoria-carpineta-fontalpino"
 ---
