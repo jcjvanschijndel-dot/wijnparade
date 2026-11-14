@@ -29,6 +29,7 @@ description_en: >-
   an age-old tree overlooking the vineyard. There are also holiday cottages and
   a swimming pool. Recommended for anyone looking for more than beaches in the
   Algarve: Silves and the beaches of Lagoa are close by.
+image: /uploads/morgado-do-quintao.webp
 website: https://www.morgadodoquintao.pt/
 stay_type: vakantiewoning
 stay_note: "Vakantiehuisjes op het landgoed, met zwembad"
