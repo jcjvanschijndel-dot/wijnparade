@@ -28,6 +28,7 @@ description_en: >-
   Valle is also an agriturismo, with rooms in the renovated historic villa and a
   swimming pool in summer. A pleasant base for a wine trip through Chianti, just
   over half an hour from Florence.
+image: /uploads/corte-di-valle.webp
 website: https://www.cortedivalle.com/
 stay_type: agriturismo
 stay_note: "Agriturismo met kamers in de historische villa en een zwembad"
