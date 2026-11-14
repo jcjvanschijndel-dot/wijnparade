@@ -1,7 +1,7 @@
 ---
 name: Pietraserena
 type: wijnhuis
-address: Via Casale, 53037 San Gimignano SI, Italië
+address: Via Casale 5, 53037 San Gimignano SI, Italië
 lat: 43.476435
 lng: 11.05264
 description: >-

@@ -1,7 +1,7 @@
 ---
 name: Quinta dos Sentidos
 type: wijnhuis
-address: EM 528, 8300-050 Silves, Portugal
+address: Quinta dos Sentidos, 8300-050 Silves, Portugal
 lat: 37.185993
 lng: -8.39943
 description: >-

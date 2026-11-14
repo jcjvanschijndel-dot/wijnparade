@@ -1,7 +1,7 @@
 ---
 name: Celler Eudald Massana
 type: wijnhuis
-address: Finca El Maset, 08739 Sant Pau d'Ordal, Spanje
+address: Finca El Maset s/n, 08739 Sant Pau d'Ordal (Subirats), Spanje
 lat: 41.381337
 lng: 1.781382
 description: >-
