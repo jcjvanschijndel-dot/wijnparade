@@ -15,7 +15,7 @@ short_description: >-
 centerLat: 43.3
 centerLng: 3.3
 zoom: 8
-minLat: 42.5
+minLat: 42.46
 maxLat: 43.89
 minLng: 2.5
 maxLng: 4.4
