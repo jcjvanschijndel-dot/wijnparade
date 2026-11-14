@@ -28,6 +28,7 @@ description_en: >-
   modern winery and taste six wines, optionally with cheese, cured meats and
   bread from the region. A surprising address for a wine tasting close to Lisbon
   and Sintra.
+image: /uploads/manzwine.webp
 website: https://manzwine.com/
 winalist_url: "https://www.winalist.com/hosts/1551/manzwine"
 ---
