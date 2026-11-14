@@ -28,4 +28,9 @@ description_en: >-
   and the Blanc de Blancs.
 taste_note: "Open Day-tour van 2,5 uur met wandeling door de wijngaarden en proeverij"
 taste_note_en: "2.5-hour Open Day tour with a vineyard walk and tasting"
+awards:
+  - name: "World's 50 Best"
+    detail: "53e plaats, World's Best Vineyards"
+    detail_en: "53rd place, World's Best Vineyards"
+    year: "2026"
 ---

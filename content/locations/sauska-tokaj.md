@@ -39,4 +39,9 @@ description_en: >-
   five-course menu by chef Attila Bicsár with premium wines from both regions.
 taste_note: "Proeverijen woensdag tot zondag, andere dagen op afspraak"
 taste_note_en: "Tastings Wednesday to Sunday, other days by appointment"
+awards:
+  - name: "World's 50 Best"
+    detail: "74e plaats, World's Best Vineyards"
+    detail_en: "74th place, World's Best Vineyards"
+    year: "2026"
 ---
