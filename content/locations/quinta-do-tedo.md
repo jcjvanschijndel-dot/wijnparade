@@ -30,6 +30,7 @@ description_en: >-
   summer you can eat at the Bistro Terrace, overlooking the river. There are
   guest rooms and walking trails across the estate. Recommended for a port
   tasting in the Douro Valley, between Peso da Régua and Pinhão.
+image: /uploads/quinta-do-tedo.webp
 website: https://www.quintadotedo.com/
 stay_type: gastenkamers
 stay_note: "Gastenkamers op het landgoed, met ontbijt"
