@@ -30,6 +30,7 @@ description_en: >-
   middle of the Langhe landscape. On a visit you see the cellar and the barrel
   room and taste the Barolos, sometimes straight from the barrel. Booking is
   required. Recommended for Barolo lovers on a wine trip through Piedmont.
+image: /uploads/giovanni-rosso.webp
 website: https://www.giovannirosso.com/
 winalist_url: "https://www.winalist.com/hosts/1382/giovanni-rosso"
 ---
