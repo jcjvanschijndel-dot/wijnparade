@@ -26,4 +26,9 @@ description_en: >-
 image: /uploads/domaine-du-chant-deole.webp
 website: https://www.chantdeole.be
 winalist_url: "https://www.winalist.com/hosts/2946/domaine-du-chant-d-eole"
+awards:
+  - name: "Gault&Millau"
+    detail: "Belgian Wine Award, Rosé Brut 2022"
+    detail_en: "Belgian Wine Award, Rosé Brut 2022"
+    year: "2025"
 ---

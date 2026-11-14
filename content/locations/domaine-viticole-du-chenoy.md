@@ -26,4 +26,9 @@ description_en: >-
 image: /uploads/domaine-viticole-du-chenoy.webp
 website: https://www.domaine-du-chenoy.com
 winalist_url: "https://www.winalist.com/hosts/3450/domaine-viticole-du-chenoy"
+awards:
+  - name: "Gault&Millau"
+    detail: "Coup de Cœur, Perle de Wallonie"
+    detail_en: "Coup de Cœur, Perle de Wallonie"
+    year: "2025"
 ---
