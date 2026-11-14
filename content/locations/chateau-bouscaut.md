@@ -32,6 +32,7 @@ description_en: >-
   blending: putting together your own blend. You can stay at Château Valoux, the
   estate's holiday home overlooking the vineyards. A good address for a wine
   tasting close to Bordeaux.
+image: /uploads/chateau-bouscaut.webp
 website: https://www.chateau-bouscaut.com/
 stay_type: vakantiewoning
 stay_note: "Château Valoux, vakantiehuis van het domein tussen de wijngaarden"
