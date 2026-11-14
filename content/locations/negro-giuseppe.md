@@ -28,6 +28,7 @@ description_en: >-
   vineyards. There are several tastings, from Barbera and Barbaresco to a
   tasting of old Barbaresco vintages from the family's own collection.
   Recommended for a Barbaresco tasting in the Langhe.
+image: /uploads/negro-giuseppe.webp
 website: https://www.negrogiuseppe.com/
 winalist_url: "https://www.winalist.com/hosts/292/cantina-negro-giuseppe"
 ---
