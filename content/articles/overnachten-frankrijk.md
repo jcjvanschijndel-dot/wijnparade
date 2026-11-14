@@ -5,19 +5,26 @@ date: 2026-11-09
 image: /uploads/sacy.jpeg
 locations:
   - champagne-bochet-lemoine
+  - champagne-philippe-martin
   - chateau-de-sacy
   - le-bellevue
   - la-grande-georgette
   - caveau-de-lhotel-les-charmes
   - la-maison-du-colombier
+  - prosper-maufoux
   - domaine-bott-geyl
+  - domaine-schneider
   - domaine-beaumont
+  - chateau-de-miniere
   - m-chapoutier
   - la-belle-vie
   - rouge
   - les-davids
   - chateau-de-la-gaude
   - la-chipote
+  - domaine-des-peyre
+  - chateau-lhospitalet
+  - vignobles-mouty
   - chateau-feely
   - chateau-de-mercues
   - le-skiff-club
@@ -46,6 +53,10 @@ body_en: |-
 
   [[overnachten:la-grande-georgette]]
 
+  In Cumières, close to Épernay, the Martin family has been making Champagne since 1730. The 1892 family house also has suites, each with a minibar full of the house's own Champagne. More at [Champagne Philippe Martin](/en/locations/champagne-philippe-martin).
+
+  [[overnachten:champagne-philippe-martin]]
+
   ## Burgundy
 
   In Meursault, Hôtel Les Charmes is next to the [Caveau de l'Hôtel Les Charmes](/en/locations/caveau-de-lhotel-les-charmes), with almost 500 wines, including all the Premiers Crus of Meursault, at shop prices.
@@ -56,17 +67,29 @@ body_en: |-
 
   [[overnachten:la-maison-du-colombier]]
 
+  In Saint-Aubin, between Chassagne- and Puligny-Montrachet, [Prosper Maufoux](/en/locations/prosper-maufoux) is based in the more than three-hundred-year-old Château de Saint-Aubin. You can stay in the château's guest rooms.
+
+  [[overnachten:prosper-maufoux]]
+
   ## Alsace
 
   [Domaine Bott-Geyl](/en/locations/domaine-bott-geyl) in Beblenheim rents a loft of 250 m² above the cellars, for up to ten people, with a large terrace looking out over the village and the castles of Ribeauvillé.
 
   [[overnachten:domaine-bott-geyl]]
 
+  In Gertwiller, the gingerbread village near Barr, the family estate [Domaine Schneider](/en/locations/domaine-schneider) makes the classic Alsace wines. The estate has a holiday rental.
+
+  [[overnachten:domaine-schneider]]
+
   ## Loire
 
   At [Domaine Beaumont](/en/locations/domaine-beaumont) in Distré, south of Saumur, Sarah-Jane and Gérald receive guests in their chambre d'hôtes, surrounded by woodland and four hectares of vineyard. You can taste with the winemaker in the cellar.
 
   [[overnachten:domaine-beaumont]]
+
+  [Château de Minière](/en/locations/chateau-de-miniere) near Bourgueil is a castle with its own vineyard planted exclusively with cabernet franc. You can stay in holiday cottages on the estate, or rent the whole château, with a swimming pool.
+
+  [[overnachten:chateau-de-miniere]]
 
   ## Rhône and Provence
 
@@ -94,11 +117,25 @@ body_en: |-
 
   [[overnachten:la-chipote]]
 
+  At the foot of the Luberon, near Robion, lies [Domaine des Peyre](/en/locations/domaine-des-peyre), with a medieval chapel among the vines. You can stay in the gîtes on the property.
+
+  [[overnachten:domaine-des-peyre]]
+
+  ## Languedoc
+
+  [Château L'Hospitalet](/en/locations/chateau-lhospitalet) near Narbonne is the flagship estate of winemaker Gérard Bertrand, in the middle of the protected La Clape massif. You can stay in the five-star hotel with spa, with a private beach club in summer.
+
+  [[overnachten:chateau-lhospitalet]]
+
   ## Bordeaux
 
-  In Bordeaux you can stay at Château Haut-Bailly, Château Sénéjac, Château Lafaurie-Peyraguey, Château Troplong Mondot and Château Soutard. More about these five in [Staying at a château in Bordeaux](/en/articles/wine-stays-bordeaux). On the coast, at the Dune du Pilat, [Le Skiff Club](/en/locations/le-skiff-club) is the restaurant of Hôtel Ha(a)ïtza.
+  In Bordeaux you can stay at Château Haut-Bailly, Château Bouscaut, Château Sénéjac, Château Dauzac, Château Loudenne, Château Lafaurie-Peyraguey, Château Troplong Mondot, Château Soutard and Château Prieuré Marquet. More about these nine in [Staying at a château in Bordeaux](/en/articles/wine-stays-bordeaux). On the coast, at the Dune du Pilat, [Le Skiff Club](/en/locations/le-skiff-club) is the restaurant of Hôtel Ha(a)ïtza.
 
   [[overnachten:le-skiff-club]]
+
+  Near Saint-Émilion, the Mouty winegrowing family rents three holiday homes in the middle of the vineyards, sleeping thirty in total. More at [Vignobles Mouty](/en/locations/vignobles-mouty).
+
+  [[overnachten:vignobles-mouty]]
 
   ## Dordogne and Lot
 
@@ -137,6 +174,10 @@ In Reims zelf slaap je in La Caserne Chanzy, de vroegere brandweerkazerne uit 19
 
 [[overnachten:la-grande-georgette]]
 
+In Cumières, vlak bij Épernay, maakt de familie Martin al sinds 1730 champagne. In het familiehuis uit 1892 zijn ook suites, met een eigen minibar vol champagne van het huis. Meer bij [Champagne Philippe Martin](/locations/champagne-philippe-martin).
+
+[[overnachten:champagne-philippe-martin]]
+
 ## Bourgogne
 
 In Meursault ligt Hôtel Les Charmes naast de [Caveau de l'Hôtel Les Charmes](/locations/caveau-de-lhotel-les-charmes), met bijna 500 wijnen, waaronder alle premiers crus van Meursault, voor winkelprijzen.
@@ -147,17 +188,29 @@ In het centrum van Beaune heeft [La Maison du Colombier](/locations/la-maison-du
 
 [[overnachten:la-maison-du-colombier]]
 
+In Saint-Aubin, tussen Chassagne- en Puligny-Montrachet, zit [Prosper Maufoux](/locations/prosper-maufoux) in het meer dan driehonderd jaar oude Château de Saint-Aubin. Overnachten kan in de gastenkamers van het château.
+
+[[overnachten:prosper-maufoux]]
+
 ## Elzas
 
 [Domaine Bott-Geyl](/locations/domaine-bott-geyl) in Beblenheim verhuurt een loft van 250 m² boven de kelders, voor maximaal tien personen, met een groot terras dat uitkijkt over het dorp en de kastelen van Ribeauvillé.
 
 [[overnachten:domaine-bott-geyl]]
 
+In Gertwiller, het peperkoekdorp bij Barr, maakt familiedomein [Domaine Schneider](/locations/domaine-schneider) de klassieke Elzasser wijnen. Bij het domein hoort een vakantiewoning.
+
+[[overnachten:domaine-schneider]]
+
 ## Loire
 
 Bij [Domaine Beaumont](/locations/domaine-beaumont) in Distré, ten zuiden van Saumur, ontvangen Sarah-Jane en Gérald gasten in hun chambre d'hôtes, tussen bos en vier hectare wijngaard. Je kunt in de kelder proeven met de wijnmaker.
 
 [[overnachten:domaine-beaumont]]
+
+[Château de Minière](/locations/chateau-de-miniere) bij Bourgueil is een kasteel met eigen wijngaard van alleen cabernet franc. Je overnacht in vakantiehuizen op het landgoed, of huurt het kasteel in zijn geheel, met zwembad.
+
+[[overnachten:chateau-de-miniere]]
 
 ## Rhône en Provence
 
@@ -185,11 +238,25 @@ In Bandol, in de rustige baai van Renécros, is [La Chipote](/locations/la-chipo
 
 [[overnachten:la-chipote]]
 
+Aan de voet van de Luberon, bij Robion, ligt [Domaine des Peyre](/locations/domaine-des-peyre), met een middeleeuwse kapel tussen de wijnstokken. Overnachten kan in de gîtes op het landgoed.
+
+[[overnachten:domaine-des-peyre]]
+
+## Languedoc
+
+[Château L'Hospitalet](/locations/chateau-lhospitalet) bij Narbonne is het vlaggenschip van wijnmaker Gérard Bertrand, midden in het beschermde massief van La Clape. Overnachten kan in het vijfsterrenhotel met spa en een eigen strandclub in de zomer.
+
+[[overnachten:chateau-lhospitalet]]
+
 ## Bordeaux
 
-In Bordeaux kun je overnachten bij Château Haut-Bailly, Château Sénéjac, Château Lafaurie-Peyraguey, Château Troplong Mondot en Château Soutard. Meer over deze vijf in [Overnachten op een château in Bordeaux](/artikelen/overnachten-bordeaux). Aan de kust, bij de Dune du Pilat, is [Le Skiff Club](/locations/le-skiff-club) het restaurant van Hôtel Ha(a)ïtza.
+In Bordeaux kun je overnachten bij Château Haut-Bailly, Château Bouscaut, Château Sénéjac, Château Dauzac, Château Loudenne, Château Lafaurie-Peyraguey, Château Troplong Mondot, Château Soutard en Château Prieuré Marquet. Meer over deze negen in [Overnachten op een château in Bordeaux](/artikelen/overnachten-bordeaux). Aan de kust, bij de Dune du Pilat, is [Le Skiff Club](/locations/le-skiff-club) het restaurant van Hôtel Ha(a)ïtza.
 
 [[overnachten:le-skiff-club]]
+
+Bij Saint-Émilion verhuurt wijnbouwfamilie Mouty drie vakantiehuizen midden in de wijngaarden, samen goed voor dertig personen. Meer bij [Vignobles Mouty](/locations/vignobles-mouty).
+
+[[overnachten:vignobles-mouty]]
 
 ## Dordogne en Lot
 

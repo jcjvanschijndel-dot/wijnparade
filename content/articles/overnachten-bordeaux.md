@@ -1,20 +1,24 @@
 ---
-title: "Overnachten op een château in Bordeaux: 5 adressen"
-description: "Slapen op een château in Pessac-Léognan, de Médoc, Sauternes of Saint-Émilion: vijf wijnhuizen in Bordeaux waar je ook kunt overnachten."
+title: "Overnachten op een château in Bordeaux: 9 adressen"
+description: "Slapen op een château in Pessac-Léognan, de Médoc, Sauternes of Saint-Émilion: negen wijnhuizen in Bordeaux waar je ook kunt overnachten."
 date: 2026-11-09
 image: /uploads/troplong-mondot.webp
 region: bordeaux
 locations:
   - chateau-haut-bailly
+  - chateau-bouscaut
   - chateau-senejac
+  - chateau-dauzac
+  - chateau-loudenne
   - chateau-lafaurie-peyraguey
   - chateau-troplong-mondot
   - chateau-soutard
-title_en: "Stay at a château in Bordeaux: 5 wineries"
+  - chateau-prieure-marquet
+title_en: "Stay at a château in Bordeaux: 9 wineries"
 slug_en: wine-stays-bordeaux
-description_en: "Sleep at a château in Pessac-Léognan, the Médoc, Sauternes or Saint-Émilion: five Bordeaux wineries where you can also stay the night."
+description_en: "Sleep at a château in Pessac-Léognan, the Médoc, Sauternes or Saint-Émilion: nine Bordeaux wineries where you can also stay the night."
 body_en: |-
-  In Bordeaux most châteaux receive visitors by appointment only, and many close their doors in the evening. A few have guest rooms, so you can walk through the vineyards when the visitors have gone. Below are five, from the left bank of the Garonne to Saint-Émilion.
+  In Bordeaux most châteaux receive visitors by appointment only, and many close their doors in the evening. A few have guest rooms, so you can walk through the vineyards when the visitors have gone. Below are nine, from the left bank of the Garonne to Saint-Émilion.
 
   ## Pessac-Léognan
 
@@ -22,11 +26,23 @@ body_en: |-
 
   [[overnachten:chateau-haut-bailly]]
 
+  [Château Bouscaut](/en/locations/chateau-bouscaut) in Cadaujac was awarded cru classé de Graves status for both red and white in 1959. You can stay at Château Valoux, the estate's holiday home overlooking the vineyards.
+
+  [[overnachten:chateau-bouscaut]]
+
   ## Médoc
 
   [Château Sénéjac](/en/locations/chateau-senejac) is a sixteenth-century château between Margaux and Bordeaux, half an hour from the city. The owners renovated three rooms and two suites themselves. During the extended tour you taste wines from the Haut-Médoc, Saint-Julien and Provence side by side.
 
   [[overnachten:chateau-senejac]]
+
+  [Château Dauzac](/en/locations/chateau-dauzac) in Labarde is a Fifth Growth of Margaux. You can stay at La Chartreuse de Dauzac, four luxury rooms on the estate overlooking the park or the lake.
+
+  [[overnachten:chateau-dauzac]]
+
+  [Château Loudenne](/en/locations/chateau-loudenne) is the famous pink château of the Médoc, high above the Gironde near Saint-Yzans-de-Médoc, with a Victorian wine cellar. There are holiday cottages in the park.
+
+  [[overnachten:chateau-loudenne]]
 
   ## Sauternes
 
@@ -44,12 +60,16 @@ body_en: |-
 
   [[overnachten:chateau-soutard]]
 
+  North of Bordeaux, not far from Libourne, lies [Château Prieuré Marquet](/en/locations/chateau-prieure-marquet), a fully renovated chartreuse with a modern winery. The château is also a luxury guest house.
+
+  [[overnachten:chateau-prieure-marquet]]
+
   ## Tip
 
   Saint-Émilion is easy to explore on foot or by bike from these addresses. For the left bank you need a car. Avoid the week of the en primeur tastings in spring, when many châteaux are closed to the public. More addresses are in our [Bordeaux guide](/en/wine-travel/bordeaux).
 draft: false
 ---
-In Bordeaux ontvangen de meeste châteaux alleen op afspraak, en 's avonds gaan veel deuren dicht. Een paar hebben gastenkamers, zodat je door de wijngaarden kunt lopen als de bezoekers weg zijn. Hieronder vijf, van de linkeroever van de Garonne tot Saint-Émilion.
+In Bordeaux ontvangen de meeste châteaux alleen op afspraak, en 's avonds gaan veel deuren dicht. Een paar hebben gastenkamers, zodat je door de wijngaarden kunt lopen als de bezoekers weg zijn. Hieronder negen, van de linkeroever van de Garonne tot Saint-Émilion.
 
 ## Pessac-Léognan
 
@@ -57,11 +77,23 @@ Bij [Château Haut-Bailly](/locations/chateau-haut-bailly) komen wijn, eten en s
 
 [[overnachten:chateau-haut-bailly]]
 
+[Château Bouscaut](/locations/chateau-bouscaut) in Cadaujac kreeg in 1959 cru classé de Graves voor zowel rood als wit. Overnachten kan in Château Valoux, het vakantiehuis van het domein met uitzicht over de wijngaarden.
+
+[[overnachten:chateau-bouscaut]]
+
 ## Médoc
 
 [Château Sénéjac](/locations/chateau-senejac) is een château uit de zestiende eeuw tussen Margaux en Bordeaux, een half uur van de stad. De eigenaren richtten zelf drie kamers en twee suites in. Bij de uitgebreide rondleiding proef je wijnen uit de Haut-Médoc, Saint-Julien en de Provence naast elkaar.
 
 [[overnachten:chateau-senejac]]
+
+[Château Dauzac](/locations/chateau-dauzac) in Labarde is vijfde Grand Cru Classé van Margaux. Overnachten kan in La Chartreuse de Dauzac, vier luxe kamers op het landgoed met uitzicht over het park of de vijver.
+
+[[overnachten:chateau-dauzac]]
+
+[Château Loudenne](/locations/chateau-loudenne) is het beroemde roze kasteel van de Médoc, hoog boven de Gironde bij Saint-Yzans-de-Médoc, met een victoriaanse wijnkelder. In het park staan vakantiehuisjes.
+
+[[overnachten:chateau-loudenne]]
 
 ## Sauternes
 
@@ -78,6 +110,10 @@ Bij [Château Haut-Bailly](/locations/chateau-haut-bailly) komen wijn, eten en s
 [Château Soutard](/locations/chateau-soutard) is een van de oudste domeinen van de streek, op het plateau net boven het dorp. Het gastenverblijf in het beschermde château geeft je toegang tot het domein buiten de openingstijden: fietsen door de wijngaarden, picknicken of een verticale proeverij boeken.
 
 [[overnachten:chateau-soutard]]
+
+Ten noorden van Bordeaux, niet ver van Libourne, ligt [Château Prieuré Marquet](/locations/chateau-prieure-marquet), een volledig gerenoveerde chartreuse met moderne wijnkelder. Het château is ook een luxe gastenverblijf.
+
+[[overnachten:chateau-prieure-marquet]]
 
 ## Tip
 
