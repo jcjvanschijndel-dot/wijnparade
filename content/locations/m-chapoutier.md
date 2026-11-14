@@ -56,4 +56,9 @@ stay_note: "Gîte La Tour du Pavillon voor twee personen tussen de wijngaarden"
 stay_note_en: "Gîte La Tour du Pavillon for two people among the vines"
 taste_note: "Van een eenvoudige proeverij tot wijngaardwandelingen met een sommelier en e-bike-tochten"
 taste_note_en: "From a simple tasting to vineyard walks with a sommelier and e-bike tours"
+awards:
+  - name: "World's 50 Best"
+    detail: "42e plaats, World's Best Vineyards"
+    detail_en: "42nd place, World's Best Vineyards"
+    year: "2024"
 ---

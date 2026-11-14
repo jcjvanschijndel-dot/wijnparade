@@ -27,4 +27,9 @@ description_en: >-
   a glass and a light bite, without a tour.
 taste_note: "Rondleiding door het paleis en de 900 jaar oude kelders, met proeverij"
 taste_note_en: "Tour of the palace and the 900-year-old cellars, with a tasting"
+awards:
+  - name: "World's 50 Best"
+    detail: "2e plaats, World's Best Vineyards"
+    detail_en: "2nd place, World's Best Vineyards"
+    year: "2025"
 ---

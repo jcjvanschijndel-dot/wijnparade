@@ -32,4 +32,9 @@ description_en: >-
 image: /uploads/champagne-ruinart.webp
 website: https://www.ruinart.com/
 winalist_url: "https://www.winalist.com/hosts/110/champagne-ruinart"
+awards:
+  - name: "World's 50 Best"
+    detail: "8e plaats, World's Best Vineyards (als Maison Ruinart)"
+    detail_en: "8th place, World's Best Vineyards (as Maison Ruinart)"
+    year: "2025"
 ---

@@ -30,4 +30,9 @@ stay_note: "Hotel Marqués de Riscal in het gebouw van Frank Gehry"
 stay_note_en: "Hotel Marqués de Riscal in the Frank Gehry building"
 taste_note: "Rondleiding door de historische kelders en het gebouw van Frank Gehry"
 taste_note_en: "Tour of the historic cellars and the Frank Gehry building"
+awards:
+  - name: "World's 50 Best"
+    detail: "1e plaats, World's Best Vineyards"
+    detail_en: "1st place, World's Best Vineyards"
+    year: "2024"
 ---

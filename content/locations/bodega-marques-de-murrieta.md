@@ -36,4 +36,9 @@ description_en: >-
   Visitors walk through the vineyard, Castillo Ygay and the museum, finishing with a tasting; book ahead.
 taste_note: "Rondleiding door wijngaard, Castillo Ygay en museum, met proeverij; reserveren vooraf"
 taste_note_en: "Tour of the vineyard, Castillo Ygay and the museum, with a tasting; book ahead"
+awards:
+  - name: "World's 50 Best"
+    detail: "30e plaats, World's Best Vineyards"
+    detail_en: "30th place, World's Best Vineyards"
+    year: "2024"
 ---

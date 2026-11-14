@@ -26,4 +26,9 @@ description_en: >-
 taste_note: "Kelderbezoek en proeverij, te combineren met een boottocht over de Douro"
 taste_note_en: "Cellar visit and tasting, which can be combined with a boat trip on the Douro"
 winalist_url: "https://www.winalist.com/hosts/3122/quinta-do-crasto"
+awards:
+  - name: "World's 50 Best"
+    detail: "15e plaats, World's Best Vineyards"
+    detail_en: "15th place, World's Best Vineyards"
+    year: "2024"
 ---

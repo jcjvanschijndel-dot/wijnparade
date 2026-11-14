@@ -35,4 +35,9 @@ description_en: >-
 taste_note: "Rondleidingen met proeverij, van een kennismaking tot een verticale proeverij"
 taste_note_en: "Tours with tastings, from an introduction to a vertical tasting"
 winalist_url: "https://www.winalist.com/hosts/87/chateau-pape-clement"
+awards:
+  - name: "World's 50 Best"
+    detail: "27e plaats, World's Best Vineyards"
+    detail_en: "27th place, World's Best Vineyards"
+    year: "2025"
 ---
