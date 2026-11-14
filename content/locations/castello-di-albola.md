@@ -28,6 +28,7 @@ description_en: >-
   Chianti Classico, riserva and Gran Selezione. You can also stay on the estate.
   One of the most beautiful places for a wine tasting in Chianti, with views
   over the hills between Radda and Panzano.
+image: /uploads/castello-di-albola.webp
 website: https://albola.it/
 stay_type: agriturismo
 stay_note: "Kamers op het landgoed, met restaurant"
