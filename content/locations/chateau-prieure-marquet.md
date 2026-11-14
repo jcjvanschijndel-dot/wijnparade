@@ -30,6 +30,7 @@ description_en: >-
   ride across the estate. The château is also a luxury guest house, with views
   over vineyards and woodland from the terrace. A lovely address for anyone who
   wants to combine a wine trip through Bordeaux with a night at a wine château.
+image: /uploads/chateau-prieure-marquet.webp
 website: https://www.prieure-marquet.com/
 stay_type: gastenkamers
 stay_note: "Luxe gastenkamers in het château"
