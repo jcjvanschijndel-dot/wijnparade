@@ -28,6 +28,7 @@ description_en: >-
   has been modernised, followed by a tasting; there is also a version with a
   light lunch. A lovely stop on a wine route through Chianti, between Greve and
   Panzano.
+image: /uploads/tenuta-casenuove.webp
 website: https://www.tenuta-casenuove.com/
 winalist_url: "https://www.winalist.com/hosts/1313/tenuta-casenuove"
 ---
