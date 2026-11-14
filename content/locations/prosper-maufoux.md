@@ -31,6 +31,7 @@ description_en: >-
   cellars or explore the surrounding terroirs by bike. You can stay in the
   château's guest rooms. Recommended for a wine tasting in the Côte de Beaune,
   not far from Meursault and Beaune.
+image: /uploads/prosper-maufoux.webp
 website: https://chateau-st-aubin.com/
 stay_type: gastenkamers
 stay_note: "Gastenkamers in het Château de Saint-Aubin"
