@@ -26,6 +26,7 @@ description_en: >-
   oenologist show you round the vineyard, winery and gardens, after which you
   taste the red wines and three olive oils. A quiet, personal wine tasting in
   the Algarve hinterland, a forty-five-minute drive from Faro.
+image: /uploads/quinta-dos-sentidos.webp
 website: https://www.qds.pt/
 winalist_url: "https://www.winalist.com/hosts/1933/quinta-dos-sentidos"
 ---
