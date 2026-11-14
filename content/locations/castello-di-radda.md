@@ -28,6 +28,7 @@ description_en: >-
   tasting, or an extended tasting with a series of riservas and the Vigna il
   Corno. A good address for a wine tasting in Chianti, easy to combine with a
   walk through medieval Radda.
+image: /uploads/castello-di-radda.webp
 website: https://www.castellodiradda.com/
 winalist_url: "https://www.winalist.com/hosts/1297/castello-di-radda"
 ---
