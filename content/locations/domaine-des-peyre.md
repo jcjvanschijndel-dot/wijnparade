@@ -29,6 +29,7 @@ description_en: >-
   guided tour and walk the art trail across the estate. You can stay in the
   gîtes on the property. A nice address for a wine tasting in Provence, close to
   Cavaillon, L'Isle-sur-la-Sorgue and the villages of the Luberon.
+image: /uploads/domaine-des-peyre.webp
 website: https://www.domainedespeyre.com/
 stay_type: vakantiewoning
 stay_note: "Gîtes op het wijndomein"
