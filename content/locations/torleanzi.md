@@ -30,6 +30,7 @@ description_en: >-
   Primitivo di Manduria, among others. The masseria is also a wine relais: you
   stay among the vineyards, with a swimming pool. Recommended for a wine tasting
   in Puglia, a short distance from Brindisi airport.
+image: /uploads/torleanzi.webp
 website: https://www.torleanzi.it/
 stay_type: hotel
 stay_note: "Masseria Torleanzi Wine Relais, met zwembad tussen de wijngaarden"
