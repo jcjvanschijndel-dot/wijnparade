@@ -51,5 +51,5 @@ Statische site over wijnadressen in Europa, met Netlify en Decap CMS. Communicee
 
 - Booking-affiliatelink (via CJ) instellen in `affiliate.json` zodra de eigenaar is goedgekeurd. winehotspotter.com moet daar ook als site worden aangemeld.
 - Winalist: krijgt winehotspotter.com een eigen code, dan per site aparte UTM-parameters gebruiken (nu `dewijnparade` voor beide).
-- Winalist-locaties toevoegen: selectie van 156 wijnhuizen (minstens 50 reviews, 4,6 of hoger), in groepen per streek, elk met eigen akkoordronde en PR. Groep 1 (9 locaties met overnachting) en groep 2 (23 in Italië, Portugal en Spanje) zijn gedaan; daarna nog Frankrijk (ca. 123). Foto's stuurt de eigenaar los in de chat (zie Werkwijze).
+- Winalist-locaties toevoegen: selectie van 156 wijnhuizen (minstens 50 reviews, 4,6 of hoger), in groepen per streek, elk met eigen akkoordronde en PR. Groep 1 (9 locaties met overnachting) , groep 2 (23 in Italië, Portugal en Spanje) en groep 3 (33 in Champagne) zijn gedaan; daarna nog de rest van Frankrijk (90, te beginnen met Bordeaux). Foto's: de hoofdfoto van de Winalist-pagina (og:image, via media.winalist.com); de eigenaar heeft daar toestemming voor van Winalist.
 - Onderscheidingen van de nieuwe Winalist-locaties: later in één keer opzoeken (skill `onderscheidingen`), niet per groep.
