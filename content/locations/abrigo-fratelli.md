@@ -28,6 +28,7 @@ description_en: >-
   tasting of five wines, or a vertical tasting of Barolo Ravera with cured
   meats, cheese and hazelnuts from the estate. A welcoming address for a wine
   tasting in the Langhe.
+image: /uploads/abrigo-fratelli.webp
 website: https://www.abrigofratelli.it/
 winalist_url: "https://www.winalist.com/hosts/1976/abrigo-fratelli"
 ---
