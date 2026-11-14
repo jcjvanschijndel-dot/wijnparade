@@ -27,6 +27,7 @@ description_en: >-
   A visit starts with a walk through the vineyard and ends with a tasting of
   wine and cava, with local produce. There is also a wine bar in the winery
   garden. A good address for a cava tasting an hour from Barcelona.
+image: /uploads/celler-eudald-massana.webp
 website: https://www.massananoya.com/
 winalist_url: "https://www.winalist.com/hosts/581/celler-eudald-massana"
 ---
