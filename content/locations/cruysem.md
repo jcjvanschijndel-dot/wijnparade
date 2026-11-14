@@ -29,4 +29,9 @@ description_en: >-
 image: /uploads/cruysem.webp
 website: https://www.cruysem.be
 winalist_url: "https://www.winalist.com/hosts/3079/cruysem"
+awards:
+  - name: "Gault&Millau"
+    detail: "Belgian Wine Award, Blanc de Blancs Brut 2021"
+    detail_en: "Belgian Wine Award, Blanc de Blancs Brut 2021"
+    year: "2025"
 ---

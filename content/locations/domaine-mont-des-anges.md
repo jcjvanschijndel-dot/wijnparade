@@ -27,4 +27,9 @@ description_en: >-
 image: /uploads/domaine-mont-des-anges.webp
 website: https://www.montdesanges.be
 winalist_url: "https://www.winalist.com/hosts/3423/domaine-mont-des-anges"
+awards:
+  - name: "Gault&Millau"
+    detail: "Belgian Wine Award, Cuvée Rosé 2022"
+    detail_en: "Belgian Wine Award, Cuvée Rosé 2022"
+    year: "2025"
 ---
