@@ -27,6 +27,7 @@ description_en: >-
   Langhe, with each wine paired with a traditional dish. You can also have lunch
   or take a cooking class with mother Giovanna and chef Paolo Garabello. A
   welcoming address for a wine tasting with food in the Barolo region.
+image: /uploads/agricola-marrone.webp
 website: https://www.agricolamarrone.com/
 winalist_url: "https://www.winalist.com/hosts/302/agricola-gian-piero-marrone"
 ---
