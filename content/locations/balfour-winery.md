@@ -27,4 +27,9 @@ description_en: >-
 image: /uploads/balfour-winery.webp
 website: https://www.balfourwinery.com
 winalist_url: "https://www.winalist.com/hosts/3356/balfour-winery"
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Blanc de Blancs Kent 2018 (magnum), 97 punten"
+    detail_en: "Best in Show, Blanc de Blancs Kent 2018 (magnum), 97 points"
+    year: "2026"
 ---
