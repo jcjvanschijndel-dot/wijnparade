@@ -28,6 +28,7 @@ description_en: >-
   tastings of three to five wines, a blind tasting and even a truffle hunt. A
   nice address for a wine tasting near San Gimignano, easy to combine with a
   visit to the medieval town.
+image: /uploads/pietraserena.webp
 website: https://www.arrigoni1913.it/
 winalist_url: "https://www.winalist.com/hosts/334/arrigoni-1913"
 ---
