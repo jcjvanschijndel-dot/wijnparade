@@ -28,6 +28,7 @@ description_en: >-
   family makes jam from its own cherries, which you get at breakfast if you stay
   here: Le Bignele also has guest rooms. A pleasant base for a wine trip through
   Valpolicella, half an hour from Verona and Lake Garda.
+image: /uploads/le-bignele.webp
 website: https://www.lebignele.it/
 stay_type: gastenkamers
 stay_note: "Gastenkamers bij de wijnmakerij, met ontbijt"
