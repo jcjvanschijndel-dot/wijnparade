@@ -28,6 +28,7 @@ description_en: >-
   tasting of four wines or a light lunch with five wines. Groups are small, so
   book in good time. A lovely change from a beach holiday in Puglia, between
   Brindisi and Taranto.
+image: /uploads/masseria-altemura.webp
 website: https://www.masseriaaltemura.it/
 winalist_url: "https://www.winalist.com/hosts/1781/masseria-altemura"
 ---
