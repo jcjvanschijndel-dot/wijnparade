@@ -16,7 +16,7 @@ centerLat: 41.95
 centerLng: 3.0
 zoom: 10
 minLat: 41.7
-maxLat: 42.5
+maxLat: 42.46
 minLng: 2.6
 maxLng: 3.4
 name_en: Costa Brava & Empordà
