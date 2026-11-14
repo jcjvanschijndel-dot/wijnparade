@@ -31,4 +31,9 @@ description_en: >-
 image: /uploads/champagne-veuve-clicquot.webp
 website: https://www.veuveclicquot.com/
 winalist_url: "https://www.winalist.com/hosts/101/champagne-veuve-clicquot"
+awards:
+  - name: "World's 50 Best"
+    detail: "62e plaats, World's Best Vineyards"
+    detail_en: "62nd place, World's Best Vineyards"
+    year: "2026"
 ---

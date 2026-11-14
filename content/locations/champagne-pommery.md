@@ -32,4 +32,9 @@ description_en: >-
 image: /uploads/champagne-pommery.webp
 website: https://www.maisonpommery.com/
 winalist_url: "https://www.winalist.com/hosts/30/champagne-pommery"
+awards:
+  - name: "World's 50 Best"
+    detail: "61e plaats, World's Best Vineyards (als Maison Pommery Champagne)"
+    detail_en: "61st place, World's Best Vineyards (as Maison Pommery Champagne)"
+    year: "2026"
 ---

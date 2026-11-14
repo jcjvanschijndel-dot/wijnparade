@@ -30,4 +30,9 @@ description_en: >-
 image: /uploads/champagne-moet-chandon.webp
 website: https://www.moet.com/
 winalist_url: "https://www.winalist.com/hosts/62/champagne-moet-chandon"
+awards:
+  - name: "World's 50 Best"
+    detail: "52e plaats, World's Best Vineyards"
+    detail_en: "52nd place, World's Best Vineyards"
+    year: "2026"
 ---

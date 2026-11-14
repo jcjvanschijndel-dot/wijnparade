@@ -24,4 +24,9 @@ description_en: >-
   Restaurant Seixo is at Quinta do Seixo in the Douro Valley in Portugal, high
   above the river. Recommended during a wine trip through the Douro: lunch
   overlooking the terraced vineyards, then a port tasting at the quinta.
+awards:
+  - name: "World's 50 Best"
+    detail: "93e plaats, World's Best Vineyards (Quinta do Seixo, Sandeman)"
+    detail_en: "93rd place, World's Best Vineyards (Quinta do Seixo, Sandeman)"
+    year: "2026"
 ---
