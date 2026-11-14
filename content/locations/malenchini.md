@@ -28,6 +28,7 @@ description_en: >-
   There are also longer versions with lunch, and a tasting of the estate's olive
   oil. Ideal for anyone visiting Florence who wants to see a Chianti winery
   without a long drive.
+image: /uploads/malenchini.webp
 website: https://medicivilla.com/
 winalist_url: "https://www.winalist.com/hosts/2013/malenchini-wine-estate"
 ---
