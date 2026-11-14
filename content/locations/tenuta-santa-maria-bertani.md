@@ -28,6 +28,7 @@ description_en: >-
   distillery and the monumental cellar. You then taste Soave, Valpolicella
   Ripasso and Amarone, among others. A special address for a wine tasting in
   Valpolicella, twenty minutes from the centre of Verona.
+image: /uploads/tenuta-santa-maria-bertani.webp
 website: https://www.tenutasantamaria.wine/
 winalist_url: "https://www.winalist.com/hosts/421/tenuta-santa-maria-di-gaetano-bertani"
 ---
