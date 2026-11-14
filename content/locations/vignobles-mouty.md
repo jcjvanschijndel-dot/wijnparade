@@ -32,6 +32,7 @@ description_en: >-
   homes in the middle of the vineyards, which together sleep thirty. An
   approachable address for a wine tasting near Saint-Émilion, with a family of
   winegrowers.
+image: /uploads/vignobles-mouty.webp
 website: https://www.vignobles-mouty.com/
 stay_type: vakantiewoning
 stay_note: "Drie vakantiehuizen midden in de wijngaarden, samen voor dertig personen"
