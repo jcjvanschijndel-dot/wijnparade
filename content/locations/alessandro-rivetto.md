@@ -28,6 +28,7 @@ description_en: >-
   tasting of three wines, a tasting of Barolo and Barbaresco crus and a vertical
   tasting of Barolo. Booking is required. Recommended on a wine trip through the
   Barolo region.
+image: /uploads/alessandro-rivetto.webp
 website: https://www.alessandrorivetto.it/
 winalist_url: "https://www.winalist.com/hosts/339/alessandro-rivetto"
 ---
