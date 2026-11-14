@@ -31,4 +31,9 @@ description_en: >-
 image: /uploads/champagne-taittinger.webp
 website: https://www.taittinger.com/
 winalist_url: "https://www.winalist.com/hosts/31/champagne-taittinger"
+awards:
+  - name: "World's 50 Best"
+    detail: "50e plaats, World's Best Vineyards"
+    detail_en: "50th place, World's Best Vineyards"
+    year: "2025"
 ---

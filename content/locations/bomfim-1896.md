@@ -26,4 +26,9 @@ description_en: >-
   Bomfim 1896 is at Quinta do Bomfim in Pinhão, the heart of the Douro Valley.
   Recommended during a wine trip through the Douro, and easy to combine with a
   port tasting at the quinta.
+awards:
+  - name: "World's 50 Best"
+    detail: "28e plaats, World's Best Vineyards (Quinta do Bomfim)"
+    detail_en: "28th place, World's Best Vineyards (Quinta do Bomfim)"
+    year: "2024"
 ---

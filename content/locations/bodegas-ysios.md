@@ -28,4 +28,9 @@ description_en: >-
   itself recalls stacked wooden wine barrels. Tours with tasting by reservation.
 taste_note: "Rondleidingen met proeverij, op reservering"
 taste_note_en: "Tours with tastings, by reservation"
+awards:
+  - name: "World's 50 Best"
+    detail: "3e plaats, World's Best Vineyards"
+    detail_en: "3rd place, World's Best Vineyards"
+    year: "2025"
 ---

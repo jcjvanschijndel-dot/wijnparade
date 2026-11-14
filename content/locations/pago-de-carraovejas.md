@@ -29,4 +29,9 @@ description_en: >-
 taste_note: "Verschillende rondleidingen met proeverij, van woensdag tot zondag"
 taste_note_en: "Several tours with tastings, Wednesday to Sunday"
 winalist_url: "https://www.winalist.com/hosts/2945/pago-de-carraovejas"
+awards:
+  - name: "World's 50 Best"
+    detail: "18e plaats, World's Best Vineyards"
+    detail_en: "18th place, World's Best Vineyards"
+    year: "2025"
 ---
