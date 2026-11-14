@@ -26,6 +26,7 @@ description_en: >-
   On a tour of the vineyard and the cellar you taste the Barolos from Monforte,
   among other wines, with a board of cured meats and cheese. A personal address
   for a Barolo tasting in the Langhe, between Monforte d'Alba and Barolo.
+image: /uploads/cascina-sot.webp
 website: https://www.cascinasot.com/
 winalist_url: "https://www.winalist.com/hosts/1755/cascina-sot"
 ---
