@@ -27,6 +27,7 @@ description_en: >-
   tour you see the frescoed rooms and the historic cellars and taste five wines,
   from Chianti to Vin Santo. You can also stay here, as an agriturismo. An
   atmospheric address for a wine tasting in Tuscany, between Florence and Siena.
+image: /uploads/castello-di-oliveto.webp
 website: https://www.castellooliveto.it/
 stay_type: agriturismo
 stay_note: "Agriturismo in en rond het kasteel"
