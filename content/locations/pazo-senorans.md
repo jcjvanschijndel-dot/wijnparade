@@ -24,4 +24,9 @@ description_en: >-
   Albariño). Contact the winery by email for group visits.
 taste_note: "Rondleiding langs het landgoed en de wijnmakerij, met proeverij; maandag tot vrijdag op afspraak"
 taste_note_en: "Tour of the estate and winery, with a tasting; Monday to Friday by appointment"
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Selección de Añada Albariño 2015 (97 punten)"
+    detail_en: "Best in Show, Selección de Añada Albariño 2015 (97 points)"
+    year: "2026"
 ---
