@@ -25,4 +25,5 @@ description_en: >-
   vineyards of Kvareli. A distinctive address in Kakheti for anyone who
   loves underground wine cellars.
 website: https://winery-khareba.com
+image: /uploads/khareba-winery.webp
 ---

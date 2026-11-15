@@ -30,6 +30,7 @@ description_en: >-
   tour of the park and the vineyards. Recommended for anyone wanting to
   discover Georgian winemaking in Kartli, an hour's drive from Tbilisi.
 website: https://chateaumukhrani.com
+image: /uploads/chateau-mukhrani.webp
 awards:
   - name: "World's 50 Best"
     detail: "55e plaats, World's Best Vineyards"

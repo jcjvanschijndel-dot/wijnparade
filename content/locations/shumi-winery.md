@@ -26,6 +26,7 @@ description_en: >-
   The museum is open daily. A good address for getting to know the
   history of Georgian winemaking, ten minutes from Telavi.
 website: https://shumi.ge
+image: /uploads/shumi-winery.webp
 awards:
   - name: "World's 50 Best"
     detail: "70e plaats, World's Best Vineyards (nieuwe binnenkomer)"
