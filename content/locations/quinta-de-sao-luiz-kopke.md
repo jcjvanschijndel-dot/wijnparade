@@ -27,4 +27,9 @@ description_en: >-
 image: /uploads/quinta-de-sao-luiz-kopke.webp
 website: https://kopke1638.com/pt/saoluiz/
 winalist_url: "https://www.winalist.com/hosts/737/quinta-de-sao-luiz-kopke"
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Kopke Colheita Port 1957 (97 punten)"
+    detail_en: "Best in Show, Kopke Colheita Port 1957 (97 points)"
+    year: "2026"
 ---

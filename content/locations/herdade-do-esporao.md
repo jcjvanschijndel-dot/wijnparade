@@ -26,4 +26,9 @@ description_en: >-
 image: /uploads/herdade-do-esporao.webp
 website: https://esporao.com/
 winalist_url: "https://www.winalist.com/hosts/3147/herdade-do-esporao"
+awards:
+  - name: "World's 50 Best"
+    detail: "72e plaats, World's Best Vineyards"
+    detail_en: "72nd place, World's Best Vineyards"
+    year: "2026"
 ---
