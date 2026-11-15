@@ -25,4 +25,5 @@ description_en: >-
   A visit includes tasting five of the estate's wines. Recommended for
   anyone wanting to get to know the qvevri tradition of Kakheti.
 website: https://twinswinehouse.com
+image: /uploads/twins-wine-cellar.webp
 ---

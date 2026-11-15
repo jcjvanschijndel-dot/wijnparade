@@ -25,4 +25,5 @@ description_en: >-
   An approachable address for getting to know Georgian wine without
   committing to a whole bottle straight away.
 website: https://8000vintages.ge
+image: /uploads/8000-vintages.webp
 ---
