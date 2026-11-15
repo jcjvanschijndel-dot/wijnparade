@@ -26,4 +26,9 @@ description_en: >-
   Jerez.
 image: /uploads/bodegas-tradicion.webp
 website: https://www.bodegastradicion.com/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, VORS 30 Years Amontillado NV (98 punten)"
+    detail_en: "Best in Show, VORS 30 Years Amontillado NV (98 points)"
+    year: "2026"
 ---

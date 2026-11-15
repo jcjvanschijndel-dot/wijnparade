@@ -26,4 +26,9 @@ description_en: >-
   Italy's sparkling wine alongside Champagne.
 image: /uploads/freccianera.webp
 website: https://www.berlucchi.com/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Freccianera Satèn Brut 2022 (97 punten)"
+    detail_en: "Best in Show, Freccianera Satèn Brut 2022 (97 points)"
+    year: "2026"
 ---

@@ -27,4 +27,9 @@ description_en: >-
   top-quality Grüner Veltliner from the Kamptal.
 image: /uploads/birgit-eichinger.webp
 website: https://www.weingut-eichinger.at/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Ried Lamm 1ÖTW Grüner Veltliner 2024 (97 punten)"
+    detail_en: "Best in Show, Ried Lamm 1ÖTW Grüner Veltliner 2024 (97 points)"
+    year: "2026"
 ---

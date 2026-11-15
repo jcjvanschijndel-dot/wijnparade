@@ -29,4 +29,9 @@ description_en: >-
 image: /uploads/icario.webp
 website: https://www.icariowine.com/
 stay_type: hotel
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Vino Nobile di Montepulciano 2021"
+    detail_en: "Best in Show, Vino Nobile di Montepulciano 2021"
+    year: "2026"
 ---

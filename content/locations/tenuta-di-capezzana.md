@@ -27,4 +27,9 @@ description_en: >-
   wanting to discover Carmignano, one of Tuscany's smaller wine regions.
 image: /uploads/tenuta-di-capezzana.webp
 website: https://www.capezzana.it/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Trefiano Carmignano Rosso Riserva 2021 (97 punten)"
+    detail_en: "Best in Show, Trefiano Carmignano Rosso Riserva 2021 (97 points)"
+    year: "2026"
 ---

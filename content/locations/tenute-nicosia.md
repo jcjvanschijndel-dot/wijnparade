@@ -26,4 +26,9 @@ description_en: >-
   Sicilian wine from two very different regions in one visit.
 image: /uploads/tenute-nicosia.webp
 website: https://www.vininicosia.it/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Hýbla Biologico Cerasuolo di Vittoria 2023"
+    detail_en: "Best in Show, Hýbla Biologico Cerasuolo di Vittoria 2023"
+    year: "2026"
 ---

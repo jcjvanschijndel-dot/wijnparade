@@ -26,4 +26,9 @@ description_en: >-
   discover Ribera del Duero alongside the better-known Pesquera wines.
 image: /uploads/condado-de-haza.webp
 website: https://condadodehaza.com/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Reserva 2021 (97 punten)"
+    detail_en: "Best in Show, Reserva 2021 (97 points)"
+    year: "2026"
 ---

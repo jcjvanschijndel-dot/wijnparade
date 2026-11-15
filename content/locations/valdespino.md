@@ -26,4 +26,9 @@ description_en: >-
   wanting to visit one of Jerez's oldest sherry houses.
 image: /uploads/valdespino.webp
 website: https://www.grupoestevez.es/valdespino/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Inocente Fino NV (97 punten)"
+    detail_en: "Best in Show, Inocente Fino NV (97 points)"
+    year: "2026"
 ---
