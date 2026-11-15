@@ -24,4 +24,8 @@ description_en: >-
   The kitchen sends out small, careful dishes, such as oxtail rice or a toastie with fig and onion jam. There is also a small garden. Book well ahead, as tables go quickly. Recommended for an evening of natural wine and good music on a city break in London.
 image: /uploads/goodbye-horses.webp
 website: https://www.goodbyehorses.london/
+awards:
+  - name: "Star Wine List"
+    detail: "White Star"
+    detail_en: "White Star"
 ---
