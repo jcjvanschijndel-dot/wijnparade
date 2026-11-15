@@ -26,6 +26,7 @@ description_en: >-
   takes about two hours, with a tasting of more than ten wines. A good
   address for tasting European and Georgian winemaking side by side.
 website: https://schuchmann-wines.com
+image: /uploads/schuchmann-wines.webp
 stay_type: hotel
 stay_note: "Hotel op het domein, twintig kamers"
 stay_note_en: "Estate hotel, twenty rooms"

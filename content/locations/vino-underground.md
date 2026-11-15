@@ -23,4 +23,5 @@ description_en: >-
 
   An approachable address for getting to know Georgian qvevri wine, in
   the heart of Tbilisi's old town.
+image: /uploads/vino-underground.webp
 ---
