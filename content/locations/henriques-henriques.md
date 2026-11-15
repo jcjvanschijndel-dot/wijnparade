@@ -27,4 +27,9 @@ description_en: >-
 image: /uploads/henriques-henriques.webp
 website: https://www.henriquesehenriques.pt
 winalist_url: "https://www.winalist.com/hosts/1868/henriques-henriques-vinhos-s-a"
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Boal 30 Year Old Madeira (97 punten)"
+    detail_en: "Best in Show, Boal 30 Year Old Madeira (97 points)"
+    year: "2026"
 ---
