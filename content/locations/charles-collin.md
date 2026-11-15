@@ -24,4 +24,9 @@ description_en: >-
   Aube's Champagne region, beyond the better-known Marne.
 image: /uploads/charles-collin.webp
 website: https://www.champagne-charles-collin.com/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Cuvée Charles Blanc de Blancs Brut 2012 (97 punten)"
+    detail_en: "Best in Show, Cuvée Charles Blanc de Blancs Brut 2012 (97 points)"
+    year: "2026"
 ---

@@ -26,4 +26,9 @@ description_en: >-
   Santorini winemaking in one place, with a spectacular view.
 image: /uploads/santo-wines.webp
 website: https://www.santowines.gr/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Kontarades Santorini 2024 (97 punten)"
+    detail_en: "Best in Show, Kontarades Santorini 2024 (97 points)"
+    year: "2026"
 ---

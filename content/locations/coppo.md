@@ -26,4 +26,9 @@ description_en: >-
   UNESCO cellars of Canelli with a Barbera tasting.
 image: /uploads/coppo.webp
 website: https://www.coppo.it/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Pomorosso Nizza 2022"
+    detail_en: "Best in Show, Pomorosso Nizza 2022"
+    year: "2026"
 ---

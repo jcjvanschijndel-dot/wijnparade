@@ -26,4 +26,9 @@ description_en: >-
   to taste Santorini's oldest winemaking tradition.
 image: /uploads/estate-argyros.webp
 website: https://estate-argyros.com/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Vinsanto Late Release 2005 (98 punten)"
+    detail_en: "Best in Show, Vinsanto Late Release 2005 (98 points)"
+    year: "2026"
 ---

@@ -25,4 +25,9 @@ description_en: >-
   Recommended for anyone wanting to discover a small-scale Croatian
   winery on Hvar.
 image: /uploads/marijan.webp
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Plaža Plavac 2021 (97 punten)"
+    detail_en: "Best in Show, Plaža Plavac 2021 (97 points)"
+    year: "2026"
 ---

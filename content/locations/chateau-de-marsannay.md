@@ -26,4 +26,9 @@ description_en: >-
   to combine Burgundy with a visit close to Dijon.
 image: /uploads/chateau-de-marsannay.webp
 website: https://www.chateau-marsannay.com/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, En Orveaux Vosne-Romanée 1er Cru 2023 (97 punten)"
+    detail_en: "Best in Show, En Orveaux Vosne-Romanée 1er Cru 2023 (97 points)"
+    year: "2026"
 ---

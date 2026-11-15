@@ -27,4 +27,9 @@ description_en: >-
   des Blancs, made by a group of grand cru winegrowers.
 image: /uploads/de-saint-gall.webp
 website: https://www.saintgall.com/
+awards:
+  - name: "Decanter"
+    detail: "Best in Show, Orpale Blanc de Blancs Brut Grand Cru 2012 (97 punten)"
+    detail_en: "Best in Show, Orpale Blanc de Blancs Brut Grand Cru 2012 (97 points)"
+    year: "2026"
 ---
