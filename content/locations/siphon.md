@@ -4,17 +4,29 @@ type: restaurant
 address: Damse Vaart-Oost 1, 8340 Damme, België
 lat: 51.2665413
 lng: 3.2980866
-description: "Familie restaurant met klassieke Belgische keuken. Specialiteit
-  hier is paling! En op de wijnkaart vind je ook allerlei klassiekers, met name
-  veel Bourgognes en Bordeaux. En opmerkelijk laag geprijsd. Eén van onze
-  favorieten en zeker een fietstocht of het omrijden waard! Let op: in het
-  weekend gesloten en reserveren is vaak nodig."
+description: >-
+  Siphon in Oostkerke bij Damme is een familierestaurant met een
+  klassieke Belgische keuken, vermeld in de Michelin-gids. Specialiteit
+  is paling, en op de wijnkaart staan opvallend betaalbaar geprijsde
+  klassiekers, met name uit de Bourgogne en de Bordeaux.
+
+
+  Een van onze favorieten en zeker een fietstocht of een omrijden
+  waard. Let op: in het weekend gesloten, en reserveren is vaak nodig.
 image: /uploads/siphon.webp
 website: siphon.be
 description_en: >-
-  A family restaurant with classic Belgian cooking. The speciality here is eel!
-  And on the wine list you'll find all kinds of classics, especially lots of
-  Burgundy and Bordeaux, at remarkably low prices. One of our favourites and
-  definitely worth a bike ride or a detour! Note: closed at weekends, and
-  booking is often necessary.
+  Siphon in Oostkerke near Damme is a family restaurant with classic
+  Belgian cooking, listed in the Michelin Guide. The speciality is eel,
+  and the wine list features remarkably affordable classics, especially
+  from Burgundy and Bordeaux.
+
+
+  One of our favourites and definitely worth a bike ride or a detour.
+  Note: closed at weekends, and booking is often necessary.
+awards:
+  - name: "Michelin"
+    detail: "vermeld in de gids"
+    detail_en: "listed in the guide"
+    year: "2026"
 ---

@@ -4,16 +4,24 @@ type: wijnwinkel
 address: Huizerweg 120, 1402 AJ Bussum
 lat: 52.2761134
 lng: 5.176969
-description: Al lang een begrip in Bussum, sinds een aantal jaar gevestigd aan
-  de Huizerweg. Het is een beetje een rommelige zaak, maar dat maakt het ook
-  weer leuk. Het basis assortiment is van Les Genereux (altijd goed), maar
-  daarnaast ook een mooi assortiment aan topwijnen. En altijd wat open om te
-  proeven!
+description: >-
+  Wijnhandel Eduard Mol aan de Huizerweg is al lang een begrip in Bussum.
+  Het basisassortiment komt van Les Généreux, aangevuld met een mooi
+  aanbod topwijnen — gepresenteerd in een ongedwongen, wat rommelige
+  sfeer die bij de zaak hoort.
+
+
+  Er staat altijd wel iets open om te proeven. Een aanrader voor wie in
+  Bussum op zoek is naar een laagdrempelige wijnhandel met karakter.
 image: /uploads/e-mol.webp
 website: https://www.eduardmol.nl/
 description_en: >-
-  A household name in Bussum for a long time, and for a few years now on the
-  Huizerweg. It's a bit of a jumble, but that's part of the charm. The core
-  range comes from Les Généreux (always good), and alongside it there's a fine
-  range of top wines. And there's always something open to taste!
+  Wijnhandel Eduard Mol on the Huizerweg has long been a household name
+  in Bussum. The core range comes from Les Généreux, complemented by a
+  fine range of top wines, presented in a relaxed, slightly cluttered
+  atmosphere that's part of its charm.
+
+
+  There's always something open to taste. Recommended for anyone in
+  Bussum looking for an easy-going wine shop with character.
 ---
