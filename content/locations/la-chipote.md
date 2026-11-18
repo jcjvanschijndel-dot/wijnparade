@@ -5,20 +5,26 @@ address: 12 Cor Bonaparte Plage Renecros, 83150 Bandol, Frankrijk
 lat: 43.1328419
 lng: 5.748825399999999
 description: >-
-  In de baai van Renécros, de rustigste hoek van Bandol, ligt La Chipote.
+  In de baai van Renécros, de rustigste hoek van Bandol, ligt La Chipote —
+  onderdeel van Hôtel Plein Large, maar volledig open voor iedereen die wil
+  ontbijten, brunchen, lunchen of dineren met uitzicht op de Middellandse
+  Zee.
 
 
-  Onderdeel van Hôtel Plein Large, maar volledig open voor iedereen die wil ontbijten, brunchen, lunchen of dineren met uitzicht op de Middellandse Zee.
-
-
-  De eigenaar serveert rosé, wit, rood en mousserende wijnen van het eigen familiebedrijf: Château Salettes Bandol.
+  De eigenaar serveert rosé, wit, rood en mousserende wijnen van het eigen
+  familiebedrijf, Château Salettes Bandol. Een aanrader voor wie
+  Bandol-wijn wil combineren met een maaltijd aan zee.
 image: /uploads/la-chipote.webp
 website: https://hotel-pleinlarge.com/fr/restaurant-vue-mer-bandol.html
 description_en: >-
-  In the bay of Renécros, the quietest corner of Bandol, lies La Chipote. Part
-  of Hôtel Plein Large, but fully open to anyone who wants breakfast, brunch,
-  lunch or dinner overlooking the Mediterranean. The owner serves rosé, white,
-  red and sparkling wines from the family business: Château Salettes Bandol.
+  In the bay of Renécros, the quietest corner of Bandol, lies La Chipote,
+  part of Hôtel Plein Large, but fully open to anyone who wants breakfast,
+  brunch, lunch or dinner overlooking the Mediterranean.
+
+
+  The owner serves rosé, white, red and sparkling wines from the family
+  business, Château Salettes Bandol. Recommended for anyone wanting to
+  combine Bandol wine with a meal by the sea.
 stay_type: hotel
 stay_note: "La Chipote hoort bij Hôtel Plein Large: acht kamers met zeezicht"
 stay_note_en: "La Chipote is part of Hôtel Plein Large: eight rooms with sea views"
