@@ -5,18 +5,30 @@ address: 7 Pl. Claude Rousseau, 46000 Cahors, Frankrijk
 lat: 44.4449317
 lng: 1.4434675
 description: >-
-  Een keuken die de seizoenen respecteert, smaakvol en gemaakt van verse en
-  lokale producten. Dagelijks 3 entrées, 3 plats en 3 desserts, plus een
-  lunchmenu. Een vegetarische entrée en een vegetarisch hoofdgerecht zijn
-  beschikbaar voor lunch en diner.
+  Tandem, aan het Place Claude Rousseau op de hoek met de rue Nationale in
+  het historische centrum van Cahors, wordt gerund door Tanguy in de
+  keuken en Lisa in de bediening — beiden opgeleid in Londen voordat ze
+  zich in deze hoek van de Lot vestigden. De keuken respecteert de
+  seizoenen en werkt met verse, lokale producten: dagelijks drie entrées,
+  drie plats en drie desserts, plus een lunchmenu, met telkens een
+  vegetarische optie.
 
 
-  Een mooie wijnkaart — met aandacht voor de lokale Cahors en de wijngaard.
+  Een mooie wijnkaart met aandacht voor de lokale Cahors-wijnen hoort
+  erbij. Een aanrader voor wie in Cahors op zoek is naar een eerlijke,
+  seizoensgebonden keuken met een goede wijnkeuze.
 image: /uploads/tandem.webp
 website: https://tandem-restaurant-cahors.fr/
 description_en: >-
-  Cooking that respects the seasons, tasty and made with fresh, local produce.
-  Every day there are 3 starters, 3 mains and 3 desserts, plus a lunch menu. A
-  vegetarian starter and a vegetarian main are available at lunch and dinner. A
-  nice wine list, with attention to local Cahors and the vineyard.
+  Tandem, on Place Claude Rousseau at the corner of rue Nationale in the
+  historic centre of Cahors, is run by Tanguy in the kitchen and Lisa in
+  the dining room — both trained in London before settling in this
+  corner of the Lot. The kitchen respects the seasons and works with
+  fresh, local produce: three starters, three mains and three desserts
+  daily, plus a lunch menu, each with a vegetarian option.
+
+
+  A nice wine list with attention to the local Cahors wines rounds it
+  off. Recommended for anyone in Cahors looking for honest, seasonal
+  cooking paired with a good wine selection.
 ---
