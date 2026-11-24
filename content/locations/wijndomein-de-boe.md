@@ -34,6 +34,7 @@ description_en: >-
   for groups of ten or more, by request. Recommended for anyone
   wanting to follow Zeeland winemaking at an early stage, on the
   Walcheren peninsula.
+image: /uploads/wijndomein-de-boe.webp
 website: https://www.wijndomeindeboe.nl/
 taste_note: "Rondleiding met wijnproeverij, elke zaterdagmiddag"
 taste_note_en: "Tour with wine tasting, every Saturday afternoon"
