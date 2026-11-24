@@ -96,6 +96,18 @@ console.log('✅ Content indexes generated!');
 
 const SITE_URL = 'https://wijn-parade.nl';
 
+// Schema.org-type per soort locatie (in plaats van algemeen LocalBusiness)
+const SCHEMA_TYPE = { restaurant: 'Restaurant', wijnbar: 'BarOrPub', wijnwinkel: 'LiquorStore', wijnhuis: 'Winery' };
+// Alt-tekst voor locatiefoto's: "Bar Bowie, restaurant in Den Haag"
+const ALT_TYPE = { nl: { wijnbar: 'wijnbar', wijnwinkel: 'wijnwinkel', wijnhuis: 'wijnhuis', restaurant: 'restaurant' },
+                   en: { wijnbar: 'wine bar', wijnwinkel: 'wine shop', wijnhuis: 'winery', restaurant: 'restaurant' } };
+function locAlt(l, lang = 'nl') {
+  const name = String(l.title || l.name || ''), type = (ALT_TYPE[lang] || ALT_TYPE.nl)[l.type] || '';
+  const city = cityFromAddress(l.address);
+  const inCity = city && !name.toLowerCase().includes(city.toLowerCase()) ? ` in ${city}` : '';
+  return (type ? `${name}, ${type}${inCity}` : name).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
 // Tekst voor Google (meta description) uit een beschrijving: hele zinnen tot ~160 tekens.
 // Een kort aanloopje als eerste zin ("Dit is nou een echte wijnbar!") wordt overgeslagen.
 function metaFromText(text) {
@@ -236,7 +248,7 @@ function injectStayBlocks(html, lang) {
     if (!loc || !hasStay(loc)) { console.warn(`  ⚠️  artikel: [[overnachten:${id}]] heeft geen overnachting`); return ''; }
     if (bookingLink(loc.booking_url, loc._id)) any = true;
     // Foto van de locatie boven het vlak (eigen foto's uit /uploads)
-    const img = loc.image ? `<img src="${loc.image}" alt="${String(loc.title || loc.name).replace(/"/g, '&quot;')}" class="art-loc-img" loading="lazy">` : '';
+    const img = loc.image ? `<img src="${loc.image}" alt="${locAlt(loc, lang)}" class="art-loc-img" loading="lazy">` : '';
     return img + stayBlock(loc, lang, { disclosure: false });
   });
   let anyTaste = false;
@@ -348,7 +360,7 @@ function renderLocationPage({ lang = 'nl', loc, name, description, metaDesc, typ
   </div></header>
   ${afterHeader}
   <main class="main"><div class="container">
-    ${loc.image ? `<img src="${loc.image}" alt="${name}" class="location-hero">` : ''}
+    ${loc.image ? `<img src="${loc.image}" alt="${locAlt(loc, lang)}" class="location-hero">` : ''}
     <h1 class="loc-title">${name} — ${typeLabel}${city ? ` in ${city}` : ''}</h1>
     ${awardsBlock(loc, lang)}
     <div class="info-section"><div class="info-value">${String(description).split(/\n+/).map(p => `<p>${p}</p>`).join('')}</div></div>
@@ -416,9 +428,9 @@ for (const file of locationFiles) {
       : `${name}${typeNoun ? ` – ${typeNoun}${city ? ` in ${city}` : ''}` : ''} | de_wijnparade`;
 
     const schema = {
-        '@context': 'https://schema.org', '@type': 'LocalBusiness',
-        name, description, image, url: loc.website || pageUrl,
-        address: { '@type': 'PostalAddress', streetAddress: loc.address || '' },
+        '@context': 'https://schema.org', '@type': SCHEMA_TYPE[loc.type] || 'LocalBusiness',
+        name, description, image, url: loc.website || pageUrl, mainEntityOfPage: pageUrl,
+        address: { '@type': 'PostalAddress', streetAddress: loc.address || '', ...(city ? { addressLocality: city } : {}) },
         ...(loc.lat && loc.lng ? { geo: { '@type': 'GeoCoordinates', latitude: loc.lat, longitude: loc.lng } } : {}),
         ...(locAwards(loc).length ? { award: locAwards(loc).map(a => awardText(a, 'nl')) } : {})
     };
@@ -862,7 +874,7 @@ function renderRegionPage({ lang = 'nl', name, description, h1, title, metaDesc,
       <div class="region-locs">
         ${items.map(l => `
           <div class="region-loc-card${l.image ? '' : ' no-img'}">
-            ${l.image ? `<img src="${l.image}" alt="${l.title || l.name}" class="region-loc-img" loading="lazy">` : ''}
+            ${l.image ? `<img src="${l.image}" alt="${locAlt(l, lang)}" class="region-loc-img" loading="lazy">` : ''}
             <div class="region-loc-body">
               <h3 class="region-loc-name"><a href="${locHref(l)}">${l.title || l.name}</a>${hasStay(l) ? `<span class="region-loc-stay">${lang === 'en' ? 'stay' : 'overnachten'}</span>` : ''}</h3>
               <div class="region-loc-address">${shortAddress(l.address)}</div>
@@ -1982,8 +1994,8 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     const image = l.image ? `${SITE_URL}${l.image}` : `${SITE_URL}/profile-photo.jpg`;
     const pageUrl = `${SITE_URL}${enPath}`;
     const schema = {
-      '@context': 'https://schema.org', '@type': 'LocalBusiness', name, description, image, url: l.website || pageUrl,
-      address: { '@type': 'PostalAddress', streetAddress: l.address || '' },
+      '@context': 'https://schema.org', '@type': SCHEMA_TYPE[l.type] || 'LocalBusiness', name, description, image, url: l.website || pageUrl, mainEntityOfPage: pageUrl,
+      address: { '@type': 'PostalAddress', streetAddress: l.address || '', ...(cityFromAddress(l.address) ? { addressLocality: cityFromAddress(l.address) } : {}) },
       ...(l.lat && l.lng ? { geo: { '@type': 'GeoCoordinates', latitude: l.lat, longitude: l.lng } } : {}),
       ...(locAwards(l).length ? { award: locAwards(l).map(a => awardText(a, 'en')) } : {})
     };
@@ -2175,7 +2187,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     if (!locs.length && !region) return '';
     return `<section class="article-related">
         <h2>${en ? 'Wine hotspots in this article' : 'Wijnhotspots in dit artikel'}</h2>
-        <div class="article-cards">${locs.map(l => `<a class="article-card" href="${en ? enLocHref(l) : `/locations/${l._id}`}">${l.image ? `<img src="${l.image}" alt="${escHtml(l.title || l.name)}" loading="lazy">` : ''}<div><strong>${escHtml(l.title || l.name)}</strong><span>${escHtml((en ? EN_LABEL : NL_TYPE)[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></div></a>`).join('')}</div>
+        <div class="article-cards">${locs.map(l => `<a class="article-card" href="${en ? enLocHref(l) : `/locations/${l._id}`}">${l.image ? `<img src="${l.image}" alt="${locAlt(l, en ? 'en' : 'nl')}" loading="lazy">` : ''}<div><strong>${escHtml(l.title || l.name)}</strong><span>${escHtml((en ? EN_LABEL : NL_TYPE)[l.type] || '')}${cityFromAddress(l.address) ? ` · ${escHtml(cityFromAddress(l.address))}` : ''}</span></div></a>`).join('')}</div>
         <ul>${region ? `<li><a href="${en && enRegion ? enRegion.enPath : regionPath(region.id)}">${escHtml(en && enRegion ? regionTitleEn(enRegion) : regionSeo(region).link)}</a> <span>${en ? 'full guide' : 'volledige gids'}</span></li>` : ''}</ul>
       </section>`;
   };
