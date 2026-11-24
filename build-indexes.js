@@ -1005,7 +1005,7 @@ function mdToHtml(md) {
   }).join('\n');
 }
 
-function renderArticlePage({ lang = 'nl', title, description, date, image, bodyHtml, pageUrl, logoHref,
+function renderArticlePage({ lang = 'nl', title, seoTitle = '', description, metaDesc = '', date, image, bodyHtml, pageUrl, logoHref,
                              relatedHtml = '', headExtra = '', headerExtra = '', afterHeader = '' }) {
   const en = lang === 'en';
   const dateStr = date ? new Date(date).toLocaleDateString(en ? 'en-GB' : 'nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
@@ -1019,10 +1019,10 @@ function renderArticlePage({ lang = 'nl', title, description, date, image, bodyH
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#1e3a8a">
-  <title>${e(title)} | de_wijnparade</title>
-  <meta name="description" content="${e(description)}">
+  <title>${e(seoTitle || title)} | de_wijnparade</title>
+  <meta name="description" content="${e(metaDesc || description)}">
   <meta property="og:title" content="${e(title)}">
-  <meta property="og:description" content="${e(description)}">
+  <meta property="og:description" content="${e(metaDesc || description)}">
   <meta property="og:url" content="${pageUrl}">
   <meta property="og:type" content="article">
   ${image ? `<meta property="og:image" content="${SITE_URL}${image}">` : ''}
@@ -2194,7 +2194,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
     for (const a of articles) {
       const nlP = nlArticlePath(a), enP = enArticlePath(a);
       fs.writeFileSync(path.join(__dirname, nlP.slice(1) + '.html'), renderArticlePage({
-        title: a.title, description: a.description || '', date: a.date, image: a.image, bodyHtml: injectStayBlocks(mdToHtml(a.body), 'nl'),
+        title: a.title, seoTitle: String(a.seo_title || '').trim(), description: a.description || '', metaDesc: String(a.meta_description || '').replace(/\s+/g, ' ').trim(), date: a.date, image: a.image, bodyHtml: injectStayBlocks(mdToHtml(a.body), 'nl'),
         pageUrl: SITE_URL + nlP, logoHref: '/', relatedHtml: articleRelated(a, 'nl'),
         afterHeader: breadcrumb([{ name: 'Home', path: '/' }, NL_ART, { name: a.title }]) }));
       if (hasEn(a)) {

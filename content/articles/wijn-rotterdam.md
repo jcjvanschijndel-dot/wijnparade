@@ -1,6 +1,8 @@
 ---
 title: "Wijnbars in Rotterdam: waar drink je wat, per buurt"
 description: "Van zelf tappen in Blijdorp tot natuurwijn op Katendrecht: de wijnbars, wijnwinkels en wijnrestaurants van Rotterdam, per buurt."
+seo_title: "Wijnbars Rotterdam: de aanraders per buurt"
+meta_description: "Wijnbars in Rotterdam per buurt: klassiekers met grote kaarten in het centrum, natuurwijn op Katendrecht en in het Oude Noorden, en zelf tappen in Blijdorp."
 date: 2026-11-03
 image: /uploads/eigendom.webp
 region: rotterdam
@@ -62,7 +64,7 @@ body_en: |-
   Many of Rotterdam's natural wine bars are small, and some don't take bookings. Come early. All addresses are also in the [Rotterdam guide](/en/wine-tips/rotterdam).
 draft: false
 ---
-Rotterdam heeft veel wijnbars, verspreid over de stad. In het centrum vind je de klassiekers met grote kaarten, op Katendrecht en in het Oude Noorden vooral natuurwijn. Hieronder per buurt waar je heen kunt.
+Zoek je een goede wijnbar in Rotterdam? Er zijn er veel, verspreid over de stad. In het centrum vind je de klassiekers met grote kaarten, op Katendrecht en in het Oude Noorden vooral natuurwijn. Hieronder per buurt waar je heen kunt.
 
 ## Centrum
 
