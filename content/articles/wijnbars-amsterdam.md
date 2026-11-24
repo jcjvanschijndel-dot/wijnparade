@@ -1,6 +1,8 @@
 ---
 title: "De wijnbars van Amsterdam: waar drink je wat, per wijk"
 description: "Van naturel in De Pijp tot Duitse riesling aan de Singel: de wijnbars van Amsterdam per wijk, met wat ze bijzonder maakt."
+seo_title: "Wijnbars Amsterdam: 15 aanraders per wijk"
+meta_description: "De 15 wijnbars in Amsterdam die wij aanraden, per wijk: natuurwijn in De Pijp, grote wijnkelders aan de grachten en wijnbars met winkel in Oost en Noord."
 date: 2026-11-03
 image: /uploads/glouglouams.webp
 region: amsterdam
@@ -40,7 +42,7 @@ body_en: |-
 
   ## The canals and the centre: big cellars
 
-  On the Prinsengracht, in the basement of [Sinck](/en/locations/sinck), is a wine bar with around 400 wines, mostly French, for every budget; sommelier Sabas Joosten previously worked at De Librije. [Weinlokal Stern](/en/locations/weinlokal-stern) on the Singel is as German as it gets: from Mosel Riesling to Spätburgunder from Baden, with schnitzel and spätzle. [Bar du Champagne](/en/locations/bar-du-champagne) on the Rokin pours only Champagne, from a cellar of more than 450 labels, with oysters and seafood. On the Lijnbaansgracht, [Wijnbar Shiraz](/en/locations/wijnbar-shiraz) has a broad list with plenty by the glass, even a 40-year-old tawny port. And on the Zeedijk, [Vermeers Wijnkamer](/en/locations/vermeers-wijnkamer) pours two wines with every bite: one under ten euros and one pricier.
+  On the Prinsengracht, in the basement of [Sinck](/en/locations/sinck), is a wine bar with around 400 wines, mostly French, for every budget; sommelier Sabas Joosten previously worked at De Librije. [Weinlokal Stern](/en/locations/weinlokal-stern) on the Singel is as German as it gets: from Mosel Riesling to Spätburgunder from Baden, with schnitzel and spätzle. [Bar du Champagne](/en/locations/bar-du-champagne) on the Rokin pours only Champagne, from a cellar of more than 450 labels, with oysters and seafood. On the Lijnbaansgracht, [Wijnbar Shiraz](/en/locations/wijnbar-shiraz) has a broad list with plenty by the glass, even a 40-year-old tawny port. And on the Zeedijk, [Vermeers Wijnkamer](/en/locations/vermeers-wijnkamer) pours two wines with every bite: an affordable one and a pricier one.
 
   ![The basement wine bar at Sinck](/uploads/sinck.webp)
 
@@ -61,7 +63,7 @@ body_en: |-
   Many of these wine bars are small and fill up quickly in the evening. Book if you can, or come early in the evening. You will also find all the addresses on the [wine map](/en/wine-map) and in the [Amsterdam guide](/en/wine-tips/amsterdam).
 draft: false
 ---
-Amsterdam heeft inmiddels tientallen wijnbars, en elke wijk heeft zijn eigen karakter. In De Pijp drink je vooral naturel, rond de grachten zitten de wijnbars met grote kelders, en in Oost en Noord combineer je een glas met een fles voor thuis. Hieronder de wijnbars die wij aanraden, per buurt.
+Op zoek naar een goede wijnbar in Amsterdam? De stad heeft er inmiddels tientallen, en elke wijk heeft zijn eigen karakter. In De Pijp drink je vooral naturel, rond de grachten zitten de wijnbars met grote kelders, en in Oost en Noord combineer je een glas met een fles voor thuis. Hieronder de wijnbars die wij aanraden, per buurt.
 
 ## De Pijp: naturel en klassiekers
 
@@ -77,7 +79,7 @@ In De Pijp opende in 2015 [GlouGlou](/locations/glouglou-1), de eerste naturelwi
 
 ## De grachten en het centrum: grote kelders
 
-Aan de Prinsengracht zit in het souterrain van [Sinck](/locations/sinck) een wijnbar met zo'n 400 wijnen, vooral Frans, voor elk budget; sommelier Sabas Joosten werkte eerder bij De Librije. [Weinlokal Stern](/locations/weinlokal-stern) aan de Singel is zo Duits als het kan: van moezelriesling tot spätburgunder uit Baden, met schnitzel en spätzle erbij. [Bar du Champagne](/locations/bar-du-champagne) aan het Rokin schenkt uitsluitend champagne, uit een kelder van meer dan 450 etiketten, met oesters en zeevruchten erbij. Aan de Lijnbaansgracht heeft [Wijnbar Shiraz](/locations/wijnbar-shiraz) een brede kaart met veel per glas, zelfs een tawny port van 40 jaar. En op de Zeedijk schenkt [Vermeers Wijnkamer](/locations/vermeers-wijnkamer) bij elk hapje twee wijnen: één onder de tien euro en één duurder.
+Aan de Prinsengracht zit in het souterrain van [Sinck](/locations/sinck) een wijnbar met zo'n 400 wijnen, vooral Frans, voor elk budget; sommelier Sabas Joosten werkte eerder bij De Librije. [Weinlokal Stern](/locations/weinlokal-stern) aan de Singel is zo Duits als het kan: van moezelriesling tot spätburgunder uit Baden, met schnitzel en spätzle erbij. [Bar du Champagne](/locations/bar-du-champagne) aan het Rokin schenkt uitsluitend champagne, uit een kelder van meer dan 450 etiketten, met oesters en zeevruchten erbij. Aan de Lijnbaansgracht heeft [Wijnbar Shiraz](/locations/wijnbar-shiraz) een brede kaart met veel per glas, zelfs een tawny port van 40 jaar. En op de Zeedijk schenkt [Vermeers Wijnkamer](/locations/vermeers-wijnkamer) bij elk hapje twee wijnen: een betaalbare en een duurdere.
 
 ![De wijnbar in het souterrain van Sinck](/uploads/sinck.webp)
 

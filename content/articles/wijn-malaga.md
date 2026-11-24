@@ -1,6 +1,8 @@
 ---
 title: "Wijn in Málaga en Marbella: wijnbars, bodega's en wijnhuizen"
 description: "Van zoete moscatel uit het vat in de oudste wijnbar van Málaga tot droge wijn van steile hellingen in de Axarquía: zo drink je wijn in Málaga en Marbella."
+seo_title: "Wijnbars in Málaga en Marbella: tips"
+meta_description: "Wijnbars, bodega's en wijnhuizen in Málaga en Marbella: zoete moscatel uit het vat in de oudste wijnbar van de stad en droge wijn uit de Axarquía."
 date: 2026-11-03
 image: /uploads/antigua.webp
 region: malaga
@@ -68,7 +70,7 @@ body_en: |-
   In Málaga, taste the wines of the region itself, sweet and dry. Many restaurants mostly pour well-known wines from Rioja and Ribera del Duero, while the wines from the province itself are far more interesting. All addresses are also in the [Málaga & Marbella guide](/en/wine-travel/malaga).
 draft: false
 ---
-Málaga is vooral bekend om zoete wijn, van moscatel en pedro ximénez. Die drink je nog altijd uit het vat in de oude bodega's van het centrum. Maar in de wijnbars van de stad en in de bergen eromheen vind je ook droge wijn van kleine producenten. Hieronder de adressen in Málaga, de wijnhuizen in de omgeving en de wijnbars in Marbella.
+Een goede wijnbar in Málaga vind je zowel in de oude bodega's als in de nieuwe zaken in het centrum. Málaga is vooral bekend om zoete wijn, van moscatel en pedro ximénez. Die drink je nog altijd uit het vat in de oude bodega's van het centrum. Maar in de wijnbars van de stad en in de bergen eromheen vind je ook droge wijn van kleine producenten. Hieronder de adressen in Málaga, de wijnhuizen in de omgeving en de wijnbars in Marbella.
 
 ## De klassiekers in het centrum
 

@@ -1,6 +1,8 @@
 ---
 title: "Wijnbars in Parijs: van natuurwijn in Belleville tot grote wijnwinkels"
 description: "Natuurwijnbars, staande wijnbars bij het Odéon en wijnwinkels met duizenden flessen: waar je in Parijs een goed glas drinkt."
+seo_title: "Wijnbars Parijs: natuurwijn en bars à vins"
+meta_description: "Wijnbars in Parijs: natuurwijnbars in Belleville, staande bars à vins bij het Odéon en wijnwinkels met duizenden flessen. Onze adressen, per soort."
 date: 2026-11-03
 image: /uploads/garde-robe.webp
 region: parijs

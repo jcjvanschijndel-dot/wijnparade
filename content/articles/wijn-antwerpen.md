@@ -1,6 +1,8 @@
 ---
 title: "Wijn in Antwerpen: wijnbars en wijnrestaurants per wijk"
 description: "Van natuurwijn op het Zuid tot 800 wijnen in een zeemanskerk op het Eilandje: de wijnbars, wijnwinkels en wijnrestaurants van Antwerpen, per wijk."
+seo_title: "Wijnbars Antwerpen: tips per wijk"
+meta_description: "Wijnbars in Antwerpen per wijk: natuurwijn op het Zuid, 800 wijnen in een zeemanskerk op het Eilandje en de adressen in de binnenstad rond de Meir."
 date: 2026-11-03
 image: /uploads/het-archief.webp
 region: antwerpen

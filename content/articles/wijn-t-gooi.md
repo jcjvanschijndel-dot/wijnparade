@@ -1,6 +1,8 @@
 ---
 title: "Wijn in 't Gooi: wijnbars en wijnwinkels in Bussum, Laren en Blaricum"
 description: "Van een Italiaanse wijnbar in Baarn tot een wijnwinkel in een boerderij in Laren: de wijnadressen van 't Gooi, per plaats."
+seo_title: "Wijnbars in Bussum en 't Gooi: onze tips"
+meta_description: "Wijnbars en wijnwinkels in Bussum, Laren, Blaricum en Baarn: van The Winebar en de Buren in Bussum tot meer dan dertig wijnen per glas bij Ottovino."
 date: 2026-11-03
 image: /uploads/ottovino.webp
 region: t-gooi
@@ -47,7 +49,7 @@ body_en: |-
 
   ## Baarn, Hilversum and Huizen
 
-  [Vineria Nebbiolo](/en/locations/vineria-nebbiolo) in Baarn has 450 Italian wines, from Trentino-Alto Adige to Sicily, with an Italian menu that changes every week. Per bottle you pay a fixed €15 on top of the shop price. In Hilversum, [Gastrovino Mijn Hemel](/en/locations/gastrovino-mijn-hemel) is a wine shop with a wine café: you taste by the glass first and take a bottle home afterwards. On the edge of Hilversum lies [Wijngaard Zonnestraal](/en/locations/wijngaard-zonnestraal), the only vineyard in Het Gooi, with its first harvest in 2016. There are regular events, such as a pizza and wine evening on the first Friday of each month. In Huizen, [Siersma Wijnadvies](/en/locations/siersma-wijnadvies) sells, among other things, its own Skaap wines from South Africa.
+  [Vineria Nebbiolo](/en/locations/vineria-nebbiolo) in Baarn has 450 Italian wines, from Trentino-Alto Adige to Sicily, with an Italian menu that changes every week. Per bottle you pay a fixed amount on top of the shop price. In Hilversum, [Gastrovino Mijn Hemel](/en/locations/gastrovino-mijn-hemel) is a wine shop with a wine café: you taste by the glass first and take a bottle home afterwards. On the edge of Hilversum lies [Wijngaard Zonnestraal](/en/locations/wijngaard-zonnestraal), the only vineyard in Het Gooi, with its first harvest in 2016. There are regular events, such as a pizza and wine evening on the first Friday of each month. In Huizen, [Siersma Wijnadvies](/en/locations/siersma-wijnadvies) sells, among other things, its own Skaap wines from South Africa.
 
   ![Vineria Nebbiolo in Baarn](/uploads/nebbiolo.webp)
 
@@ -62,9 +64,9 @@ body_en: |-
   Many wine shops in Het Gooi have something open to taste at the end of the week. Combine a visit with a drink in one of the wine bars. All addresses are also in the [Het Gooi guide](/en/wine-tips/het-gooi).
 draft: false
 ---
-'t Gooi is klein, maar je vindt er veel goede wijnadressen. Bussum en Laren hebben elk een paar wijnwinkels met een groot assortiment. In Blaricum en Baarn zitten wijnbars waar je veel per glas kunt proeven. Hieronder per plaats waar je naartoe kunt.
+Zoek je een wijnbar in Bussum of elders in 't Gooi? Je vindt er meer goede wijnadressen dan je zou denken. Bussum en Laren hebben elk een paar wijnwinkels met een groot assortiment. In Blaricum en Baarn zitten wijnbars waar je veel per glas kunt proeven. Hieronder per plaats waar je naartoe kunt.
 
-## Bussum
+## Wijnbars en wijnwinkels in Bussum
 
 In het centrum van Bussum zit aan de Kerkstraat [The Winebar](/locations/the-winebar), van dezelfde eigenaar als A-Fusion, dus er is ook goed eten. De wijnkaart is eenvoudig, maar vraag naar het notitieboekje: daarin staan een paar topwijnen. Om de hoek, in de Kapelstraat, schenkt [de Buren](/locations/de-buren) originele wijnen, zoals een nebbiolo uit Zuid-Afrika, naast bekende namen. Ze rekenen een vaste toeslag per fles, waardoor een mooie fles betaalbaar blijft.
 
@@ -82,7 +84,7 @@ In Blaricum schenkt [Ottovino](/locations/ottovino) aan de Dorpsstraat meer dan 
 
 ## Baarn, Hilversum en Huizen
 
-[Vineria Nebbiolo](/locations/vineria-nebbiolo) in Baarn heeft 450 Italiaanse wijnen, van Trentino-Alto Adige tot Sicilië, met een menu uit de Italiaanse keuken dat elke week wisselt. Per fles betaal je een vaste opslag van €15 boven de winkelprijs. In Hilversum is [Gastrovino Mijn Hemel](/locations/gastrovino-mijn-hemel) een wijnwinkel met een wijncafé: je proeft eerst per glas en neemt daarna een fles mee. Aan de rand van Hilversum ligt [Wijngaard Zonnestraal](/locations/wijngaard-zonnestraal), de enige wijngaard in 't Gooi, met de eerste oogst in 2016. Er zijn regelmatig evenementen, zoals elke eerste vrijdag van de maand een avond met pizza en wijn. In Huizen verkoopt [Siersma Wijnadvies](/locations/siersma-wijnadvies) onder meer de eigen Skaap-wijnen uit Zuid-Afrika.
+[Vineria Nebbiolo](/locations/vineria-nebbiolo) in Baarn heeft 450 Italiaanse wijnen, van Trentino-Alto Adige tot Sicilië, met een menu uit de Italiaanse keuken dat elke week wisselt. Per fles betaal je een vaste opslag boven de winkelprijs. In Hilversum is [Gastrovino Mijn Hemel](/locations/gastrovino-mijn-hemel) een wijnwinkel met een wijncafé: je proeft eerst per glas en neemt daarna een fles mee. Aan de rand van Hilversum ligt [Wijngaard Zonnestraal](/locations/wijngaard-zonnestraal), de enige wijngaard in 't Gooi, met de eerste oogst in 2016. Er zijn regelmatig evenementen, zoals elke eerste vrijdag van de maand een avond met pizza en wijn. In Huizen verkoopt [Siersma Wijnadvies](/locations/siersma-wijnadvies) onder meer de eigen Skaap-wijnen uit Zuid-Afrika.
 
 ![Vineria Nebbiolo in Baarn](/uploads/nebbiolo.webp)
 

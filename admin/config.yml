@@ -151,6 +151,8 @@ collections:
     fields:
       - {label: "Titel", name: "title", widget: "string", hint: "Zoals mensen zoeken, bijv. 'Wijnproeverij in de Bourgogne: zo plan je je bezoek'"}
       - {label: "Korte inleiding", name: "description", widget: "text", hint: "1 à 2 zinnen; staat boven het artikel en in Google (max. 160 tekens)"}
+      - {label: "Titel in Google (optioneel)", name: "seo_title", widget: "string", required: false, hint: "Korter dan de titel, max. ~44 tekens, zoekterm vooraan. ' | de_wijnparade' komt er vanzelf achter. Leeg = de gewone titel."}
+      - {label: "Tekst in Google (optioneel)", name: "meta_description", widget: "text", required: false, hint: "Max. 160 tekens. Leeg = de korte inleiding."}
       - {label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD-MM-YYYY", time_format: false}
       - {label: "Foto", name: "image", widget: "image", required: false}
       - {label: "Regiogids", name: "region", widget: "relation", collection: "regions", value_field: "{{slug}}", search_fields: ["name"], display_fields: ["name"], required: false, hint: "Het artikel verschijnt dan ook onderaan deze gids"}
