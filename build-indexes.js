@@ -407,7 +407,7 @@ const typeLabels = {
 
 const sitemapUrls = [
     `${SITE_URL}/`, `${SITE_URL}/wijnkaart`, `${SITE_URL}/value-score`,
-    `${SITE_URL}/wijnreizen`, `${SITE_URL}/shop`,
+    `${SITE_URL}/wijnreizen`, `${SITE_URL}/shop`, `${SITE_URL}/studiehulp/`,
 ];
 
 for (const file of locationFiles) {
@@ -2131,6 +2131,7 @@ if (!fs.existsSync(productsDir)) fs.mkdirSync(productsDir);
       enHeaderEnd('/', '/en/'),
       ['<h1 class="page-hero-title">Wijntips en de beste wijn hotspots in Europa</h1>', '<h1 class="page-hero-title">Wine tips and the best wine hotspots in Europe</h1>'],
       [/<a href="\/wijn-spijs" class="nav-card">([\s\S]*?)<span class="link-text">Welke wijn bij welk gerecht\?<\/span>/, '<a href="/en/wine-pairing" class="nav-card">$1<span class="link-text">Which wine with which dish?</span>'],
+      [/\s*<a href="\/studiehulp\/" class="nav-card">[\s\S]*?<\/a>/, ''], // studiehulp is alleen Nederlands
       [/\s*<a href="https:\/\/wijnparade\.listedwines\.com\/" class="nav-card"[\s\S]*?<\/a>/, ''],
       [/<a href="\/wijnkaart" class="nav-card">([\s\S]*?)<span class="link-text">Wijnkaart<\/span>/, '<a href="/en/wine-map" class="nav-card">$1<span class="link-text">Wine map</span>'],
       [/<a href="\/wijnreizen" class="nav-card">([\s\S]*?)<span class="link-text">Reisgidsen<\/span>/, '<a href="/en/wine-travel" class="nav-card">$1<span class="link-text">Travel guides</span>'],
