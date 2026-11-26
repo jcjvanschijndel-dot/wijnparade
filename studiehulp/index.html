@@ -229,7 +229,7 @@ function home(){
  location.hash=level==="sden3"?"":"s2";
  const mods=L().mods,D=L().data,tot=mods.reduce((n,m)=>n+D[m.id].length,0);
  const done=Array.from({length:10},(_,i)=>store[K("t"+(i+1))]).filter(x=>x!=null);
- let h=(L().note?`<p class="note">${esc(L().note)}</p>`:"")+`<div class="top"><h2>Oefentoetsen</h2><span class="meta">Zoals op het examen</span></div><div class="grid">`;
+ let h=(L().note?`<p class="note">${esc(L().note)}</p>`:"")+`<div class="top"><h2>Oefentoetsen</h2></div><div class="grid">`;
  h+=`<button class="card exam" data-m="toetsen"><h3>Start een oefentoets</h3><p>10 toetsen met mix-vragen uit alle onderwerpen.</p><div class="meta"><span>10 \u00d7 ${L().size} vragen</span><span>${done.length?done.length+" van 10 gedaan":"Nog niet gedaan"}</span></div><div class="bar"><i style="width:${done.length*10}%"></i></div></button>`;
  h+=`</div><div class="top sec"><h2>Oefenvragen per onderwerp</h2><span class="meta">${tot} vragen in ${mods.length} onderwerpen</span></div><div class="grid">`;
  for(const m of mods){const n=D[m.id].length,b=store[K(m.id)];
