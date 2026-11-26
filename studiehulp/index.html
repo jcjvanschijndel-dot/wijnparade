@@ -71,7 +71,7 @@ h1{font-family:var(--head);font-size:clamp(28px,6vw,44px);line-height:1.1;margin
 .meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);gap:8px}
 .bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:2px}
 .bar i{display:block;height:100%;background:var(--pink)}
-.card.exam{border-color:var(--wine)}
+.card.exam{background:var(--wine);border-color:var(--wine)}.card.exam h3,.card.exam p,.card.exam .meta{color:var(--bg)}.card.exam p,.card.exam .meta{opacity:.85}.card.exam .bar{background:rgba(255,255,255,.25)}.card.exam:hover{border-color:var(--pink)}.top.sec{margin-top:32px}
 .btn{font:inherit;font-weight:600;font-size:15px;padding:10px 18px;border-radius:10px;border:1px solid var(--wine);background:var(--wine);color:var(--bg);cursor:pointer}
 .btn.ghost{background:transparent;color:var(--wine)}
 .btn:disabled{opacity:.4;cursor:default}
@@ -229,8 +229,9 @@ function home(){
  location.hash=level==="sden3"?"":"s2";
  const mods=L().mods,D=L().data,tot=mods.reduce((n,m)=>n+D[m.id].length,0);
  const done=Array.from({length:10},(_,i)=>store[K("t"+(i+1))]).filter(x=>x!=null);
- let h=(L().note?`<p class="note">${esc(L().note)}</p>`:"")+`<div class="top"><h2>Kies een onderwerp</h2><span class="meta">${tot} vragen in ${mods.length} onderwerpen</span></div><div class="grid">`;
- h+=`<button class="card exam" data-m="toetsen"><h3>Oefentoetsen</h3><p>10 toetsen met mix-vragen uit alle onderwerpen.</p><div class="meta"><span>10 \u00d7 ${L().size} vragen</span><span>${done.length?done.length+" van 10 gedaan":"Nog niet gedaan"}</span></div><div class="bar"><i style="width:${done.length*10}%"></i></div></button>`;
+ let h=(L().note?`<p class="note">${esc(L().note)}</p>`:"")+`<div class="top"><h2>Oefentoetsen</h2><span class="meta">Zoals op het examen</span></div><div class="grid">`;
+ h+=`<button class="card exam" data-m="toetsen"><h3>Start een oefentoets</h3><p>10 toetsen met mix-vragen uit alle onderwerpen.</p><div class="meta"><span>10 \u00d7 ${L().size} vragen</span><span>${done.length?done.length+" van 10 gedaan":"Nog niet gedaan"}</span></div><div class="bar"><i style="width:${done.length*10}%"></i></div></button>`;
+ h+=`</div><div class="top sec"><h2>Oefenvragen per onderwerp</h2><span class="meta">${tot} vragen in ${mods.length} onderwerpen</span></div><div class="grid">`;
  for(const m of mods){const n=D[m.id].length,b=store[K(m.id)];
   h+=`<button class="card" data-m="${m.id}"><h3>${m.t}</h3><p>${m.d}</p><div><div class="meta"><span>${n} vragen</span><span>${b!=null?"Beste: "+b+"%":"Nog niet gedaan"}</span></div><div class="bar"><i style="width:${b||0}%"></i></div></div></button>`}
  h+="</div>";
