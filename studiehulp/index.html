@@ -112,7 +112,7 @@ footer{margin-top:36px;font-size:13px;color:var(--muted)}
 .fig{display:inline-flex;align-items:center;gap:6px;white-space:normal}
 @media (prefers-reduced-motion:no-preference){.bar i{transition:width .3s}}
 .seo{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);max-width:70ch;color:var(--fg)}.seo h2{font-family:var(--head);color:var(--wine);font-size:22px;margin:24px 0 8px}.seo h3{font-family:var(--head);color:var(--wine);font-size:17px;margin:18px 0 6px}.seo p{margin:0 0 10px;font-size:15px}.seo details{border-bottom:1px solid var(--line);padding:10px 0}.seo summary{cursor:pointer;font-weight:600}.seo details p{margin:8px 0 0;color:var(--muted)}.seo .small{font-size:13px;color:var(--muted);margin-top:18px}
-.topnav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line)}.topnav a{color:var(--wine);text-decoration:none;font-weight:600}.topnav .brand{font-family:var(--head);font-size:18px;color:var(--wine)}.topnav .brand span{color:var(--pink)}.topnav .brand a:hover{text-decoration:underline}.topnav .links{display:flex;gap:8px;align-items:center}.topnav .links a{font-size:14px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;gap:6px}.topnav .links a.map{background:var(--wine);color:var(--bg);border-color:var(--wine)}.topnav a:hover{border-color:var(--pink)}#loccount:not(:empty){font-weight:500;opacity:.85}
+.topnav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line)}.topnav a{color:var(--wine);text-decoration:none;font-weight:600}.topnav .brand{font-family:var(--head);font-size:18px;color:var(--wine)}.topnav .brand span{color:var(--pink)}.topnav .brand a:hover{text-decoration:underline}.topnav .links{display:flex;gap:8px;align-items:center}.topnav .links a{font-size:14px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;gap:6px}.topnav .links a.map{background:var(--wine);color:var(--bg);border-color:var(--wine)}.topnav a:hover{border-color:var(--pink)}#loccount:not(:empty){font-weight:500;opacity:.85}#loccount:not(:empty)::before{content:" · "}@media (max-width:520px){.topnav{flex-wrap:nowrap}.topnav .brand{display:flex;flex-direction:column;line-height:1.1;font-size:17px}.topnav .brand span{font-size:15px}.topnav .links a{padding:7px 14px 7px 12px}.topnav .mt{display:flex;flex-direction:column;line-height:1.15}#loccount:not(:empty)::before{content:none}#loccount{font-size:12px}}
 </style>
 </head>
 <body>
@@ -130,7 +130,7 @@ footer{margin-top:36px;font-size:13px;color:var(--muted)}
 <div class="wrap">
 <nav class="topnav" aria-label="de_wijnparade">
 <div class="brand"><a href="https://wijn-parade.nl/">de_wijnparade</a> <span>studiehulp</span></div>
-<div class="links"><a class="map" href="https://wijn-parade.nl/wijnkaart"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/></svg>Wijnkaart<span id="loccount"></span></a></div>
+<div class="links"><a class="map" href="https://wijn-parade.nl/wijnkaart"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/></svg><span class="mt">Wijnkaart<span id="loccount"></span></span></a></div>
 </nav>
 <header>
 <h1>Oefenvragen voor SDEN en WSET</h1>
@@ -330,7 +330,7 @@ function result(){
 })();
 </script>
 <script>
-fetch("/content/locations/_index.json").then(r=>r.ok?r.json():null).then(d=>{if(Array.isArray(d)&&d.length){document.getElementById("loccount").textContent=" · "+d.length.toLocaleString("nl-NL")+" locaties"}}).catch(()=>{});
+fetch("/content/locations/_index.json").then(r=>r.ok?r.json():null).then(d=>{if(Array.isArray(d)&&d.length){document.getElementById("loccount").textContent=d.length.toLocaleString("nl-NL")+" locaties"}}).catch(()=>{});
 </script>
 </body>
 </html>
